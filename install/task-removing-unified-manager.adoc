@@ -1,0 +1,56 @@
+---
+permalink: install/task-removing-unified-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: Si necesita eliminar Unified Manager del host Red Hat Enterprise Linux o CentOS, puede detener y desinstalar Unified Manager con un único comando. 
+---
+= Eliminación de Unified Manager del host Red Hat Enterprise Linux o CentOS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si necesita eliminar Unified Manager del host Red Hat Enterprise Linux o CentOS, puede detener y desinstalar Unified Manager con un único comando.
+
+
+
+== Antes de empezar
+
+* Debe tener acceso de usuario raíz al servidor desde el que desea quitar Unified Manager.
+* Security-Enhanced Linux (SELinux) debe estar desactivado en la máquina de Red Hat. Cambie el modo de tiempo de ejecución de SELinux a "'permisive'" mediante el `setenforce 0` comando.
+* Todos los clústeres (orígenes de datos) deben quitarse del servidor de Unified Manager antes de quitar el software.
+* El servidor de Unified Manager no debe tener una conexión activa con un proveedor de datos externo, como Graphite.
++
+Si lo hace, debe eliminar la conexión con la consola de mantenimiento de Unified Manager.
+
+
+
+
+
+== Acerca de esta tarea
+
+Estos pasos contienen información para sistemas configurados para alta disponibilidad mediante Veritas Operation Manager. Si el sistema no está configurado para alta disponibilidad, ignore estos pasos adicionales.
+
+
+
+== Pasos
+
+. Inicie sesión como usuario raíz en el nodo del clúster al que pertenece los recursos del clúster en los que desea quitar Unified Manager.
+. Detenga todos los servicios de Unified Manager utilizando los comandos de VCS o VCS.
+. Detenga y quite Unified Manager del servidor: `rpm -e netapp-ocum ocie-au ocie-server netapp-platform-base netapp-application-server ocie-serverbase`
++
+Este paso elimina todos los paquetes de RPM de NetApp asociados. No elimina los módulos de software previos, como Java, MySQL y p7zip.
+
+. Cambie al otro nodo mediante el Administrador de operaciones VCS.
+. Inicie sesión en el segundo nodo del clúster.
+. Detenga todos los servicios y quite Unified Manager del segundo nodo: `rpm -e netapp-ocum ocie-au ocie-server netapp-platform-base netapp-application-server ocie-serverbase`
+. Evite que el grupo de servicios utilice los comandos VCS o VCS.
+. Si procede, elimine los módulos de software compatibles, como Java, MySQL y p7zip: `rpm -e p7zip mysql-community-client mysql-community-server mysql-community-common mysql-community-libs java-x.y`
+
+
+
+
+== Resultados
+
+Una vez finalizada esta operación, el software se elimina; sin embargo, los datos de MySQL no se eliminan. Todos los datos del `/opt/netapp/data` el directorio se mueve al `/opt/netapp/data/BACKUP` carpeta tras la desinstalación.

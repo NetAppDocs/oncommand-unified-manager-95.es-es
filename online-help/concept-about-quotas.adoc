@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-about-quotas.html 
+sidebar: sidebar 
+keywords:  
+summary: Las cuotas proporcionan una forma de restringir o realizar un seguimiento del espacio en disco y del número de archivos que usan los usuarios, grupos o qtrees. Las cuotas se especifican con el archivo /etc/Quotas. Las cuotas se aplican a un volumen o qtree concreto. 
+---
+= Acerca de las cuotas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las cuotas proporcionan una forma de restringir o realizar un seguimiento del espacio en disco y del número de archivos que usan los usuarios, grupos o qtrees. Las cuotas se especifican con el `/etc/quotas` archivo. Las cuotas se aplican a un volumen o qtree concreto.

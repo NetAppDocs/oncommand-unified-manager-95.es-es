@@ -1,0 +1,31 @@
+---
+permalink: online-help/task-editing-storage-class-threshold-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando necesite solucionar cualquier problema relacionado con el espacio de almacenamiento en las clases de almacenamiento, puede editar la configuración de umbral de la capacidad de la clase de almacenamiento en función de los requisitos de la organización. Cuando se supere el umbral, se generarán eventos y recibirá notificaciones si ha configurado alertas para dichos eventos. 
+---
+= Editar la configuración del umbral de las clases de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si necesita solucionar cualquier problema relacionado con el espacio de almacenamiento en las clases de almacenamiento, puede editar la configuración del umbral de la capacidad de la clase de almacenamiento en función de los requisitos de su organización. Cuando se supere el umbral, se generarán eventos y recibirá notificaciones si ha configurado alertas para dichos eventos.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione una SVM con Infinite Volume.
+. En la página de detalles *Health/Storage Virtual Machine*, haga clic en *acciones* > *Editar umbrales*.
+. En el cuadro de diálogo *Editar umbrales de clase de almacenamiento*, modifique los umbrales según sea necesario.
+. Haga clic en *Guardar y cerrar*.
+

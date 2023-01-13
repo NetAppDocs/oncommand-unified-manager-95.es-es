@@ -1,0 +1,46 @@
+---
+permalink: online-help/task-exporting-a-data-policy-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede exportar la configuración de una política de datos de Unified Manager a un archivo. Por ejemplo, una vez realizado el backup necesario y, en caso de desastre, puede exportar la configuración de la política de datos desde el primario. 
+---
+= Exportación de una configuración de política de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede exportar la configuración de una política de datos de Unified Manager a un archivo. Por ejemplo, una vez realizado el backup necesario y, en caso de desastre, puede exportar la configuración de la política de datos desde el primario.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+La pestaña Data Policy, que se utiliza al realizar esta tarea, solo se muestra para las SVM con Infinite Volume.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione la SVM adecuada.
+. Haga clic en *Política de datos*.
++
+Se muestra la lista de reglas de la política de datos para la SVM seleccionada con Infinite Volume.
+
+. Haga clic en *Exportar*.
+. En el cuadro de diálogo específico del explorador, especifique la ubicación a la que se debe exportar la configuración de la política de datos.
+
+
+
+
+== Resultados
+
+La configuración de la política de datos se exporta como un archivo JSON en la ubicación especificada.

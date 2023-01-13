@@ -1,0 +1,70 @@
+---
+permalink: online-help/task-changing-or-canceling-a-scheduled-maintenance-window.html 
+sidebar: sidebar 
+keywords:  
+summary: Si configuró una ventana de mantenimiento de Unified Manager para que se produzca en el futuro, puede cambiar las horas de inicio y de finalización o cancelar la ventana de mantenimiento. 
+---
+= Cambiar o cancelar una ventana de mantenimiento programado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si configuró una ventana de mantenimiento de Unified Manager para que se produzca en el futuro, puede cambiar las horas de inicio y de finalización o cancelar la ventana de mantenimiento.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Cancelar una ventana de mantenimiento que se está ejecutando actualmente es útil si ha completado el mantenimiento del clúster antes de la hora de finalización de la ventana de mantenimiento programada, y desea volver a recibir eventos y alertas del clúster.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Configuración* > *fuentes de datos de clúster*.
+. En la columna *modo de mantenimiento* del clúster:
++
+|===
+| Si desea... | Realice este paso... 
+
+
+ a| 
+Cambie el plazo de tiempo de un plazo de mantenimiento programado
+ a| 
+.. Haga clic en el texto "programado" junto al botón deslizante.
+.. Cambie la fecha y la hora de inicio y finalización y haga clic en *aplicar*.
+
+
+
+
+ a| 
+Ampliar la longitud de una ventana de mantenimiento activa
+ a| 
+.. Haga clic en el texto "'Active'" junto al botón del control deslizante.
+.. Cambie la fecha y la hora de finalización y haga clic en *aplicar*.
+
+
+
+
+ a| 
+Cancelar una ventana de mantenimiento programado
+ a| 
+Seleccione el botón deslizante y muévase hacia la izquierda.
+
+
+
+ a| 
+Cancelar una ventana de mantenimiento activa
+ a| 
+Seleccione el botón deslizante y muévase hacia la izquierda.
+
+|===
+

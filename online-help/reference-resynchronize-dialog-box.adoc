@@ -1,0 +1,68 @@
+---
+permalink: online-help/reference-resynchronize-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Resynchronize permite volver a sincronizar los datos de una relación de SnapMirror o SnapVault que se han roto previamente y, a continuación, el destino se ha creado un volumen de lectura/escritura. También es posible resincronizar cuando se elimina una copia Snapshot común requerida en el volumen de origen, y esto provoca errores en las actualizaciones de SnapMirror o SnapVault. 
+---
+= Cuadro de diálogo Resynchronize
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Resynchronize permite volver a sincronizar los datos de una relación de SnapMirror o SnapVault que se han roto previamente y, a continuación, el destino se ha creado un volumen de lectura/escritura. También es posible resincronizar cuando se elimina una copia Snapshot común requerida en el volumen de origen, y esto provoca errores en las actualizaciones de SnapMirror o SnapVault.
+
+
+
+== Pestaña Resynchronization Options
+
+La pestaña Opciones de resincronización permite configurar la prioridad de transferencia y la tasa de transferencia máxima para la relación de protección que se está resincronizando.
+
+* *Prioridad de transferencia*
++
+Prioridad a la que se ejecuta la transferencia. Puede seleccionar normal o Baja. Las relaciones con las directivas que especifican una prioridad de transferencia normal se ejecutan antes de las que tienen directivas que especifican una prioridad de transferencia baja.
+
+* *Velocidad máxima de transferencia*
++
+Especifica la tasa máxima a la que se transfieren los datos entre los clústeres a través de la red. Cuando se selecciona, el ancho de banda de red está limitado al valor especificado. Puede introducir un valor numérico y, a continuación, seleccionar kilobytes por segundo (kbps), megabytes por segundo (Mbps), gigabytes por segundo (Gbps) o Tbps. Si decide no utilizar una tasa de transferencia máxima, la transferencia de línea de base entre relaciones es ilimitada. Sin embargo, si ejecuta ONTAP 8.2 y el clúster primario y el secundario son los mismos, esta configuración estará deshabilitada.
+
+
+
+
+
+== Pestaña Source Snapshot Copies
+
+La pestaña Source Snapshot Copies muestra la siguiente información sobre la copia Snapshot de origen que se utiliza para la transferencia básica:
+
+* *Volumen de origen*
++
+Muestra los nombres de los volúmenes de origen correspondientes.
+
+* *Volumen de destino*
++
+Muestra los nombres de los volúmenes de destino seleccionados.
+
+* *Tipo de fuente*
++
+Muestra el tipo de volumen: Lectura/escritura o protección de datos.
+
+* *Copia snapshot*
++
+Muestra la copia Snapshot que se usa para la transferencia de datos. Al hacer clic en el valor de la copia de Snapshot se muestra el cuadro de diálogo Select Source Snapshot Copy, en el que puede seleccionar una copia de Snapshot específica para la transferencia, según el tipo de relación de protección que tenga y la operación que esté realizando.
+
+
+
+
+
+== Botones de comando
+
+* *Enviar*
++
+Inicia el proceso de resincronización y cierra el cuadro de diálogo Resincronizar.
+
+* *Cancelar*
++
+Cancela las selecciones y cierra el cuadro de diálogo Resynchronize.
+
+

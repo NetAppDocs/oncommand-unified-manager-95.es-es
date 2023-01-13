@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-customizing-the-storage-summary-report-to-analyze-ha-pairs-for-available-capacity.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe Storage Summary para mostrar los pares de alta disponibilidad que tienen capacidad, de modo que pueda aprovisionar nuevos volúmenes y LUN. El informe muestra los pares de alta disponibilidad ordenados por orden de reducción de la capacidad no utilizada del agregado. 
+---
+= Personalización del informe Storage Summary para analizar parejas de alta disponibilidad para la capacidad disponible a fin de aprovisionar nuevos volúmenes y LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe Storage Summary para mostrar los pares de alta disponibilidad que tienen capacidad, de modo que pueda aprovisionar nuevos volúmenes y LUN. El informe muestra los pares de alta disponibilidad ordenados por orden de reducción de la capacidad no utilizada del agregado.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster, realice los siguientes pasos:
++
+.. Haga clic en la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para ordenar los pares ha con capacidad disponible, haga clic en la columna *capacidad no utilizada del agregado (TB)* y haga clic en la image:../media/click-to-see-menu.gif[""] .
+. Seleccione *filtro* > *Arriba/abajo N*.
+. En el cuadro de diálogo *Arriba/abajo N*, seleccione *Arriba N* en el campo *filtro* e introduzca un valor en el campo de texto.
+. Haga clic en *Aceptar*.
+

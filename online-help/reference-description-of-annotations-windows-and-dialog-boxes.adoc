@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-annotations-windows-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver y administrar todas las anotaciones desde la página Administración/anotaciones. También puede configurar reglas de anotación para los objetos de almacenamiento desde la ficha Reglas de anotación. 
+---
+= Descripción de las ventanas de anotaciones y cuadros de diálogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver y administrar todas las anotaciones desde la página Administración/anotaciones. También puede configurar reglas de anotación para los objetos de almacenamiento desde la ficha Reglas de anotación.

@@ -1,0 +1,50 @@
+---
+permalink: online-help/task-aborting-an-active-data-protection-transfer.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede anular una transferencia de protección de datos activa cuando desee detener una replicación de SnapMirror en curso. También puede borrar el punto de comprobación de reinicio para las transferencias posteriores a la transferencia de línea de base. Puede cancelar una transferencia cuando entra en conflicto con otra operación, como un movimiento de volumen. 
+---
+= Cancelar una transferencia de protección de datos activa desde la página Protection/Volume Relationships
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede anular una transferencia de protección de datos activa cuando desee detener una replicación de SnapMirror en curso. También puede borrar el punto de comprobación de reinicio para las transferencias posteriores a la transferencia de línea de base. Puede cancelar una transferencia cuando entra en conflicto con otra operación, como un movimiento de volumen.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber configurado Workflow Automation.
+
+
+
+
+== Acerca de esta tarea
+
+La acción Anular no se muestra en las siguientes instancias:
+
+* Si la configuración de RBAC no permite esta acción: Por ejemplo, si solo tiene privilegios de operador
+* Cuando se desconoce el ID de volumen: Por ejemplo, cuando se mantiene una relación de interconexión de clústeres y el clúster de destino aún no se detectó
+
+
+No puede borrar el punto de comprobación de reinicio para una transferencia de línea de base.
+
+
+
+== Pasos
+
+. Para cancelar las transferencias de una o más relaciones de protección, en la página *Relaciones de volumen/protección*, seleccione uno o más volúmenes y, en la barra de herramientas, haga clic en *Anular*.
++
+Aparecerá el cuadro de diálogo Anular transferencia .
+
+. Si desea borrar el punto de comprobación de reinicio para una transferencia que no sea una transferencia de línea de base, seleccione *Borrar puntos de control*.
+. Haga clic en *continuar*.
++
+El cuadro de diálogo Anular transferencia se cierra y el estado del trabajo de interrupción se muestra en la parte superior de la página Protección/Relaciones de volumen, junto con un vínculo a los detalles del trabajo.
+
+. Haga clic en el enlace *Ver detalles* para ir a la página de detalles *Protección/Trabajo* para obtener más detalles y ver el progreso del trabajo.
+

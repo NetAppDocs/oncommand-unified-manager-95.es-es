@@ -1,0 +1,58 @@
+---
+permalink: online-help/reference-add-user-dialog-box-um.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear usuarios locales o usuarios de bases de datos, o añadir usuarios remotos o grupos remotos, y asignar roles para que estos usuarios puedan gestionar datos y objetos de almacenamiento mediante Unified Manager. 
+---
+= Cuadro de diálogo Add User
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear usuarios locales o usuarios de bases de datos, o añadir usuarios remotos o grupos remotos, y asignar roles para que estos usuarios puedan gestionar datos y objetos de almacenamiento mediante Unified Manager.
+
+Puede agregar un usuario completando los siguientes campos:
+
+* *Tipo*
++
+Permite especificar el tipo de usuario que desea crear.
+
+* *Nombre*
++
+Permite especificar el nombre de usuario que puede utilizar un usuario para iniciar sesión en Unified Manager.
+
+* *Contraseña*
++
+Permite especificar una contraseña para el nombre de usuario especificado. Este campo sólo se muestra cuando se agrega un usuario local o un usuario de base de datos.
+
+* *Confirmar contraseña*
++
+Permite volver a introducir la contraseña para garantizar la precisión de lo que ha introducido en el campo Contraseña. Este campo sólo se muestra cuando se agrega un usuario local o un usuario de base de datos.
+
+* *Correo electrónico*
++
+Permite especificar una dirección de correo electrónico para el usuario; la dirección de correo electrónico especificada debe ser exclusiva para el nombre de usuario. Este campo solo se muestra cuando se agrega un usuario remoto o un usuario local.
+
+* *Rol*
++
+Permite asignar un rol al usuario y definir el alcance de las actividades que puede realizar el usuario. El rol puede ser Administrador de OnCommand, Administrador de almacenamiento, operador, Esquema de integración o Esquema de informes.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Agregar*
++
+Agrega el usuario y cierra el cuadro de diálogo Agregar usuario.
+
+* *Cancelar*
++
+Cancela los cambios y cierra el cuadro de diálogo Agregar usuario.
+
+

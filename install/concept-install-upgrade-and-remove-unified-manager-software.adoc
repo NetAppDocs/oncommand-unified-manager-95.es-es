@@ -1,0 +1,16 @@
+---
+permalink: install/concept-install-upgrade-and-remove-unified-manager-software.html 
+sidebar: sidebar 
+keywords:  
+summary: En los sistemas Linux, puede instalar el software Unified Manager, actualizar a una versión más reciente del software o quitar Unified Manager. 
+---
+= Instalación, actualización y eliminación del software Unified Manager en Red Hat o CentOS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En los sistemas Linux, puede instalar el software Unified Manager, actualizar a una versión más reciente del software o quitar Unified Manager.
+
+Unified Manager se puede instalar en servidores Red Hat Enterprise Linux o CentOS. El servidor Linux en el que instala Unified Manager puede ejecutarse en un equipo físico o en un equipo virtual que ejecute VMware ESXi, Microsoft Hyper-V o Citrix XenServer.

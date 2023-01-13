@@ -1,0 +1,22 @@
+---
+permalink: online-help/concept-what-the-timestamp-means-in-collected-data-and-events.html 
+sidebar: sidebar 
+keywords:  
+summary: La Marca de hora que aparece en los datos de estado y rendimiento recopilados, o que aparece como hora de detección de un evento, se basa en la hora del clúster de ONTAP, ajustada a la zona horaria establecida en el explorador web. 
+---
+= Lo que significa la Marca de hora en los datos y eventos recopilados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La Marca de hora que aparece en los datos de estado y rendimiento recopilados, o que aparece como hora de detección de un evento, se basa en la hora del clúster de ONTAP, ajustada a la zona horaria establecida en el explorador web.
+
+Se recomienda usar un servidor de protocolo de tiempo de redes (NTP) para sincronizar la hora en los servidores de Unified Manager, en los clústeres de ONTAP y en los exploradores web.
+
+[NOTE]
+====
+Si ve marcas de tiempo que buscan incorrectas para un clúster determinado, quizás desee comprobar que la hora del clúster se ha establecido correctamente.
+
+====

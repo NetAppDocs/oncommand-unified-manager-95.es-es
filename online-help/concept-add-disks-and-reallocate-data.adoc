@@ -1,0 +1,34 @@
+---
+permalink: online-help/concept-add-disks-and-reallocate-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede añadir discos a un agregado para aumentar la capacidad de almacenamiento y el rendimiento de dicho agregado. Tras agregar los discos, verá una mejora en el rendimiento de lectura únicamente tras reasignar los datos en los discos que haya agregado. 
+---
+= Añada discos y reasigne datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir discos a un agregado para aumentar la capacidad de almacenamiento y el rendimiento de dicho agregado. Tras agregar los discos, verá una mejora en el rendimiento de lectura únicamente tras reasignar los datos en los discos que haya agregado.
+
+Puede utilizar estas instrucciones cuando Unified Manager haya recibido eventos de agregado activados por umbrales dinámicos o por umbrales de rendimiento definidos por el sistema:
+
+* Cuando haya recibido un evento de umbral dinámico, en la página de detalles Event, el icono del componente del clúster que representa el agregado en disputa se resalta en rojo.
++
+Debajo del icono, entre paréntesis, es el nombre del agregado, que identifica el agregado al que se pueden añadir discos.
+
+* Cuando ha recibido un evento de umbral definido por el sistema, en la página de detalles Event, el texto de descripción del evento enumera el nombre del agregado que tiene el problema.
++
+Puede añadir discos y reasignar datos en este agregado.
+
+
+
+Los discos que agregue al agregado ya deben existir en el clúster. Si el clúster no tiene discos adicionales disponibles, puede que tenga que ponerse en contacto con su administrador o adquirir más discos. Puede usar System Manager o los comandos de la ONTAP de OnCommand para añadir discos a un agregado.
+
+[NOTE]
+====
+Debe reasignar los datos cuando se utilizan únicamente agregados de HDD y Flash Pool. No reasignar datos en agregados de SSD o FabricPool.
+
+====

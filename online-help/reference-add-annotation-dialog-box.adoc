@@ -1,0 +1,54 @@
+---
+permalink: online-help/reference-add-annotation-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El cuadro de diálogo Add Annotation permite crear anotaciones personalizadas que pueden asociarse a clústeres, volúmenes y máquinas virtuales de almacenamiento \(SVM\) mediante reglas de anotación.' 
+---
+= Cuadro de diálogo Agregar anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Add Annotation permite crear anotaciones personalizadas que pueden asociarse a clústeres, volúmenes y máquinas virtuales de almacenamiento (SVM) mediante reglas de anotación.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Nombre de anotación*
++
+Especifica el nombre de la anotación. Debe introducir un nombre único para la anotación.
+
+* *Descripción*
++
+Especifica una descripción significativa de la anotación.
+
+
+
+
+
+== Valores de anotación
+
+* *Agregar*
++
+Agrega un nuevo valor a la anotación seleccionada.
+
+* *Eliminar*
++
+Elimina el valor seleccionado para una anotación.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar y cerrar*
++
+Guarda la nueva anotación y cierra el cuadro de diálogo Agregar anotación.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Agregar anotación sin guardar los cambios.
+
+

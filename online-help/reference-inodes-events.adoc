@@ -1,0 +1,44 @@
+---
+permalink: online-help/reference-inodes-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de inodo proporcionan información cuando el inodo está lleno o casi lleno para poder supervisar de posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos Inodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de inodo proporcionan información cuando el inodo está lleno o casi lleno para poder supervisar de posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Capacidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Inodos casi lleno(ocumEvtInodesAlmostFull)
+ a| 
+Riesgo
+ a| 
+Volumen
+ a| 
+Advertencia
+
+
+
+ a| 
+Inodes Full (ocumEvtInodesFull)
+ a| 
+Riesgo
+ a| 
+Volumen
+ a| 
+Error
+
+|===

@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-script-windows-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Management/Scripts permite añadir scripts a Unified Manager. 
+---
+= Descripción de ventanas de script y cuadros de diálogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Management/Scripts permite añadir scripts a Unified Manager.

@@ -1,0 +1,38 @@
+---
+permalink: online-help/task-editing-individual-volume-health-threshold-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible editar la configuración del umbral de estado para la capacidad de volumen, el crecimiento, la cuota y la reserva de espacio de uno o más volúmenes. Cuando se supera un umbral, se generan alertas y se reciben notificaciones. Estas notificaciones le ayudan a tomar medidas preventivas basadas en el evento generado. 
+---
+= Editar la configuración de umbral de estado de cada volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible editar la configuración del umbral de estado para la capacidad de volumen, el crecimiento, la cuota y la reserva de espacio de uno o más volúmenes. Cuando se supera un umbral, se generan alertas y se reciben notificaciones. Estas notificaciones le ayudan a tomar medidas preventivas basadas en el evento generado.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Basándose en los cambios de los valores de umbral, los eventos se generan o se vuelven obsoletos en el siguiente ciclo de supervisión.
+
+Tenga en cuenta que cuando se habilita la opción Autofila en un volumen, se consideran límites de capacidad según el tamaño máximo de volumen establecido por crecimiento automático, no según el tamaño del volumen original.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Estado* > *volúmenes*.
+. En la página de inventario *Health/Volumes*, seleccione uno o más volúmenes y, a continuación, haga clic en *Editar umbrales*.
+. En el cuadro de diálogo *Editar umbrales de volumen*, edite la configuración de umbral de una de las siguientes opciones: Capacidad, copias Snapshot, cuota de qtree, crecimiento o inodos. Para ello, active la casilla de verificación correspondiente y, a continuación, modifique la configuración.
+. Haga clic en *Guardar*.
+

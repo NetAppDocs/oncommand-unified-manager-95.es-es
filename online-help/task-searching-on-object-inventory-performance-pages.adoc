@@ -1,0 +1,39 @@
+---
+permalink: online-help/task-searching-on-object-inventory-performance-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede buscar cadenas en páginas rendimiento de inventario de objetos. Utilice el campo Buscar situado en la parte superior derecha de la página para localizar rápidamente los datos basándose en el nombre del objeto o en el nombre de la política. Esto permite localizar rápidamente objetos específicos y sus datos asociados, o bien localizar rápidamente políticas y ver los datos de objetos de políticas asociados. 
+---
+= Buscar en páginas rendimiento de inventario de objetos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede buscar cadenas en páginas rendimiento de inventario de objetos. Utilice el campo *Buscar* situado en la parte superior derecha de la página para localizar rápidamente los datos basados en el nombre del objeto o el nombre de la política. Esto permite localizar rápidamente objetos específicos y sus datos asociados, o bien localizar rápidamente políticas y ver los datos de objetos de políticas asociados.
+
+
+
+== Pasos
+
+. Realice una de las siguientes opciones según sus requisitos de búsqueda:
++
+|===
+| Para localizar esto... | Escriba esto... 
+
+
+ a| 
+Un objeto específico
+ a| 
+El nombre del objeto en el campo *Buscar* y haga clic en *Buscar*. Se muestra el objeto por el que ha buscado y sus datos relacionados.
+
+
+
+ a| 
+Una política de umbral de rendimiento definida por el usuario
+ a| 
+Todo o parte del nombre de la política en el campo *Buscar* y haga clic en *Buscar*. Se muestran los objetos asignados a la política en la que se realizó la búsqueda.
+
+|===
+

@@ -1,0 +1,84 @@
+---
+permalink: online-help/reference-storage-services-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de servicios de almacenamiento le proporcionan información sobre la creación y suscripción de servicios de almacenamiento para poder realizar una supervisión de posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de servicios de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de servicios de almacenamiento le proporcionan información sobre la creación y suscripción de servicios de almacenamiento para poder realizar una supervisión de posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Configuración
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Servicio de almacenamiento creado (no aplicable)
+ a| 
+Evento
+ a| 
+Servicio de almacenamiento
+ a| 
+Información
+
+
+
+ a| 
+Servicio de almacenamiento suscrito(no aplicable)
+ a| 
+Evento
+ a| 
+Servicio de almacenamiento
+ a| 
+Información
+
+
+
+ a| 
+Suscripción al servicio de almacenamiento (no aplicable)
+ a| 
+Evento
+ a| 
+Servicio de almacenamiento
+ a| 
+Información
+
+|===
+
+
+== Zona de impacto: Protección
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Eliminación inesperada de Managed SnapMirror RelationshipocumEvtStorageServiceUnsupportedRelationshipDeletion
+ a| 
+Riesgo
+ a| 
+Servicio de almacenamiento
+ a| 
+Advertencia
+
+
+
+ a| 
+Eliminación inesperada del volumen miembro del servicio de almacenamiento (ocumEvtStorageServiceUnexpectedVolumeDeletion)
+ a| 
+Incidente
+ a| 
+Servicio de almacenamiento
+ a| 
+Crítico
+
+|===

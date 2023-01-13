@@ -1,0 +1,84 @@
+---
+permalink: performance-checker/task-viewing-workload-qos-minimum-and-maximum-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede ver la configuración de la política de calidad de servicio \(QoS\) definida por ONTAP en un volumen o LUN en los gráficos Performance Explorer. Un ajuste máximo del rendimiento limita el impacto de las cargas de trabajo concurrentes en los recursos del sistema. Un ajuste mínimo de rendimiento garantiza que una carga de trabajo crítica cumpla los objetivos de rendimiento mínimos, sin importar la demanda de otras cargas de trabajo en competencia.' 
+---
+= Ver los ajustes mínimos y máximos de calidad de servicio de la carga de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver la configuración de la política de calidad de servicio (QoS) definida por ONTAP en un volumen o LUN en los gráficos Performance Explorer. Un ajuste máximo del rendimiento limita el impacto de las cargas de trabajo concurrentes en los recursos del sistema. Un ajuste mínimo de rendimiento garantiza que una carga de trabajo crítica cumpla los objetivos de rendimiento mínimos, sin importar la demanda de otras cargas de trabajo en competencia.
+
+
+
+== Acerca de esta tarea
+
+Los valores de rendimiento de QoS «minum» y «m ximum» de IOPS y Mbps se muestran en los gráficos de contadores sólo si se han configurado en ONTAP. Los ajustes mínimos de rendimiento están disponibles solo en sistemas que ejecuten el software ONTAP 9.2 o posterior, solo en sistemas AFF. Estos ajustes solo se pueden establecer para IOPS en este momento.
+
+Las políticas de calidad de servicio adaptativas están disponibles a partir de ONTAP 9.3 y se expresan mediante IOPS/TB en lugar de IOPS. Estas políticas ajustan de forma automática el valor de la política de calidad de servicio en función del tamaño del volumen, por carga de trabajo, de modo que se mantenga la ratio de IOPS por terabytes a medida que cambie el tamaño del volumen. Solo puede aplicar un grupo de políticas de calidad de servicio adaptativo en los volúmenes. La terminología «esperada» y «pico» de QoS se utiliza para políticas de QoS adaptables en lugar de como mínimo y máximo.
+
+Unified Manager genera eventos de advertencia para incumplimientos de políticas de calidad de servicio cuando el rendimiento de la carga de trabajo superó la configuración máxima de política de calidad de servicio definida durante cada periodo de recogida de rendimiento de la hora anterior. El rendimiento de la carga de trabajo puede superar el umbral de calidad de servicio durante un breve periodo de tiempo durante cada periodo de recogida, pero Unified Manager muestra el rendimiento «medio» durante el periodo de recogida en el gráfico. Por este motivo, es posible que vea eventos de calidad de servicio mientras el rendimiento de una carga de trabajo no haya superado el umbral de política que se muestra en el gráfico.
+
+
+
+== Pasos
+
+. En la página *Explorador de rendimiento* del volumen o LUN seleccionados, realice las siguientes acciones para ver los ajustes de techo y piso de QoS:
++
+|===
+| Si desea... | Realice lo siguiente... 
+
+
+ a| 
+Ver el techo de IOPS (la calidad de servicio máx.)
+ a| 
+En el gráfico total de IOPS o desglose, haga clic en *Zoom View*.
+
+
+
+ a| 
+Ver el techo de Mbps (la calidad de servicio máxima)
+ a| 
+En el gráfico total o desglose de Mbps, haga clic en *Zoom View*.
+
+
+
+ a| 
+Ver la planta de IOPS (la calidad de servicio mín.)
+ a| 
+En el gráfico total de IOPS o desglose, haga clic en *Zoom View*.
+
+
+
+ a| 
+Vea el techo de IOPS/TB (la pico de calidad de servicio)
+ a| 
+Para los volúmenes, en el gráfico IOPS/TB, haga clic en *Zoom View*.
+
+
+
+ a| 
+Ver la superficie de IOPS/TB (calidad de servicio esperada)
+ a| 
+Para los volúmenes, en el gráfico IOPS/TB, haga clic en *Zoom View*.
+
+|===
++
+La línea horizontal discontinua indica el valor de rendimiento máximo o mínimo establecido en ONTAP. También puede ver cuándo se han implementado los cambios en los valores de calidad de servicio.
+
+. Para ver los valores específicos de IOPS y Mbps en comparación con la configuración de QoS, mueva el cursor al área del gráfico para ver la ventana emergente.
+
+
+
+
+== Después de terminar
+
+Si observa que ciertos volúmenes o LUN tienen un número muy elevado de IOPS o Mbps y van a someter los recursos del sistema a un esfuerzo muy elevado, puede usar System Manager o la interfaz de línea de comandos de ONTAP para ajustar la configuración de la calidad de servicio de manera que estas cargas de trabajo no afecten al rendimiento de otras cargas de trabajo.
+
+Para obtener más información acerca del ajuste de la configuración de QoS, consulte la _ONTAP 9 Guía completa de supervisión del rendimiento_.
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-perf-mon/home.html["Guía completa de supervisión del rendimiento de ONTAP 9"]

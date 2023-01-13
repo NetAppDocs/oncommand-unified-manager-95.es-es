@@ -1,0 +1,67 @@
+---
+permalink: online-help/concept-understanding-the-performance-panels-on-the-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: La consola de rendimiento de Unified Manager proporciona una información general de alto nivel del estado del rendimiento para todos los clústeres que se supervisan en el entorno. Los clústeres que tienen problemas de rendimiento se ordenan en la parte superior de la página por gravedad. La información del panel se actualiza automáticamente en cada período de recopilación del rendimiento de cinco minutos. 
+---
+= La consola de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La consola de rendimiento de Unified Manager proporciona una información general de alto nivel del estado del rendimiento para todos los clústeres que se supervisan en el entorno. Los clústeres que tienen problemas de rendimiento se ordenan en la parte superior de la página por gravedad. La información del panel se actualiza automáticamente en cada período de recopilación del rendimiento de cinco minutos.
+
+En la siguiente imagen, se muestra un ejemplo de una consola de rendimiento de Unified Manager que supervisa dos clústeres:
+
+image::../media/opm-2-dashboard-overview.gif[información general del panel de opm 2]
+
+Los iconos de estado que representan los objetos de almacenamiento pueden estar en los siguientes estados, ordenados de la gravedad más alta a la gravedad más baja:
+
+* Crítico (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]): Se han notificado uno o más eventos de rendimiento críticos nuevos para el objeto.
+* Advertencia (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]): Se han notificado uno o más eventos de rendimiento de advertencia nuevos para el objeto.
+* Normal (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]): No se han notificado nuevos eventos de rendimiento para el objeto.
+
+
+[NOTE]
+====
+El color indica si existen nuevos eventos para el objeto. Los eventos que ya no están activos, denominados eventos obsoletos, no afectan al color del icono.
+
+====
+
+
+== Contadores de rendimiento del clúster
+
+Las siguientes categorías de rendimiento se muestran para cada clúster:
+
+* Latencia
++
+Muestra la rapidez con la que el clúster responde a las solicitudes de aplicaciones cliente, en milisegundos por operación.
+
+* IOPS
++
+Muestra la velocidad operativa del clúster, en número de operaciones de entrada/salida por segundo.
+
+* Mbps
++
+Muestra la cantidad de datos que se transfieren al clúster y desde él, en megabytes por segundo.
+
+* Capacidad de rendimiento utilizada
++
+Muestra si algún nodo o agregado está aprovechando al máximo su capacidad de rendimiento disponible.
+
+* Utilización
++
+Muestra si se están utilizando en exceso los recursos de cualquier nodo o agregado.
+
+
+
+Para analizar el rendimiento de los objetos de almacenamiento y del clúster, puede realizar una de las siguientes acciones:
+
+* Puede hacer clic en *Ver detalles del clúster* para mostrar la página de destino del clúster, donde puede ver información detallada sobre el rendimiento y el evento de los objetos de almacenamiento y el clúster seleccionados.
+* Puede hacer clic en uno de los iconos de estado rojo o amarillo de un objeto para mostrar la página Inventory de ese objeto, donde puede ver detalles sobre el objeto de almacenamiento.
++
+Por ejemplo, al hacer clic en un icono de volumen, se muestra la página de inventario Performance/Volume con una lista de todos los volúmenes del clúster seleccionado, clasificados del peor rendimiento hasta el mejor rendimiento.
+
+

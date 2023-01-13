@@ -1,0 +1,86 @@
+---
+permalink: online-help/task-moving-workloads-to-a-different-aggregate.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar Unified Manager para ayudar a identificar un agregado con un menor nivel de actividad que el agregado en el que residen actualmente las cargas de trabajo y, a continuación, puede mover volúmenes o LUN seleccionados a ese agregado. Mover las cargas de trabajo de alto rendimiento a un agregado menos ocupado o a un agregado con almacenamiento flash habilitado permite que la carga de trabajo tenga un rendimiento más eficiente. 
+---
+= Mover las cargas de trabajo a otro agregado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar Unified Manager para ayudar a identificar un agregado con un menor nivel de actividad que el agregado en el que residen actualmente las cargas de trabajo y, a continuación, puede mover volúmenes o LUN seleccionados a ese agregado. Mover las cargas de trabajo de alto rendimiento a un agregado menos ocupado o a un agregado con almacenamiento flash habilitado permite que la carga de trabajo tenga un rendimiento más eficiente.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber registrado el nombre del agregado que está teniendo un problema de rendimiento.
+* Debe haber registrado la fecha y la hora en que el agregado recibió el evento.
+* Debe haber registrado el ID del evento, por ejemplo"», p-sdt-clus1-ag-2542'".
+* Unified Manager debe haber recopilado y analizado un mes o más de datos de rendimiento.
+
+
+
+
+== Acerca de esta tarea
+
+Estos pasos le ayudan a identificar los siguientes recursos para mover cargas de trabajo de alto rendimiento a un agregado más bajo utilizado:
+
+* Los agregados del mismo clúster que menos se utilizan
+* Los volúmenes de mayor rendimiento en el agregado actual
+
+
+
+
+== Pasos
+
+. Identifique el agregado del clúster que es el más utilizado:
++
+.. En la página de detalles *Event*, haga clic en el nombre del clúster en el que reside el agregado.
++
+Los detalles del clúster se muestran en la página Performance/Cluster Landing.
+
+.. En la página *Resumen*, haga clic en *agregados* en el panel *objetos gestionados*.
++
+Se muestra la lista de agregados de este clúster.
+
+.. Haga clic en la columna *utilización* para ordenar los agregados por menos utilizados.
++
+También puede identificar aquellos agregados que tengan la capacidad libre * más grande. De este modo, se proporciona una lista de agregados potenciales a los que se pueden mover cargas de trabajo.
+
+.. Escriba el nombre del agregado al que desea mover las cargas de trabajo.
+
+
+. Identifique los volúmenes de alto rendimiento del agregado que ha recibido el evento:
++
+.. Haga clic en el agregado que está teniendo un problema de rendimiento.
++
+Los detalles del agregado se muestran en la página Performance/Aggregate Explorer.
+
+.. En el selector *intervalo de tiempo*, seleccione *últimos 30 días* y, a continuación, haga clic en *aplicar rango*.
++
+Esto permite ver un período del historial de rendimiento más largo que las 72 horas predeterminadas. Desea mover un volumen que utilice muchos recursos de forma coherente, no solo en las últimas 72 horas.
+
+.. En el control *Ver y Comparar*, seleccione *volúmenes en este agregado*.
++
+Se muestra una lista de los volúmenes FlexVol y los volúmenes que forman FlexGroup en este agregado.
+
+.. Ordene los volúmenes en los MB/s más altos y luego en las IOPS más altas, para ver los volúmenes con el mayor rendimiento.
+.. Escriba los nombres de los volúmenes que desea mover a otro agregado.
+
+
+. Mueva los volúmenes de alto rendimiento al agregado que ha identificado como con un bajo aprovechamiento.
++
+Puede llevar a cabo la operación de transferencia con System Manager de OnCommand, OnCommand Workflow Automation, comandos de ONTAP o una combinación de estas herramientas.
+
+
+
+
+
+== Después de terminar
+
+Tras unos días, compruebe si está recibiendo el mismo tipo de eventos de este nodo o agregado.

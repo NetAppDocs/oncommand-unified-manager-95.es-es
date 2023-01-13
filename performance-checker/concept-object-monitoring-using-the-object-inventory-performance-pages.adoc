@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept-object-monitoring-using-the-object-inventory-performance-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: Las páginas de inventario de objetos Performance permiten supervisar el rendimiento de los objetos en función de los valores de contadores de rendimiento específicos o según eventos de rendimiento. Esto es positivo porque al identificar objetos con eventos de rendimiento puede investigar la causa de los problemas de rendimiento de los clústeres. 
+---
+= Supervisión de objetos mediante las páginas de inventario de objetos Performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las páginas de inventario de objetos Performance permiten supervisar el rendimiento de los objetos en función de los valores de contadores de rendimiento específicos o según eventos de rendimiento. Esto es positivo porque al identificar objetos con eventos de rendimiento puede investigar la causa de los problemas de rendimiento de los clústeres.
+
+Las páginas de inventario de objetos de rendimiento muestran los contadores, los objetos asociados y las políticas de umbral de rendimiento para todos los objetos de todos los clústeres. Estas páginas también le permiten aplicar políticas de umbral de rendimiento a los objetos. La página se puede ordenar según cualquier columna, y se puede buscar en todos los nombres de objeto o datos.
+
+Puede exportar datos de estas páginas a valores separados por comas (`.csv`) Archivo utilizando el botón *Exportar* y, a continuación, utilice los datos exportados para generar informes.

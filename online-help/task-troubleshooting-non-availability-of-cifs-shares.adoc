@@ -1,0 +1,48 @@
+---
+permalink: online-help/task-troubleshooting-non-availability-of-cifs-shares.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible que no pueda acceder a los recursos compartidos CIFS si los objetos de almacenamiento que sirven a estos recursos compartidos no están disponibles. Debe revisar los eventos de disponibilidad como volumen sin conexión, Ruta de unión sin conexión o SVM CIFS Server Down que se generan cuando estos objetos no están disponibles. 
+---
+= Solución de problemas del acceso a recursos compartidos CIFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que no pueda acceder a los recursos compartidos CIFS si los objetos de almacenamiento que sirven a estos recursos compartidos no están disponibles. Debe revisar los eventos de disponibilidad como volumen sin conexión, Ruta de unión sin conexión o SVM CIFS Server Down que se generan cuando estos objetos no están disponibles.
+
+
+
+== Antes de empezar
+
+Debe tener la función de Administrador de almacenamiento para realizar esta tarea.
+
+
+
+== Acerca de esta tarea
+
+Si ha configurado una alerta adecuada, recibirá una notificación sobre el evento de disponibilidad mediante un correo electrónico de alerta.
+
+
+
+== Pasos
+
+. En la página *Paneles/Descripción general*, haga clic en el evento offline adecuado.
++
+Por ejemplo, si recibe un evento Volume sin conexión, haga clic en el *`Volume_name` Evento Volume Offline* en el panel Availability del área Unresolved Incidents and Risks.
+
+. En la página de detalles *Event*, haga clic en *`Volume_name`* En el campo *Fuente*.
+. En la página de detalles *Health/Volume*, haga clic en el número correspondiente a los recursos compartidos CIFS en el panel *dispositivos relacionados*.
+. En la página de detalles *Health/Storage Virtual Machine*, haga clic en la ficha *CIFS shares*.
++
+Puede ver el número de recursos compartidos de CIFS que se ven afectados.
+
+
+
+
+
+== Después de terminar
+
+Debe resolver los errores mediante OnCommand System Manager o la CLI de ONTAP.

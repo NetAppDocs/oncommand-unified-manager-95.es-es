@@ -1,0 +1,20 @@
+---
+permalink: online-help/concept-options-for-improving-workload-performance-from-the-client-side.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede comprobar sus cargas de trabajo de cliente, como aplicaciones o bases de datos, que envían I/o a volúmenes involucrados en un evento de rendimiento para determinar si un cambio en el cliente puede corregir el evento. 
+---
+= Opciones para mejorar el rendimiento de las cargas de trabajo desde el cliente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede comprobar sus cargas de trabajo de cliente, como aplicaciones o bases de datos, que envían I/o a volúmenes involucrados en un evento de rendimiento para determinar si un cambio en el cliente puede corregir el evento.
+
+Cuando los clientes que están conectados a volúmenes en un clúster aumentan sus solicitudes de I/o, el clúster debe esforzarse más para satisfacer la demanda. Si sabe qué clientes tienen un gran número de solicitudes de I/o a un volumen determinado del clúster, puede mejorar el rendimiento del clúster ajustando el número de clientes que acceden al volumen o reduciendo la cantidad de I/o al volumen. También puede aplicar o aumentar un límite en el grupo de políticas de calidad de servicio del que pertenece el volumen.
+
+Puede investigar los clientes y sus aplicaciones para determinar si los clientes envían más I/o de lo normal, que podría estar provocando la contención en un componente de clúster. En la página de detalles Event, la sección System Diagnosis muestra las cargas de trabajo de volumen principales que utilizan el componente en disputa. Si sabe qué cliente accede a un volumen determinado, puede ir al cliente para determinar si el hardware del cliente o una aplicación no están funcionando como se esperaba o si está realizando más trabajo de lo habitual.
+
+En una configuración MetroCluster, las solicitudes de escritura a un volumen en un clúster local se reflejan en un volumen en el clúster remoto. Mantener el volumen de origen en el clúster local sincronizado con el volumen de destino en el clúster remoto, también se puede aumentar la demanda de ambos clústeres en la configuración de MetroCluster. Al reducir las solicitudes de escritura a estos volúmenes reflejados, los clústeres pueden realizar menos operaciones de sincronización, lo que reduce el impacto en el rendimiento de otras cargas de trabajo.

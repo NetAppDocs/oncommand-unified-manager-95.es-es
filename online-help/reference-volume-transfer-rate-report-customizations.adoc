@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-volume-transfer-rate-report-customizations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede personalizar el informe tasa de transferencia de volumen \(Historical\) para ver los detalles de transferencia de volumen en función del tamaño total de transferencia del volumen. También es posible ver las transferencias de volúmenes para un día de la semana específico.' 
+---
+= Personalizaciones del informe de velocidad de transferencia de volumen (Historical)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se puede personalizar el informe tasa de transferencia de volumen (Historical) para ver los detalles de transferencia de volumen según el tamaño total de transferencia del volumen. También es posible ver las transferencias de volúmenes para un día de la semana específico.

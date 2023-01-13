@@ -1,0 +1,20 @@
+---
+permalink: online-help/reference-understanding-and-using-the-node-failover-planning-page.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La página Performance/Node Failover Planning calcula el impacto en el rendimiento de un nodo si falla el nodo asociado de alta disponibilidad \(ha\) del nodo. Unified Manager basa las estimaciones en el rendimiento histórico de los nodos en la pareja de alta disponibilidad.' 
+---
+= Comprender y utilizar la página Node Failover Planning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Performance/Node Failover Planning calcula el impacto en el rendimiento de un nodo si se produce un error en el nodo de partner de alta disponibilidad (ha) del nodo. Unified Manager basa las estimaciones en el rendimiento histórico de los nodos en la pareja de alta disponibilidad.
+
+Estimar el impacto en el rendimiento de una conmutación por error le permite planificar en las siguientes situaciones:
+
+* Si una conmutación al respaldo degrada de forma consistente el rendimiento estimado del nodo de toma de control a un nivel inaceptable, puede considerar tomar acciones correctivas para reducir el impacto en el rendimiento debido a la conmutación al nodo de respaldo.
+* Antes de iniciar una conmutación por error manual para realizar tareas de mantenimiento del hardware, puede calcular cómo la conmutación por error afecta al rendimiento del nodo que toma el control para determinar cuál es el mejor momento para llevar a cabo la tarea.
+

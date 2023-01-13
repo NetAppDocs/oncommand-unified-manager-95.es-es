@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-cluster-inventory-report-customizations.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible personalizar los informes de inventario para supervisar la falta de recursos en los componentes de los clústeres. Por ejemplo, puede personalizar informes para supervisar información, como los clústeres que se acercan al límite del número de SVM, los nodos que ejecutan versiones anteriores de ONTAP y los nodos que alcanzan el límite máximo de disco. 
+---
+= Personalizaciones del informe de inventario de clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar los informes de inventario para supervisar la falta de recursos en los componentes de los clústeres. Por ejemplo, puede personalizar informes para supervisar información, como los clústeres que se acercan al límite del número de SVM, los nodos que ejecutan versiones anteriores de ONTAP y los nodos que alcanzan el límite máximo de disco.

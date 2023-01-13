@@ -1,0 +1,44 @@
+---
+permalink: health-checker/task-configuring-global-health-threshold-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar las condiciones de umbral de estado global para la capacidad, el crecimiento, la reserva de Snapshot, las cuotas y los inodos para supervisar de manera eficaz el agregado, el volumen y el tamaño de qtree. También se puede editar la configuración para generar eventos que superen los umbrales de desfase. 
+---
+= Configuración de los valores del umbral de estado global
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar las condiciones de umbral de estado global para la capacidad, el crecimiento, la reserva de Snapshot, las cuotas y los inodos para supervisar de manera eficaz el agregado, el volumen y el tamaño de qtree. También se puede editar la configuración para generar eventos que superen los umbrales de desfase.
+
+
+
+== Acerca de esta tarea
+
+La configuración de umbral de estado global se aplica a todos los objetos con los que están asociados, como agregados, volúmenes, etc. Cuando se sobrepasan los umbrales, se genera un evento y, si se configuran alertas, se envía una notificación de alerta. Los valores predeterminados de umbral se establecen en valores recomendados, pero se pueden modificar para generar eventos a intervalos que satisfagan sus necesidades específicas. Cuando se cambian los umbrales, los eventos se generan o se vuelven obsoletos en el próximo ciclo de supervisión.
+
+Se puede acceder a la configuración del umbral de estado global desde la página Configuración/umbrales de estado. También puede modificar la configuración del umbral para objetos individuales, desde la página de inventario o la página de detalles de ese objeto.
+
+
+
+== Opciones
+
+* xref:task-configuring-global-aggregate-health-threshold-values.adoc[Configuración de los valores de umbral de estado globales del agregado]
++
+Puede configurar la configuración del umbral de estado para la capacidad, el crecimiento y las copias Snapshot de todos los agregados para realizar un seguimiento de cualquier incumplimiento del umbral.
+
+* xref:task-configuring-global-volume-health-threshold-values.adoc[Configurar los valores de umbral de estado de volúmenes globales]
++
+Puede editar la configuración del umbral de estado para la capacidad, las copias de Snapshot, las cuotas de qtree, el crecimiento del volumen, el espacio de reserva de sobrescritura, e inodos, para todos los volúmenes, para realizar un seguimiento de cualquier incumplimiento de umbral.
+
+* xref:task-configuring-global-qtree-health-threshold-values.adoc[Configuración de los valores de umbral de estado globales para qtrees]
++
+Puede editar la configuración del umbral de estado de la capacidad de todos los qtrees para realizar un seguimiento de cualquier incumplimiento del umbral.
+
+* xref:task-configuring-lag-threshold-settings-for-unmanaged-protection-relationships.adoc[Edición de la configuración del umbral de mantenimiento de posposición para relaciones de protección no administradas]
++
+Puede aumentar o reducir el porcentaje de tiempo de retraso de advertencia o error para que los eventos se generen a intervalos más adecuados a sus necesidades.
+
+

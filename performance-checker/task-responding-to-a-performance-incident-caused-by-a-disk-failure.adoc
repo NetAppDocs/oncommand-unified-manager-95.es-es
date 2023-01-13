@@ -1,0 +1,59 @@
+---
+permalink: performance-checker/task-responding-to-a-performance-incident-caused-by-a-disk-failure.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar Unified Manager para investigar un evento de rendimiento provocado por cargas de trabajo que utilizan en exceso un agregado. También puede usar Unified Manager para comprobar el estado del agregado a fin de ver si los eventos de estado recientes detectados en el agregado contribuyeron al evento de rendimiento. 
+---
+= Responder a un evento de rendimiento dinámico causado por un fallo del disco
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar Unified Manager para investigar un evento de rendimiento provocado por cargas de trabajo que utilizan en exceso un agregado. También puede usar Unified Manager para comprobar el estado del agregado a fin de ver si los eventos de estado recientes detectados en el agregado contribuyeron al evento de rendimiento.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento nuevos, reconocidos o obsoletos.
+
+
+
+
+== Pasos
+
+. Abra la página *Detalles del evento* para ver información sobre el evento.
+. Lea la *Descripción*, que describe las cargas de trabajo implicadas en el evento y el componente de clúster en disputa.
++
+Hay varios volúmenes victimas cuya latencia se vio afectada por el componente del clúster en disputa. El agregado, que está en medio de una reconstrucción de RAID para sustituir el disco con error por un disco de repuesto, es el componente del clúster en disputa. En componente en disputa, el icono del agregado se resalta en rojo y el nombre del agregado se muestra entre paréntesis.
+
+. En el gráfico de utilización de la carga de trabajo, seleccione *Bully Workloads*.
+. Pase el cursor por encima del gráfico para ver las cargas de trabajo principales problemáticas que afectan al componente.
++
+En la parte superior del gráfico se muestran las principales cargas de trabajo con el máximo aprovechamiento desde que se detectó el evento. Una de las principales cargas de trabajo es el estado del disco de carga de trabajo definido por el sistema, que indica una reconstrucción de RAID. Una reconstrucción es el proceso interno relacionado con la reconstrucción del agregado con el disco de repuesto. La carga de trabajo de estado del disco, junto con otras cargas de trabajo del agregado, probablemente provocó la contención en el agregado y el evento asociado.
+
+. Después de confirmar que la actividad de la carga de trabajo del estado del disco provocó el evento, espere aproximadamente 30 minutos hasta que finalice la reconstrucción y que Unified Manager analice el evento y detecte si el agregado sigue en disputa.
+. En Unified Manager, busque el ID de evento que registró en el paso 2.
++
+El evento de error del disco se muestra en la página de detalles Event. Una vez finalizada la reconstrucción de RAID, compruebe que el estado sea obsoleto para indicar que se ha resuelto el evento.
+
+. En el gráfico de utilización de la carga de trabajo, seleccione *Bully Workloads* para ver las cargas de trabajo en el agregado por su utilización máxima.
+. Vaya a la página *Detalles de rendimiento/volumen* para la carga de trabajo superior.
+. Haga clic en *1d* para mostrar las últimas 24 horas (1 día) de datos del volumen seleccionado.
++
+En el gráfico latencia, un punto rojo (image:../media/opm-incident-icon-png.gif["Icono de incidente de Performance Manager"]) indica cuándo se produjo el evento de fallo del disco.
+
+. Seleccione *romper datos por*.
+. En *componentes*, seleccione ***utilización de disco***.
+. Haga clic en *Enviar*.
++
+El gráfico de utilización de discos muestra un gráfico de todas las solicitudes de lectura y escritura de la carga de trabajo seleccionada a los discos del agregado de destino.
+
+. Compare los datos del gráfico *Disk Utilization* con los datos en el momento del evento en el gráfico *Latency*.
++
+En el momento del evento, el uso de disco muestra una gran cantidad de actividad de lectura y escritura causada por los procesos de reconstrucción de RAID, lo que aumentó la latencia del volumen seleccionado. Unas horas después del evento, tanto las lecturas como las escrituras y la latencia han disminuido, lo que confirma que el agregado ya no está en disputa.
+
+

@@ -1,0 +1,196 @@
+---
+permalink: online-help/reference-group-action-volume-thresholds-section.html 
+sidebar: sidebar 
+keywords:  
+summary: La sección umbrales de acción de grupo permite configurar umbrales de estado a nivel de grupo para los volúmenes. Estos umbrales se aplican a todos los volúmenes de un grupo. Cuando los umbrales de estado de los volúmenes se configuran en el nivel de grupo, los valores de umbral de estado global no se ven afectados. 
+---
+= Sección Group Action-volume Thresholds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección umbrales de acción de grupo permite configurar umbrales de estado a nivel de grupo para los volúmenes. Estos umbrales se aplican a todos los volúmenes de un grupo. Cuando los umbrales de estado de los volúmenes se configuran en el nivel de grupo, los valores de umbral de estado global no se ven afectados.
+
+Se pueden configurar umbrales de estado del volumen para los siguientes fines configurar una acción del grupo:
+
+* Capacidad
+* Crecimiento
+* Cuota de qtree
+* Copias Snapshot
+* Inodos
+
+
+Los valores predeterminados globales se utilizan si los umbrales de estado de los volúmenes no están configurados para ninguna de estas categorías. Puede definir umbrales de estado para los siguientes:
+
+* Capacidad
+* Crecimiento
+* Cuota de qtree
+* Copias Snapshot
+* Inodos
+
+
+
+
+== Sección capacidad
+
+Se pueden establecer condiciones para los siguientes umbrales de estado de capacidad del volumen:
+
+* * Espacio casi lleno*
++
+Especifica el porcentaje en el que se considera que un volumen está casi lleno:
+
++
+** Valor predeterminado: 80 %
++
+El valor de este umbral debe ser menor que el valor del umbral de volumen completo para que el servidor de gestión genere un evento.
+
+** Evento generado: Volumen casi completo
+** Gravedad del evento: Advertencia
+
+
+* * Espacio lleno*
++
+Especifica el porcentaje en el que un volumen se considera completo:
+
++
+** Valor predeterminado: 90 %
+** Evento generado: Volumen completo
+** Gravedad del evento: Error
+
+
+* *Sobrecomprometidos*
++
+Especifica el porcentaje al que se considera que un volumen está sobrecargado:
+
++
+** Valor predeterminado: 100 %
+** Evento generado: Volumen sobrecargado
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Sección de crecimiento
+
+Se pueden definir las siguientes condiciones de umbral de estado para el crecimiento del volumen:
+
+* *Tasa de crecimiento*
++
+Especifica el porcentaje al que la tasa de crecimiento de un volumen se considera normal antes de que el sistema genere un evento anormal de tasa de crecimiento de volumen:
+
++
+** Valor predeterminado: 1 por ciento
+** Evento generado: Tasa de crecimiento del volumen anormal
+** Gravedad del evento: Advertencia
+
+
+* *Sensibilidad de la tasa de crecimiento*
++
+Especifica el factor que se aplica a la desviación estándar de la tasa de crecimiento de un volumen. Si la tasa de crecimiento supera la desviación estándar ponderada, se genera un evento anormal tasa de crecimiento de volumen.
+
++
+Un valor más bajo para la sensibilidad a la tasa de crecimiento indica que el agregado es altamente sensible a los cambios en la tasa de crecimiento. El rango para la sensibilidad de la tasa de crecimiento es de 1 a 5.
+
++
+** Valor predeterminado: 2
+
+
+
+
+
+
+== Sección Qtree Quota
+
+Puede establecer las siguientes condiciones de umbral de estado para las cuotas de volumen:
+
+* * Casi sobrecomprometido*
++
+Especifica el porcentaje al que se considera que un volumen está casi comprometido en exceso mediante las cuotas de qtree:
+
++
+** Valor predeterminado: 95 %
+** Evento generado: La cuota de qtree del volumen casi está comprometida
+** Gravedad del evento: Advertencia
+
+
+* *Sobrecomprometidos*
++
+Especifica el porcentaje al que se considera que un volumen está sobrecargado por las cuotas de qtree:
+
++
+** Valor predeterminado: 100 %
+** Evento generado: Se ha comprometido una cuota de qtree del volumen
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Sección copias Snapshot
+
+Puede establecer las siguientes condiciones de umbral de estado para las copias Snapshot en el volumen:
+
+* *Reserva Snapshot completa*
++
+Especifica el porcentaje en el que el espacio reservado para las copias de Snapshot se considera completo:
+
++
+** Valor predeterminado: 90 %
+** Evento generado: Reserva de Snapshot de volumen completa
+** Gravedad del evento: Error
+
+
+* *Días hasta Full*
++
+Especifica la cantidad de días que queda antes de que el espacio reservado para las copias de Snapshot alcance la capacidad completa:
+
++
+** Valor predeterminado: 7
+** Evento generado: Reserva de Snapshot de volumen días hasta completa
+** Gravedad del evento: Error
+
+
+* * Contador*
++
+Especifica el número de copias Snapshot en un volumen que se considera demasiadas:
+
++
+** Valor predeterminado: 250
+** Evento generado: Demasiadas copias Snapshot
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Sección Inodes
+
+Puede establecer las siguientes condiciones de umbral de estado para inodos:
+
+* * Casi lleno*
++
+Especifica el porcentaje en el que se considera que un volumen ha consumido la mayoría de sus inodos:
+
++
+** Valor predeterminado: 80 %
+** Evento generado: Inodos casi completos
+** Gravedad del evento: Advertencia
+
+
+* *Completo*
++
+Especifica el porcentaje en el que se considera que un volumen ha consumido todas sus inodos:
+
++
+** Valor predeterminado: 90 %
+** Evento generado: Inodos Full
+** Gravedad del evento: Error
+
+
+

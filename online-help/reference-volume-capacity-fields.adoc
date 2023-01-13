@@ -1,0 +1,204 @@
+---
+permalink: online-help/reference-volume-capacity-fields.html 
+sidebar: sidebar 
+keywords:  
+summary: El informe capacidad de volumen y utilización permite ver información acerca de la capacidad y la utilización de volúmenes en un clúster. Esta información le permite comprender los posibles riesgos de la capacidad y ver la capacidad configurada, utilizada y no utilizada de los agregados. Además, el informe le ayuda a tomar decisiones sobre la habilitación de funciones de ahorro de espacio como la deduplicación y thin provisioning. 
+---
+= Informe Volume Capacity and Utilization
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El informe capacidad de volumen y utilización permite ver información acerca de la capacidad y la utilización de volúmenes en un clúster. Esta información le permite comprender los posibles riesgos de la capacidad y ver la capacidad configurada, utilizada y no utilizada de los agregados. Además, el informe le ayuda a tomar decisiones sobre la habilitación de funciones de ahorro de espacio como la deduplicación y thin provisioning.
+
+
+
+== Vista de tabla de resultados de informes sobre capacidad y utilización de volúmenes
+
+* *Cluster*
++
+Muestra el nombre del clúster.
+
+* *Máquina virtual de almacenamiento*
++
+Muestra el nombre de la máquina virtual de almacenamiento (SVM) que contiene el volumen.
+
+* *Volumen*
++
+Muestra el nombre del volumen.
+
+* *Capacidad total de datos*
++
+Muestra la capacidad de datos total (utilizada más disponible) en un volumen.
+
+* *Capacidad de datos usados*
++
+Muestra la capacidad de datos utilizada en un volumen.
+
+* *Datos usados %*
++
+Muestra los datos usados en un volumen como porcentaje.
+
+* *Capacidad de datos disponible*
++
+Muestra la capacidad de datos disponible en un volumen.
+
+* *Datos disponibles %*
++
+Muestra la capacidad de datos disponible en un volumen como porcentaje.
+
+* *Tasa de crecimiento diario %*
++
+Muestra la tasa de crecimiento que se produce cada 24 horas en el volumen.
+
+* *Días hasta lleno*
++
+Muestra la cantidad estimada de días que quedan antes de que el volumen alcance la capacidad completa.
+
+* *Umbral de espacio completo %*
++
+Especifica el límite para el volumen que se considera completo.
+
+* * Espacio casi el umbral completo %*
++
+Especifica el límite para el volumen que se considera casi completo.
+
+* *Umbral de tasa de crecimiento %*
++
+Especifica que la tasa de crecimiento del agregado se considera normal antes de que el sistema genere un evento anormal de tasa de crecimiento agregado.
+
+* *Umbral de sensibilidad de la tasa de crecimiento*
++
+Especifica el factor que se aplica a la desviación estándar de la tasa de crecimiento de un volumen. Si la tasa de crecimiento supera la desviación estándar ponderada, se genera un evento anormal tasa de crecimiento de volumen.
+
+* *Días hasta el umbral completo*
++
+Especifica la cantidad de días que quedan antes de alcanzar la capacidad completa.
+
+* *Desbordamiento de instantánea %*
++
+Muestra el porcentaje de espacio de datos que consumen las copias de Snapshot.
+
+* *Capacidad utilizada de la Reserva Snapshot*
++
+Muestra la cantidad de espacio utilizada por las copias Snapshot en el volumen.
+
+* *Reserva Snapshot utilizada %*
++
+Muestra la cantidad de espacio utilizada por las copias Snapshot en el volumen como porcentaje.
+
+* *Capacidad disponible de la reserva Snapshot*
++
+Muestra la cantidad de espacio disponible para las copias snapshot en el volumen.
+
+* *Reserva Snapshot disponible %*
++
+Muestra la cantidad de espacio disponible para las copias Snapshot en el volumen como porcentaje.
+
+* *Capacidad total de la Reserva Snapshot*
++
+Muestra la capacidad total de la copia Snapshot en el volumen.
+
+* *Copias Snapshot Reservar umbral completo %*
++
+Especifica el porcentaje en el que el espacio reservado para las copias de Snapshot se considera completo.
+
+* *Umbral de recuento de copias snapshot*
++
+Especifica el número de copias Snapshot en un volumen que se considera demasiadas.
+
+* *Instantánea copia días hasta el umbral completo*
++
+Especifica la cantidad de días que queda antes de que el espacio reservado para las copias de Snapshot alcance la capacidad completa.
+
+* *Número de inodos*
++
+Muestra el número de inodos en el volumen.
+
+* *Utilización de inode %*
++
+Especifica el porcentaje de espacio de inodo utilizado en el volumen.
+
+* *Umbral completo de inodos*
++
+Especifica el porcentaje en el que se considera que un volumen ha consumido todas sus inodos.
+
+* * Inodos umbral casi completo*
++
+Especifica el porcentaje en el que se considera que un volumen ha consumido la mayoría de sus inodos.
+
+* *Capacidad comprometida de cuota*
++
+Muestra el espacio reservado en los volúmenes.
+
+* *Capacidad sobrecomprometida de la cuota*
++
+Muestra la cantidad de espacio que se puede utilizar antes de que el sistema genere el evento de exceso de cuota de volumen.
+
+* *Umbral de exceso de cuota %*
++
+Especifica el porcentaje en el que el volumen está casi sobrecargado.
+
+* *Cuota umbral casi comprometido %*
++
+Especifica el porcentaje en el que el espacio del volumen está casi sobrecargado.
+
+* *Instantánea eliminación automática*
++
+Muestra si la eliminación automática de copias Snapshot está habilitada o deshabilitada.
+
+* *Deduplicación*
++
+Muestra si la deduplicación está habilitada o deshabilitada en el volumen.
+
+* *Ahorro de espacio con deduplicación*
++
+Muestra la cantidad de espacio ahorrado en un volumen mediante la deduplicación.
+
+* *Compresión*
++
+Muestra si la compresión está habilitada o deshabilitada para el volumen.
+
+* *Ahorro de espacio de compresión*
++
+Muestra la cantidad de espacio ahorrado en un volumen mediante compresión.
+
+* *Política de almacenamiento en caché*
++
+Muestra la política de almacenamiento en caché asociada con el volumen seleccionado. La política ofrece información acerca de cómo se produce el almacenamiento en caché Flash Pool en el volumen. Consulte la página del inventario Health/Volumes para obtener más información sobre las políticas de almacenamiento en caché.
+
+* *Prioridad de retención de caché*
++
+Muestra la prioridad utilizada para retener pools en caché.
+
+* *Thin-Provisioning*
++
+Muestra si se ha establecido la garantía de espacio para el volumen seleccionado. Los valores válidos son Yes y no
+
+* *Auto-fila*
++
+Muestra si el volumen FlexVol crece automáticamente en tamaño cuando no hay espacio.
+
+* *Garantía Espacial*
++
+Muestra el control de configuración de volumen FlexVol cuando un volumen quita los bloques libres de un agregado.
+
+* *Estado*
++
+Muestra el estado del volumen que se está exportando.
+
+* *Tipo de SnapLock*
++
+Indica si el volumen es un volumen SnapLock o no de SnapLock.
+
+* *Fecha de caducidad*
++
+La fecha de vencimiento de SnapLock.
+
+* *Política de organización en niveles*
++
+Si este volumen se pone en marcha en un agregado habilitado para FabricPool, se muestra la política de organización en niveles establecida para el volumen.
+
+

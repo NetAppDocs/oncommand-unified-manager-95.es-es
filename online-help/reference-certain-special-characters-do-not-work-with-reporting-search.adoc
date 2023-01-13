@@ -1,0 +1,24 @@
+---
+permalink: online-help/reference-certain-special-characters-do-not-work-with-reporting-search.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Determinados caracteres especiales no funcionan con la búsqueda de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+* *Edición*
++
+Si se utilizan los caracteres especiales % y _ mientras se busca en un informe, la operación fallará.
+
+* *Acción Correctiva*
++
+Si se busca una cadena que contenga % o _, se debe usar una barra diagonal inversa doble antes del carácter especificado.
+
++
+Por ejemplo, para buscar una cadena que contenga S_10, debe introducir S\\_10.
+
+

@@ -1,0 +1,38 @@
+---
+permalink: online-help/task-sharing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede enviar por correo electrónico y compartir sus informes con uno o más usuarios. 
+---
+= Compartir informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede enviar por correo electrónico y compartir sus informes con uno o más usuarios.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Informes* y, a continuación, haga clic en *Ejecutar informe* para el informe que desee.
++
+Se mostrará la página de detalles Report.
+
+. Haga clic en *acciones* > *Compartir*.
+. En el cuadro de diálogo *Compartir informe*, especifique la dirección de correo electrónico del destinatario con el que desea compartir el informe.
++
+Puede especificar una o más direcciones de correo electrónico separadas por comas.
+
+. Especifique el asunto del correo electrónico.
++
+De forma predeterminada, el nombre del informe aparece como asunto del correo electrónico.
+
+. Seleccione el formato del informe.
++
+La opción _PDF_ se selecciona como formato de informe predeterminado. Si se selecciona el formato XHTML, el destinatario debe abrir el informe que se envía por correo electrónico mediante un explorador web compatible.
+
+. Haga clic en *Compartir*.
+

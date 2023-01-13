@@ -1,0 +1,42 @@
+---
+permalink: online-help/reference-data-mirroring-status-definitions.html 
+sidebar: sidebar 
+keywords:  
+summary: Las configuraciones de MetroCluster proporcionan mirroring de datos y la capacidad adicional de iniciar una conmutación por error en caso de que un sitio entero deje de estar disponible. El estado de mirroring de datos entre los clústeres de una configuración de MetroCluster puede ser normal o no hay disponibilidad de mirroring. Comprender el estado le permite gestionar su configuración de MetroCluster de forma eficaz. 
+---
+= Definiciones de estado de mirroring de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las configuraciones de MetroCluster proporcionan mirroring de datos y la capacidad adicional de iniciar una conmutación por error en caso de que un sitio entero deje de estar disponible. El estado de mirroring de datos entre los clústeres de una configuración de MetroCluster puede ser normal o no hay disponibilidad de mirroring. Comprender el estado le permite gestionar su configuración de MetroCluster de forma eficaz.
+
+|===
+| Estado de mirroring de datos | Descripción | Icono mostrado 
+
+
+ a| 
+Normal
+ a| 
+La duplicación de datos entre los clústeres de la configuración de MetroCluster es normal.
+ a| 
+image:../media/metrocluster-connectivity-optimal.gif[""]
+
+
+
+ a| 
+Mirroring no disponible
+ a| 
+El mirroring de datos entre los clústeres de la configuración de MetroCluster no está disponible debido a una conmutación de sitios. Por ejemplo, cuando el clúster de partners está inactivo a causa de un desastre o cuando hay una conmutación por error planificada para fines de prueba.
+ a| 
+Conmutación de sitios con errores:
+
+image::../media/metrocluster-connectivity-down.gif[conectividad MetroCluster inactiva]
+
+Conmutación de sitios correcta:
+
+image::../media/metrocluster-connectivity-failover.gif[recuperación tras fallos en la conectividad MetroCluster]
+
+|===

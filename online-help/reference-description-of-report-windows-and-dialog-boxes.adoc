@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-report-windows-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Las opciones se pueden usar para programar, compartir, gestionar, guardar e importar los informes. 
+---
+= Descripción de ventanas de informe y cuadros de diálogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las opciones se pueden usar para programar, compartir, gestionar, guardar e importar los informes.

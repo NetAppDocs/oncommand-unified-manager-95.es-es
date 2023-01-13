@@ -1,0 +1,128 @@
+---
+permalink: online-help/reference-health-all-clusters-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La página del inventario Health/Clusters permite añadir clústeres y ver información detallada sobre los clústeres que se están supervisando. 
+---
+= Página del inventario Health/Clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página del inventario Health/Clusters permite añadir clústeres y ver información detallada sobre los clústeres que se están supervisando.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Botones de comando
+
+* *Ver estado de monitorización*
++
+Permite ver los Estados de supervisión de los clústeres seleccionados. Para ello, vaya a la página Configuration/Cluster Data Sources.
+
+* *Annotate*
++
+Permite anotar el clúster seleccionado.
+
+* *Actualizar lista*
++
+Actualiza la lista de clústeres y las propiedades asociadas con el clúster.
+
+* *Exportación*
++
+Permite exportar los detalles de todos los clústeres supervisados a valores separados por comas (`.csv`).
+
+
+
+
+
+== Tabla Clusters
+
+La tabla Clusters muestra las propiedades de todos los clústeres detectados. Puede utilizar los filtros de columnas para personalizar los datos que se muestran:
+
+* *Estado*
++
+Un icono que identifica el estado actual del clúster. El estado puede ser crítico (image:../media/sev-critical-um60.png[""]), error (image:../media/sev-error-um60.png[""]), Advertencia (image:../media/sev-warning-um60.png[""]), o normal (image:../media/sev-normal-um60.png[""]).
+
++
+Puede colocar el cursor sobre el icono para ver más información acerca del evento o los eventos que se generan para el clúster.
+
++
+Si el estado del clúster se basa en un solo evento, puede ver información como el nombre del evento, la hora y la fecha en que se generó el evento, el nombre del administrador a quien se asigna el evento y la causa del evento. Puede hacer clic en el botón *Ver detalles* para ver más información sobre el evento.
+
++
+Si el estado del clúster se basa en varios eventos de la misma gravedad, se muestran los tres eventos principales, junto con información como el nombre del evento, la hora y la fecha en que se generan los eventos y el nombre del administrador al que se asigna el evento. Si desea ver más detalles de cada uno de estos eventos, haga clic en el nombre del evento. También puede hacer clic en el enlace**Ver todos los eventos** para ver la lista de eventos generados.
+
+* *Cluster*
++
+El nombre del clúster.
+
+* *Estado de la comunicación*
++
+Si el clúster es accesible o no.
+
++
+El estado se muestra como correcto si es posible acceder al clúster. Si no se puede acceder al clúster o si las credenciales de inicio de sesión no son válidas, el estado se muestra como no accesible.
+
+* *Salud del sistema*
++
+Información de alto nivel acerca del estado del clúster, que se calcula en función del estado de varios subsistemas de clúster.
+
++
+Los valores posibles son OK, OK con suprimido, degradado y componentes no accesibles. Estos valores están determinados por los monitores de estado del software ONTAP.
+
+* *Nombre de host o Dirección IP*
++
+El nombre de dominio completo, el nombre corto o la dirección IP de la LIF de gestión del clúster que se utiliza para conectarse al clúster.
+
+* *FQDN*
++
+El nombre de dominio completo (FQDN) del clúster.
+
+* *Versión del SO*
++
+La versión de ONTAP que ejecuta el clúster.
+
++
+Si los nodos del clúster ejecutan versiones diferentes de ONTAP, se muestra la primera versión de ONTAP.
+
+* *Número de nodos*
++
+El número de nodos que pertenecen al clúster.
+
+* *Última hora de actualización*
++
+La Marca de hora del momento en que se recogieron las muestras de supervisión del clúster por última vez.
+
+* *Número de serie*
++
+El número de serie del clúster.
+
+* *Contacto*
++
+La información de contacto del clúster.
+
+* *Ubicación*
++
+La ubicación del clúster.
+
+* *FIPS activado*
++
+Si el modo FIPS está habilitado en el clúster.
+
+
+
+
+
+== Panel Filters
+
+El panel Filters permite establecer filtros para personalizar la visualización de información en la lista de clústeres. Puede seleccionar filtros en las columnas Estado, Estado de comunicación, Estado del sistema y anotación.
+
+[NOTE]
+====
+Los filtros especificados en el panel Filtros anulan los filtros especificados para las columnas de la lista de clústeres.
+
+====

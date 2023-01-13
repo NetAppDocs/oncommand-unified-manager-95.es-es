@@ -1,0 +1,177 @@
+---
+permalink: online-help/reference-remote-authentication-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar la página autenticación remota para configurar Unified Manager para comunicarse con el servidor de autenticación con el fin de autenticar a los usuarios remotos que intentan iniciar sesión en la interfaz de usuario web de Unified Manager. 
+---
+= Autenticación remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la página autenticación remota para configurar Unified Manager para comunicarse con el servidor de autenticación con el fin de autenticar a los usuarios remotos que intentan iniciar sesión en la interfaz de usuario web de Unified Manager.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+Después de seleccionar la casilla de verificación Habilitar autenticación remota, puede habilitar la autenticación remota mediante un servidor de autenticación.
+
+* *Servicio de autenticación*
++
+Permite configurar el servidor de administración para autenticar usuarios en proveedores de servicios de directorio, como Active Directory, OpenLDAP o especificar su propio mecanismo de autenticación. Sólo puede especificar un servicio de autenticación si ha habilitado la autenticación remota.
+
++
+** *Active Directory*
++
+*** Nombre del administrador
++
+Especifica el nombre de administrador del servidor de autenticación.
+
+*** Contraseña
++
+Especifica la contraseña para acceder al servidor de autenticación.
+
+*** Nombre completo base
++
+Especifica la ubicación de los usuarios remotos en el servidor de autenticación. Por ejemplo, si el nombre de dominio del servidor de autenticación es ou@domain.com, el nombre distintivo base es `cn=ou,dc=domain,dc=com`.
+
+*** Deshabilite la búsqueda de grupo anidada
++
+Especifica si se habilita o deshabilita la opción de búsqueda de grupos anidados. De forma predeterminada, esta opción está deshabilitada. Si utiliza Active Directory, puede acelerar la autenticación desactivando la compatibilidad con grupos anidados.
+
+*** Utilice Conexión segura
++
+Especifica el servicio de autenticación utilizado para comunicarse con los servidores de autenticación.
+
+
+
+** *OpenLDAP*
++
+*** Nombre distintivo del enlace
++
+Especifica el nombre distintivo del enlace que se utiliza junto con el nombre completo de la base para buscar usuarios remotos en el servidor de autenticación.
+
+*** Enlazar contraseña
++
+Especifica la contraseña para acceder al servidor de autenticación.
+
+*** Nombre completo base
++
+Especifica la ubicación de los usuarios remotos en el servidor de autenticación. Por ejemplo, si el nombre de dominio del servidor de autenticación es ou@domain.com, el nombre distintivo base es `cn=ou,dc=domain,dc=com`.
+
+*** Utilice Conexión segura
++
+Especifica que Secure LDAP se usa para comunicarse con servidores de autenticación LDAPS.
+
+
+
+** *Otros*
++
+*** Nombre distintivo del enlace
++
+Especifica el nombre distintivo del enlace que se utiliza junto con el nombre completo de la base para buscar usuarios remotos en el servidor de autenticación configurado.
+
+*** Enlazar contraseña
++
+Especifica la contraseña para acceder al servidor de autenticación.
+
+*** Nombre completo base
++
+Especifica la ubicación de los usuarios remotos en el servidor de autenticación. Por ejemplo, si el nombre de dominio del servidor de autenticación es ou@domain.com, el nombre distintivo base es `cn=ou,dc=domain,dc=com`.
+
+*** Versión de protocolo
++
+Especifica la versión LDAP (Lightweight Directory Access Protocol) que admite el servidor de autenticación. Puede especificar si la versión del protocolo se debe detectar automáticamente o si se debe establecer la versión en 2 o 3.
+
+*** Atributo Nombre de usuario
++
+Especifica el nombre del atributo en el servidor de autenticación que contiene nombres de inicio de sesión de usuario que el servidor de administración debe autenticar.
+
+*** Atributo de pertenencia a grupos
++
+Especifica un valor que asigna la pertenencia al grupo del servidor de administración a usuarios remotos en función de un atributo y un valor especificado en el servidor de autenticación del usuario.
+
+*** UGID
++
+Si los usuarios remotos se incluyen como miembros de un objeto GroupOfUniqueNames en el servidor de autenticación, esta opción permite asignar la pertenencia al grupo del servidor de administración a los usuarios remotos basándose en un atributo especificado en ese objeto GroupOfUniqueNames.
+
+*** Deshabilite la búsqueda de grupo anidada
++
+Especifica si se habilita o deshabilita la opción de búsqueda de grupos anidados. De forma predeterminada, esta opción está deshabilitada. Si utiliza Active Directory, puede acelerar la autenticación desactivando la compatibilidad con grupos anidados.
+
+*** Miembro
++
+Especifica el nombre de atributo que el servidor de autenticación utiliza para almacenar información acerca de los miembros individuales de un grupo.
+
+*** Clase de objeto de usuario
++
+Especifica la clase de objeto de un usuario en el servidor de autenticación remota.
+
+*** Clase de objeto de grupo
++
+Especifica la clase de objeto de todos los grupos del servidor de autenticación remota.
+
+*** Utilice Conexión segura
++
+Especifica el servicio de autenticación utilizado para comunicarse con los servidores de autenticación.
+
+
+
+
+
++
+[NOTE]
+====
+Si desea modificar el servicio de autenticación, asegúrese de eliminar los servidores de autenticación existentes y agregar nuevos servidores de autenticación.
+
+====
+
+
+
+
+== Área servidores de autenticación
+
+El área servidores de autenticación muestra los servidores de autenticación con los que se comunica el servidor de administración para buscar y autenticar usuarios remotos. El servidor de autenticación mantiene las credenciales de los usuarios o grupos remotos.
+
+* *Botones de comando*
++
+Permite añadir, editar o eliminar servidores de autenticación.
+
++
+** Agregar
++
+Permite añadir un servidor de autenticación.
+
++
+Si el servidor de autenticación que va a agregar forma parte de un par de alta disponibilidad (con la misma base de datos), también puede agregar el servidor de autenticación asociado. Esto permite que el servidor de administración se comunique con el asociado cuando no se puede acceder a uno de los servidores de autenticación.
+
+** Editar
++
+Permite editar la configuración de un servidor de autenticación seleccionado.
+
+** Eliminar
++
+Elimina los servidores de autenticación seleccionados.
+
+
+
+* *Nombre o dirección IP*
++
+Muestra el nombre de host o la dirección IP del servidor de autenticación que se usa para autenticar al usuario en el servidor de administración.
+
+* *Puerto*
++
+Muestra el número de puerto del servidor de autenticación.
+
+* *Probar autenticación*
++
+Este botón valida la configuración del servidor de autenticación autenticando un usuario o grupo remoto.
+
++
+Durante las pruebas, si especifica sólo el nombre de usuario, el servidor de administración busca el usuario remoto en el servidor de autenticación, pero no lo autentica. Si especifica tanto el nombre de usuario como la contraseña, el servidor de gestión busca y autentica al usuario remoto.
+
++
+No se puede probar la autenticación si la autenticación remota está deshabilitada.
+
+

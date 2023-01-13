@@ -1,0 +1,38 @@
+---
+permalink: online-help/reference-add-cluster-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede añadir un clúster existente para que pueda supervisar el clúster y obtener información acerca del estado, la capacidad, la configuración y el rendimiento de dicho clúster. 
+---
+= Cuadro de diálogo Agregar clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir un clúster existente para que pueda supervisar el clúster y obtener información acerca del estado, la capacidad, la configuración y el rendimiento de dicho clúster.
+
+Puede añadir un clúster especificando los siguientes valores:
+
+* *Nombre de host o Dirección IP*
++
+Permite especificar el nombre de host (preferido) o la dirección IP (IPv4 o IPv6) de la LIF de administración de clústeres que se utiliza para conectarse con el clúster. Al especificar el nombre de host, podrá coincidir con el nombre del clúster en toda la interfaz de usuario web, en lugar de intentar correlacionar una dirección IP de una página con un nombre de host de otra página.
+
+* *Nombre de usuario*
++
+Permite especificar un nombre de usuario que se puede utilizar para iniciar sesión en el clúster.
+
+* *Contraseña*
++
+Permite especificar una contraseña para el nombre de usuario especificado.
+
+* *Protocolo*
++
+Permite especificar el tipo de protocolo que se puede configurar en el clúster. Es posible habilitar HTTP o HTTPS (para una conexión segura). La conexión se establece con el clúster mediante ambos protocolos y se elige HTTPS a través de HTTP. De manera predeterminada, HTTPS está habilitado con el puerto 443 predeterminado.
+
+* *Puerto*
++
+Permite especificar el número de puerto utilizado para conectarse al clúster. Si no se especifica el puerto, se utiliza el puerto predeterminado para el protocolo seleccionado (80 para HTTP o 443 para HTTPS).
+
+

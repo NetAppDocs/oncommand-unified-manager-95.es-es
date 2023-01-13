@@ -1,0 +1,30 @@
+---
+permalink: online-help/task-customizing-the-svm-inventory-report-to-display-a-list-of-stopped-svms.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe de inventario de SVM para mostrar una lista de SVM detenidas. El informe filtra las SVM según su estado. 
+---
+= Personalizar el informe SVM Inventory para mostrar una lista de SVM detenidas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe de inventario de SVM para mostrar una lista de SVM detenidas. El informe filtra las SVM según su estado.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para filtrar las SVM por estado, haga clic en la columna *Estado* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *detenido*.
+. Haga clic en *Aceptar*.
+

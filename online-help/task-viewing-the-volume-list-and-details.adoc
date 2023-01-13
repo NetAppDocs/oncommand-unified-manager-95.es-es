@@ -1,0 +1,44 @@
+---
+permalink: online-help/task-viewing-the-volume-list-and-details.html 
+sidebar: sidebar 
+keywords:  
+summary: En la página del inventario Health/Volumes, puede supervisar el inventario de volúmenes. La página Estado/volúmenes capacidad y utilización le permite ver información acerca de la capacidad y la utilización de los volúmenes en un clúster. 
+---
+= Ver la lista de volúmenes y los detalles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página del inventario Health/Volumes, puede supervisar el inventario de volúmenes. La página Estado/volúmenes capacidad y utilización le permite ver información acerca de la capacidad y la utilización de los volúmenes en un clúster.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+También se puede usar la página de detalles Health/Volume para ver información detallada sobre los volúmenes que se supervisan, incluida la capacidad, la eficiencia, la configuración y la protección de los volúmenes. También es posible ver información sobre los dispositivos relacionados y las alertas relacionadas para un volumen específico.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Estado* > *volúmenes*.
+. Seleccione una de las siguientes maneras de ver los detalles del volumen:
++
+** Para ver información detallada acerca de la capacidad y utilización de volúmenes en un cluster, en el menú Ver, seleccione *capacidad de volumen y utilización*.
+** Para ver los detalles mínimos, coloque el cursor sobre el nombre del volumen.
+** Para ver los detalles completos, haga clic en el nombre del volumen.
++
+También puede ver todos los detalles haciendo clic en *Ver detalles* en el cuadro de diálogo Detalles mínimos.
+
+
+
+. Para ver los objetos relacionados con el volumen, haga clic en *Ver relacionado* en el cuadro de diálogo Detalles mínimos.
+

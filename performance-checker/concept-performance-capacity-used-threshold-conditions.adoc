@@ -1,0 +1,41 @@
+---
+permalink: performance-checker/concept-performance-capacity-used-threshold-conditions.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear políticas de umbral de rendimiento definidas por el usuario para que los eventos se activen cuando la capacidad de rendimiento utilizada para un nodo o un agregado supera la configuración de umbral de capacidad de rendimiento utilizada definida por el usuario. 
+---
+= La capacidad de rendimiento utilizada condiciones de umbral de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear políticas de umbral de rendimiento definidas por el usuario para que los eventos se activen cuando la capacidad de rendimiento utilizada para un nodo o un agregado supera la configuración de umbral de capacidad de rendimiento utilizada definida por el usuario.
+
+Además, los nodos pueden configurarse con una política de umbral «"capacidad de rendimiento utilizada por la adquisición"». Esta política de umbral suma las estadísticas de rendimiento utilizadas en ambos nodos de una pareja de alta disponibilidad para determinar si alguno de los nodos carecerá de capacidad suficiente si falla el otro nodo. Puesto que la carga de trabajo durante la conmutación por error es la combinación de las cargas de trabajo de los dos nodos asociados, se puede aplicar la misma capacidad de rendimiento utilizada la política de toma de control a ambos nodos.
+
+[NOTE]
+====
+Esta equivalencia en capacidad de rendimiento se utiliza, por lo general, entre nodos. Sin embargo, si hay mucho más tráfico entre nodos destinado para uno de los nodos a través de su partner de conmutación por error, la capacidad de rendimiento total utilizada al ejecutar todas las cargas de trabajo en un nodo del partner en comparación con el otro nodo del partner puede ser ligeramente diferente en función del cual ha fallado.
+
+====
+Las condiciones de capacidad de rendimiento utilizadas también se pueden utilizar como configuración de umbral de rendimiento secundario para crear una política de umbral de combinación al definir umbrales para las LUN y los volúmenes. La condición de capacidad de rendimiento utilizada se aplica al agregado o el nodo en el que reside el volumen o la LUN. Por ejemplo, puede crear una política de umbral de combinación utilizando los siguientes criterios:
+
+|===
+| Objeto de almacenamiento | Contador de rendimiento | Umbral de advertencia | Umbral crítico | Duración 
+
+
+ a| 
+Volumen
+ a| 
+Latencia
+ a| 
+15 ms/op
+ a| 
+25 ms/op
+ a| 
+20 minutos
+
+|===
+Las políticas de umbral de combinación hacen que se genere un evento solo cuando se incumplen ambas condiciones durante toda la duración.

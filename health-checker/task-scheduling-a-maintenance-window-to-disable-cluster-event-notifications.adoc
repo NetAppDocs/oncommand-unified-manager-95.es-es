@@ -1,0 +1,49 @@
+---
+permalink: health-checker/task-scheduling-a-maintenance-window-to-disable-cluster-event-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Si tiene un tiempo de inactividad planificado para un clúster, por ejemplo, para actualizar el clúster o mover uno de los nodos, puede eliminar los eventos y alertas que normalmente se generan durante ese periodo de tiempo mediante la programación de una ventana de mantenimiento de Unified Manager. 
+---
+= Programar una ventana de mantenimiento para deshabilitar las notificaciones de eventos del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si tiene un tiempo de inactividad planificado para un clúster, por ejemplo, para actualizar el clúster o mover uno de los nodos, puede eliminar los eventos y alertas que normalmente se generan durante ese periodo de tiempo mediante la programación de una ventana de mantenimiento de Unified Manager.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Durante una ventana de mantenimiento, aún se generan los eventos relacionados con todos los objetos de ese clúster, pero no aparecen en la página de eventos y no se envían alertas ni otros tipos de notificaciones para estos eventos.
+
+El momento que introduzca para la ventana de mantenimiento se basa en la hora en el servidor de Unified Manager.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Configuración* > *fuentes de datos de clúster*.
+. En la columna *modo de mantenimiento* del clúster, seleccione el botón deslizante y muévase a la derecha.
++
+Se muestra la ventana de calendario.
+
+. Seleccione la fecha y hora de inicio y finalización de la ventana de mantenimiento y haga clic en *aplicar*.
++
+El mensaje "programado" aparece junto al botón deslizante.
+
+
+
+
+
+== Resultados
+
+Cuando se llega a la hora de inicio, el clúster pasa al modo de mantenimiento y se genera un evento "'ventana de mantenimiento de objetos iniciada'".

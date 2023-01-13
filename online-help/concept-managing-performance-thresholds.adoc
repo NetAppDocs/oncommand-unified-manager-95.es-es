@@ -1,0 +1,22 @@
+---
+permalink: online-help/concept-managing-performance-thresholds.html 
+sidebar: sidebar 
+keywords:  
+summary: Las políticas de umbral de rendimiento le permiten determinar el punto en el que Unified Manager genera un evento que informa a los administradores del sistema sobre problemas que podrían afectar al rendimiento de la carga de trabajo. Estas políticas de umbral se conocen como umbrales de rendimiento definidos por el usuario. 
+---
+= Gestionar umbrales de rendimiento definidos por el usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las políticas de umbral de rendimiento le permiten determinar el punto en el que Unified Manager genera un evento que informa a los administradores del sistema sobre problemas que podrían afectar al rendimiento de la carga de trabajo. Estas políticas de umbral se conocen como umbrales de rendimiento _definidos por el usuario_.
+
+Esta versión admite umbrales de rendimiento definidos por el usuario, definidos por el sistema y dinámicos. Con los umbrales dinámicos y definidos por el sistema, Unified Manager analiza la actividad de la carga de trabajo para determinar el valor de umbral adecuado. Con los umbrales definidos por el usuario, puede definir los límites superiores de rendimiento para muchos contadores de rendimiento y para muchos objetos de almacenamiento.
+
+[NOTE]
+====
+Los umbrales de rendimiento definidos por el sistema y los umbrales de rendimiento dinámico los establece Unified Manager y no se pueden configurar. Si recibe eventos innecesarios de cualquier política de umbral de rendimiento definida por el sistema, puede deshabilitar directivas individuales en la página Configuración/gestionar eventos.
+
+====

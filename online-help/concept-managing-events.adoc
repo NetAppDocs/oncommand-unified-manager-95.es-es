@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-managing-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos le ayudan a identificar problemas en los clústeres que se supervisan. 
+---
+= Gestión de eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos le ayudan a identificar problemas en los clústeres que se supervisan.

@@ -1,0 +1,22 @@
+---
+permalink: health-checker/reference-what-the-suggested-actions-section-displays.html 
+sidebar: sidebar 
+keywords:  
+summary: La sección acciones sugeridas de la página de detalles evento proporciona posibles motivos para el evento y sugiere algunas acciones para que pueda intentar resolver el evento por su cuenta. Las acciones sugeridas se personalizan en función del tipo de evento o tipo de umbral que se ha incumplido. 
+---
+= Aparece la sección acciones recomendadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección acciones sugeridas de la página de detalles evento proporciona posibles motivos para el evento y sugiere algunas acciones para que pueda intentar resolver el evento por su cuenta. Las acciones sugeridas se personalizan en función del tipo de evento o tipo de umbral que se ha incumplido.
+
+Esta área solo se muestra para algunos tipos de eventos.
+
+En algunos casos se proporcionan enlaces de *Ayuda* en la página que hacen referencia a información adicional para muchas acciones sugeridas, incluidas instrucciones para realizar una acción específica. Algunas de estas acciones pueden requerir el uso de Unified Manager, System Manager de OnCommand, OnCommand Workflow Automation, comandos de la CLI de ONTAP o una combinación de estas herramientas.
+
+También se proporcionan algunos enlaces en este tema de ayuda.
+
+Debe tener en cuenta las acciones sugeridas aquí como solo una guía para resolver este evento. La acción que se toma para resolver este evento debe basarse en el contexto de su entorno.

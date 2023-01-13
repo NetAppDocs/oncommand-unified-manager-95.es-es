@@ -1,0 +1,32 @@
+---
+permalink: online-help/concept-what-the-expected-range-of-performance-is.html 
+sidebar: sidebar 
+keywords:  
+summary: El rango esperado de valores es una predicción de los valores de rendimiento superior e inferior esperados en un momento determinado. Para la latencia de la carga de trabajo, los valores superiores forman el umbral de rendimiento. Cuando el valor real supera el umbral de rendimiento, Unified Manager activa una alerta de evento de rendimiento. 
+---
+= Qué rango esperado de rendimiento es
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El rango esperado de valores es una predicción de los valores de rendimiento superior e inferior esperados en un momento determinado. Para la latencia de la carga de trabajo, los valores superiores forman el umbral de rendimiento. Cuando el valor real supera el umbral de rendimiento, Unified Manager activa una alerta de evento de rendimiento.
+
+Por ejemplo, durante el horario normal de trabajo entre las 9:00 a.m. y a las 5:00 p.m., la mayoría de los empleados podrían revisar su correo electrónico entre las 9:00 a.m. y las 10:30 El aumento de la demanda de los servidores de correo electrónico implica un aumento de la actividad de las cargas de trabajo en el almacenamiento de entorno de administración durante este tiempo. Los empleados pueden notar que el tiempo de respuesta es lento por parte de los clientes de correo electrónico.
+
+Durante la hora del almuerzo entre las 12:00 p.m. y la 1:00 y al final del día de trabajo después de las 5:00 p.m., la mayoría de los empleados están probablemente lejos de sus computadoras. La demanda de los servidores de correo electrónico suele disminuir y, por lo tanto, se reduce la demanda de almacenamiento de entorno administrativo. Como alternativa, podrían programarse operaciones con la carga de trabajo, como backups de almacenamiento o análisis de virus, que comiencen a las 5:00 p. m. y aumente la actividad en el almacenamiento de gestión.
+
+Durante varios días, el aumento y la disminución de la actividad de la carga de trabajo determinan el rango esperado de la actividad, con los límites superior e inferior para una carga de trabajo. Cuando la actividad de carga de trabajo real de un objeto está fuera de los límites superior o inferior, y permanece fuera de los límites durante un periodo de tiempo, puede indicar que el objeto se está utilizando en exceso o infrautilizado.
+
+
+
+== Cómo se forma el rango esperado
+
+Unified Manager debe recoger como mínimo 3 días de actividad de carga de trabajo antes de que pueda iniciar su análisis y antes de que se pueda mostrar el rango esperado de tiempo de respuesta de I/o y las operaciones en la interfaz gráfica de usuario. La recopilación de datos mínimos requeridos no tiene en cuenta todos los cambios que se producen en la actividad de la carga de trabajo. Después de recoger los primeros 3 días de actividad, Unified Manager ajusta el rango esperado, cada 24 horas a las 12:00 a.m. para reflejar los cambios en la actividad de las cargas de trabajo y establecer un umbral de rendimiento más preciso.
+
+[NOTE]
+====
+El horario de verano cambia la hora del sistema, lo que altera el rango esperado de las estadísticas de rendimiento para las cargas de trabajo supervisadas. Unified Manager empieza a corregir el rango esperado de forma inmediata y tarda unos 15 días en completarlo. Durante este tiempo, es posible seguir usando Unified Manager, pero, dado que Unified Manager utiliza el rango esperado para detectar eventos, es posible que algunos eventos no sean precisos. Los eventos detectados antes del cambio de hora no se verán afectados. Retrasar la hora de forma manual en un clúster o en un servidor de Unified Manager también afectará a los resultados de los análisis de eventos.
+
+====

@@ -1,0 +1,38 @@
+---
+permalink: online-help/reference-edit-cluster-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Edit Cluster le permite modificar la configuración de conexión de un clúster existente, incluidas la dirección IP, el puerto y el protocolo. 
+---
+= Cuadro de diálogo Edit Cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Edit Cluster le permite modificar la configuración de conexión de un clúster existente, incluidas la dirección IP, el puerto y el protocolo.
+
+Puede editar los siguientes campos:
+
+* *Nombre de host o Dirección IP*
++
+Permite especificar el FQDN, el nombre corto o la dirección IP (IPv4 o IPv6) de la LIF de gestión de clústeres que se utiliza para conectarse con el clúster.
+
+* *Nombre de usuario*
++
+Permite especificar un nombre de usuario que se puede utilizar para iniciar sesión en el clúster.
+
+* *Contraseña*
++
+Permite especificar una contraseña para el nombre de usuario especificado.
+
+* *Protocolo*
++
+Permite especificar el tipo de protocolo que se puede configurar en el clúster. Es posible habilitar HTTP o HTTPS (para una conexión segura). La conexión se establece con el clúster mediante ambos protocolos y se elige HTTPS a través de HTTP. De manera predeterminada, HTTPS está habilitado con el puerto 443 predeterminado.
+
+* *Puerto*
++
+Permite especificar el número de puerto utilizado para conectarse al clúster. Si no se especifica el puerto, se utiliza el puerto predeterminado para el protocolo seleccionado (80 para HTTP o 443 para HTTPS).
+
+

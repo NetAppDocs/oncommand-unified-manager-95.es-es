@@ -1,0 +1,56 @@
+---
+permalink: performance-checker/concept-volume-behavior-during-switchover-and-switchback.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos que activan una conmutación de sitios o una conmutación de estado hacen que los volúmenes activos se muevan de un clúster a otro en el grupo de recuperación ante desastres. Se detienen los volúmenes del clúster activos y sirven datos a los clientes, y los volúmenes del otro clúster se activan y comienzan a servir datos. Unified Manager supervisa solo los volúmenes que están activos y en ejecución. 
+---
+= Comportamiento del volumen durante la conmutación de sitios y la conmutación de estado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos que activan una conmutación de sitios o una conmutación de estado hacen que los volúmenes activos se muevan de un clúster a otro en el grupo de recuperación ante desastres. Se detienen los volúmenes del clúster activos y sirven datos a los clientes, y los volúmenes del otro clúster se activan y comienzan a servir datos. Unified Manager supervisa solo los volúmenes que están activos y en ejecución.
+
+Dado que los volúmenes se mueven de un clúster a otro, se recomienda supervisar ambos clústeres. Una única instancia de Unified Manager puede supervisar ambos clústeres en una configuración de MetroCluster, pero en ocasiones la distancia entre las dos ubicaciones requiere el uso de dos instancias de Unified Manager para supervisar ambos clústeres. En la siguiente figura, se muestra una sola instancia de Unified Manager:
+
+image::../media/opm-mcc-switchover.gif[switchover de opm mcc]
+
+Los volúmenes con p en sus nombres indican los volúmenes primarios, y los volúmenes con b en sus nombres son volúmenes de backup reflejados creados por SnapMirror.
+
+Durante el funcionamiento normal:
+
+* El clúster A tiene dos volúmenes activos: Vol1p y Vol2p.
+* El clúster B tiene dos volúmenes activos: Vol3p y Vol4p.
+* El clúster A tiene dos volúmenes inactivos: Vol3b y Vol4b.
+* El clúster B tiene dos volúmenes inactivos: Vol1b y Vol2b.
+
+
+Unified Manager recopila la información relativa a cada uno de los volúmenes activos (estadísticas, eventos, etc.). Las estadísticas de Vol1p y Vol2p se recogen en el Grupo A, y las estadísticas de Vol3p y Vol4p se recogen en el Grupo B.
+
+Una vez que se produce un fallo catastrófico, se lleva a cabo una conmutación de los volúmenes activos del clúster B al clúster A:
+
+* El clúster A tiene cuatro volúmenes activos: Vol1p, Vol2p, Vol3b y Vol4b.
+* El clúster B tiene cuatro volúmenes inactivos: Vol3p, Vol4p, Vol1b y Vol2b.
+
+
+Como durante el funcionamiento normal, Unified Manager recopila la información relacionada con cada uno de los volúmenes activos. Pero en este caso, las estadísticas de Vol1p y Vol2p son recogidas por el Grupo A, y las estadísticas de Vol3b y Vol4b también son recogidas por el Grupo A.
+
+Tenga en cuenta que Vol3p y Vol3b no son los mismos volúmenes, ya que se encuentran en clústeres diferentes. La información de Unified Manager para Vol3p no es la misma que Vol3b:
+
+* Durante la conmutación al clúster A, las estadísticas y los eventos de Vol3p no se ven.
+* En el primer cambio, Vol3b parece un nuevo volumen sin información histórica.
+
+
+Cuando se repara el clúster B y se realiza una conmutación de regreso, Vol3p vuelve a estar activo en el clúster B, con las estadísticas históricas y una brecha de estadísticas para el período durante el cambio. Vol3b no se puede ver desde el clúster A hasta que se produzca otra conmutación:
+
+image::../media/opm-mcc-volumes.gif[volúmenes de mcc de opm]
+
+[NOTE]
+====
+* Los volúmenes MetroCluster inactivos, por ejemplo, Vol3b en el clúster A después de la conmutación de estado, se identifican con el mensaje "'este volumen se eliminó'". El volumen no se elimina en realidad, pero Unified Manager no supervisa actualmente porque no es el volumen activo.
+* Si una sola instancia de Unified Manager supervisa ambos clústeres en una configuración de MetroCluster, la búsqueda de volúmenes devuelve información de la que esté activo en ese momento. Por ejemplo, una búsqueda para "'Vol3'" devolvería estadísticas y eventos para Vol3b en el clúster A si se ha producido una conmutación y Vol3 se ha vuelto activo en el clúster A.
+
+
+====

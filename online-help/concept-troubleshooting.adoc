@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-troubleshooting.html 
+sidebar: sidebar 
+keywords:  
+summary: La información para la solución de problemas le ayuda a identificar y resolver problemas con los que se encuentra cuando se utiliza Unified Manager. 
+---
+= Resolución de problemas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La información para la solución de problemas le ayuda a identificar y resolver problemas con los que se encuentra cuando se utiliza Unified Manager.

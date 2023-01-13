@@ -1,0 +1,30 @@
+---
+permalink: online-help/task-editing-group-actions.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar los parámetros de acción del grupo que configuró en Unified Manager, como el nombre de la acción del grupo, la descripción, el nombre del grupo asociado y los parámetros del tipo de acción. 
+---
+= Editar acciones de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar los parámetros de acción del grupo que configuró en Unified Manager, como el nombre de la acción del grupo, la descripción, el nombre del grupo asociado y los parámetros del tipo de acción.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *grupos*.
+. En la ficha *acciones de grupo*, seleccione la acción de grupo que desea editar y, a continuación, haga clic en *Editar*.
+. En el cuadro de diálogo *Editar acción de grupo*, cambie el nombre de la acción de grupo, la descripción, el nombre del grupo asociado y los parámetros del tipo de acción, según sea necesario.
+. Haga clic en *Guardar*.
+

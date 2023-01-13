@@ -1,0 +1,66 @@
+---
+permalink: online-help/reference-edit-storage-class-thresholds-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Editar umbrales de clase de almacenamiento para modificar los valores de umbral predeterminados de varias clases de almacenamiento en cada SVM con Infinite Volume en función de los requisitos de su organización. Los valores de umbral predeterminados indican el nivel de actividad que se debe alcanzar en una clase de almacenamiento antes de que se active un evento. 
+---
+= Cuadro de diálogo Edit Storage Class Thresholds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Editar umbrales de clase de almacenamiento para modificar los valores de umbral predeterminados de varias clases de almacenamiento en cada SVM con Infinite Volume en función de los requisitos de su organización. Los valores de umbral predeterminados indican el nivel de actividad que se debe alcanzar en una clase de almacenamiento antes de que se active un evento.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Capacidad
+
+El área de capacidad permite configurar condiciones de umbral de capacidad para la clase de almacenamiento seleccionada.
+
+* * Espacio casi lleno*
++
+Especifica el porcentaje en el que una clase de almacenamiento del SVM con Infinite Volume se considera casi completa. También muestra el espacio correspondiente (en GB, MB o TB) en la clase de almacenamiento. Por ejemplo, si tiene una clase de almacenamiento de 10 GB y el umbral de espacio casi completo es 80%, se muestra la siguiente información: (8 GB de 10 GB).
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+* * Espacio lleno*
++
+Especifica el porcentaje en el que la clase de almacenamiento de la SVM con Infinite Volume se considera completa. También muestra el espacio correspondiente (en GB, MB o TB) en la clase de almacenamiento. Por ejemplo, si tiene una clase de almacenamiento de 10 GB y el umbral de espacio completo es 90%, se mostrará la siguiente información: (9 GB de 10 GB).
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+* *Límite de uso de instantánea*
++
+Especifica el límite, en porcentaje, en el espacio reservado para copias de Snapshot en la clase de almacenamiento.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar tareas para un volumen seleccionado.
+
+* *Restaurar valores predeterminados globales*
++
+Permite restaurar la configuración del umbral a los valores actuales establecidos en el nivel global.
+
+* *Guardar*
++
+Guarda todos los ajustes de umbral.
+
+* *Guardar y cerrar*
++
+Guarda toda la configuración de umbral y, a continuación, cierra el cuadro de diálogo Editar umbrales de clase de almacenamiento.
+
+* *Cancelar*
++
+Cancela los cambios (si los hay) en la configuración del umbral y se cierra el cuadro de diálogo Edit Storage Class Thresholds.
+
+

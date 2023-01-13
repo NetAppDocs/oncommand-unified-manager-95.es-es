@@ -1,0 +1,56 @@
+---
+permalink: online-help/task-viewing-event-details-in-the-performance-explorer-events-timeline.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver todos los eventos y sus detalles relacionados en el panel línea de tiempo de eventos del Explorador de rendimiento. Se trata de un método rápido y eficiente para ver todos los eventos de estado y rendimiento que se produjeron en el objeto raíz durante un intervalo de tiempo especificado, lo que puede ser útil para solucionar problemas de rendimiento. 
+---
+= Visualización de detalles de eventos en la línea de tiempo de eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver todos los eventos y sus detalles relacionados en el panel línea de tiempo de eventos del Explorador de rendimiento. Se trata de un método rápido y eficiente para ver todos los eventos de estado y rendimiento que se produjeron en el objeto raíz durante un intervalo de tiempo especificado, lo que puede ser útil para solucionar problemas de rendimiento.
+
+
+
+== Acerca de esta tarea
+
+El panel línea de tiempo de eventos muestra eventos críticos, de error, de advertencia e informativos que se produjeron en el objeto raíz durante el intervalo de tiempo seleccionado. Cada gravedad de evento tiene su propia línea de tiempo. Los eventos únicos y múltiples se representan mediante un punto de evento en la línea de tiempo. Es posible colocar el cursor sobre un punto de evento para ver los detalles del evento. Para aumentar la granularidad visual de varios eventos, puede reducir el intervalo de tiempo. De esta forma, se propagan varios eventos en eventos individuales, lo que le permite ver e investigar por separado cada evento.
+
+Cada punto de evento de rendimiento de la línea de tiempo de eventos se alinea verticalmente con un pico correspondiente en las líneas de tendencias de los gráficos de contadores que se muestran debajo de la línea de tiempo de eventos. Esto proporciona una correlación visual directa entre los eventos y el rendimiento general. Los eventos de salud también se muestran en la línea de tiempo, pero estos tipos de eventos no necesariamente se alinean con un pico en uno de los gráficos de rendimiento.
+
+
+
+== Pasos
+
+. En el panel *escala de tiempo de eventos*, coloque el cursor sobre un punto de evento en una línea de tiempo para ver un resumen del evento o eventos en ese punto de evento.
++
+Un cuadro de diálogo emergente muestra información sobre los tipos de evento, la fecha y la hora en que ocurrieron los eventos, el estado y la duración del evento.
+
+. Vea los detalles completos de un evento o varios:
++
+|===
+| Para hacer esto... | Haga clic en esto... 
+
+
+ a| 
+Ver detalles de un solo evento
+ a| 
+*Ver detalles del evento* en el cuadro de diálogo emergente.
+
+
+
+ a| 
+Ver detalles de varios eventos
+ a| 
+*Ver detalles del evento* en el cuadro de diálogo emergente.
+
+[NOTE]
+====
+Al hacer clic en un solo evento en el cuadro de diálogo varios eventos, se muestra la página correspondiente Event Details.
+
+====
+|===
+

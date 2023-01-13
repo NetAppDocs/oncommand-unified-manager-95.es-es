@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-managing-quotas.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar cuotas de usuarios y grupos para limitar la cantidad de espacio en disco o el número de archivos que puede utilizar un usuario o un grupo de usuarios. Es posible ver información de cuotas de usuarios y grupos de usuarios, como el uso de discos y archivos, así como los diversos límites establecidos en los discos. 
+---
+= Gestión de cuotas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar cuotas de usuarios y grupos para limitar la cantidad de espacio en disco o el número de archivos que puede utilizar un usuario o un grupo de usuarios. Es posible ver información de cuotas de usuarios y grupos de usuarios, como el uso de discos y archivos, así como los diversos límites establecidos en los discos.

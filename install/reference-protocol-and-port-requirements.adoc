@@ -1,0 +1,204 @@
+---
+permalink: install/reference-protocol-and-port-requirements.html 
+sidebar: sidebar 
+keywords: Unified Manager 
+summary: Al utilizar un explorador, un cliente API o SSH, los puertos necesarios deben estar accesibles para las API y la interfaz de usuario de Unified Manager. Los puertos y protocolos necesarios permiten la comunicación entre el servidor de Unified Manager y los sistemas de almacenamiento gestionados, los servidores y otros componentes. 
+---
+= Requisitos de protocolo y puerto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Al utilizar un explorador, un cliente API o SSH, los puertos necesarios deben estar accesibles para las API y la interfaz de usuario de Unified Manager. Los puertos y protocolos necesarios permiten la comunicación entre el servidor de Unified Manager y los sistemas de almacenamiento gestionados, los servidores y otros componentes.
+
+
+
+== Conexiones con el servidor de Unified Manager
+
+No es necesario especificar números de puertos al conectarse a la interfaz de usuario web de Unified Manager, ya que siempre se utilizan los puertos predeterminados. Por ejemplo, como Unified Manager siempre se ejecuta en su puerto predeterminado, puede introducir `\https://<host>` en lugar de `\https://<host>:443`. Los números de puerto predeterminados no se pueden cambiar.
+
+El servidor de Unified Manager utiliza protocolos específicos para acceder a las siguientes interfaces:
+
+|===
+| Interfaz | Protocolo | Puerto | Descripción 
+
+
+ a| 
+Interfaz de usuario web de Unified Manager
+ a| 
+HTTP
+ a| 
+80
+ a| 
+Se utiliza para acceder a la IU web de Unified Manager; redirige automáticamente al puerto seguro 443.
+
+
+
+ a| 
+API de interfaz de usuario web y programas de Unified Manager
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Se usa para acceder de manera segura a la interfaz de usuario web de Unified Manager o para realizar llamadas API, ya que las llamadas API solo se pueden realizar mediante HTTPS.
+
+
+
+ a| 
+Consola de mantenimiento
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+Se usa para acceder a la consola de mantenimiento y recuperar los paquetes de soporte.
+
+
+
+ a| 
+Línea de comandos de Linux
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+Se utiliza para acceder a la línea de comandos Red Hat Enterprise Linux o CentOS y recuperar paquetes de soporte.
+
+
+
+ a| 
+Base de datos MySQL
+ a| 
+MySQL
+ a| 
+3306
+ a| 
+Se utiliza para habilitar el acceso de OnCommand Workflow Automation y OnCommand API Services a Unified Manager.
+
+
+
+ a| 
+Syslog
+ a| 
+UDP
+ a| 
+514
+ a| 
+Se utiliza para acceder a los mensajes de EMS basados en suscripción desde sistemas ONTAP y para crear eventos basados en los mensajes.
+
+
+
+ a| 
+DESCANSO
+ a| 
+HTTPS
+ a| 
+9443
+ a| 
+Se utiliza para acceder a eventos EMS basados en API DE REST en tiempo real desde sistemas ONTAP autenticados.
+
+|===
+
+
+== Conexiones desde el servidor de Unified Manager
+
+Debe configurar el firewall para abrir puertos que permitan la comunicación entre el servidor de Unified Manager y los sistemas de almacenamiento gestionados, los servidores y otros componentes. Si un puerto no está abierto, la comunicación falla.
+
+Según su entorno, puede elegir modificar los puertos y los protocolos que utiliza el servidor de Unified Manager para conectarse a destinos específicos.
+
+El servidor de Unified Manager se conecta utilizando los siguientes protocolos y puertos a los sistemas de almacenamiento gestionados, los servidores y otros componentes:
+
+|===
+| Destino | Protocolo | Puerto | Descripción 
+
+
+ a| 
+Sistema de almacenamiento
+ a| 
+HTTPS
+ a| 
+443 TCP
+ a| 
+Se utiliza para supervisar y gestionar sistemas de almacenamiento.
+
+
+
+ a| 
+Sistema de almacenamiento
+ a| 
+NDMP
+ a| 
+10000 TCP
+ a| 
+Se utiliza para ciertas operaciones de restauración de Snapshot.
+
+
+
+ a| 
+Servidor AutoSupport
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Se utiliza para enviar información de AutoSupport. Requiere acceso a Internet para realizar esta función.
+
+
+
+ a| 
+Servidor de autenticación
+ a| 
+LDAP
+ a| 
+389
+ a| 
+Se utiliza para realizar solicitudes de autenticación y solicitudes de búsqueda de usuarios y grupos.
+
+
+
+ a| 
+LDAPS
+ a| 
+636
+ a| 
+Se utiliza para comunicación LDAP segura.
+ a| 
+Servidor de correo
+
+
+
+ a| 
+SMTP
+ a| 
+25
+ a| 
+Se utiliza para enviar correos electrónicos de notificación de alertas.
+ a| 
+Remitente de captura SNMP
+
+
+
+ a| 
+SNMPv1 o SNMPv3
+ a| 
+162/UDP
+ a| 
+Se utiliza para enviar notificaciones de alerta de capturas de SNMP.
+ a| 
+Servidor de proveedores de datos externos
+
+
+
+ a| 
+TCP
+ a| 
+2003
+ a| 
+Se utiliza para enviar datos de rendimiento a un proveedor de datos externo, como Graphite.
+ a| 
+Servidor NTP
+
+|===

@@ -1,0 +1,18 @@
+---
+permalink: online-help/reference-clear-performance-threshold-policy-page-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar la página Clear Threshold Policy para quitar, o borrar, una política de umbral de rendimiento de uno o más objetos de almacenamiento. 
+---
+= Borrar la página Performance Threshold Policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la página Clear Threshold Policy para quitar, o _clear_, una política de umbral de rendimiento de uno o más objetos de almacenamiento.
+
+La lista de políticas se rellena únicamente con las políticas que se usan en el objeto o los objetos seleccionados.
+
+Seleccione la directiva que desea quitar del objeto de almacenamiento u objetos y, a continuación, haga clic en *Borrar directiva*.

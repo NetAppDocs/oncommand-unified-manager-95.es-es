@@ -1,0 +1,395 @@
+---
+section: performance-checker
+title: Supervise y gestione el rendimiento de los clústeres
+entries:
+- title: Introducción a la supervisión del rendimiento de Unified Manager de OnCommand
+  url: "/performance-checker/concept-introduction-to-unified-manager-performance-monitoring.html"
+  entries:
+  - title: Funciones de supervisión del rendimiento de Unified Manager
+    url: "/performance-checker/concept-unified-manager-performance-monitoring-features.html"
+  - title: Las interfaces de Unified Manager que se utilizan para gestionar el rendimiento
+      del sistema de almacenamiento
+    url: "/performance-checker/concept-unified-manager-interfaces-used-to-manage-storage-system-performance.html"
+  - title: Actividad de recogida de datos de rendimiento y configuración del clúster
+    url: "/performance-checker/concept-cluster-configuration-and-performance-data-collection-activity.html"
+  - title: Qué es un ciclo de recopilación de continuidad de datos
+    url: "/performance-checker/concept-what-a-data-continuity-collection-cycle-is.html"
+  - title: Lo que significa la Marca de hora en los datos y eventos recopilados
+    url: "/performance-checker/concept-what-the-timestamp-means-in-collected-data-and-events.html"
+- title: Navegar por los flujos de trabajo de rendimiento en la interfaz gráfica de
+    usuario de Unified Manager
+  url: "/performance-checker/concept-navigating-performance-workflows-in-the-unified-manager-ui.html"
+  entries:
+  - title: Iniciar sesión en la interfaz de usuario de
+    url: "/performance-checker/task-logging-in-to-the-gui.html"
+  - title: Interfaz gráfica y rutas de navegación
+    url: "/performance-checker/concept-graphical-interface-and-navigational-paths.html"
+    entries:
+    - title: Supervise la navegación de objetos del clúster
+      url: "/performance-checker/concept-monitor-cluster-object-navigation.html"
+    - title: Supervise la navegación del rendimiento del clúster
+      url: "/performance-checker/concept-monitor-cluster-performance-navigation.html"
+    - title: Navegación de investigación de eventos
+      url: "/performance-checker/concept-event-investigation-navigation.html"
+    - title: Navegación de administración de Unified Manager
+      url: "/performance-checker/concept-unified-manager-administration-navigation.html"
+  - title: Buscar objetos de almacenamiento
+    url: "/performance-checker/concept-searching-for-storage-objects.html"
+  - title: Filtrar el contenido de la página del inventario de rendimiento
+    url: "/performance-checker/task-filtering-inventory-page-content.html"
+  - title: Acceder a OnCommand System Manager desde la interfaz de Unified Manager
+    url: "/performance-checker/task-accessing-system-manager-from-the-um-interface.html"
+  - title: Agregar y quitar objetos de almacenamiento de la lista Favoritos
+    url: "/performance-checker/task-adding-to-and-removing-storage-objects-from-the-favorites-list.html"
+  - title: Marcadores de páginas de productos vistas con frecuencia
+    url: "/performance-checker/task-bookmarking-frequently-viewed-product-pages.html"
+  - title: Guardado de marcadores de sus temas favoritos de la Ayuda
+    url: "/performance-checker/task-bookmarking-your-favorite-help-topics-onc.html"
+- title: Comprender los eventos y las alertas de rendimiento
+  url: "/performance-checker/concept-understanding-performance-events-and-alerts.html"
+  entries:
+  - title: Fuentes de eventos de rendimiento
+    url: "/performance-checker/concept-sources-of-performance-events.html"
+  - title: Tipos de gravedad de eventos de rendimiento
+    url: "/performance-checker/reference-performance-event-severity-types.html"
+  - title: Cambios de configuración detectados por Unified Manager
+    url: "/performance-checker/concept-cluster-configuration-changes-detected-by-unified-manager.html"
+  - title: Qué sucede cuando se recibe un evento
+    url: "/performance-checker/concept-what-happens-when-an-event-is-received.html"
+  - title: Qué información se incluye en un correo electrónico de alerta
+    url: "/performance-checker/concept-what-information-is-contained-in-an-alert-email.html"
+  - title: Adición de alertas
+    url: "/performance-checker/task-adding-alerts.html"
+  - title: Adición de alertas para eventos de rendimiento
+    url: "/performance-checker/task-adding-alerts-for-performance-events.html"
+  - title: Tipos de políticas de umbral de rendimiento definidas por el sistema
+    url: "/performance-checker/reference-types-of-system-defined-performance-threshold-policies.html"
+- title: Gestionar umbrales de rendimiento definidos por el usuario
+  pdf-filename: Gestionar umbrales de rendimiento definidos por el usuario (rendimiento
+    del clúster)
+  url: "/performance-checker/concept-managing-performance-thresholds.html"
+  entries:
+  - title: Cómo funcionan las políticas de umbral de rendimiento definidas por el
+      usuario
+    url: "/performance-checker/concept-how-user-defined-performance-threshold-policies-work-opm.html"
+  - title: Qué sucede cuando se incumple una política de umbral de rendimiento
+    url: "/performance-checker/concept-what-happens-when-a-performance-threshold-policy-is-breached-opm.html"
+  - title: Se puede realizar un seguimiento de los contadores de rendimiento mediante
+      umbrales
+    url: "/performance-checker/reference-what-performance-metrics-can-be-monitored-using-thresholds.html"
+  - title: Qué objetos y contadores pueden utilizarse en políticas de umbral de combinación
+    url: "/performance-checker/reference-what-objects-and-metrics-can-be-used-in-combination-threshold-policies.html"
+  - title: Creación de políticas de umbral de rendimiento definidas por el usuario
+    url: "/performance-checker/task-creating-user-defined-performance-threshold-policies.html"
+  - title: Asignación de políticas de umbral de rendimiento a objetos de almacenamiento
+    url: "/performance-checker/task-assigning-performance-threshold-policies-to-storage-objects.html"
+  - title: Ver las políticas de umbral de rendimiento
+    url: "/performance-checker/task-viewing-performance-threshold-policies.html"
+  - title: Editar políticas de umbral de rendimiento definidas por el usuario
+    url: "/performance-checker/task-editing-user-defined-performance-threshold-policies.html"
+  - title: Eliminación de políticas de umbral de rendimiento de objetos de almacenamiento
+    url: "/performance-checker/task-removing-performance-threshold-policies-from-storage-objects.html"
+  - title: Qué ocurre cuando se cambia una política de umbral de rendimiento
+    url: "/performance-checker/concept-what-happens-when-a-performance-threshold-policy-is-changed-opm.html"
+  - title: Qué sucede con las políticas de umbral de rendimiento cuando se mueve un
+      objeto
+    url: "/performance-checker/concept-what-happens-to-performance-threshold-policies-when-an-object-is-moved-opm.html"
+- title: Supervisar el rendimiento del clúster desde la consola de rendimiento
+  url: "/performance-checker/concept-monitoring-cluster-performance-from-the-dashboard.html"
+  entries:
+  - title: La consola de rendimiento
+    url: "/performance-checker/concept-understanding-the-performance-panels-on-the-dashboard.html"
+  - title: Mensajes y descripciones de banner del clúster de la consola de rendimiento
+    url: "/performance-checker/reference-performance-dashboard-cluster-banner-messages.html"
+  - title: Cambiar el intervalo de recogida de estadísticas de rendimiento
+    url: "/performance-checker/task-changing-the-performance-statistics-collection-interval.html"
+- title: Supervisar el rendimiento del clúster en la página Performance Cluster Landing
+  pdf-filename: Supervisión del rendimiento del clúster en la página Performance Cluster
+    Landing (rendimiento del clúster)
+  url: "/performance-checker/concept-monitoring-cluster-performance-from-the-cluster-landing-page.html"
+  entries:
+  - title: Descripción de la página de destino del clúster de rendimiento
+    url: "/performance-checker/concept-understanding-the-performance-cluster-landing-page.html"
+  - title: Página de destino de Cluster de rendimiento
+    pdf-filename: Página de destino de clústeres de rendimiento (rendimiento del clúster)
+    url: "/performance-checker/reference-performance-cluster-landing-page.html"
+    entries:
+    - title: Página Performance Cluster Summary
+      pdf-filename: Página Performance Cluster Summary (rendimiento del clúster)
+      url: "/performance-checker/reference-cluster-summary-page-opm.html"
+      entries:
+      - title: Panel de eventos de rendimiento del clúster
+        url: "/performance-checker/reference-cluster-performance-events-pane.html"
+      - title: Panel Managed Objects
+        url: "/performance-checker/reference-managed-objects-pane.html"
+    - title: Página Top Performers
+      url: "/performance-checker/reference-top-performers-page.html"
+- title: Supervisión del rendimiento mediante las páginas Performance Inventory
+  pdf-filename: Supervisar el rendimiento mediante las páginas Performance Inventory
+    (rendimiento del clúster)
+  url: "/performance-checker/concept-monitoring-performance-using-the-object-performance-inventory-pages.html"
+  entries:
+  - title: Supervisión de objetos mediante las páginas de inventario de objetos Performance
+    url: "/performance-checker/concept-object-monitoring-using-the-object-inventory-performance-pages.html"
+  - title: Afinar el contenido de la página del inventario de rendimiento
+    pdf-filename: Refinado del contenido de la página del inventario de rendimiento
+      (rendimiento del clúster)
+    url: "/performance-checker/concept-refining-object-inventory-performance-page-content.html"
+    entries:
+    - title: Buscar en páginas rendimiento de inventario de objetos
+      url: "/performance-checker/task-searching-on-object-inventory-performance-pages.html"
+    - title: Ordenar en las páginas rendimiento de inventario de objetos
+      url: "/performance-checker/task-sorting-on-the-object-inventory-performance-pages.html"
+    - title: Filtrar datos en las páginas rendimiento de inventario de objetos
+      url: "/performance-checker/task-filtering-on-the-object-inventory-performance-pages.html"
+  - title: Descripción de las recomendaciones de Unified Manager para organizar los
+      datos en niveles en el cloud
+    url: "/performance-checker/concept-understanding-the-um-recommendations-to-tier-data-to-the-cloud.html"
+- title: Supervisión del rendimiento mediante las páginas Performance Explorer
+  pdf-filename: Supervisar el rendimiento mediante las páginas Performance Explorer
+    (rendimiento del clúster)
+  url: "/performance-checker/concept-monitoring-performance-using-the-performance-explorer-pages.html"
+  entries:
+  - title: Descripción del objeto raíz
+    url: "/performance-checker/concept-understanding-the-root-object.html"
+  - title: Aplicar filtrado para reducir la lista de objetos correlacionados de la
+      cuadrícula
+    url: "/performance-checker/concept-applying-filtering-to-correlated-objects.html"
+  - title: Especificación de un intervalo de tiempo para objetos correlacionados
+    pdf-filename: Especificar un intervalo de tiempo para objetos correlacionados
+      (rendimiento del clúster)
+    url: "/performance-checker/task-specifying-a-correlated-objects-time-range.html"
+    entries:
+    - title: Selección de un intervalo de tiempo predefinido
+      url: "/performance-checker/task-selecting-a-predefined-time-range.html"
+    - title: Especificación de un intervalo de tiempo personalizado
+      url: "/performance-checker/task-specifying-a-custom-time-range.html"
+  - title: Definir la lista de objetos correlacionados para la representación gráfica
+      de comparación
+    url: "/performance-checker/task-defining-the-list-of-correlated-objects-for-comparison-graphing.html"
+  - title: Gráficos de contadores
+    url: "/performance-checker/concept-understanding-counter-charts.html"
+  - title: Tipos de gráficos de contadores de rendimiento
+    url: "/performance-checker/reference-types-of-performance-counter-charts.html"
+  - title: Selección de gráficos de rendimiento para mostrar
+    url: "/performance-checker/task-selecting-performance-charts-to-display.html"
+  - title: Ampliación del panel Contador de gráficos
+    url: "/performance-checker/task-expanding-the-counter-charts-pane.html"
+  - title: Cambiar el enfoque de los gráficos de contador a un período de tiempo más
+      corto
+    url: "/performance-checker/task-changing-the-counter-charts-focus-to-a-smaller-period-of-time.html"
+  - title: Visualización de detalles de eventos en la línea de tiempo de eventos
+    url: "/performance-checker/task-viewing-event-details-in-the-performance-explorer-events-timeline.html"
+  - title: Vista de zoom de las cartas de contador
+    pdf-filename: Vista de zoom de los gráficos de contador (rendimiento del clúster)
+    url: "/performance-checker/concept-counter-charts-zoom-view.html"
+    entries:
+    - title: Visualización de la vista Zoom de las cartas del contador
+      url: "/performance-checker/task-displaying-the-counter-charts-zoom-view.html"
+    - title: Especificación del intervalo de tiempo en la vista Zoom
+      url: "/performance-checker/task-specifying-the-time-range-in-zoom-view.html"
+    - title: Selección de umbrales de rendimiento en la vista Zoom de gráficos de
+        contador
+      url: "/performance-checker/task-selecting-performance-thresholds-in-zoom-view.html"
+  - title: Ver los ajustes mínimos y máximos de calidad de servicio de la carga de
+      trabajo
+    url: "/performance-checker/task-viewing-workload-qos-minimum-and-maximum-settings.html"
+  - title: Cómo se muestran los diferentes tipos de políticas de calidad de servicio
+      en Unified Manager
+    url: "/performance-checker/concept-how-qos-policies-are-displayed-in-the-throughput-charts.html"
+  - title: Ver la latencia de volumen por componente del clúster
+    url: "/performance-checker/task-viewing-volume-latency-by-cluster-component.html"
+  - title: Ver tráfico de IOPS de SVM por protocolo
+    url: "/performance-checker/task-viewing-svm-iops-traffic-by-protocol.html"
+  - title: Vea los gráficos de latencia de volúmenes y LUN para verificar la garantía
+      de rendimiento
+    url: "/performance-checker/task-viewing-volume-and-lun-latency-charts-to-verify-performance-guarantee.html"
+  - title: Componentes de las páginas de destino de objetos
+    pdf-filename: Componentes de las páginas de destino de objetos (rendimiento del
+      clúster)
+    url: "/performance-checker/concept-components-of-the-object-landing-pages-opm.html"
+    entries:
+    - title: Resumen
+      url: "/performance-checker/reference-summary-page-opm.html"
+    - title: Componentes de la página Performance Explorer
+      url: "/performance-checker/concept-components-of-the-performance-explorer-page.html"
+- title: Gestión del rendimiento mediante la capacidad de rendimiento y la información
+    de IOPS disponible
+  pdf-filename: Gestionar el rendimiento mediante la capacidad de rendimiento y la
+    información de IOPS disponible (rendimiento de clúster)
+  url: "/performance-checker/concept-managing-performance-using-perf-capacity-and-available-iops-information.html"
+  entries:
+  - title: La capacidad de rendimiento utilizada
+    url: "/performance-checker/concept-what-performance-capacity-used-is.html"
+  - title: Qué significa el valor de capacidad de rendimiento utilizada
+    url: "/performance-checker/concept-what-the-used-headroom-value-means.html"
+  - title: Qué es IOPS disponible
+    url: "/performance-checker/concept-what-available-iops-is.html"
+  - title: Ver los valores de capacidad de rendimiento de los nodos y los agregados
+    url: "/performance-checker/concept-viewing-node-and-aggregate-performance-capacity-used-values.html"
+  - title: Ver los valores de IOPS disponibles de los nodos y los agregados
+    url: "/performance-checker/concept-viewing-node-and-aggregate-available-iops-values.html"
+  - title: Ver los gráficos de contadores de capacidad de rendimiento para identificar
+      los problemas
+    url: "/performance-checker/task-viewing-performance-capacity-counter-charts-to-identify-issues.html"
+  - title: La capacidad de rendimiento utilizada condiciones de umbral de rendimiento
+    url: "/performance-checker/concept-performance-capacity-used-threshold-conditions.html"
+  - title: Uso del contador de capacidad de rendimiento utilizada para gestionar el
+      rendimiento
+    url: "/performance-checker/concept-using-the-performance-capacity-used-counter-to-manage-performance.html"
+- title: Comprender y utilizar la página Node Failover Planning
+  pdf-filename: Comprender y utilizar la página Planificación de conmutación por error
+    de nodos (rendimiento del clúster)
+  url: "/performance-checker/reference-understanding-and-using-the-node-failover-planning-page.html"
+  entries:
+  - title: Uso de la página Planificación de conmutación por error de nodos para determinar
+      las acciones correctivas
+    url: "/performance-checker/concept-using-the-failover-planning-page-to-determine-corrective-actions.html"
+  - title: Componentes de la página Node Failover Planning
+    url: "/performance-checker/reference-components-of-the-node-failover-planning-page.html"
+  - title: Uso de una directiva de umbral con la página Planificación de conmutación
+      por error de nodos
+    url: "/performance-checker/concept-using-a-threshold-policy-with-the-node-failover-planning-page.html"
+  - title: Usar el gráfico de desglose de capacidad de rendimiento utilizada para
+      la planificación de conmutación por error
+    url: "/performance-checker/task-using-the-perf-capacity-used-breakdown-chart-for-failover-planning.html"
+- title: Recogida de datos y supervisión del rendimiento de carga de trabajo
+  pdf-filename: Recogida de datos y supervisión del rendimiento de carga de trabajo
+    (rendimiento del clúster)
+  url: "/performance-checker/concept-collecting-data-and-monitoring-workload-performance.html"
+  entries:
+  - title: Tipos de cargas de trabajo supervisadas por Unified Manager
+    url: "/performance-checker/concept-types-of-workloads-monitored-by-unified-manager.html"
+  - title: Valores de medición del rendimiento de la carga de trabajo
+    url: "/performance-checker/reference-workload-performance-measurement-values.html"
+  - title: Qué rango esperado de rendimiento es
+    url: "/performance-checker/concept-what-the-expected-range-of-performance-is.html"
+  - title: Cómo se utiliza el rango esperado en el análisis de rendimiento
+    url: "/performance-checker/reference-how-the-expected-range-is-used-in-performance-analysis.html"
+  - title: Cómo Unified Manager utiliza la latencia de carga de trabajo para identificar
+      problemas de rendimiento
+    url: "/performance-checker/concept-how-unified-manager-uses-workload-response-time-to-identify-performance-issues.html"
+  - title: Cómo las operaciones del clúster pueden afectar a la latencia de carga
+      de trabajo
+    url: "/performance-checker/concept-how-cluster-operations-can-affect-workload-latency.html"
+  - title: Supervisión del rendimiento de las configuraciones de MetroCluster
+    pdf-filename: Supervisión del rendimiento de configuraciones MetroCluster (rendimiento
+      de clúster)
+    url: "/performance-checker/concept-performance-monitoring-of-metrocluster-configurations.html"
+    entries:
+    - title: Comportamiento del volumen durante la conmutación de sitios y la conmutación
+        de estado
+      url: "/performance-checker/concept-volume-behavior-during-switchover-and-switchback.html"
+  - title: "¿Qué eventos de rendimiento son"
+    url: "/performance-checker/concept-what-performance-events-are.html"
+    entries:
+    - title: Análisis y notificación de eventos de rendimiento
+      url: "/performance-checker/reference-performance-event-analysis-and-notification.html"
+    - title: La forma en que Unified Manager determina el impacto en el rendimiento
+        de un evento
+      url: "/performance-checker/concept-how-unified-manager-determines-the-performance-impact-for-an-incident.html"
+    - title: Los componentes del clúster y el motivo por los que pueden estar en contención
+      url: "/performance-checker/concept-cluster-components-and-why-they-can-be-in-contention.html"
+    - title: Funciones de las cargas de trabajo involucradas en un evento de rendimiento
+      url: "/performance-checker/concept-roles-of-workloads-involved-in-a-performance-incident.html"
+- title: Análisis del rendimiento de la carga de trabajo
+  pdf-filename: Análisis del rendimiento de la carga de trabajo (rendimiento del clúster)
+  url: "/performance-checker/concept-analyzing-workload-performance.html"
+  entries:
+  - title: Determinar si una carga de trabajo tiene un problema de rendimiento
+    url: "/performance-checker/task-determining-whether-a-workload-has-a-performance-issue.html"
+  - title: Investigando la percepción de un tiempo de respuesta lento para una carga
+      de trabajo
+    url: "/performance-checker/task-investigating-perceived-slow-response-time-for-a-workload.html"
+  - title: Identificar las tendencias del tiempo de respuesta de I/o en los componentes
+      del clúster
+    url: "/performance-checker/task-identifying-trends-of-i-o-response-time-on-cluster-components.html"
+  - title: Analizar las mejoras de rendimiento obtenidas para mover un volumen
+    pdf-filename: Análisis de las mejoras de rendimiento obtenidas del traslado de
+      un volumen (rendimiento de clúster)
+    url: "/performance-checker/task-analyzing-the-performance-improvments-achieved-from-moving-a-volume.html"
+    entries:
+    - title: Cómo funciona el movimiento de un volumen de FlexVol
+      url: "/performance-checker/concept-how-moving-a-volume-works.html"
+  - title: Página Performance/Volume Details
+    pdf-filename: Página Performance/Volume Details (rendimiento de clúster)
+    url: "/performance-checker/reference-performance-volume-details-page.html"
+    entries:
+    - title: Las estadísticas de rendimiento que se muestran en los gráficos de desglose
+        de datos
+      url: "/performance-checker/reference-performance-statistics-displayed-in-the-data-breakdown-charts.html"
+    - title: Cómo funcionan los gráficos de los datos de rendimiento
+      url: "/performance-checker/concept-how-graphs-of-performance-data-work.html"
+- title: Análisis de eventos de rendimiento
+  pdf-filename: Análisis de eventos de rendimiento (rendimiento de clúster)
+  url: "/performance-checker/concept-analyzing-performance-events.html"
+  entries:
+  - title: Mostrar información acerca de los eventos de rendimiento
+    url: "/performance-checker/task-displaying-information-about-a-performance-event.html"
+  - title: Análisis de eventos de umbrales de rendimiento definidos por el usuario
+    pdf-filename: Análisis de eventos de umbrales de rendimiento definidos por el
+      usuario (rendimiento del clúster)
+    url: "/performance-checker/concept-analyzing-events-from-user-defined-performance-thresholds.html"
+    entries:
+    - title: Respuesta a eventos de umbral de rendimiento definidos por el usuario
+      url: "/performance-checker/task-responding-to-user-defined-performance-threshold-events.html"
+  - title: Analizar eventos de umbrales de rendimiento definidos por el sistema
+    pdf-filename: Análisis de eventos de umbrales de rendimiento definidos por el
+      sistema (rendimiento del clúster)
+    url: "/performance-checker/concept-analyzing-events-from-system-defined-performance-thresholds.html"
+    entries:
+    - title: Respuesta a eventos de umbral de rendimiento definidos por el sistema
+      url: "/performance-checker/task-responding-to-system-defined-performance-threshold-events.html"
+    - title: Responder a los eventos de rendimiento del grupo de políticas de calidad
+        de servicio
+      url: "/performance-checker/task-responding-to-a-system-defined-qos-policy-group-performance-event.html"
+    - title: Eventos de políticas de calidad de servicio adaptativas que tienen un
+        tamaño de bloque definido
+      url: "/performance-checker/concept-understanding-events-from-adaptive-qos-policies-that-have-a-defined-block-size.html"
+    - title: Respuesta a eventos de rendimiento sobreutilizados de recursos de nodos
+      url: "/performance-checker/task-responding-to-a-system-defined-node-resources-overutilized-performance-event.html"
+  - title: Analizar eventos de umbrales dinámicos de rendimiento
+    pdf-filename: Analizar eventos de umbrales dinámicos de rendimiento (rendimiento
+      de clúster)
+    url: "/performance-checker/concept-analyzing-events-from-dynamic-performance-thresholds.html"
+    entries:
+    - title: Identificar las cargas de trabajo de las víctimas involucradas en un
+        evento de rendimiento dinámico
+      url: "/performance-checker/task-identifying-victim-workloads-involved-in-a-performance-event.html"
+    - title: Identificar las cargas de trabajo abusivas involucradas en un evento
+        de rendimiento dinámico
+      url: "/performance-checker/task-identifying-bully-workloads-involved-in-a-performance-event.html"
+    - title: Identificar cargas de trabajo de tiburón involucradas en un evento de
+        rendimiento dinámico
+      url: "/performance-checker/task-identifying-shark-workloads-involved-in-a-performance-event.html"
+    - title: Análisis de eventos de rendimiento para una configuración de MetroCluster
+      pdf-filename: Análisis de eventos de rendimiento para una configuración de MetroCluster
+        (rendimiento del clúster)
+      url: "/performance-checker/concept-performance-incident-analysis-for-a-metrocluster-configuration.html"
+      entries:
+      - title: Analizar un evento de rendimiento dinámico en un clúster en una configuración
+          de MetroCluster
+        url: "/performance-checker/task-analyzing-a-performance-incident-on-a-cluster-in-a-metrocluster-configuration.html"
+      - title: Analizar un evento de rendimiento dinámico para un clúster remoto en
+          una configuración de MetroCluster
+        url: "/performance-checker/task-analyzing-a-performance-incident-on-a-remote-cluster-in-a-metrocluster-configuration.html"
+    - title: Responder a un evento de rendimiento dinámico causado por la limitación
+        del grupo de políticas de calidad de servicio
+      url: "/performance-checker/task-responding-to-a-dynamic-performance-event-caused-by-qos-policy-group-throttling.html"
+    - title: Responder a un evento de rendimiento dinámico causado por un fallo del
+        disco
+      url: "/performance-checker/task-responding-to-a-performance-incident-caused-by-a-disk-failure.html"
+    - title: Responder a un evento de rendimiento dinámico causado por la toma de
+        control de alta disponibilidad
+      url: "/performance-checker/task-responding-to-a-performance-incident-caused-by-ha-takeover.html"
+- title: Configuración de una conexión entre un servidor Unified Manager y un proveedor
+    de datos externo
+  url: "/performance-checker/concept-setting-up-a-connection-between-unified-manager-and-an-external-data-provider.html"
+  entries:
+  - title: Datos de rendimiento que se pueden enviar a un servidor externo
+    url: "/performance-checker/reference-performance-data-that-can-be-sent-to-an-external-server.html"
+  - title: Configurar Graphite para obtener datos de rendimiento de Unified Manager
+    url: "/performance-checker/concept-setting-up-graphite-to-receive-performance-data-from-unified-manager.html"
+  - title: Configuración de una conexión desde un servidor de Unified Manager con
+      un proveedor de datos externo
+    url: "/performance-checker/task-configuring-a-connection-between-a-unified-manager-server-and-an-external-data-provider.html"

@@ -1,0 +1,20 @@
+---
+permalink: online-help/concept-what-a-rule-template-is.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Una plantilla de regla es una plantilla predefinida que se puede utilizar para crear reglas en una política de datos. Una plantilla de reglas permite crear una regla basada en tres categorías: Propietario, tipo de archivo y ruta de directorio.' 
+---
+= Qué es una plantilla de regla
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una plantilla de regla es una plantilla predefinida que se puede utilizar para crear reglas en una política de datos. Una plantilla de reglas permite crear una regla basada en tres categorías: Propietario, tipo de archivo y ruta de directorio.
+
+
+
+== Ejemplo de una plantilla de regla para tipos de archivo
+
+La plantilla de regla "'Coloque todos los archivos con las extensiones especificadas en una clase de almacenamiento adecuada'" coloca todos los archivos .mp3 escritos en Infinite Volume en una clase de almacenamiento que especifique.

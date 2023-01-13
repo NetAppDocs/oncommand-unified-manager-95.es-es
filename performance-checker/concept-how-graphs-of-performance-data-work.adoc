@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/concept-how-graphs-of-performance-data-work.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager utiliza gráficos o gráficos para mostrar las estadísticas y los eventos de rendimiento de volúmenes durante un periodo de tiempo específico. 
+---
+= Cómo funcionan los gráficos de los datos de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager utiliza gráficos o gráficos para mostrar las estadísticas y los eventos de rendimiento de volúmenes durante un periodo de tiempo específico.
+
+Los gráficos permiten personalizar el rango de tiempo sobre el cual ver datos. Los datos se muestran con el plazo en el eje horizontal del gráfico y los contadores en el eje vertical, con intervalos de puntos en las líneas del gráfico. El eje vertical es dinámico; los valores se ajustan en función de los picos de los valores esperados o reales.
+
+
+
+== Seleccionar plazos
+
+En la página Performance/Volume Details, el gráfico de datos históricos permite seleccionar un plazo para todos los gráficos de la página. Los botones 1d, 5d, 10d y 30d especifican de 1 día a 30 días (1 mes) y el botón *personalizado* le permite especificar un intervalo de tiempo personalizado dentro de esos 30 días. Cada punto de un gráfico representa un intervalo de recogida de 5 minutos y se conserva un máximo de 30 días de datos de rendimiento históricos. Tenga en cuenta que los intervalos también tienen en cuenta los retrasos en la red y otras anomalías.
+
+image::../media/opm-timeframe-selectors-jpg.gif[Selectores de marco de tiempo de Performance Manager]
+
+En este ejemplo, el gráfico de datos históricos tiene un intervalo de tiempo establecido en el principio y el final del mes de marzo. En el plazo seleccionado, todos los datos históricos anteriores a marzo se atenúan.
+
+
+
+== Visualización de información de punto de datos
+
+Para ver información de un punto de datos de un gráfico, puede colocar el cursor sobre un punto específico del gráfico y mostrar un cuadro emergente con información sobre el valor y la fecha y la hora.
+
+image::../media/opm-chart-popup-png.gif[Mensaje de gráfico en el Administrador de rendimiento de OnCommand]
+
+En este ejemplo, al colocar el cursor sobre el gráfico IOPS en la página Performance/Volume Details, se muestran los valores de tiempo de respuesta y las operaciones entre las 3:50 a. y las 3:55 El 20 de octubre.
+
+
+
+== Ver información de eventos de rendimiento
+
+Para ver la información de eventos en un gráfico, puede colocar el cursor sobre un icono de evento para ver información de resumen en un cuadro emergente o puede hacer clic en el icono de evento para obtener información más detallada.
+
+image::../media/opm-bully-volume-png.gif[Ventana emergente de incidentes en Performance Manager]
+
+En este ejemplo, en la página Performance/Volume Details, al hacer clic en un icono de evento en el gráfico latencia se muestra información detallada sobre el evento en un cuadro emergente. El evento también se resalta en la Lista de eventos.

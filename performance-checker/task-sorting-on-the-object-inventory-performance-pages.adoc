@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/task-sorting-on-the-object-inventory-performance-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ordenar todos los datos de las páginas rendimiento de inventario de objetos por cualquier columna en orden ascendente o descendente. Esto permite localizar rápidamente datos de inventario de objetos, lo cual resulta útil para examinar el rendimiento o iniciar un proceso de resolución de problemas. 
+---
+= Ordenar en las páginas rendimiento de inventario de objetos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ordenar todos los datos de las páginas rendimiento de inventario de objetos por cualquier columna en orden ascendente o descendente. Esto permite localizar rápidamente datos de inventario de objetos, lo cual resulta útil para examinar el rendimiento o iniciar un proceso de resolución de problemas.
+
+
+
+== Acerca de esta tarea
+
+La columna seleccionada para ordenar se indica mediante un nombre de encabezado de columna resaltado y un icono de flecha que indica la dirección de ordenación a la derecha del nombre. Una flecha hacia arriba indica el orden ascendente; una flecha hacia abajo indica el orden descendente. El orden predeterminado es por *Estado* (criticidad de evento) en orden descendente, con los eventos de rendimiento más críticos listados primero.
+
+
+
+== Pasos
+
+. Puede hacer clic en el nombre de una columna para alternar el orden de clasificación de la columna en orden ascendente o descendente.
++
+El contenido de la página rendimiento del inventario de objetos se ordena en orden ascendente o descendente, según la columna seleccionada.
+
+

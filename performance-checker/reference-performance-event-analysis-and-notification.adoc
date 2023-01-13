@@ -1,0 +1,90 @@
+---
+permalink: performance-checker/reference-performance-event-analysis-and-notification.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de rendimiento le notifican problemas de rendimiento de I/o en una carga de trabajo de volumen debido a la contención en un componente de clúster. Unified Manager analiza el evento para identificar todas las cargas de trabajo involucradas, el componente en disputa y si el evento sigue siendo un problema que podría necesitar resolver. 
+---
+= Análisis y notificación de eventos de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de rendimiento le notifican problemas de rendimiento de I/o en una carga de trabajo de volumen debido a la contención en un componente de clúster. Unified Manager analiza el evento para identificar todas las cargas de trabajo involucradas, el componente en disputa y si el evento sigue siendo un problema que podría necesitar resolver.
+
+Unified Manager supervisa la latencia de I/o (tiempo de respuesta) y las IOPS (operaciones) para volúmenes en un clúster. Cuando otras cargas de trabajo realizan un uso excesivo de un componente del clúster, por ejemplo, el componente es objeto de disputa y no puede funcionar en un nivel óptimo para satisfacer las demandas de las cargas de trabajo. El rendimiento de otras cargas de trabajo que utilizan el mismo componente puede verse afectado, lo que provoca el aumento de las latencias. Si la latencia supera el umbral de rendimiento, Unified Manager activa un evento de rendimiento y envía una alerta de correo electrónico para notificarle.
+
+
+
+== Análisis de eventos
+
+Unified Manager realiza los siguientes análisis utilizando los 15 días anteriores de estadísticas de rendimiento para identificar las cargas de trabajo víctimas, las cargas de trabajo abusivas y el componente del clúster implicados en un evento:
+
+* Identifica las cargas de trabajo víctimas cuya latencia ha superado el umbral de rendimiento, que es el límite superior del rango esperado:
++
+** Para los volúmenes en agregados de HDD o Flash Pool (híbridos), los eventos solo se activan cuando la latencia es superior a 5 milisegundos (ms) y las IOPS son superiores a 10 operaciones por segundo (OPS/s).
+** Para volúmenes en agregados íntegramente de SSD o agregados de FabricPool (compuestos), los eventos solo se activan cuando la latencia es superior a 1 ms y el IOPS es superior a 100 OPS/s.
+
+
+* Identifica el componente del clúster en disputa.
++
+[NOTE]
+====
+Si la latencia de las cargas de trabajo víctimas en la interconexión del clúster es superior a 1 ms, Unified Manager lo considera importante y activa un evento para la interconexión del clúster.
+
+====
+* Identifica las cargas de trabajo abusivas que están sobreutilizando el componente del clúster y que hacen que estén en contención.
+* Clasifica las cargas de trabajo involucradas, en función de su desviación en utilización o actividad de un componente del clúster, para determinar qué elementos agresores tienen el mayor cambio de uso del componente del clúster y qué víctimas son las más afectadas.
+
+
+Es posible que se produzca un evento solo durante un breve momento y, a continuación, corregirlo después de que el componente que está utilizando ya no sea objeto de disputa. Un evento continuo es un evento que se vuelve a producir para el mismo componente del clúster en un intervalo de cinco minutos y permanece en el estado activo. En el caso de eventos continuos, Unified Manager activa una alerta tras detectar el mismo evento en dos intervalos de análisis consecutivos. Los eventos que no se resuelven, que tienen el estado de nuevo, pueden mostrar diferentes mensajes de descripción según las cargas de trabajo involucradas en el cambio del evento.
+
+Cuando se resuelve un evento, este sigue disponible en Unified Manager como parte del registro de problemas de rendimiento anteriores de un volumen. Cada evento tiene un ID único que identifica el tipo de evento y los componentes de volúmenes, clúster y clúster implicados.
+
+[NOTE]
+====
+Un único volumen puede participar en más de un evento a la vez.
+
+====
+
+
+== Estado del evento
+
+Los eventos pueden estar en uno de los siguientes estados:
+
+* *Activo*
++
+Indica que el evento de rendimiento está activo (nuevo o reconocido). El problema que causa el evento no se ha corregido solo o no se ha resuelto. El contador de rendimiento del objeto de almacenamiento sigue por encima del umbral de rendimiento.
+
+* *Obsoleto*
++
+Indica que el evento no está activo. El problema que causa el evento se ha corregido solo o se ha resuelto. El contador de rendimiento del objeto de almacenamiento ya no está por encima del umbral de rendimiento.
+
+
+
+
+
+== Notificación de eventos
+
+Las alertas de eventos se muestran en la página Paneles/Descripción general, la página Paneles/rendimiento, la página Detalles de rendimiento/volumen y se envían a direcciones de correo electrónico especificadas. Puede ver información detallada de análisis sobre un evento y obtener sugerencias para resolverlo en la página de detalles del evento.
+
+image::../media/opm-single-incident-rt-jpg.gif[Gráfico único event on latencia de Performance Manager]
+
+En este ejemplo, un evento se indica mediante un punto rojo (image:../media/opm-incident-icon-png.gif["Icono de incidente de Performance Manager"]) En el gráfico latencia de la página Performance/Volume Details. Al pasar el cursor del ratón por encima del punto rojo, se muestra una ventana emergente con más detalles sobre el evento y las opciones para analizarlo.
+
+
+
+== Interacción de eventos
+
+En la página Performance/Volume Details, puede interactuar con los eventos de las siguientes maneras:
+
+* Si mueve el puntero por un punto rojo, se muestra un mensaje que muestra el identificador del evento, junto con la latencia, el número de operaciones por segundo y la fecha y la hora en que se detectó el evento.
++
+Si existen varios eventos para el mismo período de tiempo, el mensaje muestra el número de eventos, junto con la latencia media y las operaciones por segundo del volumen.
+
+* Al hacer clic en un solo evento se muestra un cuadro de diálogo que muestra información más detallada sobre el evento, incluidos los componentes del clúster implicados, de forma similar a la sección Summary en la página de detalles Event.
++
+El componente objeto de la contención está en un círculo y se resalta en rojo. Puede hacer clic en el ID del evento o en *Ver análisis completo* para ver el análisis completo en la página de detalles del evento. Si hay varios eventos para el mismo período de tiempo, el cuadro de diálogo muestra detalles acerca de los tres eventos más recientes. Puede hacer clic en un ID de evento para ver el análisis de eventos en la página de detalles Event. Si hay más de tres eventos para el mismo período de tiempo, al hacer clic en el punto rojo no se muestra el cuadro de diálogo.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-cluster-object-windows-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible ver todos los clústeres y los objetos del clúster desde la página de objetos de almacenamiento correspondiente. También puede ver los detalles desde la página de detalles del objeto de almacenamiento correspondiente. 
+---
+= Descripción de las ventanas y cuadros de diálogo del objeto del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ver todos los clústeres y los objetos del clúster desde la página de objetos de almacenamiento correspondiente. También puede ver los detalles desde la página de detalles del objeto de almacenamiento correspondiente.

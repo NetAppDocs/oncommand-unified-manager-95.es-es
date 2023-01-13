@@ -1,0 +1,158 @@
+---
+permalink: online-help/reference-edit-volume-thresholds-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible configurar alertas para que envíen notificaciones cuando se genere un evento relacionado con la capacidad de un volumen, y se pueden tomar acciones correctivas para el evento. Por ejemplo, para el umbral Volume Full, puede configurar una alerta para que envíe una notificación cuando la condición persiste en un periodo especificado. 
+---
+= Cuadro de diálogo Edit Volume Thresholds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar alertas para que envíen notificaciones cuando se genere un evento relacionado con la capacidad de un volumen, y puede realizar acciones correctivas para el evento. Por ejemplo, para el umbral Volume Full, puede configurar una alerta para que envíe una notificación cuando la condición persiste en un periodo especificado.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+El cuadro de diálogo Edit Volume Thresholds permite configurar umbrales a nivel de volumen que se aplican a los volúmenes seleccionados. Cuando se configuran los umbrales en el nivel de los volúmenes, tienen prioridad sobre los umbrales de grupo o los valores de umbral de nivel global.
+
+Puede configurar la configuración del umbral para la capacidad, las copias Snapshot, la cuota de qtree, el crecimiento y los inodos en el nivel del volumen. Cuando se configura una acción de grupo con el tipo de umbral de volumen, se utilizan los valores de umbral de acción de grupo para ajustes que no se configuran en el nivel de volumen. Cuando no se configura ninguna acción de grupo del tipo de umbral de volumen, las áreas del cuadro de diálogo Editar umbrales de volumen que no están configuradas, utilice valores de umbral globales.
+
+
+
+== Área Capacity
+
+El área de capacidad permite establecer las siguientes condiciones de umbral de capacidad de volumen:
+
+* * Espacio casi lleno*
++
+Especifica el porcentaje en el que se considera que un volumen está casi completo. También muestra el tamaño del volumen correspondiente al valor de umbral especificado.
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+* * Espacio lleno*
++
+Especifica el porcentaje en el que un volumen se considera completo. También muestra el tamaño del volumen correspondiente al valor de umbral especificado.
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+* *Días hasta Full*
++
+Especifica la cantidad de días restantes antes de que el volumen alcance la capacidad completa.
+
+
+
+
+
+== Copias Snapshot
+
+El área Snapshot copies le permite establecer las siguientes condiciones de umbral para las copias de Snapshot en el volumen.
+
+* *Reserva Snapshot completa*
++
+Especifica el porcentaje en el que el espacio reservado para las copias de Snapshot se considera completo.
+
+* *Días hasta Full*
++
+Especifica la cantidad de días que queda antes de que el espacio reservado para las copias de Snapshot alcance la capacidad completa.
+
+* * Contador*
++
+Especifica el número de copias Snapshot en un volumen que se considera demasiadas.
+
+
+
+
+
+== Área Qtree Quota
+
+El área Qtree quota permite establecer las siguientes condiciones de umbral de cuota de qtree para los volúmenes seleccionados:
+
+* * Casi sobrecomprometido*
++
+Especifica el porcentaje al que se considera que un volumen está casi comprometido en exceso mediante las cuotas de qtree.
+
+* *Sobrecomprometidos*
++
+Especifica el porcentaje al que se considera que un volumen está sobrecomprometido por las cuotas de qtree.
+
+
+
+
+
+== Área de crecimiento
+
+El área de crecimiento permite establecer la siguiente condición de umbral para el crecimiento del volumen:
+
+* *Tasa de crecimiento*
++
+Especifica el porcentaje al que la tasa de crecimiento de un volumen se considera normal antes de que el sistema genere un evento anormal de tasa de crecimiento de volumen.
+
+* *Sensibilidad de la tasa de crecimiento*
++
+Especifica el factor que se aplica a la desviación estándar de la tasa de crecimiento de un volumen. Si la tasa de crecimiento supera la desviación estándar ponderada, se genera un evento anormal tasa de crecimiento de volumen.
+
++
+Un valor más bajo para la sensibilidad a la tasa de crecimiento indica que el volumen es muy sensible a los cambios en la tasa de crecimiento.
+
++
+[NOTE]
+====
+Si modifica la sensibilidad de la tasa de crecimiento para los volúmenes en el nivel de umbral global, el cambio también se aplica a la sensibilidad de la tasa de crecimiento para los agregados en el nivel de umbral global.
+
+====
+
+
+
+
+== Área Inodes
+
+El área Inodes permite establecer las siguientes condiciones de umbral para inodos:
+
+* * Casi lleno*
++
+Especifica el porcentaje en el que se considera que un volumen ha consumido la mayoría de sus inodos.
+
++
+También puede utilizar los controles deslizantes para establecer el valor de umbral.
+
+* *Completo*
++
+Especifica el porcentaje en el que se considera que un volumen ha consumido todas sus inodos.
+
++
+También puede utilizar los controles deslizantes para establecer el valor de umbral.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando permiten realizar las siguientes tareas para un volumen seleccionado:
+
+* *Restaurar valores predeterminados*
++
+Permite restaurar los valores de umbral en uno de los siguientes valores:
+
++
+** Valores de grupo, si el volumen pertenece a un grupo y ese grupo tiene un tipo de acción de umbral de volumen.
+** Valores globales, si el volumen no pertenece a ningún grupo o si pertenece a un grupo que no tiene un tipo de acción de umbral de volumen.
+
+
+* *Guardar*
++
+Guarda todos los ajustes de umbral.
+
+* *Guardar y cerrar*
++
+Guarda todos los ajustes de umbral y, a continuación, cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Ignora los cambios (si los hay) en la configuración del umbral y cierra el cuadro de diálogo.
+
+

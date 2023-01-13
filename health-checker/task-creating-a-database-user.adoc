@@ -1,0 +1,56 @@
+---
+permalink: health-checker/task-creating-a-database-user.html 
+sidebar: sidebar 
+keywords:  
+summary: Para admitir una conexión entre Workflow Automation y Unified Manager, o bien para acceder a las vistas de la base de datos, primero debe crear un usuario de base de datos con los roles Integration Schema o Report Schema en la interfaz de usuario web de Unified Manager. 
+---
+= Creación de un usuario de base de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para admitir una conexión entre Workflow Automation y Unified Manager, o bien para acceder a las vistas de la base de datos, primero debe crear un usuario de base de datos con los roles Integration Schema o Report Schema en la interfaz de usuario web de Unified Manager.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+
+
+== Acerca de esta tarea
+
+Los usuarios de bases de datos proporcionan integración con Workflow Automation y acceso a vistas de base de datos específicas para informes. Los usuarios de la base de datos no tienen acceso a la interfaz de usuario web de Unified Manager o a la consola de mantenimiento, y no pueden ejecutar llamadas de API.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *usuarios*.
+. En la página *Administración/usuarios*, haga clic en *Agregar*.
+. En el cuadro de diálogo *Agregar usuario*, seleccione *Usuario de base de datos* en la lista desplegable *Tipo*.
+. Escriba un nombre y una contraseña para el usuario de la base de datos.
+. En la lista desplegable *rol*, seleccione el rol apropiado.
++
+|===
+| Si está... | Elija este rol 
+
+
+ a| 
+Conexión de Unified Manager con Workflow Automation
+ a| 
+Esquema de integración
+
+
+
+ a| 
+Acceso a las vistas Informes y otras vistas de bases de datos
+ a| 
+Esquema de informes
+
+|===
+. Haga clic en *Agregar*.
+

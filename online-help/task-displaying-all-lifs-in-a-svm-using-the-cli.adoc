@@ -1,0 +1,66 @@
+---
+permalink: online-help/task-displaying-all-lifs-in-a-svm-using-the-cli.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede mostrar información acerca de todas las LIF de una SVM. Puede que desee mostrar todas las LIF antes de determinar qué LIF podrían estar ocupadas y cuáles deberían moverse. 
+---
+= Mostrar todas las LIF de una SVM mediante la CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede mostrar información acerca de todas las LIF de una SVM. Puede que desee mostrar todas las LIF antes de determinar qué LIF podrían estar ocupadas y cuáles deberían moverse.
+
+
+
+== Acerca de esta tarea
+
+El estado operativo de un LIF viene determinado por si se ha configurado en un puerto concreto y es capaz de servir datos. Cuando se detiene una SVM, los LIF de datos asociados y los LIF de gestión de SVM ya no pueden proporcionar datos. El estado operativo de estas LIF cambia a. `down`.
+
+
+
+== Pasos
+
+. Para mostrar información acerca de todas las LIF de una SVM, introduzca el siguiente comando: `network interface show -vserver vserver_name`
++
+El comando muestra la siguiente información:
+
++
+** El nodo o SVM asociado con la LIF
+** Nombre de LIF
+** Estado administrativo y operativo
+** Dirección IP
+** Máscara de red
+** Nodo y puerto en el que se ha configurado el LIF
+
+
++
+Un servidor doméstico puede ser un nodo o un SVM.
+
++
+Si los datos de un campo no están disponibles (por ejemplo, el dúplex operativo y la velocidad de un puerto inactivo), el campo aparece como undef.
+
++
+[NOTE]
+====
+Puede obtener toda la información disponible especificando el `-instance` parámetro.
+
+====
++
+En el ejemplo siguiente se muestra información general sobre todas las LIF de una SVM:
+
++
+[listing]
+----
+vs1::> network interface show -vserver vs1
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+vs1
+            lif1         up/up    192.0.2.253/24     node-01       e0b     false
+            d2           up/up    192.0.2.252/21     node-01       e0d     true
+            data3        up/up    192.0.2.251/20     node-02       e0c     true
+----
+

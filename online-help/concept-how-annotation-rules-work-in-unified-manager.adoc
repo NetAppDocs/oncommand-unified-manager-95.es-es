@@ -1,0 +1,114 @@
+---
+permalink: online-help/concept-how-annotation-rules-work-in-unified-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Una regla de anotación es un criterio que se define para anotar los objetos de almacenamiento \(volúmenes, clústeres o máquinas virtuales de almacenamiento \(SVM\)\). Puede utilizar grupos de condiciones o condiciones para definir reglas de anotación.' 
+---
+= Cómo funcionan las reglas de anotación en Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una regla de anotación es un criterio que se define para anotar los objetos de almacenamiento (volúmenes, clústeres o máquinas virtuales de almacenamiento (SVM). Puede utilizar grupos de condiciones o condiciones para definir reglas de anotación.
+
+* Debe asociar una regla de anotación a una anotación.
+* Debe asociar un tipo de objeto para una regla de anotación; sólo se puede asociar un tipo de objeto para una regla de anotación.
+* Unified Manager añade o elimina anotaciones de los objetos de almacenamiento después de cada ciclo de supervisión o cuando se crea, se edita, se elimina o se reordena una regla.
+* Una regla de anotación puede tener uno o más grupos de condiciones y cada grupo de condiciones puede tener una o más condiciones.
+* Los objetos de almacenamiento pueden tener varias anotaciones. Una regla de anotación para una anotación determinada también puede utilizar anotaciones diferentes en las condiciones de regla para agregar otra anotación a objetos ya anotados.
+
+
+
+
+== Condiciones
+
+Puede crear varios grupos de condiciones y cada grupo de condiciones puede tener una o más condiciones. Puede aplicar todos los grupos de condiciones definidos en una regla de anotación de una anotación para anotar los objetos de almacenamiento.
+
+Las condiciones dentro de un grupo de condiciones se ejecutan utilizando lógica Y. Deben cumplirse todas las condiciones de un grupo de condiciones. Al crear o modificar una regla de anotación, se crea una condición que aplica, selecciona y anota sólo aquellos objetos de almacenamiento que cumplen todas las condiciones del grupo de condiciones. Puede utilizar varias condiciones dentro de un grupo de condiciones cuando desee limitar el alcance de los objetos de almacenamiento que desea anotar.
+
+Puede crear condiciones con objetos de almacenamiento mediante las operaciones y el operador siguientes y especificando el valor requerido.
+
+|===
+| Tipo de objeto de almacenamiento | Operandos aplicables 
+
+
+ a| 
+Volumen
+ a| 
+* Nombre del objeto
+* Propietario del nombre del clúster
+* Nombre de SVM propietario
+* Anotaciones
+
+
+
+
+ a| 
+SVM
+ a| 
+* Nombre del objeto
+* Propietario del nombre del clúster
+* Anotaciones
+
+
+
+
+ a| 
+Clúster
+ a| 
+* Nombre del objeto
+* Anotaciones
+
+
+|===
+Cuando se selecciona anotación como operando para cualquier objeto de almacenamiento, el operador "'is'" está disponible. Para el resto de operandos, puede seleccionar "'is'" o "'contains'" como operador. Cuando se selecciona el operador "'is'", la condición se evalúa para una coincidencia exacta del valor de operando con el valor proporcionado para el operando seleccionado. Al seleccionar el operador "'contains'", la condición se evalúa para cumplir uno de los siguientes criterios:
+
+* El valor de operando es una coincidencia exacta con el valor del operando seleccionado.
+* El valor de operando contiene el valor proporcionado para el operando seleccionado.
+
+
+
+
+== Ejemplo de regla de anotación con condiciones
+
+Considere una regla de anotación con un grupo de condiciones para un volumen con las dos condiciones siguientes:
+
+* El nombre contiene «'vol'»
+* El nombre de SVM es «data_svm».
+
+
+Esta regla de anotación anota todos los volúmenes que incluyen «'vol» en sus nombres y que se alojan en los SVM con el nombre «deata_svm» con la anotación seleccionada y el tipo de anotación.
+
+
+
+== Grupos de condiciones
+
+Los grupos de condiciones se ejecutan mediante lógico O y, a continuación, se aplican a los objetos de almacenamiento. Los objetos de almacenamiento deben cumplir los requisitos de uno de los grupos de condiciones que se van a anotar. Se anotan los objetos de almacenamiento que cumplen las condiciones de todos los grupos de condiciones. Puede utilizar grupos de condiciones para aumentar el alcance de los objetos de almacenamiento que desea anotar.
+
+
+
+== Ejemplo de regla de anotación con grupos de condiciones
+
+Considere una regla de anotación con dos grupos de condiciones para un volumen; cada grupo contiene las dos condiciones siguientes:
+
+* Grupo de condición 1
++
+** El nombre contiene «'vol'»
+** El nombre de SVM es «data_svm». Este grupo de condiciones anota todos los volúmenes que incluyen «'vol» en sus nombres y que están alojados en las SVM con el nombre «data_svm».
+
+
+* Grupo de condiciones 2
++
+** El nombre contiene «'vol'»
+** El valor de anotación de la prioridad de datos es «'crítico'» este grupo de condiciones anota todos los volúmenes que incluyen «'vol'» en sus nombres y que se anotan con el valor de anotación de prioridad de datos como «'crítico'».
+
+
+
+
+Cuando se aplica una regla de anotación que contiene estos dos grupos de condiciones a los objetos de almacenamiento, se anotan los siguientes objetos de almacenamiento:
+
+* Todos los volúmenes que incluyan «'vol» en sus nombres y que estén alojados en SVM con el nombre «data_svm».
+* Todos los volúmenes que incluyan «'vol'» en sus nombres y que estén anotados con el valor de anotación de prioridad de datos como «'crítico'».
+

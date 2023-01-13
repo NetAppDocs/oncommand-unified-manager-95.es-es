@@ -1,0 +1,58 @@
+---
+permalink: online-help/task-checking-the-health-of-clusters-in-a-metrocluster-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar Unified Manager para comprobar el estado operativo de los clústeres y sus componentes en una configuración de MetroCluster. Si los clústeres estaban implicados en un evento de rendimiento detectado por Unified Manager, el estado puede ayudarle a determinar si un problema de hardware o software ha contribuido al evento. 
+---
+= Comprobar el estado de los clústeres en una configuración de MetroCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar Unified Manager para comprobar el estado operativo de los clústeres y sus componentes en una configuración de MetroCluster. Si los clústeres estaban implicados en un evento de rendimiento detectado por Unified Manager, el estado puede ayudarle a determinar si un problema de hardware o software ha contribuido al evento.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber analizado un evento de rendimiento de una configuración de MetroCluster y obtener el nombre del clúster involucrado.
+* Los dos clústeres de la configuración de MetroCluster deben supervisarse con la misma instancia de Unified Manager.
+
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Eventos* para mostrar la lista de eventos.
+. En el panel de filtros, seleccione todos los filtros MetroCluster en la categoría *Tipo de fuente*.
+. Junto a un evento de MetroCluster, haga clic en el nombre del clúster.
++
+La página del inventario Health/Clusters se muestra con información detallada sobre el evento.
+
++
+[NOTE]
+====
+Si no se muestran eventos de MetroCluster, puede usar la barra de búsqueda para buscar el nombre del clúster involucrado en el evento de rendimiento.
+
+====
+. Seleccione la ficha *conectividad MetroCluster* para mostrar el estado de la conexión entre el clúster seleccionado y su clúster asociado.
++
+image::../media/opm-um-mcc-connectivity-tab-png.gif[Pestaña Unified Manager conectividad de MetroCluster]
+
++
+En este ejemplo, se muestran los nombres y los componentes del clúster local y su clúster asociado. Un icono amarillo o rojo indica un evento de estado para el componente resaltado. El icono de conectividad representa el enlace entre los clústeres. Puede colocar el cursor del ratón en un icono para mostrar la información del evento o hacer clic en el icono para mostrar los eventos. Es posible que un problema de estado en cualquiera de los clústeres haya contribuido al evento de rendimiento.
+
++
+Unified Manager supervisa el componente NVRAM del enlace entre los clústeres. Si el icono de switches FC en el clúster local o asociado o el icono de conectividad están en rojo, es posible que haya provocado un problema de estado del enlace el evento de rendimiento.
+
+. Seleccione la ficha *replicación de MetroCluster*.
++
+image::../media/opm-um-mcc-replication-tab-png.gif[Pestaña Unified Manager MetroCluster Replication]
+
++
+En este ejemplo, si el icono NVRAM del clúster local o del partner es amarillo o rojo, un problema de estado de la NVRAM podría haber provocado el evento de rendimiento. Si no hay iconos de color rojo o amarillo en la página, es posible que un problema de rendimiento del clúster de partners haya provocado el evento de rendimiento.
+
+

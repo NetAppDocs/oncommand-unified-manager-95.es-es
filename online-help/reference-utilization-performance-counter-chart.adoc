@@ -1,0 +1,49 @@
+---
+permalink: online-help/reference-utilization-performance-counter-chart.html 
+sidebar: sidebar 
+keywords:  
+summary: El gráfico de contadores de utilización del Explorador de rendimiento muestra el porcentaje medio del recurso seleccionado que se está utilizando. 
+---
+= Gráfico de contadores de rendimiento de utilización
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El gráfico de contadores de utilización del Explorador de rendimiento muestra el porcentaje medio del recurso seleccionado que se está utilizando.
+
+La ventana emergente que se muestra cuando el cursor se encuentra en el área del gráfico muestra los valores específicos del contador en momentos específicos.
+
+En la parte inferior de la página de gráfico se muestra información sobre la utilización del percentil mínimo, máximo, promedio y 95º para el intervalo de tiempo seleccionado.
+
+
+
+== Gráfico de contadores de utilización - total
+
+Muestra el porcentaje medio del recurso seleccionado que se está utilizando. Para los nodos, esto indica la utilización de los recursos de los nodos (CPU y RAM), para los agregados indica el uso de los discos en el agregado; en el caso de los puertos, indica el uso de ancho de banda del puerto.
+
+Esta opción de gráfico se aplica cuando el objeto seleccionado es un nodo, agregado o puerto.
+
+
+
+== *Botón Zoom View*
+
+Muestra una vista ampliada de los datos del gráfico de contadores.
+
+* Eventos
++
+La aparición de eventos críticos, de advertencia e informativos se indica en las líneas de tiempo sobre los gráficos.
+
+* Umbrales
++
+La línea horizontal discontinua indica el valor del umbral de advertencia de uso establecido en Unified Manager.
+
++
+La línea de color rojo fijo indica el valor del umbral crítico de utilización configurado en Unified Manager.
+
+* Contadores
++
+Los contadores del panel izquierdo muestran los valores de contador que se están mostrando. Anular la selección o selección de image:../media/eye-icon.gif[""] que está asociado con un contador se oculta y muestra esa información de contador del gráfico y puede ayudar al comparar la utilización del objeto.
+
+

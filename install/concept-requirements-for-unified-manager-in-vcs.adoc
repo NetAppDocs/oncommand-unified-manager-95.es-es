@@ -1,0 +1,37 @@
+---
+permalink: install/concept-requirements-for-unified-manager-in-vcs.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Antes de instalar Unified Manager en un entorno de Veritas Cluster Server \(VCS\), debe asegurarse de que los nodos del clúster estén configurados correctamente para admitir Unified Manager.' 
+---
+= De Unified Manager en VCS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar Unified Manager en un entorno de Veritas Cluster Server (VCS), debe asegurarse de que los nodos del clúster estén configurados correctamente para admitir Unified Manager.
+
+Debe asegurarse de que la configuración del VCS cumple los siguientes requisitos:
+
+* Ambos nodos del clúster deben ejecutar una versión de sistema operativo compatible.
+* La misma versión de Unified Manager se debe instalar utilizando la misma ruta en ambos nodos del clúster.
+* El usuario MySQL de los dos nodos debe tener el mismo ID de usuario y el mismo ID de grupo.
+* Deben utilizarse los sistemas de archivos ext3 nativos y el gestor de volúmenes lógicos (LVM).
+* Unified Manager se debe conectar al sistema de almacenamiento a través de Fibre Channel (FC) o iSCSI.
++
+También debe asegurarse de que el enlace FC esté activo y que las LUN creadas en los sistemas de almacenamiento estén accesibles para ambos nodos del clúster.
+
+* El disco de datos compartido debe tener espacio suficiente (mínimo de 80 GB) para la base de datos de Unified Manager, los informes, los certificados y las carpetas del plugin de script.
+* Debe configurarse un mínimo de dos interfaces de red en cada sistema: Una para la comunicación nodo a nodo y la otra para la comunicación nodo a cliente.
++
+El nombre de la interfaz de red utilizada para la comunicación entre nodos y clientes debe ser el mismo en ambos sistemas.
+
+* Se debe establecer un enlace de latido separado entre los nodos del clúster; de lo contrario, la interfaz de red se utiliza para comunicarse entre los nodos del clúster.
+* Opcional: Se debe usar SnapDrive para UNIX para crear una ubicación compartida a la que puedan acceder ambos nodos en una configuración de alta disponibilidad.
++
+Consulte la _SnapDrive for UNIX Installation and Administration Guide_ para obtener información acerca de la instalación y creación de una ubicación compartida. También puede gestionar las LUN con SnapDrive o la interfaz de línea de comandos del sistema de almacenamiento. Consulte la matriz de compatibilidad de SnapDrive para UNIX para obtener más información.
+
+* Debe haber memoria RAM adicional disponible para las aplicaciones SnapDrive y VCS.
+

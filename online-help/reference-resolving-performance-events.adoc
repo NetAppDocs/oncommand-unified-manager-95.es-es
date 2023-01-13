@@ -1,0 +1,16 @@
+---
+permalink: online-help/reference-resolving-performance-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar las acciones recomendadas para intentar resolver los eventos de rendimiento por su cuenta. Siempre se muestran las tres primeras sugerencias y las acciones de la cuarta sugerencia son específicas del tipo de evento mostrado. 
+---
+= Resolver eventos de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar las acciones recomendadas para intentar resolver los eventos de rendimiento por su cuenta. Siempre se muestran las tres primeras sugerencias y las acciones de la cuarta sugerencia son específicas del tipo de evento mostrado.
+
+Los enlaces *Ayuda para hacer esto* proporcionan información adicional para cada acción sugerida, incluidas instrucciones para realizar una acción específica. Algunas de estas acciones pueden requerir el uso de Unified Manager, System Manager de OnCommand, OnCommand Workflow Automation, comandos de la CLI de ONTAP o una combinación de estas herramientas.

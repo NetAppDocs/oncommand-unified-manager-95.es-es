@@ -1,0 +1,43 @@
+---
+permalink: online-help/task-analyzing-a-performance-incident-on-a-remote-cluster-in-a-metrocluster-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible utilizar Unified Manager para analizar eventos dinámicos de rendimiento en un clúster remoto en una configuración de MetroCluster. El análisis le ayuda a determinar si un evento en el clúster remoto provocó un evento en su clúster de partners. 
+---
+= Analizar un evento de rendimiento dinámico para un clúster remoto en una configuración de MetroCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible utilizar Unified Manager para analizar eventos dinámicos de rendimiento en un clúster remoto en una configuración de MetroCluster. El análisis le ayuda a determinar si un evento en el clúster remoto provocó un evento en su clúster de partners.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Es necesario haber analizado un evento de rendimiento en un clúster local en una configuración de MetroCluster y obtenido la hora de detección del evento.
+* Debe haber comprobado el estado del clúster local y de su clúster de partners implicados en el evento de rendimiento y que ha obtenido el nombre del clúster de partners.
+
+
+
+
+== Pasos
+
+. Inicie sesión en la instancia de Unified Manager que supervisa el clúster de partners.
+. En el panel de navegación de la izquierda, haga clic en *Eventos* para mostrar la lista de eventos.
+. En el selector *intervalo de tiempo*, seleccione *última hora* y, a continuación, haga clic en *aplicar rango*.
+. En el selector *Filtering*, seleccione *Cluster* en el menú desplegable de la izquierda, escriba el nombre del clúster asociado en el campo de texto y, a continuación, haga clic en *aplicar filtro*.
++
+Si no existen eventos para el clúster seleccionado durante la última hora, esto indica que el clúster no ha experimentado ningún problema de rendimiento durante el momento en que se detectó el evento en su partner.
+
+. Si el clúster seleccionado tiene eventos detectados en la última hora, compare el tiempo de detección de eventos con la hora de detección de eventos para el evento en el clúster local.
++
+Si estos eventos requieren cargas de trabajo abusivas que causan contención en el componente de procesamiento de datos, uno o más de estos factores podrían haber provocado el evento en el clúster local. Puede hacer clic en el evento para analizarlo y revisar las acciones sugeridas para resolverlo en la página de detalles Event.
+
++
+Si estos eventos no requieren cargas de trabajo abusivas, no provoquen el evento de rendimiento en el clúster local.
+
+

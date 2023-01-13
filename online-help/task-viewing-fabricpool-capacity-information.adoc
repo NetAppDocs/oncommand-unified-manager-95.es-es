@@ -1,0 +1,83 @@
+---
+permalink: online-help/task-viewing-fabricpool-capacity-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible ver información sobre la capacidad de FabricPool de clústeres, agregados y volúmenes en las páginas de detalles y inventario de estado de estos objetos. También puede ver información de FabricPool en el informe de capacidad y utilización de agregados. 
+---
+= Visualización de información de capacidad de FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ver información sobre la capacidad de FabricPool de clústeres, agregados y volúmenes en las páginas de detalles y inventario de estado de estos objetos. También puede ver información de FabricPool en el informe de capacidad y utilización de agregados.
+
+
+
+== Acerca de esta tarea
+
+Estas páginas muestran información, como la capacidad disponible en el nivel de rendimiento local y en el nivel de nube, cuánta capacidad se utiliza en ambos niveles, qué agregados están conectados a un nivel de la nube, Y qué volúmenes están implementando las funciones de FabricPool moviendo cierta información al nivel de cloud.
+
+
+
+== Pasos
+
+. Realice una de las siguientes acciones:
++
+|===
+| Para ver información de capacidad de... | Realice lo siguiente... 
+
+
+ a| 
+De clúster
+ a| 
+.. En la página Health/Clusters, haga clic en un clúster.
+.. En la página de detalles Health/Cluster, haga clic en la ficha *Configuración*.
++
+La pantalla muestra los nombres de cualquier nivel de cloud a la que esté conectado el clúster.
+
+
+
+
+
+ a| 
+Agregados
+ a| 
+.. En la página de inventario Estado/agregados, haga clic en un agregado donde el campo Tipo indica "SD (FabricPool)".
+.. En la página de detalles Estado/agregado, haga clic en la ficha *capacidad*.
++
+La pantalla muestra la capacidad total, más el espacio usado y libre en el nivel de cloud.
+
+.. Haga clic en la ficha *Información de disco*.
++
+La pantalla muestra el nombre del nivel de cloud y el espacio disponible.
+
+.. Haga clic en la ficha *Configuración*.
++
+La pantalla muestra el nombre del nivel de cloud y otra información detallada sobre el almacén de objetos.
+
+
+
+
+
+ a| 
+Volúmenes
+ a| 
+.. En la página del inventario Health/Volumes, haga clic en un volumen en el que aparece el nombre de una política en el campo «"Política de organización en niveles".
+.. En la página de detalles Estado/volumen, haga clic en la ficha *Configuración*.
++
+La pantalla muestra el nombre de la política de organización en niveles de FabricPool asignada al volumen.
+
+
+
+|===
+
+
+
+
+== Después de terminar
+
+Para obtener más información acerca de los agregados de FabricPool, consulte la _ONTAP 9 Guía completa de discos y agregados.
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-psmg/home.html["Guía completa de discos y agregados de ONTAP 9"]

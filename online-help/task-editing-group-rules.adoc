@@ -1,0 +1,36 @@
+---
+permalink: online-help/task-editing-group-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar las reglas de grupo para modificar los grupos de condiciones y las condiciones de un grupo de condiciones para agregar o quitar objetos de almacenamiento a un grupo específico o desde él. 
+---
+= Editar reglas de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar las reglas de grupo para modificar los grupos de condiciones y las condiciones de un grupo de condiciones para agregar o quitar objetos de almacenamiento a un grupo específico o desde él.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *grupos*.
+. En la ficha *Reglas de grupo*, seleccione la regla de grupo que desea editar y, a continuación, haga clic en *Editar*.
+. En el cuadro de diálogo *Editar regla de grupo*, cambie el nombre de la regla de grupo, el nombre del grupo asociado, los grupos de condición y las condiciones según sea necesario.
++
+[NOTE]
+====
+No puede cambiar el tipo de objeto de destino para una regla de grupo.
+
+====
+. Haga clic en *Guardar*.
+

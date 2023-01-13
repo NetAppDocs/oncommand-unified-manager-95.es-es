@@ -1,0 +1,34 @@
+---
+permalink: health-checker/concept-what-a-database-restore-is.html 
+sidebar: sidebar 
+keywords: Unified Manager 
+summary: La restauración de bases de datos es el proceso de restaurar un archivo de backup de Unified Manager existente en un servidor de Unified Manager igual o diferente. La operación de restauración se ejecuta desde la consola de Unified Manager. 
+---
+= Qué es una restauración de base de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La restauración de bases de datos es el proceso de restaurar un archivo de backup de Unified Manager existente en un servidor de Unified Manager igual o diferente. La operación de restauración se ejecuta desde la consola de Unified Manager.
+
+Si se realiza una operación de restauración en el mismo sistema (local) y los archivos de backup se almacenan localmente, se puede ejecutar el comando restore con la ubicación predeterminada. Si realiza una operación de restauración en un sistema de Unified Manager diferente (un sistema remoto), debe copiar el archivo de backup o los archivos, desde el almacenamiento secundario al disco local antes de ejecutar el comando de restauración.
+
+Durante el proceso de restauración, se cerró la sesión en Unified Manager. Se puede iniciar sesión en el sistema una vez completado el proceso de restauración.
+
+La función de restauración es específica de la versión y de la plataforma. Puede restaurar un backup de Unified Manager solo en la misma versión de Unified Manager. Unified Manager admite backup y restauración en las siguientes situaciones de plataforma:
+
+* Del dispositivo virtual al dispositivo virtual
+* Dispositivo virtual a Red Hat Enterprise Linux o CentOS
+* Red Hat Enterprise Linux a Red Hat Enterprise Linux o CentOS
+* Windows en Windows
+
+
+Si va a restaurar la imagen de backup en un servidor nuevo, una vez que finalice la operación de restauración, debe generar un nuevo certificado de seguridad HTTPS y reiniciar el servidor de Unified Manager. También deberá volver a configurar la configuración de autenticación SAML, si es necesario, al restaurar la imagen de backup en un nuevo servidor.
+
+[NOTE]
+====
+No es posible usar los archivos de backup antiguos para restaurar una imagen después de que Unified Manager se haya actualizado a una versión más reciente de software. Para ahorrar espacio, se eliminan automáticamente todos los archivos de backup antiguos, excepto el archivo más reciente, al actualizar Unified Manager.
+
+====

@@ -1,0 +1,38 @@
+---
+permalink: online-help/concept-aggregate-performance-explorer-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Performance/Aggregate Explorer proporciona una descripción general detallada del rendimiento de todos los agregados de un clúster. 
+---
+= Página del explorador Performance/Aggregate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Performance/Aggregate Explorer proporciona una descripción general detallada del rendimiento de todos los agregados de un clúster.
+
+La página Performance/Aggregate Explorer le permite realizar un seguimiento y comparar el rendimiento del agregado durante un período de tiempo específico, lo que ayuda a resolver problemas y a optimizar el rendimiento de un agregado.
+
+[NOTE]
+====
+Los agregados raíz no se muestran en esta página.
+
+====
+Con la funcionalidad Ver y comparar, puede comparar el rendimiento de este agregado con:
+
+* otros agregados en el mismo nodo
+* otros agregados en el mismo clúster
+* el nodo en el que reside el agregado
+* todos los nodos del clúster que utilizan este agregado
+* los volúmenes que residen en este agregado
+
+
+La página Performance/Aggregate Explorer le permite:
+
+* Ver los problemas relacionados con los umbrales y sus detalles
+* Realice un seguimiento y compare los datos de rendimiento globales
+* Investigar y solucionar problemas relacionados con los umbrales
+* Investigue y solucione problemas de rendimiento
+

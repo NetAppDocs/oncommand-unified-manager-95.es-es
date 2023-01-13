@@ -1,0 +1,38 @@
+---
+permalink: online-help/concept-constituent-volume-performance-explorer-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Performance/Constituyente Volume Explorer proporciona información detallada sobre el rendimiento para el componente FlexGroup seleccionado. 
+---
+= Página del Explorador de volúmenes de rendimiento/componente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Performance/Constituyente Volume Explorer proporciona información detallada sobre el rendimiento para el componente FlexGroup seleccionado.
+
+La página Performance/Constituyente Volume Explorer le permite realizar un seguimiento y comparar el rendimiento de los componentes durante un periodo de tiempo específico, lo que ayuda a la resolución de problemas y a optimizar el rendimiento de un volumen FlexGroup y sus volúmenes constituyentes.
+
+Con la funcionalidad de Ver y comparar puede comparar el rendimiento de este volumen constituyente con:
+
+* el agregado en el que reside este volumen constituyente
+* El SVM en el que reside este volumen constituyente
+* El volumen FlexGroup al que pertenece el componente
+* otros volúmenes que se encuentran en el mismo agregado
+
+
+La página Performance/Constituyente Volume Explorer le permite:
+
+* Ver los problemas relacionados con los umbrales y sus detalles
+* Realice un seguimiento y compare los datos de rendimiento de los componentes
+* Investigar y solucionar problemas relacionados con los umbrales
+* Investigue y solucione problemas de rendimiento
+
+
+[NOTE]
+====
+Para los volúmenes de protección de datos (DP), solo se muestran los valores de contador del tráfico generado por el usuario. Cuando el clúster se instala con una versión de ONTAP anterior a la 8.3, no se muestran valores de contador.
+
+====

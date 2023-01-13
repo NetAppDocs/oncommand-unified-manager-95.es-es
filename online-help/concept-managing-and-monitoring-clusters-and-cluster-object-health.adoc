@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-managing-and-monitoring-clusters-and-cluster-object-health.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager utiliza consultas de API periódicas y un motor de recogida de datos para recoger datos de los clústeres. Al añadir clústeres a la base de datos de Unified Manager, puede supervisar y gestionar estos clústeres para cualquier riesgo de disponibilidad y capacidad. 
+---
+= Gestionar y supervisar clústeres y el estado de objetos del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager utiliza consultas de API periódicas y un motor de recogida de datos para recoger datos de los clústeres. Al añadir clústeres a la base de datos de Unified Manager, puede supervisar y gestionar estos clústeres para cualquier riesgo de disponibilidad y capacidad.

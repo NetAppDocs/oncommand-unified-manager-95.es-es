@@ -1,0 +1,52 @@
+---
+permalink: online-help/concept-event-state-definitions.html 
+sidebar: sidebar 
+keywords:  
+summary: El estado de un evento le ayuda a identificar si es necesaria una acción correctiva adecuada. Un evento puede ser Nuevo, reconocido, resuelto u Obsoleto. Tenga en cuenta que tanto los eventos nuevos como los reconocidos se consideran eventos activos. 
+---
+= Definiciones de estado de eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El estado de un evento le ayuda a identificar si es necesaria una acción correctiva adecuada. Un evento puede ser Nuevo, reconocido, resuelto u Obsoleto. Tenga en cuenta que tanto los eventos nuevos como los reconocidos se consideran eventos activos.
+
+los estados del evento son los siguientes:
+
+* *Nuevo*
++
+El estado de un nuevo evento.
+
+* *Reconocido*
++
+El estado de un evento cuando lo ha reconocido.
+
+* *Resuelto*
++
+Estado de un evento cuando se Marca como solucionado.
+
+* *Obsoleto*
++
+El estado de un evento cuando se corrige automáticamente o cuando la causa del evento ya no es válida.
+
++
+[NOTE]
+====
+No puede reconocer ni resolver un evento obsoleto.
+
+====
+
+
+
+
+== Ejemplo de diferentes estados de un evento
+
+Los siguientes ejemplos ilustran los cambios de estado de eventos manuales y automáticos.
+
+Cuando se activa el clúster de eventos no accesible, el estado del evento es New. Cuando reconoce el evento, el estado del evento cambia a reconocido. Cuando haya realizado una acción correctiva adecuada, debe marcar el evento como solucionado. El estado del evento cambia a resuelto.
+
+Si el evento del clúster no accesible se genera debido a una interrupción del suministro eléctrico, cuando se restaura la alimentación, el clúster comienza a funcionar sin ninguna intervención del administrador. Por lo tanto, el evento clúster no accesible ya no es válido y el estado del evento cambia a Obsoleto en el siguiente ciclo de supervisión.
+
+Unified Manager envía una alerta cuando un evento está en el estado Obsoleto o resuelto. La línea del asunto y el contenido del correo electrónico de una alerta ofrecen información acerca del estado del evento. Una captura SNMP también incluye información sobre el estado del evento.

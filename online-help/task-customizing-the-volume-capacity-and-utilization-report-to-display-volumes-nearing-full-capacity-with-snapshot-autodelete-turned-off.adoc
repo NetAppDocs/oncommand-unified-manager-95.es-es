@@ -1,0 +1,38 @@
+---
+permalink: online-help/task-customizing-the-volume-capacity-and-utilization-report-to-display-volumes-nearing-full-capacity-with-snapshot-autodelete-turned-off.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible personalizar el informe Volume Capacity and Utilization para mostrar los volúmenes ordenados por cada vez más por el uso de capacidad de su volumen. De este modo, puede mostrar los volúmenes que alcanzan su capacidad completa. 
+---
+= Personalización del informe Volume Capacity and Utilization para mostrar los volúmenes que están casi a toda su capacidad con la opción Snapshot Autodelete desactivada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar el informe Volume Capacity and Utilization para mostrar los volúmenes ordenados por cada vez más por el uso de capacidad de su volumen. De este modo, puede mostrar los volúmenes que alcanzan su capacidad completa.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por SVM, el clúster o el volumen, realice los siguientes pasos:
++
+.. Haga clic en la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para ordenar los volúmenes que están casi por completo, haga clic en la columna *días a Full* y haga clic en la image:../media/sort-asc.gif[""] .
+. Para filtrar volúmenes que tengan activada la opción borrado automático de instantánea, haga clic en la columna *eliminación automática de instantánea* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *Desactivado*.
+. Haga clic en *Aceptar*.
+

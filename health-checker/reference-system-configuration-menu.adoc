@@ -1,0 +1,81 @@
+---
+permalink: health-checker/reference-system-configuration-menu.html 
+sidebar: sidebar 
+keywords:  
+summary: El menú Configuración del sistema le permite administrar su dispositivo virtual proporcionando diversas opciones, como ver el estado del servidor y reiniciar y apagar la máquina virtual. 
+---
+= Menú Configuración del sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El menú Configuración del sistema le permite administrar su dispositivo virtual proporcionando diversas opciones, como ver el estado del servidor y reiniciar y apagar la máquina virtual.
+
+[NOTE]
+====
+El menú Configuración del sistema no está disponible si Unified Manager se instala en Red Hat Enterprise Linux, CentOS o Microsoft Windows.
+
+====
+Están disponibles las siguientes opciones de menú:
+
+* *Estado del servidor de visualización*
++
+Muestra el estado actual del servidor. Las opciones de estado incluyen en ejecución o no en ejecución.
+
++
+Si el servidor no está en ejecución, es posible que deba ponerse en contacto con el soporte técnico.
+
+* *Reiniciar máquina virtual*
++
+Reinicia la máquina virtual, deteniendo todos los servicios. Tras reiniciar, la máquina virtual y los servicios se reinician.
+
+* *Apagar máquina virtual*
++
+Apaga la máquina virtual, deteniendo todos los servicios.
+
++
+Solo puede seleccionar esta opción desde la consola de máquinas virtuales.
+
+* *Cambiar contraseña de usuario de <logged in user>*
++
+Cambia la contraseña del usuario que está conectado actualmente, que sólo puede ser el usuario de mantenimiento.
+
+* *Aumentar el tamaño del disco de datos*
++
+Aumenta el tamaño del disco de datos (disco 3) en la máquina virtual.
+
+* *Aumente el tamaño del disco de intercambio*
++
+Aumenta el tamaño del disco de intercambio (disco 2) en la máquina virtual.
+
+* *Cambiar zona horaria*
++
+Cambia la zona horaria a su ubicación.
+
+* *Cambiar servidor NTP*
++
+Cambia la configuración del servidor NTP, como la dirección IP o el nombre de dominio completo (FQDN).
+
+* *Restaurar desde una copia de seguridad de OCUM*
++
+Restaura los ajustes de configuración y base de datos de Unified Manager desde una versión de backup anterior.
+
+* *Restablecer certificado de servidor*
++
+Restablece el certificado de seguridad del servidor.
+
+* *Cambiar nombre de host*
++
+Cambia el nombre del host en el que está instalado el dispositivo virtual.
+
+* *Atrás*
++
+Sale del menú Configuración del sistema y vuelve al menú principal.
+
+* *Salida*
++
+Sale del menú de la consola de mantenimiento.
+
+

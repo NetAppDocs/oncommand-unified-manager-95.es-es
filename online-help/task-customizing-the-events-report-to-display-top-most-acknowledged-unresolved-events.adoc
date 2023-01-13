@@ -1,0 +1,38 @@
+---
+permalink: online-help/task-customizing-the-events-report-to-display-top-most-acknowledged-unresolved-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible personalizar el informe Events para mostrar los eventos más reconocidos, filtrados por el estado de los eventos. Puede ordenarlos en orden decreciente para mostrar el número de días pendientes. 
+---
+= Personalización del informe Events para mostrar los eventos principales sin resolver
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar el informe Events para mostrar los eventos más reconocidos, filtrados por el estado de los eventos. Puede ordenarlos en orden decreciente para mostrar el número de días pendientes.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para filtrar los eventos reconocidos, haga clic en la columna *Estado* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista desplegable *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *reconocido*.
+. Haga clic en *Aceptar*.
+. Para filtrar más el informe, haga clic en la columna *reconocido por* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista desplegable *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *Nombre*.
+. Haga clic en *Aceptar*.
+. Para ordenar los eventos pendientes durante el mayor número de días, haga clic en la columna *días pendientes* y haga clic en image:../media/click-to-see-menu.gif[""].
+. Seleccione *filtro* > *Arriba/abajo N*.
+. En el cuadro de diálogo *Arriba/abajo N*, seleccione *Arriba N* en el campo *filtro* e introduzca un valor en el campo de texto.
+. Haga clic en *Aceptar*.
+

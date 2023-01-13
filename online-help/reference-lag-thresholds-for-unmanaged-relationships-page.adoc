@@ -1,0 +1,62 @@
+---
+permalink: online-help/reference-lag-thresholds-for-unmanaged-relationships-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página umbrales de desfase para relaciones no administradas le permite configurar valores globales de umbral de error y de advertencia de desfase para relaciones de protección no administradas, de modo que se le notifique y pueda tomar medidas cuando se produzcan errores de umbral o de desfase. Los cambios realizados en esta configuración se aplican durante la siguiente actualización programada. 
+---
+= Página umbrales de desfase para relaciones no administradas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página umbrales de desfase para relaciones no administradas le permite configurar valores globales de umbral de error y de advertencia de desfase para relaciones de protección no administradas, de modo que se le notifique y pueda tomar medidas cuando se produzcan errores de umbral o de desfase. Los cambios realizados en esta configuración se aplican durante la siguiente actualización programada.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+Los eventos se generan cuando se incumple un umbral. Puede tomar acciones correctivas para tales eventos. La configuración del umbral de desfase para las relaciones no administradas está habilitada de forma predeterminada.
+
+El umbral de desfase especifica un porcentaje que no debe superar el tiempo de desfase. Con un ejemplo de una hora, si el umbral de desfase se define como 150%, recibirá un evento cuando el tiempo de retraso sea superior a 1.5 horas.
+
+
+
+== Área umbrales de desfase para relaciones no administradas
+
+El área de desfase le permite establecer umbrales de desfase en las relaciones no administradas para las siguientes condiciones:
+
+* *Advertencia*
++
+Especifica el porcentaje en el que la duración de la demora es igual o superior al umbral de aviso de desfase:
+
++
+** Valor predeterminado: 150 %
+** Eventos generados: Aviso de desfase en la relación de SnapMirror o aviso de desfase en la relación de SnapVault
+** Gravedad del evento: Advertencia
+
+
+* *Error*
++
+Especifica el porcentaje en el que la duración de la demora es igual o superior al umbral de error de desfase:
+
++
+** Valor predeterminado: 250 %
+** Eventos generados: Error de desfase en la relación de SnapMirror o error de desfase en la relación de SnapVault
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Botones de comando
+
+* *Restaurar valores predeterminados de fábrica*
++
+Le permite restaurar los ajustes de configuración a los valores predeterminados de fábrica.
+
+* *Guardar*
++
+Guarda los ajustes de configuración de la opción seleccionada.
+
+

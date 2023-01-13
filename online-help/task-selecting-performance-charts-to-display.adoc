@@ -1,0 +1,50 @@
+---
+permalink: online-help/task-selecting-performance-charts-to-display.html 
+sidebar: sidebar 
+keywords:  
+summary: La lista desplegable Choose Chart permite seleccionar los tipos de gráficos de contadores de rendimiento para mostrar en el panel Counter Charts. Esto le permite ver datos y contadores específicos según sus requisitos de rendimiento. 
+---
+= Selección de gráficos de rendimiento para mostrar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La lista desplegable Choose Chart permite seleccionar los tipos de gráficos de contadores de rendimiento para mostrar en el panel Counter Charts. Esto le permite ver datos y contadores específicos según sus requisitos de rendimiento.
+
+
+
+== Pasos
+
+. En el panel *Cartas de contador*, haga clic en la lista desplegable *elegir gráficos*.
+. Agregar o quitar gráficos:
++
+|===
+| Para... | Realice lo siguiente... 
+
+
+ a| 
+Agregar o quitar gráficos individuales
+ a| 
+Haga clic en las casillas de verificación situadas junto a los gráficos que desee mostrar u ocultar
+
+
+
+ a| 
+Agregue todos los gráficos
+ a| 
+Haga clic en *Seleccionar todo*
+
+
+
+ a| 
+Eliminar todos los gráficos
+ a| 
+Haga clic en *Desseleccionar todo*
+
+|===
++
+Las selecciones del gráfico se muestran en el panel Contador de gráficos. Tenga en cuenta que al agregar gráficos, los nuevos gráficos se insertan en el panel gráficos de contador para que coincidan con el orden de los gráficos enumerados en la lista desplegable elegir gráficos. La selección de gráficos adicionales puede requerir un desplazamiento adicional.
+
+

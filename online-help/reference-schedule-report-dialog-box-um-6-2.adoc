@@ -1,0 +1,66 @@
+---
+permalink: online-help/reference-schedule-report-dialog-box-um-6-2.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede programar los informes para que se generen de forma periódica en una frecuencia específica desde el cuadro de diálogo Informe de programación. El informe se envía por correo electrónico a uno o más usuarios especificados en el cuadro de diálogo Informe de horario . 
+---
+= Cuadro de diálogo Schedule Report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede programar los informes para que se generen de forma periódica en una frecuencia específica desde el cuadro de diálogo Informe de programación. El informe se envía por correo electrónico a uno o más usuarios especificados en el cuadro de diálogo Informe de horario .
+
+
+
+== Propiedades
+
+Puede programar un informe especificando propiedades como la dirección de correo electrónico del usuario, el formato del informe y la frecuencia con la que se genera el informe.
+
+* *Uso de la programación existente*
++
+** *Nombre del programa*
++
+Muestra todos los nombres de programación existentes. Puede seleccionar un programa existente para sus informes desde aquí.
+
+
+
+* *Crear nuevo horario*
++
+** *Nombre del programa*
++
+Permite introducir el nombre de la programación mientras crea una nueva.
+
+** *Dirección de correo electrónico del destinatario*
++
+Especifica la dirección de correo electrónico del usuario al que desea enviar el informe. Puede especificar una o más entradas separadas por comas. Este campo es obligatorio.
+
+** *Formato de informe*
++
+Especifica el formato en el que desea programar el informe. La opción _PDF_ está seleccionada de forma predeterminada.
+
+** *Frecuencia*
++
+Especifica la frecuencia con la que desea programar el informe. La opción _Hourly_ está seleccionada de forma predeterminada.
+
+
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Horario*
++
+Programa el informe con la plantilla guardada o actualizada y cierra el cuadro de diálogo Informe de horario.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Informe de horario mientras se muestra un mensaje para guardar la plantilla de informe de horario.
+
+

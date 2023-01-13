@@ -1,0 +1,55 @@
+---
+permalink: online-help/reference-storage-shelf-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de la bandeja de almacenamiento le indican si su bandeja de almacenamiento presenta anomalías de forma que pueda supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de la bandeja de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de la bandeja de almacenamiento le indican si su bandeja de almacenamiento presenta anomalías de forma que pueda supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Rango de tensión anormal (ocumEvtShelfVoltageAbnormal)
+ a| 
+Riesgo
+ a| 
+Bandeja de almacenamiento
+ a| 
+Advertencia
+
+
+
+ a| 
+Rango de corriente anormal (ocumEvtSheltrosABnormal)
+ a| 
+Riesgo
+ a| 
+Bandeja de almacenamiento
+ a| 
+Advertencia
+
+
+
+ a| 
+Temperatura anormal (ocumEvtShelTemperatureAbnormal)
+ a| 
+Riesgo
+ a| 
+Bandeja de almacenamiento
+ a| 
+Advertencia
+
+|===

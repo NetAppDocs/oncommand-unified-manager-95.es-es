@@ -1,0 +1,46 @@
+---
+permalink: online-help/reference-save-customized-report-as-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Save Customized Report as para guardar un informe tras personalizarlo. 
+---
+= Cuadro de diálogo Save Customized Report as
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Save Customized Report as para guardar un informe tras personalizarlo.
+
+
+
+== Propiedades
+
+Puede personalizar y guardar un informe especificando propiedades como el nombre y la descripción.
+
+* *Nombre del informe*
++
+Muestra el nombre del informe. El nombre del informe original se muestra de forma predeterminada. Puede modificar el nombre del informe de acuerdo con la personalización. El nombre del informe no puede superar los 255 caracteres.
+
+* *Descripción*
++
+Especifica la descripción de la personalización realizada en el informe. La descripción no puede superar los 150 caracteres.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Guardar*
++
+Guarda el informe personalizado .
+
+* *Cancelar*
++
+Cancela los cambios recientes y cierra el cuadro de diálogo Save Customized Report as.
+
+

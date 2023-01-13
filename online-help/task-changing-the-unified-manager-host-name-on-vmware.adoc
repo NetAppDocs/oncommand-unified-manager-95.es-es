@@ -1,0 +1,48 @@
+---
+permalink: online-help/task-changing-the-unified-manager-host-name-on-vmware.html 
+sidebar: sidebar 
+keywords:  
+summary: El host de red se asigna un nombre cuando se pone en marcha el dispositivo virtual de Unified Manager por primera vez. Es posible cambiar el nombre de host después de la implementación. Si cambia el nombre de host, también debe volver a generar el certificado HTTPS. 
+---
+= Cambiar el nombre de host de la aplicación virtual de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El host de red se asigna un nombre cuando se pone en marcha el dispositivo virtual de Unified Manager por primera vez. Es posible cambiar el nombre de host después de la implementación. Si cambia el nombre de host, también debe volver a generar el certificado HTTPS.
+
+
+
+== Antes de empezar
+
+Debe iniciar sesión en Unified Manager como usuario de mantenimiento o tener asignado el rol de administrador de OnCommand para realizar estas tareas.
+
+
+
+== Acerca de esta tarea
+
+Puede usar el nombre de host (o la dirección IP del host) para acceder a la interfaz de usuario web de Unified Manager. Si configuró una dirección IP estática para la red durante la implementación, debería haber designado un nombre para el host de red. Si configuró la red mediante DHCP, el nombre de host debe tomarse del DNS. Si DHCP o DNS no están configurados correctamente, el nombre de host "'OnCommand'" se asigna automáticamente y se asocia con el certificado de seguridad.
+
+Independientemente de cómo se asignó el nombre de host, si cambia el nombre de host y piensa usar el nuevo nombre de host para acceder a la interfaz de usuario web de Unified Manager, debe generar un nuevo certificado de seguridad.
+
+Si accede a la interfaz de usuario web mediante la dirección IP del servidor en lugar del nombre de host, no es necesario generar un nuevo certificado si cambia el nombre de host. Sin embargo, se recomienda actualizar el certificado de forma que el nombre de host del certificado coincida con el nombre de host real.
+
+Si cambia el nombre de host en Unified Manager, debe actualizar manualmente el nombre de host en OnCommand Workflow Automation (WFA). El nombre de host no se actualiza automáticamente en WFA.
+
+El nuevo certificado no se aplicará hasta que se reinicie la máquina virtual de Unified Manager.
+
+
+
+== Pasos
+
+. xref:task-generating-an-https-security-certificate-ocf.adoc[Genere un certificado de seguridad HTTPS]
++
+Si desea usar el nuevo nombre de host para acceder a la interfaz de usuario web de Unified Manager, debe volver a generar el certificado HTTPS para asociarlo con el nuevo nombre de host.
+
+. xref:task-restarting-the-unified-manager-virtual-machine.adoc[Reinicie la máquina virtual de Unified Manager]
++
+Después de volver a generar el certificado HTTPS, debe reiniciar la máquina virtual de Unified Manager.
+
+

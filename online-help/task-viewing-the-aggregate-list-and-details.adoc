@@ -1,0 +1,44 @@
+---
+permalink: online-help/task-viewing-the-aggregate-list-and-details.html 
+sidebar: sidebar 
+keywords:  
+summary: En la página del inventario Health/Aggregates, puede supervisar su inventario de agregados. La página Estado/agregados capacidad y utilización le permite ver información sobre la capacidad y la utilización de los agregados en todos los clústeres. 
+---
+= Consulte la lista de agregados y los detalles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página del inventario Health/Aggregates, puede supervisar su inventario de agregados. La página Estado/agregados capacidad y utilización le permite ver información sobre la capacidad y la utilización de los agregados en todos los clústeres.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Puede ver detalles como la capacidad y la configuración del agregado, y la información sobre el disco en la página de detalles Estado/agregado. Puede utilizar estos detalles antes de configurar los ajustes del umbral si es necesario.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Estado* > *agregados*.
+. Seleccione una de las siguientes formas de ver los detalles del agregado:
++
+** Para ver información acerca de la capacidad y utilización de todos los agregados en todos los clústeres, en el menú Ver, seleccione *capacidad agregada y utilización*.
+** Para ver los detalles mínimos, coloque el cursor sobre el nombre del agregado.
+** Para ver todos los detalles, haga clic en el nombre del agregado.
++
+También puede ver todos los detalles haciendo clic en *Ver detalles* en el cuadro de diálogo Detalles mínimos.
+
+
+
+. Para ver los objetos relacionados con el agregado, haga clic en *Ver relacionado* en el cuadro de diálogo Detalles mínimos.
+

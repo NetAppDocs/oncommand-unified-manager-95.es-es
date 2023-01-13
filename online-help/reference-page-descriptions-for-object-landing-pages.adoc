@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-page-descriptions-for-object-landing-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: Las páginas Performance Explorer se utilizan para ver información detallada sobre el rendimiento de cada objeto de almacenamiento disponible, como clústeres, agregados, volúmenes, etc. Estas páginas le permiten evaluar el rendimiento general de todos los objetos y comparar los datos de rendimiento de los objetos en un formato paralelo. 
+---
+= Descripciones de las páginas Performance Explorer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las páginas Performance Explorer se utilizan para ver información detallada sobre el rendimiento de cada objeto de almacenamiento disponible, como clústeres, agregados, volúmenes, etc. Estas páginas le permiten evaluar el rendimiento general de todos los objetos y comparar los datos de rendimiento de los objetos en un formato paralelo.

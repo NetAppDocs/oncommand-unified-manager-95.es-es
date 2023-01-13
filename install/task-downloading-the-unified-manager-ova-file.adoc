@@ -1,0 +1,38 @@
+---
+permalink: install/task-downloading-the-unified-manager-ova-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe descargar el archivo Unified Manager.ova del sitio de soporte de NetApp para poner en marcha Unified Manager como dispositivo virtual. 
+---
+= Descargue el archivo OVA de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe descargar Unified Manager``.ova`` Archivo del sitio de soporte de NetApp para poner en marcha Unified Manager como dispositivo virtual.
+
+
+
+== Antes de empezar
+
+Debe tener credenciales de inicio de sesión en el sitio de soporte de NetApp.
+
+
+
+== Acerca de esta tarea
+
+La `.ova` El archivo contiene el software Unified Manager configurado en un dispositivo virtual.
+
+
+
+== Pasos
+
+. Inicie sesión en el sitio de soporte de NetApp y desplácese hasta la página de descarga para instalar Unified Manager en VMware vSphere.
++
+http://mysupport.netapp.com/NOW/cgi-bin/software["Descargas de NetApp: Software"]
+
+. Descargue y guarde el `.ova` Un archivo a un directorio local o directorio de red al que se pueda acceder vSphere Client.
+. Compruebe la suma de comprobación para asegurarse de que el software se ha descargado correctamente.
+

@@ -1,0 +1,94 @@
+---
+permalink: online-help/reference-manage-report-schedules-dialog-box-um-6-2.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver, modificar o eliminar programaciones de informes existentes y agregar nuevas programaciones para los informes desde el cuadro de diálogo gestionar programaciones de informes. 
+---
+= Cuadro de diálogo Manage Report Schedules
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver, modificar o eliminar programaciones de informes existentes y agregar nuevas programaciones para los informes desde el cuadro de diálogo gestionar programaciones de informes.
+
+
+
+== Propiedades
+
+Puede seleccionar una programación existente o crear una nueva para los informes. Puede ver, modificar o eliminar sus programaciones de informes.
+
+* * Panel izquierdo*
++
+** *Nombre del programa*
++
+Muestra las programaciones existentes. Al hacer clic en cualquier programación puede ver los detalles de la programación en el panel derecho. Para el primer inicio de sesión, no hay horarios existentes.
+
+** *Agregar programa*
++
+Muestra el nuevo formulario de horario en el panel derecho. Ahora puede agregar una nueva programación.
+
+
+
+* *Panel derecho*
++
+** *Nombre del programa*
++
+Muestra el nombre de la programación.
+
+** *Dirección de correo electrónico del destinatario*
++
+Muestra la dirección de correo electrónico del usuario al que se debe enviar el informe. Es posible introducir más de una dirección de correo electrónico separada por comas.
+
+** *Formato de informe*
++
+Muestra el formato en el que debe presentarse el informe. La opción PDF se selecciona como el formato de informe predeterminado. Si se selecciona el formato XHTML, abra el informe que se envía por correo electrónico mediante un explorador web compatible.
+
+** *Frecuencia*
++
+Muestra la frecuencia con la que está programado el informe.
+
+** *Categoría de informe*
++
+Muestra los grupos de categorías de informes. Al seleccionar una categoría de informe de la lista, se muestran los informes que pertenecen a esa categoría de informe en la columna Informes disponibles.
+
+** *Informes disponibles*
++
+Muestra sólo los informes que pertenecen a la categoría de informe seleccionada.
+
+** *Informes seleccionados*
++
+Muestra los informes seleccionados a los que desea aplicar la programación. Puede seleccionar los informes requeridos en la columna Available Reports. Debe seleccionarse al menos un informe
+
+
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Agregar programa*
++
+Permite añadir una nueva programación.
+
+* *Eliminar horario*
++
+Permite eliminar la programación que se está viendo actualmente. Al crear una nueva programación, este botón no está disponible.
+
+* *Guardar*
++
+Guarda la programación que se está visualizando, modificando o agregando.
+
+* *Guardar y cerrar*
++
+Guarda la programación que se está visualizando, modificando o agregando y cierra el cuadro de diálogo Administrar programas de informes.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Administrar programas de informes mientras se muestra un mensaje para guardar la programación.
+
+

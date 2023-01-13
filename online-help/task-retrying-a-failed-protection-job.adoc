@@ -1,0 +1,41 @@
+---
+permalink: online-help/task-retrying-a-failed-protection-job.html 
+sidebar: sidebar 
+keywords:  
+summary: Una vez que haya tomado medidas para corregir un trabajo de protección fallido, puede utilizar Reintentar para volver a ejecutar el trabajo. Al volver a intentar un trabajo, se crea un trabajo nuevo con el ID de trabajo original. 
+---
+= Volver a intentar un trabajo de protección con errores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de haber tomado medidas para corregir un trabajo de protección fallido, puede utilizar *Reintentar* para volver a ejecutar el trabajo. Al volver a intentar un trabajo, se crea un trabajo nuevo con el ID de trabajo original.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Solo se puede volver a intentar un trabajo fallido a la vez. Al seleccionar más de un trabajo, se desactiva el botón *Reintentar*. Solo se pueden volver a intentar los trabajos del tipo Configuración de protección y operación de relación de protección.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Protección* > *trabajos*.
+. En la lista de trabajos, seleccione un solo trabajo de tipo Configuración de protección o operación de relación de protección que no se han podido completar.
++
+El botón *Reintentar* está activado.
+
+. Haga clic en *Reintentar*.
++
+Se reinicia el trabajo.
+
+

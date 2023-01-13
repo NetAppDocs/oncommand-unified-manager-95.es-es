@@ -1,0 +1,39 @@
+---
+permalink: online-help/task-rediscovering-clusters.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible volver a detectar manualmente un clúster en la página Configuration/Cluster Data Sources, para obtener la información más reciente sobre el estado, la supervisión de estado y el estado de rendimiento del clúster. 
+---
+= Volver a detectar clústeres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible volver a detectar manualmente un clúster en la página Configuration/Cluster Data Sources, para obtener la información más reciente sobre el estado, la supervisión de estado y el estado de rendimiento del clúster.
+
+
+
+== Acerca de esta tarea
+
+Es posible volver a detectar manualmente un clúster si se desea actualizar el clúster, como aumentar el tamaño de un agregado cuando no hay espacio suficiente, y si desea que Unified Manager detecte los cambios realizados.
+
+Cuando Unified Manager se empareja con OnCommand Workflow Automation (WFA), el emparejamiento activa la readquisición de los datos almacenados en caché mediante WFA.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Configuración* > *fuentes de datos de clúster*.
+. En la página *Configuration/Cluster Data Sources*, haga clic en *Rediscover*.
++
+Unified Manager vuelve a detectar el clúster seleccionado y muestra el estado y el rendimiento más reciente.
+
++
+[NOTE]
+====
+Puede obtener el estado de supervisión del clúster en el panel derecho de la página Dashboards/Cluster View.
+
+====
+

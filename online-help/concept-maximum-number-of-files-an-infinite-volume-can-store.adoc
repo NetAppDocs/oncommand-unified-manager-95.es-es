@@ -1,0 +1,22 @@
+---
+permalink: online-help/concept-maximum-number-of-files-an-infinite-volume-can-store.html 
+sidebar: sidebar 
+keywords:  
+summary: En la mayoría de los casos, un Infinite Volume puede almacenar hasta 2000 millones de archivos. Si un Infinite Volume es relativamente pequeño, su número máximo de archivos puede ser inferior a 2.000 millones. 
+---
+= El número máximo de archivos que puede almacenar Infinite Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la mayoría de los casos, un Infinite Volume puede almacenar hasta 2000 millones de archivos. Si un Infinite Volume es relativamente pequeño, su número máximo de archivos puede ser inferior a 2.000 millones.
+
+El número máximo de archivos que puede contener Infinite Volume viene determinado por el tamaño de su componente de espacio de nombres. Si el componente de espacio de nombres es de 10 TB, el Infinite Volume puede alojar 2000 millones de archivos. Si el componente de espacio de nombres es inferior a 10 TB, Infinite Volume puede albergar proporcionalmente menos archivos.
+
+El tamaño del componente de espacio de nombres es aproximadamente proporcional al tamaño del Infinite Volume, según diversos factores, como el tamaño máximo de 10 TB del componente de espacio de nombres, el espacio disponible en el agregado que contiene el componente de espacio de nombres y la configuración SnapDiff.
+
+Para un Infinite Volume de dos nodos o un Infinite Volume de varios nodos sin SnapDiff habilitado, al establecer el Infinite Volume en un tamaño de 80 TB o superior normalmente se crea un componente de espacio de nombres de 10 TB.
+
+El recuento de archivos no sólo incluye archivos normales, sino también otras estructuras del sistema de archivos, como directorios y enlaces simbólicos.

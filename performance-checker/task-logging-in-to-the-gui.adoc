@@ -1,0 +1,56 @@
+---
+permalink: performance-checker/task-logging-in-to-the-gui.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede iniciar sesión en la interfaz de usuario de Unified Manager mediante un explorador web compatible. 
+---
+= Iniciar sesión en la interfaz de usuario de
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede iniciar sesión en la interfaz de usuario de Unified Manager mediante un explorador web compatible.
+
+
+
+== Antes de empezar
+
+* El navegador web debe cumplir los requisitos mínimos.
++
+Consulte la matriz de interoperabilidad en http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"] para ver la lista completa de versiones compatibles del navegador.
+
+* Debe tener la dirección IP o la URL del servidor de Unified Manager.
+
+
+
+
+== Acerca de esta tarea
+
+Se cerrará automáticamente la sesión después de 24 horas de inactividad.
+
+
+
+== Pasos
+
+. Introduzca la URL en su navegador web, donde `URL` Es la dirección IP o el nombre de dominio completo (FQDN) de Unified Manager Server:
++
+** Para IPv4: `+https://URL/+`
+** Para IPv6: `https://[URL]/`Si el servidor utiliza un certificado digital autofirmado, es posible que el explorador muestre una advertencia que indica que el certificado no es de confianza. Puede reconocer el riesgo de continuar con el acceso o instalar un certificado digital firmado por una entidad de certificación (CA) para la autenticación del servidor.
+
+
+. En la pantalla de inicio de sesión, introduzca su nombre de usuario y contraseña.
++
+Si el inicio de sesión en la interfaz de usuario de Unified Manager se protege mediante la autenticación SAML, se deben introducir las credenciales en la página de inicio de sesión del proveedor de identidades (IDP) en lugar de la página de inicio de sesión de Unified Manager.
+
++
+Aparece la página Paneles/Resumen.
+
++
+[NOTE]
+====
+Si no se inicializa Unified Manager Server, una nueva ventana del navegador muestra el asistente First Experience. Es necesario introducir un destinatario de correo electrónico inicial para el cual se enviarán las alertas por correo electrónico, el servidor SMTP que se encargará de las comunicaciones por correo electrónico y si AutoSupport está habilitado para enviar información sobre la instalación de Unified Manager al soporte técnico. La interfaz de usuario de Unified Manager se muestra después de completar esta información.
+
+====
+

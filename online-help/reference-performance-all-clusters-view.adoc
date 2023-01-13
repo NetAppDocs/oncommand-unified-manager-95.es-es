@@ -1,0 +1,80 @@
+---
+permalink: online-help/reference-performance-all-clusters-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La página del inventario Performance/Clusters muestra una descripción general de los eventos de rendimiento, los datos y la información de configuración para cada clúster supervisado por una instancia de Unified Manager. Esta página permite supervisar el rendimiento de los clústeres y solucionar problemas de rendimiento y eventos de umbral. 
+---
+= Página del inventario Performance/Clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página del inventario Performance/Clusters muestra una descripción general de los eventos de rendimiento, los datos y la información de configuración para cada clúster supervisado por una instancia de Unified Manager. Esta página permite supervisar el rendimiento de los clústeres y solucionar problemas de rendimiento y eventos de umbral.
+
+Dependiendo de cómo se vaya a esta página, se puede mostrar un título diferente en la página para indicar si la lista se ha filtrado. Por ejemplo, cuando se muestran todos los clusters, el título es «'Clusters». Al mostrar un subconjunto de clústeres que se devuelven de la página Directivas de umbral, el título es "'Clusters en los que se aplica la directiva XYZ'".
+
+Los botones de la parte superior de la página permiten realizar búsquedas para localizar datos específicos, crear y aplicar filtros para restringir la lista de datos mostrados, exportar los datos de la página a un `.csv` y agregue o elimine columnas de la página.
+
+De forma predeterminada, los objetos de las páginas de inventario de objetos se ordenan en función de la importancia de evento de rendimiento del objeto. Los objetos con eventos críticos se enumeran primero y los objetos con eventos de advertencia aparecen en segundo lugar. Esto proporciona una indicación visual inmediata de los problemas que deben abordarse. Los valores de los contadores de rendimiento se basan en una media de las 72 horas de datos anteriores o más, como se indica en la página. Puede hacer clic en el botón Refresh para actualizar los datos de inventario de objetos.
+
+Puede asignar directivas de umbral de rendimiento a cualquier objeto de las páginas de inventario de objetos o borrar directivas de umbral mediante los botones *asignar directiva de umbral de rendimiento* y *Borrar directiva de umbral de rendimiento*.
+
+
+
+== Columnas de la página Inventory Clusters
+
+La página del inventario Performance/Clusters contiene las siguientes columnas para cada clúster.
+
+* *Estado*
++
+Un objeto en buen estado sin eventos activos muestra un icono de Marca de verificación verde (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]). Si el objeto tiene un evento activo, el icono del indicador de evento identifica la gravedad del evento: Los eventos críticos son rojos (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]), los eventos de error son naranjas (image:../media/sev-error-um60.png["Icono para la gravedad del evento: Error"]), y los sucesos de advertencia son amarillos (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]).
+
+* *Cluster*
++
+El nombre del clúster. Puede hacer clic en el nombre del clúster para ir a la página de detalles de rendimiento de ese clúster.
+
+* *IOPS*
++
+Las operaciones de entrada/salida por segundo en el clúster.
+
+* *Mbps*
++
+El rendimiento en el clúster, medido en megabytes por segundo.
+
+* *Capacidad libre*
++
+La capacidad de almacenamiento sin utilizar para este clúster, en gigabytes.
+
+* *Capacidad total*
++
+La capacidad total de almacenamiento de este cluster, en gigabytes.
+
+* *Número de nodos*
++
+El número de nodos en el clúster. Puede hacer clic en el número de número de nodos para ir a la página del inventario Performance/Nodes.
+
+* *Nombre de host o Dirección IP*
++
+El nombre de host o la dirección IP (IPv4 o IPv6) de la LIF de gestión del clúster.
+
+* *Número de serie*
++
+El número de identificación único del clúster.
+
+* *Versión del SO*
++
+La versión del software ONTAP que está instalada en el clúster.
+
++
+[NOTE]
+====
+Si se instalan diferentes versiones del software ONTAP en los nodos del clúster, se muestra el número de versión más bajo. Puede ver la versión de ONTAP que se instala en cada nodo desde la página de inventario Performance/Nodes.
+
+====
+* *Política de umbral*
++
+La política de umbral de rendimiento definida por el usuario, o políticas, que están activas en este objeto de almacenamiento. Puede colocar el cursor sobre los nombres de directivas que contienen puntos suspensivos (...). para ver el nombre completo de la directiva o la lista de nombres de directivas asignadas. Los botones *Assign Performance Threshold Policy* y *Clear Performance Threshold Policy* permanecen desactivados hasta que seleccione uno o más objetos haciendo clic en las casillas de verificación situadas en el extremo izquierdo.
+
+

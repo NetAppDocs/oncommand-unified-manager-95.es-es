@@ -1,0 +1,77 @@
+---
+permalink: online-help/reference-top-performers-page.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La página Top Performers muestra los objetos de almacenamiento con el rendimiento más alto o el más bajo según el contador de rendimiento seleccionado. Por ejemplo, en la categoría SVM, puede mostrar las SVM que tienen las IOPS más altas o la latencia más alta o los Mbps más bajos. Esta página también se muestra si alguno de los ejecutantes superiores tiene eventos de rendimiento activos \(Nuevo o reconocido\).' 
+---
+= Página Top Performers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Top Performers muestra los objetos de almacenamiento con el rendimiento más alto o el más bajo según el contador de rendimiento seleccionado. Por ejemplo, en la categoría SVM, puede mostrar las SVM que tienen las IOPS más altas o la latencia más alta o los Mbps más bajos. Esta página también muestra si alguno de los principales ejecutantes tiene eventos de rendimiento activos (nuevos o reconocidos).
+
+La página Top Performers muestra un máximo de 10 de cada objeto. Tenga en cuenta que el objeto Volume incluye tanto los volúmenes FlexVol como los volúmenes FlexGroup; no incluye los componentes FlexGroup ni los Infinite Volumes.
+
+* *Intervalo de tiempo*
++
+Puede seleccionar un intervalo de tiempo para ver los ejecutantes superiores; el intervalo de tiempo seleccionado se aplica a todos los objetos de almacenamiento. Intervalos de tiempo disponibles:
+
++
+** Última hora
+** Últimas 24 horas
+** Últimas 72 horas (predeterminado)
+** Últimos 7 días
+
+
+* *Sistema métrico*
++
+Haga clic en el menú *Métrico* para seleccionar un contador diferente. Las opciones de contador son únicas para el tipo de objeto. Por ejemplo, los contadores disponibles para el objeto *Volumes* son *latencia*, *IOPS* y *Mbps*. Al cambiar el contador se cargan de nuevo los datos del panel con los ejecutantes superiores según el contador seleccionado.
+
++
+Contadores disponibles:
+
++
+** Latencia
+** IOPS
+** Mbps
+** Capacidad de rendimiento utilizada (para nodos y agregados)
+** Utilización (para nodos y agregados)
+
+
+* *Ordenar*
++
+Haga clic en el menú *Ordenar* para seleccionar un orden ascendente o descendente para el objeto y el contador seleccionados. Las opciones son *más altas a más bajas* y *más bajas a más altas*. Estas opciones le permiten ver los objetos con el rendimiento más alto o el más bajo.
+
+* *Barra de contador*
++
+La barra de contador del gráfico muestra las estadísticas de rendimiento de cada objeto, representada como una barra para ese elemento. Los gráficos de barras están codificados con colores. Si el contador no está violando un umbral de rendimiento, la barra de contador se muestra en azul. Si una infracción de umbral está activa (un evento nuevo o confirmado), la barra se muestra en color para el evento: Los sucesos de advertencia se muestran en amarillo (image:../media/treemapstatus-warning-png.gif["Icono para TreeMap: Estado de advertencia"]) y los sucesos críticos se muestran en rojo (image:../media/treemapred-png.gif["Icono para TreeMap: Color rojo"]). Las infracciones de umbral se indican aún más mediante iconos de indicadores de eventos de gravedad para los eventos de advertencia y críticos.
+
++
+image::../media/top-10-example.gif[ejemplo de los 10 primeros]
+
++
+Para cada gráfico, el eje X muestra los ejecutantes superiores del tipo de objeto seleccionado. El eje y muestra las unidades aplicables al contador seleccionado. Al hacer clic en el enlace del nombre del objeto debajo de cada elemento de gráfico de barras vertical, se desplaza hasta la página de inicio de rendimiento del objeto seleccionado.
+
+* *Indicador de sucesos de gravedad*
++
+El icono del indicador *evento de gravedad* se muestra a la izquierda del nombre de un objeto para el valor crítico activo (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]) o advertencia (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]) eventos en los gráficos de alto rendimiento. Haga clic en el icono del indicador *evento de gravedad* para ver:
+
++
+** *Un evento*
++
+Navega hasta la página de detalles del evento correspondiente a ese evento.
+
+** *Dos o más eventos*
++
+Navega hasta la página de inventario de eventos, que se filtra para mostrar todos los eventos del objeto seleccionado.
+
+
+
+* *Botón Exportar*
++
+Crea un `.csv` archivo que contiene los datos que aparecen en la barra de contador. Puede optar por crear el archivo para el único clúster que esté viendo o para todos los clústeres del centro de datos.
+
+

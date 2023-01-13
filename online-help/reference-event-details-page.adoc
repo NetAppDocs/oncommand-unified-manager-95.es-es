@@ -1,0 +1,126 @@
+---
+permalink: online-help/reference-event-details-page.html 
+sidebar: sidebar 
+keywords:  
+summary: En la página de detalles Event, puede ver los detalles de un evento seleccionado, como la gravedad del evento, el nivel de impacto, el área de impacto y el origen del evento. También puede ver información adicional sobre posibles soluciones para resolver el problema. 
+---
+= Página de detalles Event
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página de detalles Event, puede ver los detalles de un evento seleccionado, como la gravedad del evento, el nivel de impacto, el área de impacto y el origen del evento. También puede ver información adicional sobre posibles soluciones para resolver el problema.
+
+* *Nombre del evento*
++
+El nombre del evento y la hora en que se vio el evento por última vez.
+
++
+Para los eventos que no son de rendimiento, mientras que el evento está en el estado Nuevo o reconocido, la última información vista no es conocida y, por lo tanto, está oculta.
+
+* *Descripción del evento*
++
+Una breve descripción del evento.
+
++
+En algunos casos, en la descripción del evento se proporciona un motivo para el desencadenante.
+
+* *Componente en disputa*
++
+Para eventos de rendimiento dinámicos, esta sección muestra iconos que representan los componentes lógicos y físicos del clúster. Si un componente es objeto de disputa, su icono está en un círculo y se resalta en rojo.
+
++
+Se pueden visualizar los siguientes componentes:
+
++
+** *Red*
++
+Representa el tiempo de espera de las solicitudes de I/o de los protocolos de iSCSI o los protocolos de Fibre Channel (FC) en el clúster. El tiempo de espera transcurrido para que las transacciones iSCSI Ready to Transfer (R2T) o FCP Transfer Ready (XFER_RDY) finalicen antes de que el clúster pueda responder a una solicitud de I/O. Si el componente de red es objeto de disputa, significa que un tiempo de espera elevado en la capa de protocolo de bloqueo está afectando a la latencia de una o más cargas de trabajo.
+
+** *Procesamiento de red*
++
+Representa el componente de software del clúster involucrado en el procesamiento de I/o entre la capa de protocolo y el clúster. Es posible que el nodo que gestiona el procesamiento de red haya cambiado desde que se detectó el evento. Si el componente de red es objeto de disputa, significa que un uso elevado en el nodo de procesamiento de red está afectando a la latencia de una o más cargas de trabajo.
+
+** *Política de QoS*
++
+Representa el grupo de políticas de calidad de servicio del almacenamiento al que pertenece la carga de trabajo. Si el componente del grupo de políticas es objeto de disputa, significa que el límite de rendimiento establecido está acelerando todas las cargas de trabajo del grupo de políticas, lo que afecta a la latencia de una o más cargas de trabajo.
+
+** *Interconexión en cluster*
++
+Representa los cables y los adaptadores que conectan de forma física los nodos en clúster. Si el componente de interconexión del clúster es objeto de disputa, significa que un tiempo de espera elevado para las solicitudes de I/o en la interconexión del clúster está afectando a la latencia de una o más cargas de trabajo.
+
+** *Procesamiento de datos*
++
+Representa el componente de software del clúster involucrado en el procesamiento de I/o entre el clúster y el agregado de almacenamiento que contiene la carga de trabajo. Es posible que el nodo que gestiona el procesamiento de datos haya cambiado desde que se detectó el evento. Si el componente de procesamiento de datos es objeto de disputa, significa que un uso elevado en el nodo de procesamiento de datos está afectando a la latencia de una o más cargas de trabajo.
+
+** *Recursos de MetroCluster*
++
+Representa los recursos de MetroCluster, incluidos NVRAM y los vínculos interswitch (ISL), que se usan para reflejar datos entre los clústeres de una configuración de MetroCluster. Si el componente MetroCluster es objeto de disputa, significa que el alto rendimiento de escritura de las cargas de trabajo del clúster local o un problema de estado del enlace afectan a la latencia de una o más cargas de trabajo del clúster local. Si el clúster no está en una configuración MetroCluster, este icono no se muestra.
+
+** *Operaciones globales o agregados de SSD*
++
+Representa el agregado de almacenamiento en el que se ejecutan las cargas de trabajo. Si el componente de agregado es objeto de disputa, significa que un uso elevado en el agregado está afectando a la latencia de una o más cargas de trabajo. Un agregado está formado por todos los HDD, o una combinación de HDD y SSD (un agregado de Flash Pool). Un «agregado SD» está compuesto por todos los SSD (un agregado all-flash) o una combinación de SSD y un nivel de cloud (un agregado de FabricPool).
+
+** *Latencia de cloud*
++
+Representa el componente de software del clúster involucrado en el procesamiento de I/o entre el clúster y el nivel de cloud en el que se almacenan los datos del usuario. Si el componente de latencia del cloud es objeto de disputa, significa que una gran cantidad de lecturas de volúmenes que están alojados en el nivel de cloud están afectando a la latencia de una o más cargas de trabajo.
+
+** *SnapMirror* sincronizado
++
+Representa el componente de software del clúster involucrado en la replicación de datos de usuario del volumen primario al secundario en una relación de SnapMirror Synchronous. Si el componente Sync SnapMirror es objeto de disputa, significa que la actividad de las operaciones de SnapMirror Synchronous está afectando a la latencia de una o más cargas de trabajo.
+
+
+
+
+
+Las secciones Información de sucesos, Diagnóstico del sistema y acciones sugeridas se describen en otros temas.
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Icono Notas*
++
+Permite agregar o actualizar una nota acerca del evento y revisar todas las notas que dejan otros usuarios.
+
+
+
+*Menú acciones*
+
+* *Asignar a mí*
++
+Le asigna el evento.
+
+* *Asignar a otros*
++
+Abre el cuadro de diálogo asignar propietario, que permite asignar o reasignar el evento a otros usuarios.
+
++
+Al asignar un evento a un usuario, el nombre del usuario y la hora a la que se asignó el evento se agregan a la lista de eventos para los eventos seleccionados.
+
++
+También puede anular la asignación de eventos si deja en blanco el campo de propiedad.
+
+* *Acuse de recibo*
++
+Confirma los eventos seleccionados para que no continúe recibiendo notificaciones de alerta de repetición.
+
++
+Cuando reconoce un evento, el nombre de usuario y la hora a la que ha reconocido el evento se agregan a la lista de eventos (reconocida por) para los eventos seleccionados. Cuando usted reconoce un evento, usted toma la responsabilidad de administrar ese evento.
+
+* *Marcar como solucionado*
++
+Permite cambiar el estado del evento a Resolved.
+
++
+Al resolver un evento, el nombre de usuario y la hora a la que resolvió el evento se agregan a la lista de eventos (resuelto por) para los eventos seleccionados. Después de realizar una acción correctiva para el evento, debe marcar el evento como resuelto.
+
+* *Agregar alerta*
++
+Muestra el cuadro de diálogo Agregar alerta, que permite agregar una alerta para el evento seleccionado.
+
+

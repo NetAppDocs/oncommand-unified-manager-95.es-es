@@ -1,0 +1,66 @@
+---
+permalink: online-help/reference-disk-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de discos le proporcionan información sobre el estado de los discos para que pueda supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de discos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de discos le proporcionan información sobre el estado de los discos para que pueda supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Discos flash: Bloques de repuesto casi consumidos(ocumEvtClusterFlashDiskFewerSpareBlockError)
+ a| 
+Riesgo
+ a| 
+Clúster
+ a| 
+Error
+
+
+
+ a| 
+Discos flash: Sin bloques de repuesto (ocumEvtClusterFlashDiskNoSpareBlockCritical)
+ a| 
+Incidente
+ a| 
+Clúster
+ a| 
+Crítico
+
+
+
+ a| 
+Algunos discos sin asignar(ocumEvtClusterUndeDesasignosAlgunos)
+ a| 
+Riesgo
+ a| 
+Clúster
+ a| 
+Advertencia
+
+
+
+ a| 
+Algunos discos con errores (ocumEvtDisksSomeFailed)
+ a| 
+Incidente
+ a| 
+Clúster
+ a| 
+Crítico
+
+|===

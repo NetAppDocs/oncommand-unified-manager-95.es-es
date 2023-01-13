@@ -1,0 +1,16 @@
+---
+permalink: online-help/reference-descriptions-of-the-performance-threshold-policy-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Configuration/Performance Thresholds se utiliza para crear, editar, clonar, eliminar y ver políticas de umbral de rendimiento. 
+---
+= Descripciones de las páginas de políticas de umbral de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Configuration/Performance Thresholds se utiliza para crear, editar, clonar, eliminar y ver políticas de umbral de rendimiento.
+
+Los siguientes temas aparecen cuando hace clic en *Ayuda* en la página correspondiente.

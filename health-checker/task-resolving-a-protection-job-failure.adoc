@@ -1,0 +1,46 @@
+---
+permalink: health-checker/task-resolving-a-protection-job-failure.html 
+sidebar: sidebar 
+keywords:  
+summary: Este flujo de trabajo proporciona un ejemplo de cómo se puede identificar y resolver un error de trabajo de protección en la consola de Unified Manager. 
+---
+= Solucionar un error de un trabajo de protección
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este flujo de trabajo proporciona un ejemplo de cómo se puede identificar y resolver un error de trabajo de protección en la consola de Unified Manager.
+
+
+
+== Antes de empezar
+
+Debido a que algunas tareas de este flujo de trabajo requieren que inicie sesión con la función de administrador de OnCommand, debe estar familiarizado con las funciones necesarias para utilizar varias funciones, como se describe en xref:reference-unified-manager-roles-and-capabilities.adoc[Roles y funcionalidades de usuario de Unified Manager].
+
+
+
+== Acerca de esta tarea
+
+En este escenario, tiene acceso a la página Paneles/Descripción general para ver si hay algún problema con los trabajos de protección. En el área incidente de protección, se observa que hay un incidente de trabajo terminado, mostrando un error de trabajo de protección en un volumen. Investiga este error para determinar la causa posible y la resolución potencial.
+
+
+
+== Pasos
+
+. En el panel *incidentes de protección* del área Panel *incidentes y riesgos no resueltos*, haga clic en el evento *error de trabajo de protección*.
++
+[TIP]
+====
+El texto vinculado para el evento se escribe en el formulario `object_name:/object_name - Error Name`, por ejemplo `cluster2_src_svm:/cluster2_src_vol2 - Protection Job Failed`.
+
+====
++
+Se muestra la página de detalles Event del trabajo de protección con errores.
+
+. Revise el mensaje de error en el campo causa del área *Resumen* para determinar el problema y evaluar las posibles acciones correctivas.
++
+Consulte xref:task-identifying-the-problem-and-performing-corrective-actions-for-a-failed-protection-job.adoc[Identificar el problema y realizar acciones correctivas para un trabajo de protección con errores].
+
+

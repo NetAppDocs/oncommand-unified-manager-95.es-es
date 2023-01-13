@@ -1,0 +1,16 @@
+---
+permalink: online-help/concept-what-report-scheduling-is.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede programar un informe para que se genere en una fecha y hora específicas mediante la opción programar. El informe se envía automáticamente por correo electrónico a uno o más destinatarios según la programación. 
+---
+= Qué es la programación de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede programar un informe para que se genere en una fecha y hora específicas mediante la opción *Programación*. El informe se envía automáticamente por correo electrónico a uno o más destinatarios según la programación.
+
+Al programar un informe, puede minimizar el esfuerzo de generar y enviar los informes manualmente. Puede asegurarse de que el estado actual del almacenamiento sea controlado en intervalos específicos por los administradores que no hayan sido notificados de otro modo por Unified Manager.

@@ -1,0 +1,124 @@
+---
+permalink: online-help/reference-add-alert-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede crear alertas para notificarle cuando se genera un evento determinado, de modo que pueda abordar el problema rápidamente y, por lo tanto, minimizar el impacto en el entorno. Puede crear alertas para un solo recurso o un conjunto de recursos, así como para eventos de un tipo de gravedad determinado. También puede especificar el método de notificación y la frecuencia de las alertas. 
+---
+= Cuadro de diálogo Agregar alerta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear alertas para notificarle cuando se genera un evento determinado, de modo que pueda abordar el problema rápidamente y, por lo tanto, minimizar el impacto en el entorno. Puede crear alertas para un solo recurso o un conjunto de recursos, así como para eventos de un tipo de gravedad determinado. También puede especificar el método de notificación y la frecuencia de las alertas.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Nombre
+
+Esta área le permite especificar un nombre y una descripción para la alerta:
+
+* *Nombre de alerta*
++
+Permite especificar un nombre de alerta.
+
+* *Descripción de alerta*
++
+Permite especificar una descripción de la alerta.
+
+
+
+
+
+== Recursos
+
+Esta área le permite seleccionar un recurso individual o agrupar los recursos en función de una regla dinámica para la que desea activar la alerta. Una _regla dinámica_ es el conjunto de recursos filtrados según la cadena de texto que especifique. Puede buscar recursos seleccionando un tipo de recurso de la lista desplegable o puede especificar el nombre exacto del recurso para mostrar un recurso específico.
+
+Si va a crear una alerta desde cualquiera de las páginas de detalles del objeto de almacenamiento, el objeto de almacenamiento se incluye automáticamente en la alerta.
+
+* *Incluir*
++
+Le permite incluir los recursos para los que desea activar alertas. Puede especificar una cadena de texto para agrupar recursos que coincidan con la cadena y seleccionar este grupo que se incluirá en la alerta. Por ejemplo, puede agrupar todos los volúmenes cuyo nombre contenga la cadena "'abc'".
+
+* *Excluir*
++
+Permite excluir recursos para los que no desea activar alertas. Por ejemplo, puede excluir todos los volúmenes cuyo nombre contenga la cadena "'xyz'".
+
++
+La ficha excluir sólo se muestra cuando se seleccionan todos los recursos de un tipo de recurso en particular: Por ejemplo, <<All Volumes>> o. <<All Volumes whose name contains '_xyz_'>>.
+
++
+Si un recurso cumple las reglas de inclusión y exclusión especificadas, la regla de exclusión tiene prioridad sobre la regla de inclusión y no se genera la alerta para el evento.
+
+
+
+
+
+== Eventos
+
+Este área le permite seleccionar los eventos para los que desea crear las alertas. Puede crear alertas para los eventos según una gravedad determinada o para un conjunto de eventos.
+
+Para seleccionar más de un evento, mantenga pulsada la tecla Ctrl mientras realiza las selecciones.
+
+* *Gravedad del suceso*
++
+Le permite seleccionar eventos según el tipo de gravedad, que puede ser crítico, error o advertencia.
+
+* *Nombre del evento contiene*
++
+Permite seleccionar eventos cuyo nombre contenga caracteres especificados.
+
+
+
+
+
+== Acciones
+
+Esta área le permite especificar los usuarios a los que desea notificar cuando se activa una alerta. También puede especificar el método de notificación y la frecuencia de la notificación.
+
+* *Avisar a estos usuarios*
++
+Permite especificar la dirección de correo electrónico o el nombre de usuario del usuario para recibir notificaciones.
+
++
+Si modifica la dirección de correo electrónico especificada para el usuario y vuelve a abrir la alerta para su edición, el campo Nombre aparecerá en blanco porque la dirección de correo electrónico modificada ya no está asignada al usuario que se seleccionó previamente. Además, si ha modificado la dirección de correo electrónico del usuario seleccionado desde la página Management/Users (Administración/usuarios), la dirección de correo electrónico modificada no se actualizará para el usuario seleccionado.
+
+* *Frecuencia de notificación*
++
+Permite especificar la frecuencia con la cual el servidor de gestión envía notificaciones hasta que el evento se confirma, se resuelve o se mueve al estado obsoleto.
+
++
+Se pueden elegir los siguientes métodos de notificación:
+
++
+** Notificar sólo una vez
+** Notificar a una frecuencia específica
+** Notificar a una frecuencia especificada dentro del intervalo de tiempo especificado
+
+
+* *Emitir SNMP Trap*
++
+Al seleccionar esta casilla, se permite especificar si se deben enviar capturas SNMP al host SNMP configurado globalmente.
+
+* *Ejecutar script*
++
+Permite agregar el script personalizado a la alerta. Este script se ejecuta cuando se genera una alerta.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Crea una alerta y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Descarta los cambios y cierra el cuadro de diálogo.
+
+

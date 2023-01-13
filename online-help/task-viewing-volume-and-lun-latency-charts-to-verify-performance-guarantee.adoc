@@ -1,0 +1,32 @@
+---
+permalink: online-help/task-viewing-volume-and-lun-latency-charts-to-verify-performance-guarantee.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede ver los volúmenes y LUN que ha suscrito al programa "Garantía de rendimiento" para verificar que la latencia no ha superado el nivel que se le ha garantizado.' 
+---
+= Vea los gráficos de latencia de volúmenes y LUN para verificar la garantía de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver los volúmenes y LUN que ha suscrito al programa «'Garantía de rendimiento» para comprobar que la latencia no ha superado el nivel que se le ha garantizado.
+
+
+
+== Acerca de esta tarea
+
+La garantía de rendimiento de latencia es un valor de milisegundos por operación que no se debe superar. Se basa en un promedio por hora, no en el período predeterminado de recopilación de rendimiento de cinco minutos.
+
+
+
+== Pasos
+
+. En la página de inventario *Performance Volumes* o *Performance LUNs*, seleccione el volumen o LUN en el que esté interesado.
+. En la página *Explorador de rendimiento* para el volumen o LUN seleccionados, elija *Promedio por hora* en el selector *Ver estadísticas en*.
++
+La línea horizontal del gráfico latencia mostrará una línea más suave ya que las colecciones de cinco minutos se sustituyen por la media por hora.
+
+. Si tiene otros volúmenes en el mismo agregado que están bajo la garantía de rendimiento, puede añadir esos volúmenes para ver su valor de latencia en el mismo gráfico.
+

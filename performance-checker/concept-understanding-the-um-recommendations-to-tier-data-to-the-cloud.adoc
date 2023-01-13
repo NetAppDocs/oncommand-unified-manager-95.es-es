@@ -1,0 +1,59 @@
+---
+permalink: performance-checker/concept-understanding-the-um-recommendations-to-tier-data-to-the-cloud.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La página del inventario Performance/Volumes muestra información relacionada con el tamaño de los datos de usuario almacenados en el volumen inactivo \(Cold\). En algunos casos, Unified Manager identifica ciertos volúmenes que se beneficiarían mediante la organización en niveles de los datos inactivos en el nivel de cloud \(proveedor de cloud o StorageGRID\) de un agregado habilitado para FabricPool.' 
+---
+= Descripción de las recomendaciones de Unified Manager para organizar los datos en niveles en el cloud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página del inventario Performance/Volumes muestra información relacionada con el tamaño de los datos de usuario almacenados en el volumen inactivo (frío). En algunos casos, Unified Manager identifica ciertos volúmenes que se beneficiarían mediante la organización en niveles de los datos inactivos en el nivel de cloud (proveedor de cloud o StorageGRID) de un agregado habilitado para FabricPool.
+
+[NOTE]
+====
+FabricPool se introdujo en ONTAP 9.2, por lo que si utiliza una versión del software ONTAP anterior a 9.2, la recomendación de Unified Manager para almacenar datos en niveles requiere actualizar el software ONTAP. Además, el `auto` La política de organización en niveles se introdujo en ONTAP 9.4, de modo que si se recomienda utilizar la `auto` Debe actualizar su política de organización en niveles a ONTAP 9.4 o superior.
+
+====
+Los siguientes tres campos de la página del inventario Performance/Volumes ofrecen información sobre si puede mejorar la utilización de disco de su sistema de almacenamiento y ahorrar espacio en el nivel de rendimiento al mover los datos inactivos al nivel de cloud.
+
+* *Política de organización en niveles*
++
+La política de organización en niveles determina si los datos del volumen permanecen en el nivel de rendimiento o si algunos de los datos se mueven del nivel de rendimiento al nivel de cloud.
+
++
+El valor de este campo indica la política de organización en niveles establecida en el volumen, aunque el volumen no resida actualmente en un agregado de FabricPool. La política de organización en niveles solo se aplica cuando el volumen se encuentra en un agregado de FabricPool.
+
+* *Datos fríos*
++
+Los datos fríos muestran el tamaño de los datos de usuario almacenados en el volumen inactivo (en frío).
+
++
+Un valor se muestra aquí solo cuando se utiliza software ONTAP 9.4 o superior porque requiere que el agregado en el que se implementa el volumen tenga `inactive data reporting` parámetro establecido en `enabled`, y que se ha cumplido el umbral mínimo de días de enfriamiento (para volúmenes que utilizan `snapshot-only` o. `auto` política de organización en niveles). En caso contrario, el valor se indica como «'N/A'».
+
+* *Recomendación sobre la nube*
++
+Después de que se haya capturado información suficiente sobre la actividad de datos en el volumen, Unified Manager puede determinar que no se requiere ninguna acción o bien podría ahorrar espacio en el nivel de rendimiento al organizar en niveles los datos inactivos en el nivel de cloud.
+
+
+
+[NOTE]
+====
+El campo de datos fríos se actualiza cada 15 minutos, pero el campo recomendación de cloud se actualiza cada 7 días cuando se realiza el análisis de datos inactivos en el volumen. Por lo tanto, la cantidad exacta de datos fríos puede diferir entre los campos. El campo recomendación de cloud muestra la fecha en la que se ejecutó el análisis.
+
+====
+Cuando se activa la función de generación de informes de datos inactivos, el campo datos fríos muestra la cantidad exacta de datos inactivos. Sin la funcionalidad de generación de informes de datos inactivos, Unified Manager utiliza las estadísticas de rendimiento para determinar si los datos están inactivos en un volumen. La cantidad de datos inactivos no se muestra en el campo datos fríos en este caso, pero se muestra cuando se pasa el cursor por encima de la palabra *Tier* para ver la recomendación de la nube.
+
+Las recomendaciones de cloud que verá son:
+
+* *Aprendizaje*. No se han recopilado datos suficientes para hacer una recomendación.
+* *Tier*. El análisis ha determinado que el volumen contiene datos inactivos (fríos) y que debe configurar el volumen para moverlos al nivel de cloud. En algunos casos, esto puede requerir en primer lugar mover el volumen a un agregado habilitado para FabricPool. En otros casos en los que el volumen ya está en un agregado de FabricPool, basta con cambiar la política de organización en niveles.
+* *Sin acción*. O bien el volumen tiene muy pocos datos inactivos, el volumen ya está establecido en la política de organización en niveles «'auto» de un agregado de FabricPool o el volumen es un volumen de protección de datos. Este valor también se muestra cuando el volumen está sin conexión o cuando se utiliza en una configuración de MetroCluster.
+
+
+Para mover un volumen, o cambiar la política de organización en niveles de volúmenes o la configuración de la generación de informes de datos inactivos del agregado, utilice System Manager de OnCommand, los comandos de la CLI de ONTAP o una combinación de estas herramientas.
+
+Si ha iniciado sesión en Unified Manager con la función Administrador de OnCommand o Administrador de almacenamiento, el enlace *Configurar volumen* está disponible en la recomendación de nube al pasar el cursor sobre la palabra *nivel*. Haga clic en este botón para abrir la página volúmenes en System Manager y realizar el cambio recomendado.

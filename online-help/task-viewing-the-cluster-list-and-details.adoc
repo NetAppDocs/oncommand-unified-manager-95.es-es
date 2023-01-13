@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-viewing-the-cluster-list-and-details.html 
+sidebar: sidebar 
+keywords:  
+summary: La página del inventario Health/Clusters se puede usar para ver el inventario de los clústeres. La página Health/Clusters Storage Summary permite ver información resumida sobre la capacidad de almacenamiento y la utilización en todos los clústeres. 
+---
+= Ver la lista del clúster y sus detalles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página del inventario Health/Clusters se puede usar para ver el inventario de los clústeres. La página Health/Clusters Storage Summary permite ver información resumida sobre la capacidad de almacenamiento y la utilización en todos los clústeres.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+También puede ver detalles de cada clúster, como el estado del clúster, la capacidad, la configuración, las LIF, los nodos, Y los discos en ese clúster mediante la página de detalles Health/Cluster.
+
+Los detalles en la página del inventario Health/Clusters, la página Health/Clusters Storage Summary y la página de detalles Health/Cluster le permiten planificar el almacenamiento. Por ejemplo, antes de aprovisionar un nuevo agregado, puede seleccionar un clúster específico en la página de inventario Health/Clusters y obtener detalles de capacidad para determinar si el clúster tiene el espacio requerido.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Estado* > *clústeres*.
+. En el menú *Ver*, seleccione *Resumen de almacenamiento* para ver detalles sobre la capacidad de almacenamiento y la utilización en todos los clusters
+. Vea los detalles completos del clúster en la página de detalles *Estado/clúster* haciendo clic en el nombre del clúster.
+

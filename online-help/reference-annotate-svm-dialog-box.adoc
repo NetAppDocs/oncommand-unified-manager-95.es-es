@@ -1,0 +1,30 @@
+---
+permalink: online-help/reference-annotate-svm-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Annotate SVM permite anotar manualmente los objetos de almacenamiento. Puede seleccionar una única SVM o varias SVM y anotar con un par de valores específico de la lista existente de anotaciones. 
+---
+= Cuadro de diálogo Annotate SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Annotate SVM permite anotar manualmente los objetos de almacenamiento. Puede seleccionar una única SVM o varias SVM y anotar con un par de valores específico de la lista existente de anotaciones.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Anotación=pares de valor*
++
+Permite seleccionar la anotación necesaria para la SVM seleccionada.
+
+* *Aplicar*
++
+Aplica la anotación seleccionada a la SVM.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo anotar SVM sin guardar los cambios.
+
+

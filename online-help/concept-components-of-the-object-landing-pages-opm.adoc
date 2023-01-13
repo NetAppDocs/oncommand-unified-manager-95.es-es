@@ -1,0 +1,53 @@
+---
+permalink: online-help/concept-components-of-the-object-landing-pages-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: Las páginas de destino de objetos proporcionan información sobre todos los eventos críticos, de advertencia e informativos. Proporcionan una vista detallada del rendimiento de todos los objetos del clúster, lo que permite seleccionar y comparar objetos individuales durante varios periodos de tiempo. 
+---
+= Componentes de las páginas de destino de objetos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las páginas de destino de objetos proporcionan información sobre todos los eventos críticos, de advertencia e informativos. Proporcionan una vista detallada del rendimiento de todos los objetos del clúster, lo que permite seleccionar y comparar objetos individuales durante varios periodos de tiempo.
+
+Las páginas de destino de objetos permiten examinar el rendimiento general de todos los objetos y comparar los datos de rendimiento de los objetos en un formato paralelo. Esto es beneficioso para evaluar el rendimiento y para resolver problemas de eventos.
+
+[NOTE]
+====
+Los datos mostrados en los paneles de resumen de contadores y en los gráficos de contador se basan en un intervalo de muestreo de cinco minutos. Los datos que se muestran en la cuadrícula de inventario de objetos situada en la parte izquierda de la página se basan en un intervalo de muestreo de una hora.
+
+====
+En la siguiente imagen se muestra un ejemplo de una página de destino de objetos que muestra la información del explorador:
+
+image::../media/perf-manager-page-1.gif[gestor de rendimiento página 1]
+
+Dependiendo del objeto de almacenamiento que se esté viendo, la página de inicio de objetos puede tener las siguientes pestañas que proporcionan datos de rendimiento acerca del objeto:
+
+* Resumen
++
+Muestra tres o cuatro gráficos de contadores que contienen los eventos y el rendimiento por objeto durante el período anterior de 72 horas, incluida una línea de tendencia que muestra los valores alto y bajo durante ese período.
+
+* Explorador
++
+Muestra una cuadrícula de objetos de almacenamiento relacionados con el objeto actual, lo que permite comparar los valores de rendimiento del objeto actual con los de los objetos relacionados. Esta ficha incluye hasta once contadores gráficos y un selector de rango de tiempo, que le permiten realizar una variedad de comparaciones.
+
+* Información
++
+Muestra los valores de los atributos de configuración que no tienen rendimiento acerca del objeto de almacenamiento, incluida la versión instalada del software ONTAP, el nombre del partner de alta disponibilidad y el número de puertos y LIF.
+
+* Mejores artistas
++
+Para los clústeres: Muestra los objetos de almacenamiento con el mayor rendimiento o el menor, según el contador de rendimiento que seleccione.
+
+* Planificación de conmutación por error
++
+Para los nodos: Muestra la estimación del impacto sobre el rendimiento de un nodo si el partner de alta disponibilidad del nodo falla.
+
+* Detalles
++
+Para volúmenes: Se muestran estadísticas detalladas de rendimiento de toda la actividad de I/o y las operaciones de la carga de trabajo de volumen seleccionada. Esta pestaña está disponible para volúmenes FlexVol, volúmenes FlexGroup y componentes de FlexGroups.
+
+

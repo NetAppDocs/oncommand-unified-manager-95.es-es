@@ -1,0 +1,29 @@
+---
+permalink: health-checker/reference-what-the-system-diagnosis-section-displays.html 
+sidebar: sidebar 
+keywords:  
+summary: La sección Diagnóstico del sistema de la página de detalles del evento proporciona información que puede ayudarle a diagnosticar problemas que pueden haber sido responsables del evento. 
+---
+= En qué se muestra la sección Diagnóstico del sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección Diagnóstico del sistema de la página de detalles del evento proporciona información que puede ayudarle a diagnosticar problemas que pueden haber sido responsables del evento.
+
+Esta área solo se muestra para algunos eventos.
+
+Algunos eventos de rendimiento proporcionan gráficos relevantes para el evento concreto que se ha activado. Normalmente, esto incluye un gráfico IOPS o Mbps y un gráfico de latencia de los diez días anteriores. Cuando se organiza de esta manera, se puede ver qué componentes de almacenamiento afectan en mayor medida a la latencia o se ven afectados por la latencia, cuando el evento está activo.
+
+Para los eventos de rendimiento dinámicos, se muestran los siguientes gráficos:
+
+* Latencia de carga de trabajo: Muestra el historial de latencia de las cargas de trabajo principales de víctimas, abusones o tiburones en el componente en disputa.
+* Workload Activity: Se muestran detalles sobre el uso de la carga de trabajo del componente de clúster en disputa.
+* Actividad de recursos: Muestra las estadísticas de rendimiento históricas del componente del clúster en disputa.
+
+
+Los otros gráficos se muestran cuando algunos componentes del clúster son objeto de disputa.
+
+Otros eventos proporcionan una breve descripción del tipo de análisis que realiza el sistema en el objeto de almacenamiento. En algunos casos habrá una o más líneas; una para cada componente que se ha analizado, para las políticas de rendimiento definidas por el sistema que analizan varios contadores de rendimiento. En este caso, aparece un icono verde o rojo junto al diagnóstico para indicar si se ha encontrado o no un problema en ese diagnóstico en particular.

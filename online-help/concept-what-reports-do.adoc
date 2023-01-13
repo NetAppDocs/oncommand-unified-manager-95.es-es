@@ -1,0 +1,41 @@
+---
+permalink: online-help/concept-what-reports-do.html 
+sidebar: sidebar 
+keywords:  
+summary: Los informes muestran información detallada sobre los objetos de almacenamiento que le permiten revisar e identificar posibles problemas. 
+---
+= ¿Qué informes hacen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los informes muestran información detallada sobre los objetos de almacenamiento que le permiten revisar e identificar posibles problemas.
+
+Es posible guardar, eliminar, compartir, programar e importar informes. También puede buscar informes específicos. Puede personalizar informes para abordar casos prácticos concretos y guardar el informe personalizado para su uso futuro. Puede realizar operaciones adicionales como filtrado, ordenación, agrupación y formato.
+
+De forma predeterminada, cada grupo de informes se muestra por tipo de informe y descripción. Puede ejecutar informes para ver un grupo de informes específico.
+
+Después de ejecutar un informe, puede personalizarlo aún más y guardar el informe personalizado. Puede ver los informes personalizados que se guardan en la página Reports, agrupados en la categoría de informe específica.
+
+Puede programar el envío de informes o compartir informes en uno de los formatos admitidos: PDF, XHTML, CSV, XLS o texto.
+
+Puede exportar informes en distintos formatos y guardarlos en el escritorio. Puede exportar datos de columna individuales de los informes generados.
+
+Puede importar archivos de diseño de informes (`.rptdesign` Files) y guarde los informes importados en la página Reports. Es posible eliminar informes personalizados e importados.
+
+Puede importar los siguientes informes:
+
+* Informes con varios encabezados que tienen una extensión de columna establecida en uno
+* Sólo informes con gráficos
+* Sólo informes con listas y cuadrícula
+
+
+Los informes en formato de texto, CSV y Excel se admiten en los siguientes escenarios:
+
+* Elemento TABLE sólo en `.rptdesign` archivo
+* Una tabla con un solo encabezado como fila
+
+
+No se pueden importar informes que tengan un intervalo de columnas superior a uno. Si un informe en formato de texto, CSV o Excel tiene más de una fila de un encabezado, sólo se tendrá en cuenta la primera fila de encabezado y se omitirán las filas restantes.

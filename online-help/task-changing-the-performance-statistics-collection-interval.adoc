@@ -1,0 +1,54 @@
+---
+permalink: online-help/task-changing-the-performance-statistics-collection-interval.html 
+sidebar: sidebar 
+keywords: Unified Manager 
+summary: El intervalo de recogida predeterminado para las estadísticas de rendimiento es de 5 minutos. Puede cambiar este intervalo a 10 o 15 minutos si descubre que las colecciones de clústeres grandes no están finalizando dentro del tiempo predeterminado. Esta configuración afecta la recogida de estadísticas de todos los clústeres que está supervisando esta instancia de Unified Manager. 
+---
+= Cambiar el intervalo de recogida de estadísticas de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El intervalo de recogida predeterminado para las estadísticas de rendimiento es de 5 minutos. Puede cambiar este intervalo a 10 o 15 minutos si descubre que las colecciones de clústeres grandes no están finalizando dentro del tiempo predeterminado. Esta configuración afecta la recogida de estadísticas de todos los clústeres que está supervisando esta instancia de Unified Manager.
+
+
+
+== Antes de empezar
+
+Debe tener un ID de usuario y una contraseña autorizados para iniciar sesión en la consola de mantenimiento del servidor de Unified Manager.
+
+
+
+== Acerca de esta tarea
+
+La emisión de colecciones de estadísticas de rendimiento no terminado a tiempo se indica mediante los mensajes de mensaje de cabecera `Unable to consistently collect from cluster <cluster_name>` o. `Data collection is taking too long on cluster <cluster_name>`.
+
+Debe cambiar el intervalo de recopilación sólo cuando sea necesario debido a un problema de recopilación de estadísticas. No cambie esta configuración por ningún otro motivo.
+
+[NOTE]
+====
+Si se cambia este valor desde el ajuste predeterminado de 5 minutos, puede afectar el número y la frecuencia de los eventos de rendimiento que informa Unified Manager. Por ejemplo, los umbrales de rendimiento definidos por el sistema activan eventos cuando se supera la política durante 30 minutos. Cuando se utilizan colecciones de 5 minutos, se debe superar la política para seis colecciones consecutivas. Para las colecciones de 15 minutos, la directiva debe superarse sólo durante dos períodos de recopilación.
+
+====
+Un mensaje en la parte inferior de la página Cluster Data Sources indica el intervalo de recopilación de datos estadísticos actual.
+
+
+
+== Pasos
+
+. Inicie sesión con SSH como usuario de mantenimiento en el host de Unified Manager.
++
+Se muestran los mensajes de la consola de mantenimiento de Unified Manager.
+
+. Escriba el número de la opción de menú con la etiqueta *Configuración del intervalo de sondeo de rendimiento* y, a continuación, pulse Intro.
+. Si se le solicita, vuelva a introducir la contraseña de usuario de mantenimiento.
+. Escriba el número del nuevo intervalo de sondeo que desea establecer y, a continuación, pulse Intro.
+
+
+
+
+== Después de terminar
+
+Si cambió el intervalo de recogida de Unified Manager a 10 o 15 minutos y tiene una conexión actual con un proveedor de datos externo (como Graphite), debe cambiar el intervalo de transmisión del proveedor de datos de modo que sea igual o mayor que el intervalo de recogida de Unified Manager.

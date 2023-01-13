@@ -1,0 +1,121 @@
+---
+permalink: online-help/reference-edit-aggregate-thresholds-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar alertas para que envíen notificaciones cuando se genere un evento relacionado con la capacidad de un agregado, y puede tomar medidas correctivas para el evento. Por ejemplo, para el umbral completo del agregado, puede configurar una alerta para que envíe una notificación cuando la condición persiste durante un período determinado. 
+---
+= Cuadro de diálogo Edit Aggregate Thresholds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar alertas para que envíen notificaciones cuando se genere un evento relacionado con la capacidad de un agregado, y puede tomar acciones correctivas para el evento. Por ejemplo, para el umbral completo del agregado, puede configurar una alerta para que envíe una notificación cuando la condición persiste durante un período determinado.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+El cuadro de diálogo Edit Aggregate Thresholds permite configurar umbrales a nivel de agregado que se aplican a agregados seleccionados. Si configura umbrales a nivel de agregado, tendrán prioridad sobre los valores de umbral a nivel global. Puede configurar las opciones del umbral para la capacidad, el crecimiento y las copias Snapshot en el nivel del agregado. Si no se configuran estos ajustes, se aplican los valores de umbral globales.
+
+[NOTE]
+====
+Los valores de umbral no son aplicables al agregado raíz del nodo.
+
+====
+
+
+== Área Capacity
+
+El área de capacidad permite establecer las siguientes condiciones de umbral de capacidad de agregado:
+
+* * Espacio casi lleno*
++
+Especifica el porcentaje en el que se considera que un agregado está casi lleno. También muestra el tamaño del agregado correspondiente al valor de umbral especificado.
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+* * Espacio lleno*
++
+Especifica el porcentaje en el que se considera lleno un agregado. También muestra el tamaño del agregado correspondiente al valor de umbral especificado.
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+* * Casi sobrecomprometido*
++
+Especifica el porcentaje en el que se considera que un agregado está casi sobrecargado.
+
+* *Sobrecomprometidos*
++
+Especifica el porcentaje en el que se considera que un agregado está sobrecargado.
+
+* *Días hasta Full*
++
+Especifica la cantidad de días que queda para que el agregado alcance la capacidad completa.
+
+
+
+
+
+== Área de crecimiento
+
+El área de crecimiento le permite establecer la siguiente condición de umbral para el crecimiento agregado:
+
+* *Tasa de crecimiento*
++
+Especifica el porcentaje al que se considera normal la tasa de crecimiento de un agregado antes de que el sistema genere un evento anormal de la tasa de crecimiento agregada.
+
+* *Sensibilidad de la tasa de crecimiento*
++
+Especifica el factor que se aplica a la desviación estándar de la tasa de crecimiento de un agregado. Si la tasa de crecimiento supera la desviación estándar ponderada, se genera un evento anormal de tasa de crecimiento agregado.
+
++
+Un valor más bajo para la sensibilidad a la tasa de crecimiento indica que el agregado es altamente sensible a los cambios en la tasa de crecimiento.
+
++
+[NOTE]
+====
+Si modifica la sensibilidad de la tasa de crecimiento para los agregados en el nivel de umbral global, el cambio también se aplica a la sensibilidad de la tasa de crecimiento para los volúmenes en el nivel de umbral global.
+
+====
+
+
+
+
+== Área Snapshot copies
+
+El área Snapshot copies le permite establecer las siguientes condiciones de umbral de reserva de Snapshot:
+
+* *Reserva Snapshot completa*
++
+Especifica el porcentaje en el que un agregado ha consumido todo su espacio reservado para las copias de Snapshot.
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando permiten realizar las siguientes tareas para un agregado seleccionado:
+
+* *Restaurar valores predeterminados*
++
+Le permite restaurar los valores de umbral a nivel de agregado a los valores globales.
+
+* *Guardar*
++
+Guarda todos los ajustes de umbral.
+
+* *Guardar y cerrar*
++
+Guarda todos los ajustes de umbral y, a continuación, cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Ignora los cambios (si los hay) en la configuración del umbral y cierra el cuadro de diálogo.
+
+

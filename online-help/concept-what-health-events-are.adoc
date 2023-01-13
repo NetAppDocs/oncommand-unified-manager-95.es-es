@@ -1,0 +1,22 @@
+---
+permalink: online-help/concept-what-health-events-are.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de estado son notificaciones que se generan automáticamente cuando se produce una condición predefinida o cuando un objeto cruza un umbral de estado. Estos eventos le permiten tomar medidas para evitar problemas que pueden conducir a un rendimiento deficiente y a la falta de disponibilidad del sistema. Algunos eventos son el área de impacto, la gravedad y el nivel de impacto. 
+---
+= Qué eventos de salud son
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de estado son notificaciones que se generan automáticamente cuando se produce una condición predefinida o cuando un objeto cruza un umbral de estado. Estos eventos le permiten tomar medidas para evitar problemas que pueden conducir a un rendimiento deficiente y a la falta de disponibilidad del sistema. Algunos eventos son el área de impacto, la gravedad y el nivel de impacto.
+
+Los eventos de estado se clasifican por tipo de área de impacto, como disponibilidad, capacidad, configuración o protección. A los eventos también se les asigna un tipo de gravedad y un nivel de impacto que le ayudan a determinar si se requiere una acción inmediata.
+
+Es posible configurar alertas para que envíen notificaciones automáticamente cuando se produzcan eventos o eventos específicos de una gravedad específica.
+
+Los eventos obsoletos, resueltos e informativos se registran automáticamente y se conservan durante un valor predeterminado de 180 días.
+
+Es importante que realice acciones correctivas inmediatas para eventos con error de nivel de gravedad o crítico.

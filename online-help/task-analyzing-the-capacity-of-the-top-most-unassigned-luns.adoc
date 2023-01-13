@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-analyzing-the-capacity-of-the-top-most-unassigned-luns.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe Storage Summary para analizar el uso del almacenamiento de los clústeres, lo que le permite localizar las LUN con la capacidad más sin asignar. 
+---
+= Personalizar el informe Storage Summary para analizar los clústeres con la capacidad de LUN más sin asignar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe Storage Summary para analizar el uso del almacenamiento de los clústeres, lo que le permite localizar las LUN con la capacidad más sin asignar.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster, realice los siguientes pasos:
++
+.. Haga clic en la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para ordenar las parejas de ha que tienen la capacidad de LUN más sin asignar, haga clic en la columna *capacidad de LUN sin asignar (TB)* y haga clic en la image:../media/click-to-see-menu.gif[""] .
+. Seleccione *filtro* > *Arriba/abajo N*.
+. En el cuadro de diálogo *Arriba/abajo N*, seleccione *Arriba N* en el campo *filtro* e introduzca un valor en el campo de texto.
+. Haga clic en *Aceptar*.
+

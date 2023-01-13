@@ -1,0 +1,45 @@
+---
+permalink: online-help/task-deleting-svm-associations.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible eliminar asociaciones de SVM para aplicaciones asociadas a fin de quitar la relación de aprovisionamiento secundaria entre las SVM de origen y de destino; por ejemplo, puede hacerlo cuando la SVM de destino esté completa y desee crear una nueva asociación de protección SVM. 
+---
+= Eliminación de asociaciones de SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible eliminar asociaciones de SVM para aplicaciones asociadas a fin de quitar la relación de aprovisionamiento secundaria entre las SVM de origen y de destino; por ejemplo, puede hacerlo cuando la SVM de destino esté completa y desee crear una nueva asociación de protección SVM.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+El botón *Eliminar* está desactivado hasta que se seleccione al menos una asociación SVM. Cambiar las asociaciones que utilizan las funciones de eliminación y creación afecta solo a las operaciones de aprovisionamiento futuras; no mueve los volúmenes de destino existentes.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Protección* > *Asociaciones de SVM*.
+. Seleccione al menos una asociación de SVM.
++
+El botón *Eliminar* está activado.
+
+. Haga clic en *Eliminar.*
++
+Aparecerá un cuadro de diálogo de advertencia.
+
+. Haga clic en *Sí* para continuar.
++
+La asociación de SVM seleccionada se eliminará de la lista.
+
+

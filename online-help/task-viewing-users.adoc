@@ -1,0 +1,30 @@
+---
+permalink: online-help/task-viewing-users.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar la página Management/Users para ver la lista de usuarios que gestionan objetos de almacenamiento y datos mediante Unified Manager. Es posible ver detalles sobre los usuarios, como el nombre de usuario, el tipo de usuario, la dirección de correo electrónico y el rol asignado a los usuarios. 
+---
+= Ver usuarios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la página Management/Users para ver la lista de usuarios que gestionan objetos de almacenamiento y datos mediante Unified Manager. Es posible ver detalles sobre los usuarios, como el nombre de usuario, el tipo de usuario, la dirección de correo electrónico y el rol asignado a los usuarios.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *usuarios* en el menú Administración de la izquierda.
++
+La lista de usuarios se muestra en la página Management/Users.
+
+

@@ -1,0 +1,50 @@
+---
+permalink: install/task-deploying-unified-manager-vapp.html 
+sidebar: sidebar 
+keywords:  
+summary: La puesta en marcha de Unified Manager incluye la descarga de software, la puesta en marcha de dispositivos virtuales, la creación de un nombre de usuario y una contraseña de mantenimiento, y la realización de la configuración inicial en la interfaz de usuario web. 
+---
+= Ponga en marcha Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La puesta en marcha de Unified Manager incluye la descarga de software, la puesta en marcha de dispositivos virtuales, la creación de un nombre de usuario y una contraseña de mantenimiento, y la realización de la configuración inicial en la interfaz de usuario web.
+
+
+
+== Antes de empezar
+
+* Debe haber completado los requisitos del sistema para la puesta en marcha.
++
+xref:concept-requirements-for-installing-unified-manager.adoc[Requisitos del sistema]
+
+* Debe tener la siguiente información:
++
+** Credenciales de inicio de sesión para el sitio de soporte de NetApp
+** Credenciales para acceder a VMware vCenter Server y vSphere Web Client (para vSphere versión 6.5) o vSphere Client (para vSphere versión 5.5 o 6.0)
+** Dirección IP del servidor ESXi en el que va a implementar el dispositivo virtual de Unified Manager
+** Detalles sobre el centro de datos, como el espacio de almacenamiento en el almacén de datos y los requisitos de memoria
+** IPv6 debe estar habilitado en el host si tiene pensado utilizar direcciones IPv6.
+** CD-ROM o imagen ISO de VMware Tools
+
+
+
+
+
+
+== Acerca de esta tarea
+
+Puede poner en marcha Unified Manager como dispositivo virtual en un servidor VMware ESXi.
+
+Debe acceder a la consola de mantenimiento mediante la consola de VMware, y no mediante SSH.
+
+VMware Tools no se incluyen en Unified Manager``.ova`` archivo, y debe instalarse por separado.
+
+
+
+== Después de terminar
+
+Una vez finalizada la puesta en marcha y la configuración inicial, puede añadir clústeres o configurar ajustes de red adicionales en la consola de mantenimiento y, a continuación, acceder a la interfaz de usuario web.

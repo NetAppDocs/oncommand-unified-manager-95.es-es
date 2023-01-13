@@ -1,0 +1,54 @@
+---
+permalink: health-checker/task-performing-a-protection-relationship-failover-and-failback.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando se deshabilita un volumen de origen en la relación de protección debido a un error de hardware o un desastre, se pueden usar las funciones de relaciones de protección en Unified Manager para que el destino de la protección sea accesible de lectura/escritura y se pueda conmutar por error a ese volumen hasta que el origen vuelva a estar en línea; a continuación, puede volver a la fuente original cuando esté disponible para servir datos. 
+---
+= Recuperación tras fallos y recuperación de una relación de protección
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando se deshabilita un volumen de origen en la relación de protección debido a un error de hardware o un desastre, se pueden usar las funciones de relaciones de protección en Unified Manager para que el destino de la protección sea accesible de lectura/escritura y se pueda conmutar por error a ese volumen hasta que el origen vuelva a estar en línea; a continuación, puede volver a la fuente original cuando esté disponible para servir datos.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber configurado OnCommand Workflow Automation para realizar esta operación.
+
+
+
+
+== Pasos
+
+. xref:task-breaking-a-snapmirror-relationship-from-the-health-volume-details-page.adoc[Rompa la relación de SnapMirror].
++
+Se debe romper la relación antes de convertir el destino de un volumen de protección de datos a un volumen de lectura/escritura, y antes de poder revertir la relación.
+
+. xref:task-reversing-protection-relationships-from-the-health-volume-details-page.adoc[Invierta la relación de protección].
++
+Cuando el volumen de origen original vuelva a estar disponible, se puede decidir restablecer la relación de protección original mediante la restauración del volumen de origen. Para poder restaurar el origen, debe sincronizarlo con los datos escritos en el destino anterior. Utiliza la operación de resincronización inversa para crear una nueva relación de protección mediante la reversión de los roles de la relación original y la sincronización del volumen de origen con el destino anterior. Se crea una nueva copia Snapshot de referencia para la nueva relación.
+
++
+La relación inversa tiene un aspecto similar a una relación en cascada:
+
++
+image::../media/um-toplogy-reverse-resync.gif[m toplogy resincronización inversa]
+
+. xref:task-breaking-a-snapmirror-relationship-from-the-health-volume-details-page.adoc[Rompa la relación de SnapMirror invertida].
++
+Cuando se resincronizaba el volumen de origen original y se pueden volver a servir datos, use la operación de interrupción para romper la relación inversa.
+
+. xref:task-removing-a-protection-relationship-from-the-health-volume-details-page.adoc[Eliminar la relación].
++
+Cuando la relación inversa ya no sea necesaria, debe eliminar dicha relación antes de volver a establecer la relación original.
+
+. xref:task-resynchronizing-protection-relationships-from-the-health-volume-details-page.adoc[Resincronice la relación].
++
+Utilice la operación Resynchronize para sincronizar los datos del origen con el destino y restablecer la relación original.
+
+

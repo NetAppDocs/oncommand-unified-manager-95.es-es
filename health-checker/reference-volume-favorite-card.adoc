@@ -1,0 +1,57 @@
+---
+permalink: health-checker/reference-volume-favorite-card.html 
+sidebar: sidebar 
+keywords:  
+summary: La tarjeta Favorito de volumen permite ver los detalles de capacidad, protección y rendimiento de los volúmenes que ha marcado como favoritos. 
+---
+= Tarjeta Favorito de volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La tarjeta Favorito de volumen permite ver los detalles de capacidad, protección y rendimiento de los volúmenes que ha marcado como favoritos.
+
+
+
+== Atributos de volumen
+
+La tarjeta Favorito de volumen muestra los siguientes atributos de volumen:
+
+* *Estado de mantenimiento del volumen*
++
+Un icono que indica el estado del volumen. Los valores posibles son normal, Advertencia, error y crítico.
+
+* *Nombre del volumen*
++
+El nombre del volumen.
+
+* *Capacidad*
++
+Porcentaje de espacio libre disponible en el volumen y el número estimado de días hasta que se llene el volumen.
+
+* *Protección*
++
+El rol de protección que se configuró para el volumen. Los valores posibles son unprotected, no aplicable, protected y Destination.
+
+* *Rendimiento*
++
+Estadísticas de rendimiento del volumen.
+
++
+** *IOPS*
++
+Promedio de operaciones de I/o por segundo en las últimas 72 horas.
+
+** *Rendimiento*
++
+Rendimiento medio durante las últimas 72 horas, en Mbps.
+
+** *Latencia*
++
+Tiempo de respuesta medio necesario para una operación, en milisegundos.
+
+
+
+

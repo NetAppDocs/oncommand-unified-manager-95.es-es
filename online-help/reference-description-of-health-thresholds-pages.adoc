@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-health-thresholds-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar la página Configuración/umbrales de estado adecuados para configurar valores de umbral de estado global para agregados y volúmenes, así como valores de umbral de error y advertencia de desfase global para relaciones de protección no administradas. 
+---
+= Descripción de las páginas umbrales de estado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la página Configuración/umbrales de estado adecuados para configurar valores de umbral de estado global para agregados y volúmenes, así como valores de umbral de error y advertencia de desfase global para relaciones de protección no administradas.

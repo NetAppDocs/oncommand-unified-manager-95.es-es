@@ -1,0 +1,85 @@
+---
+permalink: online-help/reference-initialize-update-relationship-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo inicializar/actualizar le permite realizar una primera transferencia de referencia en una nueva relación de protección o actualizar una relación si ya está inicializada y desea realizar una actualización manual, no programada e incremental. 
+---
+= Cuadro de diálogo Initialize/Update
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo inicializar/actualizar le permite realizar una primera transferencia de referencia en una nueva relación de protección o actualizar una relación si ya está inicializada y desea realizar una actualización manual, no programada e incremental.
+
+
+
+== Pestaña Transfer Options
+
+La ficha Opciones de transferencia permite cambiar la prioridad de inicialización de una transferencia y cambiar el ancho de banda utilizado durante las transferencias.
+
+* *Prioridad de transferencia*
++
+Prioridad a la que se ejecuta la transferencia. Puede seleccionar normal o Baja. Relaciones con políticas que especifican una prioridad de transferencia normal ejecutada antes de las que especifican una prioridad de transferencia baja. Normal está seleccionado de forma predeterminada.
+
+* *Velocidad máxima de transferencia*
++
+Especifica la tasa máxima a la que se transfieren los datos entre los clústeres a través de la red. Si decide no utilizar una tasa de transferencia máxima, la transferencia de línea de base entre relaciones es ilimitada. Sin embargo, si ejecuta ONTAP 8.2 y el clúster primario y el secundario son los mismos, se omite esta configuración. Si selecciona más de una relación con diferentes tasas de transferencia máximas, puede especificar una de las siguientes opciones de velocidad de transferencia máxima:
+
++
+** Utilice los valores especificados durante la configuración o edición de una relación individual
++
+Cuando se selecciona, las operaciones de inicialización y actualización utilizan la tasa de transferencia máxima especificada en el momento de la creación o edición de cada relación. Este campo sólo está disponible cuando se inicializan o actualizan varias relaciones con diferentes tasas de transferencia.
+
+** Ilimitada
++
+Indica que no hay limitación del ancho de banda en las transferencias entre relaciones. Este campo sólo está disponible cuando se inicializan o actualizan varias relaciones con diferentes tasas de transferencia.
+
+** Limite el ancho de banda a.
++
+Cuando se selecciona, el ancho de banda de red está limitado al valor especificado. Puede introducir un valor numérico y, a continuación, seleccionar kilobytes por segundo (kbps), megabytes por segundo (Mbps), gigabytes por segundo (Gbps) o terabytes por segundo (Tbps). La velocidad de transferencia máxima que especifique debe ser superior a 1 kbps e inferior a 4 Tbps.
+
+
+
+
+
+
+
+== Pestaña Source Snapshot Copies
+
+La pestaña Source Snapshot Copies muestra la siguiente información sobre la copia Snapshot de origen que se utiliza para la transferencia básica:
+
+* *Volumen de origen*
++
+Muestra los nombres de los volúmenes de origen correspondientes.
+
+* *Volumen de destino*
++
+Muestra los nombres de los volúmenes de destino seleccionados.
+
+* *Tipo de fuente*
++
+Muestra el tipo de volumen. El tipo puede ser de lectura/escritura o protección de datos.
+
+* *Copia snapshot*
++
+Muestra la copia Snapshot que se usa para la transferencia de datos. Al hacer clic en el valor de la copia Snapshot se muestra el cuadro de diálogo Select Source Snapshot Copy, en el que puede seleccionar una copia Snapshot específica para la transferencia, según el tipo de relación de protección que tenga y la operación que esté realizando. La opción para especificar una copia Snapshot diferente no está disponible para los orígenes de tipo de protección de datos.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Cancelar*
++
+Descarta las selecciones y cierra el cuadro de diálogo inicializar/actualizar.
+
+* *Enviar*
++
+Guarda las selecciones e inicia el trabajo de inicialización o actualización.
+
+

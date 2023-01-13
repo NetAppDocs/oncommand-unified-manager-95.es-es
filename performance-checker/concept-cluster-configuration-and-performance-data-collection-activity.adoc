@@ -1,0 +1,95 @@
+---
+permalink: performance-checker/concept-cluster-configuration-and-performance-data-collection-activity.html 
+sidebar: sidebar 
+keywords:  
+summary: El intervalo de recogida de los datos de configuración del clúster es de 15 minutos. Por ejemplo, después de agregar un clúster, tarda 15 minutos en mostrar los detalles del clúster en la interfaz de usuario de Unified Manager. Este intervalo se aplica cuando se realizan cambios también en un clúster. 
+---
+= Actividad de recogida de datos de rendimiento y configuración del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El intervalo de recopilación para _cluster Configuration data_ es de 15 minutos. Por ejemplo, después de agregar un clúster, tarda 15 minutos en mostrar los detalles del clúster en la interfaz de usuario de Unified Manager. Este intervalo se aplica cuando se realizan cambios también en un clúster.
+
+Por ejemplo, si se añaden dos volúmenes nuevos a una SVM de un clúster, se ven esos objetos nuevos en la interfaz de usuario después del siguiente intervalo de sondeo, que podría ser de hasta 15 minutos.
+
+Unified Manager recopila las _estadísticas de rendimiento_ actuales de todos los clústeres supervisados cada cinco minutos. Analiza estos datos para identificar eventos de rendimiento y problemas potenciales. Conserva 30 días de datos de rendimiento históricos de cinco minutos y 390 días de datos de rendimiento históricos de una hora. Esto permite ver detalles de rendimiento muy granulares para el mes actual y las tendencias generales de rendimiento de hasta un año.
+
+Los sondeos de recogida se compensan por unos minutos para que los datos de cada clúster no se envíen al mismo tiempo, lo que podría afectar al rendimiento.
+
+En la siguiente tabla se describen las actividades de recogida que Unified Manager realiza:
+
+|===
+| Actividad | Intervalo de tiempo | Descripción 
+
+
+ a| 
+Sondeo de estadísticas de rendimiento
+ a| 
+Cada 5 minutos
+ a| 
+Recopila datos de rendimiento en tiempo real de cada clúster.
+
+
+
+ a| 
+Análisis estadístico
+ a| 
+Cada 5 minutos
+ a| 
+Después de cada sondeo de las estadísticas, Unified Manager compara los datos recopilados con los umbrales definidos por el usuario, definidos por el sistema y dinámicos.
+
+Si se ha incumplido algún umbral de rendimiento, Unified Manager genera eventos y envía un correo electrónico a los usuarios especificados, si se han configurado para hacerlo.
+
+
+
+ a| 
+Sondeo de configuración
+ a| 
+Cada 15 minutos
+ a| 
+Recopila información detallada de inventario de cada clúster para identificar todos los objetos de almacenamiento (nodos, SVM, volúmenes, etc.).
+
+
+
+ a| 
+Resumen
+ a| 
+Cada hora
+ a| 
+Resume las últimas 12 recopilaciones de datos de rendimiento de cinco minutos en promedios por hora.
+
+Los valores promedio por hora se usan en algunas de las páginas de la interfaz de usuario y se conservan durante 390 días.
+
+
+
+ a| 
+Análisis de previsión y eliminación de datos
+ a| 
+Todos los días después de medianoche
+ a| 
+Analiza datos de clúster para establecer umbrales dinámicos para la latencia de volúmenes y IOPS en las próximas 24 horas.
+
+Elimina de la base de datos los datos los datos de rendimiento de cinco minutos que tengan más de 30 días.
+
+
+
+ a| 
+Eliminar datos
+ a| 
+Todos los días después de las 2 de la mañana
+ a| 
+Elimina de la base de datos todos los eventos y umbrales dinámicos anteriores a 390 días.
+
+
+
+ a| 
+Eliminar datos
+ a| 
+Todos los días después de las 3:30 a.m.
+ a| 
+Elimina de la base de datos todos los datos de rendimiento de una hora que tengan más de 390 días.
+
+|===

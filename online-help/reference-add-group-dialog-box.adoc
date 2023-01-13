@@ -1,0 +1,42 @@
+---
+permalink: online-help/reference-add-group-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Add Group permite crear grupos que incluyan clústeres, volúmenes y SVM según las reglas de grupo. 
+---
+= Cuadro de diálogo Agregar grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Add Group permite crear grupos que incluyan clústeres, volúmenes y SVM según las reglas de grupo.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Nombre*
++
+Especifica el nombre del grupo. Debe introducir un nombre único para el grupo.
+
+* *Descripción*
++
+Especifica una descripción significativa del grupo.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando permiten agregar o cancelar la creación de un nuevo grupo.
+
+* *Agregar*
++
+Crea el nuevo grupo.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Agregar grupo sin guardar los cambios.
+
+

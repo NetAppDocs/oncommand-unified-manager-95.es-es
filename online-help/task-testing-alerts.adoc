@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-testing-alerts.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede probar una alerta para verificar que la ha configurado correctamente. Cuando se activa un evento, se genera una alerta y se envía un correo electrónico de alerta a los destinatarios configurados. Puede comprobar si se envía la notificación y si la secuencia de comandos se ejecuta mediante la alerta de prueba. 
+---
+= Probar alertas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede probar una alerta para verificar que la ha configurado correctamente. Cuando se activa un evento, se genera una alerta y se envía un correo electrónico de alerta a los destinatarios configurados. Puede comprobar si se envía la notificación y si la secuencia de comandos se ejecuta mediante la alerta de prueba.
+
+
+
+== Antes de empezar
+
+* Debe haber configurado ajustes de notificación, como la dirección de correo electrónico de los destinatarios, el servidor SMTP y la captura SNMP.
++
+Unified Manager Server puede utilizar esta configuración para enviar notificaciones a los usuarios cuando se genera un evento.
+
+* Debe haber asignado un script y configurado el script para que se ejecute cuando se genere la alerta.
+* Debe tener el rol de administrador de OnCommand.
+
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Configuración* > *Alerta*.
+. En la página *Configuración/Alertas*, seleccione la alerta que desea probar y, a continuación, haga clic en *Prueba*.
++
+Se envía un correo electrónico de alerta de prueba a las direcciones de correo electrónico especificadas durante la creación de la alerta.
+
+

@@ -1,0 +1,31 @@
+---
+permalink: performance-checker/concept-monitor-cluster-performance-navigation.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager permite supervisar el rendimiento de todos los clústeres gestionados por Unified Manager. La supervisión de los clústeres ofrece una descripción general del rendimiento del clúster y el objeto, e incluye supervisión de eventos de rendimiento. Es posible ver los eventos y el rendimiento a un nivel alto o bien investigar más sobre cualquier detalle de los eventos de rendimiento y rendimiento de objetos y clústeres. 
+---
+= Supervise la navegación del rendimiento del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager permite supervisar el rendimiento de todos los clústeres gestionados por Unified Manager. La supervisión de los clústeres ofrece una descripción general del rendimiento del clúster y el objeto, e incluye supervisión de eventos de rendimiento. Es posible ver los eventos y el rendimiento a un nivel alto o bien investigar más sobre cualquier detalle de los eventos de rendimiento y rendimiento de objetos y clústeres.
+
+Este es un ejemplo de muchas posibles rutas de navegación del rendimiento del clúster:
+
+. En la página Dashboards/Performance, identifique el clúster que desea investigar y haga clic en *Ver detalles del clúster* para desplazarse a la página de destino del clúster seleccionado.
+. En la página Performance/Cluster Summary, identifique el tipo de objeto que desea investigar y haga clic en él para ver la página de inventario de objetos.
++
+En este ejemplo, se selecciona *Aggregates*, mostrando la página de inventario Performance/Aggregates.
+
+. En la página Performance/Aggregates, identifique el agregado que desea investigar y haga clic en ese nombre del agregado para desplazarse a la página Performance/Aggregate Explorer.
+. Opcionalmente, seleccione otros objetos para comparar con este agregado en el menú Ver y comparar y, a continuación, agregue uno de los objetos al panel comparación.
++
+Las estadísticas de ambos objetos aparecerán en los gráficos de contadores para realizar la comparación.
+
+. En el panel de comparación situado a la derecha de la página del explorador, haga clic en *Zoom View* en uno de los gráficos de contadores para ver detalles sobre el historial de rendimiento de ese agregado.
+
+
+image::../media/monitor-cluster-performance.gif[supervise el rendimiento del clúster]

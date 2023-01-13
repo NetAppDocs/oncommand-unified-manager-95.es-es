@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-managing-backup-and-restore-operations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede crear backups de Unified Manager y utilizar la función de restauración para restaurar el backup en el mismo sistema \(local\) o en un nuevo sistema \(remoto\) en caso de un fallo del sistema o pérdida de datos.' 
+---
+= Configurar las operaciones de backup y restauración
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear backups de Unified Manager y utilizar la función de restauración para restaurar el backup en el mismo sistema (local) o un nuevo sistema (remoto) en caso de un fallo del sistema o pérdida de datos.

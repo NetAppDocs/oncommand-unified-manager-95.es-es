@@ -1,0 +1,95 @@
+---
+permalink: performance-checker/concept-how-user-defined-performance-threshold-policies-work-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Debe establecer políticas de umbral de rendimiento en los objetos de almacenamiento \(por ejemplo, en agregados y volúmenes\) de modo que se pueda enviar un evento al administrador de almacenamiento para informar al administrador de que el clúster está experimentando un problema de rendimiento.' 
+---
+= Cómo funcionan las políticas de umbral de rendimiento definidas por el usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede establecer políticas de umbral de rendimiento en objetos de almacenamiento (por ejemplo, en agregados y volúmenes) para que se pueda enviar un evento al administrador de almacenamiento con el fin de informar al administrador de que el clúster está experimentando un problema de rendimiento.
+
+Puede crear una política de umbral de rendimiento para un objeto de almacenamiento mediante:
+
+* Seleccionar un objeto de almacenamiento
+* Seleccionar un contador de rendimiento asociado con ese objeto
+* Especificación de valores que definen los límites superiores del contador de rendimiento que se consideran situaciones críticas y de advertencia
+* Especificación de un período de tiempo que define el tiempo que el contador debe superar el límite superior
+
+
+Por ejemplo, puede establecer una política de umbral de rendimiento en un volumen, de modo que se reciba una notificación de evento crucial siempre que las IOPS de ese volumen superen las 750 operaciones por segundo durante 10 minutos consecutivos. Esta misma política de umbral también puede especificar que se envíe un evento de advertencia cuando IOPS supere las 500 operaciones por segundo durante 10 minutos.
+
+[NOTE]
+====
+La versión actual proporciona umbrales que envían eventos cuando un valor de contador supera el valor del umbral. No se pueden establecer umbrales que envíen eventos cuando un valor de contador esté por debajo de un valor de umbral.
+
+====
+Se muestra un gráfico de contadores de ejemplo aquí, lo que indica que se incumplido un umbral de advertencia (icono amarillo) a las 1:00, y que se violó un umbral crítico (icono rojo) a las 12:10, 12:30 y 1:10:
+
+image::../media/opm2-threshold-breach.gif[incumplimiento del umbral de opm2]
+
+Se debe producir una infracción de umbral continuamente durante la duración especificada. Si el umbral cae por debajo de los valores límite por cualquier motivo, una infracción posterior se considera el inicio de una nueva duración.
+
+Algunos objetos del clúster y contadores de rendimiento permiten crear una política de umbral de combinación que requiere dos contadores de rendimiento para superar sus límites máximos antes de que se genere un evento. Por ejemplo, puede crear una política de umbral con los siguientes criterios:
+
+|===
+| Objeto de clúster | Contador de rendimiento | Umbral de advertencia | Umbral crítico | Duración 
+
+
+ a| 
+Volumen
+ a| 
+Latencia
+ a| 
+10 milisegundos
+ a| 
+20 milisegundos
+ a| 
+15 minutos
+
+|===
+Las políticas de umbral que utilizan dos objetos de clúster hacen que se genere un evento solo cuando se incumplen ambas condiciones. Por ejemplo, utilizando la política de umbral definida en la tabla:
+
+|===
+| Si la latencia de un volumen está promediando... | Y el uso del disco agregado es... | Realice lo siguiente... 
+
+
+ a| 
+15 milisegundos
+ a| 
+50 %
+ a| 
+No se informa de ningún evento.
+
+
+
+ a| 
+15 milisegundos
+ a| 
+75 %
+ a| 
+Se informa de un evento de advertencia.
+
+
+
+ a| 
+25 milisegundos
+ a| 
+75 %
+ a| 
+Se informa de un evento de advertencia.
+
+
+
+ a| 
+25 milisegundos
+ a| 
+90 %
+ a| 
+Se informa de un evento crítico.
+
+|===

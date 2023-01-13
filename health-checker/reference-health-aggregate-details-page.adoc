@@ -1,0 +1,548 @@
+---
+permalink: health-checker/reference-health-aggregate-details-page.html 
+sidebar: sidebar 
+keywords: Unified Manager 
+summary: Puede utilizar la página de detalles Health/Aggregate para ver información detallada sobre el agregado seleccionado, como la capacidad, la información de disco, los detalles de configuración y los eventos generados. También puede ver información sobre los objetos relacionados y las alertas relacionadas de ese agregado. 
+---
+= Página de detalles Health/Aggregate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la página de detalles Health/Aggregate para ver información detallada sobre el agregado seleccionado, como la capacidad, la información de disco, los detalles de configuración y los eventos generados. También puede ver información sobre los objetos relacionados y las alertas relacionadas de ese agregado.
+
+
+
+== Botones de comando
+
+[NOTE]
+====
+Al supervisar un agregado habilitado para FabricPool, los valores comprometidos y sobrecomprometidos de esta página solo serán relevantes para la capacidad local o el nivel de rendimiento. La cantidad de espacio disponible en el nivel de cloud no se refleja en los valores sobrecomprometidos. Del mismo modo, los valores de umbral agregados sólo son relevantes para el nivel de rendimiento local.
+
+====
+Los botones de comando permiten realizar las siguientes tareas para el agregado seleccionado:
+
+* *Cambiar a la Vista de rendimiento*
++
+Permite desplazarse a la página de detalles Performance/Aggregate.
+
+* *image:../media/favorite-icon.gif[""]*
++
+Permite agregar el agregado seleccionado a la consola Favoritos.
+
+* *Acciones*
++
+** Añadir alerta
++
+Permite añadir una alerta al agregado seleccionado.
+
+** Editar umbrales
++
+Permite modificar la configuración de umbral para el agregado seleccionado.
+
+
+
+* *Ver agregados*
++
+Le permite acceder a la página del inventario Health/Aggregates.
+
+
+
+
+
+== Pestaña Capacity
+
+En la pestaña capacidad, se muestra información detallada sobre el agregado seleccionado, como la capacidad, los umbrales y la tasa de crecimiento diario.
+
+De manera predeterminada, no se generan eventos de capacidad para los agregados raíz. Además, los valores de umbral que utiliza Unified Manager no se aplican a los agregados raíz del nodo. Solo un representante del soporte técnico puede modificar la configuración de estos eventos para que se generen. Cuando un representante de soporte técnico modifica la configuración, los valores del umbral se aplican al agregado raíz del nodo.
+
+* *Capacidad*
++
+Muestra el gráfico de capacidad de datos y el gráfico de copias Snapshot, que muestra detalles de capacidad sobre el agregado:
+
++
+** Utilizado
++
+Muestra el espacio utilizado por los datos en el agregado.
+
+** Sobrecomprometidos
++
+Indica que el espacio del agregado está sobrecargado.
+
+** Advertencia
++
+Indica que el espacio del agregado está casi lleno. Si se supera este umbral, se genera el evento Space casi Full.
+
+** Error
++
+Indica que el espacio del agregado está lleno. Si se supera este umbral, se genera el evento Space Full.
+
+** Gráfico de datos
++
+Muestra la capacidad total de datos y la capacidad de datos utilizada del agregado. Si el agregado está sobrecargado, se muestra un indicador con la capacidad sobrecomprometida.
+
+** Gráfico de copias Snapshot
++
+Este gráfico solo se muestra cuando la capacidad de Snapshot utilizada o la reserva de Snapshot no es cero.
+
+
+
++
+Ambos gráficos muestran la capacidad por la cual la capacidad de Snapshot supera la reserva de Snapshot si la capacidad de Snapshot utilizada supera la reserva de Snapshot.
+
+* *Nivel de cloud*
++
+Muestra detalles de capacidad acerca del nivel de cloud para los agregados que admiten FabricPool. Un FabricPool puede tener licencia o no tener licencia.
+
++
+** Utilizado
++
+Muestra el espacio utilizado por los datos en el nivel de cloud.
+
+** No disponible
++
+Muestra el espacio en el nivel de cloud para un objeto de Amazon S3, Microsoft Azure Cloud FabricPool o IBM Cloud Object Storage que no se puede utilizar. Este espacio puede compartirse con otro agregado habilitado para FabricPool.
+
+** Gráfico de datos
++
+Para un Amazon S3, Microsoft Azure Cloud, IBM Cloud Object Storage o Alibaba Cloud Object Storage, el gráfico muestra la capacidad de datos total con licencia de este clúster, la cantidad que utiliza este agregado y la cantidad inutilizable de otros agregados que utilizan el nivel de cloud.
+
++
+Para una StorageGRID, el gráfico muestra únicamente la capacidad total que usa este agregado.
+
+
+
+* *Detalles*
++
+Muestra información detallada sobre la capacidad.
+
++
+** Capacidad total
++
+Muestra la capacidad total del agregado.
+
+** Capacidad de datos
++
+Muestra la cantidad de espacio utilizada por el agregado (capacidad utilizada) y la cantidad de espacio disponible en el agregado (capacidad libre).
+
+** Reserva Snapshot
++
+Muestra la capacidad de la snapshot utilizada y libre del agregado.
+
+** Capacidad excesiva
++
+Muestra el exceso de compromiso del agregado. El exceso de compromiso de los agregados le permite proporcionar más almacenamiento del que realmente está disponible en un agregado determinado, siempre que no se utilice todo ese almacenamiento en ese momento. Cuando se utiliza thin provisioning, el tamaño total de volúmenes del agregado puede superar la capacidad total del agregado.
+
++
+[NOTE]
+====
+Si ha comprometido un exceso de espacio en el agregado, debe supervisar con cuidado el espacio disponible y añadir almacenamiento según sea necesario para evitar errores de escritura debido a la falta de espacio.
+
+====
+** Nivel de cloud
++
+Para un Amazon S3, Microsoft Azure Cloud, IBM Cloud Object Storage o Alibaba Cloud Object Storage, muestra la capacidad total con licencia, la cantidad utilizada por este agregado, la cantidad utilizada por otros agregados y la capacidad libre para el nivel cloud. Para una StorageGRID, muestra solo la capacidad total que usa este agregado.
+
+** Espacio total en caché
++
+Muestra el espacio total de las unidades de estado sólido (SSD) o las unidades de asignación agregadas a un agregado de Flash Pool. Si habilitó Flash Pool para un agregado, pero no añadió ningún SSD, el espacio de la caché se mostrará como 0 KB.
+
++
+[NOTE]
+====
+Este campo se oculta si Flash Pool está deshabilitado para un agregado.
+
+====
+** Umbrales del agregado
++
+Muestra los siguientes umbrales de capacidad del agregado:
+
++
+*** Umbral casi completo
++
+Especifica el porcentaje en el que un agregado está casi lleno.
+
+*** Umbral completo
++
+Especifica el porcentaje en el que está lleno un agregado.
+
+*** Umbral casi sobrecargado
++
+Especifica el porcentaje en el que un agregado está casi sobrecargado.
+
+*** Umbral sobrecomprometido
++
+Especifica el porcentaje en el que un agregado está sobrecargado.
+
+
+
+** Otros detalles: Tasa de crecimiento diario
++
+Muestra el espacio en disco utilizado en el agregado si la tasa de cambio entre las dos últimas muestras continúa durante 24 horas.
+
++
+Por ejemplo, si un agregado utiliza 10 GB de espacio en disco a 2 pm y 12 GB a 6 pm, la tasa de crecimiento diario (GB) para este agregado es de 2 GB.
+
+** Movimiento de volúmenes
++
+Muestra la cantidad de operaciones de movimiento de volúmenes que actualmente están en curso:
+
++
+*** Volúmenes
++
+Muestra la cantidad y la capacidad de los volúmenes que se están moviendo fuera del agregado.
+
++
+Puede hacer clic en el enlace para ver más detalles, como el nombre del volumen, el agregado al que se mueve el volumen, el estado de la operación de movimiento de volúmenes y la hora de finalización estimada.
+
+*** Volúmenes de
++
+Muestra el número y la capacidad restante de los volúmenes que se van a mover al agregado.
+
++
+Puede hacer clic en el enlace para ver más detalles, como el nombre del volumen, el agregado desde el cual se mueve el volumen, el estado de la operación de movimiento de volúmenes y la hora de finalización estimada.
+
+*** Capacidad utilizada estimada tras mover un volumen
++
+Muestra la cantidad estimada de espacio usado (como un porcentaje, y en KB, MB, GB, etc.) en el agregado después de que completen las operaciones de movimiento de volúmenes.
+
+
+
+
+
+* *Descripción general de la capacidad - volúmenes*
++
+Muestra gráficos que proporcionan información sobre la capacidad de los volúmenes que contiene el agregado. Se muestra la cantidad de espacio usado por el volumen (capacidad utilizada) y la cantidad de espacio disponible (capacidad libre) del volumen. Cuando el evento de espacio de volumen con aprovisionamiento fino en riesgo se genera para volúmenes con aprovisionamiento fino, se muestra la cantidad de espacio utilizada por el volumen (capacidad utilizada) y la cantidad de espacio disponible en el volumen, pero no se puede utilizar (capacidad inutilizable) debido a problemas de capacidad del agregado.
+
++
+Puede seleccionar el gráfico que desea ver en las listas desplegables. Puede ordenar los datos que se muestran en el gráfico para mostrar detalles como el tamaño usado, el tamaño aprovisionado, la capacidad disponible, la tasa de crecimiento diaria más rápida y la tasa de crecimiento más lenta. Puede filtrar los datos en función de las máquinas virtuales de almacenamiento (SVM) que contengan los volúmenes del agregado. También es posible ver detalles de los volúmenes aprovisionados con thin provisioning. Para ver los detalles de puntos específicos del gráfico, coloque el cursor sobre el área de interés. De forma predeterminada, el gráfico muestra los 30 volúmenes filtrados más importantes en el agregado.
+
+
+
+
+
+== Pestaña Disk Information
+
+Muestra información detallada sobre los discos del agregado seleccionado, incluido el tipo y el tamaño de RAID y el tipo de discos utilizados en el agregado. La ficha también muestra gráficamente los grupos RAID y los tipos de discos utilizados (como SAS, ATA, FCAL, SSD o VMDISK). Es posible ver más información, como la bahía de disco, la bandeja y la velocidad de rotación, colocando el cursor sobre los discos de paridad y los discos de datos.
+
+* *Datos*
++
+Muestra gráficamente los detalles sobre discos de datos dedicados, discos de datos compartidos o ambos. Cuando los discos de datos contienen discos compartidos, se muestran detalles gráficos de los discos compartidos. Cuando los discos de datos contienen discos dedicados y discos compartidos, se muestran detalles gráficos de los discos de datos dedicados y los discos de datos compartidos.
+
++
+** *Detalles de RAID*
++
+Los detalles de RAID se muestran solo para los discos dedicados.
+
++
+*** Tipo
++
+Muestra el tipo de RAID (RAID0, RAID4, RAID-DP o RAID-TEC).
+
+*** Tamaño del grupo
++
+Muestra el número máximo de discos permitidos en el grupo RAID.
+
+*** Grupos
++
+Muestra el número de grupos RAID en el agregado.
+
+
+
+** *Discos utilizados*
++
+*** Tipo efectivo
++
+Muestra los tipos de discos de datos (por ejemplo, ATA, SATA, FCAL, SSD, O VMDISK) en el agregado.
+
+*** Discos de datos
++
+Muestra la cantidad y la capacidad de los discos de datos que están asignados a un agregado. Los detalles de los discos de datos no se muestran cuando el agregado solo contiene discos compartidos.
+
+*** Discos de paridad
++
+Muestra el número y la capacidad de los discos de paridad que se asignan a un agregado. Los detalles del disco de paridad no se muestran cuando el agregado solo contiene discos compartidos.
+
+*** Discos compartidos
++
+Muestra la cantidad y la capacidad de los discos de datos compartidos que se asignan a un agregado. Los detalles de los discos compartidos solo se muestran cuando el agregado contiene discos compartidos.
+
+
+
+** *Discos de repuesto*
++
+Muestra el tipo, el número y la capacidad efectivos de los discos de datos de repuesto que están disponibles para el nodo en el agregado seleccionado.
+
++
+[NOTE]
+====
+Cuando un agregado se cambia al nodo del partner, Unified Manager no muestra todos los discos de repuesto que sean compatibles con el agregado.
+
+====
+
+
+* *Caché SSD*
++
+Proporciona detalles sobre discos SSD de caché dedicados y discos SSD de caché compartida.
+
++
+Se muestran los siguientes detalles de los discos SSD de caché dedicada:
+
++
+** *Detalles de RAID*
++
+*** Tipo
++
+Muestra el tipo de RAID (RAID0, RAID4, RAID-DP o RAID-TEC).
+
+*** Tamaño del grupo
++
+Muestra el número máximo de discos permitidos en el grupo RAID.
+
+*** Grupos
++
+Muestra el número de grupos RAID en el agregado.
+
+
+
+** *Discos utilizados*
++
+*** Tipo efectivo
++
+Indica que los discos utilizados para la caché del agregado son del tipo SSD.
+
+*** Discos de datos
++
+Muestra la cantidad y la capacidad de los discos de datos que se asignan a un agregado para la caché.
+
+*** Discos de paridad
++
+Muestra el número y la capacidad de los discos de paridad que se asignan a un agregado para la caché.
+
+
+
+** *Discos de repuesto*
++
+Muestra el tipo, número y capacidad efectivos de los discos de repuesto que están disponibles para el nodo en el agregado seleccionado para la caché.
+
++
+[NOTE]
+====
+Cuando un agregado se cambia al nodo del partner, Unified Manager no muestra todos los discos de repuesto que sean compatibles con el agregado.
+
+====
+
+
++
+Proporciona los siguientes detalles de la caché compartida:
+
++
+** *Piscina de almacenamiento*
++
+Muestra el nombre del pool de almacenamiento. Es posible mover el puntero por el nombre del pool de almacenamiento para ver los siguientes detalles:
+
++
+*** Estado
++
+Muestra el estado del pool de almacenamiento, que puede ser en buen estado o incorrecto.
+
+*** Asignaciones totales
++
+Muestra las unidades de asignación totales y el tamaño de la agrupación de almacenamiento.
+
+*** Tamaño de unidad de asignación
++
+Muestra la cantidad mínima de espacio del pool de almacenamiento que se puede asignar a un agregado.
+
+*** Discos
++
+Muestra el número de discos utilizados para crear el pool de almacenamiento. Si el número de discos en la columna del pool de almacenamiento y el número de discos que se muestran en la pestaña Información de disco de ese pool de almacenamiento no coinciden, indica que uno o varios discos se encuentran dañados y el pool de almacenamiento es incorrecto.
+
+*** Asignación utilizada
++
+Muestra el número y el tamaño de las unidades de asignación utilizadas por los agregados. Puede hacer clic en el nombre del agregado para ver los detalles del agregado.
+
+*** Asignación disponible
++
+Muestra el número y el tamaño de las unidades de asignación disponibles para los nodos. Puede hacer clic en el nombre del nodo para ver los detalles del agregado.
+
+
+
+** *Caché asignada*
++
+Muestra el tamaño de las unidades de asignación utilizadas por el agregado.
+
+** *Unidades de asignación*
++
+Muestra el número de unidades de asignación utilizadas por el agregado.
+
+** *Discos*
++
+Muestra la cantidad de discos contenidos en el pool de almacenamiento.
+
+** *Detalles*
++
+*** Pool de almacenamiento
++
+Muestra el número de pools de almacenamiento.
+
+*** Tamaño total
++
+Muestra el tamaño total de los pools de almacenamiento.
+
+
+
+
+
+* *Nivel de cloud*
++
+Muestra el nombre del nivel de cloud, si configuró un agregado habilitado para FabricPool y muestra la capacidad total con licencia de objetos de Amazon S3, Microsoft Azure Cloud, IBM Cloud Object Storage o Alibaba Cloud Object Storage.
+
+
+
+
+
+== Pestaña Configuration
+
+En la pestaña Configuration, se muestran detalles sobre el agregado seleccionado, como el nodo del clúster, el tipo de bloque, el tipo de RAID, el tamaño de RAID y el número de grupos RAID:
+
+* *Descripción general*
++
+** Nodo
++
+Muestra el nombre del nodo que contiene el agregado seleccionado.
+
+** Tipo de bloque
++
+Muestra el formato de bloque del agregado: De 32 bits o de 64 bits.
+
+** Tipo de RAID
++
+Muestra el tipo de RAID (RAID0, RAID4, RAID-DP, RAID-TEC o RAID mixto).
+
+** Tamaño de RAID
++
+Muestra el tamaño del grupo RAID.
+
+** Grupos de RAID
++
+Muestra el número de grupos RAID en el agregado.
+
+** Tipo de SnapLock
++
+Muestra el tipo de SnapLock del agregado.
+
+
+
+* *Nivel de cloud*
++
+Si este es un agregado habilitado para FabricPool, se muestran los detalles del almacén de objetos. Algunos campos varían según el proveedor de almacenamiento:
+
++
+** Nombre
++
+Muestra el nombre del almacén de objetos cuando ONTAP lo creó.
+
+** Proveedor de almacenamiento de objetos
++
+Muestra el nombre del proveedor de almacenamiento, por ejemplo, StorageGRID, Amazon S3, IBM Cloud Object Storage, Microsoft Azure Cloud o Alibaba Cloud Object Storage.
+
+** Nombre del almacén de objetos (FQDN) o nombre del servidor
++
+Muestra el FQDN del almacén de objetos.
+
+** Clave de acceso o cuenta
++
+Muestra la clave de acceso o cuenta del almacén de objetos.
+
+** Nombre del bloque o nombre del contenedor
++
+Muestra el nombre de bloque o contenedor del almacén de objetos.
+
+** SSL
++
+Muestra si el cifrado SSL está activado para el almacén de objetos.
+
+
+
+
+
+
+
+== Historial
+
+El área History muestra gráficos que proporcionan información sobre la capacidad del agregado seleccionado. Además, puede hacer clic en el botón *Exportar* para crear un informe en formato CSV para el gráfico que está viendo.
+
+Puede seleccionar un tipo de gráfico en la lista desplegable situada en la parte superior del panel Historial. También puede ver los detalles de un período de tiempo específico seleccionando 1 semana, 1 mes o 1 año. Los gráficos del historial pueden ayudarle a identificar tendencias: Por ejemplo, si el uso del agregado está violando constantemente el umbral casi completo, puede tomar la acción adecuada.
+
+Los gráficos del historial muestran la siguiente información:
+
+* *Capacidad agregada utilizada (%)*
++
+Muestra la capacidad utilizada en el agregado y la tendencia en el uso de la capacidad agregada en función del historial de uso como gráficos de líneas, en porcentaje, en el eje vertical (y). El período de tiempo se muestra en el eje horizontal (x). Puede seleccionar un período de tiempo de una semana, un mes o un año. Puede ver los detalles de puntos específicos del gráfico situando el cursor sobre un área determinada. Puede ocultar o mostrar un gráfico de líneas haciendo clic en la leyenda correspondiente. Por ejemplo, al hacer clic en la leyenda de capacidad utilizada, la línea del gráfico de capacidad utilizada queda oculta.
+
+* *Capacidad agregada utilizada frente a capacidad total*
++
+Muestra la tendencia en la forma en que se utiliza la capacidad agregada en función del historial de uso, así como la capacidad utilizada y la capacidad total, como gráficos de líneas, en bytes, megabytes, kilobytes, y así sucesivamente, en el eje vertical (y). El período de tiempo se muestra en el eje horizontal (x). Puede seleccionar un período de tiempo de una semana, un mes o un año. Puede ver los detalles de puntos específicos del gráfico situando el cursor sobre un área determinada. Puede ocultar o mostrar un gráfico de líneas haciendo clic en la leyenda correspondiente. Por ejemplo, al hacer clic en la leyenda capacidad de tendencias utilizada, la línea gráfica capacidad de tendencias utilizada está oculta.
+
+* *Capacidad agregada utilizada (%) frente a comprometida (%)*
++
+Muestra la tendencia en la forma en que se utiliza la capacidad agregada en función del historial de uso, así como el espacio comprometido como gráficos de líneas, como porcentaje, en el eje vertical (y). El período de tiempo se muestra en el eje horizontal (x). Puede seleccionar un período de tiempo de una semana, un mes o un año. Puede ver los detalles de puntos específicos del gráfico situando el cursor sobre un área determinada. Puede ocultar o mostrar un gráfico de líneas haciendo clic en la leyenda correspondiente. Por ejemplo, al hacer clic en la leyenda espacio asignado, la línea del gráfico espacio comprometido está oculta.
+
+
+
+
+
+== Lista Events
+
+En la lista Eventos se muestran detalles sobre eventos nuevos y reconocidos:
+
+* *Gravedad*
++
+Muestra la gravedad del evento.
+
+* *Evento*
++
+Muestra el nombre del evento.
+
+* *Tiempo activado*
++
+Muestra el tiempo transcurrido desde que se generó el evento. Si el tiempo transcurrido supera una semana, se muestra la Marca de tiempo para el momento en que se generó el evento.
+
+
+
+
+
+== Panel Related Devices
+
+El panel Related Devices permite ver el nodo del clúster, los volúmenes y los discos relacionados con el agregado:
+
+* *Nodo*
++
+Muestra la capacidad y el estado del nodo que contiene el agregado. La capacidad indica la capacidad utilizable total sobre la capacidad disponible.
+
+* *Agregados en el nodo*
++
+Muestra la cantidad y la capacidad de todos los agregados del nodo del clúster que contiene el agregado seleccionado. También se muestra el estado de los agregados, en función del nivel de gravedad más alto. Por ejemplo, si un nodo de clúster contiene diez agregados, cinco de los cuales muestran el estado Warning y los cinco restantes, que muestran el estado Critical, el estado mostrado es crucial.
+
+* *Volúmenes*
++
+Muestra el número y la capacidad de los volúmenes FlexVol y FlexGroup en el agregado; el número no incluye los componentes FlexGroup. El estado de los volúmenes también se muestra, según el nivel de gravedad más alto.
+
+* *Piscina de recursos*
++
+Muestra los pools de recursos relacionados con el agregado.
+
+* *Discos*
++
+Muestra el número de discos del agregado seleccionado.
+
+
+
+
+
+== Panel Related Alerts
+
+El panel Related Alerts permite ver la lista de alertas creadas para el agregado seleccionado. También es posible añadir una alerta si se hace clic en el enlace Add Alert o editar una alerta existente haciendo clic en el nombre de la alerta.

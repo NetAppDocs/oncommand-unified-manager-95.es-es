@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-disabling-nested-groups-from-remote-authentication.html 
+sidebar: sidebar 
+keywords:  
+summary: Si tiene habilitada la autenticación remota, puede deshabilitar la autenticación de grupos anidados para que solo los usuarios individuales y no los miembros de grupos se puedan autenticar de forma remota a Unified Manager. Puede deshabilitar los grupos anidados cuando desee mejorar el tiempo de respuesta de autenticación de Active Directory. 
+---
+= Deshabilitar grupos anidados de la autenticación remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si tiene habilitada la autenticación remota, puede deshabilitar la autenticación de grupos anidados para que solo los usuarios individuales y no los miembros de grupos se puedan autenticar de forma remota a Unified Manager. Puede deshabilitar los grupos anidados cuando desee mejorar el tiempo de respuesta de autenticación de Active Directory.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand.
+* La desactivación de grupos anidados sólo se aplica cuando se utiliza Active Directory.
+
+
+
+
+== Acerca de esta tarea
+
+Al deshabilitar la compatibilidad con los grupos anidados en Unified Manager, es posible que se reduzca el tiempo de autenticación. Si la compatibilidad de grupos anidados está deshabilitada y, si se añade un grupo remoto a Unified Manager, los usuarios individuales deben ser miembros del grupo remoto para autenticarse en Unified Manager.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *autenticación* en el menú Configuración de la izquierda.
+. En la página *Configuración/autenticación*, active la casilla *Desactivar búsqueda de grupo anidado*.
+. Haga clic en *Guardar*.
+

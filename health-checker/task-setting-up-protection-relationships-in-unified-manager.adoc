@@ -1,0 +1,47 @@
+---
+permalink: health-checker/task-setting-up-protection-relationships-in-unified-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: Hay varios pasos que debe realizar para usar Unified Manager y OnCommand Workflow Automation a fin de configurar las relaciones de SnapMirror y SnapVault para proteger sus datos. 
+---
+= Configuración de las relaciones de protección en Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Hay varios pasos que debe realizar para usar Unified Manager y OnCommand Workflow Automation a fin de configurar las relaciones de SnapMirror y SnapVault para proteger sus datos.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber establecido relaciones entre iguales entre dos clústeres o dos máquinas virtuales de almacenamiento (SVM).
+* OnCommand Workflow Automation debe integrarse con Unified Manager:
++
+** xref:task-configuring-a-connection-between-workflow-automation-and-unified-manager.adoc[Configure OnCommand Workflow Automation]
+** xref:task-verifying-unified-manager-data-source-caching-in-workflow-automation.adoc[Verificación del almacenamiento en caché de origen de datos de Unified Manager en Workflow Automation]
+
+
+
+
+
+
+== Pasos
+
+. Según el tipo de relación de protección que desee crear, realice una de las siguientes acciones:
++
+** xref:task-creating-a-snapmirror-protection-relationship-from-the-health-volume-details-page.adoc[Cree una relación de protección de SnapMirror].
+** xref:task-creating-a-snapvault-protection-relationship-from-the-health-volume-details-page.adoc[Cree una relación de protección SnapVault].
+
+
+. Si desea crear una directiva para la relación, en función del tipo de relación que esté creando, realice una de las siguientes acciones:
++
+** xref:task-creating-a-snapvault-policy-to-maximize-transfer-efficiency.adoc[Cree una política de SnapVault].
+** xref:task-creating-a-snapmirror-policy-to-maximize-transfer-efficiency.adoc[Cree una política de SnapMirror].
+
+
+. xref:task-creating-snapmirror-and-snapvault-schedules.adoc[Cree una programación de SnapMirror o SnapVault].
+

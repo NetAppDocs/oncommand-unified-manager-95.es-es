@@ -1,0 +1,114 @@
+---
+permalink: online-help/reference-notifications-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar Unified Manager Server para que envíe notificaciones cuando se genera un evento o cuando se asigna a un usuario. También puede configurar los mecanismos de notificación. Por ejemplo, las notificaciones se pueden enviar como correos electrónicos o capturas SNMP. 
+---
+= Página Setup/Notifications
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar Unified Manager Server para que envíe notificaciones cuando se genera un evento o cuando se asigna a un usuario. También puede configurar los mecanismos de notificación. Por ejemplo, las notificaciones se pueden enviar como correos electrónicos o capturas SNMP.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Correo electrónico
+
+Esta área permite configurar las siguientes opciones de correo electrónico para las notificaciones de alertas:
+
+* *Desde la dirección*
++
+Especifica la dirección de correo electrónico desde la cual se envía la notificación de alertas. Este valor también se utiliza como dirección de origen de un informe cuando se comparte. Si la dirección de origen está precargada con la dirección «'OnCommand@localhost.com'», debe cambiarla a una dirección de correo electrónico real y activa para asegurarse de que todas las notificaciones de correo electrónico se envían correctamente.
+
+
+
+
+
+== Servidor SMTP
+
+Esta área permite configurar los siguientes ajustes del servidor SMTP:
+
+* *Nombre de host o Dirección IP*
++
+Especifica el nombre de host del servidor de host SMTP, que se utiliza para enviar la notificación de alerta a los destinatarios especificados.
+
+* *Nombre de usuario*
++
+Especifica el nombre de usuario SMTP. El nombre de usuario SMTP sólo es necesario cuando SMTPAUTH está habilitado en el servidor SMTP.
+
+* *Contraseña*
++
+Especifica la contraseña SMTP. El nombre de usuario SMTP sólo es necesario cuando SMTPAUTH está habilitado en el servidor SMTP.
+
+* *Puerto*
++
+Especifica el puerto que utiliza el servidor de host SMTP para enviar notificaciones de alerta.
+
++
+El valor predeterminado es 25.
+
+* *Utilice STARTTLS*
++
+Al activar esta casilla se proporciona una comunicación segura entre el servidor SMTP y el servidor de administración mediante los protocolos TLS/SSL (también conocidos como start_tls y StartTLS).
+
+* *Use SSL*
++
+Si activa esta casilla, se proporciona una comunicación segura entre el servidor SMTP y el servidor de administración mediante el protocolo SSL.
+
+
+
+
+
+== SNMP
+
+Esta área permite configurar las siguientes opciones de captura SNMP:
+
+* *Versión*
++
+Especifica la versión de SNMP que desea utilizar en función del tipo de seguridad que necesite. Las opciones incluyen la versión 1, la versión 3, la versión 3 con autenticación y la versión 3 con autenticación y cifrado. El valor predeterminado es Versión 1.
+
+* *Host de destino de captura*
++
+Especifica el nombre de host o la dirección IP (IPv4 o IPv6) que recibe las capturas SNMP que envía el servidor de gestión.
+
+* *Puerto de captura de salida*
++
+Especifica el puerto a través del cual el servidor SNMP recibe las capturas que envía el servidor de administración.
+
++
+El valor predeterminado es 162.
+
+* *Comunidad*
++
+La cadena de comunidad para acceder al host.
+
+* *ID del motor*
++
+Especifica el identificador único del agente SNMP y el servidor de administración lo genera automáticamente. El Id. Del motor está disponible con SNMP versión 3, SNMP versión 3 con autenticación y SNMP versión 3 con autenticación y cifrado.
+
+* *Nombre de usuario*
++
+Especifica el nombre de usuario SNMP. El nombre de usuario está disponible con SNMP versión 3, SNMP versión 3 con autenticación y SNMP versión 3 con autenticación y cifrado.
+
+* *Protocolo de autenticación*
++
+Especifica el protocolo utilizado para autenticar un usuario. Las opciones de protocolo incluyen MD5 y SHA. MD5 es el valor predeterminado. El protocolo de autenticación está disponible en SNMP Versión 3 con autenticación y SNMP Versión 3 con autenticación y cifrado.
+
+* *Contraseña de autenticación*
++
+Especifica la contraseña utilizada al autenticar un usuario. La contraseña de autenticación está disponible en SNMP Versión 3 con autenticación y SNMP Versión 3 con autenticación y cifrado.
+
+* *Protocolo de Privacidad*
++
+Especifica el protocolo de privacidad utilizado para cifrar mensajes SNMP. Las opciones de protocolo incluyen AES 128 y DES. El valor predeterminado es AES 128. El protocolo de privacidad está disponible en SNMP Versión 3 con autenticación y cifrado.
+
+* *Contraseña de privacidad*
++
+Especifica la contraseña cuando se utiliza el protocolo de privacidad. La contraseña de privacidad está disponible en SNMP Versión 3 con autenticación y cifrado.
+
+

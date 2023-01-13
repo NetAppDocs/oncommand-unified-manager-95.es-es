@@ -1,0 +1,29 @@
+---
+permalink: performance-checker/concept-collecting-data-and-monitoring-workload-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager recopila y analiza la actividad de la carga de trabajo cada 5 minutos para identificar eventos de rendimiento y detecta cambios de configuración cada 15 minutos. Conserva un máximo de 30 días de datos históricos de eventos y rendimiento de 5 minutos, y utiliza estos datos para prever el rango esperado para todas las cargas de trabajo supervisadas. 
+---
+= Recogida de datos y supervisión del rendimiento de carga de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager recopila y analiza la actividad de la carga de trabajo cada 5 minutos para identificar eventos de rendimiento y detecta cambios de configuración cada 15 minutos. Conserva un máximo de 30 días de datos históricos de eventos y rendimiento de 5 minutos, y utiliza estos datos para prever el rango esperado para todas las cargas de trabajo supervisadas.
+
+[NOTE]
+====
+Este capítulo describe cómo funcionan los umbrales dinámicos y cómo se utilizan para ayudar a supervisar el rendimiento de las cargas de trabajo. Este capítulo no se aplica a estadísticas o eventos causados por infracciones de umbral de rendimiento definidas por el usuario o por el sistema.
+
+====
+Unified Manager debe recoger como mínimo 3 días de actividad de carga de trabajo antes de que pueda iniciar su análisis y antes de que el rango esperado de tiempo de respuesta de I/o y las operaciones puedan mostrarse en la página Performance/Volume Details y en la página de detalles Event. Mientras se recopila esta actividad, el rango esperado no muestra todos los cambios producidos en la actividad de la carga de trabajo. Después de recoger 3 días de actividad, Unified Manager ajusta el rango esperado, cada 24 horas a las 12:00 a.m. para reflejar los cambios en la actividad de las cargas de trabajo y establecer un umbral de rendimiento más preciso.
+
+Durante los primeros 4 días en los que Unified Manager supervisa un volumen, si pasaron más de 24 horas desde la última recogida de datos, los gráficos de la página Performance/Volume Details no muestran el rango esperado para ese volumen. Los eventos detectados antes de la última recogida siguen estando disponibles.
+
+[NOTE]
+====
+El horario de verano cambia la hora del sistema, lo que altera el rango esperado de las estadísticas de rendimiento para las cargas de trabajo supervisadas. Unified Manager empieza a corregir el rango esperado de forma inmediata y tarda unos 15 días en completarlo. Durante este tiempo, es posible seguir usando Unified Manager, pero, dado que Unified Manager utiliza el rango esperado para detectar eventos, es posible que algunos eventos no sean precisos. Los eventos detectados antes del cambio de hora no se verán afectados. Retrasar la hora de forma manual en un clúster o en un servidor de Unified Manager también afectará a los resultados de los análisis de eventos.
+
+====

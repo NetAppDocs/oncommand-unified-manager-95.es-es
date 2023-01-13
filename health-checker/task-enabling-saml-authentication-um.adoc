@@ -1,0 +1,81 @@
+---
+permalink: health-checker/task-enabling-saml-authentication-um.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede habilitar la autenticación del lenguaje de marcado de aserción de seguridad \(SAML\) de modo que los usuarios remotos estén autenticados por un proveedor de identidades seguro \(IDP\) antes de que puedan acceder a la interfaz de usuario web de Unified Manager.' 
+---
+= Habilitación de la autenticación SAML
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede habilitar la autenticación del lenguaje de marcado de aserción de seguridad (SAML) para que los usuarios remotos se autentiquen mediante un proveedor de identidad seguro (IDP) antes de poder acceder a la interfaz de usuario web de Unified Manager.
+
+
+
+== Antes de empezar
+
+* Debe haber configurado la autenticación remota y verificado que la autenticación se ha realizado correctamente.
+* Debe haber creado al menos un usuario remoto, o un grupo remoto, con el rol de administrador de OnCommand.
+* El proveedor de identidades (IDP) debe ser compatible con Unified Manager y debe configurarse.
+* Debe tener la URL y los metadatos de IDP.
+* Debe tener acceso al servidor IDP.
+
+
+
+
+== Acerca de esta tarea
+
+Después de habilitar la autenticación SAML de Unified Manager, los usuarios no pueden acceder a la interfaz gráfica de usuario hasta que el IDP se haya configurado con la información de host del servidor de Unified Manager. Por lo tanto, debe estar preparado para completar ambas partes de la conexión antes de iniciar el proceso de configuración. El IDP se puede configurar antes o después de configurar Unified Manager.
+
+Solo los usuarios remotos tendrán acceso a la interfaz gráfica de usuario de Unified Manager después de habilitar la autenticación SAML. Los usuarios locales y los usuarios de mantenimiento no podrán acceder a la interfaz de usuario. Esta configuración no afecta a los usuarios que acceden a la consola de mantenimiento, los comandos de Unified Manager o las ZAPI.
+
+[NOTE]
+====
+Unified Manager se reinicia automáticamente después de completar la configuración de SAML en esta página.
+
+====
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *autenticación* en el menú Configuración de la izquierda.
+. En la página *Configuración/autenticación*, seleccione la ficha *autenticación SAML*.
+. Seleccione la casilla de verificación *Habilitar autenticación SAML*.
++
+Se mostrarán los campos necesarios para configurar la conexión IDP.
+
+. Introduzca el URI de IDP y los metadatos de IDP necesarios para conectar el servidor de Unified Manager al servidor de IDP.
++
+Si se puede acceder al servidor IDP directamente desde el servidor de Unified Manager, puede hacer clic en el botón *Fetch IDP Metadata* después de introducir el URI IDP para rellenar el campo IDP Metadata automáticamente.
+
+. Copie el URI de metadatos de host de Unified Manager o guarde los metadatos del host en un archivo de texto XML.
++
+Ahora es posible configurar el servidor IDP con esta información.
+
+. Haga clic en *Guardar*.
++
+Aparece un cuadro de mensaje para confirmar que desea completar la configuración y reiniciar Unified Manager.
+
+. Haga clic en *Confirmar y cerrar sesión* y se reiniciará Unified Manager.
+
+
+
+
+== Resultados
+
+La próxima vez que los usuarios remotos autorizados intenten acceder a la interfaz gráfica de Unified Manager, deberán introducir sus credenciales en la página de inicio de sesión de IDP en lugar de en la página de inicio de sesión de Unified Manager.
+
+
+
+== Después de terminar
+
+Si no se ha completado todavía, acceda a IDP e introduzca el URI del servidor de Unified Manager y los metadatos para completar la configuración.
+
+[NOTE]
+====
+Cuando se utiliza ADFS como proveedor de identidades, la interfaz gráfica de usuario de Unified Manager no cumple el tiempo de espera de ADFS y continúa funcionando hasta que se alcanza el tiempo de espera de la sesión de Unified Manager. Cuando Unified Manager se pone en marcha en Windows, Red Hat o CentOS, puede cambiar el tiempo de espera de sesión de la interfaz gráfica de usuario mediante el siguiente comando CLI de Unified Manager: ``um option set absolute.session.timeout=00:15:00``Este comando configura el tiempo de espera de sesión de la interfaz gráfica de usuario de Unified Manager en 15 minutos.
+
+====

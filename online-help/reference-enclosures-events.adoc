@@ -1,0 +1,101 @@
+---
+permalink: online-help/reference-enclosures-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de compartimentos le proporcionan información sobre el estado de los compartimentos de bandejas de discos en el centro de datos para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de compartimentos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de compartimentos le proporcionan información sobre el estado de los compartimentos de bandejas de discos en el centro de datos para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Error de los ventiladores de la bandeja de discos (ocumEvtShelfFanFailed)
+ a| 
+Incidente
+ a| 
+Bandeja de almacenamiento
+ a| 
+Crítico
+
+
+
+ a| 
+Error en los suministros de alimentación de la bandeja de discos (ocumEvtShelfPowerSupplyFailed)
+ a| 
+Incidente
+ a| 
+Bandeja de almacenamiento
+ a| 
+Crítico
+
+
+
+ a| 
+Bandeja de discos multivía no configurada (ocumDiskShelfShelfcNotInMultiPath)
+
+Este evento no se aplica a:
+
+* Clústeres que están en una configuración de MetroCluster
+* Las siguientes plataformas: FAS2554, FAS2552, FAS2520 y FAS2240
+
+ a| 
+Riesgo
+ a| 
+Nodo
+ a| 
+Advertencia
+
+
+
+ a| 
+Fallo de ruta de bandeja de discos (ocumDiskShelfDiskShelfP PathFailure)
+ a| 
+Riesgo
+ a| 
+Bandeja de almacenamiento
+ a| 
+Advertencia
+
+|===
+
+
+== Área de impacto: Configuración
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Bandeja de discos detectada (no aplicable)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Información
+
+
+
+ a| 
+Bandejas de discos eliminadas (no aplicable)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Información
+
+|===

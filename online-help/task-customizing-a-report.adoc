@@ -1,0 +1,45 @@
+---
+permalink: online-help/task-customizing-a-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar los informes en la página de detalles Report y, a continuación, guardar el informe personalizado con un nombre diferente. 
+---
+= Personalización de un informe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar los informes en la página de detalles Report y, a continuación, guardar el informe personalizado con un nombre diferente.
+
+
+
+== Acerca de esta tarea
+
+Después de guardar un informe personalizado, no puede modificar ninguno de los filtros aplicados para crear el informe porque el informe se considera "'nuevo'". Asegúrese de que está satisfecho con todos los cambios antes de guardar el informe. Sin embargo, puede aplicar nuevos filtros al informe.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Informes* y, a continuación, haga clic en *Ejecutar informe* para el informe que desea personalizar.
++
+Se mostrará la página de detalles Report.
+
+. Personalice el informe según sea necesario y, a continuación, haga clic en *acciones* > *Guardar informe personalizado como*.
+. En el cuadro de diálogo *Guardar informe personalizado como*, escriba un nombre para el informe personalizado y una breve descripción sobre la personalización para que otros comprendan lo que muestra el informe.
++
+De forma predeterminada, se muestra el nombre del informe actual.
+
+. Haga clic en *Guardar*.
++
+Si recibe el mensaje de error "'no se pudo guardar el informe personalizado. El archivo requerido no fue creado'", espere unos momentos y, a continuación, haga clic en *Guardar* de nuevo. Este problema se ha visto cuando existe una conexión lenta entre el explorador web y el servidor de Unified Manager.
+
+
+
+
+
+== Resultados
+
+El informe personalizado se guarda y se muestra en su categoría de informe correspondiente en la página de detalles del informe.

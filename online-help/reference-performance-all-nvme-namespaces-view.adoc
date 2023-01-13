@@ -1,0 +1,89 @@
+---
+permalink: online-help/reference-performance-all-nvme-namespaces-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La página de inventario Namespaces muestra una descripción general de los eventos de rendimiento, los datos y la información de configuración de cada espacio de nombres que supervisa una instancia de Unified Manager. Esto permite supervisar rápidamente el rendimiento y el estado de los espacios de nombres, así como resolver problemas y eventos de umbral. 
+---
+= Página de inventario de espacios de nombres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página de inventario Namespaces muestra una descripción general de los eventos de rendimiento, los datos y la información de configuración de cada espacio de nombres que supervisa una instancia de Unified Manager. Esto permite supervisar rápidamente el rendimiento y el estado de los espacios de nombres, así como resolver problemas y eventos de umbral.
+
+En función de cómo vaya a esta página, la parte superior de la página puede mostrar un título diferente para indicar si la lista se ha filtrado. Por ejemplo, cuando se muestran todos los espacios de nombres, el título es "'Namespaces'". Al mostrar un subconjunto de espacios de nombres que se devuelve desde la página Directivas de umbral, el título es "'espacios de nombres en los que se aplica la directiva: Namespace_IOPS'".
+
+Los botones de la parte superior de la página permiten realizar búsquedas para localizar datos específicos, crear y aplicar filtros para restringir la lista de datos mostrados, exportar los datos de la página a un `.csv` y agregue o elimine columnas de la página.
+
+De forma predeterminada, los objetos de las páginas de inventario de objetos se ordenan en función de la importancia de evento de rendimiento del objeto. Los objetos con eventos críticos se enumeran primero y los objetos con eventos de advertencia aparecen en segundo lugar. Esto proporciona una indicación visual inmediata de los problemas que deben abordarse. Los valores de los contadores de rendimiento se basan en una media de las 72 horas de datos anteriores o más, como se indica en la página. Puede hacer clic en el botón Refresh para actualizar los datos de inventario de objetos.
+
+Puede asignar directivas de umbral de rendimiento a cualquier objeto de las páginas de inventario de objetos o borrar directivas de umbral mediante los botones *asignar directiva de umbral de rendimiento* y *Borrar directiva de umbral de rendimiento*.
+
+
+
+== Espacios de nombres columnas de página de inventario
+
+La página de inventario Namespaces contiene las siguientes columnas para cada espacio de nombres:
+
+* *Subsistema*
++
+El subsistema del espacio de nombres.
+
+* *Estado*
++
+Un objeto en buen estado sin eventos activos muestra un icono de Marca de verificación verde (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]). Si el objeto tiene un evento activo, el icono del indicador de evento identifica la gravedad del evento: Los eventos críticos son rojos (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]), los eventos de error son naranjas (image:../media/sev-error-um60.png["Icono para la gravedad del evento: Error"]), y los sucesos de advertencia son amarillos (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]).
+
+* *Espacio de nombres*
++
+Es posible hacer clic en el nombre del espacio de nombres para acceder a la página de detalles de rendimiento de ese espacio de nombres.
+
+* *Estado*
++
+El estado actual del espacio de nombres.
+
++
+** Sin conexión: No se permite el acceso de lectura o escritura al espacio de nombres.
+** En línea: Se permite el acceso de lectura y escritura al espacio de nombres.
+** NVFAIL: El espacio de nombres se desconectó automáticamente debido a un fallo de NVRAM.
+** Error de espacio: El espacio de nombres se ha quedado sin espacio.
+
+
+* *SVM*
++
+La máquina virtual de almacenamiento (SVM) a la que pertenece el espacio de nombres. Puede hacer clic en el nombre de la SVM para desplazarse a la página de detalles de esa SVM.
+
+* *Cluster*
++
+El clúster al que pertenece el espacio de nombres. Puede hacer clic en el nombre del clúster para ir a la página de detalles de ese clúster.
+
+* *Volumen*
++
+El volumen al que pertenece el espacio de nombres. Es posible hacer clic en el nombre del volumen para desplazarse a la página de detalles de ese volumen.
+
+* *Capacidad total*
++
+La capacidad de almacenamiento total del espacio de nombres, en gigabytes.
+
+* *Capacidad libre*
++
+La capacidad de almacenamiento sin utilizar del espacio de nombres, en gigabytes.
+
+* *IOPS*
++
+Las operaciones de entrada/salida por segundo para el espacio de nombres.
+
+* *Latencia*
++
+El tiempo de respuesta medio para todas las solicitudes de I/o en el espacio de nombres, expresado en milisegundos por operación.
+
+* *Mbps*
++
+El rendimiento en el espacio de nombres, medido en megabytes por segundo.
+
+* *Política de umbral*
++
+La política de umbral de rendimiento definida por el usuario, o políticas, que están activas en este objeto de almacenamiento. Puede colocar el cursor sobre los nombres de directivas que contienen puntos suspensivos (...). para ver el nombre completo de la directiva o la lista de nombres de directivas asignadas. Los botones *Assign Performance Threshold Policy* y *Clear Performance Threshold Policy* permanecen desactivados hasta que seleccione uno o más objetos haciendo clic en las casillas de verificación situadas en el extremo izquierdo.
+
+

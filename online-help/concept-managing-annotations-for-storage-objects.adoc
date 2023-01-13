@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-managing-annotations-for-storage-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear anotaciones en Unified Manager para anotar objetos de almacenamiento. Las anotaciones permiten identificar fácilmente los recursos críticos y realizar las acciones adecuadas; por ejemplo, agregar recursos críticos a un grupo y asignar una acción de grupo, o crear un informe de recursos anotados. 
+---
+= Gestionar anotaciones para objetos de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear anotaciones en Unified Manager para anotar objetos de almacenamiento. Las anotaciones permiten identificar fácilmente los recursos críticos y realizar las acciones adecuadas; por ejemplo, agregar recursos críticos a un grupo y asignar una acción de grupo, o crear un informe de recursos anotados.

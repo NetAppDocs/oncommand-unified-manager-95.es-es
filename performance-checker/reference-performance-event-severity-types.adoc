@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/reference-performance-event-severity-types.html 
+sidebar: sidebar 
+keywords:  
+summary: Cada evento de rendimiento está asociado con un tipo de gravedad para ayudarle a priorizar los eventos que requieren una acción correctiva inmediata. 
+---
+= Tipos de gravedad de eventos de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada evento de rendimiento está asociado con un tipo de gravedad para ayudarle a priorizar los eventos que requieren una acción correctiva inmediata.
+
+* *Crítico*
++
+Se produjo un evento de rendimiento que podría provocar una interrupción del servicio si no se emprenderse inmediatamente una acción correctiva.
+
++
+Los eventos críticos se envían únicamente desde umbrales definidos por el usuario.
+
+* *Advertencia*
++
+Un contador de rendimiento de un objeto de clúster está fuera del rango normal y se debe supervisar para asegurarse de que no alcanza la gravedad crucial. Los eventos de esta gravedad no provocan interrupciones del servicio y podría no ser necesario realizar una acción correctiva inmediata.
+
++
+Los eventos de advertencia se envían desde umbrales definidos por el usuario, definidos por el sistema o dinámicos.
+
+* *Información*
++
+El evento se produce cuando se descubre un nuevo objeto o cuando se realiza una acción del usuario. Por ejemplo, cuando se elimina un objeto de almacenamiento o cuando hay cambios de configuración, se genera el evento con tipo gravedad Information.
+
++
+Los eventos de información se envían directamente desde ONTAP cuando detecta un cambio de configuración.
+
+

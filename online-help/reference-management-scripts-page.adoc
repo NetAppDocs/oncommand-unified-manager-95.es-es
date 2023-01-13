@@ -1,0 +1,46 @@
+---
+permalink: online-help/reference-management-scripts-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Management/Scripts permite añadir sus scripts personalizados a Unified Manager. Puede asociar estos scripts con alertas para habilitar la reconfiguración automática de los objetos de almacenamiento. 
+---
+= Página Management/Scripts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Management/Scripts permite añadir sus scripts personalizados a Unified Manager. Puede asociar estos scripts con alertas para habilitar la reconfiguración automática de los objetos de almacenamiento.
+
+La página Management/Scripts permite añadir o eliminar scripts de Unified Manager.
+
+
+
+== Botones de comando
+
+* *Agregar*
++
+Muestra el cuadro de diálogo Agregar script, que permite agregar scripts.
+
+* *Eliminar*
++
+Elimina la secuencia de comandos seleccionada.
+
+
+
+
+
+== Vista de lista
+
+La vista de lista muestra, en formato de tabla, los scripts que se añadieron a Unified Manager.
+
+* *Nombre*
++
+Muestra el nombre del script.
+
+* *Descripción*
++
+Muestra la descripción del script.
+
+

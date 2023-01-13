@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-qtree-capacity-and-utilization-report-customizations.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede crear informes personalizados para analizar la capacidad y la utilización de los qtrees del sistema. Por ejemplo, puede crear informes para ordenar qtrees a fin de determinar si alguna ha incumplido el límite de software del disco o del archivo. 
+---
+= Personalizaciones de los informes de capacidad y utilización de qtrees
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear informes personalizados para analizar la capacidad y el uso de los qtrees del sistema. Por ejemplo, puede crear informes para ordenar qtrees a fin de determinar si alguna ha incumplido el límite de software del disco o del archivo.

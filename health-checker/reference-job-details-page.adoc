@@ -1,0 +1,126 @@
+---
+permalink: health-checker/reference-job-details-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página de detalles Protection/Job permite ver el estado y otra información sobre las tareas específicas de trabajos de protección en ejecución, que se encuentran en cola o que han finalizado. Es posible usar esta información para supervisar el progreso del trabajo de protección y solucionar problemas de fallos de trabajos. 
+---
+= Página de detalles Protection/Job
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página de detalles Protection/Job permite ver el estado y otra información sobre las tareas específicas de trabajos de protección en ejecución, que se encuentran en cola o que han finalizado. Es posible usar esta información para supervisar el progreso del trabajo de protección y solucionar problemas de fallos de trabajos.
+
+
+
+== Resumen de tareas
+
+El resumen de trabajos muestra la siguiente información:
+
+* ID de trabajo
+* Tipo
+* Estado
+* Hora de envío
+* Tiempo de finalización
+* Duración
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Actualizar*
++
+Actualiza la lista de tareas y las propiedades asociadas a cada tarea.
+
+* *Ver trabajos*
++
+Devuelve al valor de la página Protection/Jobs.
+
+
+
+
+
+== Lista de tareas de trabajo
+
+La lista tareas de trabajo muestra en una tabla todas las tareas asociadas a un trabajo específico y las propiedades relacionadas con cada tarea.
+
+* *Tiempo de inicio*
++
+Muestra el día y la hora en que se inició la tarea. De forma predeterminada, las tareas más recientes se muestran en la parte superior de la columna y las tareas más antiguas se muestran en la parte inferior.
+
+* *Tipo*
++
+Muestra el tipo de tarea.
+
+* *Estado*
++
+El estado de una tarea en particular:
+
++
+** *Completado*
++
+La tarea ha finalizado.
+
+** *En cola*
++
+La tarea está a punto de ejecutarse.
+
+** *En funcionamiento*
++
+La tarea está en ejecución.
+
+** *Esperando*
++
+Se ha enviado un trabajo y algunas tareas asociadas están esperando a que se pongan en cola y se ejecuten.
+
+
+
+* *Estado*
++
+Muestra el estado de la tarea:
+
++
+** *Error (image:../media/sev-error.gif[""])*
++
+Error de tarea.
+
+** *Normal (image:../media/sev-normal.gif[""])*
++
+La tarea se ha realizado correctamente.
+
+** *Omitida (image:../media/icon-skipped.gif[""])*
++
+Error en una tarea, por lo que se omitirán tareas posteriores.
+
+
+
+* *Duración*
++
+Muestra el tiempo transcurrido desde que comenzó la tarea.
+
+* *Tiempo de finalización*
++
+Muestra el tiempo que ha finalizado la tarea. De forma predeterminada, esta columna está oculta.
+
+* *ID de tarea*
++
+Muestra el GUID que identifica una tarea individual para un trabajo. La columna se puede ordenar y filtrar. De forma predeterminada, esta columna está oculta.
+
+* *Orden de dependencia*
++
+Muestra un entero que representa la secuencia de tareas de un gráfico, con cero asignado a la primera tarea. De forma predeterminada, esta columna está oculta.
+
+* *Panel de detalles de tareas*
++
+Muestra información adicional acerca de cada tarea de trabajo, incluido el nombre de la tarea, la descripción de la tarea y, si la tarea no se realizó correctamente, un motivo del error.
+
+* *Panel de mensajes de tarea*
++
+Muestra mensajes específicos de la tarea seleccionada. Los mensajes pueden incluir un motivo para el error y sugerencias para resolverlo. No todas las tareas muestran mensajes de tareas.
+
+

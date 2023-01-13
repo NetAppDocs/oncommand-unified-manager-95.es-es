@@ -1,0 +1,74 @@
+---
+permalink: performance-checker/task-responding-to-a-performance-incident-caused-by-ha-takeover.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede utilizar Unified Manager para investigar un evento de rendimiento provocado por un alto procesamiento de datos en un nodo de clúster que se encuentra en un par de \(ha\) de alta disponibilidad. También puede usar Unified Manager para comprobar el estado de los nodos a fin de ver si algún evento de estado reciente detectado en los nodos contribuyó al evento de rendimiento.' 
+---
+= Responder a un evento de rendimiento dinámico causado por la toma de control de alta disponibilidad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar Unified Manager para investigar un evento de rendimiento causado por un alto procesamiento de datos en un nodo de clúster que se encuentra en un par de alta disponibilidad (ha). También puede usar Unified Manager para comprobar el estado de los nodos a fin de ver si algún evento de estado reciente detectado en los nodos contribuyó al evento de rendimiento.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento nuevos, reconocidos o obsoletos.
+
+
+
+
+== Pasos
+
+. Abra la página *Detalles del evento* para ver información sobre el evento.
+. Lea la *Descripción*, que describe las cargas de trabajo implicadas en el evento y el componente de clúster en disputa.
++
+Hay un volumen víctima cuya latencia se vio afectada por el componente del clúster en disputa. El nodo de procesamiento de datos, que adquirió todas las cargas de trabajo del nodo asociado, es el componente de clúster en disputa. En componente en disputa, el icono procesamiento de datos se resalta en rojo y el nombre del nodo que estaba gestionando el procesamiento de datos en el momento del evento se muestra entre paréntesis.
+
+. En *Descripción*, haga clic en el nombre del volumen de la víctima.
++
+Se muestra la página Performance/Volume Details. En la parte inferior de la página, en la línea tiempo Eventos, un icono de evento de cambio (image:../media/opm-change-icon.gif["Icono de cambio de evento"]) Indica la hora a la que Unified Manager detectó el inicio de la toma de control de alta disponibilidad.
+
+. Dirija su cursor al icono de evento de cambio para la toma de control de ha.
++
+Los detalles sobre la toma de control de alta disponibilidad se muestran en la tabla Lista de eventos. En el gráfico latencia, un evento indica que el volumen seleccionado superó el umbral de rendimiento debido a una alta latencia aproximadamente el mismo tiempo que la toma de control de alta disponibilidad.
+
+. Seleccione *romper datos por*.
+. En *latencia*, seleccione ***componentes de clúster***.
+. Haga clic en *Enviar*.
++
+Aparecerá el gráfico Cluster Components. El gráfico divide la latencia total por componente del clúster.
+
+. En la parte inferior de la página, coloque el cursor del ratón en el icono de cambio de evento para el inicio de la toma de control de ha.
+. En el gráfico *Cluster Components*, compare la latencia del procesamiento de datos con la latencia total del gráfico *latencia*.
++
+En el momento de la toma de control de alta disponibilidad, se produjo un pico en el procesamiento de datos frente a la creciente demanda de carga de trabajo sobre el nodo de procesamiento de datos. El mayor uso de la CPU aumentó la latencia y activó el evento.
+
+. Después de corregir el nodo con errores, use System Manager de OnCommand para realizar un retorno de alta disponibilidad, que mueve las cargas de trabajo del nodo asociado al nodo fijo.
+. Una vez finalizada la devolución de alta disponibilidad, en Unified Manager, busque el ID de evento que registró en el paso 2.
++
+El evento activado por la toma de control de alta disponibilidad se muestra en la página de detalles Event. El evento ahora tiene un estado obsoleto, lo que indica que se ha resuelto el evento.
+
+. En *Descripción*, haga clic en el nombre del volumen de la víctima.
++
+Se muestra la página Performance/Volume Details. En la parte inferior de la página, en la línea de tiempo Events, un icono de evento de cambio indica el tiempo en que Unified Manager detectó la finalización de la devolución de alta disponibilidad.
+
+. Seleccione *romper datos por*.
+. En *latencia*, seleccione ***componentes de clúster***.
++
+Aparecerá el gráfico Cluster Components.
+
+. En la parte inferior de la página, apunte el cursor al icono de evento de cambio para la devolución de alta disponibilidad.
++
+El evento de cambio se resalta en la tabla Lista de eventos e indica que la devolución ha se ha completado correctamente.
+
+. En el gráfico *Cluster Components*, compare la latencia del procesamiento de datos con la latencia total del gráfico *latencia*.
++
+La latencia en el componente de procesamiento de datos ha disminuido, lo que ha reducido la latencia total. El evento se ha resuelto en el nodo que el volumen seleccionado ahora utiliza para el procesamiento de datos.
+
+

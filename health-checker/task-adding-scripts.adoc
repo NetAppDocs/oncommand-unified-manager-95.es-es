@@ -1,0 +1,51 @@
+---
+permalink: health-checker/task-adding-scripts.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede añadir scripts en Unified Manager y asociarlos con alertas. Estos scripts se ejecutan automáticamente cuando se genera una alerta, y le permiten obtener información sobre los objetos de almacenamiento para los que se genera el evento. 
+---
+= Añadiendo scripts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir scripts en Unified Manager y asociarlos con alertas. Estos scripts se ejecutan automáticamente cuando se genera una alerta, y le permiten obtener información sobre los objetos de almacenamiento para los que se genera el evento.
+
+
+
+== Antes de empezar
+
+* Debe haber creado y guardado los scripts que desea añadir al servidor de Unified Manager.
+* Los formatos de archivo compatibles con scripts son Perl, Shell, PowerShell y `.bat` archivos.
++
+** Para los scripts Perl, se debe instalar Perl en el servidor Unified Manager. Si se instaló Perl después de Unified Manager, debe reiniciar el servidor de Unified Manager.
+** Para los scripts de PowerShell, se debe establecer la directiva de ejecución de PowerShell correspondiente en el servidor para poder ejecutar los scripts.
+
+
++
+[NOTE]
+====
+Si el script crea archivos de registro para realizar un seguimiento del progreso del script de alertas, debe asegurarse de que no se creen los archivos de registro en ningún lugar de la carpeta de instalación de Unified Manager.
+
+====
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+
+== Acerca de esta tarea
+
+Puede cargar scripts personalizados y recopilar detalles de eventos acerca de la alerta.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *Scripts* en el menú Administración de la izquierda.
+. En la página *Management/Scripts* , haga clic en *Agregar*.
+. En el cuadro de diálogo *Agregar script*, haga clic en *examinar* para seleccionar el archivo de secuencia de comandos.
+. Introduzca una descripción para la secuencia de comandos que seleccione.
+. Haga clic en *Agregar*.
+

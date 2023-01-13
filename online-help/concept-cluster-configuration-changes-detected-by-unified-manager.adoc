@@ -1,0 +1,36 @@
+---
+permalink: online-help/concept-cluster-configuration-changes-detected-by-unified-manager.html 
+sidebar: sidebar 
+keywords: Performance Manager 
+summary: 'Unified Manager supervisa sus clústeres para detectar cambios de configuración con el fin de ayudarle a determinar si un cambio podría haber causado o contribuido a un evento de rendimiento. Las páginas de Performance Explorer muestran un icono de evento de cambio \(\) para indicar la fecha y la hora en que se detectó el cambio.' 
+---
+= Cambios de configuración detectados por Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager supervisa sus clústeres para detectar cambios de configuración con el fin de ayudarle a determinar si un cambio podría haber causado o contribuido a un evento de rendimiento. Las páginas Performance Explorer muestran un icono de evento de cambio (image:../media/opm-change-icon.gif["Icono de cambio de evento"]) para indicar la fecha y la hora en que se detectó el cambio.
+
+Puede revisar los gráficos de rendimiento en las páginas Performance Explorer y en la página Performance/Volume Details para ver si el evento de cambio afectaba al rendimiento del objeto de clúster seleccionado. Si el cambio se detectó en o aproximadamente al mismo tiempo que un evento de rendimiento, el cambio podría haber contribuido al problema, lo que provocó que se disparara la alerta de evento.
+
+Unified Manager puede detectar los siguientes eventos de cambio, que se clasifican como eventos informativos:
+
+* Un volumen se mueve entre agregados.
++
+Unified Manager puede detectar cuando el movimiento está en curso, completado o con errores. Si Unified Manager está inactivo durante un movimiento de volúmenes, cuando se realiza el backup, detecta el movimiento del volumen y muestra un evento de cambio para él.
+
+* El límite de rendimiento (MB/s o IOPS) de un grupo de políticas de calidad de servicio que contiene uno o más cambios en las cargas de trabajo supervisadas.
++
+Cambiar el límite de un grupo de políticas puede provocar picos intermitentes en la latencia (tiempo de respuesta), que también podrían desencadenar eventos del grupo de políticas. La latencia volverá a la normalidad de forma gradual y los eventos causados por los picos quedarán obsoletos.
+
+* Un nodo de un par de alta disponibilidad toma el control o devuelve el almacenamiento de su otro nodo.
++
+Unified Manager puede detectar cuándo se ha completado la operación de toma de control, toma de control parcial o retorno al nodo primario. Si la toma de control está provocada por un nodo de pánico, Unified Manager no detecta el evento.
+
+* Se ha completado correctamente una actualización o una operación de reversión de ONTAP.
++
+Se muestran la versión anterior y la nueva.
+
+

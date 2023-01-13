@@ -1,0 +1,81 @@
+---
+permalink: health-checker/task-migrating-a-unified-manager-virtual-appliance-to-a-rhel-or-centos-system.html 
+sidebar: sidebar 
+keywords: Unified Manager 
+summary: Puede restaurar un backup de base de datos de Unified Manager desde un dispositivo virtual a un sistema Red Hat Enterprise Linux o CentOS Linux si desea cambiar el sistema operativo host en el que se ejecuta Unified Manager. 
+---
+= Migración de un dispositivo virtual de Unified Manager a un sistema Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede restaurar un backup de base de datos de Unified Manager desde un dispositivo virtual a un sistema Red Hat Enterprise Linux o CentOS Linux si desea cambiar el sistema operativo host en el que se ejecuta Unified Manager.
+
+
+
+== Antes de empezar
+
+* En el dispositivo virtual:
++
+** Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento para crear el backup.
+** Debe conocer el nombre del usuario de mantenimiento de Unified Manager para la operación de restauración.
+
+
+* En el sistema Linux:
++
+** Debe haber instalado Unified Manager en un servidor RHEL o CentOS según las instrucciones que se indican en la guía de instalación.
+** La versión de Unified Manager en este servidor debe ser la misma que la versión del dispositivo virtual desde el que se utiliza el archivo de backup.
+** No inicie la interfaz de usuario ni configure ningún clúster, usuario ni configuración de autenticación en el sistema Linux después de la instalación. El archivo de backup rellena esta información durante el proceso de restauración.
+** Debe tener las credenciales de usuario raíz para el host Linux.
+
+
+
+
+
+
+== Acerca de esta tarea
+
+Estos pasos describen cómo crear un archivo de copia de seguridad en el dispositivo virtual, copiar los archivos de copia de seguridad en el sistema Red Hat Enterprise Linux o CentOS y, a continuación, restaurar la copia de seguridad de la base de datos en el nuevo sistema.
+
+
+
+== Pasos
+
+. En el dispositivo virtual, en la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *copia de seguridad de la base de datos*.
+. En la página *copia de seguridad de la base de datos/administración*, haga clic en *acciones* > *Configuración de copia de seguridad de la base de datos*.
+. Cambie la ruta de backup a. `/jail/support`.
+. En la sección *frecuencia de programación*, seleccione la casilla de verificación *Activar*, seleccione *Diario* e introduzca una hora transcurridos unos minutos de la hora actual para que la copia de seguridad se cree en breve.
+. Haga clic en *Guardar y cerrar*.
+. Espere unas horas para que se genere el backup.
++
+Un backup completo puede tener más de 1 GB y puede tardar entre tres y cuatro horas en completarse.
+
+. Inicie sesión como usuario raíz en el host Linux en el que se instaló Unified Manager y copie los archivos de backup desde `/support` En el dispositivo virtual que utiliza SCP.`root@<rhel_server>:/# scp -r admin@<vapp_server_ip_address>:/support/* .`
++
+`root@ocum_rhel-21:/# scp -r admin@10.10.10.10:/support/* .`
+
++
+Asegúrese de haber copiado el `.7z` copia de seguridad del archivo y todo el `.7z` los archivos del repositorio de en `/database-dumps-repo` subdirectorio.
+
+. En el símbolo del sistema, restaure el backup: `um backup restore -f /<backup_file_path>/<backup_file_name>`
++
+`um backup restore -f /UM_9.4.N151113.1348_backup_unix_02-12-2018-04-16.7z`
+
+. Una vez que finaliza la operación de restauración, inicie sesión en la interfaz de usuario web de Unified Manager.
+
+
+
+
+== Después de terminar
+
+Debe realizar las siguientes tareas:
+
+* Genere un nuevo certificado de seguridad HTTPS y reinicie Unified Manager Server.
+* Cambie la ruta de backup a la configuración predeterminada del sistema Linux (`/data/ocum-backup`), o a una nueva ruta de su elección, porque no hay `/jail/support` Ruta en el sistema Linux.
+* Vuelva a configurar ambas partes de su conexión de Workflow Automation si se está utilizando WFA.
+* Vuelva a configurar la configuración de autenticación SAML si utiliza SAML.
+
+
+Después de verificar que todo se está ejecutando como se espera en el sistema Linux, puede apagar y quitar el dispositivo virtual de Unified Manager.

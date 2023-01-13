@@ -1,0 +1,100 @@
+---
+permalink: online-help/task-moving-workloads-to-a-different-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar Unified Manager para ayudar a identificar un agregado en un nodo diferente que esté menos ocupado que el nodo en el que se están ejecutando las cargas de trabajo en ese momento y, a continuación, puede mover los volúmenes seleccionados a ese agregado. Mover cargas de trabajo de alto rendimiento a un agregado en un nodo menos ocupado permite que las cargas de trabajo de ambos nodos tengan un rendimiento más eficiente. 
+---
+= Mover las cargas de trabajo a un nodo diferente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar Unified Manager para ayudar a identificar un agregado en un nodo diferente que esté menos ocupado que el nodo en el que se están ejecutando las cargas de trabajo en ese momento y, a continuación, puede mover los volúmenes seleccionados a ese agregado. Mover cargas de trabajo de alto rendimiento a un agregado en un nodo menos ocupado permite que las cargas de trabajo de ambos nodos tengan un rendimiento más eficiente.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber registrado el nombre del nodo que está teniendo actualmente un problema de rendimiento.
+* Debe haber registrado la fecha y la hora en que el nodo recibió el evento de rendimiento.
+* Debe haber registrado el ID del evento, por ejemplo, «'p-sdt-clus1-nod-6982».
+* Unified Manager debe haber recopilado y analizado los datos de rendimiento por un mes o más.
+
+
+
+
+== Acerca de esta tarea
+
+Este procedimiento le ayuda a identificar los siguientes recursos para poder mover cargas de trabajo de alto rendimiento a un nodo más bajo utilizado:
+
+* Los nodos en el mismo clúster que tienen la mayor capacidad de rendimiento libre
+* Los agregados del nodo nuevo que tienen la mayor capacidad de rendimiento libre
+* Los volúmenes de mayor rendimiento en el nodo actual
+
+
+
+
+== Pasos
+
+. Identifique un nodo del clúster que tenga la mayor capacidad de rendimiento libre:
++
+.. En la página *Detalles de evento*, haga clic en el nombre del clúster en el que reside el nodo.
++
+Los detalles del clúster se muestran en la página Performance/Cluster Landing.
+
+.. En la ficha *Resumen*, haga clic en *nodos* en el panel *objetos gestionados*.
++
+Se muestra la lista de nodos de este clúster.
+
+.. Haga clic en la columna *capacidad de rendimiento utilizada* para ordenar los nodos por porcentaje mínimo utilizado.
++
+Proporciona una lista de nodos potenciales a los que se podría mover cargas de trabajo.
+
+.. Escriba el nombre del nodo al que desea mover las cargas de trabajo.
+
+
+. Identifique un agregado en el nuevo nodo que sea lo menos utilizado:
++
+.. En el panel de navegación izquierdo, haga clic en *rendimiento* > *agregados*.
++
+Aparecerá la página Performance/Aggregates.
+
+.. Haga clic en *filtrado*, seleccione *nodo* en el menú desplegable de la izquierda, escriba el nombre del nodo en el campo de texto y, a continuación, haga clic en *aplicar filtro*.
++
+La página Performance/Aggregates vuelve a aparecer con la lista de agregados disponibles en este nodo.
+
+.. Haga clic en la columna *capacidad de rendimiento utilizada* para ordenar los agregados por menos utilizados.
++
+De este modo, se proporciona una lista de agregados potenciales a los que se pueden mover cargas de trabajo.
+
+.. Escriba el nombre del agregado al que desea mover las cargas de trabajo.
+
+
+. Identifique las cargas de trabajo de alto rendimiento del nodo que recibió el evento:
++
+.. Vuelva a la página *Detalles del evento* del evento.
+.. En el campo *volúmenes afectados*, haga clic en el enlace del número de volúmenes.
++
+La página Performance/Volumes se muestra con una lista filtrada de los volúmenes de ese nodo.
+
+.. Haga clic en la columna *capacidad total* para ordenar los volúmenes por el espacio asignado más grande.
++
+Proporciona una lista de los volúmenes potenciales que puede querer mover.
+
+.. Escriba los nombres de los volúmenes que desea mover y los nombres de los agregados actuales en los que residen.
+
+
+. Mueva los volúmenes a los agregados que ha identificado como con la mayor capacidad de rendimiento libre del nuevo nodo.
++
+Puede llevar a cabo la operación de transferencia con System Manager de OnCommand, OnCommand Workflow Automation, comandos de ONTAP o una combinación de estas herramientas.
+
+
+
+
+
+== Después de terminar
+
+Tras unos días, puede comprobar si está recibiendo el mismo tipo de eventos de este nodo o agregado.

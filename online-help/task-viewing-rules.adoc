@@ -1,0 +1,43 @@
+---
+permalink: online-help/task-viewing-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver la lista de reglas que ha creado en la pestaña Data Policy antes de modificar la política de datos para la SVM con Infinite Volume. 
+---
+= Reglas de visualización
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver la lista de reglas que ha creado en la pestaña Data Policy antes de modificar la política de datos para la SVM con Infinite Volume.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* El clúster que contiene la SVM con Infinite Volume con clases de almacenamiento debe añadirse a la base de datos de Unified Manager.
+
+
+
+
+== Acerca de esta tarea
+
+La pestaña Data Policy solo puede verse para una SVM con Infinite Volume.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione la SVM adecuada.
+. Haga clic en *Política de datos*.
+
+
+
+
+== Resultados
+
+Se muestra la lista de reglas de la política de datos para la SVM seleccionada. Puede usar Filter by Storage Class para ver reglas acerca de una clase de almacenamiento específica.

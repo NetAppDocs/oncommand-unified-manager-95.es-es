@@ -1,0 +1,39 @@
+---
+permalink: online-help/task-adding-values-to-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede agregar valores a anotaciones y, a continuación, asociar objetos de almacenamiento a un par de nombre y valor de anotación concreto. Añadir valores a anotaciones le ayuda a gestionar los objetos de almacenamiento de forma más eficaz. 
+---
+= Adición de valores a anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede agregar valores a anotaciones y, a continuación, asociar objetos de almacenamiento a un par de nombre y valor de anotación concreto. Añadir valores a anotaciones le ayuda a gestionar los objetos de almacenamiento de forma más eficaz.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+No se pueden agregar valores a anotaciones predefinidas.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *Anotaciones* en el menú Administración de la izquierda.
+. En la página *Anotaciones*, seleccione la anotación a la que desea agregar un valor y, a continuación, haga clic en *Agregar* en la sección *valores*.
+. En el cuadro de diálogo *Agregar valor de anotación*, especifique un valor para la anotación.
++
+El valor especificado debe ser único para la anotación seleccionada.
+
+. Haga clic en *Agregar*.
+

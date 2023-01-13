@@ -1,0 +1,66 @@
+---
+permalink: online-help/reference-user-and-group-quota-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de cuota de usuario y grupo le proporcionan información acerca de la capacidad de la cuota de usuario y grupo de usuarios, así como los límites de archivos y discos para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de cuota de usuarios y grupos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de cuota de usuario y grupo le proporcionan información acerca de la capacidad de la cuota de usuario y grupo de usuarios, así como los límites de archivos y discos para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Capacidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Límite de software de espacio en disco de cuota de usuario o de grupo incumplido(ocumEvtUserOrGroupQuotaDiskSpaceSoftLimitBreached)
+ a| 
+Riesgo
+ a| 
+Cuota de usuario o de grupo
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha alcanzado el límite duro de espacio en disco de cuota de usuario o de grupo (ocumEvtUserOrGroupQuotaDiskSpaceHardLimitReached)
+ a| 
+Incidente
+ a| 
+Cuota de usuario o de grupo
+ a| 
+Crítico
+
+
+
+ a| 
+Límite de software de recuento de archivos de cuota de usuario o de grupo incumplido(ocumEvtUserOrGroupQuotaFileCountSoftLimitBreached)
+ a| 
+Riesgo
+ a| 
+Cuota de usuario o de grupo
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha alcanzado el límite duro de recuento de archivos de cuota de usuario o de grupo (ocumEvtUserOrGroupQuotaFileCountHardLimitReached)
+ a| 
+Incidente
+ a| 
+Cuota de usuario o de grupo
+ a| 
+Crítico
+
+|===

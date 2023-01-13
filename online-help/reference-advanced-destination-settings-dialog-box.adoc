@@ -1,0 +1,32 @@
+---
+permalink: online-help/reference-advanced-destination-settings-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar el cuadro de diálogo Advanced Destination Settings para habilitar la configuración de garantía de espacio en un volumen de destino. Puede seleccionar la configuración avanzada cuando la garantía de espacio está desactivada en el origen, pero desea que esté activada en el destino. La configuración de deduplicación, compresión y crecimiento automático en una relación de SnapMirror se hereda del volumen de origen y no se puede cambiar. 
+---
+= Cuadro de diálogo Advanced Destination Settings
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar el cuadro de diálogo Advanced Destination Settings para habilitar la configuración de garantía de espacio en un volumen de destino. Puede seleccionar la configuración avanzada cuando la garantía de espacio está desactivada en el origen, pero desea que esté activada en el destino. La configuración de deduplicación, compresión y crecimiento automático en una relación de SnapMirror se hereda del volumen de origen y no se puede cambiar.
+
+
+
+== Garantía de espacio
+
+Garantiza que se asigne espacio suficiente en el volumen de destino para que las transferencias de datos siempre tengan éxito. El ajuste de garantía de espacio puede ser uno de los siguientes:
+
+* Archivo
++
+La garantía de espacio para archivos no está disponible en ONTAP 8.3.
+
+* Volumen
+* Ninguno
+
+
+Por ejemplo, es posible que tenga un volumen de 200 GB que contenga archivos de un total de 50 GB; sin embargo, esos archivos contienen sólo 10 GB de datos. La garantía de volumen asigna 200 GB al volumen de destino, independientemente del contenido del origen. La garantía de archivo asigna 50 GB para asegurarse de que se reserva suficiente espacio para los archivos de origen en el destino; al seleccionar *Ninguno* en este escenario se asigna sólo 10 GB en el destino para el espacio real utilizado por los datos de archivo en el origen.
+
+De manera predeterminada, la garantía de espacio se establece en volumen.

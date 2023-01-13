@@ -1,0 +1,24 @@
+---
+permalink: online-help/concept-understanding-the-root-object.html 
+sidebar: sidebar 
+keywords:  
+summary: El objeto raíz es la línea de base con la que se realizan otras comparaciones de objetos. Esto permite ver y comparar los datos de otros objetos con el objeto raíz, lo cual proporciona análisis de datos de rendimiento que le ayudan a resolver problemas y mejorar el rendimiento de los objetos. 
+---
+= Descripción del objeto raíz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objeto raíz es la línea de base con la que se realizan otras comparaciones de objetos. Esto permite ver y comparar los datos de otros objetos con el objeto raíz, lo cual proporciona análisis de datos de rendimiento que le ayudan a resolver problemas y mejorar el rendimiento de los objetos.
+
+El nombre del objeto raíz aparece en la parte superior del panel de comparación. Los objetos adicionales se muestran debajo del objeto raíz. Aunque no hay límite en el número de objetos adicionales que puede agregar al panel de comparación, sólo se permite un objeto raíz. Los datos del objeto raíz se muestran automáticamente en los gráficos del panel ContraCharts.
+
+No puede cambiar el objeto raíz; siempre está establecido en la página de objetos que está viendo. Por ejemplo, si abre la página Volume Performance Explorer de Volume1, Volume1 es el objeto raíz y no puede cambiarse. Si desea realizar una comparación con otro objeto raíz, debe hacer clic en el vínculo de un objeto y abrir su página de destino.
+
+[NOTE]
+====
+Los eventos y umbrales se muestran solo para los objetos raíz.
+
+====

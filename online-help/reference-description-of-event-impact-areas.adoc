@@ -1,0 +1,36 @@
+---
+permalink: online-help/reference-description-of-event-impact-areas.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Los eventos se clasifican en cinco áreas de impacto \(disponibilidad, capacidad, configuración, rendimiento y protección\) para permitirle concentrarse en los tipos de eventos para los que es responsable.' 
+---
+= Descripción de las áreas de impacto de eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos se dividen en cinco áreas de impacto (disponibilidad, capacidad, configuración, rendimiento y protección) que le permiten concentrarse en los tipos de eventos de los que es responsable.
+
+* *Disponibilidad*
++
+Los eventos de disponibilidad le notifican si un objeto de almacenamiento se desconecta, si un servicio de protocolo se desactiva, si se produce un problema con una conmutación al respaldo del almacenamiento o si se produce un problema con el hardware.
+
+* *Capacidad*
++
+Los eventos de capacidad le notifican si los agregados, volúmenes, LUN o espacios de nombres se acercan o han alcanzado un umbral de tamaño, o si la tasa de crecimiento es inusual en el entorno.
+
+* *Configuración*
++
+Los eventos de configuración informan de la detección, la eliminación, la adición, la eliminación o el nombre de los objetos de almacenamiento. Los eventos de configuración tienen un nivel de impacto de evento y un tipo de gravedad de información.
+
+* *Rendimiento*
++
+Los eventos de rendimiento le notifican de las condiciones de recursos, configuración o actividad de su clúster que pueden afectar negativamente a la velocidad de la entrada o recuperación del almacenamiento de datos en los objetos de almacenamiento supervisados.
+
+* *Protección*
++
+Los eventos de protección le notifican los incidentes o riesgos que implican las relaciones de SnapMirror, problemas con la capacidad de destino, problemas con las relaciones de SnapVault o problemas con trabajos de protección. Cualquier objeto de ONTAP (especialmente agregados, volúmenes y SVM) que alojen volúmenes secundarios y relaciones de protección se categorizan en el área de impacto de protección.
+
+

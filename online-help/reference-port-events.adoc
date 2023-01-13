@@ -1,0 +1,128 @@
+---
+permalink: online-help/reference-port-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de puerto le ofrecen el estado acerca de los puertos del clúster para que pueda supervisar los cambios o los problemas en el puerto, como si el puerto está inactivo. 
+---
+= Eventos del puerto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de puerto le ofrecen el estado acerca de los puertos del clúster para que pueda supervisar los cambios o los problemas en el puerto, como si el puerto está inactivo.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Estado del puerto inactivo (ocumEvtPortStatusDown)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Crítico
+
+|===
+
+
+== Área de impacto: Rendimiento
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Se ha incumplido el umbral crítico de Mbps del puerto de red (ocumNetworkPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Puerto
+ a| 
+Crítico
+
+
+
+ a| 
+Umbral de advertencia de Mbps de puerto de red incumplido (ocumNetworkPortMbpsWarning)
+ a| 
+Riesgo
+ a| 
+Puerto
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido el umbral crítico de Mbps del puerto FCP (ocumFcpPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Puerto
+ a| 
+Crítico
+
+
+
+ a| 
+Umbral de advertencia de Mbps de puerto FCP incumplido (ocumFcpPortMbpsWarning)
+ a| 
+Riesgo
+ a| 
+Puerto
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido el umbral crítico de utilización de puertos de red (ocumNetworkPortUtilationIncident)
+ a| 
+Incidente
+ a| 
+Puerto
+ a| 
+Crítico
+
+
+
+ a| 
+Umbral de advertencia de utilización de puerto de red incumplido (ocumNetworkPortUtilationWarning)
+ a| 
+Riesgo
+ a| 
+Puerto
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido el umbral crítico de utilización de puertos FCP (ocumFcpPortUtilization Incident)
+ a| 
+Incidente
+ a| 
+Puerto
+ a| 
+Crítico
+
+
+
+ a| 
+Se ha incumplido el umbral de advertencia de utilización de puertos FCP (ocumFcpPortUtilization Warning)
+ a| 
+Riesgo
+ a| 
+Puerto
+ a| 
+Advertencia
+
+|===

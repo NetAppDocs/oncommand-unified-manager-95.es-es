@@ -1,0 +1,151 @@
+---
+permalink: online-help/reference-health-all-nodes-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La página del inventario Health/Nodes permite ver información detallada sobre los nodos en un clúster seleccionado. 
+---
+= Página del inventario Health/Nodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página del inventario Health/Nodes permite ver información detallada sobre los nodos en un clúster seleccionado.
+
+
+
+== Botón de comando
+
+* *Exportación*
++
+Permite exportar los detalles de todos los nodos supervisados a valores separados por comas (`.csv`).
+
+
+
+
+
+== Lista Nodes
+
+La lista nodos muestra las propiedades de todos los nodos detectados en un clúster. Puede utilizar los filtros de columnas para personalizar los datos que se muestran.
+
+* *Estado*
++
+Un icono que identifica el estado actual del nodo. El estado puede ser crítico (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]), error (image:../media/sev-error-um60.png["Icono para la gravedad del evento: Error"]), Advertencia (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]), o normal (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]).
+
++
+Puede colocar el cursor sobre el icono para ver más información acerca del evento o los eventos que genera el nodo.
+
+* *Nodo*
++
+El nombre del nodo.
+
+* *Estado*
++
+El estado del nodo. El estado puede ser Arriba o abajo.
+
+* *Estado de alta disponibilidad*
++
+El estado de la pareja de alta disponibilidad. El estado puede ser error, Advertencia, normal o no aplicable.
+
+* *Tiempo de inactividad*
++
+El tiempo que ha transcurrido o la Marca de tiempo desde que el nodo se encuentra sin conexión. Si el tiempo transcurrido supera una semana, se muestra la Marca de tiempo cuando el nodo se desconectó.
+
+* *Cluster*
++
+El nombre del clúster al que pertenece el nodo.
+
+* *Modelo*
++
+El modelo del nodo.
+
+* *Versión del SO*
++
+La versión de software de ONTAP que ejecuta el nodo.
+
+* *Optimizado para All Flash*
++
+Si el nodo está optimizado para admitir solo unidades de estado sólido (SSD).
+
+* *Número de serie*
++
+El número de serie del nodo.
+
+* *Versión del firmware*
++
+El número de versión de firmware del nodo.
+
+* *Dueño*
++
+El nombre del propietario del nodo.
+
+* *Ubicación*
++
+La ubicación del nodo.
+
+* *Capacidad utilizada agregada*
++
+La cantidad de espacio utilizada para los datos en los agregados del nodo.
+
+* *Capacidad total agregada*
++
+El espacio total disponible para los datos en los agregados del nodo.
+
+* *Capacidad de repuesto utilizable*
++
+La cantidad de espacio disponible en el nodo que se puede usar para mejorar la capacidad de agregado.
+
+* *Capacidad bruta utilizable*
++
+La cantidad de espacio que se puede utilizar en el nodo.
+
+* *Capacidad bruta total*
++
+La capacidad de cada disco sin formato del nodo antes de ajustar la configuración de RAID y ajustar el tamaño.
+
+* * Cuenta de SVM*
++
+El número de SVM que contiene el clúster.
+
+* *Número de puertos FC*
++
+El número de puertos FC que contiene el nodo.
+
+* *Número de puertos FCoE*
++
+El número de puertos FCoE que contiene el nodo.
+
+* *Número de puertos Ethernet*
++
+El número de puertos ethernet que contiene el nodo.
+
+* *Tamaño de la tarjeta Flash*
++
+El tamaño de las tarjetas flash instaladas en el nodo.
+
+* *Número de tarjetas Flash*
++
+El número de tarjetas flash instaladas en el nodo.
+
+* *Número de bandejas de discos*
++
+La cantidad de bandejas de discos que contiene el nodo.
+
+* *Número de discos*
++
+El número de discos en el nodo.
+
+
+
+
+
+== Panel Filters
+
+El panel Filtros permite establecer filtros para personalizar la forma en que se muestra la información en la lista Nodes. Puede seleccionar filtros relacionados con las columnas Status, State y HA State.
+
+[NOTE]
+====
+Los filtros especificados en el panel Filtros anulan los filtros especificados para las columnas de la lista Nodes.
+
+====

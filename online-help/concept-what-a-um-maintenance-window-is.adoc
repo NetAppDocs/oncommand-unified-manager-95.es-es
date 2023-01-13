@@ -1,0 +1,20 @@
+---
+permalink: online-help/concept-what-a-um-maintenance-window-is.html 
+sidebar: sidebar 
+keywords:  
+summary: La ventana de mantenimiento de Unified Manager se define para suprimir eventos y alertas de un plazo específico cuando se ha programado el mantenimiento del clúster y no se desea recibir un gran número de notificaciones no deseadas. 
+---
+= Qué es una ventana de mantenimiento de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana de mantenimiento de Unified Manager se define para suprimir eventos y alertas de un plazo específico cuando se ha programado el mantenimiento del clúster y no se desea recibir un gran número de notificaciones no deseadas.
+
+Cuando se inicia la ventana de mantenimiento, se publica un evento "'ventana de mantenimiento de objetos iniciada'" en la página de inventario Eventos. Este evento se vuelve obsoleto automáticamente cuando finaliza la ventana de mantenimiento.
+
+Durante una ventana de mantenimiento, aún se generan los eventos relacionados con todos los objetos de ese clúster, pero no aparecen en ninguna de las páginas de la interfaz de usuario y no se envían alertas ni otros tipos de notificaciones para estos eventos. Sin embargo, es posible ver los eventos generados para todos los objetos de almacenamiento durante una ventana de mantenimiento. Para ello, seleccione una de las opciones Ver de la página de inventario Events.
+
+Puede programar una ventana de mantenimiento que se iniciará en el futuro, puede cambiar las horas de inicio y de finalización de una ventana de mantenimiento programada y puede cancelar una ventana de mantenimiento programada.

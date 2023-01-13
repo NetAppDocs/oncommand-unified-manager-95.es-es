@@ -1,0 +1,55 @@
+---
+permalink: online-help/task-moving-lifs-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Las máquinas virtuales de almacenamiento \(SVM\) contienen volúmenes de datos y una o varias interfaces lógicas \(LIF\) a través de las cuales la SVM proporciona datos a los clientes. Puede mover LIF de datos desde un puerto físico a otro dentro de la misma SVM. Se recomienda hacerlo para mejorar el equilibrio de carga o ayudar con las operaciones de mantenimiento y el ajuste del rendimiento.' 
+---
+= Mover LIF manualmente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las máquinas virtuales de almacenamiento (SVM) contienen volúmenes de datos y una o varias interfaces lógicas (LIF) a través de las cuales la SVM proporciona datos a los clientes. Puede mover LIF de datos desde un puerto físico a otro dentro de la misma SVM. Se recomienda hacerlo para mejorar el equilibrio de carga o ayudar con las operaciones de mantenimiento y el ajuste del rendimiento.
+
+
+
+== Acerca de esta tarea
+
+Existen los siguientes tipos de LIF:
+
+* LIF de datos: Asociadas con una SVM y utilizadas para comunicarse con los clientes.
+* LIF de gestión de clúster: Se utiliza para gestionar los nodos, las SVM y el clúster en sí.
+* LIF de clúster: Se utiliza para el tráfico dentro del clúster.
+* LIF de interconexión de clústeres: Se utiliza para la comunicación entre clústeres.
+* LIF dentro del clúster: Se utiliza para la comunicación entre parejas de alta disponibilidad.
+* LIF de gestión de SVM: LIF de datos asociadas con una SVM y utilizadas para gestionar esa SVM.
+
+
+image::../media/cluster-network-types.gif[los tipos de red de clúster]
+
+Este flujo de trabajo describe cómo mover LIF de datos. Esto se aplica a los LIF NAS (NFS y CIFS), pero no a los LIF SAN (FC e iSCSI).
+
+[NOTE]
+====
+Al mover una LIF conectada a recursos compartidos CIFS, se desconectará a los clientes que accedan a los recursos compartidos CIFS. Se interrumpirá cualquier solicitud de lectura o escritura a los recursos compartidos CIFS.
+
+====
+[NOTE]
+====
+Para obtener más información acerca de cómo mover otros tipos de LIF, incluidos detalles sobre cómo mover LIF conectados a recursos compartidos CIFS, consulte la documentación de redes ONTAP.
+
+====
+Puede realizar las siguientes acciones básicas relacionadas con LIF de datos:
+
+* Mostrar todas las LIF de datos.
+* Identifique los LIF más activos.
+* Identifique el mejor nodo para aceptar un LIF ocupado.
+* Modifique el puerto de inicio o el nodo de una LIF para cambiar su ubicación preferida en el clúster.
++
+Debería mover una LIF en lugar de migrar una LIF para realizar un cambio más duradero. Para volver al puerto de inicio original, debe revertir la LIF.
+
+* Migre una LIF de datos a otro puerto para realizar un cambio temporal que puede utilizarse si el puerto o el nodo de inicio tienen un problema o están realizando tareas de mantenimiento programadas.
+* Revierte una LIF de datos a su puerto raíz.
+

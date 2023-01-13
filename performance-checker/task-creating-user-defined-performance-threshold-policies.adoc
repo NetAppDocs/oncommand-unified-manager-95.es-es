@@ -1,0 +1,92 @@
+---
+permalink: performance-checker/task-creating-user-defined-performance-threshold-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear políticas de umbral de rendimiento para los objetos de almacenamiento, de manera tal que se envíen notificaciones cuando un contador de rendimiento supere un valor específico. La notificación de eventos identifica que el clúster está experimentando un problema de rendimiento. 
+---
+= Creación de políticas de umbral de rendimiento definidas por el usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear políticas de umbral de rendimiento para los objetos de almacenamiento, de manera tal que se envíen notificaciones cuando un contador de rendimiento supere un valor específico. La notificación de eventos identifica que el clúster está experimentando un problema de rendimiento.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+
+
+== Acerca de esta tarea
+
+Para crear políticas de umbral de rendimiento, se deben introducir los valores de umbral en la página Create Threshold Policy. Puede crear nuevas directivas definiendo todos los valores de directiva en esta página o hacer una copia de una directiva existente y cambiar los valores de la copia (denominada _clone_).
+
+Los valores de umbral válidos son de 0.001 a 10,000,000 para números, 0.001-100 para porcentajes y 0.001-200 para porcentajes de capacidad de rendimiento utilizados.
+
+[NOTE]
+====
+La versión actual proporciona umbrales que envían eventos cuando un valor de contador supera el valor del umbral. No se pueden establecer umbrales que envíen eventos cuando un valor de contador esté por debajo de un valor de umbral.
+
+====
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, seleccione *Configuración* > *umbrales de rendimiento*.
++
+Se muestra la página Configuration/Performance Thresholds.
+
+. Haga clic en el botón apropiado en función de si desea crear una nueva política o si desea clonar una política similar y modificar la versión clonada.
++
+|===
+| Para... | Haga clic en... 
+
+
+ a| 
+Crear una nueva política
+ a| 
+*Crear*
+
+
+
+ a| 
+Clonar una política existente
+ a| 
+Seleccione una directiva existente y haga clic en *Clonar*
+
+|===
++
+Se mostrarán la página Create Threshold Policy o Clone Threshold Policy.
+
+. Defina la política de umbral especificando los valores de umbral de contador de rendimiento que desea establecer para objetos de almacenamiento específicos:
++
+.. Seleccione el tipo de objeto de almacenamiento y especifique un nombre y una descripción para la política.
+.. Seleccione el contador de rendimiento que se va a realizar el seguimiento y especifique los valores de límite que definen los eventos de advertencia y críticos.
++
+Debe definir al menos un límite de advertencia o crítico. No es necesario definir ambos tipos de límites.
+
+.. Seleccione un contador de rendimiento secundario, si es necesario, y especifique los valores de límite para eventos críticos y de advertencia.
++
+Para incluir un contador secundario, ambos contadores superan los valores de límite antes de superar el umbral y se informa de un evento. Sólo se pueden configurar determinados objetos y contadores mediante una directiva de combinación.
+
+.. Seleccione la duración del tiempo durante el cual deben incumplir los valores límite para que se envíe un evento.
+
+
++
+Al clonar una política existente, debe introducir un nombre nuevo para la política.
+
+. Haga clic en *Guardar* para guardar la directiva.
++
+El sistema regresa a la página Configuration/Performance Thresholds. Un mensaje de éxito en la parte superior de la página confirma que la política de umbral se ha creado y proporciona un enlace a la página Inventory de ese tipo de objeto para que pueda aplicar la nueva política a los objetos de almacenamiento inmediatamente.
+
+
+
+
+
+== Después de terminar
+
+Si desea aplicar la nueva directiva de umbral a objetos de almacenamiento en este momento, puede hacer clic en el vínculo *Ir a objeto_TYPE Now* para ir a la página Inventario.

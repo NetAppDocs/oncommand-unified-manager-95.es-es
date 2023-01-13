@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-quotas-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar la opción adecuada en la ficha cuotas de usuario y de grupo de la página de inventario de máquinas virtuales de almacenamiento/estado para configurar el formato de la notificación de correo electrónico que se envía cuando se produce un problema relacionado con la cuota y para configurar reglas para especificar direcciones de correo electrónico basadas en la cuota de usuario. 
+---
+= Descripción de los cuadros de diálogo cuotas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la opción adecuada en la ficha cuotas de usuario y de grupo de la página de inventario de máquinas virtuales de almacenamiento/estado para configurar el formato de la notificación de correo electrónico que se envía cuando se produce un problema relacionado con la cuota y para configurar reglas para especificar direcciones de correo electrónico basadas en la cuota de usuario.

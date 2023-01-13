@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-what-annotations-are.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Una anotación es una cadena de texto \(el nombre\) que está asignada a otra cadena de texto \(el valor\). Cada par nombre-valor de anotación puede asociarse dinámicamente con objetos de almacenamiento mediante reglas de anotación. Cuando asocia objetos de almacenamiento con anotaciones predefinidas, puede filtrar y ver los eventos relacionados con ellos. Puede aplicar anotaciones a clústeres, volúmenes y máquinas virtuales de almacenamiento \(SVM\).' 
+---
+= Qué son las anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una anotación es una cadena de texto (el nombre) que se asigna a otra cadena de texto (el valor). Cada par nombre-valor de anotación puede asociarse dinámicamente con objetos de almacenamiento mediante reglas de anotación. Cuando asocia objetos de almacenamiento con anotaciones predefinidas, puede filtrar y ver los eventos relacionados con ellos. Puede aplicar anotaciones a clústeres, volúmenes y máquinas virtuales de almacenamiento (SVM).
+
+Cada nombre de anotación puede tener varios valores; cada par nombre-valor puede asociarse con un objeto de almacenamiento mediante reglas.
+
+Por ejemplo, se puede crear una anotación denominada «centro de datos» con los valores «'Boston» y «'Canadá». A continuación, puede aplicar la anotación "centro-ATA" con el valor "'Boston'" al volumen v1. Cuando se genera una alerta para cualquier evento en un volumen v1 anotado con "deata-Center", el correo electrónico generado indica la ubicación del volumen "'Boston'", lo que permite priorizar y resolver el problema.

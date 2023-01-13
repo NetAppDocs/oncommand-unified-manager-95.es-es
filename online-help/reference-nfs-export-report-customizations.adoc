@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-nfs-export-report-customizations.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar los informes de exportación de NFS para analizar información sobre las reglas y políticas de exportación de NFS para volúmenes en sus sistemas de almacenamiento. Por ejemplo, se pueden personalizar los informes para que se muestren volúmenes con rutas de unión inaccesibles y volúmenes con la política de exportación predeterminada. 
+---
+= Personalizaciones de informes de exportación de NFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar los informes de exportación de NFS para analizar información sobre las reglas y políticas de exportación de NFS para volúmenes en sus sistemas de almacenamiento. Por ejemplo, se pueden personalizar los informes para que se muestren volúmenes con rutas de unión inaccesibles y volúmenes con la política de exportación predeterminada.

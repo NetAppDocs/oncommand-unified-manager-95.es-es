@@ -1,0 +1,107 @@
+---
+permalink: online-help/reference-restore-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Restore para restaurar datos a un volumen a partir de una copia Snapshot específica. 
+---
+= Restaurar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Restore para restaurar datos a un volumen a partir de una copia Snapshot específica.
+
+
+
+== Restaurar desde
+
+El área Restore from permite especificar el lugar donde desea restaurar datos.
+
+* *Volumen*
++
+Especifica el volumen desde el cual desea restaurar datos. De forma predeterminada, se selecciona el volumen en el que inició la acción de restauración. Es posible seleccionar un volumen diferente de la lista desplegable que contiene todos los volúmenes con relaciones de protección al volumen en el que se inició la acción de restauración.
+
+* *Copia snapshot*
++
+Especifica la copia Snapshot que desea usar para restaurar los datos. De forma predeterminada, se selecciona la copia de Snapshot más reciente. También puede seleccionar una copia Snapshot diferente de la lista desplegable. La lista de copias Snapshot cambia según qué volumen se selecciona.
+
+* *Lista un máximo de 995 ficheros y directorios*
++
+De forma predeterminada, se muestra un máximo de 995 objetos en la lista. Puede anular la selección de esta casilla de comprobación si desea ver todos los objetos del volumen seleccionado. Esta operación puede tardar algún tiempo si el número de artículos es muy grande.
+
+
+
+
+
+== Seleccione los elementos que desea restaurar
+
+El área Seleccionar elementos para restaurar permite seleccionar el volumen completo o los archivos y carpetas específicos que desea restaurar. Puede seleccionar un máximo de 10 archivos, carpetas o una combinación de ambos. Cuando se selecciona el número máximo de elementos, se desactivan las casillas de verificación selección de elementos.
+
+* *Campo Ruta*
++
+Muestra la ruta a los datos que desea restaurar. Es posible desplazarse a la carpeta y los archivos que desea restaurar o escribir la ruta. Este campo está vacío hasta que seleccione o escriba una ruta. Haga clic en image:../media/icon-upfolder.gif[""] una vez que haya elegido una ruta de acceso, sube un nivel en la estructura de directorios.
+
+* *Lista de carpetas y archivos*
++
+Muestra el contenido de la ruta introducida. De forma predeterminada, se muestra inicialmente la carpeta raíz. Al hacer clic en un nombre de carpeta se muestra el contenido de la carpeta.
+
+
+
+Puede seleccionar elementos para restaurar de la siguiente manera:
+
+* Cuando se introduce la ruta de acceso con un nombre de archivo determinado especificado en el campo de ruta, el archivo especificado se muestra en carpetas y archivos.
+* Cuando se introduce una ruta de acceso sin especificar un archivo concreto, el contenido de la carpeta se muestra en la lista carpetas y archivos, y se pueden seleccionar hasta 10 archivos, carpetas o una combinación de ambos para restaurar.
++
+Si una carpeta contiene más de 995 elementos, aparece un mensaje para indicar que hay demasiados elementos que mostrar y si continúa con la operación se restauran todos los elementos de la carpeta especificada. Puede anular la selección de la casilla de verificación "'Listar máximo de 995 archivos y directorios'" si desea ver todos los objetos del volumen seleccionado.
+
+
+
+[NOTE]
+====
+No puede restaurar flujos de archivos NTFS.
+
+====
+
+
+== Restaurar a.
+
+El área Restore to permite especificar dónde desea restaurar los datos.
+
+* *Ubicación original en `Volume_Name`*
++
+Restaura los datos seleccionados en el directorio del origen desde el que se realizó una copia de seguridad original de los datos.
+
+* *Ubicación alternativa*
++
+Restaura los datos seleccionados en una ubicación nueva:
+
++
+** Ruta de restauración
++
+Especifica una ruta alternativa para restaurar los datos seleccionados. La ruta de acceso ya debe existir. Puede utilizar el botón *Browse* para desplazarse hasta la ubicación en la que desea restaurar los datos o puede introducir la ruta manualmente mediante el clúster de formato://svm/volume/path.
+
+** Conservar jerarquía de directorios
++
+Cuando esta opción está activada, conserva la estructura del archivo o directorio original. Por ejemplo, si el origen es /A/B/C/myfile.txt y el destino es /X/y/Z, Unified Manager restaura los datos mediante la siguiente estructura de directorio en el destino: /X/y/Z/A/B/C/myfile.txt.
+
+
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Cancelar*
++
+Descarta las selecciones y cierra el cuadro de diálogo Restaurar.
+
+* *Restaurar*
++
+Aplica las selecciones e inicia el proceso de restauración.
+
+

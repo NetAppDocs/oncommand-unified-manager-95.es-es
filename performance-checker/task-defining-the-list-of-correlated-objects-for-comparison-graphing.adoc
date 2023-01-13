@@ -1,0 +1,73 @@
+---
+permalink: performance-checker/task-defining-the-list-of-correlated-objects-for-comparison-graphing.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede definir una lista de objetos correlacionados para la comparación de datos y rendimiento en el panel Diagrama de contador. Por ejemplo, si la máquina virtual de almacenamiento \(SVM\) está experimentando un problema de rendimiento, es posible comparar todos los volúmenes de la SVM para identificar qué volumen podría estar causando el problema.' 
+---
+= Definir la lista de objetos correlacionados para la representación gráfica de comparación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede definir una lista de objetos correlacionados para la comparación de datos y rendimiento en el panel Diagrama de contador. Por ejemplo, si la máquina virtual de almacenamiento (SVM) tiene un problema de rendimiento, es posible comparar todos los volúmenes de la SVM para identificar qué volumen podría estar provocando el problema.
+
+
+
+== Acerca de esta tarea
+
+Puede agregar cualquier objeto de la cuadrícula de objetos correlacionados a los paneles comparación y Diagrama de contador. Esto permite ver y comparar datos de varios objetos y con el objeto raíz. Puede agregar y quitar objetos a y desde la cuadrícula de objetos correlacionados; sin embargo, el objeto raíz del panel de comparación no se puede quitar.
+
+[NOTE]
+====
+Al agregar muchos objetos al panel comparativo, puede afectar negativamente al rendimiento. Para mantener el rendimiento, debe seleccionar un número limitado de gráficos para la comparación de datos.
+
+====
+
+
+== Pasos
+
+. En la cuadrícula de objetos, busque el objeto que desea agregar y haga clic en el botón *Agregar*.
++
+El botón *Agregar* se vuelve gris y el objeto se agrega a la lista de objetos adicionales del panel de comparación. Los datos del objeto se añaden a los gráficos de los paneles Counter Charts. El color del icono de ojo del objeto (image:../media/eye-icon.gif[""]) coincide con el color de la línea de tendencias de datos del objeto en los gráficos.
+
+. Ocultar o mostrar datos de los objetos seleccionados:
++
+|===
+| Para hacer esto... | Realice esta acción... 
+
+
+ a| 
+Ocultar un objeto seleccionado
+ a| 
+Haga clic en el icono de ojo del objeto seleccionado (image:../media/eye-icon.gif[""]) En el panel de comparación. Los datos del objeto están ocultos y el icono de ojo de ese objeto se vuelve gris.
+
+
+
+ a| 
+Muestra un objeto oculto
+ a| 
+Haga clic en el icono de ojo gris del objeto seleccionado en el panel de comparación. El icono de ojo vuelve a su color original y los datos del objeto se vuelven a añadir a los gráficos del panel ContraCharts.
+
+|===
+. Eliminar los objetos seleccionados del panel *comparando*:
++
+|===
+| Para hacer esto... | Realice esta acción... 
+
+
+ a| 
+Quitar un objeto seleccionado
+ a| 
+Coloque el puntero sobre el nombre del objeto seleccionado en el panel de comparación para mostrar el botón de eliminación de objeto (*X*) y, a continuación, haga clic en el botón. El objeto se elimina del panel comparativo y sus datos se borran de los gráficos de contadores.
+
+
+
+ a| 
+Quite todos los objetos seleccionados
+ a| 
+Haga clic en el botón para eliminar todos los objetos (*X*) situado en la parte superior del panel de comparación. Se quitan todos los objetos seleccionados y sus datos, dejando sólo el objeto raíz.
+
+|===
+

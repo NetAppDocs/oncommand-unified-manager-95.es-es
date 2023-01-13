@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/concept-unified-manager-performance-monitoring-features.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager recopila y analiza estadísticas de rendimiento de sistemas que ejecutan el software ONTAP. Utiliza umbrales dinámicos de rendimiento y umbrales definidos por el usuario para supervisar diversos contadores de rendimiento sobre muchos componentes del clúster. 
+---
+= Funciones de supervisión del rendimiento de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager recopila y analiza estadísticas de rendimiento de sistemas que ejecutan el software ONTAP. Utiliza umbrales dinámicos de rendimiento y umbrales definidos por el usuario para supervisar diversos contadores de rendimiento sobre muchos componentes del clúster.
+
+Un tiempo de respuesta alto (latencia) indica que el objeto de almacenamiento, por ejemplo, un volumen, tiene un rendimiento más lento de lo normal. Este problema también indica que el rendimiento ha disminuido para las aplicaciones cliente que utilizan el volumen. Unified Manager identifica el componente de almacenamiento donde reside el problema de rendimiento y proporciona una lista de acciones sugeridas para resolver el problema de rendimiento.
+
+Unified Manager incluye las siguientes funciones:
+
+* Supervisa y analiza las estadísticas de rendimiento de la carga de trabajo desde un sistema que ejecuta el software ONTAP.
+* Realiza un seguimiento de los contadores de rendimiento de clústeres, nodos, agregados, puertos, SVM, Volúmenes, LUN, espacios de nombres NVMe y LIF.
+* Muestra gráficos detallados que traza la actividad de las cargas de trabajo con el tiempo; incluidos IOPS (operaciones), Mbps (rendimiento), latencia (tiempo de respuesta), utilización, la capacidad de rendimiento y la proporción de caché.
+* Le permite crear políticas de umbral de rendimiento definidas por el usuario que activan eventos y envían alertas por correo electrónico cuando se incumplen los umbrales.
+* Utiliza umbrales definidos por el sistema y umbrales de rendimiento dinámicos que aprenden acerca de la actividad de la carga de trabajo para identificar y avisarle de problemas de rendimiento.
+* Identifica claramente el componente del clúster que está en disputa.
+* Identifica cargas de trabajo que utilizan en exceso los componentes del clúster y las cargas de trabajo cuyo rendimiento se ve afectado por la mayor actividad.
+

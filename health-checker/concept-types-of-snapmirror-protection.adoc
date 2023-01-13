@@ -1,0 +1,66 @@
+---
+permalink: health-checker/concept-types-of-snapmirror-protection.html 
+sidebar: sidebar 
+keywords:  
+summary: Según la puesta en marcha de la topología de almacenamiento de datos, Unified Manager permite configurar varios tipos de relaciones de protección de SnapMirror. Todas las variaciones de la protección de SnapMirror ofrecen protección de recuperación tras fallos, pero ofrecen distintas funcionalidades en cuanto a rendimiento, flexibilidad de versiones y protección de backups múltiples. 
+---
+= Tipos de protección SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Según la puesta en marcha de la topología de almacenamiento de datos, Unified Manager permite configurar varios tipos de relaciones de protección de SnapMirror. Todas las variaciones de la protección de SnapMirror ofrecen protección de recuperación tras fallos, pero ofrecen distintas funcionalidades en cuanto a rendimiento, flexibilidad de versiones y protección de backups múltiples.
+
+
+
+== Relaciones de protección asíncrona de SnapMirror tradicionales
+
+La protección asíncrona de SnapMirror tradicional proporciona protección con mirroring de replicación en bloques entre los volúmenes de origen y de destino.
+
+En las relaciones de SnapMirror tradicionales, las operaciones de mirroring se ejecutan más rápido de lo que tendrían en relaciones de SnapMirror alternativas, ya que la operación de mirroring se basa en la replicación por bloques. Sin embargo, la protección SnapMirror tradicional requiere que el volumen de destino se ejecute con la misma versión secundaria o posterior del software ONTAP que el volumen de origen en la misma versión principal (por ejemplo, la versión 8.x a la 8.x o de 9.x a 9.x).
+
+
+
+== Protección asíncrona de SnapMirror con replicación de versión flexible
+
+La protección asíncrona de SnapMirror con la replicación flexible de versiones proporciona protección de reflejos de replicación lógica entre volúmenes de origen y de destino, incluso si dichos volúmenes se ejecutan en versiones diferentes de ONTAP 8.3 o posteriores (por ejemplo, de la versión 8.3 a la 8.3, o de 8.3 a 9.1, o de 9.0 a 8.3).
+
+En las relaciones de SnapMirror con una replicación de versión flexible, las operaciones de mirroring no se ejecutan con la misma rapidez que en las relaciones tradicionales de SnapMirror.
+
+Debido a una ejecución más lenta, SnapMirror con protección de replicación flexible de versión no es adecuado de ninguna de las siguientes circunstancias:
+
+* El objeto de origen contiene más de 10 millones de archivos que proteger.
+* El objetivo de punto de recuperación de los datos protegidos es de dos horas o menos. (Es decir, el destino siempre debe contener datos duplicados y recuperables, que tengan una antigüedad superior a dos horas respecto a los datos de origen).
+
+
+En una de las circunstancias indicadas, se requiere la ejecución más rápida basada en replicación por bloques de la protección SnapMirror predeterminada.
+
+
+
+== Protección asíncrona de SnapMirror con la replicación con versión flexible y la opción de backup
+
+La protección asíncrona de SnapMirror con la opción de backup y replicación flexible con versión proporciona protección mediante mirroring entre volúmenes de origen y de destino, y la posibilidad de almacenar varias copias de los datos reflejados en el destino.
+
+El administrador de almacenamiento puede especificar qué copias Snapshot se reflejan de un origen a un destino y también puede especificar el tiempo que debe retener esas copias en el destino, incluso si se eliminan en el origen.
+
+En las relaciones de SnapMirror con una opción de backup y replicación de versión flexible, las operaciones de mirroring no se ejecutan con la misma rapidez que en las relaciones tradicionales de SnapMirror.
+
+
+
+== Protección de SnapMirror Synchronous con una sincronización estricta
+
+La protección SnapMirror Synchronous con sincronización «esencial» garantiza que los volúmenes primario y secundario siempre sean una copia real del otro. Si se produce un fallo de replicación al intentar escribir datos en el volumen secundario, las operaciones de I/o del cliente en el volumen primario se interrumpen.
+
+
+
+== Protección de SnapMirror Synchronous con sincronización normal
+
+La protección de SnapMirror Synchronous con sincronización «relativamente» no requiere que el volumen primario y el secundario siempre sean una copia real del otro, lo que garantiza la disponibilidad del volumen primario. Si se produce un fallo de replicación al intentar escribir datos en el volumen secundario, los volúmenes primario y secundario quedan sin sincronizar y la I/o del cliente continuará en el volumen primario.
+
+[NOTE]
+====
+El botón Restore y los botones de operación Relationship no están disponibles cuando se supervisan las relaciones de protección síncronas en la página del inventario Health/Volumes o la página de detalles Health/Volume.
+
+====

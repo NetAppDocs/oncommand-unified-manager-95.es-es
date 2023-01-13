@@ -1,0 +1,60 @@
+---
+permalink: online-help/task-reversing-protection-relationships.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando un desastre deshabilita el volumen de origen en la relación de protección, es posible utilizar el volumen de destino para suministrar datos mediante la conversión a un volumen de lectura/escritura mientras se repara o sustituye el origen. Cuando el origen vuelve a estar disponible para recibir datos, puede utilizar la operación de resincronización inversa para establecer la relación en la dirección inversa y sincronizar los datos del origen con los datos en el destino de lectura/escritura. 
+---
+= Inversión de las relaciones de protección en la página Protection/Volume Relationships
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando un desastre deshabilita el volumen de origen en la relación de protección, es posible utilizar el volumen de destino para suministrar datos mediante la conversión a un volumen de lectura/escritura mientras se repara o sustituye el origen. Cuando el origen vuelve a estar disponible para recibir datos, puede utilizar la operación de resincronización inversa para establecer la relación en la dirección inversa y sincronizar los datos del origen con los datos en el destino de lectura/escritura.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber configurado Workflow Automation.
+* La relación no debe ser una relación de SnapVault.
+* Debe haber una relación de protección.
+* La relación de protección debe romperse.
+* El origen y el destino deben estar en línea.
+* El origen no debe ser el destino de otro volumen de protección de datos.
+
+
+
+
+== Acerca de esta tarea
+
+* Cuando realiza esta tarea, se eliminan los datos en el origen más nuevos que los de la copia Snapshot común.
+* Las políticas y las programaciones creadas en relaciones de resincronización inversa son las mismas que en la relación de protección original.
++
+Si no existen las políticas y las programaciones, se crean.
+
+
+
+
+
+== Pasos
+
+. En la página *Protection/Volume Relationships*, seleccione uno o más volúmenes con relaciones que desee invertir y, en la barra de herramientas, haga clic en *Reverse Resync*.
++
+Se muestra el cuadro de diálogo Reverse Resync.
+
+. Compruebe que las relaciones que aparecen en el cuadro de diálogo *Resync inversa* son las que desea realizar la operación de resincronización inversa y, a continuación, haga clic en *Enviar*.
++
+La operación de resincronización inversa se inicia, se regresa a la página Protection/Volume Relationships y se muestra un enlace de trabajos en la parte superior de la página.
+
+. Haga clic en *Ver trabajos* en la página *Protección/Relaciones de volumen* para realizar un seguimiento del estado de cada trabajo de resincronización inversa.
++
+Se muestra una lista filtrada de trabajos relacionados con esta operación.
+
+. Haga clic en la flecha *Atrás* de su explorador para volver a la página *Relaciones de volumen/Protección*.
++
+La operación de resincronización inversa se completa cuando todas las tareas de trabajo se completan correctamente.
+
+

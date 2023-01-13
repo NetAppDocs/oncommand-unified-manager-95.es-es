@@ -1,0 +1,46 @@
+---
+permalink: online-help/task-viewing-volume-latency-by-cluster-component.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver información detallada sobre la latencia de un volumen mediante la página Performance/Volume Explorer. El gráfico de contadores Latency - total muestra la latencia total en el volumen, y el gráfico de contadores Latency - Breakdown es útil para determinar el impacto de la latencia de lectura y escritura en el volumen. 
+---
+= Ver la latencia de volumen por componente del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver información detallada sobre la latencia de un volumen mediante la página Performance/Volume Explorer. El gráfico de contadores Latency - total muestra la latencia total en el volumen, y el gráfico de contadores Latency - Breakdown es útil para determinar el impacto de la latencia de lectura y escritura en el volumen.
+
+
+
+== Acerca de esta tarea
+
+Además, el gráfico latencia - componentes del clúster muestra una comparación detallada de la latencia de cada componente del clúster para ayudar a determinar cómo contribuye cada componente a la latencia total del volumen. Se muestran los siguientes componentes del clúster:
+
+* Red
+* Política de calidad de servicio
+* Procesamiento de red
+* Interconexión en clúster
+* Procesamiento de datos
+* Operaciones de agregado
+* Recursos de MetroCluster
+* Latencia del cloud
+* SnapMirror sincronizado
+
+
+
+
+== Pasos
+
+. En la página *Performance/Volume Explorer* para el volumen seleccionado, en el gráfico latencia, seleccione *Cluster Components* en el menú desplegable.
++
+Se muestra el gráfico latencia - componentes del clúster.
+
+. Para ver una versión más grande del gráfico, seleccione *Zoom View*.
++
+Se muestra el gráfico comparativo de componentes del clúster. Puede restringir la comparación anulando o seleccionando la image:../media/eye-icon.gif[""] que se asocia con cada componente del clúster.
+
+. Para ver los valores específicos, mueva el cursor hacia el área del gráfico para ver la ventana emergente.
+

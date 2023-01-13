@@ -1,0 +1,56 @@
+---
+permalink: online-help/reference-create-or-clone-performance-threshold-policy-page-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar la página Create Threshold Policy o la página Clone Threshold Policy para crear una nueva política de umbral de rendimiento. 
+---
+= Cree o Clone Performance Threshold Policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la página Create Threshold Policy o la página Clone Threshold Policy para crear una nueva política de umbral de rendimiento.
+
+Puede completar los campos de esta página y hacer clic en *Guardar* para agregar una directiva de umbral de rendimiento.
+
+* *Para Tipo de objeto*
++
+Seleccione el tipo de objeto de almacenamiento para el que desea crear una política de umbral.
+
+* *Nombre de la política*
++
+Escriba el nombre de la política de umbral. El nombre aparece en otras páginas de Unified Manager y debe proporcionar una breve descripción de la política.
+
+* *Descripción*
++
+(Opcional) Introduzca una descripción detallada de la política de umbral.
+
+* *Valores de umbral*
++
+Defina la condición de contador de umbral primaria y, opcionalmente, secundaria. Para incluir un contador secundario, ambos contadores deben superar los valores de límite antes de que se considere que el umbral es incumplido.
+
++
+** *Seleccione un contador*
++
+Seleccione el contador en el que desea configurar un umbral de rendimiento.
+
+** *Advertencia*
++
+Introduzca el valor de límite para el contador que se considera una advertencia.
+
+** *Crítico*
++
+Introduzca el valor de límite para el contador que se considera crítico.
+
+
+
++
+Los valores de umbral válidos son de 0.001 a 10,000,000 para números, 0.001-100 para porcentajes y 0.001-200 para porcentajes de capacidad de rendimiento utilizados.
+
+* *Duración*
++
+Seleccione el número de minutos que el valor del contador debe ser mayor que el valor de límite crítico o de advertencia. Como Unified Manager recoge nuevos valores de contador de rendimiento cada cinco minutos, el menú proporciona valores en varios de cinco según el intervalo de actualización.
+
+

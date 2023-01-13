@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/reference-performance-volume-details-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Esta página proporciona estadísticas detalladas del rendimiento para toda la actividad de I/o y las operaciones para el volumen FlexVol, el volumen FlexGroup o la carga de trabajo constituyente FlexGroup seleccionado. Es posible seleccionar un plazo específico para ver las estadísticas y los eventos del volumen. Los eventos identifican eventos de rendimiento y cambios que pueden afectar el rendimiento de I/O. 
+---
+= Página Performance/Volume Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta página proporciona estadísticas detalladas del rendimiento para toda la actividad de I/o y las operaciones para el volumen FlexVol, el volumen FlexGroup o la carga de trabajo constituyente FlexGroup seleccionado. Es posible seleccionar un plazo específico para ver las estadísticas y los eventos del volumen. Los eventos identifican eventos de rendimiento y cambios que pueden afectar el rendimiento de I/O.
+
+
+
+== Gráfico de datos históricos
+
+Traza los datos históricos de análisis de rendimiento del volumen seleccionado. Puede hacer clic y arrastrar los controles deslizantes para especificar un marco de tiempo. Los controles deslizantes aumentan y disminuyen la ventana del marco temporal. Los datos que están fuera de la ventana del plazo de tiempo aparecen atenuados. Puede utilizar el control deslizante de la parte inferior del gráfico para mover la ventana del marco de tiempo a través de los datos históricos. Toda la página, incluidos los gráficos y eventos mostrados, refleja los datos disponibles en la ventana del marco de tiempo. Unified Manager conserva un máximo de 30 días de datos históricos en esta página.
+
+[NOTE]
+====
+En el gráfico de datos históricos, si selecciona un plazo de más de 1 día, en función de la resolución de pantalla, los gráficos muestran los valores máximos de tiempo de respuesta e IOPS entre el número de días.
+
+====
+
+
+== Opciones
+
+* *Selector de tiempo*
++
+Especifica el intervalo de tiempo durante el cual se pueden ver las estadísticas de rendimiento de volumen de la página completa. Puede hacer clic en 1 día (*1d*) hasta 30 días (*30d*) o en *personalizado* para seleccionar un rango personalizado. Para un rango personalizado, puede seleccionar una fecha de inicio y finalización y, a continuación, hacer clic en *Actualizar* para actualizar toda la página.
+
++
+[NOTE]
+====
+Si accede a la página Performance/Volume Details haciendo clic en el enlace nombre de un volumen en la página de detalles Event, se selecciona automáticamente un intervalo de tiempo, como 1 día o 5 días antes del día actual. Cuando mueve el control deslizante en el gráfico de datos históricos, el intervalo de tiempo cambia a un intervalo personalizado, pero el selector de tiempo *personalizado* no está seleccionado. El selector de tiempo predeterminado permanece seleccionado.
+
+====
+* ***Romper datos por***
++
+Proporciona una lista de gráficos que se pueden añadir a la página Performance/Volume Details para mostrar estadísticas más detalladas de rendimiento del volumen seleccionado.
+
+

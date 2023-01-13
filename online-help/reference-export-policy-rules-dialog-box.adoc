@@ -1,0 +1,36 @@
+---
+permalink: online-help/reference-export-policy-rules-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El cuadro de diálogo Export Policy Rules muestra detalles sobre las políticas de exportación, los protocolos de autenticación y el acceso habilitados en los volúmenes que pertenecen a la máquina virtual de almacenamiento \(SVM\). Puede usar los filtros para personalizar la visualización de información en la lista de reglas de políticas de exportación. De forma predeterminada, la información se ordena según la columna de índice.' 
+---
+= Cuadro de diálogo Export Policy Rules
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Export Policy Rules muestra detalles sobre las políticas de exportación, los protocolos de autenticación y el acceso habilitados en los volúmenes que pertenecen a la máquina virtual de almacenamiento (SVM). Puede usar los filtros para personalizar la visualización de información en la lista de reglas de políticas de exportación. De forma predeterminada, la información se ordena según la columna de índice.
+
+* *Índice*
++
+Muestra el índice asignado a las reglas de política de exportación. Es un número único.
+
+* *Protocolos de acceso*
++
+Muestra los protocolos habilitados para las reglas de política de exportación.
+
+* *Coincidencia de cliente*
++
+Muestra los clientes que tienen permiso para acceder a los datos de los volúmenes que pertenecen a la SVM.
+
+* *Sólo lectura acceso*
++
+Muestra el protocolo de autenticación utilizado para leer datos en los volúmenes que pertenecen a la SVM.
+
+* *Leer acceso de escritura*
++
+Muestra el protocolo de autenticación utilizado para leer o escribir datos en los volúmenes que pertenecen a la SVM.
+
+

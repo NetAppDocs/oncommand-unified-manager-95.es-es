@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-editing-individual-qtree-health-threshold-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible editar la configuración del umbral de estado para la capacidad de qtrees de uno o varios qtrees. Cuando se supera un umbral, se generan alertas y se reciben notificaciones. Estas notificaciones le ayudan a tomar medidas preventivas basadas en el evento generado. 
+---
+= Editar la configuración de umbral de estado de qtree individual
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible editar la configuración del umbral de estado para la capacidad de qtrees de uno o varios qtrees. Cuando se supera un umbral, se generan alertas y se reciben notificaciones. Estas notificaciones le ayudan a tomar medidas preventivas basadas en el evento generado.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Basándose en los cambios de los valores de umbral, los eventos se generan o se vuelven obsoletos en el siguiente ciclo de supervisión.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione la SVM en la que reside el qtree.
+. En la página de detalles *Health/Storage Virtual Machine*, haga clic en la pestaña Qtrees.
+. Seleccione uno o más qtrees y, a continuación, haga clic en *Editar umbrales*.
+. En el cuadro de diálogo *Edit Qtree Thresholds*, cambie los umbrales de capacidad para el qtree o qtrees seleccionados y haga clic en *Save*.
+

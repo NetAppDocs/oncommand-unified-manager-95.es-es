@@ -1,0 +1,28 @@
+---
+permalink: online-help/concept-how-group-actions-work-on-storage-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Una acción de grupo es una operación que se realiza en todos los objetos de almacenamiento de un grupo. Por ejemplo, es posible configurar la acción del grupo de umbrales de volúmenes para cambiar simultáneamente los valores de umbral de volumen de todos los volúmenes de un grupo. 
+---
+= Cómo funcionan las acciones de grupo en los objetos de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una acción de grupo es una operación que se realiza en todos los objetos de almacenamiento de un grupo. Por ejemplo, es posible configurar la acción del grupo de umbrales de volúmenes para cambiar simultáneamente los valores de umbral de volumen de todos los volúmenes de un grupo.
+
+Los grupos admiten tipos de acciones de grupo únicos. Es posible tener un grupo con un solo tipo de acción de grupo de umbral de estado de volumen. Sin embargo, puede configurar un tipo diferente de acción de grupo, si está disponible, para el mismo grupo. El rango de una acción de grupo determina el orden en el que se aplica la acción a los objetos de almacenamiento. La página de detalles de un objeto de almacenamiento proporciona información sobre la acción de grupo que se aplica en el objeto de almacenamiento.
+
+
+
+== Ejemplo de acciones de grupo únicas
+
+Considere un volumen A que pertenece a los grupos G1 y G2, y las siguientes acciones de grupo de umbral de estado de volumen están configuradas para estos grupos:
+
+* `Change_capacity_threshold` acción de grupo con rango 1, para configurar la capacidad del volumen
+* `Change_snapshot_copies` Acción del grupo con el rango 2, para configurar las copias Snapshot del volumen
+
+
+La `Change_capacity_threshold` la acción de grupo siempre tiene prioridad sobre la `Change_snapshot_copies` La acción del grupo y se aplica al volumen A. Cuando Unified Manager completa un ciclo de supervisión, los eventos relacionados con el umbral de estado del volumen A se vuelven a evaluar según la `Change_capacity_threshold` acción de grupo. No puede configurar otro tipo de umbral de volumen de acción de grupo para los grupos G1 o G2.

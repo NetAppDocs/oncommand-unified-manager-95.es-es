@@ -1,0 +1,80 @@
+---
+permalink: online-help/reference-iops-performance-counter-charts.html 
+sidebar: sidebar 
+keywords:  
+summary: Los gráficos de contadores IOPS del Explorador de rendimiento muestran el número de operaciones de entrada/salida procesadas por segundo por el objeto de almacenamiento seleccionado. 
+---
+= Gráficos de contadores de rendimiento de IOPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los gráficos de contadores IOPS del Explorador de rendimiento muestran el número de operaciones de entrada/salida procesadas por segundo por el objeto de almacenamiento seleccionado.
+
+La ventana emergente que se muestra cuando el cursor se encuentra en el área del gráfico muestra los valores específicos del contador en momentos específicos.
+
+Cuando se muestra en la vista Zoom, los gráficos IOPS del volumen y de la LUN también muestran los ajustes de umbral de calidad de servicio (QoS) máximo y mínimo de rendimiento, si se configuran en ONTAP. Los gráficos IOPS/TB muestran la configuración máxima de la calidad de servicio y del umbral de rendimiento esperado, si se ha configurado.
+
+Cuando visualice un volumen o una LUN que comparte IOPS de una política de calidad de servicio compartida, aparecerá una línea de «'IOPS de carga de trabajo total» para mostrar las IOPS que utilizan todas las demás cargas de trabajo que comparten esta política.
+
+En la parte inferior de la página del gráfico se muestra información sobre el valor de IOPS mínimo, máximo, promedio y 95º percentil para el intervalo de tiempo seleccionado.
+
+Existen cuatro tipos de gráficos IOPS disponibles:
+
+
+
+== Gráfico de contadores IOPS - total
+
+Muestra el número de operaciones de entrada/salida procesadas por segundo.
+
+
+
+== IOPS - gráfico de contadores
+
+Muestra los mismos datos de IOPS separados en IOPS de lectura, escritura y otros.
+
+Esta opción de gráfico se aplica cuando el objeto seleccionado es una SVM, un nodo, un agregado, un volumen o una LUN.
+
+
+
+== IOPS: Gráfico de contadores de protocolos
+
+Muestra los mismos datos de IOPS, pero para las SVM los datos de rendimiento están separados en componentes individuales para el tráfico de los protocolos CIFS, NFS, FCP, NVMe e iSCSI.
+
+
+
+== Gráfico IOPS/TB - total counter
+
+Muestra el número de operaciones de entrada/salida procesadas por segundo según el espacio lógico total que consume el volumen, en terabytes. También denominado densidad de I/o, este contador mide el rendimiento que ofrece una cantidad de capacidad de almacenamiento determinada.
+
+Esta opción de gráfico solo está disponible cuando el objeto seleccionado es un volumen. Solo muestra datos de rendimiento cuando la capacidad lógica utilizada por el volumen es mayor o igual a 1 TB. Los espacios se mostrarán en el gráfico cuando la capacidad utilizada caiga por debajo de 1 TB durante el periodo de tiempo seleccionado.
+
+[NOTE]
+====
+En algunas situaciones, el gráfico IOPS/TB puede mostrar picos de datos grandes mientras el gráfico IOPS no muestra el mismo comportamiento. Esta es una limitación conocida en la que algunos datos de rendimiento se capturan con menos frecuencia que otros datos de rendimiento. Este gráfico normalmente volverá al funcionamiento normal en 5 o 10 minutos cuando los ciclos de recopilación estén sincronizados.
+
+====
+
+
+== *Botón Zoom View*
+
+Muestra una vista ampliada de los datos del gráfico de contadores.
+
+* Eventos
++
+La aparición de eventos críticos, de error, de advertencia e informativos se indica en las líneas de tiempo que aparecen encima de los gráficos.
+
+* Umbrales
++
+La línea horizontal discontinua indica el valor del umbral de advertencia de uso establecido en Unified Manager.
+
++
+La línea de color rojo fijo indica el valor del umbral crítico de utilización configurado en Unified Manager.
+
+* Contadores
++
+Los contadores del panel izquierdo muestran los valores de contador que se están mostrando. Anular la selección o selección de image:../media/eye-icon.gif[""] Que está asociado con un contador se oculta y muestra esa información del contador del gráfico y puede ayudar al comparar IOPS del objeto.
+
+

@@ -1,0 +1,71 @@
+---
+permalink: online-help/reference-relationship-last-1-month-transfer-status-view.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La página Protection/Volume Transfer Status \(Historical\) permite analizar las tendencias de la transferencia de volúmenes en un período de tiempo. En esta página también se muestra si la transferencia de volumen fue correcta o no.' 
+---
+= Página Protection/Volume Transfer Status (Historical)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Protection/Volume Transfer Status (Historical) permite analizar las tendencias de transferencia de volúmenes en un periodo de tiempo. En esta página también se muestra si la transferencia de volumen fue correcta o no.
+
+Utilice el botón *Exportar* para exportar los detalles de todos los volúmenes supervisados a valores separados por comas (`.csv`).
+
+[NOTE]
+====
+En esta página, se muestra información solo para los volúmenes en relaciones asíncronas: No se muestran los volúmenes de las relaciones síncronas.
+
+====
+* *Cluster de origen*
++
+Muestra el nombre del clúster de origen.
+
+* *Fuente SVM*
++
+Muestra el nombre de la máquina virtual de almacenamiento (SVM).
+
+* *Volumen de origen*
++
+Muestra el nombre del volumen de origen.
+
+* *Cluster de destino*
++
+Muestra el nombre del clúster de destino.
+
+* *SVM de destino*
++
+Muestra el nombre de la SVM de destino.
+
+* *Volumen de destino*
++
+Muestra el nombre del volumen de destino.
+
+* *Resultado de funcionamiento*
++
+Muestra si la transferencia de volumen se realizó correctamente.
+
+* *Hora de inicio de la transferencia*
++
+Muestra la hora de inicio de la transferencia del volumen.
+
+* *Tiempo de finalización de transferencia*
++
+Muestra la hora de finalización de la transferencia del volumen.
+
+* *Duración de transferencia*
++
+Muestra el tiempo necesario (en horas) para completar la transferencia de volumen.
+
+* *Tamaño de transferencia*
++
+Muestra el tamaño (en MB) del volumen transferido.
+
+* *Tipo de operación*
++
+Muestra el tipo de transferencia de volumen.
+
+

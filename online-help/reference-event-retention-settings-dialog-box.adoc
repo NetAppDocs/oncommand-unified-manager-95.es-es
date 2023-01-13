@@ -1,0 +1,58 @@
+---
+permalink: online-help/reference-event-retention-settings-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede configurar los ajustes de evento para eliminar automáticamente los eventos \(información, resueltos u obsoletos\) después de una hora especificada y en una frecuencia especificada. También es posible eliminar estos eventos manualmente.' 
+---
+= Cuadro de diálogo Event Retention Settings
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar los ajustes de los eventos para eliminar automáticamente los eventos (información, resueltos o obsoletos) después de una hora especificada y a una frecuencia especificada. También es posible eliminar estos eventos manualmente.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Configuración de eventos
+
+Puede configurar las siguientes opciones:
+
+* *Eliminar información, resueltos y Eventos obsoletos anteriores a*
++
+Permite especificar el período de retención después del cual los eventos marcados como Información, resueltos o Obsoleto se quitan del servidor de administración.
+
++
+El valor predeterminado es 180 días. Conservar los eventos durante más de 180 días afecta al rendimiento y no se recomienda. El límite inferior para el período de retención de sucesos es de 7 días, aunque no hay límite superior.
+
+* *Eliminar horario*
++
+Permite especificar la frecuencia con la que se eliminan automáticamente del servidor de administración todos los eventos marcados como Información, resueltos o Obsoleto y que han superado el límite de edad. Los valores posibles son Daily, Weekly o Monthly.
+
++
+El valor predeterminado es Daily.
+
+* *Eliminar ahora*
++
+Permite eliminar manualmente toda la información, los eventos resueltos y obsoletos que superaron el período de retención especificado.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando permiten guardar o cancelar las opciones de configuración:
+
+* *Guardar y cerrar*
++
+Guarda los ajustes de configuración de la opción seleccionada y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios recientes y cierra el cuadro de diálogo.
+
+

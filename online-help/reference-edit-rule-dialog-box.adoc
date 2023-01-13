@@ -1,0 +1,56 @@
+---
+permalink: online-help/reference-edit-rule-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Editar regla para editar las propiedades de una regla, como los tipos de archivo, las rutas de acceso de directorio o los propietarios. También puede seleccionar una clase de almacenamiento adecuada para la regla. Por ejemplo, cuando una determinada ruta de acceso de archivo ya no es válida, puede eliminar la ruta de acceso de archivo de la regla correspondiente. 
+---
+= Cuadro de diálogo Edit Rule
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Editar regla para editar las propiedades de una regla, como los tipos de archivo, las rutas de acceso de directorio o los propietarios. También puede seleccionar una clase de almacenamiento adecuada para la regla. Por ejemplo, cuando una determinada ruta de acceso de archivo ya no es válida, puede eliminar la ruta de acceso de archivo de la regla correspondiente.
+
+
+
+== Nombre de regla
+
+Muestra el nombre de la regla.
+
+
+
+== Criterios de coincidencia
+
+Muestra una lista de condiciones relacionadas con la plantilla de regla seleccionada. La lista de condiciones cambia según la plantilla de regla seleccionada.
+
+* *Agregar*
++
+Permite agregar una nueva propiedad de regla, un nuevo tipo de archivo, una ruta de acceso de archivo o un nuevo propietario. Por ejemplo, si ha especificado la plantilla de regla, "'colocar todos los archivos con los nombres de propietario especificados en una clase de almacenamiento adecuada'", el botón Agregar permite agregar el nombre del propietario.
+
+* *Eliminar*
++
+Permite eliminar una propiedad de regla seleccionada.
+
+
+
+
+
+== Área de colocación de contenido
+
+Muestra la lista de clases de almacenamiento. Puede seleccionar una clase de almacenamiento adecuada para la regla seleccionada.
+
+
+
+== Botones de comando
+
+* *Actualizar*
++
+Actualiza los cambios realizados en la regla y cierra el cuadro de diálogo Editar regla.
+
+* *Cancelar*
++
+Cancela los cambios recientes realizados en la regla y cierra el cuadro de diálogo Editar regla.
+
+

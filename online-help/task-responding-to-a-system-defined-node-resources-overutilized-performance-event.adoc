@@ -1,0 +1,55 @@
+---
+permalink: online-help/task-responding-to-a-system-defined-node-resources-overutilized-performance-event.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager genera eventos de advertencia sobreutilizados de los recursos de nodos cuando un único nodo está funcionando por encima de los límites de su eficiencia operativa y, por lo tanto, afecta potencialmente a las latencias de las cargas de trabajo. Estos eventos definidos por el sistema proporcionan la oportunidad para corregir posibles problemas de rendimiento antes de que muchas cargas de trabajo se vean afectadas por la latencia. 
+---
+= Respuesta a eventos de rendimiento sobreutilizados de recursos de nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager genera eventos de advertencia sobreutilizados de los recursos de nodos cuando un único nodo está funcionando por encima de los límites de su eficiencia operativa y, por lo tanto, afecta potencialmente a las latencias de las cargas de trabajo. Estos eventos definidos por el sistema proporcionan la oportunidad para corregir posibles problemas de rendimiento antes de que muchas cargas de trabajo se vean afectadas por la latencia.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento nuevos o obsoletos.
+
+
+
+
+== Acerca de esta tarea
+
+Unified Manager genera eventos de advertencia para las infracciones de políticas de recursos de nodos sobreutilizadas buscando nodos que utilicen más del 100 % de su capacidad de rendimiento durante más de 30 minutos.
+
+Puede usar System Manager o los comandos de la ONTAP para corregir este tipo de problema de rendimiento, incluidas las siguientes tareas:
+
+* Crear y aplicar una política de calidad de servicio a cualquier volumen o LUN que utilicen en exceso los recursos del sistema
+* Reducir el límite máximo de rendimiento de la calidad de servicio de un grupo de políticas al cual se aplican cargas de trabajo
+* Mover una carga de trabajo a un agregado o nodo diferente
+* Aumentar la capacidad añadiendo discos al nodo o actualizando a un nodo con una CPU más rápida y más RAM
+
+
+
+
+== Pasos
+
+. Abra la página de detalles *Event* para ver información sobre el evento.
+. Revise la *Descripción*, que describe la brecha de umbral que provocó el evento.
++
+Por ejemplo, el mensaje "'Perf. Valor de capacidad utilizada del 139 % en Simplicity-02 ha activado un evento DE ADVERTENCIA para identificar problemas de rendimiento potenciales en la unidad de procesamiento de datos». indica que la capacidad de rendimiento de los nodos simplicity-02 está sobreutilizada y afecta negativamente al rendimiento de los nodos.
+
+. En la sección *Diagnóstico del sistema*, revise los tres gráficos: Uno para la capacidad de rendimiento utilizada en el nodo, otro para la tasa media de IOPS de almacenamiento que utilizan las cargas de trabajo principales y uno para la latencia en las cargas de trabajo principales. Cuando se organizan de este modo, se pueden ver qué cargas de trabajo son la causa de la latencia en el nodo.
++
+Puede ver qué cargas de trabajo tienen políticas de calidad de servicio aplicadas, y cuáles no, moviendo el cursor sobre el gráfico IOPS.
+
+. En la sección *acciones sugeridas*, revise las sugerencias y determine qué acciones debe realizar para evitar un aumento en la latencia de la carga de trabajo.
++
+Si es necesario, haga clic en el botón *Ayuda* para ver más detalles sobre las acciones sugeridas que puede realizar para intentar resolver el evento de rendimiento.
+
+

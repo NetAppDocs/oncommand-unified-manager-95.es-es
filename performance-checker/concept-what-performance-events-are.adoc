@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept-what-performance-events-are.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de rendimiento son incidentes relacionados con el rendimiento de la carga de trabajo en un clúster. Le ayudan a identificar cargas de trabajo con tiempos de respuesta lentos. Junto con los eventos de salud que ocurrieron al mismo tiempo, usted puede determinar los problemas que podrían haber causado, o contribuido a, los tiempos de respuesta lentos. 
+---
+= ¿Qué eventos de rendimiento son
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de rendimiento son incidentes relacionados con el rendimiento de la carga de trabajo en un clúster. Le ayudan a identificar cargas de trabajo con tiempos de respuesta lentos. Junto con los eventos de salud que ocurrieron al mismo tiempo, usted puede determinar los problemas que podrían haber causado, o contribuido a, los tiempos de respuesta lentos.
+
+Cuando Unified Manager detecta varias apariciones de la misma condición de evento para el mismo componente del clúster, trata todas las ocurrencias como un solo evento, no como eventos independientes.

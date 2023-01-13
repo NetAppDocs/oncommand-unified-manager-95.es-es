@@ -1,0 +1,140 @@
+---
+permalink: performance-checker/reference-summary-page-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Summary muestra gráficos de contadores que contienen detalles sobre los eventos y el rendimiento por objeto durante el período de 72 horas anterior. Estos datos no se actualizan automáticamente, pero están actualizados a partir de la última carga de página. Los gráficos de la página Resumen responden a la pregunta ¿Debo mirar más allá? 
+---
+= Resumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Summary muestra gráficos de contadores que contienen detalles sobre los eventos y el rendimiento por objeto durante el período de 72 horas anterior. Estos datos no se actualizan automáticamente, pero están actualizados a partir de la última carga de página. Los gráficos de la página Resumen responden a la pregunta _do I need to look foulterior?_
+
+
+
+== Gráficos y estadísticas de contadores
+
+Los gráficos resumidos proporcionan una visión general rápida de alto nivel para el último período de 72 horas y le ayudan a identificar posibles problemas que requieren una investigación adicional.
+
+Las estadísticas del contador de páginas Summary se muestran en los gráficos.
+
+Puede colocar el cursor sobre la línea de tendencias de un gráfico para ver los valores de contador de un momento específico. Los gráficos resumidos también muestran el número total de eventos críticos y de advertencia activos para el período anterior de 72 horas para los siguientes contadores:
+
+* *Latencia*
++
+Tiempo de respuesta medio para todas las solicitudes de I/o; se expresa en milisegundos por operación.
+
++
+Se muestra para todos los tipos de objeto.
+
+* *IOPS*
++
+Velocidad media de funcionamiento; expresada en operaciones de entrada/salida por segundo.
+
++
+Se muestra para todos los tipos de objeto.
+
+* *Mbps*
++
+Rendimiento medio; expresado en megabytes por segundo.
+
++
+Se muestra para todos los tipos de objeto.
+
+* *Capacidad de rendimiento utilizada*
++
+Porcentaje de la capacidad de rendimiento que consume un nodo o un agregado.
+
++
+Visualización solo para nodos y agregados. Este gráfico sólo se muestra cuando se utiliza el software ONTAP 9.0 o posterior.
+
+* *Utilización*
++
+Porcentaje de utilización de objetos para nodos y agregados, o uso de ancho de banda para puertos.
+
++
+Se muestra solo para nodos, agregados y puertos.
+
+
+
+Al colocar el cursor sobre el número de eventos de eventos activos, se muestra el tipo y el número de eventos. Los eventos críticos se muestran en rojo (image:../media/treemapred-png.gif["Icono para TreeMap: Color rojo"]) y los sucesos de advertencia aparecen en amarillo (image:../media/treemapstatus-warning-png.gif["Icono para TreeMap: Estado de advertencia"]).
+
+El número situado en la parte superior derecha del gráfico en la barra gris es el valor medio del último período de 72 horas. Los números que se muestran en la parte inferior y superior del gráfico de líneas de tendencia son los valores mínimo y máximo del último período de 72 horas. La barra gris debajo del gráfico contiene el recuento de eventos activos (nuevos y reconocidos) y eventos obsoletos del último período de 72 horas.
+
+image::../media/iops-graph.gif[gráfico iops]
+
+* *Tabla de contadores de latencia*
++
+El gráfico de contadores latencia proporciona una información general de alto nivel de la latencia de objetos para el período de 72 horas anterior. La latencia se refiere al tiempo de respuesta medio para todas las solicitudes de I/o; se expresa en milisegundos por operación, el tiempo de servicio, el tiempo de espera o los dos que tiene un paquete o un bloque de datos en el componente de almacenamiento del clúster que se está considerando.
+
++
+*Arriba (valor de contador):* el número en el cabezal muestra el promedio para el período anterior de 72 horas.
+
++
+* Medio (gráfico de rendimiento):* el número en la parte inferior del gráfico muestra la menor latencia, y el número en la parte superior del gráfico muestra la latencia más alta para el período anterior de 72 horas. Sitúe el cursor sobre la línea de tendencias del gráfico para ver el valor de latencia de un tiempo específico.
+
++
+* Inferior (eventos):* al pasar el ratón, el elemento emergente muestra los detalles de los eventos. Haga clic en el enlace *Eventos activos* situado debajo del gráfico para ir a la página Inventario de eventos para ver los detalles completos del evento.
+
+* *Tabla de contadores IOPS*
++
+El gráfico de contadores IOPS proporciona una información general de alto nivel del estado IOPS del objeto durante el período de 72 horas anterior. IOPS indica la velocidad del sistema de almacenamiento en el número de operaciones de entrada/salida por segundo.
+
++
+*Arriba (valor de contador):* el número en el cabezal muestra el promedio para el período anterior de 72 horas.
+
++
+* Medio (gráfico de rendimiento):* el número en la parte inferior del gráfico muestra la tasa de IOPS más baja y el número en la parte superior del gráfico muestra la tasa de IOPS más alta para el período de 72 horas anterior. Sitúe el cursor sobre la línea de tendencias del gráfico para ver el valor de IOPS de un tiempo específico.
+
++
+* Inferior (eventos):* al pasar el ratón, el elemento emergente muestra los detalles de los eventos. Haga clic en el enlace *Eventos activos* situado debajo del gráfico para ir a la página Inventario de eventos para ver los detalles completos del evento.
+
+* * Tabla de contadores Mbps*
++
+El gráfico de contadores Mbps muestra el rendimiento de Mbps del objeto e indica cuántos datos se han transferido al objeto y desde él en megabytes por segundo. El gráfico de contadores Mbps proporciona una descripción general de alto nivel del estado de Mbps del objeto durante el período anterior de 72 horas.
+
++
+*Arriba (valor de contador):* el número en el encabezado muestra el número promedio de Mbps para el período anterior de 72 horas.
+
++
+* Medio (gráfico de rendimiento):* el valor en la parte inferior del gráfico muestra el número más bajo de Mbps, y el valor en la parte superior del gráfico muestra el número más alto de Mbps para el período anterior de 72 horas. Sitúe el cursor sobre la línea de tendencias del gráfico para ver el valor de Mbps durante un tiempo específico.
+
++
+* Inferior (eventos):* al pasar el ratón, el elemento emergente muestra los detalles de los eventos. Haga clic en el enlace *Eventos activos* situado debajo del gráfico para ir a la página Inventario de eventos para ver los detalles completos del evento.
+
+* * Capacidad de rendimiento usada tabla de contadores*
++
+El gráfico de contadores Performance Capacity used muestra el porcentaje de la capacidad de rendimiento que consume el objeto.
+
++
+*Arriba (valor de contador):* el número en el cabezal muestra la capacidad de rendimiento media usada para el período anterior de 72 horas.
+
++
+*Medio (gráfico de rendimiento):* el valor en la parte inferior del gráfico muestra el porcentaje de capacidad de rendimiento más bajo utilizado y el valor en la parte superior del gráfico muestra el porcentaje de capacidad de rendimiento más alto utilizado para el período anterior de 72 horas. Coloque el cursor sobre la línea de tendencias del gráfico para ver el valor de capacidad de rendimiento usado durante un tiempo específico.
+
++
+* Inferior (eventos):* al pasar el ratón, el elemento emergente muestra los detalles de los eventos. Haga clic en el enlace *Eventos activos* situado debajo del gráfico para ir a la página Inventario de eventos para ver los detalles completos del evento.
+
+* *Tabla de contadores de utilización*
++
+El gráfico de contadores de uso muestra el porcentaje de utilización del objeto. El gráfico de contadores de utilización proporciona una descripción general de alto nivel del porcentaje del objeto o del uso de ancho de banda durante el período de 72 horas anterior.
+
++
+*Arriba (valor de contador):* el número en el encabezado muestra el porcentaje de utilización promedio para el período anterior de 72 horas.
+
++
+* Medio (gráfico de rendimiento):* el valor en la parte inferior del gráfico muestra el porcentaje de utilización más bajo, y el valor en la parte superior del gráfico muestra el porcentaje de utilización más alto para el período de 72 horas anterior. Sitúe el cursor sobre la línea de tendencias del gráfico para ver el valor de utilización de un tiempo específico.
+
++
+* Inferior (eventos):* al pasar el ratón, el elemento emergente muestra los detalles de los eventos. Haga clic en el enlace *Eventos activos* situado debajo del gráfico para ir a la página Inventario de eventos para ver los detalles completos del evento.
+
+
+
+
+
+== Eventos
+
+En la tabla del historial de eventos, donde corresponda, se enumeran los eventos más recientes que se han producido en ese objeto. Al hacer clic en el nombre del evento se muestran los detalles del evento en la página Event Details.

@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task-editing-the-infinite-volume-threshold-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando necesite solucionar cualquier problema en el espacio de almacenamiento de su Infinite Volume, puede editar la configuración del umbral de la capacidad del Infinite Volume en función de los requisitos de su empresa. Cuando se cruza un umbral, se generan eventos y se reciben notificaciones si se han configurado alertas para dichos eventos. 
+---
+= Editar la configuración de umbral de Infinite Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando necesite solucionar cualquier problema del espacio de almacenamiento de Infinite Volume, puede editar la configuración del umbral de la capacidad de Infinite Volume en función de los requisitos de su organización. Cuando se cruza un umbral, se generan eventos y se reciben notificaciones si se han configurado alertas para dichos eventos.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione una SVM con Infinite Volume.
+. En la página de detalles *Health/Storage Virtual Machine*, haga clic en *acciones* > *Editar umbrales*.
+. En el cuadro de diálogo *Editar SVM con umbrales de Infinite Volume*, modifique los umbrales según sea necesario.
+. Haga clic en *Guardar y cerrar*.
+

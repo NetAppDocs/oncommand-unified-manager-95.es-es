@@ -1,0 +1,58 @@
+---
+permalink: online-help/task-testing-script-execution.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede verificar que el script se ejecute correctamente cuando se genera una alerta para un objeto de almacenamiento. 
+---
+= Prueba de la ejecución de scripts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede verificar que el script se ejecute correctamente cuando se genera una alerta para un objeto de almacenamiento.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber cargado un script en el formato de archivo compatible a Unified Manager.
+
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *Scripts* en el menú Administración de la izquierda.
+. En la página *Management/Scripts*, agregue su secuencia de comandos de prueba.
+. En la página *Configuración/Alertas*, realice una de las siguientes acciones:
++
+|===
+| Para... | Realice lo siguiente... 
+
+
+ a| 
+Añadir una alerta
+ a| 
+.. En la página Configuración/Alertas, haga clic en *Agregar*.
+.. En la sección acciones, asocie la alerta al script de prueba.
+
+
+
+
+ a| 
+Editar una alerta
+ a| 
+.. En la página Configuración/Alertas, seleccione una alerta y, a continuación, haga clic en *Editar*.
+.. En la sección acciones, asocie la alerta al script de prueba.
+
+
+|===
+. Haga clic en *Guardar*.
+. En la página *Configuración/Alertas*, seleccione la alerta que ha agregado o modificado y, a continuación, haga clic en *Prueba*.
++
+El script se ejecuta con el argumento «»-test» y se envía una alerta de notificación a las direcciones de correo electrónico especificadas al crear la alerta.
+
+

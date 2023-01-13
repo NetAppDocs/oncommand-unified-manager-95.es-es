@@ -1,0 +1,71 @@
+---
+permalink: online-help/task-acknowledging-and-resolving-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe reconocer un evento antes de empezar a trabajar en el problema que generó el evento para que no siga recibiendo notificaciones de alerta de repetición. Después de realizar una acción correctiva para un evento determinado, debe marcar el evento como resuelto. 
+---
+= Reconocer y resolver eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe reconocer un evento antes de empezar a trabajar en el problema que generó el evento para que no siga recibiendo notificaciones de alerta de repetición. Después de realizar una acción correctiva para un evento determinado, debe marcar el evento como resuelto.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Puede reconocer y resolver varios eventos al mismo tiempo.
+
+[NOTE]
+====
+No puede reconocer eventos de información.
+
+====
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Eventos*.
+. En la lista de eventos, realice las siguientes acciones para reconocer los eventos:
++
+|===
+| Si desea... | Realice lo siguiente... 
+
+
+ a| 
+Reconozca y marque un solo evento como resuelto
+ a| 
+.. Haga clic en el nombre del evento.
+.. En la página de detalles Event, determine la causa del evento.
+.. Haga clic en *acuse de recibo*.
+.. Realice la acción correctiva adecuada.
+.. Haga clic en *Marcar como solucionado*.
+
+
+
+
+ a| 
+Reconozca y marque varios eventos como resueltos
+ a| 
+.. Determine la causa de los eventos desde la página de detalles del evento correspondiente.
+.. Seleccione los eventos.
+.. Haga clic en *acuse de recibo*.
+.. Realice las acciones correctivas necesarias.
+.. Haga clic en *Marcar como solucionado*.
+
+
+|===
++
+Una vez que se Marca Resolved el evento, este se mueve a la lista de eventos resueltos.
+
+. En el área *Notas y actualizaciones*, agregue una nota sobre cómo ha abordado el evento y, a continuación, haga clic en *Post*.
+

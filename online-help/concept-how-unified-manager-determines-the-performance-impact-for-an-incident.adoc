@@ -1,0 +1,20 @@
+---
+permalink: online-help/concept-how-unified-manager-determines-the-performance-impact-for-an-incident.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Unified Manager utiliza la desviación de la actividad, la utilización, el rendimiento de escritura, el uso de componentes del clúster o la latencia de I/o \(tiempo de respuesta\) en una carga de trabajo para determinar el nivel de impacto en el rendimiento de la carga de trabajo. Esta información determina el rol de cada carga de trabajo del evento y su clasificación en la página de detalles Event.' 
+---
+= La forma en que Unified Manager determina el impacto en el rendimiento de un evento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager utiliza la desviación de la actividad, la utilización, el rendimiento de escritura, el uso de componentes del clúster o la latencia de I/o (tiempo de respuesta) en una carga de trabajo para determinar el nivel de impacto en el rendimiento de la carga de trabajo. Esta información determina el rol de cada carga de trabajo del evento y su clasificación en la página de detalles Event.
+
+Unified Manager compara los valores del último análisis de una carga de trabajo con el rango esperado de valores. La diferencia entre los valores que se analizaron por última vez y el rango esperado de valores identifica las cargas de trabajo cuyo rendimiento tuvo un mayor impacto en el evento.
+
+Por ejemplo, supongamos que un clúster contiene dos cargas de trabajo: La carga de trabajo A y la carga de trabajo B. El rango esperado para la carga de trabajo A es de 5-10 milisegundos por operación (ms/op) y su latencia real suele ser de aproximadamente 7 ms/op. El rango esperado para la carga de trabajo B es de 10-20 ms/op y su latencia real suele ser de aproximadamente 15 ms/op. Ambas cargas de trabajo están dentro del rango esperado de latencia. Debido a una contención en el clúster, la latencia de ambas cargas de trabajo aumenta a 40 ms/op, que cruza el umbral de rendimiento, que es los límites superiores del rango esperado y activa los eventos. La desviación en latencia, de los valores esperados a los valores por encima del umbral de rendimiento, para la carga De trabajo A es aproximadamente de 33 ms/op y la desviación de la carga de trabajo B es de unos 25 ms/op. La latencia de ambas cargas de trabajo se dispara hasta los 40 ms/op, pero la carga De trabajo A tuvo un impacto en el rendimiento mayor porque tuvo la mayor desviación de latencia en 33 ms/op.
+
+En la página de detalles Event, en la sección System Diagnosis, se pueden ordenar las cargas de trabajo por su desviación de la actividad, la utilización o el rendimiento de un componente del clúster. También es posible ordenar las cargas de trabajo por latencia. Cuando se selecciona una opción de ordenación, Unified Manager analiza la desviación de la actividad, la utilización, el rendimiento o la latencia desde que se detectó el evento de los valores esperados para determinar el orden de clasificación de la carga de trabajo. Para la latencia, los puntos rojos (image:../media/opm-incident-icon-png.gif["Icono de advertencia de Performance Manager"]) indica un umbral de rendimiento que cruza una carga de trabajo víctima y el impacto posterior en la latencia. Cada punto rojo indica un nivel más alto de desviación en latencia, lo que ayuda a identificar las cargas de trabajo víctimas cuya latencia más se vio afectada por un evento.

@@ -1,0 +1,57 @@
+---
+permalink: health-checker/task-resolving-volume-offline-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Este flujo de trabajo proporciona un ejemplo de cómo puede evaluar y resolver un evento de volumen sin conexión que Unified Manager podría mostrar en el área disponibilidad de la página Dashboards/Overview. En esta situación, es un administrador que utiliza Unified Manager para solucionar uno o varios eventos de volumen sin conexión que se muestran en la página Dashboards/Overview. 
+---
+= Resolver problemas de volumen sin conexión
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este flujo de trabajo proporciona un ejemplo de cómo puede evaluar y resolver un evento de volumen sin conexión que Unified Manager podría mostrar en el área disponibilidad de la página Dashboards/Overview. En esta situación, es un administrador que utiliza Unified Manager para solucionar uno o varios eventos de volumen sin conexión que se muestran en la página Dashboards/Overview.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Es posible que los volúmenes se informen sin conexión por varios motivos:
+
+* El administrador de SVM desconectó el volumen de manera deliberada.
+* El nodo de clúster host del volumen está inactivo y la conmutación por error del almacenamiento a su par de alta disponibilidad también ha fallado.
+* La máquina virtual de almacenamiento (SVM) que aloja el volumen se detiene porque el nodo que aloja el volumen raíz de esa SVM está inactivo.
+* El agregado de host del volumen está inactivo debido a una falla simultánea de dos discos RAID.
+
+
+Puede utilizar la página Dashboards/Overview y las páginas de detalles Health/Cluster, Health/SVM, and Health/Volume para confirmar o eliminar una o varias de estas posibilidades.
+
+
+
+== Pasos
+
+. En el panel *disponibilidad* de la sección *incidentes y riesgos no resueltos*, haga clic en el enlace de hipertexto que aparece para el evento volumen sin conexión.
++
+Se muestra la página de detalles Event para la incidencia de disponibilidad.
+
+. En esa página, compruebe las notas para indicar que el administrador de SVM ha puesto el volumen en cuestión sin conexión.
+. En la página de detalles *evento*, puede consultar la información de una o más de las siguientes tareas:
++
+** Revise la información que se muestra en el campo causa para obtener una posible guía de diagnóstico.
++
+En este ejemplo, la información del campo causa solo informa que el volumen está sin conexión.
+
+** Consulte el área Notas y actualizaciones para ver si el administrador de SVM ha desactivado el volumen de forma deliberada.
+** Haga clic en el origen del evento, en este caso el volumen que se notifica sin conexión, para obtener más información sobre ese volumen. xref:task-performing-diagnotstic-actions-for-volume-offline-conditions.adoc[Realizar la acción correctiva para condiciones de sin conexión de un volumen]
+** Asigne el evento a un administrador. xref:task-assigning-events-to-specific-users.adoc[Asignar eventos]
+** Reconozca el evento o, si procede, márquelo como solucionado. xref:task-acknowledging-and-resolving-events.adoc[Reconocer y resolver eventos]
+
+
+

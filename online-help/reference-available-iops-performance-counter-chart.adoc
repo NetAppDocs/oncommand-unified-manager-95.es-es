@@ -1,0 +1,47 @@
+---
+permalink: online-help/reference-available-iops-performance-counter-chart.html 
+sidebar: sidebar 
+keywords:  
+summary: 'En el gráfico de contadores IOPS disponibles del Explorador de rendimiento, se muestra el número de operaciones de entrada/salida por segundo que están disponibles \(free\) en el objeto de almacenamiento seleccionado.' 
+---
+= Gráfico de contadores IOPS Performance disponible
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En el gráfico de contadores IOPS disponibles del Explorador de rendimiento, se muestra el número de operaciones de entrada/salida por segundo que están disponibles actualmente (libres) en el objeto de almacenamiento seleccionado.
+
+La ventana emergente que se muestra cuando el cursor se encuentra en el área del gráfico muestra los valores específicos del contador en momentos específicos.
+
+Esta opción de gráfico sólo se aplica cuando el objeto seleccionado es un nodo o un agregado.
+
+La parte inferior de la página de gráfico muestra información sobre la capacidad de rendimiento mínima, máxima, media y percentil 95o utilizada para el intervalo de tiempo seleccionado.
+
+
+
+== Gráfico Available IOPS - total counter
+
+Muestra el número de operaciones de entrada/salida por segundo que están disponibles actualmente (libres) en el objeto de almacenamiento seleccionado. Este número es el resultado de restar las IOPS actualmente usadas a las IOPS totales que Unified Manager calcula que el objeto puede realizar.
+
+[NOTE]
+====
+Los datos de IOPS disponibles solo están disponibles cuando los nodos de un clúster se han instalado con el software ONTAP 9.0 o posterior.
+
+====
+
+
+== *Botón Zoom View*
+
+Muestra una vista ampliada de los datos del gráfico de contadores.
+
+* Eventos
++
+La aparición de eventos críticos, de advertencia e informativos se indica en las líneas de tiempo sobre los gráficos.
+
+* Contadores
++
+Los contadores del panel izquierdo muestran los valores de contador que se están mostrando. Anular la selección o selección de image:../media/eye-icon.gif[""] asociado con un contador se oculta y muestra esa información de contador del gráfico y puede ayudar a comparar objetos.
+
+

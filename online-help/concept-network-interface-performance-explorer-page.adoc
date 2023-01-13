@@ -1,0 +1,32 @@
+---
+permalink: online-help/concept-network-interface-performance-explorer-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Performance/LIF Explorer proporciona una descripción general detallada del rendimiento para todas las LIF dentro de un clúster. 
+---
+= Página del explorador Performance/LIF
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Performance/LIF Explorer proporciona una descripción general detallada del rendimiento para todas las LIF dentro de un clúster.
+
+La página Performance/LIF Explorer le permite realizar un seguimiento y comparar el rendimiento de la LIF durante un período de tiempo específico, lo que le ayuda a solucionar problemas y a ajustar su rendimiento de la LIF.
+
+Con la funcionalidad de Ver y comparar puede comparar el rendimiento de esta LIF con:
+
+* Otros LIF que están en el mismo puerto
+* Otros LIF que están en la misma SVM
+* El puerto en el que reside el LIF
+* La SVM en la que reside el LIF
+
+
+La página Performance/LIF Explorer le permite:
+
+* Ver los problemas relacionados con los umbrales y sus detalles
+* Realizar un seguimiento y comparar los datos de rendimiento de LIF
+* Investigar y solucionar problemas relacionados con los umbrales
+* Investigue y solucione problemas de rendimiento
+

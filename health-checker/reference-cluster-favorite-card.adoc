@@ -1,0 +1,64 @@
+---
+permalink: health-checker/reference-cluster-favorite-card.html 
+sidebar: sidebar 
+keywords:  
+summary: La tarjeta Favorito de clúster permite ver los detalles de capacidad, configuración y rendimiento de los clústeres individuales que ha marcado como favoritos. 
+---
+= Tarjeta Favorito de clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La tarjeta Favorito de clúster permite ver los detalles de capacidad, configuración y rendimiento de los clústeres individuales que ha marcado como favoritos.
+
+
+
+== Atributos del clúster
+
+La tarjeta Favorito de clúster muestra los siguientes atributos de cada clúster:
+
+* *Estado de mantenimiento del clúster*
++
+Un icono que indica el estado del clúster. Los valores posibles son normal, Advertencia, error y crítico.
+
+* *Nombre de clúster*
++
+El nombre del clúster.
+
+* *Capacidad*
++
+El espacio libre total en el clúster.
+
+* *Configuración*
++
+Detalles de configuración del clúster.
+
++
+** *Dirección IP*
++
+La dirección IP o el nombre de host de la interfaz lógica de gestión de clústeres (LIF) que se utilizó para añadir el clúster.
+
+** *Número de nodos*
++
+Número de nodos en el clúster.
+
+
+
+* *Rendimiento*
++
+Detalles de rendimiento del clúster.
+
++
+** *IOPS*
++
+Promedio de operaciones de I/o por segundo en las últimas 72 horas.
+
+** *Rendimiento*
++
+Rendimiento medio durante las últimas 72 horas, en Mbps .
+
+
+
+

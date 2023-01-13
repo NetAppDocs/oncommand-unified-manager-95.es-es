@@ -1,0 +1,81 @@
+---
+permalink: online-help/reference-volume-performance-information-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Use esta página para ver una lista de los atributos físicos y lógicos del volumen. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento. El título de esta página depende de si va a ver un volumen de FlexVol o de FlexGroup. 
+---
+= Página Performance/Volume o Performance/FlexGroup Information
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use esta página para ver una lista de los atributos físicos y lógicos del volumen. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento. El título de esta página depende de si va a ver un volumen de FlexVol o de FlexGroup.
+
+
+
+== Atributos de volumen
+
+* *Tipo*
++
+El tipo de volumen; o bien la lectura/escritura (RW) o la protección de datos (DP).
+
+* *Estilo*
++
+El estilo de volumen, FlexVol o FlexGroup.
+
++
+[NOTE]
+====
+Las páginas de rendimiento de Unified Manager no admiten volúmenes infinitos.
+
+====
+* *Cluster*
++
+El nombre del clúster al que pertenecen este volumen FlexVol o FlexGroup. Puede hacer clic en el nombre para mostrar los detalles del clúster en la página Performance/Cluster Explorer.
+
+* *Agregados*
++
+El nombre del agregado en el que reside este volumen de FlexVol o el número de agregados en los que reside este volumen de FlexGroup.
+
++
+Para FlexVol Volumes, puede hacer clic en el nombre para mostrar detalles de agregado en la página del explorador rendimiento/agregado. Para FlexGroup Volumes, puede hacer clic en el número para mostrar los agregados que se usan en este volumen FlexGroup en la página Performance/Aggregate Inventory.
+
+* *Máquina virtual de almacenamiento*
++
+Nombre de la SVM a la que pertenecen este volumen de FlexVol o FlexGroup. Puede hacer clic en el nombre para mostrar los detalles de la SVM en la página Performance/SVM Explorer.
+
+* *Política de organización en niveles*
++
+La política de organización en niveles establecida en el volumen. La política solo se ve afectada cuando se implementa el volumen en un agregado de FabricPool. Las directivas disponibles son:
+
++
+** Ninguno. Los datos para este volumen siempre permanecen en el nivel de rendimiento.
+** Solo Snapshot. Solo los datos de Snapshot se mueven automáticamente al nivel de cloud. El resto de datos permanecen en el nivel de rendimiento.
+** Backup. En los volúmenes de protección de datos, todos los datos de usuario transferidos inician en el nivel de cloud, pero las lecturas posteriores de los clientes pueden hacer que los datos activos se muevan al nivel de rendimiento.
+** Automático. Los datos de este volumen se mueven automáticamente entre el nivel de rendimiento y el nivel de cloud cuando ONTAP determina que los datos están «activos» o «inactivos».
+
+
+* *Tipo RAID*
++
+El tipo de redundancia que se utiliza en el nivel de rendimiento del agregado en el que reside este volumen. Tipos posibles:
+
++
+** RAID0
+** RAID4
+** RAID-DP
+** RAID-TEC
+
+
++
+[NOTE]
+====
+El valor «'no aplicable'» se muestra para los volúmenes FlexGroup, ya que los volúmenes constituyentes pueden encontrarse en agregados de diferentes tipos de RAID.
+
+====
+* *Capacidad (libre/total)*
++
+El almacenamiento total disponible en el volumen, en gigabytes y la cantidad de almacenamiento disponible actualmente.
+
+

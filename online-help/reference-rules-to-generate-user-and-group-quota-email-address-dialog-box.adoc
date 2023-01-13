@@ -1,0 +1,80 @@
+---
+permalink: online-help/reference-rules-to-generate-user-and-group-quota-email-address-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Reglas para generar Dirección de correo electrónico de cuota de usuario y de grupo permite crear reglas para especificar direcciones de correo electrónico en función de la cuota de usuario asociada a clústeres, SVM, volúmenes, qtrees, usuarios, o grupos de usuarios. Cuando se incumple una cuota, se envía una notificación a la dirección de correo electrónico especificada. 
+---
+= Reglas para generar la página Dirección de correo electrónico de cuota de usuario y grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Reglas para generar Dirección de correo electrónico de cuota de usuario y de grupo permite crear reglas para especificar direcciones de correo electrónico en función de la cuota de usuario asociada a clústeres, SVM, volúmenes, qtrees, usuarios, o grupos de usuarios. Cuando se incumple una cuota, se envía una notificación a la dirección de correo electrónico especificada.
+
+
+
+== Área Rules
+
+Debe definir las reglas para una dirección de correo electrónico de cuota. También puede agregar comentarios para explicar las reglas.
+
+
+
+== Cómo se definen las reglas
+
+Debe introducir las reglas en el orden en el que desea ejecutarlas. Si se cumple el criterio de la primera regla, se generará la dirección de correo electrónico según esta regla. Si no se cumple el criterio, se considerará el criterio para la siguiente regla, etc. Cada línea enumera una regla independiente. La regla predeterminada es la última regla de la lista. Es posible cambiar el orden de prioridad de las reglas. Sin embargo, no puede cambiar el orden de la regla predeterminada.
+
+Por ejemplo, si desea utilizar la dirección de correo electrónico qtree1@xyz.com para recibir notificaciones acerca de las brechas de cuotas para qtre1 y utilizar la dirección de correo electrónico admin@xyz.com para todos los demás qtrees, las reglas deben aparecer en el siguiente orden:
+
+* Si ( $QTREE == 'qtre1' ) entonces qtree1@xyz.com
+* Si ( $QTREE == * ) entonces admin@xyz.com
+
+
+Si no se cumple ninguno de los criterios para las reglas especificadas, se utiliza la regla predeterminada:
+
+SI ( $USER_OR_GROUP == * ) ENTONCES $USER_OR_GROUP@$DOMAIN
+
+Si más de un usuario tiene la misma cuota, los nombres de los usuarios se muestran como valores separados por comas y las reglas no se aplican para la cuota.
+
+
+
+== Cómo se añaden comentarios
+
+Puede agregar comentarios para explicar las reglas. Debe usar # al principio de cada comentario y cada línea enumera un comentario separado.
+
+
+
+== Sintaxis de reglas
+
+La sintaxis de la regla debe ser una de las siguientes:
+
+* Si ( _variable**operator_ * válida, _Email ID_@_domain name_
++
+`if` es una palabra clave y está en minúscula. El operador es ==. El ID de correo electrónico puede contener cualquier carácter, las variables válidas $USER_OR_GROUP, $USER o $GROUP, o una combinación de cualquier carácter y las variables válidas $USER_OR_GROUP, $USER o $GROUP. El nombre de dominio puede contener cualquier carácter, la variable válida $DOMAIN o una combinación de cualquier carácter y la variable válida $DOMAIN. Las variables válidas pueden estar en mayúsculas o minúsculas, pero no deben ser una combinación de ambas. Por ejemplo, $domain y $DOMAIN son válidos, pero $Domain no es una variable válida.
+
+* Si ( _variable**operator_ '_string_ ') después _Email ID_@_domain name_
++
+`if` es una palabra clave y está en minúscula. El operador puede ser `contains` o ==. El ID de correo electrónico puede contener cualquier carácter, las variables válidas $USER_OR_GROUP, $USER o $GROUP, o una combinación de cualquier carácter y las variables válidas $USER_OR_GROUP, $USER o $GROUP. El nombre de dominio puede contener cualquier carácter, la variable válida $DOMAIN o una combinación de cualquier carácter y la variable válida $DOMAIN. Las variables válidas pueden estar en mayúsculas o minúsculas, pero no deben ser una combinación de ambas. Por ejemplo, $domain y $DOMAIN son válidos, pero $Domain no es una variable válida.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando permiten guardar, validar o cancelar las reglas creadas:
+
+* *Validar*
++
+Valida la sintaxis de la regla creada. Si hay errores durante la validación, la regla que genera el error se muestra junto con un mensaje de error.
+
+* *Restaurar valores predeterminados de fábrica*
++
+Permite restaurar las reglas de dirección a los valores predeterminados de fábrica.
+
+* *Guardar*
++
+Valida la sintaxis de la regla y guarda la regla si no hay errores. Si hay errores durante la validación, la regla que genera el error se muestra junto con un mensaje de error.
+
+

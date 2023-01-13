@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept-performance-incident-analysis-for-a-metrocluster-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible utilizar Unified Manager para analizar un evento de rendimiento de una configuración de MetroCluster. Es posible identificar las cargas de trabajo involucradas en el evento y revisar las acciones sugeridas para resolverlo. 
+---
+= Análisis de eventos de rendimiento para una configuración de MetroCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible utilizar Unified Manager para analizar un evento de rendimiento de una configuración de MetroCluster. Es posible identificar las cargas de trabajo involucradas en el evento y revisar las acciones sugeridas para resolverlo.
+
+Los eventos de rendimiento de MetroCluster pueden deberse a cargas de trabajo _intimidator_ que usan en exceso los enlaces interswitches (ISL) entre los clústeres, o debido a problemas de estado del enlace. Unified Manager supervisa cada clúster en una configuración de MetroCluster de forma independiente, sin considerar eventos de rendimiento en un clúster de partners.
+
+Los eventos de rendimiento de ambos clústeres de la configuración de MetroCluster también se muestran en la página Unified Manager Dashboards/Overview.también puede ver las páginas Health de Unified Manager para comprobar el estado de cada clúster y ver su relación.

@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept-analyzing-events-from-system-defined-performance-thresholds.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos generados a partir de umbrales de rendimiento definidos por el sistema indican que un contador de rendimiento, o un conjunto de contadores de rendimiento, para un determinado objeto de almacenamiento ha superado el umbral de una política definida por el sistema. Esto indica que el objeto de almacenamiento, por ejemplo, un agregado o nodo, está experimentando un problema de rendimiento. 
+---
+= Analizar eventos de umbrales de rendimiento definidos por el sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos generados a partir de umbrales de rendimiento definidos por el sistema indican que un contador de rendimiento, o un conjunto de contadores de rendimiento, para un determinado objeto de almacenamiento ha superado el umbral de una política definida por el sistema. Esto indica que el objeto de almacenamiento, por ejemplo, un agregado o nodo, está experimentando un problema de rendimiento.
+
+La página de detalles Event se utiliza para analizar el evento de rendimiento y realizar las acciones correctivas necesarias para devolver el rendimiento a la normalidad.
+
+[NOTE]
+====
+Las políticas de umbral definidas por el sistema no se habilitan en sistemas Cloud Volumes ONTAP, ONTAP Edge o ONTAP Select.
+
+====

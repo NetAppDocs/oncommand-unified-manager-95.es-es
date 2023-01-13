@@ -1,0 +1,67 @@
+---
+permalink: health-checker/task-resolving-a-storage-failover-interconnect-link-down-condition.html 
+sidebar: sidebar 
+keywords:  
+summary: Este flujo de trabajo proporciona un ejemplo de cómo puede analizar, evaluar y resolver las condiciones de los enlaces de interconexión de conmutación por error del almacenamiento desactivado. En esta situación, es un administrador que utiliza Unified Manager para analizar los riesgos de la conmutación por error del almacenamiento antes de iniciar una actualización de la versión de ONTAP en los nodos. 
+---
+= Buscar y solucionar las condiciones de enlace inactivo de interconexión de conmutación por error de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este flujo de trabajo proporciona un ejemplo de cómo puede analizar, evaluar y resolver las condiciones de los enlaces de interconexión de conmutación por error del almacenamiento desactivado. En esta situación, es un administrador que utiliza Unified Manager para analizar los riesgos de la conmutación por error del almacenamiento antes de iniciar una actualización de la versión de ONTAP en los nodos.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Si se producen errores en las interconexiones de conmutación por error del almacenamiento entre nodos de parejas de alta disponibilidad durante un intento de actualización no disruptivo, la actualización falla. Por lo tanto, una práctica común es que el administrador supervise y confirme la fiabilidad de la conmutación por error del almacenamiento en los nodos del clúster que desea actualizar antes del inicio de una actualización.
+
+
+
+== Pasos
+
+. Para comprobar si hay eventos de disponibilidad recientes relacionados con problemas de conmutación por error del almacenamiento, compruebe la sección incidentes de disponibilidad y los listados de riesgos de disponibilidad de la página *Paneles/Resumen*.
+. Para comprobar más con todos los eventos de disponibilidad relacionados con los problemas de conmutación por error de almacenamiento, siga estos pasos:
++
+.. Haga clic en el enlace *incidentes de disponibilidad* de la página *Paneles/Descripción general*.
++
+La página Events muestra todos los eventos en los clústeres supervisados.
+
+.. En la página de inventario *Eventos*, seleccione las opciones *incidente* y *riesgo* de la columna filtro.
+.. En la parte superior de la columna nombres de página de inventario *Eventos*, haga clic en image:../media/filtericon-um60.png["Icono para filtro de columna"] e introduzca `*failover` en el cuadro de texto para limitar el evento para que se muestre a eventos relacionados con la conmutación por error de almacenamiento.
++
+Se muestran todos los eventos anteriores relacionados con las condiciones de conmutación por error del almacenamiento.
+
++
+En este escenario, Unified Manager muestra el evento «interconexión por conmutación por error del almacenamiento uno o más enlaces abajo» en su sección incidentes de disponibilidad.
+
+
+
+. Si se muestran uno o más eventos relacionados con la conmutación por error del almacenamiento en la página *Paneles/Descripción general* o en la página de inventario *Eventos*, realice los siguientes pasos:
++
+.. Haga clic en el enlace del título del evento para mostrar detalles de dicho evento.
++
+En este ejemplo, haga clic en el título del evento «interconexión de conmutación por error de almacenamiento uno o más enlaces hacia abajo».
+
++
+Se muestra la página de detalles Event para ese evento.
+
+.. En la página de detalles *evento*, puede realizar una o más de las siguientes tareas:
++
+*** Revise el mensaje de error en el campo causa y evalúe el problema. xref:task-performing-corrective-action-for-storage-failover-interconnect-links-down.adoc[Realizar acciones correctivas para enlaces de interconexión de conmutación al nodo de respaldo de almacenamiento inactivos]
+*** Asigne el evento a un administrador. xref:task-assigning-events-to-specific-users.adoc[Asignar eventos]
+*** Reconozca el evento. xref:task-acknowledging-and-resolving-events.adoc[Reconocer y resolver eventos]
+
+
+
+
+

@@ -1,0 +1,77 @@
+---
+permalink: online-help/reference-backup-settings-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Database Backup Settings para especificar una ruta de backup y un recuento de retenciones, así como para habilitar una programación de backup para una instancia de backup seleccionada. 
+---
+= Cuadro de diálogo Database Backup Settings
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Database Backup Settings para especificar una ruta de backup y un recuento de retenciones, así como para habilitar una programación de backup para una instancia de backup seleccionada.
+
+Puede cambiar la siguiente configuración de copia de seguridad de la base de datos:
+
+* *Ruta*
++
+Especifica la ruta de acceso a la ubicación en la que almacena los archivos de copia de seguridad. En la siguiente tabla se especifica el formato de ruta de backup y las ubicaciones predeterminadas, para los diferentes sistemas operativos:
+
++
+|===
+| Sistema operativo del host | Formato de ruta de copia de seguridad 
+
+
+ a| 
+Dispositivo virtual
+ a| 
+`/opt/netapp/data/ocum-backup`
+
+
+
+ a| 
+Red Hat Enterprise Linux o CentOS
+ a| 
+`/data/ocum-backup`
+
+
+
+ a| 
+Microsoft Windows
+ a| 
+`C:\ProgramData\NetApp\OnCommandAppData\ocum\backup\`
+
+|===
+* *Recuento de retención*
++
+Especifica la cantidad máxima de backups que debe retener Unified Manager. El valor predeterminado es diez.
+
+* *Activar frecuencia de programación*
++
+Esta opción permite especificar cuándo se debe programar un backup, ya sea diario o semanal.
+
+* *Diario*
++
+Especifica la programación de backup diario con la hora.
+
+* *Semanal*
++
+Especifica la programación de backups semanales con el día y la hora.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar y cerrar*
++
+Guarda el archivo de copia de seguridad y cierra el cuadro de diálogo. Unified Manager guarda el archivo de backup en el siguiente formato: `um_um_version_backup_os_timestamp.7z`.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Configuración de copia de seguridad de la base de datos sin guardar los cambios.
+
+

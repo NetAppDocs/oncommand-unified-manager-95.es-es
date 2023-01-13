@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-backup-windows-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver la lista de backups desde la página de backup en Unified Manager. Es posible ver el nombre, el tamaño y el tiempo de creación de los backups que se enumeran en esta página. Puede modificar la configuración de copia de seguridad de la base de datos desde la página Database Backup Settings. 
+---
+= Descripción de ventanas de copia de seguridad y cuadros de diálogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver la lista de backups desde la página de backup en Unified Manager. Es posible ver el nombre, el tamaño y el tiempo de creación de los backups que se enumeran en esta página. Puede modificar la configuración de copia de seguridad de la base de datos desde la página Database Backup Settings.

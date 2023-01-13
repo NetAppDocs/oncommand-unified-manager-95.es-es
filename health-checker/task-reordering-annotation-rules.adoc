@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task-reordering-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible cambiar el orden en que Unified Manager aplica reglas de anotación a los objetos de almacenamiento. Las reglas de anotación se aplican secuencialmente a los objetos de almacenamiento en función de su rango. Al configurar una regla de anotación, la clasificación es mínima. Pero puede cambiar la clasificación de la regla de anotación en función de sus requisitos. 
+---
+= Reordenación de las reglas de anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible cambiar el orden en que Unified Manager aplica reglas de anotación a los objetos de almacenamiento. Las reglas de anotación se aplican secuencialmente a los objetos de almacenamiento en función de su rango. Al configurar una regla de anotación, la clasificación es mínima. Pero puede cambiar la clasificación de la regla de anotación en función de sus requisitos.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Puede seleccionar una sola fila o varias filas y realizar muchas operaciones de arrastrar y colocar para cambiar el rango de las reglas de anotación. Sin embargo, debe guardar los cambios para que la repriorización se muestre en la pestaña Reglas de anotación.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *Anotaciones* en el menú Administración de la izquierda.
+. En la ficha *Reglas de anotación*, haga clic en *reordenar*.
+. En el cuadro de diálogo *Regla de anotación de reordenación*, arrastre y suelte filas únicas o múltiples para reorganizar la secuencia de las reglas de anotación.
+. Haga clic en *Guardar*.
++
+Debe guardar los cambios para que se muestre la reordenación.
+
+

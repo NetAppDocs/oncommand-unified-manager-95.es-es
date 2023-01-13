@@ -1,0 +1,59 @@
+---
+permalink: health-checker/reference-aggregate-favorite-card.html 
+sidebar: sidebar 
+keywords:  
+summary: La tarjeta Favorito de agregado permite ver los detalles de capacidad y rendimiento de los agregados que ha marcado como favoritos. 
+---
+= Tarjeta Favorito de agregado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La tarjeta Favorito de agregado permite ver los detalles de capacidad y rendimiento de los agregados que ha marcado como favoritos.
+
+
+
+== Atributos del agregado
+
+La tarjeta Favorito de agregado muestra los siguientes atributos del agregado:
+
+* *Estado de salud agregado*
++
+Un icono que indica el estado del agregado. Los valores posibles son normal, Advertencia, error y crítico.
+
+* *Nombre agregado*
++
+Nombre del agregado.
+
++
+Coloque el cursor sobre el nombre del agregado para ver el nombre del clúster al que pertenece el agregado.
+
+* *Capacidad*
++
+Porcentaje de espacio libre disponible en el agregado, y el número estimado de días hasta que el agregado se llene.
+
++
+Tenga en cuenta que, para los agregados de FabricPool, esta información solo refleja la capacidad en el nivel de rendimiento local. Haga clic en el icono de capacidad para ver información detallada en la página de detalles Estado/agregado.
+
+* *Rendimiento*
++
+Detalles de rendimiento del agregado.
+
++
+** *IOPS*
++
+Promedio de operaciones de I/o por segundo en las últimas 72 horas.
+
+** *Rendimiento*
++
+Rendimiento medio durante las últimas 72 horas, en Mbps .
+
+** *Latencia*
++
+Tiempo de respuesta medio necesario para una operación, en milisegundos.
+
+
+
+

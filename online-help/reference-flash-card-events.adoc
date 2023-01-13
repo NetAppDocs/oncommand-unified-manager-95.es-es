@@ -1,0 +1,33 @@
+---
+permalink: online-help/reference-flash-card-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de tarjeta Flash le proporcionan información sobre el estado de las tarjetas flash instaladas en los nodos en su centro de datos para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de tarjeta Flash
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de tarjeta Flash le proporcionan información sobre el estado de las tarjetas flash instaladas en los nodos en su centro de datos para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Tarjetas flash sin conexión (ocumEvtFlashCardOffline)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Crítico
+
+|===

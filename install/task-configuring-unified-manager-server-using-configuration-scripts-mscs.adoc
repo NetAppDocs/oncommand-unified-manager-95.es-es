@@ -1,0 +1,79 @@
+---
+permalink: install/task-configuring-unified-manager-server-using-configuration-scripts-mscs.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de instalar Unified Manager en los dos nodos del clúster, puede configurar Unified Manager con Failover Cluster Manager utilizando scripts de configuración. 
+---
+= Configuración de Unified Manager Server con MSCS mediante scripts de configuración
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de instalar Unified Manager en los dos nodos del clúster, puede configurar Unified Manager con Failover Cluster Manager utilizando scripts de configuración.
+
+
+
+== Antes de empezar
+
+Debe haber creado una LUN compartida que tenga un tamaño suficiente para acomodar los datos de Unified Manager de origen.
+
+
+
+== Pasos
+
+. Inicie sesión en el primer nodo del clúster.
+. Crear una función en Windows 2012 o Windows 2016 mediante el Administrador de clústeres de conmutación por error:
++
+.. Inicie el Administrador de clústeres de conmutación por error.
+.. Cree la función vacía haciendo clic en *roles* > *Crear rol vacío*.
+.. Agregue la dirección IP global al rol haciendo clic con el botón derecho del ratón en *rol* > *Agregar recursos* > *más recursos* > *Dirección IP*.
++
+[NOTE]
+====
+Ambos nodos deben poder hacer ping a esta dirección IP porque se inicia Unified Manager con esta dirección IP después de configurar la alta disponibilidad.
+
+====
+.. Agregue el disco de datos al rol haciendo clic con el botón derecho del ratón en *rol* > *Agregar almacenamiento*.
+
+
+. Ejecute el `ha_setup.pl` secuencia de comandos en el primer nodo: `perl ha_setup.pl --first -t mscs -g group_name -i ip address -n fully_qualified_domain_cluster_name -f shared_location_path -k data_disk -u user_name -p password`
++
+`C:\Program Files\NetApp\ocum\bin>perl .\ha_setup.pl --first -t mscs -g umgroup -i "IP Address" -n spr38457002.eng.company.com -k "Cluster Disk 2" -f E:\ -u admin -p wx17yz`
+
++
+El script está disponible en `Install_Dir\NetApp\ocum\bin`.
+
++
+** Puede obtener el valor de `-g`, `-k`, y. `-i` opciones mediante la `cluster res` comando.
+** La `-n` La opción debe ser el FQDN de la dirección IP global que se puede acotar desde ambos nodos.
+
+
+. Comprobar que los servicios de servidores, el disco de datos y la dirección IP del clúster de Unified Manager se han añadido al grupo de clústeres mediante la consola web de Failover Cluster Manager.
+. Detenga todos los servicios de servidor de Unified Manager (MySQL, ocie y ocieau) mediante el `services.msc` comando.
+. Cambie el grupo de servicio al segundo nodo en Administrador de clústeres de conmutación por error.
+. Ejecute el comando `perl ha_setup.pl --join -t mscs -f``shared_location_path` En el segundo nodo del clúster para señalar los datos del servidor de Unified Manager a la LUN.
++
+`perl ha_setup.pl --join -t mscs -f E:\`
+
+. Traiga todos los servicios de Unified Manager en línea mediante el Administrador de clústeres de conmutación por error.
+. Cambie manualmente al otro nodo de Microsoft Cluster Server.
+. Compruebe que los servicios de servidor de Unified Manager se estén iniciando correctamente en el otro nodo del clúster.
+. Vuelva a generar el certificado de Unified Manager después de ejecutar scripts de configuración para obtener la dirección IP global.
++
+.. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Certificado HTTPS* en el menú *Configuración*.
+.. Haga clic en *regenerar certificado HTTPS*.
+
+
++
+El certificado regenerado proporciona la dirección IP del clúster, no el nombre de dominio completo (FQDN). Debe utilizar la dirección IP global para configurar Unified Manager para la alta disponibilidad.
+
+. Acceda a la interfaz de usuario de Unified Manager mediante las siguientes acciones: `https://<FQDN of Global IP>`
+
+
+
+
+== Después de terminar
+
+Es necesario crear una ubicación de backup compartido después de configurar la alta disponibilidad. La ubicación compartida es necesaria para contener los backups antes y después del failover. Los dos nodos de una configuración de alta disponibilidad deben poder acceder a la ubicación compartida.

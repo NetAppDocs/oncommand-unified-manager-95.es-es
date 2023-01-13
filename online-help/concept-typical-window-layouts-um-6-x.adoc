@@ -1,0 +1,28 @@
+---
+permalink: online-help/concept-typical-window-layouts-um-6-x.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Comprender los diseños de ventana habituales ayuda a navegar y utilizar Unified Manager de OnCommand de forma eficaz. La mayoría de ventanas de Unified Manager son similares a una de dos distribuciones generales: Lista de objetos o detalles. La configuración de visualización recomendada es de al menos 1280 por 1024 píxeles.' 
+---
+= Diseños de ventana típicos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Comprender los diseños de ventana habituales ayuda a navegar y utilizar Unified Manager de OnCommand de forma eficaz. La mayoría de ventanas de Unified Manager son similares a una de dos distribuciones generales: Lista de objetos o detalles. La configuración de visualización recomendada es de al menos 1280 por 1024 píxeles.
+
+No todas las ventanas contienen todos los elementos de los diagramas siguientes.
+
+
+
+== Diseño de la ventana de lista de objetos
+
+image::../media/object-list.gif[lista de objetos]
+
+
+
+== Diseño de la ventana de detalles del objeto
+
+image::../media/object-details.gif[detalles del objeto]

@@ -1,0 +1,86 @@
+---
+permalink: online-help/reference-svm-storage-class-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de clase de almacenamiento de SVM le proporcionan información sobre el estado de sus clases de almacenamiento para poder realizar una supervisión de posibles problemas. Las clases de almacenamiento de SVM solo existen en SVM con Infinite Volume. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de clase de almacenamiento de SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de clase de almacenamiento de SVM le proporcionan información sobre el estado de sus clases de almacenamiento para poder realizar una supervisión de posibles problemas. Las clases de almacenamiento de SVM solo existen en SVM con Infinite Volume. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+Los siguientes eventos de clase de almacenamiento de SVM solo se aplican a las SVM con Infinite Volume.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Clase de almacenamiento de SVM no disponible (ocumEvtVserverStorageClassNotAvailable)
+ a| 
+Incidente
+ a| 
+Clase de almacenamiento
+ a| 
+Crítico
+
+
+
+ a| 
+Clase de almacenamiento de SVM parcialmente disponible (ocumEvtVserverStorageClassPartiallyAvailable)
+ a| 
+Riesgo
+ a| 
+Clase de almacenamiento
+ a| 
+Error
+
+|===
+
+
+== Área de impacto: Capacidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Espacio de clase de almacenamiento de SVM casi completo (ocumEvtVserverStorageClassNearlyFull)
+ a| 
+Riesgo
+ a| 
+Clase de almacenamiento
+ a| 
+Advertencia
+
+
+
+ a| 
+Espacio completo para clase de almacenamiento de SVM (ocumEvtVserverStorageClassFull)
+ a| 
+Riesgo
+ a| 
+Clase de almacenamiento
+ a| 
+Error
+
+
+
+ a| 
+Se superó el límite de uso de Snapshot para la clase de almacenamiento de SVM (ocumEvtVserverStorageClassSnapshotUsageExceeded)
+ a| 
+Riesgo
+ a| 
+Clase de almacenamiento
+ a| 
+Advertencia
+
+|===

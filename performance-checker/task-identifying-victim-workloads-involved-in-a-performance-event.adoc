@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task-identifying-victim-workloads-involved-in-a-performance-event.html 
+sidebar: sidebar 
+keywords:  
+summary: 'En Unified Manager, es posible identificar qué cargas de trabajo de volumen tienen la mayor desviación en tiempo de respuesta \(latencia\) provocada por un componente de almacenamiento en contención. La identificación de estas cargas de trabajo le ayuda a comprender por qué las aplicaciones cliente que acceden a ellas han tenido un rendimiento más lento de lo habitual.' 
+---
+= Identificar las cargas de trabajo de las víctimas involucradas en un evento de rendimiento dinámico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En Unified Manager, es posible identificar qué cargas de trabajo de volumen tienen la mayor desviación en tiempo de respuesta (latencia) provocada por un componente de almacenamiento en disputa. La identificación de estas cargas de trabajo le ayuda a comprender por qué las aplicaciones cliente que acceden a ellas han tenido un rendimiento más lento de lo habitual.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento dinámicos nuevos, reconocidos o obsoletos.
+
+
+
+
+== Acerca de esta tarea
+
+La página de detalles Event muestra una lista de las cargas de trabajo definidas por el usuario y definidas por el sistema, clasificadas por la mayor desviación de la actividad o el uso del componente, o más afectadas por el evento. Los valores se basan en los picos identificados por Unified Manager cuando detectó y analizó por última vez el evento.
+
+
+
+== Pasos
+
+. Abra la página *Detalles del evento* para ver información sobre el evento.
+. En los gráficos latencia de carga de trabajo y actividad de carga de trabajo, seleccione *cargas de trabajo de víctimas*.
+. Pase el cursor por los gráficos para ver las principales cargas de trabajo definidas por el usuario que afectan al componente y el nombre de la carga de trabajo víctima.
+

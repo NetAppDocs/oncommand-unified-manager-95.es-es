@@ -1,0 +1,99 @@
+---
+permalink: online-help/reference-snapvault-relationship-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de relaciones con SnapVault le proporcionan información sobre el estado de sus relaciones de SnapVault para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de relaciones con SnapVault
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de relaciones con SnapVault le proporcionan información sobre el estado de sus relaciones de SnapVault para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Zona de impacto: Protección
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Vault asíncrono insalubre(ocumEvtSnapVaultationshipUnheaded)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Advertencia
+
+
+
+ a| 
+Vault Broken-off asíncrono(ocumEvtSnapRelationshipStateBrokenoff)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Error al inicializar el almacén asíncrono (error de ocumEvtSnapVaultRelationship InitializeFailed)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Error en la actualización asíncrona del almacén (ocumEvtSnapVaultRelationship UpdateFailed)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Error de desfase en el almacén asíncrono (ocumEvtSnapVaultRelationship shipLagError)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Advertencia de desfase en el almacén asíncrono (ocumEvtSnapVaultRelationship shipLagWarning)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Advertencia
+
+
+
+ a| 
+Error en la resincronización de Vault asíncrona (ocumEvtSnapvaultRelationshipResyncFailed)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+|===

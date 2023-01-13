@@ -1,0 +1,70 @@
+---
+permalink: online-help/task-generating-an-https-security-certificate-ocf.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede generar un nuevo certificado de seguridad HTTPS por varios motivos, como si desea firmar con otra entidad emisora de certificados o si el certificado de seguridad actual ha caducado. El nuevo certificado sustituye al certificado existente. 
+---
+= Generar un certificado de seguridad HTTPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede generar un nuevo certificado de seguridad HTTPS por varios motivos, como si desea firmar con otra entidad emisora de certificados o si el certificado de seguridad actual ha caducado. El nuevo certificado sustituye al certificado existente.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+
+
+== Acerca de esta tarea
+
+Si no tiene acceso a la interfaz de usuario web de Unified Manager, puede volver a generar el certificado HTTPS con los mismos valores mediante la consola de mantenimiento.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Certificado HTTPS* en el menú *Configuración*.
+. Haga clic en *regenerar certificado HTTPS*.
++
+Aparece el cuadro de diálogo Regenerate HTTPS Certificate.
+
+. Seleccione una de las siguientes opciones en función de cómo desee generar el certificado:
++
+|===
+| Si desea... | Realice lo siguiente... 
+
+
+ a| 
+Regenere el certificado con los valores actuales
+ a| 
+Haga clic en la opción *Regenerate usando atributos de certificado actuales*.
+
+
+
+ a| 
+Genere el certificado con diferentes valores
+ a| 
+ Click the *Update the Current Certificate Attributes* option.
+Los campos Nombre común y nombres alternativos utilizarán los valores del certificado existente si no introduce nuevos valores. Los demás campos no requieren valores, pero puede introducir valores, por ejemplo, para la ciudad, el estado y el país si desea que dichos valores se rellenen en el certificado.
+
+[NOTE]
+====
+Puede seleccionar la casilla de verificación "'excluir información de identificación local (p. ej., localhost)'" si desea eliminar la información de identificación local del campo nombres alternativos del certificado. Cuando se selecciona esta casilla de verificación, sólo se utiliza el campo nombres alternativos lo que se introduce en el campo. Cuando se deja en blanco, el certificado resultante no tendrá ningún campo nombres alternativos.
+
+====
+|===
+. Haga clic en *Sí* para regenerar el certificado.
+. Reinicie el servidor de Unified Manager para que el nuevo certificado surta efecto.
+
+
+
+
+== Después de terminar
+
+Compruebe la información del nuevo certificado; para ello, consulte el certificado HTTPS.

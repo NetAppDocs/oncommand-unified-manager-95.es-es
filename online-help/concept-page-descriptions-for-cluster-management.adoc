@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-page-descriptions-for-cluster-management.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible ver y gestionar los clústeres, incluidos añadir, editar, volver a detectar y quitar clústeres, desde una sola página. 
+---
+= Descripciones de páginas para la administración de orígenes de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ver y gestionar los clústeres, incluidos añadir, editar, volver a detectar y quitar clústeres, desde una sola página.

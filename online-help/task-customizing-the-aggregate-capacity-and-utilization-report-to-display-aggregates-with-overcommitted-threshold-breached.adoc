@@ -1,0 +1,52 @@
+---
+permalink: online-help/task-customizing-the-aggregate-capacity-and-utilization-report-to-display-aggregates-with-overcommitted-threshold-breached.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe de capacidad y uso del agregado para que se muestren los agregados ordenados por porcentaje de capacidad sobrecomprometida, lo que permite ver el espacio de almacenamiento que aún está disponible en los agregados. 
+---
+= Personalización del informe de capacidad y utilización de agregados para mostrar agregados con umbral sobrecomprometido incumplido
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe de capacidad y uso del agregado para que se muestren los agregados ordenados por porcentaje de capacidad sobrecomprometida, lo que permite ver el espacio de almacenamiento que aún está disponible en los agregados.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster o pareja de alta disponibilidad, realice los siguientes pasos:
++
+.. Haga clic en la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para mostrar la diferencia entre el porcentaje usado sobrecomprometido y el umbral sobrecomprometido, agregue una nueva columna.
++
+.. Seleccione una columna y haga clic en image:../media/click-to-see-menu.gif[""].
+.. Seleccione *columna* > *Nueva columna computarizada*.
+.. En el cuadro de diálogo *Nueva columna computarizada*, introduzca una etiqueta de columna.
+.. En la lista Seleccionar categoría, seleccione *Matemáticas*.
+.. En la lista *Seleccionar función*, seleccione *DIFERENCIA*.
+.. En la lista columna 1, seleccione *umbral de exceso de compromiso (%)*.
+.. En la lista columna 2, seleccione *capacidad excesiva %*.
+.. Haga clic en *Aceptar*.
+
+
+. Para filtrar los valores superiores a cero en la nueva columna, haga clic en *Nueva columna calculada* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista *condición*, seleccione *mayor que*.
+. En el campo *valor*, escriba `0` Y haga clic en *Aceptar*.
+. Para ordenar los valores, haga clic dentro de *Nueva columna calculada* y haga clic en image:../media/click-to-see-menu.gif[""] .
+. Seleccione *filtro* > *Arriba/abajo N*.
+. En el cuadro de diálogo *Arriba/abajo N*, seleccione *Arriba N* en el campo *filtro* e introduzca un valor en el campo de texto.
+. Haga clic en *Aceptar*.
+

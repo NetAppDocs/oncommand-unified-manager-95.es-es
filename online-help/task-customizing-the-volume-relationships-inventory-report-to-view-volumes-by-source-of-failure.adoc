@@ -1,0 +1,29 @@
+---
+permalink: online-help/task-customizing-the-volume-relationships-inventory-report-to-view-volumes-by-source-of-failure.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible personalizar el informe Volume Relationships Inventory para ver los volúmenes agrupados por origen de error. 
+---
+= Personalización del informe Volume Relationships Inventory para ver los volúmenes agrupados por origen de error
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar el informe Volume Relationships Inventory para ver los volúmenes agrupados por origen de error.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Seleccione la columna *Estado de la relación*.
+. Para ver los detalles del volumen de los volúmenes defectuosos, haga clic en el signo -- situado junto a la columna *Bad*.
+. Para ver los detalles del volumen para los volúmenes buenos, haga clic en el signo -- junto a la columna *Good*.
+

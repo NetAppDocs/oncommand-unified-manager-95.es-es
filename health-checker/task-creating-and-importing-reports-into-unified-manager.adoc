@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task-creating-and-importing-reports-into-unified-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Aunque Unified Manager proporciona la funcionalidad de generación de informes, puede que necesite crear nuevos informes específicos de su entorno. Puede crear informes nuevos con Eclipse Business Intelligence and Reporting Tools \(BIRT\) y, a continuación, importarlos a Unified Manager para verlos y gestionarlos.' 
+---
+= Creación e importación de informes en Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aunque Unified Manager proporciona la funcionalidad de generación de informes, puede que necesite crear nuevos informes específicos de su entorno. Puede crear informes nuevos con Eclipse Business Intelligence and Reporting Tools (BIRT) y, a continuación, importarlos a Unified Manager para verlos y gestionarlos.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+Debe haber descargado e instalado MySQL Connector/J. Debe tener la ubicación del archivo mysql-connector-java-5.1.32-bin.jar para crear el origen de datos JBDC, que conecta el informe a Unified Manager.
+
+
+
+== Acerca de esta tarea
+
+Para obtener información más detallada sobre la creación de informes, consulte el sitio web de Eclipse BIRT.

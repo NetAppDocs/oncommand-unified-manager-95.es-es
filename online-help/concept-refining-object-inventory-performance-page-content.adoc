@@ -1,0 +1,16 @@
+---
+permalink: online-help/concept-refining-object-inventory-performance-page-content.html 
+sidebar: sidebar 
+keywords:  
+summary: Las páginas de inventario de objetos de rendimiento contienen herramientas que ayudan a refinar el contenido de datos de inventario de objetos, lo que permite localizar datos específicos de forma rápida y sencilla. 
+---
+= Afinar el contenido de la página del inventario de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las páginas de inventario de objetos de rendimiento contienen herramientas que ayudan a refinar el contenido de datos de inventario de objetos, lo que permite localizar datos específicos de forma rápida y sencilla.
+
+La información contenida en las páginas de inventario de objetos Performance puede ser extensa y a menudo abarca varias páginas. Este tipo de datos completos son excelentes para la supervisión, el seguimiento y la mejora del rendimiento; sin embargo, ubicar datos específicos requiere herramientas que le permitan localizar rápidamente los datos que busca. Por lo tanto, las páginas de inventario de objetos Performance contienen funcionalidades para realizar búsquedas, ordenar y filtrar. Además, las búsquedas y el filtrado pueden funcionar conjuntamente para reducir aún más los resultados.

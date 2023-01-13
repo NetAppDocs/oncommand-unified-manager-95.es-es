@@ -1,0 +1,124 @@
+---
+permalink: performance-checker/reference-performance-statistics-displayed-in-the-data-breakdown-charts.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar los gráficos para ver las tendencias de rendimiento de un volumen. También se pueden ver estadísticas de lecturas y escrituras, actividad de protocolo de red, el impacto de la regulación del grupo de políticas de calidad de servicio sobre la latencia, la proporción de lecturas y escrituras en el almacenamiento en caché, el tiempo total de CPU del clúster que utiliza una carga de trabajo y componentes de clúster específicos. 
+---
+= Las estadísticas de rendimiento que se muestran en los gráficos de desglose de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar los gráficos para ver las tendencias de rendimiento de un volumen. También se pueden ver estadísticas de lecturas y escrituras, actividad de protocolo de red, el impacto de la regulación del grupo de políticas de calidad de servicio sobre la latencia, la proporción de lecturas y escrituras en el almacenamiento en caché, el tiempo total de CPU del clúster que utiliza una carga de trabajo y componentes de clúster específicos.
+
+Estas vistas muestran un máximo de 30 días de estadísticas del día actual. En el gráfico de datos histórico, si selecciona un plazo de más de 1 día, según la resolución de pantalla, los gráficos muestran los valores máximos de latencia e IOPS entre el número de días.
+
+[NOTE]
+====
+Puede utilizar la casilla de verificación *Seleccionar todo* para seleccionar o anular la selección de todas las opciones de gráfico enumeradas.
+
+====
+* *Latencia*
++
+En los siguientes gráficos se detalla la información de la carga de trabajo seleccionada, o el tiempo de respuesta,:
+
++
+** *Componentes del clúster*
++
+Muestra un gráfico del tiempo invertido en cada componente de clúster utilizado por el volumen seleccionado.
+
++
+El gráfico ayuda a determinar el impacto de la latencia de cada componente en su relación con la latencia total. Puede utilizar la casilla de comprobación junto a cada componente para mostrar y ocultar su gráfico.
+
++
+Para los grupos de políticas de calidad de servicio, los datos solo se muestran para los grupos de políticas definidos por el usuario. Se muestran ceros en los grupos de políticas definidos por el sistema, como los grupos de políticas predeterminados.
+
+** *Latencia de lecturas y escrituras*
++
+Muestra un gráfico de las latencias de las solicitudes de lectura y escritura correctas de la carga de trabajo de volumen seleccionada durante el lapso seleccionado.
+
++
+Las solicitudes de escritura son una línea naranja y las solicitudes de lectura son una línea azul. Las solicitudes son específicas de la latencia de la carga de trabajo de volumen seleccionada, no todas las cargas de trabajo del clúster.
+
++
+[NOTE]
+====
+Es posible que las estadísticas de lectura y escritura no siempre añadan al total de estadísticas de latencia que se muestran en el gráfico latencia. Este es el comportamiento esperado en función de cómo Unified Manager recopila y analiza las estadísticas de lectura y escritura para una carga de trabajo.
+
+====
+** *Impacto del Grupo de políticas*
++
+Muestra un gráfico del porcentaje de latencia de la carga de trabajo de volumen seleccionada que afecta al límite de rendimiento de su grupo de políticas de calidad de servicio.
+
++
+Si se regula la carga de trabajo, el porcentaje indica cuánta aceleración contribuyó a la latencia en un momento específico. Los valores de porcentaje indican la cantidad de limitación:
+
++
+*** 0 % = sin limitación
+*** > 0% = regulación
+*** > 20 % = limitación crucial Si el clúster puede gestionar más trabajo, puede reducir la limitación aumentando el límite del grupo de políticas. Otra opción consiste en mover la carga de trabajo a un agregado menos ocupado.
+
+
+
+
++
+[NOTE]
+====
+El gráfico muestra para las cargas de trabajo en un grupo de políticas de calidad de servicio definido por el usuario con un límite de rendimiento establecido únicamente. No muestra si las cargas de trabajo se encuentran en un grupo de políticas definido por el sistema, como el grupo de políticas predeterminado, o un grupo de políticas que no tiene un límite de calidad de servicio. Para un grupo de políticas de calidad de servicio, puede colocar el cursor en el nombre del grupo de políticas a fin de mostrar su límite de rendimiento y la última vez que se modificó. Si el grupo de políticas se modificó antes de que el clúster asociado se agregase a Unified Manager, la fecha en la que se modificó por última vez serán la fecha y la hora en las que Unified Manager detectó el clúster por primera vez.
+
+====
+* *IOPS*
++
+Los siguientes gráficos detallan los datos de IOPS para la carga de trabajo seleccionada:
+
++
+** *Lecturas/escrituras/otro*
++
+Muestra un gráfico que muestra el número de IOPS de lectura y escritura y otras IOPS, por segundo, durante el lapso seleccionado.
+
++
+Otras IOPS son actividades de protocolo iniciadas por el cliente que no son lecturas ni escrituras. Por ejemplo, en un entorno NFS, esto podría ser operaciones de metadatos como getattr, setattr o fsstat. En un entorno CIFS, podrían realizarse búsquedas de atributos, listas de directorios o análisis antivirus. Las IOPS de escritura son una línea naranja y las solicitudes de lectura son una línea azul. Las solicitudes son específicas de todas las operaciones para la carga de trabajo de volumen seleccionada, no todas las operaciones en el clúster.
+
+
+
+* *Mbps*
++
+Los siguientes gráficos detallan los datos de rendimiento de la carga de trabajo seleccionada:
+
++
+** *Proporción de aciertos de caché*
++
+Muestra un gráfico del porcentaje de solicitudes de lectura de aplicaciones cliente satisfechas por la caché en el lapso seleccionado.
+
++
+La caché podría estar en tarjetas Flash Cache o unidades de estado sólido (SSD) en agregados de Flash Pool. Un acierto en caché, en azul, es una lectura de la caché. Una omisión de caché, en naranja, es la lectura de un disco en el agregado. Las solicitudes son específicas de la carga de trabajo de volumen seleccionada, no todas las cargas de trabajo del clúster.
+
++
+Puede ver información más detallada sobre el uso de la caché del volumen en las páginas Estado de Unified Manager y en System Manager de OnCommand.
+
+
+
+* *Componentes*
++
+En los siguientes gráficos se detallan los datos por componente de clúster que utiliza la carga de trabajo seleccionada:
+
++
+** *Tiempo de CPU del clúster*
++
+Muestra un gráfico del tiempo de uso de CPU, en ms, de todos los nodos del clúster utilizado por la carga de trabajo seleccionada.
+
++
+El gráfico muestra el tiempo de uso combinado de CPU para el procesamiento de red y el procesamiento de datos. También incluye la hora de CPU para cargas de trabajo definidas por el sistema asociadas con la carga de trabajo seleccionada y que utilizan los mismos nodos para el procesamiento de datos. Puede utilizar el gráfico para determinar si la carga de trabajo es un consumidor elevado de los recursos de CPU del clúster. También puede utilizar el gráfico, junto con el gráfico de latencia de lecturas/escrituras en el gráfico latencia, o el gráfico de lecturas/escrituras/otro en el gráfico IOPS, para determinar cómo los cambios en la actividad de la carga de trabajo con el tiempo afectan al uso de la CPU del clúster.
+
+** *Utilización del disco*
++
+Muestra un gráfico que muestra el porcentaje de utilización de los discos de datos en el agregado de almacenamiento durante el lapso seleccionado.
+
++
+El aprovechamiento incluye únicamente las solicitudes de lectura y escritura de disco de la carga de trabajo del volumen seleccionado. No se incluyen las lecturas de la caché. El aprovechamiento es específico de la carga de trabajo de volumen seleccionada, no de todas las cargas de trabajo de los discos. Si un volumen supervisado está implicado en un movimiento de volumen, los valores de utilización de este gráfico son para el agregado objetivo al que se trasladó el volumen.
+
+
+
+

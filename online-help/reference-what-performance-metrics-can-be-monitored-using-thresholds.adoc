@@ -1,0 +1,225 @@
+---
+permalink: online-help/reference-what-performance-metrics-can-be-monitored-using-thresholds.html 
+sidebar: sidebar 
+keywords:  
+summary: Algunos contadores de rendimiento comunes, como IOPS y Mbps, pueden tener umbrales definidos para todos los objetos de almacenamiento. Hay otros contadores que pueden tener umbrales establecidos para determinados objetos de almacenamiento. 
+---
+= Se puede realizar un seguimiento de los contadores de rendimiento mediante umbrales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Algunos contadores de rendimiento comunes, como IOPS y Mbps, pueden tener umbrales definidos para todos los objetos de almacenamiento. Hay otros contadores que pueden tener umbrales establecidos para determinados objetos de almacenamiento.
+
+
+
+== Contadores de rendimiento disponibles
+
+|===
+| Objeto de almacenamiento | Contador de rendimiento | Descripción 
+
+
+ a| 
+Clúster
+ a| 
+IOPS
+ a| 
+Promedio de operaciones de entrada/salida que el clúster procesa por segundo.
+
+
+
+ a| 
+Mbps
+ a| 
+Número medio de megabytes de datos que se transfieren a y desde este clúster por segundo.
+ a| 
+Nodo
+
+
+
+ a| 
+IOPS
+ a| 
+Promedio de operaciones de entrada/salida que el nodo procesa por segundo.
+ a| 
+Mbps
+
+
+
+ a| 
+Número medio de megabytes de datos que se transfieren a y desde este nodo por segundo.
+ a| 
+Latencia
+ a| 
+Número medio de milisegundos que tarda el nodo en responder a las solicitudes de las aplicaciones.
+
+
+
+ a| 
+Utilización
+ a| 
+Porcentaje medio de la CPU y la RAM del nodo que se está utilizando.
+ a| 
+Capacidad de rendimiento utilizada
+
+
+
+ a| 
+Porcentaje promedio de capacidad de rendimiento que está consumiendo el nodo.
+ a| 
+Capacidad de rendimiento utilizada: Respaldo
+ a| 
+Porcentaje medio de la capacidad de rendimiento que está consumiendo el nodo, más la capacidad de rendimiento de su nodo asociado.
+
+
+
+ a| 
+Agregado
+ a| 
+IOPS
+ a| 
+Número medio de operaciones de entrada/salida de procesos agregados por segundo.
+
+
+
+ a| 
+Mbps
+ a| 
+Cantidad media de megabytes de datos que se transfieren a y desde este agregado por segundo.
+ a| 
+Latencia
+
+
+
+ a| 
+Número medio de milisegundos que tarda el agregado en responder a las solicitudes de aplicaciones.
+ a| 
+Utilización
+ a| 
+Porcentaje medio de los discos del agregado que se están utilizando.
+
+
+
+ a| 
+Capacidad de rendimiento utilizada
+ a| 
+Porcentaje medio de capacidad de rendimiento que consume el agregado.
+ a| 
+Máquina virtual de almacenamiento (SVM)
+
+
+
+ a| 
+IOPS
+ a| 
+Número medio de operaciones de entrada/salida que los procesos de SVM por segundo.
+ a| 
+Mbps
+
+
+
+ a| 
+Número medio de megabytes de datos que se transfieren a y desde esta SVM por segundo.
+ a| 
+Latencia
+ a| 
+Número medio de milisegundos que la SVM tarda en responder a las solicitudes de aplicaciones.
+
+
+
+ a| 
+Volumen
+ a| 
+IOPS
+ a| 
+Número medio de operaciones de entrada/salida que procesa el volumen por segundo.
+
+
+
+ a| 
+Mbps
+ a| 
+Número medio de megabytes de datos que se transfieren a y desde este volumen por segundo.
+ a| 
+Latencia
+
+
+
+ a| 
+Número medio de milisegundos que el volumen tarda en responder a las solicitudes de las aplicaciones.
+ a| 
+Ratio de pérdidas de caché
+ a| 
+Porcentaje medio de solicitudes de lectura de aplicaciones cliente que regresan de el volumen, en lugar de que regresan de la caché.
+
+
+
+ a| 
+LUN
+ a| 
+IOPS
+ a| 
+Número medio de operaciones de entrada/salida que los procesos de LUN por segundo.
+
+
+
+ a| 
+Mbps
+ a| 
+Número medio de megabytes de datos que se transfieren a y desde esta LUN por segundo.
+ a| 
+Latencia
+
+
+
+ a| 
+Número medio de milisegundos que tarda la LUN en responder a las solicitudes de aplicaciones.
+ a| 
+Espacio de nombres
+ a| 
+IOPS
+
+
+
+ a| 
+Número medio de operaciones de entrada/salida que procesa el espacio de nombres por segundo.
+ a| 
+Mbps
+ a| 
+Número medio de megabytes de datos que se transfieren a y desde este espacio de nombres por segundo.
+
+
+
+ a| 
+Latencia
+ a| 
+Número medio de milisegundos que el espacio de nombres tarda en responder a las solicitudes de las aplicaciones.
+ a| 
+Puerto
+
+
+
+ a| 
+Uso del ancho de banda
+ a| 
+El porcentaje medio de ancho de banda disponible del puerto que se está utilizando.
+ a| 
+Mbps
+
+
+
+ a| 
+Número medio de megabytes de datos que se transfieren a y desde este puerto por segundo.
+ a| 
+Interfaz lógica (LIF)
+ a| 
+Mbps
+
+|===
+[NOTE]
+====
+Los datos de capacidad de rendimiento solo están disponibles cuando los nodos de un clúster se han instalado con el software ONTAP 9.0 o una versión posterior.
+
+====

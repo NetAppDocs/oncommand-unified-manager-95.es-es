@@ -1,0 +1,51 @@
+---
+permalink: health-checker/task-determining-if-a-volume-is-offline-because-of-broken-disks-in-an-aggregate.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar la interfaz de usuario web de Unified Manager para confirmar o eliminar la posibilidad de que un volumen esté sin conexión debido a que los problemas de disco RAID han desconectado su agregado de host. 
+---
+= Determinar si un volumen está sin conexión debido a discos dañados en un agregado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la interfaz de usuario web de Unified Manager para confirmar o eliminar la posibilidad de que un volumen esté sin conexión debido a que los problemas de disco RAID han desconectado su agregado de host.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Para determinar si la condición del volumen sin conexión está provocada por problemas de disco RAID que desconectan el agregado de alojamiento, realice las siguientes acciones:
+
+
+
+== Pasos
+
+. Busque y haga clic en el enlace de hipertexto que aparece bajo agregado en el panel *dispositivos relacionados* de la página de detalles *Estado/volumen*.
++
+La página de detalles Health/Aggregate muestra el estado en línea o sin conexión del agregado de host. Si el estado del agregado es en línea, los problemas del disco RAID no son la causa por la que el volumen se encuentra sin conexión.
+
+. Si el estado del agregado es sin conexión, haga clic en *Información del disco* y busque eventos de disco rotos en la lista *Eventos* de la ficha *Información del disco*.
+. Para identificar los discos rotos, haga clic en el enlace de hipertexto que aparece bajo Cluster en el panel *dispositivos relacionados*.
++
+Se muestra la página de detalles Health/Cluster.
+
+. Haga clic en *discos* y, a continuación, seleccione *roto* en el panel *Filtros* para enumerar todos los discos en estado roto.
++
+Si los discos en estado roto causaron el estado sin conexión del agregado host, el nombre del agregado se muestra en la columna del agregado afectado.
+
+
+
+
+
+== Después de terminar
+
+Después de confirmar que la condición del volumen fuera de línea está provocada por discos RAID rotos y el agregado de host resultante fuera de línea, póngase en contacto con el administrador o operador apropiado para sustituir manualmente los discos rotos y volver a poner el agregado en línea.

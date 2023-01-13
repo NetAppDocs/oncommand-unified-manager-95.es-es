@@ -1,0 +1,30 @@
+---
+permalink: online-help/reference-assign-performance-threshold-policy-page-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible usar la página Assign Threshold Policy para asignar una política de umbral de rendimiento a uno o más objetos de almacenamiento. 
+---
+= Asigne la página Performance Threshold Policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible usar la página Assign Threshold Policy para asignar una política de umbral de rendimiento a uno o más objetos de almacenamiento.
+
+La lista de políticas se completa únicamente con las políticas válidas para el tipo de objeto de almacenamiento.
+
+Seleccione la directiva que desea aplicar al objeto o a los objetos y, a continuación, haga clic en *aplicar directiva*.
+
+Hay algunos casos en los que se puede devolver un mensaje de error al intentar aplicar una directiva:
+
+* Al aplicar una política que utilice el contador de capacidad de rendimiento que se utiliza en un nodo o agregado que no se ha instalado con ONTAP 9.0 o una versión posterior del software.
++
+Las versiones del software ONTAP anteriores a la 9.0 no admiten contadores de capacidad de rendimiento.
+
+* Cuando se aplica una política de combinación a un volumen FlexGroup, donde el segundo contador incluye un objeto nodo o agregado.
++
+Como los volúmenes FlexGroup pueden estar distribuidos por varios nodos y agregados, esta operación no está permitida.
+
+

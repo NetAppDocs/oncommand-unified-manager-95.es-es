@@ -1,0 +1,100 @@
+---
+permalink: online-help/reference-management-station-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de la estación de gestión le proporcionan información sobre el estado del servidor en el que está instalado Unified Manager para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de la estación de gestión
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de la estación de gestión le proporcionan información sobre el estado del servidor en el que está instalado Unified Manager para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Configuración
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Espacio en disco de Unified Manager Server casi completo (ocumEvtUnifiedManagerDiskSpaceNearlyFull)
+ a| 
+Riesgo
+ a| 
+Estación de gestión
+ a| 
+Advertencia
+
+
+
+ a| 
+Espacio completo en disco de Unified Manager Server(ocumEvtUnifiedManagerDiskSpaceFull)
+ a| 
+Incidente
+ a| 
+Estación de gestión
+ a| 
+Crítico
+
+
+
+ a| 
+Memoria baja en Unified Manager Server (ocumEvtUnifiedManagerMemoryLow)
+ a| 
+Riesgo
+ a| 
+Estación de gestión
+ a| 
+Advertencia
+
+
+
+ a| 
+Unified Manager Server casi sin memoria (ocumEvtUnifiedManagerMemoriaAlmostOut)
+ a| 
+Incidente
+ a| 
+Estación de gestión
+ a| 
+Crítico
+
+|===
+
+
+== Área de impacto: Rendimiento
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+El análisis de datos de rendimiento se ve afectado(ocumEvtUnifiedManagerDataMissingAnalyze)
+ a| 
+Riesgo
+ a| 
+Estación de gestión
+ a| 
+Advertencia
+
+
+
+ a| 
+La recopilación de datos de rendimiento se ve afectada (ocumEvtUnifiedManagerDataMissingCollection)
+ a| 
+Incidente
+ a| 
+Estación de gestión
+ a| 
+Crítico
+
+|===
+[NOTE]
+====
+Estos dos últimos eventos de rendimiento solo estaban disponibles para Unified Manager 7.2. Si alguno de estos eventos se encuentra en el estado New y se actualiza a una versión más reciente del software Unified Manager, los eventos no se depuran automáticamente. Deberá mover los eventos al estado Resolved manualmente.
+
+====

@@ -1,0 +1,56 @@
+---
+permalink: online-help/task-viewing-the-node-list-and-details.html 
+sidebar: sidebar 
+keywords:  
+summary: La página del inventario Health/Nodes se puede usar para ver la lista de nodos en los clústeres. Puede usar la página de detalles Health/Cluster para ver información detallada acerca de los nodos que forman parte del clúster supervisado. 
+---
+= Ver la lista y los detalles del nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página del inventario Health/Nodes se puede usar para ver la lista de nodos en los clústeres. Puede usar la página de detalles Health/Cluster para ver información detallada acerca de los nodos que forman parte del clúster supervisado.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Es posible ver detalles como el estado del nodo, el clúster que contiene el nodo, detalles de capacidad del agregado (usado y total) y detalles de capacidad bruta (utilizable, de reserva y total). También puede obtener información acerca de las parejas de alta disponibilidad, bandejas de discos y puertos.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Estado* > *nodos*.
+. En la página de inventario *Health/Nodes*, haga clic en el nodo cuyos detalles desee ver.
++
+La información detallada del nodo seleccionado se muestra en la página de detalles Health/Cluster. En el panel izquierdo se muestra la lista de pares de alta disponibilidad. De forma predeterminada, ha Details está abierto, lo que muestra detalles de estado de alta disponibilidad y eventos relacionados con el par de alta disponibilidad seleccionado.
+
+. Para ver otros detalles sobre el nodo, realice la acción correspondiente:
++
+|===
+| Para ver... | Haga clic en... 
+
+
+ a| 
+Detalles acerca de las bandejas de discos
+ a| 
+*Bandejas de discos*.
+
+
+
+ a| 
+Información relacionada con el puerto
+ a| 
+*Puertos*.
+
+|===
+

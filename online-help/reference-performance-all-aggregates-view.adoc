@@ -1,0 +1,126 @@
+---
+permalink: online-help/reference-performance-all-aggregates-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La página del inventario Performance/Aggregates muestra una descripción general de los eventos de rendimiento, los datos y la información de configuración de cada agregado supervisado por una instancia de Unified Manager. Esta página le permite supervisar el rendimiento de los agregados y solucionar problemas de rendimiento y eventos de umbral. 
+---
+= Página del inventario Performance/Aggregates
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página del inventario Performance/Aggregates muestra una descripción general de los eventos de rendimiento, los datos y la información de configuración de cada agregado supervisado por una instancia de Unified Manager. Esta página le permite supervisar el rendimiento de los agregados y solucionar problemas de rendimiento y eventos de umbral.
+
+Dependiendo de cómo se vaya a esta página, se puede mostrar un título diferente en la página para indicar si la lista se ha filtrado. Por ejemplo, cuando se muestran todos los agregados, el título es "'Aggregates'". Al mostrar un subconjunto de agregados que se devuelven de la página Directivas de umbral, el título es "'agregados en los que se aplica la directiva aggr_IOPS'".
+
+Los botones de la parte superior de la página permiten realizar búsquedas para localizar datos específicos, crear y aplicar filtros para restringir la lista de datos mostrados, exportar los datos de la página a un `.csv` y agregue o elimine columnas de la página.
+
+De forma predeterminada, los objetos de las páginas de inventario de objetos se ordenan en función de la importancia de evento de rendimiento del objeto. Los objetos con eventos críticos se enumeran primero y los objetos con eventos de advertencia aparecen en segundo lugar. Esto proporciona una indicación visual inmediata de los problemas que deben abordarse. Los valores de los contadores de rendimiento se basan en una media de las 72 horas de datos anteriores o más, como se indica en la página. Puede hacer clic en el botón Refresh para actualizar los datos de inventario de objetos.
+
+Puede asignar directivas de umbral de rendimiento a cualquier objeto de las páginas de inventario de objetos o borrar directivas de umbral mediante los botones *asignar directiva de umbral de rendimiento* y *Borrar directiva de umbral de rendimiento*.
+
+[NOTE]
+====
+Los agregados raíz no se muestran en esta página.
+
+====
+
+
+== Columnas de la página de inventario de agregados
+
+La página del inventario Performance/Aggregates contiene las siguientes columnas para cada agregado.
+
+* *Estado*
++
+Un objeto en buen estado sin eventos activos muestra un icono de Marca de verificación verde (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]). Si el objeto tiene un evento activo, el icono del indicador de evento identifica la gravedad del evento: Los eventos críticos son rojos (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]), los eventos de error son naranjas (image:../media/sev-error-um60.png["Icono para la gravedad del evento: Error"]), y los sucesos de advertencia son amarillos (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]).
+
+* *Agregado*
++
+Puede hacer clic en el nombre del agregado para desplazarse a la página de detalles de rendimiento del agregado.
+
+* *Tipo agregado*
++
+El tipo de agregado:
+
++
+** HDD
+** Híbrido
++
+Combina HDD y SSD, pero Flash Pool no se ha habilitado.
+
+** Híbrido (Flash Pool)
++
+Combina HDD y SSD y Flash Pool se ha habilitado.
+
+** SSD
+** SSD (FabricPool)
++
+Combina SSD y un nivel de cloud
+
+** VMDisk (SDS)
++
+Discos virtuales en una máquina virtual
+
+** VMDisk (FabricPool)
++
+Combina discos virtuales y un nivel de cloud
+
+** LUN (FlexArray) esta columna muestra «'no disponible'» cuando el sistema de almacenamiento supervisado ejecuta una versión de ONTAP anterior a 8.3.
+
+
+* *Latencia*
++
+El tiempo de respuesta medio para todas las solicitudes de I/o del agregado, expresado en milisegundos por operación.
+
+* *IOPS*
++
+Las operaciones de entrada/salida por segundo en el agregado.
+
+* *Mbps*
++
+El rendimiento en el agregado, medido en megabytes por segundo.
+
+* *Capacidad de rendimiento utilizada*
++
+El porcentaje de capacidad de rendimiento que usa el agregado.
+
++
+[NOTE]
+====
+Los datos de capacidad de rendimiento solo están disponibles cuando los nodos de un clúster se han instalado con el software ONTAP 9.0 o una versión posterior.
+
+====
+* *Utilización*
++
+El porcentaje de discos del agregado que se está usando actualmente.
+
+* *Capacidad libre*
++
+La capacidad de almacenamiento sin utilizar para este agregado, en gigabytes.
+
+* *Capacidad total*
++
+La capacidad total de almacenamiento de este agregado, en gigabytes.
+
+* *Informes de datos inactivos*
++
+Si la funcionalidad de generación de informes de datos inactivos está habilitada o deshabilitada en este agregado. Cuando se habilita esta opción, los volúmenes de este agregado muestran la cantidad de datos en frío en la página de inventario Performance/Volumes.
+
++
+El valor de este campo es «'N/A'» cuando la versión de ONTAP no admite la generación de informes de datos inactivos.
+
+* *Cluster*
++
+El clúster al que pertenece el agregado. Puede hacer clic en el nombre del clúster para ir a la página de detalles de ese clúster.
+
+* *Nodo*
++
+El nodo al que pertenece el agregado. Puede hacer clic en el nombre del nodo para ir a la página de detalles de ese nodo.
+
+* *Política de umbral*
++
+La política de umbral de rendimiento definida por el usuario, o políticas, que están activas en este objeto de almacenamiento. Puede colocar el cursor sobre los nombres de directivas que contienen puntos suspensivos (...). para ver el nombre completo de la directiva o la lista de nombres de directivas asignadas. Los botones *Assign Performance Threshold Policy* y *Clear Performance Threshold Policy* permanecen desactivados hasta que seleccione uno o más objetos haciendo clic en las casillas de verificación situadas en el extremo izquierdo.
+
+

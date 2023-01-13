@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task-verifying-unified-manager-data-source-caching-in-workflow-automation.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede determinar si el almacenamiento en caché de origen de datos de Unified Manager funciona correctamente comprobando si la adquisición del origen de datos se ha realizado correctamente en Workflow Automation. Puede hacerlo cuando se integre Workflow Automation con Unified Manager para garantizar que la funcionalidad Workflow Automation esté disponible después de la integración. 
+---
+= Verificación del almacenamiento en caché de origen de datos de Unified Manager en Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede determinar si el almacenamiento en caché de origen de datos de Unified Manager funciona correctamente comprobando si la adquisición del origen de datos se ha realizado correctamente en Workflow Automation. Puede hacerlo cuando se integre Workflow Automation con Unified Manager para garantizar que la funcionalidad Workflow Automation esté disponible después de la integración.
+
+
+
+== Antes de empezar
+
+Para realizar esta tarea, debe tener asignado la función Administrador o la función Arquitecto de Workflow Automation.
+
+
+
+== Pasos
+
+. En la interfaz de usuario de Workflow Automation, seleccione *ejecución* > *orígenes de datos*.
+. Haga clic con el botón derecho del ratón en el nombre del origen de datos de Unified Manager y, a continuación, seleccione *adquirir ahora*.
+. Compruebe que la adquisición se realiza correctamente sin errores.
++
+Para que la integración de Workflow Automation en Unified Manager se tenga éxito, es necesario resolver los errores de adquisición.
+
+

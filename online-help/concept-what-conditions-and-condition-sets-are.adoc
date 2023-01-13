@@ -1,0 +1,36 @@
+---
+permalink: online-help/concept-what-conditions-and-condition-sets-are.html 
+sidebar: sidebar 
+keywords:  
+summary: Las condiciones son un conjunto de criterios coincidentes basados en las propiedades de la regla, como el nombre de archivo, la ruta de acceso al directorio y el propietario, que definen una regla. Un conjunto de estas condiciones se conoce como un conjunto de condiciones. Puede utilizar condiciones y conjuntos de condiciones solo para reglas personalizadas para determinar dónde colocar contenido escrito en Infinite Volume. 
+---
+= Qué condiciones y conjuntos de condiciones son
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+_Conditions_ es un conjunto de criterios coincidentes basados en propiedades de regla (como el nombre de archivo, la ruta de acceso al directorio y el propietario) que definen una regla. Un conjunto de estas condiciones se conoce como un _Condition Set_. Puede utilizar condiciones y conjuntos de condiciones solo para reglas personalizadas para determinar dónde colocar contenido escrito en Infinite Volume.
+
+
+
+== Condiciones
+
+Para una regla personalizada, puede especificar condiciones basadas en propiedades de regla como el nombre de archivo, la ruta de directorio o el propietario, o una combinación de todas las propiedades de la regla. La lógica es similar a una operación y booleana. Por ejemplo, mediante condiciones, puede crear una regla personalizada con la que colocar archivos `.mp3` Extensiones y archivos propiedad de Juan en la ruta de directorio que comienza con `/NS/`.
+
+
+
+== Conjuntos de condiciones
+
+La lógica utilizada para los conjuntos de condiciones es similar a una operación o booleana. Por ejemplo, mediante el uso de condiciones y conjuntos de condiciones, puede crear una regla personalizada compleja que coincida con cualquiera de las siguientes condiciones:
+
+* condición 1
++
+Todos los archivos propiedad de Mary y se colocan en `/NS/Eng/`
+
+* condición 2
++
+Todos los archivos que tienen nombres que terminan con ``.pdf``Y propiedad de María
+
+

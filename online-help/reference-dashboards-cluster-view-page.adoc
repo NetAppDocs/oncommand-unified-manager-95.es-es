@@ -1,0 +1,55 @@
+---
+permalink: online-help/reference-dashboards-cluster-view-page.html 
+sidebar: sidebar 
+keywords:  
+summary: En la página Dashboards/Cluster View se muestra información general sobre los clústeres que está gestionando. 
+---
+= Página Dashboards/Cluster View
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página Dashboards/Cluster View se muestra información general sobre los clústeres que está gestionando.
+
+Al hacer clic en *Administrar clústeres*, se abre la página orígenes de datos de configuración/clúster.
+
+Al hacer clic en un clúster se muestra información general sobre el estado de supervisión, el estado de la capacidad y el estado de rendimiento del clúster.
+
+La consola Cluster View consta de dos secciones principales: Managed Clusters (a la izquierda) y Cluster Details (a la derecha).
+
+
+
+== Sección Managed Clusters
+
+Enumera todos los clústeres que Unified Manager está supervisando. Se proporcionan los siguientes detalles para cada clúster de la lista:
+
+* Icono de estado del clúster: El estado puede ser crítico (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]), error (image:../media/sev-error-um60.png["Icono para la gravedad del evento: Error"]), Advertencia (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]), o normal (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]).
+* Dirección IP o nombre de host: Proporciona el nombre de host del clúster y la dirección IP o el FQDN.
+* Cluster Health: Proporciona información sobre el estado del clúster tal y como supervisa Unified Manager.
++
+El estado puede tener uno de los siguientes valores: Correcto, correcto con suprimido, degradado y componentes inaccesibles.
+
+
+
+
+
+== Sección Cluster Details
+
+Proporciona información sobre el estado de supervisión, la capacidad y el rendimiento del clúster seleccionado.
+
+* Estado de monitorización: Muestra el estado de supervisión y rendimiento continuos.
++
+El estado de supervisión puede tener los siguientes valores: Detección, sondeo completado, sondeo fallido o no disponible. El estado de supervisión muestra un mensaje de error cuando falla el trabajo de supervisión correspondiente (estado o rendimiento).
+
+* Capacity: Muestra la capacidad de almacenamiento total, usado y libre del clúster seleccionado.
+* Rendimiento: Muestra la velocidad operativa media del clúster en número de IOPS (operaciones de entrada/salida por segundo) y el rendimiento medio del clúster seleccionado en Mbps (megabytes por segundo).
+
+
+La sección Detalles también proporciona enlaces de navegación en las páginas de detalles de cada clúster de las aplicaciones de Unified Manager de OnCommand:
+
+* El enlace Estado se desplaza a la página de detalles Health/Cluster del clúster seleccionado.
+* El enlace Performance navega hasta la página de detalles Performance/Cluster del clúster seleccionado.
+* El enlace de System Manager navega hasta la página de inicio de sesión de OnCommand System Manager para gestionar la configuración del clúster.
+

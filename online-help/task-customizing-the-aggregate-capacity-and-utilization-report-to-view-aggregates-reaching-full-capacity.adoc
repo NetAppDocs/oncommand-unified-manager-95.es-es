@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-customizing-the-aggregate-capacity-and-utilization-report-to-view-aggregates-reaching-full-capacity.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe de capacidad y utilización del agregado para mostrar los agregados ordenados por orden creciente de utilización de la capacidad del agregado. De este modo, puede ver que los agregados están alcanzando toda su capacidad. 
+---
+= Personalización del informe de capacidad y utilización de agregados para ver agregados que alcanzan su capacidad completa
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe de capacidad y utilización del agregado para mostrar los agregados ordenados por orden creciente de utilización de la capacidad del agregado. De este modo, puede ver que los agregados están alcanzando toda su capacidad.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster y por pareja de alta disponibilidad, realice los pasos siguientes:
++
+.. Haga clic en las columnas que deben desagruparse.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno opción*.
+
+
+. Para ordenar los agregados que alcanzan la capacidad completa, haga clic en la columna *días a la capacidad completa* y haga clic en la image:../media/click-to-see-menu.gif[""] .
+. Seleccione *filtro* > *Arriba/abajo N*.
+. En el cuadro de diálogo *Arriba/abajo N*, seleccione *abajo N* en el campo *filtro* e introduzca un valor en el campo de texto.
+. Haga clic en *Aceptar*.
+

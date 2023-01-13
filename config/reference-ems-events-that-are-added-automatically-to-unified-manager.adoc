@@ -1,0 +1,548 @@
+---
+permalink: config/reference-ems-events-that-are-added-automatically-to-unified-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando se utiliza el software Unified Manager 9.4 o posterior, se añaden automáticamente los siguientes eventos de EMS de ONTAP a Unified Manager. Estos eventos se generarán cuando se active en cualquier clúster que Unified Manager supervise. 
+---
+= Eventos de EMS que se añaden automáticamente a Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando se utiliza el software Unified Manager 9.4 o posterior, se añaden automáticamente los siguientes eventos de EMS de ONTAP a Unified Manager. Estos eventos se generarán cuando se active en cualquier clúster que Unified Manager supervise.
+
+Los siguientes eventos de EMS están disponibles cuando se supervisan clústeres que ejecutan ONTAP 9.5 o una versión posterior del software:
+
+|===
+| Nombre del evento de Unified Manager | Nombre del evento de EMS | Recurso afectado | Gravedad de ONTAP 
+
+
+ a| 
+Acceso al almacén de objetos denegado para reubicación de agregados
+ a| 
+arl.netra.ca.check.failed
+ a| 
+Agregado
+ a| 
+Error
+
+
+
+ a| 
+Acceso al almacén de objetos denegado para la reubicación de agregados durante la conmutación por error del almacenamiento
+ a| 
+gb.netra.ca.check.failed
+ a| 
+Agregado
+ a| 
+Error
+
+
+
+ a| 
+Espacio de FabricPool casi completo
+ a| 
+fabricpool.casi.lleno
+ a| 
+Clúster
+ a| 
+Error
+
+
+
+ a| 
+Se inició el periodo de gracia de NVMe-of
+ a| 
+nvmf.graceperiod.start
+ a| 
+Clúster
+ a| 
+Advertencia
+
+
+
+ a| 
+NVMe-of Grace Period activo
+ a| 
+nvmf.graceperiod.active
+ a| 
+Clúster
+ a| 
+Advertencia
+
+
+
+ a| 
+NVMe-of Grace caducó
+ a| 
+nvmf.graceperiod.expired
+ a| 
+Clúster
+ a| 
+Advertencia
+
+
+
+ a| 
+LUN destruida
+ a| 
+lun.destroy
+ a| 
+LUN
+ a| 
+Información
+
+
+
+ a| 
+MetaDataConnFail de Cloud AWS
+ a| 
+Cloud.aws.metadataConnFail
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Cloud AWS IAMCredsExpired
+ a| 
+Cloud.aws.iamCredsExpired
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+IAMCredsInvalid de Cloud AWS
+ a| 
+Cloud.aws.iamCredsInvalid
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Cloud AWS IAMCredsNotFound
+ a| 
+Cloud.aws.iamCredsNotFound
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+IAMCredsNotInitialized Cloud de AWS
+ a| 
+Cloud.aws.iamNotInitialized
+ a| 
+Nodo
+ a| 
+Información
+
+
+
+ a| 
+Cloud AWS IAMRoleinválido
+ a| 
+Cloud.aws.iamRoleInvalid
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Cloud AWS IAMRoleNotFound
+ a| 
+Cloud.aws.iamRoleNotFound
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Objstore Host no se puede resolver
+ a| 
+objstore.host.no se puede resolver
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Objstore InterClusterLifDown
+ a| 
+objstore.interclusterlifDown
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+La solicitud no coincide con la firma del almacén de objetos
+ a| 
+osc.signaturediscordancia
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Una de las agrupaciones de NFSv4 agotadas
+ a| 
+Nblade.nfsV4PoolEscape
+ a| 
+Nodo
+ a| 
+Crítico
+
+
+
+ a| 
+La memoria del monitor QoS se enceró
+ a| 
+qos.monitor.memory.mutile
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Memoria de monitor QoS abated
+ a| 
+qos.monitor.memory.abated
+ a| 
+Nodo
+ a| 
+Información
+
+
+
+ a| 
+Destrucción NVMeNS
+ a| 
+NVMeNS.destroy
+ a| 
+Espacio de nombres
+ a| 
+Información
+
+
+
+ a| 
+NVMeNS en línea
+ a| 
+NVMeNS.offline
+ a| 
+Espacio de nombres
+ a| 
+Información
+
+
+
+ a| 
+NVMeNS sin conexión
+ a| 
+NVMeNS.online
+ a| 
+Espacio de nombres
+ a| 
+Información
+
+
+
+ a| 
+NVMeNS fuera espacio
+ a| 
+NVMeNS.out.of.space
+ a| 
+Espacio de nombres
+ a| 
+Advertencia
+
+
+
+ a| 
+Replicación síncrona fuera de sincronización
+ a| 
+sms.status.out.of.sync
+ a| 
+Relación de SnapMirror
+ a| 
+Advertencia
+
+
+
+ a| 
+Replicación síncrona restaurada
+ a| 
+sms.status.in.sync
+ a| 
+Relación de SnapMirror
+ a| 
+Información
+
+
+
+ a| 
+Error en la resincronización automática de replicación síncrona
+ a| 
+sms.resync.intento.error
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Muchas conexiones CIFS
+ a| 
+Nblade.cifsManyAutos
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Se superó la conexión CIFS máxima
+ a| 
+Nblade.cifsMaxOpenSameFile
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Se ha excedido el número máximo de conexiones CIFS por usuario
+ a| 
+Nblade.cifsMaxSessPerUsrConn
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Conflicto con los nombres NetBIOS de CIFS
+ a| 
+Nblade.cifsNbNameConflict
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Intentos de conexión de recursos compartidos CIFS no existentes
+ a| 
+Nblade.cifsNoPrivShare
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Error en la operación de copia de volúmenes redundantes de CIFS
+ a| 
+cifs.shadowcopy.error
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Virus detectado por el servidor AV
+ a| 
+Nblade.vscanVirusDetected
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+No hay conexión con el servidor AV para el análisis de virus
+ a| 
+Nblade.vscanNoScannerConn
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+No hay ningún servidor AV registrado
+ a| 
+Nblade.vscanNoRegdScanner
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Conexión del servidor AV sin respuesta
+ a| 
+Nblade.vscanConnInactive
+ a| 
+SVM
+ a| 
+Información
+
+
+
+ a| 
+El servidor AV está muy ocupado para aceptar una nueva solicitud de análisis
+ a| 
+Nblade.vscanConnBackPressure
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Un usuario no autorizado intenta utilizar el servidor AV
+ a| 
+Nblade.vscanBadUserPrivAccess
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Los componentes de FlexGroup tienen problemas de espacio
+ a| 
+flexgroup.constituyentes.have.space.problemas
+ a| 
+Volumen
+ a| 
+Error
+
+
+
+ a| 
+El estado del espacio de los componentes de FlexGroup es correcto
+ a| 
+flexgroup.constituyentes.space.status.all.ok
+ a| 
+Volumen
+ a| 
+Información
+
+
+
+ a| 
+Los componentes de FlexGroup tienen problemas de inodos
+ a| 
+flexgroup.constituents.have.inodes.issues
+ a| 
+Volumen
+ a| 
+Error
+
+
+
+ a| 
+Los componentes de FlexGroup inodos Estado todo OK
+ a| 
+flexgroup.constituents.inodes.status.all.ok
+ a| 
+Volumen
+ a| 
+Información
+
+
+
+ a| 
+Espacio lógico del volumen casi lleno
+ a| 
+Monitor.vol.nearFull
+ a| 
+Volumen
+ a| 
+Advertencia
+
+
+
+ a| 
+Espacio lógico del volumen lleno
+ a| 
+monitor.vol.full
+ a| 
+Volumen
+ a| 
+Error
+
+
+
+ a| 
+Espacio lógico del volumen normal
+ a| 
+monitor.vol.one.ok
+ a| 
+Volumen
+ a| 
+Información
+
+
+
+ a| 
+Error al ajustar el tamaño automático del volumen de WAFL
+ a| 
+wafl.vol.autoSize.fail
+ a| 
+Volumen
+ a| 
+Error
+
+
+
+ a| 
+Se ha completado el tamaño automático de volúmenes de WAFL
+ a| 
+wafl.vol.autoSize.done
+ a| 
+Volumen
+ a| 
+Información
+
+|===

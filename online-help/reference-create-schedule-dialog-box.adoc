@@ -1,0 +1,74 @@
+---
+permalink: online-help/reference-create-schedule-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Create Schedule permite crear un programa de protección básico o avanzado para las transferencias de relaciones de SnapMirror y SnapVault. Es posible crear una nueva programación para aumentar la frecuencia de las transferencias de datos debido a actualizaciones de datos frecuentes, o bien crear una programación menos frecuente cuando cambian los datos con poca frecuencia. 
+---
+= Cuadro de diálogo Create Schedule
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Create Schedule permite crear un programa de protección básico o avanzado para las transferencias de relaciones de SnapMirror y SnapVault. Es posible crear una nueva programación para aumentar la frecuencia de las transferencias de datos debido a actualizaciones de datos frecuentes, o bien crear una programación menos frecuente cuando cambian los datos con poca frecuencia.
+
+Las programaciones no se pueden configurar para las relaciones de SnapMirror síncrono.
+
+* *Cluster de destino*
++
+El nombre del clúster seleccionado en la pestaña SnapVault o la pestaña SnapMirror del cuadro de diálogo Configure Protection.
+
+* *Nombre del programa*
++
+El nombre que se proporciona para la programación. Los nombres de horarios pueden consistir de los caracteres De La A a la Z, de la a a la z, del 0 al 9, así como cualquiera de los siguientes caracteres especiales: ! @ # $ % {caret} & * ( ) _ -. Los nombres de las programaciones no pueden incluir los siguientes caracteres: < >.
+
+* *Básico o Avanzado*
++
+El modo de programación que desea utilizar.
+
++
+El modo básico incluye los siguientes elementos:
+
++
+** Repetición
++
+La frecuencia con la que se produce una transferencia programada. Las opciones incluyen horarios, diarios y semanales.
+
+** Día
++
+Cuando se selecciona una repetición semanal, se produce el día de la semana en que se realiza una transferencia.
+
+** Tiempo
++
+Cuando se selecciona Diario o Semanal, se produce la hora del día en que se realiza una transferencia.
+
+
+
++
+El modo avanzado incluye los siguientes elementos:
+
++
+** Meses
++
+Lista numérica separada por comas que representa los meses del año. Los valores válidos son de 0 a 11, con cero que representa enero, etc. Este elemento es opcional. Si deja el campo en blanco, las transferencias se producen cada mes.
+
+** Días
++
+Lista numérica separada por comas que representa el día del mes. Los valores válidos son de 1 a 31. Este elemento es opcional. Dejar el campo en blanco implica que se produce una transferencia todos los días del mes.
+
+** Días laborables
++
+Lista numérica separada por comas que representa los días de la semana. Los valores válidos son de 0 a 6, con 0 que representa domingo, etc. Este elemento es opcional. Dejar el campo en blanco implica que se produce una transferencia todos los días de la semana. Si se especifica un día de la semana pero no se especifica un día del mes, la transferencia se produce sólo en el día especificado de la semana y no todos los días.
+
+** Horas
++
+Lista numérica separada por comas que representa el número de horas de un día. Los valores válidos son de 0 a 23, mientras que 0 representa la medianoche. Este elemento es opcional.
+
+** Minutos
++
+Lista numérica separada por comas que representa los minutos en una hora. Los valores válidos abarcan de 0 a 59. Este elemento es obligatorio.
+
+
+
+

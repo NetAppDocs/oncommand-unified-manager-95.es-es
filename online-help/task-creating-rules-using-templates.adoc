@@ -1,0 +1,53 @@
+---
+permalink: online-help/task-creating-rules-using-templates.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede añadir nuevas reglas utilizando plantillas de regla definidas por Unified Manager para determinar la ubicación de los datos que se escriben en la SVM con Infinite Volume. Puede crear reglas basadas en tipos de archivo, rutas de acceso de directorio o propietarios. 
+---
+= Creación de reglas mediante plantillas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir nuevas reglas utilizando plantillas de regla definidas por Unified Manager para determinar la ubicación de los datos que se escriben en la SVM con Infinite Volume. Puede crear reglas basadas en tipos de archivo, rutas de acceso de directorio o propietarios.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* El clúster que contiene la SVM con Infinite Volume con clases de almacenamiento debe añadirse a la base de datos de Unified Manager.
+
+
+
+
+== Acerca de esta tarea
+
+La pestaña Data Policy solo puede verse para una SVM con Infinite Volume.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione la SVM adecuada.
+. Haga clic en la ficha *Política de datos*.
++
+Se muestra la lista de reglas de la política de datos para la SVM seleccionada con Infinite Volume.
+
+. Haga clic en *Crear*.
+. En el cuadro de diálogo *Crear regla*, elija una plantilla de regla adecuada en la lista desplegable.
++
+La plantilla se basa en tres categorías: Tipo de archivo, propietario o ruta de directorio.
+
+. En función de la plantilla seleccionada, agregue las condiciones necesarias en el área *criterios coincidentes*.
+. Seleccione una clase de almacenamiento adecuada en la lista desplegable *Coloque el contenido coincidente en Storage Class*.
+. Haga clic en *Crear*.
++
+La nueva regla que ha creado se muestra en la pestaña Política de datos.
+
+. Obtenga una vista previa de los demás cambios realizados en la directiva de datos.
+. Haga clic en *Activar* para activar los cambios en las propiedades de la regla en la SVM.
+

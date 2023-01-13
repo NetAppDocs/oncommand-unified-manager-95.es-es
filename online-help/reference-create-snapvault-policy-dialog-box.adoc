@@ -1,0 +1,78 @@
+---
+permalink: online-help/reference-create-snapvault-policy-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Crear política de SnapVault permite crear una política para establecer la prioridad para las transferencias de SnapVault. Se usan políticas para maximizar la eficiencia de las transferencias del volumen primario al secundario. 
+---
+= Cuadro de diálogo Create SnapVault Policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Crear política de SnapVault permite crear una política para establecer la prioridad para las transferencias de SnapVault. Se usan políticas para maximizar la eficiencia de las transferencias del volumen primario al secundario.
+
+* *Cluster de destino*
++
+El nombre del clúster seleccionado en la pestaña SnapVault del cuadro de diálogo Configurar protección.
+
+* *SVM de destino*
++
+El nombre de la SVM seleccionada en la pestaña SnapVault del cuadro de diálogo Configure Protection.
+
+* *Nombre de la política*
++
+Nombre que se proporcionará para la nueva política. Los nombres de políticas pueden consistir de los caracteres De La A a la Z, de la a a la z, del 0 al 9, punto (.), guión (-), y guión bajo (_).
+
+* *Prioridad de transferencia*
++
+Prioridad a la que se ejecuta la transferencia. Puede seleccionar normal o Baja. Relaciones de transferencia con políticas que especifican una prioridad de transferencia normal ejecutada antes de aquellas con políticas que especifican una prioridad de transferencia baja. El valor predeterminado es normal.
+
+* *Comentario*
++
+Un campo opcional en el que puede añadir un comentario de hasta 255 caracteres acerca de la política de SnapVault.
+
+* *Ignorar tiempo de acceso*
++
+Especifica si se omiten las transferencias incrementales para los archivos que sólo tienen cambiado el tiempo de acceso.
+
+* *Etiqueta de replicación*
++
+Enumera en una tabla las reglas asociadas con las copias de Snapshot seleccionadas por ONTAP que tienen una etiqueta de replicación específica en una política. También está disponible la siguiente información y acciones:
+
++
+** Botones de comando
++
+Los botones de comando le permiten realizar las siguientes acciones:
+
++
+*** Agregar
++
+Permite crear una etiqueta de copia Snapshot y un recuento de retenciones.
+
+*** Editar recuento de retenciones
++
+Permite cambiar el número de retención de una etiqueta de copia Snapshot existente. El número de retención debe ser un número entre 1 y 251. La suma de todos los recuentos de retención para todas las reglas no puede ser mayor que 251.
+
+*** Eliminar
++
+Permite eliminar una etiqueta de copia Snapshot existente.
+
+
+
+** Etiqueta de copia snapshot
++
+Muestra la etiqueta de la copia Snapshot. Si selecciona uno o varios volúmenes con la misma política de copia de Snapshot local, se muestra una entrada para cada etiqueta de la política. Si selecciona varios volúmenes con dos o más políticas de copia de Snapshot locales, la tabla muestra todas las etiquetas de todas las políticas
+
+** Programación
++
+Muestra la programación asociada con cada etiqueta de copia Snapshot. Si una etiqueta tiene más de una programación asociada, las programaciones de esa etiqueta se muestran en una lista separada por comas. Si selecciona varios volúmenes con la misma etiqueta pero con horarios diferentes, la programación mostrará "'varios'" para indicar que hay más de un programa asociado a los volúmenes seleccionados.
+
+** Recuento de retenciones de destino
++
+Muestra el número de copias de Snapshot con la etiqueta especificada que se conservan en el volumen secundario de SnapVault. El recuento de retenciones de etiquetas con varias programaciones muestra la suma de los recuentos de retención de cada etiqueta y pareja de programaciones. Si selecciona varios volúmenes con dos o más políticas de copia de Snapshot locales, el número de retención estará vacío.
+
+
+
+

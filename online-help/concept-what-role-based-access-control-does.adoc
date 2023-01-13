@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-what-role-based-access-control-does.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El control de acceso basado en roles \(RBAC\) permite a los administradores gestionar grupos de usuarios definiendo roles. Si necesita restringir el acceso a funciones específicas para administradores seleccionados, debe configurar cuentas de administrador para ellos. Si desea restringir la información que los administradores pueden ver y las operaciones que pueden realizar, debe aplicar roles a las cuentas de administrador que cree.' 
+---
+= Qué hace el control de acceso basado en roles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El control de acceso basado en roles permite a los administradores gestionar grupos de usuarios definiendo roles. Si necesita restringir el acceso a funciones específicas para administradores seleccionados, debe configurar cuentas de administrador para ellos. Si desea restringir la información que los administradores pueden ver y las operaciones que pueden realizar, debe aplicar roles a las cuentas de administrador que cree.
+
+El servidor de gestión utiliza RBAC para los permisos de inicio de sesión de usuario y roles. Si no ha cambiado la configuración predeterminada del servidor de administración para el acceso de usuarios administrativos, no es necesario iniciar sesión para verlos.
+
+Al iniciar una operación que requiere privilegios específicos, el servidor de administración le solicita que inicie sesión. Por ejemplo, para crear cuentas de administrador, debe iniciar sesión con acceso a la cuenta de administrador.

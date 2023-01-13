@@ -1,0 +1,414 @@
+---
+permalink: online-help/reference-health-all-volumes-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La página del inventario Health/Volumes muestra información sobre los volúmenes en los sistemas de almacenamiento que se supervisan y permite modificar la configuración de umbral de volumen. 
+---
+= Página del inventario Health/Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página del inventario Health/Volumes muestra información sobre los volúmenes en los sistemas de almacenamiento que se supervisan y permite modificar la configuración de umbral de volumen.
+
+
+
+== Botones de comando
+
+* *Editar umbrales*
++
+Muestra el cuadro de diálogo Editar umbrales, lo que permite editar la configuración del umbral de estado para uno o varios volúmenes.
+
+* *Proteger*
++
+Muestra los siguientes submenús:
+
++
+** SnapMirror
++
+Permite crear una relación de SnapMirror para los volúmenes seleccionados.
+
+** SnapVault
++
+Permite crear una relación de SnapVault para los volúmenes seleccionados.
+
+
+
+* *Restaurar*
++
+Muestra el cuadro de diálogo Restore, que permite restaurar directorios o archivos desde un volumen a la vez.
+
++
+Este botón está deshabilitado si se han seleccionado más de un volumen, o si se ha seleccionado un volumen de FlexGroup o si se ha seleccionado un volumen configurado para SnapMirror Synchronous.
+
+* *Annotate*
++
+Permite anotar el volumen seleccionado.
+
+* *Exportación*
++
+Permite exportar los detalles de todos los volúmenes supervisados a valores separados por comas (`.csv`). Al ver Infinite Volume, los componentes de Infinite Volume se exportarán.
+
+
+
+
+
+== Tabla de descripción general de volúmenes
+
+En la tabla volúmenes, se muestran las propiedades de todos los volúmenes detectados. Puede utilizar los filtros de columnas para personalizar los datos que se muestran:
+
+* *Estado*
++
+El estado actual de un volumen. El estado puede ser crítico (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]), error (image:../media/sev-error-um60.png["Icono para la gravedad del evento: Error"]), Advertencia (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]), o normal (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]).
+
++
+Es posible mover el puntero sobre el estado para ver más información sobre el evento o los eventos que se generan para el volumen.
+
++
+Si el estado del volumen viene determinado por un solo evento, puede ver información como el nombre del evento, la hora y la fecha en que se activó el evento, el nombre del administrador al que se asigna el evento y la causa del evento. Puede hacer clic en el enlace *Ver detalles* para ver más información sobre el evento.
+
++
+Si el estado del volumen viene determinado por varios eventos de la misma gravedad, los tres eventos principales se muestran con información como el nombre del evento, la hora y la fecha en que se activan los eventos y el nombre del administrador al que se asigna el evento. Si desea ver más detalles de cada uno de estos eventos, haga clic en el nombre del evento. También puede hacer clic en el enlace *Ver todos los eventos* para ver la lista de eventos generados.
+
+* *Volumen*
++
+El nombre del volumen.
+
++
+Puede mover el puntero por un volumen para ver información, como el espacio sobrecomprometido de la cuota de qtree, el estado de la última operación de movimiento de volúmenes y el espacio asignado en el volumen. También es posible ver los detalles de los objetos relacionados, como la SVM a la que pertenece el volumen, el agregado al que pertenece el volumen y todos los volúmenes que pertenecen a este agregado.
+
++
+Si se supervisa un SVM con Infinite Volume, puede ver detalles sobre los tres tipos de componentes (datos, espacio de nombres y mirroring de espacio de nombres) en la SVM con Infinite Volume. Los detalles del componente incluyen la siguiente información:
+
++
+** Nombre del componente
+** Estado del componente
+** Nombre del SVM con Infinite Volume al que pertenece el componente
+** Ruta de unión del componente
+** Nombre del agregado que contiene el componente
+** Capacidad de datos disponible, utilizada y total del componente
+
+
+* *Estado*
++
+El estado actual del volumen:
+
++
+** Sin conexión
++
+No se permite el acceso de lectura o escritura al volumen.
+
+** En línea
++
+Se permite el acceso de lectura y escritura al volumen.
+
+** Restringida
++
+Se permiten operaciones limitadas, como la reconstrucción de paridad, pero no se permite el acceso a los datos.
+
+** Mixto
++
+No todos los componentes de un volumen FlexGroup están en el mismo estado.
+
+
+
+* *Ruta del cruce*
++
+La ruta en la que se monta el volumen.
+
+* *Máquina virtual de almacenamiento*
++
+La SVM que contiene el volumen.
+
+* *Agregados*
++
+El nombre del agregado en el que reside el volumen o el número de agregados en los que reside el volumen FlexGroup.
+
++
+Puede hacer clic en el nombre para mostrar los detalles en la página de detalles Aggregate. Para FlexGroup Volumes, puede hacer clic en el número para mostrar los agregados que se utilizan en FlexGroup en la página Aggregates.
+
+* *Política de organización en niveles*
++
+La política de organización en niveles establecida en el volumen. La política solo se ve afectada cuando se implementa el volumen en un agregado de FabricPool:
+
++
+** Ninguno. Los datos para este volumen siempre permanecen en el nivel de rendimiento.
+** Solo Snapshot. Solo los datos de Snapshot se mueven automáticamente al nivel de cloud. El resto de datos permanecen en el nivel de rendimiento.
+** Backup. En los volúmenes de protección de datos, todos los datos de usuario transferidos inician en el nivel de cloud, pero las lecturas posteriores de los clientes pueden hacer que los datos activos se muevan al nivel de rendimiento.
+** Automático. Los datos de este volumen se mueven automáticamente entre el nivel de rendimiento y el nivel de cloud cuando ONTAP determina que los datos están «activos» o «inactivos».
+
+
+* *Tipo de SnapLock*
++
+El tipo de SnapLock del agregado que contiene el volumen. Las opciones disponibles son Compliance, Enterprise, Non-SnapLock.
+
+* *En transición*
++
+Si el volumen completó o no la transición.
+
+* *Función de protección*
++
+El rol de protección de un volumen:
+
++
+** Sin protección
++
+Un volumen de lectura/escritura sin relaciones de SnapMirror o SnapVault salientes o entrantes
+
+** Protegido
++
+Un volumen de lectura/escritura con una relación de SnapMirror o SnapVault saliente
+
+** Destino
++
+Un volumen de protección de datos (DP) o un volumen de lectura/escritura con una relación de SnapMirror o SnapVault entrante
+
+** No aplicable
++
+Volumen para el que no se aplican las funciones de protección, como un volumen de uso compartido de carga, un componente de datos o un volumen temporal
+
++
+Puede mover el puntero sobre el rol de protección de un volumen para ver una representación gráfica de la topología de protección del volumen seleccionado. Esto puede incluir el volumen de origen, el número total de relaciones de SnapMirror síncronas y asíncronas salientes y el número total de relaciones de SnapVault salientes. El resaltado azul alrededor del volumen indica el volumen seleccionado.
+
++
+Al hacer clic en *Ver detalles de la protección* se muestra la ficha Protección de la página de detalles Estado/volumen.
+
+
+
+* *Thin-Provisioning*
++
+Si la garantía de espacio está establecida para el volumen seleccionado. Los valores válidos son Yes y no
+
+* *Capacidad de datos disponible*
++
+La cantidad de espacio físico actualmente disponible para los datos del volumen.
+
+* *Datos disponibles %*
++
+El porcentaje de espacio físico disponible actualmente para datos en el volumen.
+
+* *Capacidad de datos usados*
++
+La cantidad de espacio físico utilizado por los datos en el volumen.
+
+* *Datos usados %*
++
+El porcentaje de espacio físico utilizado por datos en el volumen según la capacidad de datos disponible total.
+
+* * Espacio lógico utilizado %*
++
+El porcentaje de espacio lógico utilizado por datos del volumen según la capacidad de datos disponible total.
+
+* *Informes de espacio lógico*
++
+Si el volumen tiene configurada la generación de informes de espacio lógico. El valor puede ser Enabled, Disabled o Not aplica.
+
++
+El espacio lógico indica el tamaño real de los datos que se están almacenando en el volumen sin aplicar el ahorro derivado de las tecnologías de eficiencia del almacenamiento de ONTAP.
+
+* *Capacidad total de datos*
++
+El espacio físico total disponible para los datos del volumen.
+
+* *Clase de almacenamiento*
++
+El nombre de la clase de almacenamiento. Esta columna solo se muestra para Infinite Volume.
+
+* *Función Constituyente*
++
+El nombre de función del componente. Las funciones pueden ser el espacio de nombres, los datos o la duplicación del espacio de nombres. Esta columna solo se muestra para Infinite Volumes.
+
+* *Estado de movimiento*
++
+El estado actual de la operación de movimiento de volúmenes. El estado puede ser en curso, en pausa, fallido o finalizado.
+
++
+Es posible mover el puntero por el estado para ver más información sobre la operación de movimiento de volúmenes, como el origen, el destino, la hora de inicio de la operación, la hora de finalización de la operación, la fase actual de la operación de movimiento de volúmenes que está en curso, el estado (en porcentaje) y la hora de finalización estimada.
+
+* *Política de almacenamiento en caché*
++
+La política de almacenamiento en caché asociada con el volumen seleccionado. La política proporciona información acerca de cómo se produce el almacenamiento en caché Flash Pool en el volumen.
+
++
+|===
+| Política de caché | Descripción 
+
+
+ a| 
+Automático
+ a| 
+Read almacena en caché todos los bloques de metadatos y los bloques de datos de usuario de lectura aleatoria, y Write almacena en caché todos los bloques de datos de usuario sobrescritos de forma aleatoria.
+
+
+
+ a| 
+Ninguno
+ a| 
+No almacena en caché ningún bloque de metadatos o datos de usuario.
+
+
+
+ a| 
+Todo
+ a| 
+Read almacena en caché todos los bloques de datos de usuario que se leen y escriben. La política no realiza ningún almacenamiento en caché de escritura.
+
+
+
+ a| 
+Escritura All-Random
+ a| 
+Esta política es una combinación de las políticas All y no Read-Random Write y realiza las siguientes acciones:
+
+** Read almacena en caché todos los bloques de datos de usuario que se leen y escriben.
+** Write almacena en caché todos los bloques de datos de usuario sobrescritos de forma aleatoria.
+
+
+
+
+ a| 
+Todos leídos
+ a| 
+Read almacena en caché todos los bloques de datos de usuario, lectura aleatoria y lectura secuencial.
+
+
+
+ a| 
+Todas las lecturas y escrituras aleatorias
+ a| 
+Esta política es una combinación de las políticas todas de lectura y no lectura/escritura aleatoria y realiza las siguientes acciones:
+
+** Read almacena en caché todos los bloques de datos de usuario, lectura aleatoria y lectura secuencial.
+** Write almacena en caché todos los bloques de datos de usuario sobrescritos de forma aleatoria.
+
+
+
+
+ a| 
+Lectura y escritura aleatoria total
+ a| 
+Read almacena en caché todos los metadatos, lectura aleatoria, lectura secuencial y bloques de datos de usuario escritos de forma aleatoria.
+
+
+
+ a| 
+All Read Random Write-Random Write
+ a| 
+Esta política es una combinación de las políticas de lectura aleatoria y sin lectura/escritura aleatoria y realiza lo siguiente:
+
+** Read almacena en caché todos los metadatos, las lecturas aleatoria y los bloques de datos de usuario escritos de forma aleatoria.
+** Write almacena en caché todos los bloques de datos de usuario sobrescritos de forma aleatoria.
+
+
+
+
+ a| 
+Meta
+ a| 
+Read almacena en caché solo bloques de metadatos.
+
+
+
+ a| 
+Escritura aleatoria
+ a| 
+Esta política es una combinación de los metadatos y no Read-Random Write y realiza lo siguiente: Sólo cachés de lectura
+
+
+
+ a| 
+Sin lectura/escritura aleatoria
+ a| 
+Write almacena en caché todos los bloques de datos de usuario sobrescritos de forma aleatoria. La política no ejecuta ningún almacenamiento en caché de lectura.
+
+
+
+ a| 
+Lectura aleatoria
+ a| 
+Read almacena en caché todos los bloques de metadatos y los bloques de datos de usuario de lectura aleatoria.
+
+
+
+ a| 
+Lectura-escritura aleatoria
+ a| 
+Read almacena en caché todos los metadatos, lectura aleatoria y bloques de datos de usuario escritos de forma aleatoria.
+
+
+
+ a| 
+Lectura-escritura-escritura aleatoria
+ a| 
+Esta política es una combinación de las políticas de lectura aleatoria y sin lectura/escritura aleatoria y realiza lo siguiente:
+
+** Read almacena en caché todos los metadatos, lectura aleatoria y bloques de datos de usuario sobrescritos de forma aleatoria.
+** Write almacena en caché todos los bloques de datos de usuario sobrescritos de forma aleatoria.
+
+
+|===
+* *Prioridad de retención de caché*
++
+La prioridad de retención de caché del volumen. Una prioridad de retención de caché define cuánto tiempo estarán los bloques de un volumen en estado de caché en un Flash Pool una vez que lleguen a estar inactivos.
+
++
+** Bajo
++
+Almacene en caché los bloques de volumen frío durante el menor tiempo posible
+
+** Normal
++
+Almacene en caché los bloques de datos fríos durante el tiempo predeterminado
+
+** Alto
++
+Almacene en caché los bloques de volumen frío para el mayor tiempo posible
+
+
+
+* *Compresión*
++
+Si la compresión está habilitada en el volumen. La columna muestra Enabled o Disabled.
+
+* *Deduplicación*
++
+Si la deduplicación está activada en el volumen. La columna muestra Enabled o Disabled.
+
+* *Estilo*
++
+El estilo de volumen: FlexVol o FlexGroup.
+
+* *Tipo*
++
+El tipo de volumen. El tipo de volumen puede ser de lectura/escritura o protección de datos, uso compartido de carga o caché de datos.
+
+* *Cluster*
++
+El clúster que contiene el volumen de destino. Para ver más detalles sobre el clúster, haga clic en el nombre del clúster.
+
+* *Nodos de clúster*
++
+El nombre del nodo al que pertenece el volumen o el número de nodos en los que reside el volumen FlexGroup. Para ver más detalles sobre el nodo del clúster, haga clic en el nombre del nodo.
+
++
+Puede hacer clic en el nombre del nodo para mostrar detalles en la página de detalles Node. Para FlexGroup Volumes, puede hacer clic en el número para mostrar los nodos que se usan en la FlexGroup en la página Nodes.
+
+* *Política de instantánea local*
++
+Las políticas de copia de Snapshot local para los volúmenes que se muestran en la lista. El nombre de la política predeterminada es el predeterminado.
+
+
+
+
+
+== Panel Filters
+
+El panel Filters permite establecer filtros para personalizar la manera en que se muestra la información en la lista Volumes. Es posible seleccionar filtros relacionados con las columnas Estado del volumen, Estado y anotación.
+
+[NOTE]
+====
+Los filtros especificados en el panel Filters anulan los filtros especificados para las columnas de la lista Volumes.
+
+====

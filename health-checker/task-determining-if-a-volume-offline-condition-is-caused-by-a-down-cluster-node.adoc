@@ -1,0 +1,61 @@
+---
+permalink: health-checker/task-determining-if-a-volume-offline-condition-is-caused-by-a-down-cluster-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar la interfaz de usuario web de Unified Manager para confirmar o eliminar la posibilidad de que un volumen esté sin conexión debido a que su nodo de host está inactivo y que la conmutación por error del almacenamiento a su partner de pareja de alta disponibilidad no se puede realizar correctamente. 
+---
+= Determinar si un volumen está sin conexión debido a que su nodo de host está inactivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la interfaz de usuario web de Unified Manager para confirmar o eliminar la posibilidad de que un volumen esté sin conexión debido a que su nodo de host está inactivo y que la conmutación por error del almacenamiento a su partner de pareja de alta disponibilidad no se puede realizar correctamente.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Para determinar si la condición de volumen sin conexión se debe a un fallo en el nodo de host y a una conmutación por error del almacenamiento posterior a una conmutación por error, realice las siguientes acciones:
+
+
+
+== Pasos
+
+. Busque y haga clic en el enlace de hipertexto que aparece bajo SVM en el panel *dispositivos relacionados* de la página de detalles *Estado/volumen* del volumen sin conexión.
++
+La página de detalles Health/Storage Virtual Machine muestra información sobre la máquina virtual de almacenamiento (SVM) que aloja el volumen sin conexión.
+
+. En el panel *dispositivos relacionados* de la página de detalles *Health/Storage Virtual Machine*, busque y haga clic en el enlace de hipertexto mostrado bajo volúmenes.
++
+La página del inventario Health/Volumes muestra una tabla con información sobre todos los volúmenes alojados en la SVM.
+
+. En el encabezado de la columna Estado de la página de inventario *Health/Volumes*, haga clic en el símbolo de filtro image:../media/filtericon-um60.png["Icono para filtro de columna"]Y, a continuación, seleccione la opción *sin conexión*.
++
+Solo se muestran los volúmenes SVM que están en estado sin conexión.
+
+. En la página de inventario *Health/Volumes*, haga clic en el símbolo de cuadrícula image:../media/gridviewicon.gif["Para la vista de cuadrícula"]Y, a continuación, seleccione la opción *nodos de clúster*.
++
+Es posible que tenga que desplazarse por el cuadro de selección de cuadrícula para localizar la opción *nodos de clúster*.
+
++
+La columna Cluster Nodes se añade al inventario de volúmenes y muestra el nombre del nodo que aloja cada volumen sin conexión.
+
+. En la página de inventario *Health/Volumes*, busque la lista para el volumen sin conexión y, en su columna Cluster Node, haga clic en el nombre de su nodo host.
++
+La pestaña Nodes de la página de detalles Health/Cluster muestra el estado de la pareja de ha de los nodos a los que pertenece el nodo de alojamiento. El estado del nodo de host y el éxito de cualquier operación de conmutación por error del clúster se indican en la pantalla.
+
+
+
+
+
+== Después de terminar
+
+Después de confirmar que existe la condición de estado sin conexión del volumen porque su nodo de host está inactivo y se ha producido un error en la conmutación por error del almacenamiento al par de alta disponibilidad, póngase en contacto con el administrador o operador apropiado para reiniciar manualmente el nodo inactivo y solucionar el problema de conmutación por error del almacenamiento.

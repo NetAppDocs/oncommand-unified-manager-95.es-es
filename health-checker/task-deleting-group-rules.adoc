@@ -1,0 +1,35 @@
+---
+permalink: health-checker/task-deleting-group-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede eliminar una regla de grupo en OnCommand Unified Manager cuando ya no se necesite la regla de grupo. 
+---
+= Eliminando reglas de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede eliminar una regla de grupo en OnCommand Unified Manager cuando ya no se necesite la regla de grupo.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Cuando se elimina una regla de grupo, los objetos de almacenamiento asociados se eliminarán del grupo.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *grupos*.
+. En la ficha *Reglas de grupo*, seleccione la regla de grupo que desea eliminar y, a continuación, haga clic en *Eliminar*.
+. En el cuadro de diálogo *Advertencia*, confirme la eliminación haciendo clic en *Sí*.
+

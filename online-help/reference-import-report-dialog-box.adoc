@@ -1,0 +1,60 @@
+---
+permalink: online-help/reference-import-report-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Importar informe para importar informes de archivos .rptdesign. 
+---
+= Cuadro de diálogo Import Report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Importar informe para importar informes desde `.rptdesign` archivos.
+
+
+
+== Propiedades
+
+Puede importar un informe especificando el nombre del archivo de informe, el nombre del informe y la descripción del informe.
+
+* *Seleccione Archivo de informe*
++
+Le permite seleccionar el `.rptdesign` archivo que desea importar.
+
++
+[NOTE]
+====
+En Google Chrome, la `fakepath` de la `.rptdesign` se muestra el archivo. En Mozilla Firefox, solo `.rptdesign` se muestra el nombre del archivo. En Internet Explorer, la ruta completa del `.rptdesign` se muestra el archivo.
+
+====
+* *Nombre*
++
+Muestra el nombre del informe. Este campo está vacío de forma predeterminada. Puede introducir un nombre para el informe importado.
+
+* *Descripción*
++
+Especifica la descripción del informe importado. La descripción no puede superar los 150 caracteres.
+
+* *Seleccione el usuario de la base de datos con función de esquema de informes*
++
+Seleccione, o cree, un usuario de base de datos si va a importar informes desde el almacén de automatización de almacenamiento.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Importar*
++
+Valida el seleccionado `.rptdesign` e importa el informe.
+
+* *Cancelar*
++
+Cancela la operación de importación y cierra el cuadro de diálogo Importar informe.
+
+

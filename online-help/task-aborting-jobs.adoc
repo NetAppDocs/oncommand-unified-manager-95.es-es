@@ -1,0 +1,29 @@
+---
+permalink: online-help/task-aborting-jobs.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar la página Protection/Jobs para cancelar un trabajo si tarda demasiado en completarse, si encuentra demasiados errores o ya no es necesario. Sólo puede cancelar un trabajo si su estado y el tipo permitir. Puede anular cualquier trabajo en ejecución. 
+---
+= Anulación de trabajos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la página Protection/Jobs para cancelar un trabajo si tarda demasiado en completarse, si encuentra demasiados errores o ya no es necesario. Sólo puede cancelar un trabajo si su estado y el tipo permitir. Puede anular cualquier trabajo en ejecución.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Protección* > *trabajos*.
+. En la lista de trabajos, seleccione un trabajo y, a continuación, haga clic en *Anular*.
+. En el mensaje de confirmación, haga clic en *Sí* para anular el trabajo seleccionado.
+

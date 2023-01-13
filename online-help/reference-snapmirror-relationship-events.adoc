@@ -1,0 +1,145 @@
+---
+permalink: online-help/reference-snapmirror-relationship-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de relaciones de SnapMirror le proporcionan información sobre el estado de sus relaciones de SnapMirror para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de relaciones con SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de relaciones de SnapMirror le proporcionan información sobre el estado de sus relaciones de SnapMirror para poder supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Zona de impacto: Protección
+
+Un asterisco (*) identifica los eventos de EMS que se han convertido a eventos de Unified Manager.
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Replicación de mirror insalubre (ocumEvtSnapmirrorRelationshipUnheaded)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Advertencia
+
+
+
+ a| 
+Replicación de mirroring rota-off (ocumEvtSnapmirrorRelationshipStateBrokenoff)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Error al inicializar la replicación de reflejo (ocumEvtSnapmirrorRerelationshipInitializeFailed)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Error en la actualización de replicación de reflejo (ocumEvtSnapmirrorRelationship shipUpdateFailed)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Error de desfase de replicación de réplica (ocumEvtSnapMirrorRelationship shipLagError)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Aviso de desfase de replicación de réplica (ocumEvtSnapMirrorRelationship shillWarning)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Advertencia
+
+
+
+ a| 
+Error en la resincronización de replicación de reflejo (ocumEvtSnapmirrorRelationshipResyncFailed)
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+
+
+ a| 
+Replicación de réplica DeletedocumEvtSnapmirrorRelationshiped
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Advertencia
+
+
+
+ a| 
+Replicación síncrona fuera de sincronización *
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Advertencia
+
+
+
+ a| 
+Replicación síncrona restaurada *
+ a| 
+Evento
+ a| 
+Relación de SnapMirror
+ a| 
+Información
+
+
+
+ a| 
+Error en la resincronización automática de replicación síncrona *
+ a| 
+Riesgo
+ a| 
+Relación de SnapMirror
+ a| 
+Error
+
+|===

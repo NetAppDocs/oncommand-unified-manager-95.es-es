@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept-graphical-interface-and-navigational-paths.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager cuenta con una gran flexibilidad y permite realizar varias tareas de distintas formas. Existen muchas rutas de navegación que se detectarán cuando trabaje en Unified Manager. Aunque no se pueden mostrar todas las combinaciones posibles de navegaciones, debería estar familiarizado con algunos de los escenarios más comunes. 
+---
+= Interfaz gráfica y rutas de navegación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager cuenta con una gran flexibilidad y permite realizar varias tareas de distintas formas. Existen muchas rutas de navegación que se detectarán cuando trabaje en Unified Manager. Aunque no se pueden mostrar todas las combinaciones posibles de navegaciones, debería estar familiarizado con algunos de los escenarios más comunes.

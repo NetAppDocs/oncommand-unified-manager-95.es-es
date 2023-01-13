@@ -1,0 +1,72 @@
+---
+permalink: performance-checker/concept-understanding-events-from-adaptive-qos-policies-that-have-a-defined-block-size.html 
+sidebar: sidebar 
+keywords:  
+summary: Los grupos de políticas de calidad de servicio adaptativos escalan automáticamente el techo o el piso de rendimiento según el tamaño del volumen y mantienen la ratio de IOPS en TB a medida que cambie el tamaño del volumen. A partir de ONTAP 9.5, es posible especificar el tamaño de bloque en la política de calidad de servicio para aplicar de forma efectiva un umbral de Mbps al mismo tiempo. 
+---
+= Eventos de políticas de calidad de servicio adaptativas que tienen un tamaño de bloque definido
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los grupos de políticas de calidad de servicio adaptativos escalan automáticamente el techo o el piso de rendimiento según el tamaño del volumen y mantienen la ratio de IOPS en TB a medida que cambie el tamaño del volumen. A partir de ONTAP 9.5, es posible especificar el tamaño de bloque en la política de calidad de servicio para aplicar de forma efectiva un umbral de Mbps al mismo tiempo.
+
+Al asignar un umbral de IOPS en una política de calidad de servicio adaptativa, solo se establece un límite en el número de operaciones que se producen en cada carga de trabajo. Según el tamaño de bloque que se establece en el cliente que genera las cargas de trabajo, algunas IOPS incluyen muchos más datos y, por lo tanto, colocan una carga mucho más grande en los nodos que procesan las operaciones.
+
+El valor de Mbps para una carga de trabajo se genera con la siguiente fórmula:
+
+[listing]
+----
+MBps = (IOPS * Block Size) / 1000
+----
+Si la carga de trabajo tiene una media de 3,000 IOPS y el tamaño de bloque en el cliente se establece en 32 KB, los Mbps efectivos para esta carga de trabajo son 96. Si esta misma carga de trabajo tiene una media de 3,000 IOPS y el tamaño de bloque en el cliente se establece en 48 KB, los Mbps efectivos para esta carga de trabajo son 144. Puede ver que el nodo está procesando un 50 % más de datos cuando el tamaño de bloque es mayor.
+
+Echemos un vistazo a la siguiente política de calidad de servicio adaptativa que tiene un tamaño de bloque definido y cómo se activan los eventos en función del tamaño de bloque que se establece en el cliente.
+
+Cree una política y establezca el rendimiento máximo en 2,500 IOPS/TB con un tamaño de bloque de 32 KB. De este modo, el umbral de Mbps establece de manera efectiva en 80 Mbps ((2500 IOPS * 32 KB) / 1000) para un volumen con 1 TB de capacidad utilizada. Tenga en cuenta que Unified Manager genera un evento de advertencia cuando el valor de rendimiento es un 10 % inferior al umbral definido. Los eventos se generan en las siguientes situaciones:
+
+|===
+| Capacidad utilizada | El evento se genera cuando el rendimiento supera este número de ... 
+
+
+| IOPS | Mbps 
+
+
+ a| 
+1 TB
+ a| 
+2,250 000 IOPS
+
+
+
+ a| 
+72 Mbps
+ a| 
+2 TB
+
+
+
+ a| 
+4,500 000 IOPS
+ a| 
+144 Mbps
+
+
+
+ a| 
+5 TB
+ a| 
+11,250 000 IOPS
+
+|===
+Si el volumen utiliza 2 TB del espacio disponible, y las IOPS son 4,000, y el tamaño de bloque de calidad de servicio está configurado como 32 KB en el cliente, el rendimiento de Mbps es 128 Mbps ((4,000 IOPS * 32 KB) / 1000). No se genera ningún evento en este escenario porque tanto 4,000 IOPS como 128 Mbps están por debajo del umbral para un volumen que utiliza 2 TB de espacio.
+
+Si el volumen utiliza 2 TB del espacio disponible, y las IOPS son 4,000, y el tamaño de bloque de calidad de servicio está configurado como 64 KB en el cliente, el rendimiento de Mbps es de 256 Mbps ((4,000 IOPS * 64 KB) / 1000). En este caso, las 4,000 IOPS no generan ningún evento, pero el valor de Mbps de 256 Mbps está por encima del umbral de 144 Mbps y se genera un evento.
+
+Por esta razón, cuando se activa un evento basado en una infracción de Mbps para una política de QoS adaptativa que incluye el tamaño de bloque, se muestra un gráfico de Mbps en la sección Diagnóstico del sistema de la página de detalles evento. Si el evento se activa en función de una filtración de IOPS para la política de calidad de servicio adaptativa, se muestra un gráfico de IOPS en la sección System Diagnosis. Si se produce una infracción tanto para las IOPS como para los Mbps, recibirá dos eventos.
+
+Para obtener más información acerca del ajuste de la configuración de QoS, consulte la _ONTAP 9 Guía completa de supervisión del rendimiento_.
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-perf-mon/home.html["Guía completa de supervisión del rendimiento de ONTAP 9"]

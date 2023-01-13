@@ -1,0 +1,16 @@
+---
+permalink: online-help/concept-viewing-object-configuration-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Las páginas de información de los objetos, que se encuentran en la página de destino de cada objeto, muestran los valores de los atributos de configuración sin rendimiento de cada objeto de almacenamiento. Algunos de los atributos son la configuración física, mientras que otros atributos pueden afectar al rendimiento del objeto. 
+---
+= Visualización de información de configuración de objetos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las páginas de información del objeto, ubicadas en la página de destino de cada objeto, muestran los valores para los atributos de configuración sin rendimiento de cada objeto de almacenamiento. Algunos de los atributos son la configuración física, mientras que otros atributos pueden afectar al rendimiento del objeto.
+
+Por ejemplo, resulta útil conocer la cantidad de espacio disponible para un agregado o para un nodo. Saber la configuración de la velocidad de un puerto en concreto puede ayudarle a diagnosticar un problema de rendimiento.

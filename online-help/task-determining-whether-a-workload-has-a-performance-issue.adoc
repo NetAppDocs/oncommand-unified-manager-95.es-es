@@ -1,0 +1,52 @@
+---
+permalink: online-help/task-determining-whether-a-workload-has-a-performance-issue.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar Unified Manager para determinar si un evento de rendimiento detectado ha sido realmente causado por un problema de rendimiento en el clúster. El evento podría haber provocado un pico en la actividad, por ejemplo, que aumentó su tiempo de respuesta, pero ahora el tiempo de respuesta ha vuelto a sus niveles habituales. 
+---
+= Determinar si una carga de trabajo tiene un problema de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar Unified Manager para determinar si un evento de rendimiento detectado ha sido realmente causado por un problema de rendimiento en el clúster. El evento podría haber provocado un pico en la actividad, por ejemplo, que aumentó su tiempo de respuesta, pero ahora el tiempo de respuesta ha vuelto a sus niveles habituales.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber identificado el nombre del volumen, o el LUN asociado, que desea analizar.
+* Unified Manager debe haber recopilado y analizado un mínimo de cinco días de estadísticas de rendimiento del clúster.
+
+
+
+
+== Acerca de esta tarea
+
+Si desea ver la página de detalles Event, puede hacer clic en el enlace de nombre de un volumen para ir directamente a la página Performance/Volume Details.
+
+
+
+== Pasos
+
+. En la barra *Buscar*, escriba al menos los tres primeros caracteres del nombre del volumen.
++
+El nombre del volumen se muestra en los resultados de búsqueda.
+
+. Haga clic en el nombre del volumen.
++
+El volumen se muestra en la página Performance/Volume Details.
+
+. En el gráfico *datos históricos*, haga clic en *5d* para mostrar los últimos cinco días de datos históricos.
+. Revise el gráfico *latencia* para responder a las siguientes preguntas:
++
+** ¿Hay nuevos eventos de rendimiento?
+** ¿Existen eventos de rendimiento históricos que indiquen que el volumen ha tenido problemas en el pasado?
+** ¿Hay picos en el tiempo de respuesta, incluso si los picos se encuentran dentro del intervalo esperado?
+** ¿Ha habido cambios de configuración en el clúster que pudieran haber afectado el rendimiento? Si el tiempo de respuesta del volumen no muestra eventos de rendimiento, picos de actividad ni cambios de configuración recientes que puedan haber afectado el tiempo de respuesta, puede descartar el problema de rendimiento que está provocado por el clúster.
+
+
+

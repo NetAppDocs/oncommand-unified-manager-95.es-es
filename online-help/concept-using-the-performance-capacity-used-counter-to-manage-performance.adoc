@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-using-the-performance-capacity-used-counter-to-manage-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Por lo general, las organizaciones quieren operar con una capacidad de rendimiento utilizada por debajo de 100 para que los recursos se utilicen de forma eficiente al tiempo que se reserva cierta capacidad de rendimiento adicional para acomodar las demandas de periodo pico. Se pueden utilizar políticas de umbral para personalizar la fecha de envío de alertas de valores de capacidad utilizada de alto rendimiento. 
+---
+= Uso del contador de capacidad de rendimiento utilizada para gestionar el rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Por lo general, las organizaciones quieren operar con una capacidad de rendimiento utilizada por debajo de 100 para que los recursos se utilicen de forma eficiente al tiempo que se reserva cierta capacidad de rendimiento adicional para acomodar las demandas de periodo pico. Se pueden utilizar políticas de umbral para personalizar la fecha de envío de alertas de valores de capacidad utilizada de alto rendimiento.
+
+Puede establecer objetivos específicos según sus requisitos de rendimiento. Por ejemplo, las empresas de servicios financieros podrían reservar más capacidad de desempeño para garantizar la ejecución oportuna de las operaciones. Tal vez estas empresas quieran definir los umbrales de capacidad de rendimiento utilizada en el intervalo del 70-80 por ciento. Las empresas de fabricación con márgenes más pequeños pueden optar por reservar una menor capacidad de rendimiento si están dispuestas a arriesgar el rendimiento para gestionar mejor los costes DE TECNOLOGÍA. Estas empresas pueden definir umbrales de capacidad de rendimiento utilizados en el intervalo del 85-95 por ciento.
+
+Cuando el valor de la capacidad de rendimiento utilizada supera el porcentaje configurado en una política de umbral definida por el usuario, Unified Manager envía un correo electrónico de alerta y añade el evento a la página Event Inventory. De este modo, puede gestionar posibles problemas antes de que afecten al rendimiento. Estos eventos también se pueden utilizar como indicadores que se necesitan para mover la carga de trabajo y cambiar dentro de los nodos y agregados.

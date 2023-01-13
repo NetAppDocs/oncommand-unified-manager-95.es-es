@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-descriptions-of-the-object-inventory-performance-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: Las páginas de inventario de rendimiento se utilizan para ver un resumen de la información sobre el rendimiento de cada uno de los objetos de almacenamiento disponibles, como los clústeres, los agregados, los volúmenes, etc. Puede establecer un enlace a las páginas de detalles del objeto Performance para ver información detallada de un objeto determinado. 
+---
+= Las descripciones de las páginas de inventario Performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las páginas de inventario de rendimiento se utilizan para ver un resumen de la información sobre el rendimiento de cada uno de los objetos de almacenamiento disponibles, como los clústeres, los agregados, los volúmenes, etc. Puede establecer un enlace a las páginas de detalles del objeto Performance para ver información detallada de un objeto determinado.

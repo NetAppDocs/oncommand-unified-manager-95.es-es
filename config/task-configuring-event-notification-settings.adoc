@@ -1,0 +1,46 @@
+---
+permalink: config/task-configuring-event-notification-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible configurar Unified Manager para que envíe notificaciones de alerta cuando se genera un evento o cuando se asigna un evento a un usuario. Es posible configurar el servidor SMTP que se utiliza para enviar la alerta y se pueden configurar varios mecanismos de notificación; por ejemplo, las notificaciones de alerta se pueden enviar como correos electrónicos o capturas SNMP. 
+---
+= Configuración de los ajustes de notificación de eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar Unified Manager para que envíe notificaciones de alerta cuando se genera un evento o cuando se asigna un evento a un usuario. Puede configurar el servidor SMTP que se usa para enviar la alerta y se pueden configurar varios mecanismos de notificación; por ejemplo, las notificaciones de alerta se pueden enviar como correos electrónicos o capturas SNMP.
+
+
+
+== Antes de empezar
+
+Debe tener la siguiente información:
+
+* Dirección de correo electrónico desde la cual se envía la notificación de alertas
++
+La dirección de correo electrónico aparece en el campo «'de'» en las notificaciones de alerta enviadas. Si el correo electrónico no se puede entregar por cualquier motivo, esta dirección de correo electrónico también se utiliza como destinatario para el correo no entregable.
+
+* El nombre de host del servidor SMTP, así como el nombre de usuario y la contraseña para acceder al servidor
+* La versión SNMP, la dirección IP de destino de capturas, el puerto de capturas saliente y la comunidad para configurar la captura SNMP
+
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *Notificaciones* en el menú Configuración de la izquierda.
+. En la página *Configuración/Notificaciones*, configure los ajustes apropiados y haga clic en *Guardar*.
++
+*Notas:*
+
++
+** Si la dirección de origen está precargada con la dirección «'OnCommand@localhost.com'», debe cambiarla a una dirección de correo electrónico real y activa para asegurarse de que todas las notificaciones de correo electrónico se envían correctamente.
+** Si no se puede resolver el nombre de host del servidor SMTP, puede especificar la dirección IP (IPv4 o IPv6) del servidor SMTP en lugar del nombre de host.
+
+
+

@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-analyzing-performance-events.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede analizar los eventos de rendimiento para identificar cuándo se detectaron, si están activos \(nuevos o reconocidos\) o obsoletos, las cargas de trabajo y los componentes del clúster implicados y las opciones para resolver los eventos por su cuenta.' 
+---
+= Análisis de eventos de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede analizar los eventos de rendimiento para identificar cuándo se detectaron, si están activos (nuevos o reconocidos) o obsoletos, las cargas de trabajo y los componentes del clúster afectados, y las opciones para resolver los eventos por su cuenta.

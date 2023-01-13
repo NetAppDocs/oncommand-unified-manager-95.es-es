@@ -1,0 +1,86 @@
+---
+permalink: health-checker/task-adding-group-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede crear reglas de grupo para que un grupo añada objetos de almacenamiento de forma dinámica, como volúmenes, clústeres o máquinas virtuales de almacenamiento \(SVM\) al grupo. Debe configurar al menos un grupo de condiciones con al menos una condición para crear una regla de grupo.' 
+---
+= Agregando reglas de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear reglas de grupo para que un grupo añada objetos de almacenamiento de forma dinámica, como volúmenes, clústeres o máquinas virtuales de almacenamiento (SVM) al grupo. Debe configurar al menos un grupo de condiciones con al menos una condición para crear una regla de grupo.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Los objetos de almacenamiento que se supervisan actualmente se agregan tan pronto como se crea la regla de grupo. Los nuevos objetos sólo se agregan una vez completado el ciclo de supervisión.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *grupos*.
+. En la ficha *Reglas de grupo*, haga clic en *Agregar*.
+. En el cuadro de diálogo *Agregar regla de grupo*, especifique un nombre para la regla de grupo.
+. En el campo *Tipo de objeto de destino*, seleccione el tipo de objeto de almacenamiento que desea agrupar.
+. En el campo *Grupo*, seleccione el grupo requerido para el que desea crear reglas de grupo.
+. En la sección *Condiciones*, realice los siguientes pasos para crear una condición, un grupo de condiciones o ambos:
++
+|===
+| Para crear | Realice lo siguiente... 
+
+
+ a| 
+Una condición
+ a| 
+.. Seleccione un operando de la lista de operandos.
+.. Seleccione *contiene* o *es* como operador.
+.. Introduzca un valor o seleccione un valor de la lista disponible.
+
+
+
+
+ a| 
+Un grupo de condiciones
+ a| 
+.. Haga clic en *Agregar grupo de condiciones*
+.. Seleccione un operando de la lista de operandos.
+.. Seleccione *contiene* o *es* como operador.
+.. Introduzca un valor o seleccione un valor de la lista disponible.
+.. Haga clic en *Agregar condición* para crear más condiciones si es necesario y repita los pasos de la a a la d para cada condición.
+
+
+|===
+. Haga clic en *Agregar*.
+
+
+
+
+== Ejemplo para crear una regla de grupo
+
+Realice los siguientes pasos en el cuadro de diálogo Agregar regla de grupo para crear una regla de grupo, incluida la configuración de una condición y la adición de un grupo de condiciones:
+
+. Especifique un nombre para la regla de grupo.
+. Seleccione el tipo de objeto como máquina virtual de almacenamiento (SVM).
+. Seleccione un grupo de la lista de grupos.
+. En la sección Condiciones, seleccione *Nombre de objeto* como operando.
+. Seleccione *contiene* como operador.
+. Introduzca el valor como `svm_data`.
+. Haga clic en *Agregar grupo de condiciones*.
+. Seleccione *Nombre de objeto* como operando.
+. Seleccione *contiene* como operador.
+. Introduzca el valor como `vol`.
+. Haga clic en *Agregar condición*.
+. Repita los pasos del 8 al 10 seleccionando *prioridad de datos* como operando en el paso 8, *is* como operador en el paso 9 y *crítico* como valor en el paso 10.
+. Haga clic en *Agregar* para crear la condición para la regla de grupo.
+

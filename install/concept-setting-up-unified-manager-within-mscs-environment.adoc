@@ -1,0 +1,18 @@
+---
+permalink: install/concept-setting-up-unified-manager-within-mscs-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar alta disponibilidad para Unified Manager mediante clustering de conmutación al nodo de respaldo. La configuración de alta disponibilidad ofrece la capacidad de recuperación tras fallos. 
+---
+= Configuración de Unified Manager en un entorno de clustering de conmutación al nodo de respaldo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar alta disponibilidad para Unified Manager mediante clustering de conmutación al nodo de respaldo. La configuración de alta disponibilidad ofrece la capacidad de recuperación tras fallos.
+
+En esta configuración, solo un nodo posee todos los recursos de clúster. Cuando uno de los nodos falla o cualquiera de los servicios configurados no puede conectarse, el servicio del clúster de conmutación por error reconoce este evento y transfiere inmediatamente el control al otro nodo. El segundo nodo de la configuración se activa y empieza a proporcionar servicios. El proceso de conmutación por error es automático y no es necesario realizar ninguna acción.
+
+Un clúster de conmutación al nodo de respaldo configurado con el servidor de Unified Manager consta de dos nodos, cada nodo que ejecuta la misma versión del servidor de Unified Manager. Todos los datos del servidor de Unified Manager deben configurarse para acceder desde un disco de datos compartido.

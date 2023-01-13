@@ -1,0 +1,34 @@
+---
+permalink: online-help/task-customizing-the-events-report-to-display-events-with-a-critical-severity-type.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible personalizar el informe Events para mostrar los eventos filtrados según su tipo de gravedad y por los eventos que no se han resuelto durante el periodo de tiempo más largo. 
+---
+= Personalización del informe Events para mostrar eventos con un tipo de gravedad crítica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar el informe Events para mostrar los eventos filtrados según su tipo de gravedad y por los eventos que no se han resuelto durante el periodo de tiempo más largo.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para filtrar eventos con tipo de gravedad crítica, haga clic en la columna *Estado* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *crítico*.
+. Haga clic en *Aceptar*.
+. Para ordenar los eventos que no se resuelven durante el período de tiempo más largo, haga clic en la columna *días pendientes* y haga clic en la image:../media/click-to-see-menu.gif[""] .
+. Seleccione *filtro* > *Arriba/abajo N*.
+. En el cuadro de diálogo *Arriba/abajo N*, seleccione *Arriba N* en el campo *filtro* e introduzca un valor en el campo de texto.
+. Haga clic en *Aceptar*.
+

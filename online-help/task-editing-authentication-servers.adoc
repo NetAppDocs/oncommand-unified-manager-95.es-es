@@ -1,0 +1,31 @@
+---
+permalink: online-help/task-editing-authentication-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible cambiar el puerto que utiliza Unified Manager Server para comunicarse con el servidor de autenticación. 
+---
+= Editar servidores de autenticación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible cambiar el puerto que utiliza Unified Manager Server para comunicarse con el servidor de autenticación.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *autenticación* en el menú Configuración de la izquierda.
+. En la página *Configuración/autenticación*, active la casilla *Desactivar búsqueda de grupo anidado*.
+. En el área *servidores de autenticación*, seleccione el servidor de autenticación que desea editar y, a continuación, haga clic en *Editar*.
+. En el cuadro de diálogo *Editar servidor de autenticación*, edite los detalles del puerto.
+. Haga clic en *Guardar*.
+

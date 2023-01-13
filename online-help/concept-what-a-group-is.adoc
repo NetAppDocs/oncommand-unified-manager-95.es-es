@@ -1,0 +1,22 @@
+---
+permalink: online-help/concept-what-a-group-is.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Un grupo es una colección dinámica de objetos de almacenamiento heterogéneos \(clústeres, SVM o volúmenes\). Es posible crear grupos en Unified Manager para gestionar de forma sencilla un conjunto de objetos de almacenamiento. Los miembros de un grupo pueden cambiar, según los objetos de almacenamiento supervisados por Unified Manager en un momento específico.' 
+---
+= Qué es un grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un grupo es una colección dinámica de objetos de almacenamiento heterogéneos (clústeres, SVM o volúmenes). Es posible crear grupos en Unified Manager para gestionar de forma sencilla un conjunto de objetos de almacenamiento. Los miembros de un grupo pueden cambiar, según los objetos de almacenamiento supervisados por Unified Manager en un momento específico.
+
+* Cada grupo tiene un nombre único.
+* Debe configurar un mínimo de una regla de grupo para cada grupo.
+* Puede asociar un grupo con más de una regla de grupo.
+* Cada grupo puede incluir varios tipos de objetos de almacenamiento, como clústeres, SVM o volúmenes.
+* Los objetos de almacenamiento se añaden de forma dinámica a un grupo en función de cuándo se crea una regla de grupo o cuando Unified Manager completa un ciclo de supervisión.
+* Es posible aplicar acciones simultáneamente en todos los objetos de almacenamiento de un grupo, como configurar umbrales para los volúmenes.
+

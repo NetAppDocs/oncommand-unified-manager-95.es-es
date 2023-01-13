@@ -1,0 +1,39 @@
+---
+permalink: online-help/task-configuring-protection-destination-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar opciones de eficiencia de destino como la deduplicación, la compresión, el crecimiento automático y la garantía de espacio en un destino de protección con el cuadro de diálogo Advanced Destination Settings. Esta configuración se usa cuando se desea maximizar el uso de espacio en un volumen de destino o secundario. 
+---
+= Configurar los ajustes de eficiencia de destino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar opciones de eficiencia de destino como la deduplicación, la compresión, el crecimiento automático y la garantía de espacio en un destino de protección con el cuadro de diálogo Advanced Destination Settings. Esta configuración se usa cuando se desea maximizar el uso de espacio en un volumen de destino o secundario.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+De forma predeterminada, la configuración de eficiencia coincide con la del volumen de origen, excepto la configuración de compresión de una relación SnapVault, que se deshabilita de forma predeterminada.
+
+
+
+== Pasos
+
+. Haga clic en la ficha *SnapMirror* o en la ficha *SnapVault* del cuadro de diálogo *Configurar protección*, según el tipo de relación que esté configurando.
+. Haga clic en *Avanzado* en el área *Información de destino*.
++
+Se abre el cuadro de diálogo Advanced Destination Settings.
+
+. Habilitar o deshabilitar la configuración de eficiencia para la deduplicación, la compresión, el crecimiento automático y la garantía de espacio, según sea necesario.
+. Haga clic en *aplicar* para guardar las selecciones y volver al cuadro de diálogo *Configurar protección*.
+

@@ -1,0 +1,45 @@
+---
+permalink: online-help/task-scheduling-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede programar los informes desde la página de detalles del informe y enviar por correo electrónico los informes programados a uno o más destinatarios en un formato determinado a una frecuencia específica. Por ejemplo, puede programar el envío de un informe como correo electrónico, en formato PDF, todos los lunes. 
+---
+= Programación de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede programar los informes desde la página de detalles del informe y enviar por correo electrónico los informes programados a uno o más destinatarios en un formato determinado a una frecuencia específica. Por ejemplo, puede programar el envío de un informe como correo electrónico, en formato PDF, todos los lunes.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Informes* y, a continuación, haga clic en *Ejecutar informe* para el informe que desee.
++
+Se mostrará la página de detalles Report.
+
+. Haga clic en *acciones* > *Informe de programa*.
+. En el cuadro de diálogo *Informe de horario*, seleccione uno de los horarios preferidos para el informe:
++
+|===
+| Si desea... | Realice lo siguiente... 
+
+
+ a| 
+Seleccione una programación de la lista existente de programaciones
+ a| 
+Haga clic en *utilizar programación existente* y seleccione la programación.
+
+
+
+ a| 
+Cree una nueva programación
+ a| 
+Haga clic en *Crear nueva programación* y, a continuación, escriba el nombre de la programación, especifique la dirección de correo electrónico, seleccione el formato y la frecuencia del informe e introduzca la hora o el día en que desea que se ejecute el informe. Puede especificar una o más direcciones de correo electrónico separadas por comas. La opción _PDF_ se selecciona como formato de informe predeterminado. La opción _Hourly_ se selecciona como la frecuencia predeterminada.
+
+|===
+. Haga clic en *Programación*.
+

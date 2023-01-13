@@ -1,0 +1,50 @@
+---
+permalink: online-help/reference-database-backup-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Management/Database Backup muestra una lista de backups creados por Unified Manager y proporciona información sobre el nombre, el tamaño, el tiempo de creación y la programación del backup. 
+---
+= Página Management/Database Backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Management/Database Backup muestra una lista de backups creados por Unified Manager y proporciona información sobre el nombre, el tamaño, el tiempo de creación y la programación del backup.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Botones de comando
+
+* *Acciones*
++
+Muestra el cuadro de diálogo Database Backup Settings, que permite especificar una ruta de backup, un número de retención y una programación de backup.
+
+
+
+
+
+== Vista de lista
+
+La vista de lista muestra, en formato de tabla, información sobre los backups creados por Unified Manager. Puede utilizar los filtros de columnas para personalizar los datos que se muestran.
+
+* *Nombre*
++
+Muestra el nombre del backup seleccionado.
+
+* *Tamaño*
++
+Muestra el tamaño del backup seleccionado.
+
+* *Tiempo de creación*
++
+Muestra la fecha y hora de creación de la copia de seguridad seleccionada.
+
+* *Horario*
++
+Muestra el estado de la operación de backup. También indica si es un backup programado o no.
+
+

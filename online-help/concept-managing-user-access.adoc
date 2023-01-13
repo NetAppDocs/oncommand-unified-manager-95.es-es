@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-managing-user-access.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear roles y asignar funcionalidades para controlar el acceso de los usuarios a los objetos de clúster seleccionados. Es posible identificar los usuarios que tienen las capacidades necesarias para acceder a los objetos seleccionados dentro de un clúster. Solo se proporciona acceso a estos usuarios para gestionar los objetos del clúster. 
+---
+= Gestión del acceso de usuarios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear roles y asignar funcionalidades para controlar el acceso de los usuarios a los objetos de clúster seleccionados. Es posible identificar los usuarios que tienen las capacidades necesarias para acceder a los objetos seleccionados dentro de un clúster. Solo se proporciona acceso a estos usuarios para gestionar los objetos del clúster.

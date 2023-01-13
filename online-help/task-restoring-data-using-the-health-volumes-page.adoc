@@ -1,0 +1,54 @@
+---
+permalink: online-help/task-restoring-data-using-the-health-volumes-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible restaurar archivos, directorios o un volumen entero sobrescritos o eliminados de una copia Snapshot con la función de restauración en la página del inventario Estado/volúmenes. 
+---
+= Restaurar datos mediante la página del inventario Health/Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible restaurar archivos, directorios o un volumen entero sobrescritos o eliminados de una copia Snapshot con la función de restauración en la página del inventario Estado/volúmenes.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+No puede restaurar flujos de archivos NTFS.
+
+La opción de restauración no está disponible si:
+
+* El ID de volumen es desconocido: Por ejemplo, cuando se mantiene una relación de interconexión de clústeres y el clúster de destino todavía no se detectó.
+* El volumen es un volumen FlexGroup.
+* El volumen está configurado para la replicación síncrona de SnapMirror.
+
+
+
+
+== Pasos
+
+. En la página de inventario *Health/Volumes*, seleccione el volumen desde el que desea restaurar los datos.
+. En la barra de herramientas, haga clic en *Restaurar*.
++
+Aparece el cuadro de diálogo Restaurar.
+
+. Seleccione el volumen y la copia Snapshot de los que desea restaurar datos si es diferente de la predeterminada.
+. Seleccione los elementos que desea restaurar.
++
+Es posible restaurar todo el volumen, o bien especificar carpetas y archivos que se desean restaurar.
+
+. Seleccione la ubicación a la que desea restaurar los elementos seleccionados; *ubicación original* o *ubicación alternativa*.
+. Haga clic en *Restaurar*.
++
+Se inicia el proceso de restauración.
+
+

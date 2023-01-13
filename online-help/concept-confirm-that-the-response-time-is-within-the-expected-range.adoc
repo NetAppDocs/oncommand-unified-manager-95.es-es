@@ -1,0 +1,16 @@
+---
+permalink: online-help/concept-confirm-that-the-response-time-is-within-the-expected-range.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Cuando un componente de clúster es objeto de disputa, es posible que las cargas de trabajo de volúmenes que lo usan hayan reducido el tiempo de respuesta \(latencia\). Es posible revisar la latencia de cada carga de trabajo víctima en el componente en disputa para confirmar que la latencia real está dentro del rango esperado. También puede hacer clic en el nombre de un volumen para ver los datos históricos del volumen.' 
+---
+= Confirmación de que la latencia se encuentra dentro del rango esperado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando un componente de clúster es objeto de disputa, es posible que las cargas de trabajo de volúmenes que lo utilizan hayan reducido el tiempo de respuesta (latencia). Es posible revisar la latencia de cada carga de trabajo víctima en el componente en disputa para confirmar que la latencia real está dentro del rango esperado. También puede hacer clic en el nombre de un volumen para ver los datos históricos del volumen.
+
+Si el evento de rendimiento está en estado obsoleto, es posible que la latencia de cada víctima involucrada en el evento haya regresado dentro de su rango esperado.

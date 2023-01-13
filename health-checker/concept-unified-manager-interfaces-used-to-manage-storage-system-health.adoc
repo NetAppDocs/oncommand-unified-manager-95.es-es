@@ -1,0 +1,32 @@
+---
+permalink: health-checker/concept-unified-manager-interfaces-used-to-manage-storage-system-health.html 
+sidebar: sidebar 
+keywords:  
+summary: En esta sección se incluye información acerca de las dos interfaces de usuario que proporciona OnCommand Unified Manager para solucionar problemas de capacidad, disponibilidad y protección del almacenamiento de datos. Las dos IU son la interfaz de usuario web de Unified Manager y la consola de mantenimiento. 
+---
+= Las interfaces de Unified Manager que se utilizan para gestionar el estado del sistema de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En esta sección se incluye información acerca de las dos interfaces de usuario que proporciona OnCommand Unified Manager para solucionar problemas de capacidad, disponibilidad y protección del almacenamiento de datos. Las dos IU son la interfaz de usuario web de Unified Manager y la consola de mantenimiento.
+
+Si desea utilizar las funciones de protección en Unified Manager, también debe instalar y configurar OnCommand Workflow Automation (WFA).
+
+
+
+== Interfaz de usuario web de Unified Manager
+
+La interfaz de usuario web de Unified Manager permite a un administrador supervisar y solucionar los problemas de los clústeres relacionados con la capacidad de almacenamiento de datos, la disponibilidad y la protección.
+
+En esta sección se describen algunos flujos de trabajo comunes que un administrador puede seguir para solucionar problemas de capacidad de almacenamiento, disponibilidad de datos o protección que se muestran en la interfaz de usuario web de Unified Manager.
+
+
+
+== Consola de mantenimiento
+
+La consola de mantenimiento permite a un administrador supervisar, diagnosticar y solucionar problemas del sistema operativo, problemas de actualización de la versión, problemas de acceso del usuario y problemas de red relacionados con el servidor de Unified Manager mismo. Si la interfaz de usuario web de Unified Manager no está disponible, la consola de mantenimiento es el único formato de acceso a Unified Manager.
+
+En esta sección se proporcionan instrucciones para acceder a la consola de mantenimiento y utilizarla para resolver los problemas relacionados con el funcionamiento del servidor de Unified Manager.

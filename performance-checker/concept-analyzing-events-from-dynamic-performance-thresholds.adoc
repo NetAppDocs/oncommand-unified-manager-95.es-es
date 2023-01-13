@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept-analyzing-events-from-dynamic-performance-thresholds.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Los eventos generados a partir de umbrales dinámicos indican que el tiempo de respuesta real \(latencia\) de una carga de trabajo es demasiado alto o demasiado bajo en comparación con el intervalo de tiempo de respuesta esperado. La página de detalles Event se utiliza para analizar el evento de rendimiento y realizar las acciones correctivas necesarias para devolver el rendimiento a la normalidad.' 
+---
+= Analizar eventos de umbrales dinámicos de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos generados a partir de los umbrales dinámicos indican que el tiempo de respuesta real (latencia) de una carga de trabajo es demasiado alto o demasiado bajo, en comparación con el intervalo de tiempo de respuesta esperado. La página de detalles Event se utiliza para analizar el evento de rendimiento y realizar las acciones correctivas necesarias para devolver el rendimiento a la normalidad.
+
+[NOTE]
+====
+Los umbrales de rendimiento dinámico no están habilitados en sistemas Cloud Volumes ONTAP, ONTAP Edge o ONTAP Select.
+
+====

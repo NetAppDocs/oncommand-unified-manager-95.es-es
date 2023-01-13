@@ -1,0 +1,26 @@
+---
+permalink: online-help/concept-what-a-storage-class-is.html 
+sidebar: sidebar 
+keywords:  
+summary: Una clase de almacenamiento es una definición de características de agregado y configuración de volúmenes. Puede definir diferentes clases de almacenamiento y asociar una o varias clases de almacenamiento a una instancia de Infinite Volume. Debe utilizar OnCommand Workflow Automation para definir flujos de trabajo para los requisitos de clase de almacenamiento y asignar clases de almacenamiento a Infinite Volumes. 
+---
+= Qué es una clase de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una clase de almacenamiento es una definición de características de agregado y configuración de volúmenes. Puede definir diferentes clases de almacenamiento y asociar una o varias clases de almacenamiento a una instancia de Infinite Volume. Debe utilizar OnCommand Workflow Automation para definir flujos de trabajo para los requisitos de clase de almacenamiento y asignar clases de almacenamiento a Infinite Volumes.
+
+Es posible definir las siguientes características para una clase de almacenamiento:
+
+* Las características de los agregados, como el tipo de discos que se van a utilizar
+* La configuración de volúmenes, como la compresión, la deduplicación y la garantía de volumen
+
+
+Por ejemplo, puede definir una clase de almacenamiento que solo utilice agregados con discos SAS y la siguiente configuración de volumen: Thin provisioning con compresión y deduplicación habilitadas.
+
+En el siguiente diagrama se muestra un Infinite Volume que abarca varios nodos y se utilizan las siguientes clases de almacenamiento: Gold, Silver y Bronze. Cada clase de almacenamiento puede abarcar dos o más nodos en un Infinite Volume. En el diagrama también se ilustra la ubicación de los componentes de datos en cada clase de almacenamiento.
+
+image::../media/infinite-volume-with-storage-classes.gif[Este gráfico se describe con el texto circundante]

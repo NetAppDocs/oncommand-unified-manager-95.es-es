@@ -1,0 +1,45 @@
+---
+permalink: health-checker/task-configuring-global-aggregate-health-threshold-values.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar valores de umbral de estado global para todos los agregados para realizar un seguimiento de cualquier incumplimiento de umbral. Se generan los eventos adecuados para incumplimiento de umbrales y puede tomar medidas preventivas basadas en estos eventos. Puede configurar los valores globales basándose en la configuración de prácticas recomendadas para los umbrales que se aplican a todos los agregados supervisados. 
+---
+= Configuración de los valores de umbral de estado globales del agregado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar valores de umbral de estado global para todos los agregados para realizar un seguimiento de cualquier incumplimiento de umbral. Se generan los eventos adecuados para incumplimiento de umbrales y puede tomar medidas preventivas basadas en estos eventos. Puede configurar los valores globales basándose en la configuración de prácticas recomendadas para los umbrales que se aplican a todos los agregados supervisados.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Al configurar las opciones globalmente, se modifican los valores predeterminados de los objetos. Sin embargo, si los valores predeterminados se han cambiado a nivel de objeto, los valores globales no se modifican.
+
+Las opciones de umbral tienen valores predeterminados para una mejor supervisión, sin embargo, puede cambiar los valores para adaptarlos a los requisitos de su entorno.
+
+Cuando se habilita la opción Autofila en los volúmenes que residen en el agregado, los umbrales de capacidad del agregado se consideran sin infracción en función del tamaño máximo del volumen establecido por el crecimiento automático, no según el tamaño del volumen original.
+
+[NOTE]
+====
+Los valores de umbral de estado no se aplican al agregado raíz del nodo.
+
+====
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Configuración* > *umbrales de estado*.
+. En la página *Configuración/umbrales de estado*, haga clic en *agregados*.
+. Configure los valores de umbral adecuados para la capacidad, el crecimiento y las copias Snapshot.
+. Haga clic en *Guardar*.
+

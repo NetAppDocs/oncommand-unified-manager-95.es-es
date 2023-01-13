@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-understanding-rules-and-data-policy.html 
+sidebar: sidebar 
+keywords:  
+summary: Comprender los conceptos sobre las reglas y las políticas de datos le ayuda a gestionar sus Infinite Volumes de forma eficiente. 
+---
+= Comprender las reglas y la política de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Comprender los conceptos sobre las reglas y las políticas de datos le ayuda a gestionar sus Infinite Volumes de forma eficiente.

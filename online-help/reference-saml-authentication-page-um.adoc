@@ -1,0 +1,58 @@
+---
+permalink: online-help/reference-saml-authentication-page-um.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede usar la página autenticación de SAML para configurar Unified Manager para autenticar usuarios remotos mediante SAML a través de un proveedor de identidad seguro \(IDP\) antes de que puedan iniciar sesión en la interfaz de usuario web de Unified Manager.' 
+---
+= Página autenticación SAML
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible usar la página autenticación de SAML para configurar Unified Manager con el fin de autenticar usuarios remotos mediante SAML a través de un proveedor de identidad seguro (IDP) para que puedan iniciar sesión en la interfaz de usuario web de Unified Manager.
+
+* Debe tener el rol de administrador de OnCommand para crear o modificar la configuración de SAML.
+* Debe haber configurado la autenticación remota.
+* Debe haber configurado al menos un usuario remoto o un grupo remoto.
+
+
+Después de configurar la autenticación remota y los usuarios remotos, puede seleccionar la casilla de comprobación Habilitar autenticación SAML para habilitar la autenticación mediante un proveedor de identidades seguro.
+
+* *URI de IDP*
++
+El URI para acceder al IDP desde el servidor de Unified Manager. A continuación se enumeran los URI de ejemplo.
+
++
+URI de ejemplo de ADFS:
+
++
+`+https://win2016-dc.ntap2016.local/federationmetadata/2007-06/federationmetadata.xml+`
+
++
+Ejemplo de URI de Shibboleth:
+
++
+`+https://centos7.ntap2016.local/idp/shibboleth+`
+
+* *Metadatos IDP*
++
+Los metadatos de IDP tienen formato XML.
+
++
+Si se puede acceder a la URL de IDP desde el servidor de Unified Manager, puede hacer clic en el botón *Fetch IDP Metadata* para rellenar este campo.
+
+* *Sistema host (FQDN)*
++
+El nombre de dominio completo del sistema host de Unified Manager, tal como se define durante la instalación. Puede cambiar este valor si es necesario.
+
+* *URI de host*
++
+El URI para acceder al sistema host de Unified Manager desde el IDP.
+
+* *Metadatos del host*
++
+Los metadatos del sistema host en formato XML.
+
+

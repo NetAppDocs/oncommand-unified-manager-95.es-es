@@ -1,0 +1,55 @@
+---
+permalink: online-help/reference-scheduled-reports-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Reports permite ver información detallada sobre los informes que genera. Puede buscar un informe específico, guardar un informe y eliminarlo. También puede programar, compartir e importar un informe. 
+---
+= Informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Reports permite ver información detallada sobre los informes que genera. Puede buscar un informe específico, guardar un informe y eliminarlo. También puede programar, compartir e importar un informe.
+
+La página Informes muestra los grupos de informes clasificados sobre los que puede obtener detalles específicos del informe. De forma predeterminada, los grupos de informes se expanden para mostrar los tipos de informes, una descripción general de los informes y vínculos que permiten personalizar los informes. Sólo se puede ver un informe a la vez. Puede hacer clic en el botón *Ejecutar informe* para ver un informe de un grupo específico de informes.
+
+[NOTE]
+====
+En un lanzamiento futuro, la implementación de la programación y la generación de informes desde la página Reports queda obsoleta. Puede extraer los datos de estado y rendimiento de Unified Manager mediante los siguientes métodos adicionales:
+
+* Extrayendo datos directamente de las páginas de cuadrícula de la GUI
+* Uso de Open Database para acceder a todos los objetos disponibles
+* Ejecutar las API DE REST de Unified Manager para obtener la información que desea revisar
+
+
+====
+A continuación se muestra una lista de grupos de informes y tipos de informes que se muestran en la página Informes:
+
+* Informes de aprovechamiento de la capacidad
++
+** Resumen del almacenamiento
+** Utilización y capacidad de agregados
+** Capacidad de volumen y utilización
+** Capacidad y uso de qtrees
+
+
+* Informes operativos: Eventos
+* Informes de inventario
++
+** Inventario de clúster
+** Exportaciones NFS
+** Inventario de SVM
+
+
+* Informes importados
+* Informes de protección de datos
++
+** Configuración de la protección de datos de volúmenes
+** Inventario de relaciones de volumen
+** Estado de transferencia de volumen (histórico)
+** Tasa de transferencia de volumen (histórica)
+
+
+

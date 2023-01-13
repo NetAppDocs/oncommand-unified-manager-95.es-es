@@ -1,0 +1,60 @@
+---
+permalink: online-help/reference-event-setup-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Configuración/Administrar eventos muestra la lista de eventos que están desactivados y proporciona información como el tipo de objeto asociado y la gravedad del evento. También es posible realizar tareas como deshabilitar o habilitar eventos de forma global. 
+---
+= Página Configuration/Manage Events
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Configuración/Administrar eventos muestra la lista de eventos que están desactivados y proporciona información como el tipo de objeto asociado y la gravedad del evento. También es posible realizar tareas como deshabilitar o habilitar eventos de forma global.
+
+Solo puede acceder a esta página si tiene el rol de administrador de OnCommand o de administrador de almacenamiento.
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas para los eventos seleccionados:
+
+* *Desactivar*
++
+Abre el cuadro de diálogo Deshabilitar eventos, que se puede utilizar para deshabilitar eventos.
+
+* *Activar*
++
+Activa los eventos seleccionados que ha elegido desactivar anteriormente.
+
+* *Suscríbete a eventos EMS*
++
+Inicia el cuadro de diálogo Subscribe to EMS Events, que permite suscribirse para recibir eventos específicos del sistema de gestión de eventos (EMS) desde los clústeres que supervisa. EMS recopila información sobre los eventos que se producen en el clúster. Cuando se recibe una notificación para un evento de EMS suscrito, se genera un evento de Unified Manager con la gravedad correspondiente.
+
+* *Ajustes de retención de sucesos*
++
+Inicia el cuadro de diálogo Event Retention Settings, que permite especificar el período de retención después del cual la información, los eventos resueltos y los obsoletos se quitan del servidor de gestión. El valor de retención predeterminado es de 180 días.
+
+
+
+
+
+== Vista de lista
+
+La vista Lista muestra (en formato tabular) información sobre los eventos que están desactivados. Puede utilizar los filtros de columnas para personalizar los datos que se muestran.
+
+* *Evento*
++
+Muestra el nombre del evento que está desactivado.
+
+* *Gravedad*
++
+Muestra la gravedad del evento. La gravedad puede ser crítica, error, advertencia o información.
+
+* *Tipo de fuente*
++
+Muestra el tipo de origen para el que se genera el evento.
+
+

@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-what-quota-limits-are.html 
+sidebar: sidebar 
+keywords:  
+summary: Los límites de cuota de usuario son valores que el servidor de Unified Manager utiliza para evaluar si el consumo de espacio por parte de un usuario está cerca del límite o ha alcanzado el límite establecido por la cuota del usuario. Si se cruza el límite blando o se alcanza el límite rígido, el servidor de Unified Manager genera eventos de cuota de usuario. 
+---
+= Qué límites de cuota son
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los límites de cuota de usuario son valores que el servidor de Unified Manager utiliza para evaluar si el consumo de espacio por parte de un usuario está cerca del límite o ha alcanzado el límite establecido por la cuota del usuario. Si se cruza el límite blando o se alcanza el límite rígido, el servidor de Unified Manager genera eventos de cuota de usuario.
+
+De forma predeterminada, el servidor de Unified Manager envía un mensaje de correo electrónico de notificación a los usuarios que han superado el límite de software de cuota o han alcanzado el límite duro de cuota y para los que se han configurado eventos de cuota de usuario. El administrador de OnCommand puede configurar alertas que notifiquen a los destinatarios especificados los eventos de cuota de usuario o grupo de usuarios.
+
+Puede especificar los límites de cuota mediante OnCommand System Manager o la interfaz de línea de comandos de ONTAP.

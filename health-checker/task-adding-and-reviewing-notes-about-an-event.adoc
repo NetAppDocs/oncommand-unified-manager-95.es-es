@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task-adding-and-reviewing-notes-about-an-event.html 
+sidebar: sidebar 
+keywords:  
+summary: Al tratar los eventos, puede agregar información sobre cómo se trata el problema a través del área Notas y actualizaciones de la página de detalles Event. Esta información puede habilitar a otro usuario asignado para que aborde el evento. También puede ver la información que ha agregado el usuario que abordó por última vez un evento, según la Marca de hora reciente. 
+---
+= Agregar y revisar notas sobre un evento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Al tratar los eventos, puede agregar información sobre cómo se trata el problema a través del área Notas y actualizaciones de la página de detalles Event. Esta información puede habilitar a otro usuario asignado para que aborde el evento. También puede ver la información que ha agregado el usuario que abordó por última vez un evento, según la Marca de hora reciente.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Eventos*.
+. En la página de inventario *Eventos*, haga clic en el evento para el que desea agregar la información relacionada con el evento.
+. En la página de detalles *Event*, añada la información necesaria en el área *Notes and Updates*.
+. Haga clic en *Post*.
+

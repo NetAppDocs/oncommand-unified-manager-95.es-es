@@ -1,0 +1,56 @@
+---
+permalink: online-help/reference-reorder-annotation-rule-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo reorganizar regla de anotación para especificar el orden en el que desea que se apliquen las reglas de anotación a los objetos de almacenamiento. 
+---
+= Cuadro de diálogo reorganizar regla de anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo reorganizar regla de anotación para especificar el orden en el que desea que se apliquen las reglas de anotación a los objetos de almacenamiento.
+
+
+
+== Botones de comando
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Guardar*
++
+Guarda los cambios realizados en las reglas de anotación y cierra el cuadro de diálogo reorganizar regla de anotación.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo reorganizar regla de anotación sin guardar los cambios realizados.
+
+
+
+
+
+== Vista de lista
+
+* *Rango*
++
+Muestra el orden en que se aplicarán las reglas de anotación a los objetos de almacenamiento.
+
+* *Nombre*
++
+Muestra el nombre de la regla de anotación.
+
+* *Tipo de objeto de destino*
++
+Muestra el tipo de objeto de almacenamiento al que se aplica la regla de anotación.
+
+* *Anotación asociada*
++
+Muestra el nombre de la anotación que se aplica al objeto de almacenamiento.
+
+* *Valor de anotación asociada*
++
+Muestra el valor de anotación del objeto de almacenamiento.
+
+

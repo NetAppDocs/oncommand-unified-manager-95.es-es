@@ -1,0 +1,79 @@
+---
+permalink: online-help/reference-aggregate-performance-information-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilice la página Performance/Aggregate Information para ver una lista de los atributos físicos y lógicos del agregado. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento. 
+---
+= Página Performance/Aggregate Information
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice la página Performance/Aggregate Information para ver una lista de los atributos físicos y lógicos del agregado. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento.
+
+
+
+== Atributos del agregado
+
+* *Tipo agregado*
++
+El tipo de agregado:
+
++
+** HDD
+** Híbrido
++
+Combina HDD y SSD, pero Flash Pool no se ha habilitado.
+
+** Híbrido (Flash Pool)
++
+Combina HDD y SSD y Flash Pool se ha habilitado.
+
+** SSD
+** SSD (FabricPool)
++
+Combina SSD y un nivel de cloud
+
+** VMDisk (SDS)
++
+Discos virtuales en una máquina virtual
+
+** VMDisk (FabricPool)
++
+Combina discos virtuales y un nivel de cloud
+
+** LUN (FlexArray)
+
+
+* *Cluster*
++
+El nombre del clúster al que pertenece el agregado. Puede hacer clic en el nombre para mostrar los detalles del clúster en la página Performance/Cluster Explorer.
+
+* *Nodo*
++
+Nombre del nodo al que pertenecen los discos del agregado. Puede hacer clic en el nombre para mostrar los detalles del nodo en la página Performance/Node Explorer.
+
+* *Flash Pool*
++
+Si se trata de un agregado de Flash Pool: Sí o no
+
++
+Un agregado de Flash Pool es un agregado híbrido que consta de SSD y HDD.
+
+* *FabricPool*
++
+Si se trata de un agregado de FabricPool: Sí o no
+
++
+Un agregado de FabricPool es un agregado que consta de SSD y un nivel de cloud.
+
+* *Informes de datos inactivos*
++
+Si la funcionalidad de generación de informes de datos inactivos está habilitada o deshabilitada en este agregado. Cuando se habilita esta opción, los volúmenes de este agregado muestran la cantidad de datos en frío en la página de inventario Performance/Volumes.
+
++
+El valor de este campo es «'N/A'» cuando la versión de ONTAP no admite la generación de informes de datos inactivos.
+
+

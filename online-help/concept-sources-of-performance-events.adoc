@@ -1,0 +1,39 @@
+---
+permalink: online-help/concept-sources-of-performance-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de rendimiento son problemas relacionados con el rendimiento de la carga de trabajo en un clúster. Le ayudan a identificar objetos de almacenamiento con tiempos de respuesta lentos, también conocidos como alta latencia. Junto con otros eventos de salud que ocurrieron al mismo tiempo, usted puede determinar los problemas que podrían haber causado, o contribuido a, los tiempos de respuesta lentos. 
+---
+= Fuentes de eventos de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de rendimiento son problemas relacionados con el rendimiento de la carga de trabajo en un clúster. Le ayudan a identificar objetos de almacenamiento con tiempos de respuesta lentos, también conocidos como alta latencia. Junto con otros eventos de salud que ocurrieron al mismo tiempo, usted puede determinar los problemas que podrían haber causado, o contribuido a, los tiempos de respuesta lentos.
+
+Unified Manager recibe eventos de rendimiento de los siguientes orígenes:
+
+* *Sucesos de política de umbral de rendimiento definidos por el usuario*
++
+Problemas de rendimiento basados en valores de umbral personalizados que se han configurado. Puede configurar las políticas de umbral de rendimiento para los objetos de almacenamiento; por ejemplo, agregados y volúmenes, para que los eventos se generen cuando se ha incumplido un valor de umbral de un contador de rendimiento.
+
++
+Para recibir estos eventos, debe definir una política de umbral de rendimiento y asignarla a un objeto de almacenamiento.
+
+* *Sucesos de política de umbral de rendimiento definidos por el sistema*
++
+Problemas de rendimiento basados en valores de umbral definidos por el sistema. Estas políticas de umbral se incluyen en la instalación de Unified Manager para cubrir problemas de rendimiento habituales.
+
++
+Estas políticas de umbral se habilitan de forma predeterminada, por lo que es posible que vea eventos poco después de agregar un clúster.
+
+* *Eventos de umbral de rendimiento dinámico*
++
+Problemas de rendimientos provocados por errores en una infraestructura INFORMÁTICA o por cargas de trabajo que realizan un uso excesivo de los recursos del clúster. La causa de estos eventos podría ser un problema sencillo que se corrija por sí solo pasado un tiempo, o que se podría solucionar con una reparación o un cambio de configuración. Un evento de umbral dinámico indica que las cargas de trabajo de un volumen en ONTAP son lentas debido a que hay otras cargas de trabajo que realizan un uso intensivo de los componentes del clúster compartidos.
+
++
+Estos umbrales se habilitan de forma predeterminada, por lo que es posible que vea eventos tras tres días de recoger datos en un nuevo clúster.
+
+

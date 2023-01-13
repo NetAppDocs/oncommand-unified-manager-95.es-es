@@ -1,0 +1,53 @@
+---
+permalink: online-help/reference-edit-performance-threshold-policy-page-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar la página Edit Threshold Policy para modificar una política de umbral de rendimiento existente. 
+---
+= Edite la página Performance Threshold Policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la página Edit Threshold Policy para modificar una política de umbral de rendimiento existente.
+
+Puede modificar los campos de esta página y hacer clic en *Guardar* para cambiar una directiva de umbral de rendimiento. Todos los objetos del clúster que utilizan actualmente la política de umbral se actualizan automáticamente para usar la nueva definición de política.
+
+* *Para Tipo de objeto*
++
+No se puede cambiar el tipo de objeto.
+
+* *Nombre de la política*
++
+Cambie el nombre de la política de umbral.
+
+* *Descripción*
++
+Cambie la descripción detallada de la política de umbral.
+
+* *Valores de umbral*
++
+Cambie la condición primaria, y opcionalmente la secundaria, del contador de umbral.
+
++
+** *Seleccione un contador*
++
+Cambie el contador en el que desea configurar un umbral de rendimiento.
+
+** *Advertencia*
++
+Introduzca el valor de límite para el contador que se considera una advertencia.
+
+** *Crítico*
++
+Introduzca el valor de límite para el contador que se considera crítico.
+
+
+
+* *Duración*
++
+Cambie el número de minutos que el valor del contador debe ser mayor que el valor del límite de advertencia o crítico.
+
+

@@ -1,0 +1,31 @@
+---
+permalink: install/task-upgrading-openjdk-on-linux-ocum.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede actualizar a una versión más reciente de Java Runtime Environment \(JRE\) en el servidor Linux en el que está instalado Unified Manager para obtener soluciones para vulnerabilidades de seguridad.' 
+---
+= Actualizar JRE en Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar una actualización a una versión más reciente de Java Runtime Environment (JRE) en el servidor Linux en el que está instalado Unified Manager para obtener soluciones para vulnerabilidades de seguridad.
+
+
+
+== Antes de empezar
+
+Debe tener privilegios de usuario raíz para el sistema Linux en el que está instalado Unified Manager.
+
+
+
+== Pasos
+
+. Inicie sesión como usuario raíz en el equipo host de Unified Manager.
+. Descargue la versión adecuada de Java (64 bits) en el sistema de destino.
+. Detenga los servicios de Unified Manager: `service ocieau stop``service ocie stop`
+. Instale el JRE más reciente en el sistema.
+. Inicie los servicios de Unified Manager: `service ocie start``service ocieau start`
+

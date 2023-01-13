@@ -1,0 +1,27 @@
+---
+permalink: online-help/concept-what-rules-and-data-policies-are.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Una regla determina la ubicación de los archivos \(datos\) en una máquina virtual de almacenamiento \(SVM\) con Infinite Volume. Una recopilación de tales reglas se conoce como una política de datos.' 
+---
+= Qué reglas y políticas de datos son
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un _Rule_ determina la ubicación de los archivos (datos) en una máquina virtual de almacenamiento (SVM) con Infinite Volume. Una colección de tales reglas se conoce como una _política de datos_.
+
+* *Regla*
++
+Las reglas constan principalmente de un conjunto de condiciones predefinidas e información que determina el lugar donde se deben colocar los archivos en Infinite Volume. Cuando se coloca un archivo en Infinite Volume, los atributos de dicho archivo coinciden con la lista de reglas. Si los atributos coinciden con las reglas, la información de colocación de esa regla determina la clase de almacenamiento en la que se coloca el archivo. Se utiliza una regla predeterminada en la directiva de datos para determinar la ubicación de los archivos si los atributos no coinciden con ninguna de las reglas de la lista de reglas.
+
++
+Por ejemplo, si tiene una regla, «'Coloque todos los archivos del tipo .mp3 en la clase de almacenamiento bronce.'», todos los archivos .mp3 escritos en Infinite Volume se colocarán en la clase de almacenamiento bronce.
+
+* *Política de datos*
++
+Una política de datos es una lista de reglas. Cada SVM con Infinite Volume tiene su propia política de datos. Cada archivo que se agrega al Infinite Volume se compara con las reglas de la política de datos para determinar dónde se coloca ese archivo. La directiva de datos permite filtrar los archivos entrantes en función de los atributos del archivo y colocarlos en las clases de almacenamiento apropiadas.
+
+

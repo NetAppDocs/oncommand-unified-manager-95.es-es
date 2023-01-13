@@ -1,0 +1,22 @@
+---
+permalink: online-help/concept-counter-charts-zoom-view.html 
+sidebar: sidebar 
+keywords:  
+summary: Los gráficos de contador proporcionan una vista Zoom que le permite ampliar los detalles de rendimiento durante el período de tiempo especificado. Esto permite ver detalles y eventos de rendimiento con una granularidad mucho más alta, lo que es beneficioso cuando se solucionan problemas de rendimiento. 
+---
+= Vista de zoom de las cartas de contador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los gráficos de contador proporcionan una vista Zoom que le permite ampliar los detalles de rendimiento durante el período de tiempo especificado. Esto permite ver detalles y eventos de rendimiento con una granularidad mucho más alta, lo que es beneficioso cuando se solucionan problemas de rendimiento.
+
+Cuando se muestra en Zoom View, algunos de los gráficos de desglose proporcionan información adicional de la que aparece cuando el gráfico no está en Zoom View. Por ejemplo, el gráfico de desglose de IOPS, IOPS/TB y Mbps las páginas Zoom View muestran los valores de políticas de calidad de servicio de los volúmenes y LUN si se establecen en ONTAP.
+
+[NOTE]
+====
+En el caso de las políticas de umbral de rendimiento definidas por el sistema, en la lista *políticas* sólo están disponibles las políticas «'Recursos nodo sobreutilizados'» y «'límite de rendimiento QoS incumplido'». Las demás políticas de umbral definidas por el sistema no están disponibles en este momento.
+
+====

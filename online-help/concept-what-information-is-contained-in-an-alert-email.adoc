@@ -1,0 +1,27 @@
+---
+permalink: online-help/concept-what-information-is-contained-in-an-alert-email.html 
+sidebar: sidebar 
+keywords:  
+summary: Los mensajes de correo electrónico de alertas de Unified Manager proporcionan el tipo de evento, la gravedad del evento, el nombre de la política que se violó para provocar el evento y una descripción del evento. El mensaje de correo electrónico también proporciona un hipervínculo a cada evento que le permite ver la página de detalles del evento en la interfaz de usuario de. 
+---
+= Qué información se incluye en un correo electrónico de alerta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los mensajes de correo electrónico de alertas de Unified Manager proporcionan el tipo de evento, la gravedad del evento, el nombre de la política que se violó para provocar el evento y una descripción del evento. El mensaje de correo electrónico también proporciona un hipervínculo a cada evento que le permite ver la página de detalles del evento en la interfaz de usuario de.
+
+Los correos electrónicos de alerta se envían a todos los usuarios que se han suscrito para recibir alertas.
+
+Si un contador de rendimiento o un valor de capacidad tiene un cambio grande durante un período de recopilación, puede provocar que se active un evento crítico y uno de advertencia al mismo tiempo para la misma política de umbral. En este caso, podrá recibir un correo electrónico para el evento de advertencia y otro para el evento crítico. Esto se debe a que Unified Manager permite suscribirse por separado para recibir alertas de advertencia y incumplimiento de umbrales críticos.
+
+[NOTE]
+====
+Después de actualizar a Unified Manager 7.2, o más, los enlaces a eventos y alertas de correos electrónicos que se enviaron desde versiones anteriores de Unified Manager ya no funcionarán debido a un cambio en las direcciones URL de eventos y alertas.
+
+====
+A continuación se muestra un ejemplo de correo electrónico de alerta:
+
+image::../media/um-email-alert.gif[alerta de correo electrónico de um]

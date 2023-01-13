@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-volume-capacity-and-utilization-report-customizations.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear informes para supervisar una variedad de información de capacidad y uso sobre los volúmenes. Por ejemplo, puede crear informes para mostrar volúmenes usados, capacidad total, tasa de crecimiento diaria y capacidad de copia de Snapshot, lo que puede ayudar a determinar si un volumen se está quedando sin espacio o si está siendo aprovechado o infrautilizado. 
+---
+= Personalizaciones de los informes de capacidad y utilización de volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear informes para supervisar una variedad de información de capacidad y uso sobre los volúmenes. Por ejemplo, puede crear informes para mostrar volúmenes usados, capacidad total, tasa de crecimiento diaria y capacidad de copia de Snapshot, lo que puede ayudar a determinar si un volumen se está quedando sin espacio o si está siendo aprovechado o infrautilizado.

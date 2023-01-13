@@ -1,0 +1,126 @@
+---
+permalink: online-help/reference-events-report.html 
+sidebar: sidebar 
+keywords:  
+summary: El informe Events le permite ver información sobre las tendencias de los eventos durante un período de tiempo específico. Esta información le permite comparar la actividad reciente con cualquier actividad operativa anterior, como cambios de configuración, actualizaciones, etc. La información también le ayuda a determinar cualquier evento pendiente. 
+---
+= Informe Events
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El informe Events le permite ver información sobre las tendencias de los eventos durante un período de tiempo específico. Esta información le permite comparar la actividad reciente con cualquier actividad operativa anterior, como cambios de configuración, actualizaciones, etc. La información también le ayuda a determinar cualquier evento pendiente.
+
+
+
+== Vista de gráfico de informes de eventos
+
+El informe Events se muestra en dos formatos:
+
+* Vista de gráfico de informes de eventos
+* Los eventos informan de una vista tabular
+
+
+El gráfico de eventos se muestra en dos formatos:
+
+* Tendencias de gravedad de eventos (todos los eventos abiertos)
+* Tendencia de estado de evento
+
+
+El gráfico muestra las tendencias de gravedad de los eventos para todos los eventos abiertos a lo largo de un período de tiempo. Se muestra un recuento de eventos en el eje vertical (y) y la fecha se muestra en el eje horizontal (x). Puede ver los detalles de puntos específicos del gráfico situando el cursor sobre un punto determinado. Los detalles muestran la gravedad del evento, el número de eventos del tipo de gravedad específico y la fecha del evento.
+
+Los tipos de gravedad de evento mostrados son críticos, error y advertencia. Las gravedades del evento se diferencian por diferentes colores. Puede haber el mismo número de eventos en la misma fecha en diferentes estados.
+
+* * Contador*
++
+Muestra un número de eventos.
+
+* *Fecha*
++
+Muestra la fecha. El eje x muestra datos desde la hora en la que se produjo el evento hasta la fecha actual. Puede hacer clic en el gráfico y ampliarlo para obtener más información.
+
+
+
+El gráfico muestra la tendencia del estado del evento por día durante un período de tiempo. Se muestra un recuento de eventos en el eje vertical (y) y la fecha se muestra en el eje horizontal (x). Los detalles muestran el estado del evento, el número de eventos del estado específico y la fecha del evento.
+
+El estado del evento es Nuevo, reconocido y resuelto. El estado del evento se distingue por diferentes colores.
+
+El gráfico muestra los nuevos eventos generados diariamente de forma acumulativa en un gráfico de barras representado en color verde. El número de eventos reconocidos y resueltos se muestra como y cuando se reconocen y resuelven diariamente.
+
+Hay una función de zoom dentro de los gráficos. Puede utilizar esta función para ampliar un punto concreto de la carta para obtener más claridad.
+
+* *Fuente*
++
+Muestra el origen de un evento.
+
+* *Estado*
++
+Muestra la gravedad del evento. Puede filtrar esta columna para mostrar eventos de un tipo de gravedad específico. Los tipos de gravedad de los eventos son críticos, error o Advertencia.
+
+* *Estado*
++
+Muestra el estado del evento: Nuevo, reconocido, resuelto u Obsoleto. Puede filtrar esta columna para mostrar eventos de un estado específico.
+
+* *Evento*
++
+Muestra los nombres de los eventos.
+
+* *Tiempo activado*
++
+Muestra la hora a la que se generó el evento. Se muestran tanto la hora como la fecha.
+
+* *Días pendientes*
++
+Muestra el número de días entre un evento que se produce y su resolución o designación como Obsoleto.
+
+* *Tipo de fuente*
++
+Muestra el tipo de objeto (por ejemplo, la máquina virtual de almacenamiento (SVM), el volumen o el qtree) con los que está asociado el evento.
+
+* *Prioridad de datos*
++
+Muestra el tipo de anotación, según la prioridad de los datos del objeto de almacenamiento.
+
+* *Nivel de impacto*
++
+Muestra si el evento se clasifica como un incidente, un riesgo o información.
+
+* * Área de impacto*
++
+Muestra si un evento de capacidad, disponibilidad, rendimiento, protección o configuración.
+
+* *Asignado a*
++
+Muestra el nombre del usuario al que está asignado el evento.
+
+* *Tiempo asignado*
++
+Muestra la hora a la que se asignó el evento a un usuario.
+
+* *Notas*
++
+Muestra el número de notas que se agregan a un evento.
+
+* *Reconocido por*
++
+Muestra el nombre del usuario que ha reconocido el evento. El campo está en blanco si el evento no se reconoce.
+
+* *Tiempo reconocido*
++
+Muestra el tiempo transcurrido desde que se reconoció el evento. Si el tiempo transcurrido supera una semana, la Marca de tiempo se muestra cuando se reconoció el evento.
+
+* *Resuelto por*
++
+Muestra el nombre del usuario que resolvió el evento. El campo está en blanco si el evento no se resuelve.
+
+* *Tiempo resuelto*
++
+Muestra el tiempo transcurrido desde que se resolvió el evento. Si el tiempo transcurrido supera una semana, la Marca de tiempo se muestra cuando se resolvió el evento.
+
+* *Tiempo Obsoletado*
++
+Muestra la hora a la que el estado del evento quedó obsoleto.
+
+

@@ -1,0 +1,36 @@
+---
+permalink: online-help/task-customizing-the-volume-transfer-status-report-to-view-failed-or-successful-volume-transfers.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Es posible personalizar el informe Volume Transfer Status \(Historical\) para ver los detalles de las transferencias de volúmenes con errores o correctas.' 
+---
+= Personalización del informe de estado de transferencia de volumen (Historical) para ver las transferencias de volúmenes con errores o correctas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se puede personalizar el informe de estado de transferencia de volumen (Historical) para ver los detalles de las transferencias de volúmenes con errores o correctas.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Quitar agrupación por clúster:
++
+.. Seleccione la columna que desea desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para ordenar las transferencias de volumen según un fallo o éxito, haga clic en la columna *resultado operativo* y, a continuación, haga clic en image:../media/click-to-see-menu.gif[""] .
+. Seleccione *filtro*.
+. En el cuadro de diálogo *filtro*, haga clic en *Seleccionar valores* y, a continuación, seleccione *éxito* o *error*.
+

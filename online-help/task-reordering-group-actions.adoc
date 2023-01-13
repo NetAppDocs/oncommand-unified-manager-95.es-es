@@ -1,0 +1,36 @@
+---
+permalink: online-help/task-reordering-group-actions.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede cambiar el orden de las acciones de grupo que se aplicarán a los objetos de almacenamiento de un grupo. Las acciones de grupo se aplican secuencialmente a objetos de almacenamiento en función de su rango. La clasificación más baja se asigna a la acción de grupo que configuró en último lugar. Puede cambiar el rango de la acción de grupo en función de sus necesidades. 
+---
+= Reordenación de acciones de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede cambiar el orden de las acciones de grupo que se aplicarán a los objetos de almacenamiento de un grupo. Las acciones de grupo se aplican secuencialmente a objetos de almacenamiento en función de su rango. La clasificación más baja se asigna a la acción de grupo que configuró en último lugar. Puede cambiar el rango de la acción de grupo en función de sus necesidades.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Puede seleccionar una sola fila o varias filas y, a continuación, realizar varias operaciones de arrastrar y soltar para cambiar la clasificación de las acciones del grupo. Sin embargo, debe guardar los cambios para que la repriorización se refleje en la cuadrícula de acciones de grupo.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *grupos*.
+. En la ficha *acciones de grupo*, haga clic en *Reordenar*.
+. En el cuadro de diálogo *Reordenar acciones de grupo*, arrastre y suelte las filas para reorganizar la secuencia de acciones de grupo según sea necesario.
+. Haga clic en *Guardar*.
+

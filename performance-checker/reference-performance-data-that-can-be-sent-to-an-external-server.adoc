@@ -1,0 +1,80 @@
+---
+permalink: performance-checker/reference-performance-data-that-can-be-sent-to-an-external-server.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager recopila diversos datos de rendimiento de todos los clústeres que supervisa. Puede enviar grupos específicos de datos a un servidor externo. 
+---
+= Datos de rendimiento que se pueden enviar a un servidor externo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager recopila diversos datos de rendimiento de todos los clústeres que supervisa. Puede enviar grupos específicos de datos a un servidor externo.
+
+En función de los datos de rendimiento que desee asignar al gráfico, puede optar por enviar uno de los siguientes grupos de estadísticas:
+
+|===
+| Grupo de estadísticas | Datos incluidos | Detalles 
+
+
+ a| 
+Monitor de rendimiento
+ a| 
+Estadísticas de rendimiento de alto nivel para los siguientes objetos:
+
+* LUN
+* Volúmenes
+
+ a| 
+Este grupo proporciona IOPS o latencia total para todos los LUN y volúmenes de todos los clústeres supervisados.
+
+Este grupo proporciona la cantidad más pequeña de estadísticas.
+
+
+
+ a| 
+Utilización de recursos
+ a| 
+Estadísticas de utilización de recursos para los siguientes objetos:
+
+* Nodos
+* Agregados
+
+ a| 
+Este grupo proporciona estadísticas de utilización para el nodo y agrega recursos físicos en todos los clústeres supervisados.
+
+También proporciona las estadísticas recogidas en el grupo Performance Monitor.
+
+
+
+ a| 
+Acceda a la pantalla
+ a| 
+Estadísticas de lectura/escritura de bajo nivel y por protocolo para todos los objetos con seguimiento:
+
+* Nodos
+* Agregados
+* LUN
+* Volúmenes
+* Discos
+* LIF
+* Puertos/NIC
+
+ a| 
+Este grupo proporciona desgloses de lectura/escritura y por protocolo para los siete tipos de objeto con seguimiento en todos los clústeres supervisados.
+
+También proporciona las estadísticas recogidas en el grupo Performance Monitor y en el grupo Resource Utilization.
+
+Este grupo proporciona el mayor número de estadísticas.
+
+|===
+[NOTE]
+====
+Si se cambia el nombre de un clúster, u objeto de clúster, en el sistema de almacenamiento, tanto los objetos antiguos como los nuevos contendrán datos de rendimiento en el servidor externo (denominado «ruta_métrica»). Los dos objetos no están correlacionados con el mismo objeto. Por ejemplo, si cambia el nombre de un volumen de "'volume1_acct'" a "'acct_vol1'", verá los antiguos datos de rendimiento del volumen antiguo y los nuevos datos de rendimiento del nuevo volumen.
+
+====
+Consulte el artículo de Knowledge base para obtener la lista de todos los contadores de rendimiento que se pueden enviar a un proveedor de datos externo.
+
+https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FActive_IQ_Unified_Manager%2FWhat_are_the_ActiveIQ_Unified_Manager_performance_counters_that_can_be_exported_to_an_External_Data_Provider%253F["Los contadores de rendimiento de Unified Manager que se pueden exportar a un proveedor de datos externo"]

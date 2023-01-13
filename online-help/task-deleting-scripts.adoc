@@ -1,0 +1,31 @@
+---
+permalink: online-help/task-deleting-scripts.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible eliminar un script de Unified Manager cuando el script ya no se requiere o no es válido. 
+---
+= Eliminar scripts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible eliminar un script de Unified Manager cuando el script ya no se requiere o no es válido.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* El script no debe estar asociado a una alerta.
+
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *Scripts* en el menú Administración de la izquierda.
+. En la página *Management/Scripts* , seleccione la secuencia de comandos que desea eliminar y, a continuación, haga clic en *Delete*.
+. En el cuadro de diálogo *Advertencia*, confirme la eliminación haciendo clic en *Sí*.
+

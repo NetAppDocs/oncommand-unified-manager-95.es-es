@@ -1,0 +1,26 @@
+---
+permalink: online-help/task-editing-a-customized-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede realizar cambios adicionales en un informe ya personalizado y guardar el informe. No puede cambiar el nombre del informe después de guardarlo. 
+---
+= Edición de un informe personalizado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar cambios adicionales en un informe ya personalizado y guardar el informe. No puede cambiar el nombre del informe después de guardarlo.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Informes* y, a continuación, haga clic en *Ejecutar informe* para el informe que desea editar.
++
+Se mostrará la página de detalles Report.
+
+. Modifique el informe según sea necesario y, a continuación, haga clic en *acciones* > *Guardar informe personalizado*.
+. En el cuadro de diálogo *Guardar informe personalizado*, introduzca una breve descripción de los cambios realizados en el informe personalizado y haga clic en *Guardar*.
+

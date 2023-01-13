@@ -1,0 +1,44 @@
+---
+permalink: performance-checker/task-viewing-performance-capacity-counter-charts-to-identify-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: En la página Performance Explorer, se pueden ver los gráficos de capacidad de rendimiento utilizados para nodos y agregados. Esto permite ver datos detallados de capacidad de rendimiento de los nodos y los agregados seleccionados para un periodo específico. 
+---
+= Ver los gráficos de contadores de capacidad de rendimiento para identificar los problemas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página Performance Explorer, se pueden ver los gráficos de capacidad de rendimiento utilizados para nodos y agregados. Esto permite ver datos detallados de capacidad de rendimiento de los nodos y los agregados seleccionados para un periodo específico.
+
+
+
+== Acerca de esta tarea
+
+El gráfico de contadores estándar muestra los valores de capacidad de rendimiento utilizados para los nodos o los agregados seleccionados. El gráfico de contadores Breakdown muestra los valores de capacidad de rendimiento totales para el objeto raíz separados en el uso según los protocolos de usuario frente a los procesos del sistema en segundo plano. Además, también se muestra la cantidad de capacidad de rendimiento libre.
+
+[NOTE]
+====
+Dado que algunas actividades en segundo plano asociadas a la gestión de datos y del sistema se identifican como cargas de trabajo de usuario y se clasifican como protocolos de usuario, el porcentaje de protocolos de usuario puede parecer artificialmente alto cuando se ejecutan dichos procesos. Estos procesos normalmente se ejecutan a la medianoche cuando el uso del clúster es bajo. Si ve un pico en la actividad de protocolo del usuario alrededor de la medianoche, compruebe si los trabajos de backup del clúster u otras actividades que se realizan en segundo plano están configurados para ejecutarse en ese momento.
+
+====
+
+
+== Pasos
+
+. Seleccione la ficha *Explorer* de una página de nodo o agregado *aterrizaje*.
+. En el panel *Cartas de contador*, haga clic en *elegir gráficos* y, a continuación, seleccione *Perf. Gráfico capacidad utilizada*.
+. Desplácese hacia abajo hasta que pueda ver el gráfico.
++
+Los colores del gráfico estándar muestran cuando el objeto está en el rango óptimo (amarillo), cuando el objeto está subutilizado (verde) y cuando el objeto está sobreutilizado (rojo). El gráfico detallado muestra detalles detallados de capacidad de rendimiento solo para el objeto raíz.
+
++
+image::../media/headroom-counter-charts.gif[gráficos de contadores de margen adicional]
+
+. Si desea ver cualquiera de los gráficos en formato de tamaño completo, haga clic en *Zoom View*.
++
+De esta forma, se pueden abrir varios gráficos de contadores en ventanas diferentes para comparar los valores de capacidad de rendimiento utilizados con los valores de IOPS o Mbps en el mismo periodo de tiempo.
+
+

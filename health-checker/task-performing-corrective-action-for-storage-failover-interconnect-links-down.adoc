@@ -1,0 +1,69 @@
+---
+permalink: health-checker/task-performing-corrective-action-for-storage-failover-interconnect-links-down.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando se muestra la página de detalles Event de un evento de almacenamiento relacionado con conmutación al nodo de respaldo, puede revisar la información de resumen de la página para determinar la urgencia del evento, la posible causa del problema y la posible resolución del problema. 
+---
+= Realizar acciones correctivas para enlaces de interconexión de conmutación al nodo de respaldo de almacenamiento inactivos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando se muestra la página de detalles Event de un evento de almacenamiento relacionado con conmutación al nodo de respaldo, puede revisar la información de resumen de la página para determinar la urgencia del evento, la posible causa del problema y la posible resolución del problema.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+En este ejemplo, el resumen de eventos que se proporciona en la página de detalles Event contiene la siguiente información sobre la condición de enlace inactivo de la interconexión de conmutación por error de almacenamiento:
+
+[listing]
+----
+Event: Storage Failover Interconnect One or More Links Down
+
+Summary
+
+Severity: Warning
+State: New
+Impact Level: Risk
+Impact Area: Availability
+Source: aardvark
+Source Type: Node
+Acknowledged By:
+Resolved By:
+Assigned To:
+Cause: At least one storage failover interconnected link
+       between the nodes aardvark and bonobo is down.
+       RDMA interconnect is up (Link0 up, Link1 down)
+----
+La información de eventos de ejemplo indica que un enlace de interconexión de conmutación por error de almacenamiento, Link1, entre los nodos de par ha aardvark y bonobo está inactivo, pero que Link0 entre Apple y Boy está activo. Debido a que hay un enlace activo, el acceso remoto a la memoria dinámica (RDMA) sigue funcionando y una tarea de recuperación tras fallos del almacenamiento aún puede tener éxito.
+
+Sin embargo, para asegurarse de que los enlaces que fallan y la protección de recuperación tras fallos de almacenamiento están totalmente deshabilitados, usted decide diagnosticar más lejos la razón de la caída de Link1.
+
+
+
+== Pasos
+
+. En la página de detalles *Event*, puede hacer clic en el enlace al evento especificado en el campo Source para obtener más detalles de otros eventos que podrían estar relacionados con la condición de enlace inactivo de interconexión de conmutación por error del almacenamiento.
++
+En este ejemplo, el origen del evento es el nodo llamado aardvark. Al hacer clic en ese nombre de nodo se muestran los detalles de alta disponibilidad para la pareja de alta disponibilidad afectada, aardvark y bonobo, en la pestaña nodos de la página de detalles Health/Cluster y se muestran otros eventos que se produjeron recientemente en la pareja de alta disponibilidad afectada.
+
+. Consulte los detalles de *ha* para obtener más información relacionada con el evento.
++
+En este ejemplo, la información relevante se encuentra en la tabla Eventos. La tabla muestra el evento "Conexión de conmutación por error de almacenamiento uno o más vínculos abajo", la hora en que se generó el evento y, de nuevo, el nodo desde el que se originó este evento.
+
+
+
+
+
+== Después de terminar
+
+Mediante la información de ubicación del nodo en los detalles de alta disponibilidad, solicite o realice una inspección física y reparación del problema de la conmutación por error del almacenamiento en los nodos del par de alta disponibilidad afectados.

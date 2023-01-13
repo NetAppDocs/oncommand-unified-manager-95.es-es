@@ -1,0 +1,34 @@
+---
+permalink: online-help/concept-what-lifs-are.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Una LIF \(interfaz lógica\) es una dirección IP o un WWPN con características asociadas, como un rol, un puerto de inicio, un nodo de inicio, una lista de puertos a los que se debe conmutar y una política de firewall. Puede configurar las LIF en los puertos a través de los que el clúster envía y recibe comunicaciones a través de la red.' 
+---
+= Qué son los LIF
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una LIF (interfaz lógica) es una dirección IP o WWPN con características asociadas, como un rol, un puerto raíz, un nodo raíz, una lista de puertos a los que se debe conmutar y una política de firewall. Puede configurar las LIF en los puertos a través de los que el clúster envía y recibe comunicaciones a través de la red.
+
+Los LIF pueden alojarse en los siguientes puertos:
+
+* Puertos físicos que no forman parte de los grupos de interfaces
+* Grupos de interfaces
+* VLAN
+* Puertos físicos o grupos de interfaces que alojan VLAN
+* Puertos IP virtual (VIP)
++
+A partir de ONTAP 9.5, se admiten los LIF VIP y están alojados en los puertos VIP.
+
+
+
+Mientras configura los protocolos SAN como FC en una LIF, estará asociado con un WWPN.
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["Guía de administración de SAN de ONTAP 9"]
+
+En la siguiente figura se muestra la jerarquía de puertos en un sistema ONTAP:
+
+image::../media/port-hierarchy-in-a-cluster-mode-system.gif[Imagen que muestra la jerarquía de puertos en un sistema Data ONTAP en clúster]

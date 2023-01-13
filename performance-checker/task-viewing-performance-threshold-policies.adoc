@@ -1,0 +1,32 @@
+---
+permalink: performance-checker/task-viewing-performance-threshold-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible ver todas las políticas de umbral de rendimiento definidas actualmente en la página Configuration/Performance Thresholds. 
+---
+= Ver las políticas de umbral de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ver todas las políticas de umbral de rendimiento definidas actualmente en la página Configuration/Performance Thresholds.
+
+
+
+== Acerca de esta tarea
+
+La lista de políticas de umbral se ordena alfabéticamente por nombre de política, y incluye política para todo tipo de objetos de almacenamiento. Puede hacer clic en un encabezado de columna para ordenar las políticas según esa columna. Si busca una política específica, utilice los mecanismos de filtro y búsqueda para refinar la lista de políticas de umbral que aparecen en la lista de inventario.
+
+Puede pasar el cursor sobre el nombre de la política y el nombre de la condición para ver los detalles de configuración de la política. Además, puede utilizar los botones proporcionados para crear, clonar, editar y eliminar políticas de umbral definidas por el usuario.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, seleccione *Configuración* > *umbrales de rendimiento*.
++
+Se muestra la página Configuration/Performance Thresholds.
+
+

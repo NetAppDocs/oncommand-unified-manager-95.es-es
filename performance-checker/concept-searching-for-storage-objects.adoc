@@ -1,0 +1,42 @@
+---
+permalink: performance-checker/concept-searching-for-storage-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Para acceder rápidamente a un objeto específico, puede utilizar el campo Buscar todos los objetos de almacenamiento situado en la parte superior derecha de la interfaz. Este método de búsqueda global en todos los objetos le permite localizar rápidamente objetos específicos por tipo. Los resultados de la búsqueda se ordenan por tipo de objeto de almacenamiento y se pueden filtrar mediante el menú desplegable Tipo. Una búsqueda válida debe contener al menos tres caracteres. 
+---
+= Buscar objetos de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para acceder rápidamente a un objeto específico, puede utilizar el campo *Buscar todos los objetos de almacenamiento* situado en la parte superior derecha de la interfaz. Este método de búsqueda global en todos los objetos le permite localizar rápidamente objetos específicos por tipo. Los resultados de la búsqueda se ordenan por tipo de objeto de almacenamiento y se pueden filtrar mediante el menú desplegable *Tipo*. Una búsqueda válida debe contener al menos tres caracteres.
+
+La búsqueda global muestra el número total de resultados, pero sólo se puede acceder a los 20 resultados de búsqueda principales. Debido a esto, la funcionalidad de búsqueda global se puede considerar como una herramienta de acceso directo para buscar elementos específicos si conoce los elementos que desea localizar rápidamente. Para obtener resultados completos de la búsqueda, puede utilizar la búsqueda en las páginas de inventario de objetos y su funcionalidad de filtrado asociada.
+
+Puede hacer clic en el cuadro desplegable *Tipo* y seleccionar *todo* para buscar simultáneamente en todos los objetos y eventos. Como alternativa, puede hacer clic en el cuadro desplegable *Tipo* para especificar el tipo de objeto. Escriba cualquier número de caracteres del objeto o nombre del evento en el campo *Buscar todos los objetos de almacenamiento* y, a continuación, pulse *Intro* o haga clic en *Buscar todo* para mostrar los resultados de la búsqueda, como:
+
+* Eventos: ID de eventos de rendimiento
+* Cluster: Nombres de clúster
+* Nodes: Nombres de nodos
+* Agregados: Nombres de agregados
+* SVM: Nombres de SVM
+* Volúmenes: Nombres de volúmenes
+* LUN: Rutas de LUN
+
+
+image::../media/opm-search-field-jpg.gif[Busque en Performance Manager]
+
+[NOTE]
+====
+Los LIF y puertos no pueden realizar búsquedas en la barra de búsqueda global.
+
+====
+En este ejemplo, el cuadro desplegable *Tipo* tiene seleccionado el tipo de objeto volumen. Al escribir "'vol'" en el campo *Buscar todos los objetos de almacenamiento* se muestra una lista de todos los volúmenes cuyos nombres contienen estos caracteres. En el caso de las búsquedas de objetos, puede hacer clic en cualquier resultado de búsqueda para desplazarse a la página Performance Explorer del objeto. Para las búsquedas de eventos, al hacer clic en un elemento del resultado de búsqueda se desplaza a la página Detalles del evento.
+
+[NOTE]
+====
+Si los resultados de la búsqueda muestran varios volúmenes con el mismo nombre, no se muestra el nombre de los clústeres y las SVM asociados.
+
+====

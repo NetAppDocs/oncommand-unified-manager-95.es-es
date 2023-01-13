@@ -1,0 +1,61 @@
+---
+permalink: online-help/task-assigning-events-to-specific-users.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede asignar eventos sin asignar a usted mismo o a otros usuarios, incluidos los usuarios remotos. Puede reasignar eventos asignados a otro usuario, si es necesario. Por ejemplo, cuando ocurren problemas frecuentes en un objeto de almacenamiento, puede asignar los eventos para estos problemas al usuario que gestiona ese objeto. 
+---
+= Asignar eventos a usuarios específicos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede asignar eventos sin asignar a usted mismo o a otros usuarios, incluidos los usuarios remotos. Puede reasignar eventos asignados a otro usuario, si es necesario. Por ejemplo, cuando ocurren problemas frecuentes en un objeto de almacenamiento, puede asignar los eventos para estos problemas al usuario que gestiona ese objeto.
+
+
+
+== Antes de empezar
+
+* El nombre del usuario y el ID de correo electrónico deben estar configurados correctamente.
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Eventos*.
+. En la página de inventario *Eventos*, seleccione uno o más eventos que desee asignar.
+. Asigne el evento seleccionando una de las siguientes opciones:
++
+|===
+| Si desea asignar el evento a... | Realice lo siguiente... 
+
+
+ a| 
+Usted mismo
+ a| 
+Haga clic en *asignar a* > *Me*.
+
+
+
+ a| 
+Otro usuario
+ a| 
+.. Haga clic en *asignar a* > *otro usuario*.
+.. En el cuadro de diálogo asignar propietario, introduzca el nombre de usuario o seleccione un usuario de la lista desplegable.
+.. Haga clic en *asignar*.
++
+Se envía una notificación por correo electrónico al usuario.
+
++
+[NOTE]
+====
+Si no introduce un nombre de usuario o selecciona un usuario de la lista desplegable y hace clic en *asignar*, el evento permanece sin asignar.
+
+====
+
+
+|===
+

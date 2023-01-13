@@ -1,0 +1,29 @@
+---
+permalink: performance-checker/concept-what-performance-capacity-used-is.html 
+sidebar: sidebar 
+keywords:  
+summary: La capacidad de rendimiento utilizada contador ayuda a identificar si el rendimiento de un nodo o de un agregado está llegando a un punto en el que el rendimiento puede degradarse si las cargas de trabajo aumentan. También puede mostrarle si un nodo o agregado se está utilizando en exceso durante periodos de tiempo específicos. La capacidad de rendimiento utilizada es similar al de la utilización, pero el primero proporciona más información acerca de las funcionalidades de rendimiento disponibles en un recurso físico para una carga de trabajo específica. 
+---
+= La capacidad de rendimiento utilizada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La capacidad de rendimiento utilizada contador ayuda a identificar si el rendimiento de un nodo o de un agregado está llegando a un punto en el que el rendimiento puede degradarse si las cargas de trabajo aumentan. También puede mostrarle si un nodo o agregado se está utilizando en exceso durante periodos de tiempo específicos. La capacidad de rendimiento utilizada es similar al de la utilización, pero el primero proporciona más información acerca de las funcionalidades de rendimiento disponibles en un recurso físico para una carga de trabajo específica.
+
+[NOTE]
+====
+Los datos de capacidad de rendimiento solo están disponibles cuando los nodos de un clúster se han instalado con el software ONTAP 9.0 o una versión posterior.
+
+====
+La capacidad de rendimiento óptima utilizada es el punto en el que un nodo o un agregado tienen una utilización y una latencia óptimas (tiempo de respuesta) y se utiliza con eficiencia. En la siguiente figura, se muestra una muestra de latencia frente a utilización de un agregado.
+
+image::../media/headroom-chart.gif[gráfico margen adicional]
+
+En este ejemplo, el _operational point_ identifica que el agregado está funcionando actualmente con una utilización del 50% con una latencia de 1.0 ms/op. A partir de las estadísticas extraídas del agregado, Unified Manager determina que se dispone de capacidad de rendimiento adicional para este agregado. En este ejemplo, el _optimal point_ se identifica como el punto en el que el agregado está a 80% de utilización con una latencia de 2.0 ms/op. Por tanto, puede añadir más volúmenes y LUN a este agregado para que sus sistemas se utilicen de forma más eficiente.
+
+Se espera que el contador de capacidad de rendimiento utilizada sea un número mayor que el contador de «'utilización» porque la capacidad de rendimiento aumenta el impacto en la latencia. Por ejemplo, si se utiliza un nodo o un agregado el 70 %, el valor de capacidad de rendimiento puede estar entre el 80 % y el 100 %, según el valor de latencia.
+
+Sin embargo, en algunos casos el contador de utilización puede ser más alto en la página Paneles/rendimiento. Esto es normal porque la consola actualiza los valores de contador actuales en cada período de recogida; no muestra promedios durante un periodo de tiempo como las otras páginas de la interfaz de usuario de Unified Manager. El contador de capacidad de rendimiento utilizada se utiliza mejor como indicador de rendimiento promediado durante un período de tiempo, mientras que el contador de utilización se utiliza mejor para determinar el uso instantáneo de un recurso.

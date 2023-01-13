@@ -1,0 +1,75 @@
+---
+permalink: performance-checker/task-removing-performance-threshold-policies-from-storage-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible quitar una política de umbral de rendimiento definida por el usuario de un objeto de almacenamiento cuando ya no se desea que Unified Manager supervise el valor del contador de rendimiento. 
+---
+= Eliminación de políticas de umbral de rendimiento de objetos de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible quitar una política de umbral de rendimiento definida por el usuario de un objeto de almacenamiento cuando ya no se desea que Unified Manager supervise el valor del contador de rendimiento.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+
+
+== Acerca de esta tarea
+
+Solo puede eliminar una política cada vez de un objeto seleccionado.
+
+Puede quitar una política de umbral de varios objetos de almacenamiento si selecciona más de un objeto de la lista.
+
+
+
+== Pasos
+
+. En la página *Inventory* de cualquier objeto de almacenamiento, seleccione uno o más objetos que tengan al menos una política de umbral de rendimiento aplicada.
++
+|===
+| Para borrar umbrales de... | Realice lo siguiente... 
+
+
+ a| 
+Un solo objeto
+ a| 
+Seleccione la casilla de verificación situada a la izquierda de ese objeto.
+
+
+
+ a| 
+Varios objetos
+ a| 
+Seleccione la casilla de verificación situada a la izquierda de cada objeto.
+
+
+
+ a| 
+Todos los objetos de la página
+ a| 
+Haga clic en image:../media/select-dropdown-65-png.gif[""] Y seleccione *Seleccionar todos los objetos en esta página*.
+
+
+
+ a| 
+Todos los objetos del mismo tipo
+ a| 
+Haga clic en image:../media/select-dropdown-65-png.gif[""] Y seleccione *Seleccionar todos los objetos*.
+
+|===
+. Haga clic en *Borrar Directiva de umbral de rendimiento*.
++
+Se muestra la página Clear Threshold Policy, que muestra una lista de las políticas de umbral asignadas actualmente a los objetos de almacenamiento.
+
+. Seleccione la directiva de umbral que desea eliminar de los objetos y haga clic en *Borrar directiva*.
++
+Al seleccionar una directiva de umbral, se muestran los detalles de la directiva para que pueda confirmar que ha seleccionado la directiva adecuada.
+
+

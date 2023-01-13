@@ -1,0 +1,45 @@
+---
+permalink: online-help/concept-understanding-counter-charts.html 
+sidebar: sidebar 
+keywords:  
+summary: Los gráficos del panel gráficos de contador permiten ver y comparar los datos de rendimiento del objeto raíz y de los objetos agregados a partir de la cuadrícula de objetos correlacionados. Esto puede ayudarle a comprender las tendencias de rendimiento y aislar y resolver problemas de rendimiento. 
+---
+= Gráficos de contadores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los gráficos del panel gráficos de contador permiten ver y comparar los datos de rendimiento del objeto raíz y de los objetos agregados a partir de la cuadrícula de objetos correlacionados. Esto puede ayudarle a comprender las tendencias de rendimiento y aislar y resolver problemas de rendimiento.
+
+Los gráficos de contadores que se muestran de forma predeterminada son Events, Latency, IOPS y Mbps. Los gráficos opcionales que puede decidir mostrar son la utilización, la capacidad de rendimiento utilizada, las IOPS disponibles, las IOPS/TB y la ratio de excepciones de caché. Además, puede elegir ver valores totales o valores de desglose de los gráficos latencia, IOPS, Mbps y capacidad de rendimiento utilizados.
+
+El Explorador de rendimiento muestra ciertos gráficos de contadores de forma predeterminada, si el objeto de almacenamiento lo admite todo o no. Cuando no se admite un contador, el gráfico de contadores está vacío y el mensaje `Not applicable for <object>` aparece en pantalla.
+
+Los gráficos muestran las tendencias de rendimiento del objeto raíz y de todos los objetos seleccionados en el panel de comparación. Los datos de cada gráfico se organizan de la siguiente manera:
+
+* *Eje X*
++
+Muestra el período de tiempo especificado. Si no ha especificado un intervalo de tiempo, el valor predeterminado es el período anterior de 72 horas.
+
+* *Eje y*
++
+Muestra las unidades de contador únicas para el objeto u objetos seleccionados.
+
+
+
+Los colores de las líneas de tendencias coinciden con el color del nombre del objeto tal como se muestra en el panel de comparación. Puede colocar el cursor sobre un punto de cualquier línea de tendencia para ver detalles de tiempo y valor para ese punto.
+
+Si desea investigar un período de tiempo específico dentro de un gráfico, puede utilizar uno de los siguientes métodos:
+
+* Utilice el botón *<* para expandir el panel Contador de gráficos para extender el ancho de la página.
+* Utilice el cursor (cuando se pase a una lupa) para seleccionar una parte del período de tiempo de la carta para enfocar y ampliar esa área. Puede hacer clic en Restablecer zoom gráfico para devolver el gráfico al período de tiempo predeterminado.
+* Utilice el botón *Zoom View* para mostrar un gran gráfico de contador único que contiene detalles ampliados e indicadores de umbral.
+
+
+[NOTE]
+====
+En ocasiones, aparecen separaciones en las líneas de tendencias. Estos vacíos indican que Unified Manager no pudo recoger datos de rendimiento del sistema de almacenamiento o que Unified Manager podría haber estado inactivo.
+
+====

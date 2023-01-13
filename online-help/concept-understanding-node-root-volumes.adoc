@@ -1,0 +1,16 @@
+---
+permalink: online-help/concept-understanding-node-root-volumes.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede supervisar el volumen raíz del nodo mediante Unified Manager. La práctica recomendada es que el volumen raíz del nodo debe tener capacidad suficiente para evitar que el nodo se apague. 
+---
+= Volúmenes raíz de nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede supervisar el volumen raíz del nodo mediante Unified Manager. La práctica recomendada es que el volumen raíz del nodo debe tener capacidad suficiente para evitar que el nodo se apague.
+
+Cuando la capacidad utilizada del volumen raíz del nodo supera el 80 % de la capacidad total del volumen raíz del nodo, se genera el evento Node Root Volume Space casi Full. Puede configurar una alerta para que el evento reciba una notificación. Puede tomar las acciones adecuadas para evitar que el nodo deje de funcionar mediante System Manager de OnCommand o la CLI de ONTAP.

@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-event-windows-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos le notifican cualquier problema de su entorno. Es posible usar la página del inventario Events y la página de detalles Event para supervisar todos los eventos. Puede utilizar el cuadro de diálogo Opciones de configuración de notificaciones para configurar la notificación. Puede utilizar la página Configuración/gestionar eventos para desactivar o activar eventos. 
+---
+= Descripción de ventanas de eventos y cuadros de diálogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos le notifican cualquier problema de su entorno. Es posible usar la página del inventario Events y la página de detalles Event para supervisar todos los eventos. Puede utilizar el cuadro de diálogo Opciones de configuración de notificaciones para configurar la notificación. Puede utilizar la página Configuración/gestionar eventos para desactivar o activar eventos.

@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-health-alert-windows-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Si desea configurar alertas para recibir notificaciones acerca de los eventos, utilice el cuadro de diálogo Add Alert. También puede ver la lista de alertas desde la página Configuration/Alerting. 
+---
+= Descripción de ventanas de alerta y cuadros de diálogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si desea configurar alertas para recibir notificaciones acerca de los eventos, utilice el cuadro de diálogo Add Alert. También puede ver la lista de alertas desde la página Configuration/Alerting.

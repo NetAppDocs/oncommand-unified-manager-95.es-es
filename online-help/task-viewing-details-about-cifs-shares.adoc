@@ -1,0 +1,41 @@
+---
+permalink: online-help/task-viewing-details-about-cifs-shares.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede usar la página de detalles Health/Storage Virtual Machine para ver información detallada acerca del recurso compartido CIFS alojado en la máquina virtual de almacenamiento seleccionada \(SVM\). Puede ver detalles como el nombre del recurso compartido, la ruta de unión, los objetos, la configuración de seguridad y las políticas de exportación definidas para el recurso compartido.' 
+---
+= Ver los recursos compartidos CIFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la página de detalles Health/Storage Virtual Machine para ver información detallada sobre el recurso compartido CIFS alojado en la máquina virtual de almacenamiento (SVM) seleccionada. Puede ver detalles como el nombre del recurso compartido, la ruta de unión, los objetos, la configuración de seguridad y las políticas de exportación definidas para el recurso compartido.
+
+
+
+== Antes de empezar
+
+* La licencia de CIFS debe estar habilitada en el clúster.
+* Deben configurarse los LIF que sirven a los recursos compartidos de CIFS.
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+
+== Acerca de esta tarea
+
+[NOTE]
+====
+Los recursos compartidos de las carpetas no se muestran en la pestaña CIFS Shares.
+
+====
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. Seleccione la SVM para la que desea ver los detalles de los recursos compartidos de CIFS.
+. En la página de detalles *Health/Storage Virtual Machine*, haga clic en la ficha *CIFS shares*.
+

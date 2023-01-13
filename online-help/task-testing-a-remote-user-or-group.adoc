@@ -1,0 +1,30 @@
+---
+permalink: online-help/task-testing-a-remote-user-or-group.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede confirmar que un usuario remoto o un grupo remoto pueden acceder al servidor de Unified Manager mediante la configuración de autenticación que se especifican para los servidores de autenticación. 
+---
+= Prueba de un usuario remoto o un grupo remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede confirmar que un usuario remoto o un grupo remoto pueden acceder al servidor de Unified Manager mediante la configuración de autenticación que se especifican para los servidores de autenticación.
+
+
+
+== Antes de empezar
+
+* Debe haber habilitado la autenticación remota y configurado la configuración de autenticación para que el servidor de Unified Manager pueda validar el usuario remoto o el grupo remoto.
+* Debe tener el rol de administrador de OnCommand.
+
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *usuarios* en el menú Administración de la izquierda.
+. En la página *Administración/usuarios*, seleccione un usuario remoto o grupo remoto que desee validar y, a continuación, haga clic en *Prueba*.
+

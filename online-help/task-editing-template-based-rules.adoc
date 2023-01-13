@@ -1,0 +1,64 @@
+---
+permalink: online-help/task-editing-template-based-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar una regla creada mediante las plantillas de reglas del cuadro de diálogo Editar regla. Puede agregar, modificar o eliminar propiedades de regla como rutas de acceso al directorio, tipos de archivo y propietarios. También puede modificar el nombre de la regla y la clase de almacenamiento asociada con la regla. 
+---
+= Edición de reglas basadas en plantillas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar una regla creada mediante las plantillas de reglas del cuadro de diálogo Editar regla. Puede agregar, modificar o eliminar propiedades de regla como rutas de acceso al directorio, tipos de archivo y propietarios. También puede modificar el nombre de la regla y la clase de almacenamiento asociada con la regla.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione una SVM adecuada.
+. Haga clic en *Política de datos*.
++
+Se muestra la lista de reglas de la política de datos para la SVM seleccionada con Infinite Volume.
+
+. Seleccione la regla para la que desea incluir nuevas condiciones o conjuntos de condiciones.
+. Haga clic en *Editar*.
+. En el cuadro de diálogo *Editar regla*, edite la regla según sea necesario:
++
+|===
+| Si desea... | Realice lo siguiente... 
+
+
+ a| 
+Agregue una nueva propiedad de regla
+ a| 
+Haga clic en *Agregar*.
+
+
+
+ a| 
+Eliminar una propiedad de regla
+ a| 
+Haga clic en *Eliminar* seleccionando la propiedad de regla adecuada.
+
+
+
+ a| 
+Modificar una propiedad de regla
+ a| 
+Haga doble clic en la propiedad de regla apropiada y, a continuación, modifique según sea necesario.
+
+|===
+. Haga clic en *Actualizar*.
+. Compruebe que las modificaciones se aplican a la regla ampliando la regla en la pestaña *Política de datos*.
+. Obtenga una vista previa de los demás cambios realizados en la directiva de datos.
+. Haga clic en *Activar* para activar los cambios en las propiedades de la regla en la SVM.
+

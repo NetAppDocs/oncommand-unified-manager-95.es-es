@@ -1,0 +1,30 @@
+---
+permalink: online-help/task-customizing-the-events-report-to-display-events-impacting-availability.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe Events para mostrar los eventos clasificados según la mayor parte de los incidentes y asignados al administrador. Puede filtrar el informe por nivel de impacto y nombre de administrador. 
+---
+= Personalización del informe Events para mostrar eventos que afectan a la disponibilidad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe Events para mostrar los eventos clasificados según la mayor parte de los incidentes y asignados al administrador. Puede filtrar el informe por nivel de impacto y nombre de administrador.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para filtrar los eventos de disponibilidad, haga clic en la columna *Área de impacto* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista desplegable *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *incidente*.
+. Haga clic en *Aceptar*.
+

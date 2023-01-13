@@ -1,0 +1,58 @@
+---
+permalink: performance-checker/task-analyzing-a-performance-incident-on-a-cluster-in-a-metrocluster-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar Unified Manager para analizar el clúster en una configuración de MetroCluster en la que se detectó un evento de rendimiento. Puede identificar el nombre del clúster, la hora de detección de eventos y las cargas de trabajo correspondientes. 
+---
+= Analizar un evento de rendimiento dinámico en un clúster en una configuración de MetroCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar Unified Manager para analizar el clúster en una configuración de MetroCluster en la que se detectó un evento de rendimiento. Puede identificar el nombre del clúster, la hora de detección del evento y las cargas de trabajo implicadas en _intimid_ y _Victim_.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento nuevos, reconocidos o obsoletos para una configuración de MetroCluster.
+* Los dos clústeres de la configuración de MetroCluster deben supervisarse con la misma instancia de Unified Manager.
+
+
+
+
+== Pasos
+
+. Abra la página *Detalles del evento* para ver información sobre el evento.
+. Revise la descripción del evento para ver los nombres de las cargas de trabajo involucradas y el número de cargas de trabajo involucradas.
++
+En este ejemplo, el icono Recursos de MetroCluster es de color rojo, lo que indica que los recursos de MetroCluster están en disputa. Coloque el cursor sobre el icono para mostrar una descripción del icono. En la parte superior de la página del ID de evento, el nombre del clúster identifica el nombre del clúster en el que se detectó el evento.
+
++
+image::../media/opm-mcc-incident-summary-png.gif[Resumen del evento de rendimiento para la configuración de MetroCluster]
+
+. Anote el nombre del clúster y la hora de detección del evento que puede utilizar para analizar los eventos de rendimiento en el clúster de partners.
+. En los gráficos, revise las cargas de trabajo _Victim_ para confirmar que sus tiempos de respuesta son superiores al umbral de rendimiento.
++
+En este ejemplo, la carga de trabajo de la víctima se muestra en el texto de desplazamiento. Los gráficos de latencia muestran, a alto nivel, un patrón de latencia constante para las cargas de trabajo víctimas involucradas. Aunque la latencia anormal de las cargas de trabajo víctimas haya activado el evento, un patrón de latencia consistente podría indicar que las cargas de trabajo están funcionando dentro de su rango esperado, pero que un pico en la I/o aumentó la latencia y activó el evento.
+
++
+image::../media/opm-mcc-incident-victim-workloads-png.gif[Cargas de trabajo víctimas en eventos de rendimiento para la configuración de MetroCluster]
+
++
+Si instaló recientemente una aplicación en un cliente que accede a estas cargas de trabajo de volumen y esa aplicación envía una gran cantidad de I/o, es posible que anticipe que aumentan las latencias. Si la latencia de las cargas de trabajo se devuelve dentro del rango esperado, el estado del evento cambia a obsoleto y permanece en este estado durante más de 30 minutos, es probable que pueda ignorar el evento. Si el evento está en curso y permanece en el estado nuevo, puede investigarlo aún más para determinar si otros problemas causaron el evento.
+
+. En el gráfico de rendimiento de cargas de trabajo, seleccione *Bully Workloads* para mostrar las cargas de trabajo abusivas.
++
+La presencia de cargas de trabajo abusivas indica que el evento podría haber sido causado por una o más cargas de trabajo en el clúster local haciendo un uso excesivo de los recursos de MetroCluster. Las cargas de trabajo abusivas tienen una alta desviación del rendimiento de escritura (Mbps).
+
++
+En este gráfico, se muestra el patrón de rendimiento de escritura (Mbps) para las cargas de trabajo de forma general. Es posible revisar el patrón de MB/s de escritura para identificar un rendimiento anómalo, lo que puede indicar que una carga de trabajo está aprovechando en exceso los recursos de MetroCluster.
+
++
+Si en este evento no hay cargas de trabajo matones, es posible que el evento haya estado causado por un problema de estado con el enlace entre los clústeres o un problema de rendimiento en el clúster de partners. Puede usar Unified Manager para comprobar el estado de ambos clústeres en una configuración de MetroCluster. También puede utilizar Unified Manager para comprobar y analizar eventos de rendimiento en el clúster de partners.
+
+

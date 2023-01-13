@@ -1,0 +1,270 @@
+---
+permalink: online-help/reference-relationship-all-relationships-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Protection/Volume Relationships muestra información sobre las relaciones de protección en el sistema de almacenamiento. 
+---
+= Página Protection/Volume Relationships
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Protection/Volume Relationships muestra información sobre las relaciones de protección en el sistema de almacenamiento.
+
+Utilice el botón *Exportar* para exportar los detalles de todas las relaciones a valores separados por comas (`.csv`).
+
+* *Estado de la relación*
++
+Muestra el estado actual de la relación de protección.
+
++
+El estado puede ser uno de los errores (image:../media/sev-error-um60.png[""]), Advertencia (image:../media/sev-warning-um60.png[""]), o normal (image:../media/sev-normal-um60.png[""]).
+
+* *Estado de retraso*
++
+Muestra el estado de posposición de las relaciones administradas y de las relaciones no administradas que tienen una programación asociada a dicha relación. El estado de desfase puede ser:
+
++
+** Error (image:../media/sev-error-um60.png[""])
++
+La duración de la demora es mayor o igual que el umbral de error de desfase.
+
+** Advertencia (image:../media/sev-warning-um60.png[""])
++
+La duración de la demora es mayor o igual que el umbral de aviso de desfase.
+
+** Normal (image:../media/sev-normal-um60.png[""])
++
+La duración de la demora se encuentra dentro de los límites normales.
+
+** No aplicable
++
+El estado de desfase no es aplicable a las relaciones síncronas porque no es posible configurar una programación.
+
+
+
+* *Estado de transferencia*
++
+Muestra el estado de transferencia de la relación de protección. El estado de la transferencia puede ser uno de los siguientes:
+
++
+** Anulando
++
+Las transferencias de SnapMirror están habilitadas; no obstante, hay una operación de anulación de transferencia que puede incluir la eliminación del punto de comprobación en curso.
+
+** Comprobando
++
+El volumen de destino está sometido a una comprobación de diagnóstico y no hay transferencia en curso.
+
+** Finalizando
++
+Las transferencias de SnapMirror están habilitadas. El volumen se encuentra actualmente en la fase de postransferencia para las transferencias incrementales de la SnapVault.
+
+** Inactivo
++
+Las transferencias están habilitadas y no hay transferencia en curso.
+
+** Sinc
++
+Los datos de los dos volúmenes en la relación síncrona están sincronizados.
+
+** Fuera de sincronización
++
+Los datos del volumen de destino no están sincronizados con el volumen de origen.
+
+** Preparando
++
+Las transferencias de SnapMirror están habilitadas. El volumen se encuentra actualmente en la fase de transferencia previa a las transferencias de SnapVault incrementales.
+
+** En cola
++
+Las transferencias de SnapMirror están habilitadas. No hay transferencias en curso.
+
+** En modo inactivo
++
+Las transferencias de SnapMirror están deshabilitadas. No hay transferencia en curso.
+
+** Ralentización
++
+Hay una transferencia de SnapMirror en curso. Las transferencias adicionales están deshabilitadas.
+
+** Transfiriendo
++
+Las transferencias de SnapMirror están habilitadas y hay una transferencia en curso.
+
+** En transición
++
+Se completó la transferencia asíncrona de datos del volumen de origen al volumen de destino y se inició la transición hacia la operación síncrona.
+
+** Esperando
++
+Se ha iniciado una transferencia de SnapMirror, pero algunas tareas asociadas están a la espera de que se pongan en cola.
+
+
+
+* *Tipo de relación*
++
+Muestra el tipo de relación utilizado para replicar un volumen. Los tipos de relaciones incluyen:
+
++
+** Reflejo asíncrono
+** Vault asíncrono
+** StrictSync
+** Sincr
+
+
+* *Fuente SVM*
++
+Muestra el nombre de la SVM de origen.
+
++
+Si el mensaje `Resource-key not discovered` Si se muestra, esto puede indicar que la SVM existe en el clúster pero que aún no se ha añadido al inventario de Unified Manager o que se creó después de la última actualización del clúster. Debe asegurarse de que exista la SVM o realizar una nueva detección en el clúster para actualizar la lista de recursos.
+
++
+Puede mover el puntero por la SVM de origen para ver información como el clúster, el tipo de volumen, los protocolos permitidos y el espacio utilizado. Para ver más detalles sobre la SVM, haga clic en el nombre de la SVM.
+
+* *Volumen de origen*
++
+Muestra el volumen de origen que se está protegiendo. Para ver más detalles sobre el volumen de origen, se debe hacer clic en el nombre del volumen de origen.
+
++
+Si el mensaje `Resource-key not discovered` Si se muestra, esto puede indicar que el volumen existe en el clúster pero que aún no se ha añadido al inventario de Unified Manager o que el volumen se creó después de la última actualización del clúster. Debe asegurarse de que el volumen exista o realizar una nueva detección en el clúster para actualizar la lista de recursos.
+
+* *SVM de destino*
++
+Muestra el nombre de la SVM de destino.
+
++
+Puede mover el puntero por la SVM de destino para ver información como el clúster, el tipo de volumen, los protocolos permitidos y el espacio utilizado. Para ver más detalles sobre la SVM, haga clic en el nombre de la SVM.
+
+* *Volumen de destino*
++
+Muestra el nombre del volumen de destino.
+
++
+Puede mover el puntero por un volumen para ver información, como el agregado que contiene el volumen, el espacio sobrecomprometido de la cuota de qtree, el estado de la última operación de movimiento de volúmenes y el espacio asignado en el volumen. También es posible ver los detalles de los objetos relacionados, como la SVM a la que pertenece el volumen, el agregado al que pertenece el volumen y todos los volúmenes que pertenecen a este agregado.
+
+* *Duración de retraso*
++
+Muestra la cantidad de tiempo que los datos del reflejo se retrasan con respecto al origen.
+
++
+La duración de la demora debe ser cercana o igual a 0 segundos para las relaciones de StrictSync.
+
+* *Última actualización realizada correctamente*
++
+Muestra la hora a la que se realizó la última operación correcta de SnapMirror o SnapVault.
+
++
+La última actualización realizada correctamente no es aplicable a las relaciones síncronas.
+
+* *Duración de la última transferencia*
++
+Muestra el tiempo que se tarda en finalizar la última transferencia de datos.
+
++
+La duración de la transferencia no es aplicable a las relaciones de StrictSync porque la transferencia debe ser simultánea.
+
+* *Tamaño de la última transferencia*
++
+Muestra el tamaño, en bytes, de la última transferencia de datos.
+
++
+El tamaño de transferencia no es aplicable a las relaciones StrictSync.
+
+* *Salud de la relación*
++
+Muestra el estado de la relación del clúster.
+
+* *Estado de relación*
++
+Muestra el estado de reflejo de la relación de SnapMirror.
+
+* *Razón insalubre*
++
+La razón por la que la relación está en un estado poco saludable.
+
+* *Cluster de origen*
++
+Muestra el nombre del clúster de origen de la relación SnapMirror.
+
+* *Nodo de origen*
++
+Muestra el nombre del nodo de origen de la relación SnapMirror.
+
+* *Cluster de destino*
++
+Muestra el nombre del clúster de destino de la relación SnapMirror.
+
+* *Nodo de destino*
++
+Muestra el nombre del nodo de destino de la relación SnapMirror.
+
+* *Prioridad de transferencia*
++
+Muestra la prioridad en la que se ejecuta una transferencia. La prioridad de transferencia es normal o Baja. Las transferencias de prioridad normal se programan antes de que se realicen transferencias de baja prioridad.
+
++
+La prioridad de transferencia no es aplicable a las relaciones síncronas porque todas las transferencias se tratan con la misma prioridad.
+
+* *Política*
++
+Muestra la política de protección del volumen. Puede hacer clic en el nombre de la política para ver los detalles asociados con esa política, incluida la siguiente información:
+
++
+** Prioridad de transferencia
++
+Especifica la prioridad en la que se ejecuta una transferencia para operaciones asíncronas. La prioridad de transferencia es normal o Baja. Las transferencias de prioridad normal se programan antes de que se realicen transferencias de baja prioridad. El valor predeterminado es normal.
+
+** Ignorar tiempo de acceso
++
+Se aplica solo a las relaciones de SnapVault. Esto especifica si las transferencias incrementales ignoran archivos que sólo cambian su tiempo de acceso. Los valores son True o False. El valor predeterminado es False.
+
+** Cuando la relación no está sincronizada
++
+Especifica la acción que ONTAP realiza cuando no se puede sincronizar una relación síncrona. Las relaciones de StrictSync restringirán el acceso al volumen primario si no se ha podido sincronizar con el volumen secundario. Las relaciones de sincronización no restringen el acceso al primario si no se sincroniza con el secundario.
+
+** Intenta limitar
++
+Especifica la cantidad máxima de veces que se debe intentar cada transferencia manual o programada para una relación de SnapMirror. El valor predeterminado es 8.
+
+** Comentarios
++
+Proporciona un campo de texto para comentarios específicos de la directiva seleccionada.
+
+** Etiqueta de SnapMirror
++
+Especifica la etiqueta de SnapMirror para la primera programación asociada a la política de copia de Snapshot. El subsistema SnapVault utiliza la etiqueta de SnapMirror al realizar un backup de copias de Snapshot en un destino de SnapVault.
+
+** Configuración de retención
++
+Especifica cuánto tiempo se conservarán los backups, en función del tiempo o de la cantidad de backups.
+
+** Copias Snapshot reales
++
+Especifica la cantidad de copias de Snapshot en este volumen que coinciden con la etiqueta especificada.
+
+** Conserve copias Snapshot
++
+Especifica el número de copias de Snapshot de SnapVault que no se eliminan automáticamente aunque se alcance el límite máximo de la política. Los valores son True o False. El valor predeterminado es False.
+
+** Umbral de advertencia de retención
++
+Especifica el límite de copias de Snapshot en el que se envía una advertencia para indicar que el límite de retención máximo está casi alcanzado.
+
+
+
+* *Horario*
++
+Muestra el nombre de la programación de protección asignada a la relación. Haga clic en el nombre de la programación para ver detalles sobre ella.
+
++
+La programación no se aplica para relaciones síncronas.
+
+* *Replicación flexible de versiones*
++
+Muestra las opciones Sí, Sí con copia de seguridad o Ninguno.
+
+

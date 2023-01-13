@@ -1,0 +1,25 @@
+---
+permalink: online-help/concept-what-resource-pools-are.html 
+sidebar: sidebar 
+keywords:  
+summary: Los pools de recursos son grupos de agregados creados por un administrador de almacenamiento mediante Unified Manager con el fin de proporcionar el aprovisionamiento a aplicaciones de partner para la gestión de backup. 
+---
+= Qué pools de recursos son
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los pools de recursos son grupos de agregados creados por un administrador de almacenamiento mediante Unified Manager con el fin de proporcionar el aprovisionamiento a aplicaciones de partner para la gestión de backup.
+
+Puede agrupar sus recursos en función de atributos como el rendimiento, el costo, la ubicación física o la disponibilidad. Mediante la agrupación de recursos relacionados en un pool, puede tratar el pool como una única unidad para la supervisión y el aprovisionamiento. Esto simplifica la gestión de estos recursos y permite un uso más flexible y eficiente del almacenamiento.
+
+Durante el aprovisionamiento de almacenamiento secundario, Unified Manager determina el agregado más adecuado del pool de recursos para su protección usando los siguientes criterios:
+
+* El agregado es un agregado de datos (no un agregado raíz) y se ENCUENTRA EN LÍNEA.
+* El agregado se encuentra en un nodo de clúster de destino cuya versión de ONTAP sea la misma o superior a la versión principal del clúster de origen.
+* El agregado tiene el mayor espacio disponible de todos los agregados del pool de recursos.
+* Tras aprovisionar el volumen de destino, el espacio de la agrupación se encuentra dentro del umbral casi completo y casi comprometido definido para el agregado (umbral global o local, lo que corresponda).
+* El número de volúmenes de FlexVol en el nodo de destino no debe superar el límite de plataforma.
+

@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept-applying-filtering-to-correlated-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: El filtrado le permite mostrar un subconjunto más pequeño y bien definido de objetos en la cuadrícula. Por ejemplo, si tiene 25 volúmenes en la cuadrícula, el filtrado le permite ver sólo aquellos volúmenes con un rendimiento inferior a 90 Mbps o una latencia superior a 1 ms/op. 
+---
+= Aplicar filtrado para reducir la lista de objetos correlacionados de la cuadrícula
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El filtrado le permite mostrar un subconjunto más pequeño y bien definido de objetos en la cuadrícula. Por ejemplo, si tiene 25 volúmenes en la cuadrícula, el filtrado le permite ver sólo aquellos volúmenes con un rendimiento inferior a 90 Mbps o una latencia superior a 1 ms/op.

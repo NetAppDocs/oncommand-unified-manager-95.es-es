@@ -1,0 +1,44 @@
+---
+permalink: online-help/reference-protection-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de protección le indican si un trabajo se ha producido un error o se ha anulado para poder supervisar si hay problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de protección
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de protección le indican si un trabajo se ha producido un error o se ha anulado para poder supervisar si hay problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Zona de impacto: Protección
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Error de trabajo de protección (ocumEvtProtectionJobTaskFailed)
+ a| 
+Incidente
+ a| 
+Servicio de volumen o almacenamiento
+ a| 
+Crítico
+
+
+
+ a| 
+Trabajo de protección anulado (ocumEvtProtectionJobAborted)
+ a| 
+Riesgo
+ a| 
+Servicio de volumen o almacenamiento
+ a| 
+Advertencia
+
+|===

@@ -1,0 +1,47 @@
+---
+permalink: online-help/task-deleting-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede eliminar una regla de una política de datos cuando ya no sea necesaria. Por ejemplo, es posible que desee eliminar una regla de un directorio determinado que ya no sea válida. 
+---
+= Eliminación de reglas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede eliminar una regla de una política de datos cuando ya no sea necesaria. Por ejemplo, es posible que desee eliminar una regla de un directorio determinado que ya no sea válida.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+La pestaña Data Policy solo puede verse para una SVM con Infinite Volume.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione una SVM adecuada.
+. Haga clic en *Política de datos*.
++
+Se muestra la lista de reglas de la política de datos para la SVM seleccionada con Infinite Volume.
+
+. Seleccione la regla que desea eliminar y, a continuación, haga clic en *Eliminar*.
++
+[NOTE]
+====
+No puede eliminar la regla predeterminada.
+
+====
+. Obtenga una vista previa de los demás cambios realizados en la directiva de datos.
+. Haga clic en *Activar* para activar los cambios en las propiedades de la regla en la SVM.
+

@@ -1,0 +1,57 @@
+---
+permalink: online-help/task-restoring-a-mysql-database-backup-on-red-hat-enterprise-linux-or-centos.html 
+sidebar: sidebar 
+keywords: Unified Manager 
+summary: Si se produce la pérdida de datos o daños en los datos, es posible restaurar Unified Manager al estado estable anterior con la pérdida mínima de datos. Puede restaurar la base de datos de Unified Manager en un sistema Red Hat Enterprise Linux o CentOS local o remoto. 
+---
+= Restaurar un backup de base de datos en un sistema Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si se produce la pérdida de datos o daños en los datos, es posible restaurar Unified Manager al estado estable anterior con la pérdida mínima de datos. Puede restaurar la base de datos de Unified Manager en un sistema Red Hat Enterprise Linux o CentOS local o remoto.
+
+
+
+== Antes de empezar
+
+* Debe tener Unified Manager instalado en un servidor.
+* Debe tener las credenciales de usuario raíz del host Linux en el que está instalado Unified Manager.
+* Debe haber copiado el archivo de backup de Unified Manager y el contenido del directorio de repositorio de la base de datos en el sistema donde se ejecutará la operación de restauración.
++
+Se recomienda copiar el archivo de copia de seguridad en el directorio predeterminado `/data/ocum-backup`. Los archivos de repositorio de base de datos deben copiarse a `/database-dumps-repo` subdirectorio bajo el `/ocum-backup` directorio.
+
+* Los archivos de copia de seguridad deben ser de `.7z` tipo.
+
+
+
+
+== Acerca de esta tarea
+
+La función de restauración es específica de la plataforma y de cada versión. Puede restaurar un backup de Unified Manager solo en la misma versión de Unified Manager. Puede restaurar un archivo de copia de seguridad de Linux o un archivo de copia de seguridad de dispositivo virtual en un sistema Red Hat Enterprise Linux o CentOS.
+
+[TIP]
+====
+Si el nombre de la carpeta de copia de seguridad contiene un espacio, debe incluir la ruta absoluta o la ruta relativa entre comillas dobles.
+
+====
+
+
+== Pasos
+
+. Si va a realizar una restauración en un servidor nuevo, después de instalar Unified Manager no inicia la interfaz de usuario ni configura ninguna configuración de clústeres, usuarios o autenticación cuando se haya completado la instalación. El archivo de backup rellena esta información durante el proceso de restauración.
+. Inicie sesión como usuario raíz en el host en el que está instalado Unified Manager.
+. Si Unified Manager se instala en la instalación de VCS, detenga los servicios ocie y ocieau de Unified Manager utilizando Veritas Operations Manager.
+. En el símbolo del sistema, restaure el backup: `um backup restore -f <backup_file_path>/<backup_file_name>`
++
+`um backup restore -f /data/ocum-backup/UM_9.4.N151113.1348_backup_rhel_02-20-2018-04-45.7z`
+
+
+
+
+
+== Después de terminar
+
+Una vez finalizada la operación de restauración, puede iniciar sesión en Unified Manager.

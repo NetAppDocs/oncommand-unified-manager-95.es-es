@@ -1,0 +1,87 @@
+---
+permalink: online-help/task-adding-clusters.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede añadir un clúster a Unified Manager de OnCommand para poder supervisar el clúster. Esto incluye la capacidad de obtener información del clúster, como el estado, la capacidad, el rendimiento y la configuración del clúster, para poder encontrar y resolver cualquier problema que pueda ocurrir. 
+---
+= Añadir clústeres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir un clúster a Unified Manager de OnCommand para poder supervisar el clúster. Esto incluye la capacidad de obtener información del clúster, como el estado, la capacidad, el rendimiento y la configuración del clúster, para poder encontrar y resolver cualquier problema que pueda ocurrir.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe tener el nombre de host o la dirección IP de administración del clúster (IPv4 o IPv6) para el clúster.
++
+Cuando se utiliza el nombre de host, debe resolver la dirección IP de administración del clúster para la LIF de gestión del clúster. Si utiliza un LIF de gestión de nodos, la operación da error.
+
+* Debe tener el nombre de usuario y la contraseña para acceder al clúster.
++
+Esta cuenta debe tener el rol _admin_ con acceso a aplicaciones establecido en _ontapi_, _ssh_ y _http_.
+
+* Debe conocer el tipo de protocolo (HTTP o HTTPS) que se debe configurar en el clúster y el número de puerto que se utiliza para conectarse al clúster.
+* Debe tener espacio suficiente en el servidor de Unified Manager. Se le impide agregar un clúster al servidor cuando más del 90 % del espacio ya está consumido.
+
+
+[NOTE]
+====
+Puede agregar clústeres que están detrás de un servidor de seguridad/NAT utilizando la dirección IP NAT de Unified Manager. Los sistemas SnapProtect o de automatización de flujo de trabajo conectados también deben estar detrás del servidor de seguridad NAT y las llamadas API de SnapProtect deben utilizar la dirección IP NAT para identificar el clúster.
+
+====
+
+
+== Acerca de esta tarea
+
+* Cada clúster de una configuración de MetroCluster se debe añadir por separado.
+* Una única instancia de Unified Manager puede admitir un número determinado de nodos. Si necesita supervisar un entorno que supere el número de nodos admitidos, debe instalar una instancia adicional de Unified Manager para supervisar algunos de los clústeres.
+* Puede supervisar un único clúster mediante dos instancias de Unified Manager siempre que haya configurado una segunda LIF de gestión del clúster para que cada instancia de Unified Manager se conecte a través de un LIF diferente.
+
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Configuración* > *fuentes de datos de clúster*.
+. En la página *Configuration/Cluster Data Sources*, haga clic en *Add*.
+. En el cuadro de diálogo *Agregar clúster*, especifique los valores según sea necesario y, a continuación, haga clic en *Enviar*.
+. Si selecciona HTTPS, realice los siguientes pasos:
++
+.. En el cuadro de diálogo *autorizar host*, haga clic en *Ver certificado* para ver la información del certificado sobre el clúster.
+.. Haga clic en *Sí*.
++
+Unified Manager comprueba el certificado solo cuando se añade inicialmente el clúster. Unified Manager no comprueba el certificado para cada llamada API a ONTAP.
+
++
+Si el certificado ha caducado, no puede añadir un clúster nuevo. Primero debe renovar el certificado SSL y, a continuación, añadir el clúster.
+
+
+
+
+
+
+
+== Resultados
+
+Después de detectar todos los objetos de un clúster nuevo (aproximadamente 15 minutos), Unified Manager comienza a recopilar datos de rendimiento históricos de los 15 días anteriores. Estas estadísticas se recopilan mediante la funcionalidad de recogida de continuidad de datos. Esta función le proporciona más de dos semanas de información sobre el rendimiento de un clúster inmediatamente después de añadir. Una vez completado el ciclo de recogida de continuidad de datos, se recogen datos de rendimiento del clúster en tiempo real, de forma predeterminada, cada cinco minutos.
+
+[NOTE]
+====
+Dado que la recogida de 15 días de datos de rendimiento requiere un uso intensivo de la CPU, se sugiere escalonar la adición de nuevos clústeres de manera que las encuestas de recogida de continuidad de datos no se ejecuten en demasiados clústeres al mismo tiempo. Además, si reinicia Unified Manager durante el período de recogida de continuidad de datos, la recogida se detiene y verá vacíos en los gráficos de rendimiento correspondientes al periodo que falta.
+
+====
+[TIP]
+====
+Si recibe un mensaje de error que no puede agregar el clúster, compruebe si existen los siguientes problemas:
+
+* Si los relojes de los dos sistemas no están sincronizados y la fecha de inicio del certificado HTTPS de Unified Manager es posterior a la fecha en el clúster. Debe asegurarse de que los relojes se sincronicen con NTP o un servicio similar.
+* Si el clúster ha alcanzado la cantidad máxima de destinos de notificaciones de EMS, no se puede añadir la dirección de Unified Manager. De manera predeterminada, solo se pueden definir 20 destinos de notificación de EMS en el clúster.
+
+
+====

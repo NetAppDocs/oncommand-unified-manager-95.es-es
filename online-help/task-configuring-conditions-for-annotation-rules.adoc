@@ -1,0 +1,49 @@
+---
+permalink: online-help/task-configuring-conditions-for-annotation-rules.html 
+sidebar: sidebar 
+keywords: Unified Manager 
+summary: Puede configurar una o más condiciones para crear reglas de anotación que Unified Manager aplica en los objetos de almacenamiento. Los objetos de almacenamiento que cumplen la regla de anotación se anotan con el valor especificado en la regla. 
+---
+= Configuración de condiciones para reglas de anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar una o más condiciones para crear reglas de anotación que Unified Manager aplica en los objetos de almacenamiento. Los objetos de almacenamiento que cumplen la regla de anotación se anotan con el valor especificado en la regla.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *Anotaciones* en el menú Administración de la izquierda.
+. En la ficha *Reglas de anotación*, haga clic en *Agregar*.
+. En el cuadro de diálogo *Agregar regla de anotación*, escriba un nombre para la regla.
+. Seleccione un tipo de objeto de la lista Tipo de objeto de destino y, a continuación, seleccione un nombre de anotación y un valor de la lista.
+. En la sección *Condiciones* del cuadro de diálogo, seleccione un operando y un operador de la lista e introduzca un valor de condición, o haga clic en *Agregar condición* para crear una nueva condición.
+. Haga clic en *Guardar y Agregar*.
+
+
+
+
+== Ejemplo de configuración de una condición para una regla de anotación
+
+Considere una condición para el tipo de objeto SVM, donde el nombre del objeto contiene «mvm_data».
+
+Realice los siguientes pasos en el cuadro de diálogo Agregar regla de anotación para configurar la condición:
+
+. Escriba un nombre para la regla de anotación.
+. Seleccione el tipo de objeto objetivo como SVM.
+. Seleccione una anotación de la lista de anotaciones y un valor.
+. En el campo *Condiciones*, seleccione *Nombre de objeto* como operando.
+. Seleccione *contiene* como operador.
+. Introduzca el valor como `svm_data`.
+. Haga clic en *Agregar*.
+

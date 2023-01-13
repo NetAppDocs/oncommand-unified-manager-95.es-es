@@ -1,0 +1,33 @@
+---
+permalink: install/task-downloading-the-unified-manager-iso-image-vapp.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de actualizar Unified Manager, debe descargar la imagen ISO de Unified Manager desde el sitio de soporte de NetApp. 
+---
+= Descargue la imagen ISO de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de actualizar Unified Manager, debe descargar la imagen ISO de Unified Manager desde el sitio de soporte de NetApp.
+
+
+
+== Antes de empezar
+
+Debe tener credenciales de inicio de sesión en el sitio de soporte de NetApp.
+
+
+
+== Pasos
+
+. Inicie sesión en el sitio de soporte de NetApp y desplácese hasta la página de descarga de software.
+. Descargue y guarde el `.iso` Archivo de imagen en un directorio local o directorio de red al que se puede acceder vSphere Client.
+. Compruebe la suma de comprobación para asegurarse de que el software se ha descargado correctamente.
+
+
+*Información relacionada*
+
+http://mysupport.netapp.com["Soporte de NetApp"]

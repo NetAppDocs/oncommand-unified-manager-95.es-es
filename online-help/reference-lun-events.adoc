@@ -1,0 +1,357 @@
+---
+permalink: online-help/reference-lun-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de LUN le ofrecen información acerca del estado de sus LUN, para que pueda supervisar de posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de LUN le ofrecen información acerca del estado de sus LUN, para que pueda supervisar de posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Disponibilidad
+
+Un asterisco (*) identifica los eventos de EMS que se han convertido a eventos de Unified Manager.
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+LUN sin conexión (ocumEvtLunOffline)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+LUN destruida *
+ a| 
+Evento
+ a| 
+LUN
+ a| 
+Información
+
+
+
+ a| 
+Ruta activa única para acceder a LUN(ocumEvtLunSingleActivePath)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Sin rutas activas para acceder a la LUN (ocumEvtLunNotReacable)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+No hay rutas optimizadas para acceder a la LUN (ocumEvtLunOptimizedPathInactive)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Sin rutas para acceder a la LUN desde un partner de alta disponibilidad (ocumEvtLunHaPathInactive)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+|===
+
+
+== Área de impacto: Capacidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Espacio insuficiente para la copia Snapshot de la LUN(ocumEvtLunSnapshotNotPossible)
+ a| 
+Riesgo
+ a| 
+Volumen
+ a| 
+Advertencia
+
+|===
+
+
+== Área de impacto: Rendimiento
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Se superó el umbral crítico de IOPS de LUN(ocumLunIopsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Se superó el umbral de advertencia de IOPS de LUN (ocumLunIopsWarning).
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido el umbral crítico de Mbps de LUN (ocumLunMbpsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Umbral de advertencia de Mbps de LUN incumplido (ocumLunMbpsWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido el umbral crítico de latencia ms/op de LUN (ocumLunLatencyIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Se ha incumplido el umbral de advertencia de latencia de ms/op de LUN (ocumLunLatencyWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Se insuperó la latencia de LUN y el umbral crítico de IOPS (ocumLunLatencyIopsIncident).
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Se superó el umbral de advertencia de latencia de LUN y IOPS (ocumLunencyIopsWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido el umbral crítico de latencia y Mbps de LUN (ocumLunLatencyMbpsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Se ha incumplido el umbral de advertencia de latencia y Mbps de LUN (ocumLunLatencyMbpsWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Latencia de LUN y rendimiento agregado. Se ha incumplido el umbral crítico de capacidad utilizada (ocumLunLatencyagregatePerfCapacidad UsedIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Latencia de LUN y rendimiento agregado. Se ha incumplido el umbral de advertencia de capacidad utilizada (ocumLunencyagregatPerfCapacidad UsedWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido el umbral crítico de latencia de LUN y uso del agregado (OculunLatencyAggregate adición de utilidades)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Se ha incumplido el umbral de advertencia de latencia de LUN y utilización de agregados (ocumLunarCentral agregationUtilationWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Latencia de LUN y rendimiento de nodos. Se infringió el umbral crítico de la capacidad utilizada (ocumLunencyNodePerfCapacidad UsedIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Latencia de LUN y rendimiento de nodos. Se superó el umbral de advertencia de capacidad utilizada (ocumLunencyNodePerfCapacidad UsedWarning).
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Latencia de LUN y rendimiento de nodos. Capacidad utilizada: Se ha incumplido el umbral crítico de toma de control (ocumLunLatencyagregatPerfCapacidad UsedTakeoverIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Latencia de LUN y rendimiento de nodos. Capacidad utilizada - umbral de advertencia de toma de control incumplido(ocumLunencyagregatPerfCapacidad UsedTakeoOverWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Se superó el umbral crítico de latencia de LUN y uso de nodos (ocumLunNodeUtilationIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Crítico
+
+
+
+ a| 
+Umbral de advertencia de latencia de LUN y uso de nodos incumplido (ocumLunNodeUtilationWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Se superó el umbral de advertencia de IOPS máximo de LUN de QoS (ocumQosLunMaxIopsWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido el umbral de advertencia de Mbps máx. De LUN de QoS (ocumQosLunMaxMbpsWarning)
+ a| 
+Riesgo
+ a| 
+LUN
+ a| 
+Advertencia
+
+|===

@@ -1,0 +1,64 @@
+---
+permalink: online-help/reference-svm-health-fields.html 
+sidebar: sidebar 
+keywords:  
+summary: El informe de inventario de SVM permite analizar los límites de configuración de volumen de SVM y el estado general para comprender los riesgos de disponibilidad de almacenamiento futura. 
+---
+= Informe SVM Inventory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El informe de inventario de SVM permite analizar los límites de configuración de volumen de SVM y el estado general para comprender los riesgos de disponibilidad de almacenamiento futura.
+
+
+
+== Vista de tabla de informe de inventario de SVM
+
+* *Cluster*
++
+Muestra el nombre del clúster que contiene la SVM.
+
+* *Máquina virtual de almacenamiento*
++
+Muestra el nombre de la SVM.
+
+* *Estado*
++
+Muestra el estado administrativo actual de la SVM. El estado puede ser en ejecución, parada, inicio, parada, no asignada, Inicializando o eliminando.
+
+* *Cuenta de volumen*
++
+Muestra la cantidad de volúmenes que contiene la SVM.
+
+* *Volúmenes máximos permitidos*
++
+Muestra los volúmenes máximos permitidos que se pueden configurar en la SVM.
+
+* *Volumen raíz*
++
+Muestra el nombre del volumen raíz de la SVM.
+
+* *Protocolos permitidos*
++
+Muestra el tipo de protocolos que se pueden configurar en la SVM.
+
+* *Dominio DNS*
++
+Muestra el nombre de dominio DNS.
+
+* *Dominio NIS*
++
+Muestra el nombre de dominio del Servicio de información de red (NIS). Esta columna está en blanco cuando el servidor de Network Information Service (NIS) está deshabilitado o no está configurado.
+
+* *LDAP activado*
++
+Muestra si el protocolo LDAP está habilitado o no.
+
+* *Cambio de servicio de nombres*
++
+Muestra el tipo de información recopilada de los hosts. Los valores posibles son file, LDAP o NIS.
+
+

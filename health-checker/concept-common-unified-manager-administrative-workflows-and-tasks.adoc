@@ -1,0 +1,63 @@
+---
+permalink: health-checker/concept-common-unified-manager-administrative-workflows-and-tasks.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Algunos flujos de trabajo administrativos y tareas comunes asociados con Unified Manager incluyen la selección de clústeres de almacenamiento que se van a supervisar; el diagnóstico de condiciones que afectan negativamente a la disponibilidad de los datos, la capacidad y la protección; la creación de relaciones de protección; la restauración de datos perdidos; Configuración y gestión de Infinite Volumes, así como empaquetado y envío de datos de diagnóstico al soporte técnico \(cuando sea necesario\).' 
+---
+= Flujos de trabajo y tareas comunes del estado de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Algunos flujos de trabajo administrativos y tareas comunes asociados con Unified Manager incluyen la selección de clústeres de almacenamiento que se van a supervisar; el diagnóstico de condiciones que afectan negativamente a la disponibilidad de los datos, la capacidad y la protección; la creación de relaciones de protección; la restauración de datos perdidos; Configuración y gestión de Infinite Volumes, así como empaquetado y envío de datos de diagnóstico al soporte técnico (cuando sea necesario).
+
+Unified Manager permite a los administradores de almacenamiento ver una consola, evaluar la capacidad general, la disponibilidad y el estado de protección de los clústeres de almacenamiento gestionados y, a continuación, identificar, localizar, diagnosticar y asignar rápidamente para solucionar cualquier problema específico que pueda surgir.
+
+Los problemas más importantes relacionados con un clúster, una máquina virtual de almacenamiento (SVM), un volumen, un volumen FlexGroup o una relación de protección que afectan a la capacidad de almacenamiento, la disponibilidad de los datos o la fiabilidad de la protección de los objetos de almacenamiento gestionados se muestran en los gráficos de estado del sistema y los eventos en la página Dashboards/Overview. Cuando se identifican problemas críticos, esta página proporciona enlaces para respaldar los flujos de trabajo de solución de problemas adecuados.
+
+Unified Manager también se puede incluir en los flujos de trabajo que incluyen herramientas de capacidad de gestión relacionadas, como OnCommand Workflow Automation (WFA), para dar soporte a la configuración directa de los recursos de almacenamiento.
+
+En este documento se describen los flujos de trabajo comunes relacionados con las siguientes tareas administrativas:
+
+* Diagnóstico y gestión de problemas de disponibilidad
++
+Si los problemas de fallo de hardware o de configuración de recursos de almacenamiento provocan la visualización de eventos de disponibilidad de datos en la página Paneles/Descripción general, los administradores de almacenamiento pueden seguir los enlaces integrados para ver información de conectividad sobre el recurso de almacenamiento afectado, ver asesoramiento sobre solución de problemas y asignar resolución de problemas a otros administradores.
+
+* Configurar y supervisar incidentes de rendimiento
++
+El administrador de OnCommand puede supervisar y gestionar el rendimiento de los recursos del sistema de almacenamiento que se supervisan. Consulte la Guía de flujos de trabajo de _Unified Manager para gestionar el rendimiento de los clústeres_ si desea obtener más información.
+
+* Diagnosticar y gestionar problemas de capacidad de volumen
++
+Si se muestran problemas de capacidad de almacenamiento de volúmenes en la página Paneles/Descripción general, los administradores de almacenamiento pueden seguir los enlaces integrados para ver las tendencias actuales e históricas relacionadas con la capacidad de almacenamiento del volumen afectado, ver asesoramiento sobre solución de problemas y asignar solución de problemas a otros administradores.
+
+* Configuración, supervisión y diagnóstico de problemas en las relaciones de protección
++
+Después de crear y configurar relaciones de protección, los administradores de almacenamiento pueden ver los problemas potenciales relacionados con las relaciones de protección en la página Dashboards/Overview y pueden seguir los enlaces integrados para ver el estado actual de las relaciones de protección, la información de éxito del trabajo de protección actual e histórico sobre las relaciones afectadas, así como asesoramiento para solucionar problemas, y para asignar la resolución de problemas a otros administradores. Los administradores de almacenamiento también pueden configurar y gestionar las relaciones de SnapMirror y SnapVault.
+
+* Crear archivos de copia de seguridad y restaurar datos a partir de archivos de copia de seguridad.
+* Asociación de objetos de almacenamiento con anotaciones
++
+Al asociar los objetos de almacenamiento con anotaciones, los administradores de almacenamiento pueden filtrar y ver los eventos relacionados con los objetos de almacenamiento, lo que permite a los administradores de almacenamiento priorizar y resolver los problemas asociados con los eventos.
+
+* Enviar un bundle de soporte al soporte técnico
++
+Los administradores de almacenamiento pueden recuperar y enviar un bundle de soporte al soporte técnico mediante la consola de mantenimiento. Los paquetes de soporte se deben enviar al soporte técnico cuando el problema requiera un diagnóstico y una solución de problemas más detallados de lo que proporcione un mensaje de AutoSupport.
+
+* Creación de nuevos informes para su importación
++
+Los administradores de almacenamiento pueden crear nuevas `.rptdesign` Archivos mediante el complemento Eclipse para Business Intelligence and Reporting Tools (BIRT). Estos informes pueden importarse a la interfaz de usuario de Unified Manager y se muestran en la página Reports.
+
++
+Los informes que se muestran en la página Reports, proporcionan el estado actual de los objetos de almacenamiento. Puede tomar decisiones importantes, como decisiones sobre adquisición de almacenamiento, en función del uso actual. Estos informes ofrecen una vista detallada de objetos de almacenamiento tales como volúmenes, bandejas de discos y agregados.
+
++
+La página Reports en la interfaz de usuario de Unified Manager permite ver información detallada sobre los informes que genera. Puede buscar un informe específico, guardar un informe y eliminar un informe en la página Reports. También puede programar, compartir e importar un informe desde esta página.
+
+* Creación, configuración, supervisión y protección de Infinite Volumes
++
+Tras utilizar la herramienta Workflow Automation para crear, configurar y definir clases de almacenamiento para un Infinite Volume, los administradores de almacenamiento pueden utilizar Unified Manager para supervisar, establecer umbrales de notificación y definir la política de datos para ese volumen y sus clases de almacenamiento. De manera opcional, los administradores de almacenamiento pueden usar WFA y Unified Manager para configurar la protección de datos para Infinite Volume.
+
+

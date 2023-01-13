@@ -1,0 +1,56 @@
+---
+permalink: performance-checker/task-editing-user-defined-performance-threshold-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: La configuración del umbral se puede editar para las políticas de umbral de rendimiento existentes. Esto puede ser útil si descubre que está recibiendo demasiadas alertas o muy pocas para ciertas condiciones de umbral. 
+---
+= Editar políticas de umbral de rendimiento definidas por el usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuración del umbral se puede editar para las políticas de umbral de rendimiento existentes. Esto puede ser útil si descubre que está recibiendo demasiadas alertas o muy pocas para ciertas condiciones de umbral.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+
+
+== Acerca de esta tarea
+
+No es posible cambiar el nombre de la política ni el tipo de objeto de almacenamiento que se supervisa para las políticas de umbral existentes.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, seleccione *Configuración* > *umbrales de rendimiento*.
++
+Aparece la página Configuration/Performance Thresholds.
+
+. Seleccione la directiva de umbral que desea cambiar y haga clic en *Editar*.
++
+Se muestra la página Edit Threshold Policy.
+
+. Realice los cambios realizados en la directiva de umbral y haga clic en *Guardar*.
++
+El sistema regresa a la página Configuration/Performance Thresholds.
+
+
+
+
+
+== Resultados
+
+Después de guardar, los cambios se actualizan inmediatamente en todos los objetos de almacenamiento que usan la política.
+
+
+
+== Después de terminar
+
+En función del tipo de cambios realizados en la directiva, puede que desee revisar la configuración de alerta configurada para los objetos que utilizan la directiva en la página Configuración/Alertas.

@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-removing-clusters.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible quitar un clúster de Unified Manager mediante la página Configuration/Cluster Data Sources. Por ejemplo, puede quitar un clúster si la detección del clúster falla o cuando desea retirar un sistema de almacenamiento. 
+---
+= Quitar clústeres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible quitar un clúster de Unified Manager mediante la página Configuration/Cluster Data Sources. Por ejemplo, puede quitar un clúster si la detección del clúster falla o cuando desea retirar un sistema de almacenamiento.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Esta tarea elimina el clúster seleccionado de Unified Manager. Después de eliminar un clúster, este ya no se supervisa. La instancia de Unified Manager registrada en el clúster eliminado también se elimina del clúster.
+
+Al quitar un clúster, también se eliminan todos sus objetos de almacenamiento, datos históricos, servicios de almacenamiento y todos los eventos asociados de Unified Manager. Estos cambios se reflejan en las páginas de inventario y las páginas de detalles después del siguiente ciclo de recopilación de datos.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Configuración* > *fuentes de datos de clúster*.
+. En la página *Configuration/Cluster Data Sources*, seleccione el clúster que desea quitar y haga clic en *Remove*.
+. En el cuadro de diálogo del mensaje *Quitar origen de datos*, haga clic en *Quitar* para confirmar la solicitud de eliminación.
+

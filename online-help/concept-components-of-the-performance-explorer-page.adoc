@@ -1,0 +1,72 @@
+---
+permalink: online-help/concept-components-of-the-performance-explorer-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Performance Explorer le permite comparar el rendimiento de objetos similares en un clúster, por ejemplo, todos los volúmenes de un clúster. Esto resulta beneficioso para la solución de problemas de eventos de rendimiento y el ajuste preciso del rendimiento de objetos. También puede comparar objetos con el objeto raíz, que es la línea base con la que se realizan otras comparaciones de objetos. 
+---
+= Componentes de la página Performance Explorer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Performance Explorer le permite comparar el rendimiento de objetos similares en un clúster, por ejemplo, todos los volúmenes de un clúster. Esto resulta beneficioso para la solución de problemas de eventos de rendimiento y el ajuste preciso del rendimiento de objetos. También puede comparar objetos con el objeto raíz, que es la línea base con la que se realizan otras comparaciones de objetos.
+
+Puede hacer clic en el botón *Favoritos* (image:../media/favorites-inactive.png[""]) para agregar este objeto a la lista de objetos de almacenamiento favoritos. Un botón azul (image:../media/favorites-active.png[""]) indica que este objeto ya es un favorito.
+
+Puede hacer clic en el botón *Cambiar a vista de estado* para mostrar la página de detalles de estado de este objeto. En algunos casos, puede obtener información importante sobre la configuración de almacenamiento para el objeto que podría ayudarle a resolver problemas.
+
+La página Performance Explorer muestra una lista de objetos del clúster y sus datos de rendimiento. Esta página muestra todos los objetos de clúster del mismo tipo (por ejemplo, volúmenes y sus estadísticas de rendimiento específicas para objeto) en una tabla de resultados. Esta vista proporciona una descripción eficiente del rendimiento de objetos del clúster.
+
+[NOTE]
+====
+Si «'N/A'» aparece en cualquier celda de la tabla, significa que un valor para ese contador no está disponible porque no hay E/S en ese objeto en este momento.
+
+====
+La página Performance Explorer contiene los siguientes componentes:
+
+* *Intervalo de tiempo*
++
+Le permite seleccionar un intervalo de tiempo para los datos del objeto.
+
++
+Puede elegir un rango predefinido o especificar un intervalo de tiempo personalizado.
+
+* *Ver y comparar*
++
+Permite seleccionar qué tipo de objeto correlacionado se muestra en la cuadrícula.
+
++
+Las opciones disponibles dependen del tipo de objeto raíz y sus datos disponibles. Puede hacer clic en la lista desplegable Ver y comparar para seleccionar un tipo de objeto. El tipo de objeto seleccionado se muestra en la lista.
+
+* *Filtrado*
++
+Le permite limitar la cantidad de datos que recibe, en función de sus preferencias.
+
++
+Puede crear filtros que se apliquen a los datos del objeto, por ejemplo, IOPS de mayor de 4. Puede agregar hasta cuatro filtros simultáneos.
+
+* *Comparando*
++
+Muestra una lista de los objetos seleccionados para su comparación con el objeto raíz.
+
++
+Los datos de los objetos del panel de comparación se muestran en los gráficos de contador.
+
+* *Ver estadísticas en*
++
+Para los volúmenes y los LUN, permite seleccionar si las estadísticas se muestran después de cada ciclo de recogida (predeterminado 5 minutos), o si las estadísticas se muestran como una media por hora. Esta funcionalidad le permite ver el gráfico de latencia al servicio del programa «'Garantía de rendimiento» de NetApp.
+
+* * Contador gráficos*
++
+Muestra datos gráficos para cada categoría de rendimiento de objeto.
+
++
+Normalmente, sólo se muestran tres o cuatro gráficos de forma predeterminada. El componente elegir gráficos permite mostrar gráficos adicionales u ocultar gráficos específicos. También puede elegir mostrar u ocultar la línea de tiempo de los eventos.
+
+* *Calendario de eventos*
++
+Muestra los eventos de rendimiento y estado que se producen en la línea de tiempo seleccionada en el componente intervalo de tiempo.
+
+

@@ -1,0 +1,51 @@
+---
+permalink: online-help/task-customizing-the-svm-inventory-report-to-display-a-list-of-svms-reaching-maximum-volume-limit.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe de inventario de SVM para mostrar una lista de las SVM que han alcanzado el límite de volumen máximo ordenando los volúmenes en orden creciente. 
+---
+= Personalizar el informe SVM Inventory para mostrar una lista de SVM que alcanzan el límite máximo de volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe de inventario de SVM para mostrar una lista de las SVM que han alcanzado el límite de volumen máximo ordenando los volúmenes en orden creciente.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster, realice los siguientes pasos:
++
+.. Haga clic dentro de la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para filtrar los SVM que no tengan volúmenes permitidos ilimitados, haga clic en la columna *volúmenes permitidos máximos* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En el campo *Tipo de datos*, seleccione *cadena* y haga clic en *Aceptar*.
+. En la lista desplegable *condición*, seleccione *no igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *ilimitado*.
+. Para agregar una nueva columna calculada, realice los siguientes pasos:
++
+.. Seleccione una columna y haga clic en image:../media/click-to-see-menu.gif[""] Y seleccione *columna* > *Nueva columna computada*.
+.. En el cuadro de diálogo *Nueva columna computarizada*, escriba `Available Volume` En el campo *etiqueta de columna*.
+.. En la lista Seleccionar categoría, seleccione *Matemáticas*.
+.. En la lista desplegable *Select function*, seleccione *Avanzado*.
+.. En el campo *introducir expresión*, escriba `[maximumVolumes]-[volumeCount]`.
+.. Haga clic en *Aceptar*.
+
+
+. Para ordenar las SVM en orden ascendente, haga clic en la columna *volumen disponible* y haga clic en image:../media/click-to-see-menu.gif[""] .
+. Seleccione *filtro* > *Arriba/abajo N*.
+. En el cuadro de diálogo *Arriba/abajo N*, seleccione *abajo N* en el campo *filtro* e introduzca un valor en el campo de texto.
+. Haga clic en *Aceptar*.
+

@@ -1,0 +1,22 @@
+---
+permalink: online-help/task-bookmarking-your-favorite-help-topics-onc.html 
+sidebar: sidebar 
+keywords:  
+summary: En la ficha Favoritos de ayuda, puede marcar los temas de Ayuda que utiliza con frecuencia. Ayude a los marcadores a proporcionar un acceso rápido a sus temas favoritos. 
+---
+= Guardado de marcadores de sus temas favoritos de la Ayuda
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la ficha Favoritos de ayuda, puede marcar los temas de Ayuda que utiliza con frecuencia. Ayude a los marcadores a proporcionar un acceso rápido a sus temas favoritos.
+
+
+
+== Pasos
+
+. Desplácese al tema de Ayuda que desea agregar como favorito.
+. Haga clic en *Favoritos* y, a continuación, haga clic en *Agregar*.
+

@@ -1,0 +1,80 @@
+---
+permalink: performance-checker/task-responding-to-a-dynamic-performance-event-caused-by-qos-policy-group-throttling.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede utilizar Unified Manager para investigar un evento de rendimiento provocado por un grupo de políticas de calidad de servicio \(QoS\) que regula el rendimiento de la carga de trabajo \(Mbps\). La limitación aumentó los tiempos de respuesta \(latencia\) de las cargas de trabajo de volúmenes en el grupo de políticas. Puede utilizar la información de eventos para determinar si son necesarios nuevos límites en los grupos de políticas para detener la limitación.' 
+---
+= Responder a un evento de rendimiento dinámico causado por la limitación del grupo de políticas de calidad de servicio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar Unified Manager para investigar un evento de rendimiento provocado por un grupo de políticas de calidad de servicio (QoS) que regula el rendimiento de la carga de trabajo (Mbps). La aceleración aumentó los tiempos de respuesta (latencia) de las cargas de trabajo de volúmenes en el grupo de políticas. Puede utilizar la información de eventos para determinar si son necesarios nuevos límites en los grupos de políticas para detener la limitación.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento nuevos, reconocidos o obsoletos.
+
+
+
+
+== Pasos
+
+. Abra la página *Detalles del evento* para ver información sobre el evento.
+. Lea la *Descripción*, que muestra el nombre de las cargas de trabajo afectadas por la limitación.
++
+[NOTE]
+====
+La descripción puede mostrar la misma carga de trabajo para la víctima y el matón, porque la limitación hace que la carga de trabajo sea víctima de sí misma.
+
+====
+. Registre el nombre del volumen con una aplicación como, por ejemplo, un editor de texto.
++
+Puede buscar en el nombre del volumen para buscarlo más adelante.
+
+. En los gráficos latencia de carga de trabajo y actividad de carga de trabajo, seleccione *carga de trabajo bully*.
+. Pase el cursor por los gráficos para ver las principales cargas de trabajo definidas por el usuario que están afectando al grupo de políticas.
++
+La carga de trabajo en la parte superior de la lista tiene la mayor desviación y causó la aceleración. La actividad es el porcentaje del límite del grupo de políticas que utiliza cada carga de trabajo.
+
+. Vaya a la página *Detalles de rendimiento/volumen* para la carga de trabajo superior.
+. Seleccione *romper datos por*.
+. Active la casilla de verificación situada junto a ***latencia*** para seleccionar todos los gráficos de desglose de latencia.
+. En *IOPS*, seleccione ***lecturas/escrituras/otro***.
+. Haga clic en *Enviar*.
++
+Los gráficos de desglose se muestran en el gráfico latencia y el gráfico IOPS.
+
+. Compare el gráfico *Policy Group Impact* con el gráfico *latencia* para ver qué porcentaje de limitación afectó a la latencia en el momento del evento.
++
+El grupo de políticas tiene un rendimiento máximo de 1,000 operaciones por segundo (op/s), que las cargas de trabajo del departamento de TI no pueden superar en conjunto. En el momento del evento, las cargas de trabajo del grupo de políticas tenían un rendimiento combinado de más de 1,200 operaciones por segundo, lo que hizo que el grupo de políticas reacelerara su actividad de vuelta a los 1,000 operaciones por segundo El gráfico impacto del grupo de políticas muestra que la limitación provocó el 10 % de la latencia total, lo que confirma que la limitación provocó que se produjera el evento.
+
+. Revise el gráfico *componentes del clúster*, que muestra la latencia total por componente del clúster.
++
+La latencia es mayor en el grupo de políticas, lo que confirma aún más que la limitación provocó el evento.
+
+. Compare el gráfico *latencia de lecturas/escrituras* con el gráfico *lecturas/escrituras/otro*.
++
+Ambos gráficos muestran un número elevado de solicitudes de lectura con alta latencia, pero el número de solicitudes y la cantidad de latencia para las solicitudes de escritura es bajo. Estos valores le ayudan a determinar si hay una gran cantidad de rendimiento o cantidad de operaciones que aumentaron la latencia. Puede usar estos valores al decidir poner un límite de grupo de políticas en el rendimiento o las operaciones.
+
+. Use el Administrador del sistema de OnCommand para aumentar el límite actual del grupo de políticas a 1,300 operaciones/s.
+. Después de un día, regrese a Unified Manager y busque el nombre de la carga de trabajo que registró en el paso 3.
++
+Se muestra la página Performance/Volume Details.
+
+. Selecciona *romper datos por* > ***IOPS***.
+. Haga clic en *Enviar*.
++
+Se muestra el gráfico de lecturas/escrituras/otro.
+
+. En la parte inferior de la página, coloque el cursor en el icono de evento de cambio (image:../media/opm-change-icon.gif["Icono de cambio de evento"]) para el cambio de límite del grupo de políticas.
+. Compare el gráfico *Lecturas/Escrituras/Other* con el gráfico *latencia*.
++
+Las solicitudes de lectura y escritura son las mismas, pero se ha detenido la limitación y se ha reducido la latencia.
+
+

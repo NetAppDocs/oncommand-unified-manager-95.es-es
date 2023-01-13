@@ -1,0 +1,26 @@
+---
+permalink: online-help/concept-metrocluster-configuration-verification.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede evitar problemas de rendimiento en las cargas de trabajo reflejadas en una configuración de MetroCluster garantizando que la configuración de MetroCluster se configure correctamente. También puede mejorar el rendimiento de la carga de trabajo cambiando la configuración o actualizando componentes de software o hardware. 
+---
+= Verificación de la configuración de MetroCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede evitar problemas de rendimiento en las cargas de trabajo reflejadas en una configuración de MetroCluster garantizando que la configuración de MetroCluster se configure correctamente. También puede mejorar el rendimiento de la carga de trabajo cambiando la configuración o actualizando componentes de software o hardware.
+
+El _MetroCluster Installation and Configuration Guide_ proporciona instrucciones para configurar los clústeres en la configuración de MetroCluster, incluidos los switches Fibre Channel (FC), los cables y los enlaces entre switches (ISL). También es útil configurar el software MetroCluster para que los clústeres local y remoto puedan comunicarse con los datos de volúmenes reflejados.
+
+Puede comparar su configuración de MetroCluster con los requisitos de la _Guía de instalación y configuración de MetroCluster_ para determinar si el cambio o la actualización de componentes de su configuración de MetroCluster puede mejorar el rendimiento de las cargas de trabajo. Esta comparación puede ayudarle a responder a las siguientes preguntas:
+
+* ¿Las controladoras son adecuadas para sus cargas de trabajo?
+* ¿Necesita actualizar sus paquetes ISL a un ancho de banda mayor para poder gestionar más rendimiento?
+* ¿Puede ajustar los créditos de búfer a búfer (BBC) en los switches para aumentar el ancho de banda?
+* Si sus cargas de trabajo tienen un rendimiento de escritura elevado para almacenamiento de unidades de estado sólido (SSD), ¿necesita actualizar sus puentes de FC a SAS para adaptarse al rendimiento?
+
+
+Para obtener información acerca de cómo reemplazar o actualizar componentes de MetroCluster, consulte la _Guía de servicio de MetroCluster_.

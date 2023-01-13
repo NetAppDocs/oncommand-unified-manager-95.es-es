@@ -1,0 +1,62 @@
+---
+permalink: online-help/task-managing-report-schedules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede gestionar los programas de informes desde el cuadro de diálogo gestionar programas de informes. Puede agregar una nueva programación y ver, modificar o eliminar programaciones existentes. 
+---
+= Gestión de programas de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede gestionar los programas de informes desde el cuadro de diálogo gestionar programas de informes. Puede agregar una nueva programación y ver, modificar o eliminar programaciones existentes.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Informes* y, a continuación, haga clic en *Administrar programas de informes*.
+. En el cuadro de diálogo *Administrar programas de informes*,
++
+|===
+| Si desea... | Realice lo siguiente... 
+
+
+ a| 
+Ver o modificar una programación existente
+ a| 
+.. Seleccione la programación en la lista que aparece en el panel izquierdo.
++
+Se muestran los detalles de la programación.
+
+.. Realice los cambios necesarios.
+.. Haga clic en *Guardar* o en *Guardar y cerrar*.
+
+
+
+
+ a| 
+Eliminar una programación existente
+ a| 
+.. Seleccione la programación en la lista que aparece en el panel izquierdo.
++
+Se muestran los detalles de la programación.
+
+.. Haga clic en *Eliminar programación*.
+
+
+
+
+ a| 
+Añadir una nueva programación
+ a| 
+.. Haga clic en *Agregar programa*.
+.. Aparecerá un nuevo formulario de horario en el panel derecho.
+.. Introduzca el nombre de la programación, la dirección de correo electrónico del destinatario, el formato y la frecuencia del informe y seleccione los informes que desee programar.
+.. Haga clic en *Guardar*. La nueva programación se añadirá a la lista programaciones.
+
+
+|===
+

@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-customizing-the-cluster-inventory-report-to-display-nodes-running-older-versions-of-ontap.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe de inventario de clúster para mostrar los nodos filtrados por versiones anteriores de ONTAP. 
+---
+= Personalizar el informe de inventario de clúster para mostrar los nodos que ejecutan versiones anteriores del software ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe de inventario de clúster para mostrar los nodos filtrados por versiones anteriores de ONTAP.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster o nodo, realice los siguientes pasos:
++
+.. Haga clic en la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para filtrar nodos que no ejecuten ONTAP 8.3, haga clic en la columna *ONTAP version* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista desplegable *condición*, seleccione *no igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *8.3*.
+. Haga clic en *Aceptar*.
+

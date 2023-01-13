@@ -1,0 +1,65 @@
+---
+permalink: online-help/task-searching-for-storage-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Para acceder rápidamente a un objeto específico, puede utilizar el campo Buscar todos los objetos de almacenamiento situado en la parte superior derecha de la interfaz. Este método de búsqueda global en todos los objetos le permite localizar rápidamente objetos específicos por tipo. Los resultados de la búsqueda se ordenan por tipo de objeto de almacenamiento y puede filtrarlos aún más por objeto mediante el menú desplegable Tipo. 
+---
+= Buscar objetos de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para acceder rápidamente a un objeto específico, puede utilizar el campo *Buscar todos los objetos de almacenamiento* situado en la parte superior derecha de la interfaz. Este método de búsqueda global en todos los objetos le permite localizar rápidamente objetos específicos por tipo. Los resultados de la búsqueda se ordenan por tipo de objeto de almacenamiento y se pueden filtrar por objeto mediante el menú desplegable *Tipo*.
+
+
+
+== Antes de empezar
+
+* Para realizar esta tarea, debe tener uno de los siguientes roles: Operador, administrador de OnCommand o administrador de almacenamiento.
+* Una búsqueda válida debe contener al menos tres caracteres.
+
+
+
+
+== Acerca de esta tarea
+
+Al utilizar el valor del menú desplegable Tipo "'todo'", la búsqueda global muestra el número total de resultados encontrados en todas las categorías de objetos; con un máximo de 25 resultados de búsqueda para cada categoría de objetos. Puede seleccionar un tipo de objeto específico en el menú desplegable Tipo para afinar la búsqueda dentro de un tipo de objeto específico. En este caso, la lista devuelta no está restringida a los 25 objetos principales.
+
+Entre los tipos de objeto que puede buscar se incluyen:
+
+* De clúster
+* Nodos
+* SVM
+* Agregados
+* Volúmenes
+* Qtrees
+* Recursos compartidos CIFS
+* Cuotas de usuarios o grupos
+* LUN
+* Espacios de nombres de NVMe
+* IGroups
+* Iniciadores
+
+
+Es posible hacer clic en cualquier objeto de los resultados de búsqueda para ir a la página de detalles Health del objeto. Si no hay ninguna página de estado directa para un objeto, se muestra la página Estado del objeto primario. Por ejemplo, al buscar un LUN específico, se muestra la página de detalles de la SVM en la que reside el LUN.
+
+[NOTE]
+====
+Los puertos no se pueden buscar en la barra de búsqueda global.
+
+====
+
+
+== Pasos
+
+. Seleccione un tipo de objeto en el menú *Tipo* para refinar los resultados de búsqueda sólo para un único tipo de objeto.
+. Escriba un mínimo de tres caracteres del nombre del objeto en el campo *Buscar todos los objetos de almacenamiento*.
++
+En este ejemplo, el cuadro desplegable *Tipo* tiene seleccionado el tipo de objeto Volumes. Al escribir «'vol1'» en el campo *Buscar todos los objetos de almacenamiento*, se muestra una lista de todos los volúmenes cuyos nombres contienen estos caracteres.
+
++
+image::../media/opm-search-field-jpg.gif[Busque campo en Unified Manager]
+
+

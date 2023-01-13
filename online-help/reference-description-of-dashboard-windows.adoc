@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-dashboard-windows.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar las páginas del panel de control para obtener un vistazo rápido de los objetos que se están supervisando. 
+---
+= Descripción de las ventanas del panel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar las páginas del panel de control para obtener un vistazo rápido de los objetos que se están supervisando.

@@ -1,0 +1,49 @@
+---
+permalink: online-help/task-managing-host-system-resource-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager incluye un servicio que supervisa problemas de recursos en el sistema host en el que está instalado Unified Manager. Problemas como falta de espacio en disco disponible o falta de memoria en el sistema host pueden desencadenar eventos de estación de gestión que se muestran como mensajes de banner en toda la parte superior de la interfaz de usuario. 
+---
+= Gestionar eventos de recursos del sistema host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager incluye un servicio que supervisa problemas de recursos en el sistema host en el que está instalado Unified Manager. Problemas como falta de espacio en disco disponible o falta de memoria en el sistema host pueden desencadenar eventos de estación de gestión que se muestran como mensajes de banner en toda la parte superior de la interfaz de usuario.
+
+
+
+== Acerca de esta tarea
+
+Los eventos de la estación de gestión indican un problema con el sistema host en el que está instalado Unified Manager. Algunos ejemplos de problemas de la estación de gestión son que el espacio en disco se ejecuta poco en el sistema host, que Unified Manager carece de un ciclo de recogida de datos normal y que no se completa o se completó tarde un análisis de estadísticas porque se inició el siguiente sondeo de recopilación.
+
+A diferencia de todos los demás mensajes de eventos de Unified Manager, estos eventos críticos y de advertencia de la estación de gestión concretos se muestran en mensajes de banner.
+
+
+
+== Pasos
+
+. Para ver la información de eventos de la estación de administración, realice estas acciones:
++
+|===
+| Si desea... | Realice lo siguiente... 
+
+
+ a| 
+Ver detalles del evento
+ a| 
+Haga clic en el banner del evento para mostrar la página de detalles Event que incluye soluciones sugeridas para el problema.
+
+
+
+ a| 
+Ver todos los eventos de la estación de administración
+ a| 
+.. En el panel de navegación de la izquierda, haga clic en *Eventos*.
+.. En el panel Filtros de la página Inventario de eventos, haga clic en el cuadro Estación de administración en la lista Tipo de origen.
+
+
+|===
+

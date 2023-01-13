@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/concept-roles-of-workloads-involved-in-a-performance-incident.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager utiliza roles para identificar la implicación de una carga de trabajo en un evento de rendimiento. Entre las funciones se encuentran las víctimas, los agresores y los tiburones. Una carga de trabajo definida por el usuario puede ser víctima, abusador o tiburón al mismo tiempo. 
+---
+= Funciones de las cargas de trabajo involucradas en un evento de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager utiliza roles para identificar la implicación de una carga de trabajo en un evento de rendimiento. Entre las funciones se encuentran las víctimas, los agresores y los tiburones. Una carga de trabajo definida por el usuario puede ser víctima, abusador o tiburón al mismo tiempo.
+
+|===
+| Función | Descripción 
+
+
+ a| 
+Víctima
+ a| 
+Carga de trabajo definida por el usuario cuyo rendimiento ha disminuido debido a otras cargas de trabajo, denominadas verdugos, que usan en exceso un componente de clúster. Solo las cargas de trabajo definidas por el usuario se identifican como víctimas. Unified Manager identifica las cargas de trabajo víctimas en función de su desviación en la latencia, donde la latencia real, durante un evento, aumentó significativamente con respecto al rango esperado de latencia.
+
+
+
+ a| 
+Matón
+ a| 
+Una carga de trabajo definida por el usuario o el sistema cuyo uso excesivo de un componente del clúster ha provocado la reducción del rendimiento de otras cargas de trabajo denominadas víctimas. Unified Manager identifica cargas de trabajo problemáticas según su desviación en el uso de un componente del clúster, donde el uso real, durante un evento, ha aumentado considerablemente desde su rango de uso esperado.
+
+
+
+ a| 
+IBM
+ a| 
+Carga de trabajo definida por el usuario con el mayor uso de un componente del clúster en comparación con todas las cargas de trabajo involucradas en un evento. Unified Manager identifica cargas de trabajo de tiburón en función de su uso de un componente de clúster durante un evento.
+
+|===
+Las cargas de trabajo de un clúster pueden compartir muchos de los componentes del clúster, como agregados de almacenamiento y la CPU para el procesamiento de datos y red. Cuando una carga de trabajo, como un volumen, aumenta el uso de un componente del clúster hasta el punto de que el componente no puede satisfacer de forma eficiente las demandas de las cargas de trabajo, el componente es objeto de disputa. La carga de trabajo que utiliza en exceso un componente del clúster es un problema. Las otras cargas de trabajo que comparten esos componentes y cuyo rendimiento afecta al abusador son las víctimas. La actividad de las cargas de trabajo definidas por el sistema, como la deduplicación o las copias Snapshot, también puede convertirse en «bullying».
+
+Cuando Unified Manager detecta un evento, identifica todas las cargas de trabajo y los componentes del clúster implicados, incluidas las cargas de trabajo abusivas que causaron el evento, el componente de clúster que está en disputa y las cargas de trabajo víctimas cuyo rendimiento ha disminuido debido al aumento de la actividad de las cargas de trabajo abusivas.
+
+[NOTE]
+====
+Si Unified Manager no puede identificar las cargas de trabajo abusivas, solo envía alertas sobre las cargas de trabajo víctimas y el componente de clúster correspondiente.
+
+====
+Unified Manager puede identificar cargas de trabajo que son víctimas de cargas de trabajo abusivas y, además, identificar cuándo esas mismas cargas de trabajo pasan a ser cargas de trabajo abusivas. Una carga de trabajo puede ser un problema para sí misma. Por ejemplo, una carga de trabajo de alto rendimiento que está acelerando por el límite de un grupo de políticas provoca que se aceleren todas las cargas de trabajo del grupo de políticas, incluso la propia. Una carga de trabajo que sea intimidatada o víctima en un evento de rendimiento continuo puede cambiar su función o ya no ser participante en el evento. En la página Performance/Volume Details, en la tabla Events List, cuando el volumen seleccionado cambia su rol de participante, se muestra la fecha y hora del cambio de rol.

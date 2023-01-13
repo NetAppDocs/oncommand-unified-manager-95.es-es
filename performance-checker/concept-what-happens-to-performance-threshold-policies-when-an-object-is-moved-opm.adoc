@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/concept-what-happens-to-performance-threshold-policies-when-an-object-is-moved-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: Dado que las políticas de umbral de rendimiento se asignan a los objetos de almacenamiento, si se mueve un objeto, todas las políticas de umbral asignadas se conservan asociadas al objeto después de completar el movimiento. Por ejemplo, si mueve un volumen o una LUN a otro agregado, las políticas de umbral seguirán activas para el volumen o LUN del nuevo agregado. 
+---
+= Qué sucede con las políticas de umbral de rendimiento cuando se mueve un objeto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dado que las políticas de umbral de rendimiento se asignan a los objetos de almacenamiento, si se mueve un objeto, todas las políticas de umbral asignadas se conservan asociadas al objeto después de completar el movimiento. Por ejemplo, si mueve un volumen o una LUN a otro agregado, las políticas de umbral seguirán activas para el volumen o LUN del nuevo agregado.
+
+Si existe una condición de contador secundario para la política de umbral (una política de combinación), por ejemplo, si se asigna una condición adicional a un agregado o a un nodo, la condición de contador secundario se aplica al nuevo agregado o nodo al que se ha movido el volumen o LUN.
+
+Si existe algún evento activo nuevo para los objetos que utilizan la política de umbral modificado, los eventos se marcan como obsoletos y la política de umbral comienza a supervisar el contador como una política de umbral recientemente definida.
+
+Una operación de movimiento de volúmenes hace que ONTAP envíe un evento de cambio informativo. Aparece un icono de cambio de evento en la línea de tiempo Events en la página Performance Explorer y en la página Performance/Volume Details para indicar la hora a la que se completó la operación de movimiento.
+
+[NOTE]
+====
+Si mueve un objeto a un clúster diferente, la política de umbral definida por el usuario se elimina del objeto. Si es necesario, debe asignar una política de umbral al objeto una vez completada la operación de movimiento. Sin embargo, las políticas de umbral dinámicas y definidas por el sistema se aplican automáticamente a un objeto después de mover este a un nuevo clúster.
+
+====
+
+
+== Funcionalidad de política de umbral durante la toma de control y el retorno al nodo primario de ha
+
+Cuando una operación de toma de control o devolución se produce en una configuración de alta disponibilidad (ha), los objetos que se mueven de un nodo al otro nodo conservan sus políticas de umbral del mismo modo que en las operaciones de movimiento manual. Dado que Unified Manager comprueba si hay cambios en la configuración del clúster cada 15 minutos, el impacto de la conmutación al nuevo nodo no se identifica hasta el siguiente sondeo de la configuración del clúster.
+
+[NOTE]
+====
+Si se produce una operación de toma de control y devolución dentro del período de recogida de cambios de configuración de 15 minutos, es posible que no vea cómo se mueven las estadísticas de rendimiento de un nodo al otro nodo.
+
+====
+
+
+== Funcionalidad de políticas de umbral durante la reubicación de agregados
+
+Si mueve un agregado de un nodo a otro mediante el `aggregate relocation start` comando, tanto las políticas de umbral de combinación como las únicas se conservan en todos los objetos y la parte de nodo de la política de umbral se aplica al nuevo nodo.
+
+
+
+== Funcionalidad de políticas de umbral durante la conmutación de MetroCluster
+
+Los objetos que se mueven de un clúster a otro de una configuración de MetroCluster no conservan su configuración de política de umbral definida por el usuario. Si es necesario, puede aplicar políticas de umbral en los volúmenes y LUN que se han movido al clúster de partners. Después de que un objeto se haya movido de nuevo a su clúster original, la política de umbral definida por el usuario se vuelve a aplicar automáticamente.
+
+xref:concept-volume-behavior-during-switchover-and-switchback.adoc[Comportamiento del volumen durante la conmutación de sitios y la conmutación de estado]

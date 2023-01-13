@@ -1,0 +1,154 @@
+---
+section: install
+title: Instale Unified Manager
+entries:
+- title: Introducción a Unified Manager de OnCommand
+  url: "/install/concept-introduction-to-unified-manager.html"
+  entries:
+  - title: Lo que hace Unified Manager Server
+    url: "/install/concept-what-the-unified-manager-server-does.html"
+  - title: Descripción general de la secuencia de instalación
+    url: "/install/concept-overview-of-the-installation-sequence-um.html"
+- title: Requisitos para instalar Unified Manager
+  url: "/install/concept-requirements-for-installing-unified-manager.html"
+  entries:
+  - title: Requisitos del sistema de hardware e infraestructura virtual
+    url: "/install/concept-virtual-infrastructure-or-hardware-system-requirements.html"
+  - title: Requisitos de instalación y software de VMware
+    url: "/install/reference-vmware-software-and-installation-requirements.html"
+  - title: Requisitos de instalación y software de Red Hat Enterprise Linux y CentOS
+    url: "/install/reference-red-hat-and-centos-software-and-installation-requirements.html"
+  - title: Requisitos de instalación y software de Windows
+    url: "/install/reference-windows-software-and-installation-requirements.html"
+  - title: Exploradores compatibles
+    url: "/install/concept-browser-and-platform-requirements.html"
+  - title: Requisitos de protocolo y puerto
+    url: "/install/reference-protocol-and-port-requirements.html"
+  - title: Rellenar la hoja de cálculo
+    url: "/install/reference-completing-the-worksheet-um.html"
+- title: Instalación, actualización y eliminación del software Unified Manager en
+    VMware vSphere
+  url: "/install/concept-installing-upgrading-and-removing-unified-manager-software-on-vmware-vsphere.html"
+  entries:
+  - title: Descripción general del proceso de puesta en marcha en VMware
+    url: "/install/concept-overview-of-the-deployment-process.html"
+  - title: Ponga en marcha Unified Manager
+    url: "/install/task-deploying-unified-manager-vapp.html"
+    entries:
+    - title: Descargue el archivo OVA de Unified Manager
+      url: "/install/task-downloading-the-unified-manager-ova-file.html"
+    - title: Puesta en marcha del dispositivo virtual Unified Manager
+      url: "/install/task-deploying-the-unified-manager-virtual-appliance-vapp.html"
+  - title: Actualizar Unified Manager en VMware
+    url: "/install/task-upgrading-unified-manager-vapp.html"
+    entries:
+    - title: Descargue la imagen ISO de Unified Manager
+      url: "/install/task-downloading-the-unified-manager-iso-image-vapp.html"
+    - title: Actualización del dispositivo virtual de Unified Manager
+      url: "/install/task-upgrading-the-unified-manager-virtual-appliance-vapp.html"
+  - title: Reiniciar la máquina virtual de Unified Manager
+    url: "/install/task-restarting-the-unified-manager-virtual-machine.html"
+  - title: Quitando Unified Manager de VMware
+    url: "/install/task-removing-unified-manager-vapp.html"
+- title: Instalación, actualización y eliminación del software Unified Manager en
+    Red Hat o CentOS
+  url: "/install/concept-install-upgrade-and-remove-unified-manager-software.html"
+  entries:
+  - title: Descripción general del proceso de instalación en Red Hat o CentOS
+    url: "/install/concept-overview-of-the-installation-process-on-red-hat.html"
+  - title: Configurar repositorios de software necesarios
+    url: "/install/concept-setting-up-required-software-repositories-um.html"
+    entries:
+    - title: Configurar manualmente el repositorio de EPEL
+      url: "/install/task-manually-configuring-the-epel-repository.html"
+    - title: Configurar manualmente el repositorio de MySQL
+      url: "/install/task-manually-configuring-the-mysql-repository.html"
+  - title: Requisitos de SELinux para montar /opt/netapp o /opt/netapp/data en un
+      recurso compartido de NFS o CIFS
+    url: "/install/task-selinux-requirements-for-mounting-opt-netapp-or-opt-netapp-data-on-an-nfs-or-cifs-share.html"
+  - title: Instalación de Unified Manager en Red Hat Enterprise Linux o CentOS
+    url: "/install/concept-installing-unified-manager-on-rhel-or-centos.html"
+    entries:
+    - title: Creación de un directorio inicial de usuario personalizado y una contraseña
+        umadmin antes de la instalación
+      url: "/install/task-creating-a-custom-user-home-directory-and-umadmin-user-prior-to-installation.html"
+    - title: Descarga de Unified Manager para Red Hat Enterprise Linux o CentOS
+      url: "/install/task-downloading-unified-manager.html"
+    - title: Instalación de Unified Manager en Red Hat Enterprise Linux o CentOS
+      url: "/install/task-installing-unified-manager-linux.html"
+    - title: Usuarios creados durante la instalación de Unified Manager
+      url: "/install/reference-users-created-in-unified-manager.html"
+    - title: Cambio de la contraseña de JBoss
+      url: "/install/task-changing-the-jboss-password.html"
+  - title: Configuración de Unified Manager para disfrutar de alta disponibilidad
+    url: "/install/concept-setting-up-unified-manager-for-high-availability-rhel.html"
+    entries:
+    - title: De Unified Manager en VCS
+      url: "/install/concept-requirements-for-unified-manager-in-vcs.html"
+    - title: Instalación de Unified Manager en VCS
+      url: "/install/task-installing-the-unified-manager-in-vcs-um.html"
+    - title: Configuración de Unified Manager con VCS mediante scripts de configuración
+      url: "/install/task-setting-up-unified-manager-server-with-vcs-using-configuration-scripts.html"
+    - title: Recursos del servicio de Unified Manager para la configuración de VCS
+      url: "/install/concept-unified-manager-service-resources-for-vcs-configuration.html"
+    - title: Actualizar una configuración de Unified Manager existente para alta disponibilidad
+      url: "/install/task-configuring-existing-unified-manager-setup-to-high-availability.html"
+  - title: Actualización de Unified Manager en Red Hat Enterprise Linux o CentOS
+    url: "/install/concept-upgrading-unified-manager-on-rhel-or-centos.html"
+    entries:
+    - title: Actualización de Unified Manager en Red Hat Enterprise Linux o CentOS
+      url: "/install/task-upgrading-unified-manager.html"
+    - title: Actualizar el sistema operativo del host desde Red Hat Enterprise Linux
+        6.x a 7.x.
+      url: "/install/task-upgrading-the-host-os-from-rhel-6-x-to-7-x.html"
+  - title: Actualización de productos de terceros en Linux
+    url: "/install/concept-upgrading-third-party-products-on-linux-um.html"
+    entries:
+    - title: Actualizar JRE en Linux
+      url: "/install/task-upgrading-openjdk-on-linux-ocum.html"
+    - title: Actualizar MySQL en Linux
+      url: "/install/task-upgrading-mysql-on-linux.html"
+  - title: Reinicio de Unified Manager en Red Hat Enterprise Linux o CentOS
+    url: "/install/task-restarting-unified-manager.html"
+  - title: Eliminación de Unified Manager del host Red Hat Enterprise Linux o CentOS
+    url: "/install/task-removing-unified-manager.html"
+  - title: Quitar el usuario personalizado de umadmin y el grupo de mantenimiento
+    url: "/install/task-removing-custom-umadmin-user-and-maintenance-group.html"
+- title: Instalación, actualización y eliminación del software Unified Manager en
+    Windows
+  url: "/install/concept-installing-upgrading-and-removing-unified-manager-software.html"
+  entries:
+  - title: Descripción general del proceso de instalación en Windows
+    url: "/install/concept-overview-of-the-installation-process-on-windows.html"
+  - title: Instalación de Unified Manager en Windows
+    url: "/install/concept-installing-unified-manager-win.html"
+    entries:
+    - title: Instalación de Unified Manager en un sistema Windows
+      url: "/install/task-installing-unified-manager-on-windows.html"
+    - title: Realizar una instalación desatendida de Unified Manager en Windows
+      url: "/install/task-unattended-installation-of-unified-manager.html"
+  - title: Configuración de Unified Manager en un entorno de clustering de conmutación
+      al nodo de respaldo
+    url: "/install/concept-setting-up-unified-manager-within-mscs-environment.html"
+    entries:
+    - title: Requisitos de Unified Manager en un entorno de clustering de conmutación
+        al nodo de respaldo
+      url: "/install/concept-requirements-and-limitations-for-unified-manager-in-mscs.html"
+    - title: Instalación de Unified Manager en MSCS
+      url: "/install/task-installing-unified-manager-in-mscs.html"
+    - title: Configuración de Unified Manager Server con MSCS mediante scripts de
+        configuración
+      url: "/install/task-configuring-unified-manager-server-using-configuration-scripts-mscs.html"
+  - title: Actualizar Unified Manager en Windows
+    url: "/install/task-upgrading-to-unified-manager-on-microsoft-windows.html"
+  - title: Actualización de productos de terceros en Windows
+    url: "/install/concept-upgrading-third-party-products-on-windows-um.html"
+    entries:
+    - title: Actualizar JRE en Windows
+      url: "/install/task-upgrading-openjdk-on-windows-ocum.html"
+    - title: Actualizar MySQL en Windows
+      url: "/install/task-upgrading-mysql-on-windows-ocum.html"
+  - title: Reinicio de Unified Manager en Windows
+    url: "/install/task-restarting-unified-manager-win.html"
+  - title: Desinstale Unified Manager desde Windows
+    url: "/install/task-uninstalling-unified-manager-win.html"

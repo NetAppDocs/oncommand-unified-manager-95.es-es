@@ -1,0 +1,20 @@
+---
+permalink: online-help/concept-run-storage-efficiency-operations-at-less-busy-times.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede modificar la política o la programación que maneja las operaciones de eficiencia del almacenamiento para ejecutarse cuando las cargas de trabajo de los volúmenes afectados están menos ocupadas. 
+---
+= Ejecute operaciones de eficiencia del almacenamiento en momentos de menor actividad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede modificar la política o la programación que maneja las operaciones de eficiencia del almacenamiento para ejecutarse cuando las cargas de trabajo de los volúmenes afectados están menos ocupadas.
+
+Las operaciones de eficiencia del almacenamiento pueden utilizar una gran cantidad de recursos de CPU del clúster y convertirse en un problema para los volúmenes en los que se ejecutan las operaciones. Si los volúmenes víctimas tienen una actividad alta al mismo tiempo que se ejecutan las operaciones de eficiencia del almacenamiento, su latencia puede aumentar y desencadenar un evento.
+
+En la página de detalles Event, la sección System Diagnosis muestra las cargas de trabajo en el grupo de políticas QoS por desviación máxima en la actividad para identificar las cargas de trabajo problemáticas. Si aparece «eficiencia del almacenamiento» cerca de la parte superior de la tabla, estas operaciones intimidan a las cargas de trabajo víctimas. Al modificar la política o la programación de eficiencia para que se ejecute cuando estas cargas de trabajo estén menos ocupadas, puede impedir que las operaciones de eficiencia del almacenamiento provoquen la contención en un clúster.
+
+Puede usar System Manager de OnCommand para gestionar políticas de eficiencia. Puede usar los comandos de ONTAP para gestionar las políticas y las programaciones de eficiencia.

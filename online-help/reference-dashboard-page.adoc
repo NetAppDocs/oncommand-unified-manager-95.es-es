@@ -1,0 +1,58 @@
+---
+permalink: online-help/reference-dashboard-page.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La página Dashboards/Overview muestra, como gráfico, el estado de los objetos de almacenamiento como clústeres, agregados y máquinas virtuales de almacenamiento \(SVM\). En función de la disponibilidad, la capacidad, el rendimiento y los eventos relacionados con la protección que se generan, estos objetos de almacenamiento se categorizan como saludable, en riesgo o tienen incidentes, o como saludable, Advertencia o error para eventos relacionados con la protección.' 
+---
+= Página Dashboards/Overview
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Dashboards/Overview muestra, como gráfico, el estado de los objetos de almacenamiento como clústeres, agregados y máquinas virtuales de almacenamiento (SVM). En función de la disponibilidad, la capacidad, el rendimiento y los eventos relacionados con la protección que se generan, estos objetos de almacenamiento se categorizan como saludable, en riesgo o tienen incidentes, o como saludable, Advertencia o error para eventos relacionados con la protección.
+
+
+
+== Barra clúster no accesible
+
+Cuando no se puede acceder al clúster, Unified Manager muestra los detalles en una barra en la parte superior de cada página. Si todos los clústeres están accesibles, este panel está oculto.
+
+Puede actualizar la información que se muestra en el panel pulsando F5. Esta acción garantiza que el panel muestra la información más reciente sobre los clústeres no accesibles en ese momento. Por ejemplo, si se elimina un clúster con un evento Cluster no accesible o si el estado de un evento es Obsoleto, al actualizar el panel se elimina la información acerca del evento.
+
+Puede ver información detallada sobre un clúster que no se puede acceder haciendo clic en el botón *Detalles*. Con esta acción se abre la página del inventario Events. Una vez cerrada la barra, solo se muestra de nuevo cuando se vuelve a iniciar sesión en Unified Manager.
+
+
+
+== Área Overview
+
+* *Panel de disponibilidad*
++
+Muestra información sobre la disponibilidad de los clústeres, los agregados y las SVM que supervisa Unified Manager. Los objetos de almacenamiento se clasifican como sanos, en riesgo o tienen incidentes. Por ejemplo, el estado de un clúster que carece de discos de repuesto se muestra como en riesgo.
+
++
+Este panel también muestra el número de objetos de almacenamiento en cada una de las categorías. Al hacer clic en cualquiera de los totales del objeto, se llega a la página de ese objeto. Por ejemplo, al hacer clic en el total del clúster se va a la página del inventario Health/Clusters. Al hacer clic en los números de la parte superior de una columna, se abre la página de inventario Events.
+
+* *Panel capacidad*
++
+Muestra información sobre la capacidad de los agregados y las SVM que supervisa Unified Manager. Los objetos de almacenamiento se clasifican como sanos, en riesgo o tienen incidentes. Por ejemplo, el estado de un agregado cuya capacidad utilizada ha alcanzado el valor de umbral completo se muestra como en riesgo.
+
++
+Este panel también muestra el número de objetos de almacenamiento en cada una de las categorías.
+
+* *Panel de rendimiento*
++
+Muestra información sobre el rendimiento de los clústeres, las SVM y los volúmenes supervisados por Unified Manager. En función de los incidentes relacionados con el rendimiento que se generan, los objetos de almacenamiento se clasifican como sanos, en riesgo o tienen incidentes. Por ejemplo, el estado de un volumen cuyo tiempo de respuesta de I/o de su carga de trabajo ha alcanzado el valor de umbral máximo se muestra como tienen incidentes.
+
++
+En este panel también se muestra la cantidad total de clústeres, SVM y volúmenes supervisados por Unified Manager. Al hacer clic en cualquiera de los totales del objeto, se llega a la página de ese objeto. Por ejemplo, al hacer clic en el total del clúster se va a la página del inventario Performance/Cluster.
+
+* *Panel de protección*
++
+Muestra información sobre las relaciones de protección supervisadas por Unified Manager. Las relaciones de protección se clasifican como saludable, Advertencia o error. Por ejemplo, una relación que tiene una duración de desfase que supera el umbral de aviso de desfase se muestra como Advertencia.
+
++
+Este panel también muestra la cantidad total de objetos de almacenamiento en cada una de las categorías de protección. Al hacer clic en los enlaces de las categorías de estado de desfase, almacén asíncrono, reflejo asíncrono o reflejo síncrono, obtiene una lista filtrada de esos objetos en la página Protection/Volume Relationships.
+
+

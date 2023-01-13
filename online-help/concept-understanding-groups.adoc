@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-understanding-groups.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear grupos en Unified Manager para gestionar objetos de almacenamiento. Comprender los conceptos sobre los grupos y la forma en que las reglas de grupo permiten añadir objetos de almacenamiento a un grupo le ayudará a gestionar los objetos de almacenamiento del entorno. 
+---
+= Comprender los grupos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear grupos en Unified Manager para gestionar objetos de almacenamiento. Comprender los conceptos sobre los grupos y la forma en que las reglas de grupo permiten añadir objetos de almacenamiento a un grupo le ayudará a gestionar los objetos de almacenamiento del entorno.

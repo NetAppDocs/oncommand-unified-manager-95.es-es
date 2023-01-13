@@ -1,0 +1,42 @@
+---
+permalink: online-help/task-viewing-the-https-security-certificate-ocf.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede comparar los detalles del certificado HTTPS con el certificado recuperado en el explorador para asegurarse de que la conexión cifrada del explorador con Unified Manager no se intercepta. 
+---
+= Visualizar el certificado de seguridad HTTPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible comparar los detalles del certificado HTTPS con el certificado recuperado en el explorador para asegurarse de que la conexión cifrada del explorador con Unified Manager no se intercepte.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+La visualización del certificado permite verificar el contenido de un certificado regenerado o ver nombres de URL alternativos desde los que puede acceder a Unified Manager.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Certificado HTTPS* en el menú *Configuración*.
++
+El certificado HTTPS se muestra en la parte superior de la página
+
+
+
+
+
+== Después de terminar
+
+Si necesita ver información más detallada sobre el certificado de seguridad que la que aparece en la página Certificado HTTPS, puede ver el certificado de conexión en el explorador.

@@ -1,0 +1,46 @@
+---
+permalink: health-checker/task-performing-diagnotstic-actions-for-volume-offline-conditions.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de navegar a la página de detalles Health/Volume de un volumen al que se informa que está sin conexión, puede buscar información adicional útil para diagnosticar la condición de volumen sin conexión. 
+---
+= Realización de acciones de diagnóstico para condiciones de sin conexión de un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de navegar a la página de detalles Health/Volume de un volumen al que se informa que está sin conexión, puede buscar información adicional útil para diagnosticar la condición de volumen sin conexión.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Si el volumen que se informa sin conexión no se desconecta deliberadamente, ese volumen puede estar sin conexión por varios motivos.
+
+A partir de la página de detalles Health/Volume del volumen sin conexión, puede ir a otras páginas y paneles para confirmar o eliminar las posibles causas:
+
+
+
+== Opciones
+
+* Haga clic en *Health/Volume* details page links para determinar si el volumen está desconectado porque su nodo host está inactivo y la recuperación tras fallos de almacenamiento a su par ha también ha fallado.
++
+Consulte xref:task-determining-if-a-volume-offline-condition-is-caused-by-a-down-cluster-node.adoc[Determinar si una condición de volumen sin conexión es causada por un nodo inactivo].
+
+* Haga clic en *Health/Volume* details page links para determinar si el volumen está desconectado y su máquina virtual de almacenamiento host (SVM) está detenida porque el nodo que aloja el volumen raíz de esa SVM está inactivo.
++
+Consulte xref:task-determining-if-a-volume-is-offline-and-its-svm-is-stopped-because-a-cluster-node-is-down.adoc[Determinar si un volumen está sin conexión y la SVM se ha detenido debido a que el nodo está inactivo].
+
+* Haga clic en *Health/Volume* details page links para determinar si el volumen está fuera de línea debido a discos rotos en su agregado de host.
++
+Consulte xref:task-determining-if-a-volume-is-offline-because-of-broken-disks-in-an-aggregate.adoc[Determinar si un volumen está sin conexión debido a discos dañados en un agregado].
+
+

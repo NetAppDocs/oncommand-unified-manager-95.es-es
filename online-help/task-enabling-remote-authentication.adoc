@@ -1,0 +1,85 @@
+---
+permalink: online-help/task-enabling-remote-authentication.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede habilitar la autenticación remota para que el servidor de Unified Manager pueda comunicarse con los servidores de autenticación. Los usuarios del servidor de autenticación pueden acceder a la interfaz gráfica de Unified Manager para gestionar los objetos de almacenamiento y los datos. 
+---
+= Habilitación de la autenticación remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede habilitar la autenticación remota para que el servidor de Unified Manager pueda comunicarse con los servidores de autenticación. Los usuarios del servidor de autenticación pueden acceder a la interfaz gráfica de Unified Manager para gestionar los objetos de almacenamiento y los datos.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+[NOTE]
+====
+El servidor de Unified Manager debe estar conectado directamente con el servidor de autenticación. Debe deshabilitar cualquier cliente LDAP local, como SSSD (demonio de servicios de seguridad del sistema) o NSLCD (demonio de almacenamiento en caché LDAP del servicio de nombres).
+
+====
+
+
+== Acerca de esta tarea
+
+Puede habilitar la autenticación remota mediante Open LDAP o Active Directory. Si la autenticación remota está deshabilitada, los usuarios remotos no pueden acceder a Unified Manager.
+
+La autenticación remota es compatible con LDAP y LDAPS (LDAP seguro). Unified Manager utiliza 389 como puerto predeterminado para la comunicación no segura y 636 como puerto predeterminado para la comunicación segura.
+
+[NOTE]
+====
+El certificado que se utiliza para autenticar usuarios debe cumplir el formato X.509.
+
+====
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *autenticación* en el menú Configuración de la izquierda.
+. En la página *Configuración/autenticación*, seleccione *Activar autenticación remota*.
+. En el campo *Servicio de autenticación*, seleccione el tipo de servicio y configure el servicio de autenticación.
++
+|===
+| Para tipo de autenticación... | Introduzca la siguiente información... 
+
+
+ a| 
+Active Directory
+ a| 
+** Nombre del administrador del servidor de autenticación en uno de los siguientes formatos:
++
+*** `domainname`*\*`username`
+*** `username`@`domainname`
+*** `Bind Distinguished Name` (Usando la notación LDAP adecuada)
+
+
+** Contraseña de administrador
+** Nombre completo base (con la notación LDAP adecuada)
+
+
+
+
+ a| 
+Abra LDAP
+ a| 
+** Enlazar nombre distintivo (en la notación LDAP correspondiente)
+** Enlazar contraseña
+** Nombre distintivo de base
+
+
+|===
++
+Si la autenticación de un usuario de Active Directory tarda mucho tiempo o agota el tiempo de espera, es probable que el servidor de autenticación tarde mucho tiempo en responder. Al deshabilitar la compatibilidad con los grupos anidados en Unified Manager, es posible que se reduzca el tiempo de autenticación.
+
++
+Si selecciona la opción Use Secure Connection para el servidor de autenticación, Unified Manager se comunica con el servidor de autenticación mediante el protocolo Secure Sockets Layer (SSL).
+
+. Añada servidores de autenticación y pruebe la autenticación.
+. Haga clic en *Guardar y cerrar*.
+

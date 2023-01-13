@@ -1,0 +1,68 @@
+---
+permalink: online-help/task-subscribing-to-ontap-ems-events.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede suscribirse para recibir eventos del sistema de gestión de eventos \(EMS\) generados por sistemas instalados con el software ONTAP. Un subconjunto de eventos de EMS se informa automáticamente a Unified Manager, pero solo se informan eventos de EMS adicionales si se ha suscrito a estos eventos.' 
+---
+= Suscripción a eventos de EMS de ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede suscribirse para recibir eventos del sistema de gestión de eventos (EMS) generados por sistemas instalados con el software ONTAP. Un subconjunto de eventos de EMS se informa automáticamente a Unified Manager, pero solo se informan eventos de EMS adicionales si se ha suscrito a estos eventos.
+
+
+
+== Antes de empezar
+
+No suscribirse a eventos de EMS que ya se hayan añadido a Unified Manager automáticamente, ya que esto puede provocar confusión al recibir dos eventos por el mismo problema.
+
+
+
+== Acerca de esta tarea
+
+Puede suscribirse a cualquier número de eventos de EMS. Todos los eventos a los que se suscribe están validados y solo se aplican los eventos validados a los clústeres que supervisa en Unified Manager. El _ONTAP 9 Catálogo de eventos EMS_ proporciona información detallada para todos los mensajes EMS de la versión especificada del software ONTAP 9. Busque la versión adecuada del _Catálogo de eventos EMS_ en la página Documentación del producto de ONTAP 9 para obtener una lista de los eventos aplicables.
+
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Biblioteca de productos de ONTAP 9"]
+
+Es posible configurar alertas para los eventos de EMS de ONTAP a los que se suscribe, y puede crear scripts personalizados para su ejecución.
+
+[NOTE]
+====
+Si no recibe los eventos de EMS de ONTAP a los que se ha suscrito, puede haber un problema con la configuración de DNS del clúster, lo que impide que el clúster llegue al servidor de Unified Manager. Para resolver este problema, el administrador de clúster debe corregir la configuración de DNS del clúster y, a continuación, reiniciar Unified Manager. Si lo hace, se vacíe los eventos de EMS pendientes en Unified Manager Server.
+
+====
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Configuración* > *Administrar eventos*.
+. En la página *Configuración/Administrar eventos*, haga clic en el botón *Suscribirse a eventos EMS*.
+. En el cuadro de diálogo *Suscribirse a eventos EMS*, introduzca el nombre del evento EMS de ONTAP al que desea suscribirse.
++
+Para ver los nombres de los eventos de EMS a los que se puede suscribir, desde el shell del clúster de ONTAP, puede usar la `event route show` (Anterior a ONTAP 9) o el `event catalog show` (ONTAP 9 o posterior). Consulte la respuesta 1072320 de la base de conocimientos para obtener instrucciones detalladas sobre la identificación de eventos de EMS individuales.
+
++
+https://kb.netapp.com/app/answers/answer_view/a_id/1072320["KB 1072320: Cómo configurar las suscripciones de eventos de EMS de ONTAP en Unified Manager"]
+
+. Haga clic en *Agregar*.
++
+El evento EMS se agrega a la lista de eventos EMS suscritos, pero la columna aplicable al clúster muestra el estado como "'Desconocido'" para el evento EMS que ha agregado.
+
+. Haga clic en *Guardar y cerrar* para registrar la suscripción al evento EMS con el clúster.
+. Haga clic en *Subscribe to EMS events* de nuevo.
++
+El estado «'Yes'» aparece en la columna aplicable al clúster del evento EMS que ha añadido.
+
++
+Si el estado no es "'Yes'", compruebe la ortografía del nombre del evento de EMS de ONTAP. Si el nombre se introduce de forma incorrecta, deberá eliminar el evento incorrecto y, a continuación, volver a añadir el evento.
+
+
+
+
+
+== Después de terminar
+
+Cuando se produce el evento de ONTAP EMS, el evento se muestra en la página Events. Es posible seleccionar el evento para ver detalles sobre el evento de EMS en la página de detalles Event. También puede gestionar la disposición del evento o crear alertas para el evento.

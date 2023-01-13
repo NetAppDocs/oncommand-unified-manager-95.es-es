@@ -1,0 +1,55 @@
+---
+permalink: online-help/reference-snapshot-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos Snapshot ofrecen información sobre el estado de las copias Snapshot, lo que permite supervisar las copias Snapshot para detectar posibles problemas. Los eventos se agrupan por área de impacto, e incluyen el nombre del evento, el nombre de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos Snapshot ofrecen información sobre el estado de las copias Snapshot, lo que permite supervisar las copias Snapshot para detectar posibles problemas. Los eventos se agrupan por área de impacto, e incluyen el nombre del evento, el nombre de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Eliminación automática de Snapshot deshabilitada (no aplicable)
+ a| 
+Evento
+ a| 
+Volumen
+ a| 
+Información
+
+
+
+ a| 
+Eliminación automática de copias Snapshot habilitada (no aplicable)
+ a| 
+Evento
+ a| 
+Volumen
+ a| 
+Información
+
+
+
+ a| 
+Configuración de eliminación automática de copias Snapshot modificada (no aplicable)
+ a| 
+Evento
+ a| 
+Volumen
+ a| 
+Información
+
+|===

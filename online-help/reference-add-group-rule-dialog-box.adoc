@@ -1,0 +1,64 @@
+---
+permalink: online-help/reference-add-group-rule-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Add Group Rule permite crear reglas de grupo en Unified Manager para agrupar de forma dinámica los objetos de almacenamiento. Más adelante, puede configurar y aplicar acciones de grupo para el grupo. 
+---
+= Cuadro de diálogo Agregar regla de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Add Group Rule permite crear reglas de grupo en Unified Manager para agrupar de forma dinámica los objetos de almacenamiento. Más adelante, puede configurar y aplicar acciones de grupo para el grupo.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Nombre*
++
+Especifica el nombre de la regla de grupo.
+
+* *Tipo de objeto de destino*
++
+Especifica el tipo de objetos de almacenamiento que se incluirán en el grupo.
+
+* *Grupo*
++
+Especifica el nombre del grupo para el que se crea la regla de grupo.
+
+* *Condiciones*
++
+Especifica las condiciones que determinan qué objetos de almacenamiento se pueden incluir en un grupo.
+
+* *Grupo de condición*
++
+Especifica los grupos de condiciones que tienen una o más condiciones definidas para incluir objetos de almacenamiento en un grupo.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar y Agregar*
++
+Agrega la regla de grupo y permite agregar otra regla de grupo sin cerrar el cuadro de diálogo.
+
+* *Agregar*
++
+Agrega la regla de grupo y cierra el cuadro de diálogo Agregar regla de grupo.
+
+* *Cancelar*
++
+Cancela los cambios y cierra el cuadro de diálogo Agregar regla de grupo.
+
+* *Agregar condición*
++
+Agrega una condición para definir la regla de grupo.
+
+* *Agregar grupo de condiciones*
++
+Agrega un grupo de condiciones para definir condiciones para la regla de grupo.
+
+

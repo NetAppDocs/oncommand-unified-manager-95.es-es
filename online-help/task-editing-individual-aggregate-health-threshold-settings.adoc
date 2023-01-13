@@ -1,0 +1,38 @@
+---
+permalink: online-help/task-editing-individual-aggregate-health-threshold-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar la configuración del umbral de estado para la capacidad del agregado, el crecimiento y las copias Snapshot de uno o más agregados. Cuando se supera un umbral, se generan alertas y se reciben notificaciones. Estas notificaciones le ayudan a tomar medidas preventivas basadas en el evento generado. 
+---
+= Editar la configuración de umbral de estado de cada agregado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar la configuración del umbral de estado para la capacidad del agregado, el crecimiento y las copias Snapshot de uno o más agregados. Cuando se supera un umbral, se generan alertas y se reciben notificaciones. Estas notificaciones le ayudan a tomar medidas preventivas basadas en el evento generado.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Basándose en los cambios de los valores de umbral, los eventos se generan o se vuelven obsoletos en el siguiente ciclo de supervisión.
+
+Cuando se habilita la opción Autofila en los volúmenes que residen en el agregado, los umbrales de capacidad del agregado se consideran sin infracción en función del tamaño máximo del volumen establecido por el crecimiento automático, no según el tamaño del volumen original.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Estado* > *agregados*.
+. En la página de inventario *Health/Aggregates*, seleccione uno o más agregados y, a continuación, haga clic en *Editar umbrales*.
+. En el cuadro de diálogo *Editar umbrales agregados*, edite la configuración de umbral de una de las siguientes opciones: Capacidad, crecimiento o copias Snapshot seleccionando la casilla de verificación apropiada y modificando la configuración.
+. Haga clic en *Guardar*.
+

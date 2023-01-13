@@ -1,0 +1,59 @@
+---
+permalink: install/task-creating-a-custom-user-home-directory-and-umadmin-user-prior-to-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede crear un directorio inicial personalizado y definir su propia contraseña de usuario umadmin antes de instalar Unified Manager. Esta tarea es opcional, pero es posible que algunos sitios necesiten la flexibilidad para anular la configuración predeterminada de la instalación de Unified Manager. 
+---
+= Creación de un directorio inicial de usuario personalizado y una contraseña umadmin antes de la instalación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear un directorio inicial personalizado y definir su propia contraseña de usuario umadmin antes de instalar Unified Manager. Esta tarea es opcional, pero es posible que algunos sitios necesiten la flexibilidad para anular la configuración predeterminada de la instalación de Unified Manager.
+
+
+
+== Antes de empezar
+
+* El sistema debe cumplir los requisitos descritos en xref:concept-virtual-infrastructure-or-hardware-system-requirements.adoc[Requisitos del sistema de hardware].
+* Debe poder iniciar sesión como usuario root en el sistema Red Hat Enterprise Linux o CentOS.
+
+
+
+
+== Acerca de esta tarea
+
+La instalación predeterminada de Unified Manager realiza las siguientes tareas:
+
+* Crea el usuario umadmin con `/home/umadmin` como directorio principal.
+* Asigna la contraseña predeterminada "'admin'" al usuario umadmin.
+
+
+Porque algunos entornos de instalación restringen el acceso a. `/home`, la instalación falla. Debe crear el directorio inicial en una ubicación diferente. Además, algunos sitios pueden tener reglas acerca de la complejidad de la contraseña o requerir que los administradores locales establezcan las contraseñas en lugar de ser configuradas por el programa de instalación.
+
+Si su entorno de instalación requiere que usted anule estos valores predeterminados de instalación, siga estos pasos para crear un directorio particular personalizado y para definir la contraseña del usuario umadmin.
+
+Cuando esta información se define antes de la instalación, el script de instalación detecta esta configuración y utiliza los valores definidos en lugar de utilizar la configuración predeterminada de instalación.
+
+Además, la instalación predeterminada de Unified Manager incluye el usuario umadmin en los archivos sudoers (`ocum_sudoers` y.. `ocie_sudoers`) en la `/etc/sudoers.d/` directorio. Si elimina este contenido del entorno debido a políticas de seguridad o a alguna herramienta de supervisión de seguridad, debe volver a añadirlo. Debe conservar la configuración de sudoers porque algunas operaciones de Unified Manager requieren estos privilegios sudo.
+
+
+
+== Pasos
+
+. Inicie sesión como usuario root en el servidor.
+. Crear la cuenta de grupo umadmin llamada «mantenimiento»:``groupadd maintenance``
+. Cree la cuenta de usuario "'umadmin'" en el grupo de mantenimiento bajo un directorio inicial de su elección:``adduser --home <home_directory\> -g maintenance umadmin``
+. Defina la contraseña umadmin:``passwd umadmin``
++
+El sistema le pide que introduzca una nueva cadena de contraseña para el usuario umadmin.
+
+
+
+
+
+== Después de terminar
+
+Después de instalar Unified Manager, debe especificar el shell de inicio de sesión de usuario umadmin.

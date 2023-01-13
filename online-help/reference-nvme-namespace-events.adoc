@@ -1,0 +1,185 @@
+---
+permalink: online-help/reference-nvme-namespace-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de espacio de nombres de NVMe ofrecen información sobre el estado de los espacios de nombres para poder supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de espacio de nombres de NVMe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de espacio de nombres de NVMe ofrecen información sobre el estado de los espacios de nombres para poder supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+Un asterisco (*) identifica los eventos de EMS que se han convertido a eventos de Unified Manager.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+NVMeNS sin conexión * (nvmeNamespaceStatusOffline)
+ a| 
+Evento
+ a| 
+Espacio de nombres
+ a| 
+Información
+
+
+
+ a| 
+NVMeNS Online * (nvmeNamespaceStatusOnline)
+ a| 
+Evento
+ a| 
+Espacio de nombres
+ a| 
+Información
+
+
+
+ a| 
+NVMeNS fuera del espacio * (nvmeNamespaceSpaceOutOfSpace)
+ a| 
+Riesgo
+ a| 
+Espacio de nombres
+ a| 
+Advertencia
+
+
+
+ a| 
+NVMeNS Destroy * (nvmeNamespaceDestroy)
+ a| 
+Evento
+ a| 
+Espacio de nombres
+ a| 
+Información
+
+|===
+
+
+== Área de impacto: Rendimiento
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Se superó el umbral crucial de IOPS del espacio de nombres de NVMe (ocumNvmeNamespaceIopsIncident)
+ a| 
+Incidente
+ a| 
+Espacio de nombres
+ a| 
+Crítico
+
+
+
+ a| 
+Se superó el umbral de advertencia de IOPS del espacio de nombres de NVMe (ocumNvmeNamespaceIopsWarning)
+ a| 
+Riesgo
+ a| 
+Espacio de nombres
+ a| 
+Advertencia
+
+
+
+ a| 
+Se superó el umbral crítico de Mbps del espacio de nombres de NVMe (ocumNvmeNamespaceMbpsIncident)
+ a| 
+Incidente
+ a| 
+Espacio de nombres
+ a| 
+Crítico
+
+
+
+ a| 
+Se superó el umbral de advertencia de Mbps del espacio de nombres de NVMe (ocumNvmeNamespaceMbpsWarning)
+ a| 
+Riesgo
+ a| 
+Espacio de nombres
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido el umbral crítico de latencia del espacio de nombres NVMe ms/op (ocumNvmeNamespaceLatencyIncident)
+ a| 
+Incidente
+ a| 
+Espacio de nombres
+ a| 
+Crítico
+
+
+
+ a| 
+Se insuperó el umbral de advertencia de latencia de espacio de nombres de NVMe en ms/op (ocumNvmeNamespaceLatencyWarning)
+ a| 
+Riesgo
+ a| 
+Espacio de nombres
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido la latencia del espacio de nombres de NVMe y el umbral crítico de IOPS (ocumNvmeNamespaceLatencyIopsIncident)
+ a| 
+Incidente
+ a| 
+Espacio de nombres
+ a| 
+Crítico
+
+
+
+ a| 
+Se insuperó el umbral de advertencia de latencia de espacio de nombres y de IOPS de NVMe (ocumNvmeNamespaceLatencyIopsWarning)
+ a| 
+Riesgo
+ a| 
+Espacio de nombres
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha incumplido la latencia del espacio de nombres NVMe y el umbral crítico de Mbps (ocumNvmeNamespaceLatencyMbpsIncident)
+ a| 
+Incidente
+ a| 
+Espacio de nombres
+ a| 
+Crítico
+
+
+
+ a| 
+Se insuperó el umbral de advertencia de latencia de espacio de nombres y Mbps de NVMe (ocumNvmeNamespaceLatencyMbpsWarning)
+ a| 
+Riesgo
+ a| 
+Espacio de nombres
+ a| 
+Advertencia
+
+|===

@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-customizing-the-aggregate-capacity-and-utilization-report-to-display-aggregates-with-noncompliant-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe de capacidad y uso del agregado para mostrar los agregados filtrados según el umbral completo. De este modo, puede ver los agregados que pueden no cumplir las políticas de la empresa. 
+---
+= Personalización del informe de capacidad y utilización de agregados para mostrar agregados con una configuración que no cumple con los requisitos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe de capacidad y uso del agregado para mostrar los agregados filtrados según el umbral completo. De este modo, puede ver los agregados que pueden no cumplir las políticas de la empresa.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster o pareja de alta disponibilidad, realice los siguientes pasos:
++
+.. Haga clic en la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para filtrar el umbral de los agregados que no supere el 85%, haga clic en la columna *Space Full Threshold* y abra el cuadro de diálogo *Filter* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista *condición*, seleccione *mayor que*.
+. Haga clic en *Seleccionar valores* y seleccione *85*.
+. Haga clic en *Aceptar*.
+

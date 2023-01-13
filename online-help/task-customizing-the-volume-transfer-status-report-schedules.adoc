@@ -1,0 +1,33 @@
+---
+permalink: online-help/task-customizing-the-volume-transfer-status-report-schedules.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se pueden personalizar las programaciones para el informe Volume Transfer Status \(Historical\) para ver los detalles del volumen en función de diferentes programaciones. Puede ver, modificar o eliminar programaciones de informes existentes y agregar programaciones nuevas para sus informes.' 
+---
+= Personalización de las programaciones del informe de estado de transferencia de volumen (histórico)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar las programaciones para el informe Volume Transfer Status (Historical) para ver los detalles del volumen en función de diferentes programaciones. Puede ver, modificar o eliminar programaciones de informes existentes y agregar programaciones nuevas para sus informes.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. En la página del informe *Estado de transferencia de volumen (Histórico)*, haga clic en *Administrar programaciones de informes*.
+. En el cuadro de diálogo *Administrar programas de informes*, introduzca detalles específicos como el nombre de la programación del destinatario, la dirección de correo electrónico, el formato del informe, la frecuencia y los informes.
+. Seleccione *Inventario* como categoría de informe.
+. Haga clic en *Guardar y cerrar*.
++
+El informe de estado de transferencia de volumen (histórico) se envía automáticamente por correo electrónico a uno o más destinatarios según la programación.
+
+

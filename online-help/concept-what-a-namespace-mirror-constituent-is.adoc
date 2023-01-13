@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-what-a-namespace-mirror-constituent-is.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Un componente de copia del espacio de nombres es una copia duplicada de protección de datos dentro del clúster del componente de espacio de nombres en un Infinite Volume. El componente de copia de espacio de nombres realiza dos funciones: Proporciona protección de datos del componente de espacio de nombres y admite SnapDiff para backup en cinta incremental de Infinite Volumes.' 
+---
+= Qué es un componente de copia de espacio de nombres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un componente de copia del espacio de nombres es una copia duplicada de protección de datos dentro del clúster del componente de espacio de nombres en un Infinite Volume. El componente de copia de espacio de nombres realiza dos funciones: Proporciona protección de datos del componente de espacio de nombres y admite SnapDiff para backup en cinta incremental de Infinite Volumes.

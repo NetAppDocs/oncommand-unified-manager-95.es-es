@@ -1,0 +1,50 @@
+---
+permalink: online-help/task-creating-rules-to-generate-email-addresses.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede crear reglas para especificar la dirección de correo electrónico según la cuota de usuario asociada con clústeres, las máquinas virtuales de almacenamiento \(SVM\), los volúmenes, qtrees, los usuarios o los grupos de usuarios. Se envía una notificación a la dirección de correo electrónico especificada cuando hay una infracción de cuota.' 
+---
+= Creación de reglas para generar direcciones de correo electrónico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear reglas para especificar la dirección de correo electrónico según la cuota de usuario asociada con los clústeres, las máquinas virtuales de almacenamiento (SVM), los volúmenes, qtrees, los usuarios o los grupos de usuarios. Se envía una notificación a la dirección de correo electrónico especificada cuando hay una infracción de cuota.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber revisado las directrices de la página Reglas para generar Dirección de correo electrónico de cuota de usuario y grupo.
+
+
+
+
+== Acerca de esta tarea
+
+Debe definir las reglas para las direcciones de correo electrónico de cuota e introducirlas en el orden en el que desea ejecutarlas. Por ejemplo, si desea utilizar la dirección de correo electrónico qtree1@xyz.com para recibir notificaciones acerca de las brechas de cuotas para qtre1 y utilizar la dirección de correo electrónico admin@xyz.com para todos los demás qtrees, las reglas deben aparecer en el siguiente orden:
+
+* Si ( $QTREE == 'qtre1' ) entonces qtree1@xyz.com
+* Si ( $QTREE == * ) entonces admin@xyz.com
+
+
+Si no se cumple ninguno de los criterios para las reglas especificadas, se utiliza la regla predeterminada:
+
+SI ( $USER_OR_GROUP == * ) ENTONCES $USER_OR_GROUP@$DOMAIN
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *Quota Email* en el menú de configuración de la izquierda.
+. En la página de opciones *Configuración*, haga clic en *Reglas de dirección* y, a continuación, escriba la regla en función de sus criterios.
+. Haga clic en *Validar* para validar la sintaxis de la regla.
++
+Se muestra un mensaje de error si la sintaxis de la regla es incorrecta. Debe corregir la sintaxis y volver a hacer clic en *Validar*.
+
+. Haga clic en *Guardar y cerrar*.
+. Compruebe que la dirección de correo electrónico que ha creado se muestra en la pestaña *cuotas de usuario y grupo* de la página de detalles *Health/Storage Virtual Machine*.
+

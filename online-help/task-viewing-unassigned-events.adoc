@@ -1,0 +1,31 @@
+---
+permalink: online-help/task-viewing-unassigned-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver los eventos no asignados y, a continuación, asignar cada uno de ellos a un usuario que pueda resolverlos. 
+---
+= Visualización de eventos sin asignar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver los eventos no asignados y, a continuación, asignar cada uno de ellos a un usuario que pueda resolverlos.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Eventos*.
++
+De forma predeterminada, los eventos nuevos y reconocidos se muestran en la página del inventario Eventos.
+
+. En el panel *Filtros*, seleccione la opción de filtro *sin asignar* en el área *asignado a*.
+

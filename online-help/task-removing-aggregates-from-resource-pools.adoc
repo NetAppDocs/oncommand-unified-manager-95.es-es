@@ -1,0 +1,49 @@
+---
+permalink: online-help/task-removing-aggregates-from-resource-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Es posible quitar agregados de un pool de recursos existente: Por ejemplo, cuando se desea usar un agregado con otro fin.' 
+---
+= Eliminación de agregados de pools de recursos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible quitar agregados de un pool de recursos existente: Por ejemplo, cuando se desea usar un agregado con otro fin.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Los miembros del pool de recursos solo se muestran cuando se selecciona un pool de recursos.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Protección* > *agrupaciones de recursos*.
+. Seleccione el pool de recursos del que desea quitar agregados miembros.
++
+La lista de agregados de miembros se muestra en el panel Miembros.
+
+. Seleccione uno o varios agregados.
++
+El botón *Quitar* está activado.
+
+. Haga clic en *Quitar.*
++
+Aparecerá un cuadro de diálogo de advertencia.
+
+. Haga clic en *Sí* para continuar.
++
+Los agregados seleccionados se eliminan del panel Miembros.
+
+

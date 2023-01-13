@@ -1,0 +1,66 @@
+---
+permalink: online-help/reference-volume-move-status-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de estado del movimiento de volúmenes le indican acerca del estado del movimiento de volúmenes para poder supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de estado del movimiento de volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de estado del movimiento de volúmenes le indican acerca del estado del movimiento de volúmenes para poder supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Capacidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Estado del movimiento de volumen: En curso (no aplicable)
+ a| 
+Evento
+ a| 
+Volumen
+ a| 
+Información
+
+
+
+ a| 
+Estado de movimiento del volumen - failed (ocumEvtVolumeMoveFailed)
+ a| 
+Riesgo
+ a| 
+Volumen
+ a| 
+Error
+
+
+
+ a| 
+Estado del movimiento de volumen: Completado (no aplicable)
+ a| 
+Evento
+ a| 
+Volumen
+ a| 
+Información
+
+
+
+ a| 
+Movimiento de volumen - transición diferida (ocumEvtVolumeMoveCutoverDetransferido)
+ a| 
+Riesgo
+ a| 
+Volumen
+ a| 
+Advertencia
+
+|===

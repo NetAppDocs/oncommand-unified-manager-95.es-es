@@ -1,0 +1,28 @@
+---
+permalink: install/task-manually-configuring-the-epel-repository.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si el sistema en el que está instalando Unified Manager no tiene acceso al repositorio de paquetes extra para Enterprise Linux \(EPEL\), debe descargar y configurar manualmente el repositorio para una instalación correcta.' 
+---
+= Configurar manualmente el repositorio de EPEL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si el sistema en el que está instalando Unified Manager no tiene acceso al repositorio de paquetes extra para Enterprise Linux (EPEL), debe descargar y configurar manualmente el repositorio para una instalación correcta.
+
+
+
+== Acerca de esta tarea
+
+El repositorio de EPEL proporciona acceso a las utilidades de terceros necesarias que deben instalarse en el sistema. Se utiliza el repositorio de EPEL tanto si se instala Unified Manager en un sistema Red Hat o CentOS.
+
+
+
+== Pasos
+
+. Descargue el repositorio de EPEL para su instalación: `+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm+`
+. Configurar el repositorio de EPEL: `yum install epel-release-latest-7.noarch.rpm`
+

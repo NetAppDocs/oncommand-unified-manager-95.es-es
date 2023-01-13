@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/concept-what-happens-when-a-performance-threshold-policy-is-breached-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando un valor de contador supera su valor de umbral de rendimiento definido para la cantidad de tiempo especificada en la duración, se supera el umbral y se informa de un evento. 
+---
+= Qué sucede cuando se incumple una política de umbral de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando un valor de contador supera su valor de umbral de rendimiento definido para la cantidad de tiempo especificada en la duración, se supera el umbral y se informa de un evento.
+
+El evento hace que se inicien las siguientes acciones:
+
+* El evento se muestra en la consola de rendimiento, la página Performance Cluster Summary, la página Events y la página Performance Inventory específica para cada objeto.
+* (Opcional) puede enviarse una alerta de correo electrónico sobre el evento a uno o más destinatarios de correo electrónico y puede enviarse una captura SNMP a un receptor de capturas.
+* (Opcional) se puede ejecutar un script para modificar o actualizar automáticamente objetos de almacenamiento.
+
+
+La primera acción se ejecuta siempre. Puede configurar si las acciones opcionales se realizan en la página Configuración/Alertas. Puede definir acciones únicas en función de si se incumplen una política de advertencia o de umbral crítico.
+
+Una vez que se ha producido una infracción de política de umbral de rendimiento en un objeto de almacenamiento, no se generan más eventos para esa política hasta que el valor del contador no supere el valor del umbral, momento en el que la duración se restablece para ese límite. Mientras se sigue excediendo el umbral, la hora de finalización del evento se actualiza continuamente para reflejar que este evento está en curso.
+
+Un evento de umbral captura o congela la información relacionada con la gravedad y la definición de la política de modo que la información de umbral única se muestre con el evento, incluso si la política de umbral se modifica en el futuro.

@@ -1,0 +1,22 @@
+---
+permalink: online-help/concept-introduction-to-unified-manager-health-monitoring.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager le ayuda a supervisar un gran número de sistemas que ejecutan el software ONTAP mediante una interfaz de usuario centralizada. La infraestructura de servidor de Unified Manager proporciona escalabilidad y compatibilidad, así como funcionalidades mejoradas de supervisión y notificación. 
+---
+= Introducción a la supervisión del estado de Unified Manager de OnCommand
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager le ayuda a supervisar un gran número de sistemas que ejecutan el software ONTAP mediante una interfaz de usuario centralizada. La infraestructura de servidor de Unified Manager proporciona escalabilidad y compatibilidad, así como funcionalidades mejoradas de supervisión y notificación.
+
+Las capacidades clave de Unified Manager incluyen la supervisión, las alertas, la gestión de la disponibilidad y la capacidad de los clústeres, la gestión de capacidades de protección, la supervisión del rendimiento, la configuración y gestión de Infinite Volume, la anotación de objetos de almacenamiento y la agrupación de datos de diagnóstico y su envío al soporte técnico.
+
+Puede usar Unified Manager para supervisar los clústeres. Cuando se producen problemas en el clúster, Unified Manager notifica los detalles de estos problemas mediante eventos. Algunos eventos también le proporcionan una acción correctiva que puede tomar para resolver los problemas. Es posible configurar alertas para eventos que, cuando se produzcan problemas, se le notificarán por correo electrónico y capturas SNMP.
+
+Puede utilizar Unified Manager para gestionar objetos de almacenamiento en el entorno asociándolos con anotaciones. Puede crear anotaciones personalizadas y asociar de forma dinámica clústeres, máquinas virtuales de almacenamiento (SVM) y volúmenes con las anotaciones mediante las reglas.
+
+También puede planificar los requisitos de almacenamiento de los objetos de clúster mediante la información proporcionada en los gráficos de capacidad y estado del objeto de clúster correspondiente.

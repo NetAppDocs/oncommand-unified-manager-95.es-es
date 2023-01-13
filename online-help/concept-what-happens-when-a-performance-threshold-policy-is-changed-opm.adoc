@@ -1,0 +1,24 @@
+---
+permalink: online-help/concept-what-happens-when-a-performance-threshold-policy-is-changed-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: Si ajusta el valor de contador o la duración de una política de umbral de rendimiento existente, el cambio de política se aplica a todos los objetos de almacenamiento que usan la política. El nuevo ajuste se realiza de inmediato y Unified Manager comienza a comparar los valores de contador de rendimiento con la nueva configuración de umbral de todos los datos de rendimiento recientemente recopilados. 
+---
+= Qué ocurre cuando se cambia una política de umbral de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si ajusta el valor de contador o la duración de una política de umbral de rendimiento existente, el cambio de política se aplica a todos los objetos de almacenamiento que usan la política. El nuevo ajuste se realiza de inmediato y Unified Manager comienza a comparar los valores de contador de rendimiento con la nueva configuración de umbral de todos los datos de rendimiento recientemente recopilados.
+
+Si existe algún evento activo para los objetos que utilizan la política de umbral modificada, los eventos se marcan como obsoletos y la política de umbral comienza a supervisar el contador como una política de umbral recientemente definida.
+
+Al ver el contador en el que se ha aplicado el umbral en la vista detallada de los gráficos de contador, las líneas de umbral críticas y de advertencia reflejan la configuración de umbral actual. La configuración de umbral original no aparece en esta página aunque vea los datos históricos cuando la configuración de umbral anterior estaba en vigor.
+
+[NOTE]
+====
+Puesto que las configuraciones de umbral más antiguas no aparecen en la vista detallada de los gráficos de contador, es posible que aparezcan eventos históricos que aparecen debajo de las líneas de umbral actuales.
+
+====

@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-understanding-more-about-quotas.html 
+sidebar: sidebar 
+keywords:  
+summary: Comprender los conceptos de cuotas le ayuda a gestionar de forma eficiente las cuotas de usuario y las cuotas de grupos de usuarios. 
+---
+= Más información acerca de las cuotas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Comprender los conceptos de cuotas le ayuda a gestionar de forma eficiente las cuotas de usuario y las cuotas de grupos de usuarios.

@@ -1,0 +1,41 @@
+---
+permalink: online-help/task-creating-a-snapvault-policy-to-maximize-transfer-efficiency.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede crear una nueva política de SnapVault para configurar la prioridad para una transferencia de SnapVault. Las políticas se usan para maximizar la eficiencia de las transferencias del almacenamiento primario al secundario en una relación de protección. 
+---
+= Creación de una política de SnapVault para maximizar la eficiencia de transferencia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear una nueva política de SnapVault para configurar la prioridad para una transferencia de SnapVault. Las políticas se usan para maximizar la eficiencia de las transferencias del almacenamiento primario al secundario en una relación de protección.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber configurado Workflow Automation.
+* Ya debe haber completado el área Destination Information en el cuadro de diálogo Configure Protection.
+
+
+
+
+== Pasos
+
+. En la ficha *SnapVault* del cuadro de diálogo *Configurar protección*, haga clic en el enlace *Crear directiva* del área *Configuración de relación*.
++
+Aparece la pestaña SnapVault.
+
+. En el campo *Nombre de directiva*, escriba el nombre que desea asignar a la directiva.
+. En el campo *prioridad de transferencia*, seleccione la prioridad de transferencia que desea asignar a la directiva.
+. En el campo *Comentario*, introduzca un comentario para la directiva.
+. En el área *etiqueta de replicación*, agregue o edite una etiqueta de replicación, según sea necesario.
+. Haga clic en *Crear*.
++
+La nueva directiva se muestra en la lista desplegable Crear directiva.
+
+

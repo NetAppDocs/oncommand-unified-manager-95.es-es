@@ -1,0 +1,62 @@
+---
+permalink: online-help/reference-edit-user-dialog-box-um.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Editar usuario permite editar sólo ciertos ajustes, en función del usuario seleccionado. 
+---
+= Cuadro de diálogo Edit User
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar usuario permite editar sólo ciertos ajustes, en función del usuario seleccionado.
+
+
+
+== Detalles
+
+El área Detalles permite editar la siguiente información sobre un usuario seleccionado:
+
+* *Tipo*
++
+Este campo no se puede editar.
+
+* *Nombre*
++
+Este campo no se puede editar.
+
+* *Contraseña*
++
+Permite editar la contraseña cuando el usuario seleccionado es un usuario de base de datos.
+
+* *Confirmar contraseña*
++
+Permite editar la contraseña confirmada cuando el usuario seleccionado es un usuario de base de datos.
+
+* *Correo electrónico*
++
+Permite editar la dirección de correo electrónico del usuario seleccionado. Este campo se puede editar cuando el usuario seleccionado es un usuario local, un usuario LDAP o un usuario de mantenimiento.
+
+* *Rol*
++
+Permite editar el rol asignado al usuario. Este campo se puede editar cuando el usuario seleccionado es un usuario local, un usuario remoto o un grupo remoto.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Guardar*
++
+Guarda los cambios y cierra el cuadro de diálogo Editar usuario.
+
+* *Cancelar*
++
+Cancela los cambios y cierra el cuadro de diálogo Editar usuario.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-storage-summary-report-customizations.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar los informes de resumen de almacenamiento para ver y analizar información acerca de la capacidad de almacenamiento en parejas de alta disponibilidad. Puede usar filtros para mostrar el uso del almacenamiento por modelo de clúster, la capacidad de los LUN más sin asignar y la capacidad de pares de alta disponibilidad disponibles para aprovisionar nuevos volúmenes y LUN. 
+---
+= Personalizaciones del informe de resumen de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar los informes de resumen de almacenamiento para ver y analizar información acerca de la capacidad de almacenamiento en parejas de alta disponibilidad. Puede usar filtros para mostrar el uso del almacenamiento por modelo de clúster, la capacidad de los LUN más sin asignar y la capacidad de pares de alta disponibilidad disponibles para aprovisionar nuevos volúmenes y LUN.

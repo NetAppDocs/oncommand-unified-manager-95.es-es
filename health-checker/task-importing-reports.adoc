@@ -1,0 +1,34 @@
+---
+permalink: health-checker/task-importing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Si creó un informe fuera de Unified Manager, puede importar y guardar el archivo de informes que desee usar con Unified Manager. 
+---
+= Importando informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si creó un informe fuera de Unified Manager, puede importar y guardar el archivo de informes que desee usar con Unified Manager.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+Debe asegurarse de que el informe que planea importar sea compatible con Unified Manager.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Informes* y, a continuación, haga clic en *Importar informe*.
+. En el cuadro de diálogo *Informe de importación*, haga clic en *examinar*, seleccione el archivo que desea importar y, a continuación, escriba un nombre y una breve descripción del informe.
+. Haga clic en *Importar*.
++
+Si no puede importar el informe, puede comprobar el archivo de registro para encontrar el error que causa el problema.
+
+

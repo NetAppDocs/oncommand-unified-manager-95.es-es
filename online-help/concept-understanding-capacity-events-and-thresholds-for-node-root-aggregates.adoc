@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-understanding-capacity-events-and-thresholds-for-node-root-aggregates.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede supervisar el agregado raíz del nodo mediante Unified Manager. La práctica recomendada es aprovisionar considerablemente el volumen raíz en el agregado raíz para evitar que se detenga el nodo. 
+---
+= Eventos y umbrales para agregados raíz de nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede supervisar el agregado raíz del nodo mediante Unified Manager. La práctica recomendada es aprovisionar considerablemente el volumen raíz en el agregado raíz para evitar que se detenga el nodo.
+
+De manera predeterminada, no se generan eventos de capacidad ni rendimiento para los agregados raíz. Además, los valores de umbral que utiliza Unified Manager no son aplicables a los agregados raíz del nodo. Solo un representante del soporte técnico puede modificar la configuración de estos eventos para que se generen. Cuando el representante de soporte técnico modifica la configuración, los valores del umbral de capacidad se aplican al agregado raíz del nodo.
+
+Puede realizar acciones adecuadas para evitar que el nodo se detenga por medio de OnCommand System Manager o la CLI de ONTAP.

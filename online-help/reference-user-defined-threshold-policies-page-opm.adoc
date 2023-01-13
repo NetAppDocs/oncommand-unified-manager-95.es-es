@@ -1,0 +1,81 @@
+---
+permalink: online-help/reference-user-defined-threshold-policies-page-opm.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar la página Configuration/Performance Thresholds para ver todas las políticas de umbral de rendimiento definidas actualmente. Esta página también proporciona la funcionalidad para crear, clonar, editar y eliminar políticas de umbral. 
+---
+= Página Configuration/Performance Thresholds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la página Configuration/Performance Thresholds para ver todas las políticas de umbral de rendimiento definidas actualmente. Esta página también proporciona la funcionalidad para crear, clonar, editar y eliminar políticas de umbral.
+
+La lista de políticas de umbral de rendimiento se ordena alfabéticamente por nombre de política. Puede hacer clic en un encabezado de columna para ordenar las políticas según esa columna. Si busca una política específica, puede usar los mecanismos de filtro y búsqueda para refinar la lista de políticas de umbral que aparecen en la lista de inventario.
+
+
+
+== Filtrar y buscar barra
+
+El botón *filtrado* le permite afinar la lista de directivas de umbral mostrando sólo las directivas que coinciden con determinados criterios.
+
+El botón *Buscar* permite buscar determinadas directivas introduciendo nombres de directivas completos o parciales para afinar la lista de directivas de umbral que aparecen en la lista de inventario.
+
+
+
+== Botones de comando
+
+* *Crear*
++
+Crea una nueva política de umbral de rendimiento.
+
+* *Clon*
++
+Crea una nueva política de umbral de rendimiento en función de una copia de la política seleccionada.
+
+* *Edición*
++
+Modifica la política de umbral de rendimiento seleccionada. Todos los objetos de almacenamiento que utilizan la política se actualizan para utilizar la directiva revisada.
+
+* *Eliminar*
++
+Elimina la política de umbral de rendimiento seleccionada. La política se elimina de todos los objetos de almacenamiento que utilizan la política. Puede hacer clic en el elemento de la columna objetos asociados para ver los objetos que están utilizando esta directiva en ese momento.
+
+
+
+
+
+== Lista de políticas de umbral
+
+* *Nombre de la política*
++
+Muestra el nombre de la política de umbral. Puede colocar el cursor sobre el nombre de la política para ver los detalles de ella.
+
+* *Descripción*
++
+Muestra una breve descripción de la política de umbral.
+
+* *Primera condición*
++
+Muestra la condición principal de la política de umbral, incluidos el contador de rendimiento definido y los valores de activación de advertencia y los valores de activación crítica. Puede colocar el cursor sobre el nombre de la condición para ver los detalles de la misma.
+
+* *Segunda condición*
++
+Muestra la condición de la política de umbral secundario, si se ha definido. Puede colocar el cursor sobre el nombre de la condición para ver los detalles de la misma. Si no se define una segunda condición, esta columna estará en blanco.
+
++
+[NOTE]
+====
+Cuando se define una segunda condición, se genera un evento sólo cuando se incumplen ambas condiciones.
+
+====
+* *Objetos asociados*
++
+Muestra el tipo de objeto de almacenamiento al que se puede aplicar la política de umbral y el número de objetos que usan la política. Este campo está en blanco hasta que asigne la directiva a al menos un objeto.
+
++
+Puede hacer clic en el encabezado de la columna para ordenar las políticas por tipo de objeto: Volumen, LUN, agregado, etc. Puede hacer clic en el nombre de la política para mostrar la página del inventario rellena con los objetos que están utilizando actualmente la política de umbral.
+
+

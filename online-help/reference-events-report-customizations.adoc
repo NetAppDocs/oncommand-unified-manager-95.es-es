@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-events-report-customizations.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear informes para supervisar eventos excepcionales en un clúster. 
+---
+= Los eventos informan personalizaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear informes para supervisar eventos excepcionales en un clúster.

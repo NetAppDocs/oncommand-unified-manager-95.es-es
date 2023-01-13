@@ -1,0 +1,30 @@
+---
+permalink: online-help/concept-authentication-with-active-directory-or-openldap.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede habilitar la autenticación remota en el servidor de administración y configurar el servidor de administración para que se comunique con los servidores de autenticación, de modo que los usuarios de los servidores de autenticación puedan acceder a usted pueda habilitar la autenticación remota en el servidor de administración y configurar el servidor de administración para que se comunique con los servidores de autenticación Que los usuarios dentro de los servidores de autenticación pueden acceder a Unified Manager. 
+---
+= Autenticación con Active Directory u OpenLDAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede habilitar la autenticación remota en el servidor de administración y configurar el servidor de administración para que se comunique con los servidores de autenticación, de modo que los usuarios de los servidores de autenticación puedan acceder a usted pueda habilitar la autenticación remota en el servidor de administración y configurar el servidor de administración para que se comunique con los servidores de autenticación Que los usuarios dentro de los servidores de autenticación pueden acceder a Unified Manager.
+
+Puede utilizar uno de los siguientes servicios de autenticación predefinidos o especificar su propio servicio de autenticación:
+
+* Active Directory de Microsoft
++
+[NOTE]
+====
+No puede usar los servicios de directorio ligero de Microsoft.
+
+====
+* OpenLDAP
+
+
+Puede seleccionar el servicio de autenticación requerido y añadir los servidores de autenticación adecuados para habilitar los usuarios remotos en el servidor de autenticación para acceder a Unified Manager. El servidor de autenticación mantiene las credenciales de los usuarios o grupos remotos. El servidor de gestión usa el protocolo ligero de acceso a directorios (LDAP) para autenticar a los usuarios remotos dentro del servidor de autenticación configurado.
+
+Para los usuarios locales que se crean en Unified Manager, el servidor de gestión mantiene su propia base de datos de nombres de usuario y contraseñas. El servidor de gestión realiza la autenticación y no utiliza Active Directory ni OpenLDAP para la autenticación.

@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task-downloading-and-installing-mysql-connector-j.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe descargar e instalar los controladores MySQL Connector/J en una ubicación específica. Puede utilizar estos controladores para crear un origen de datos que conecte el informe a Unified Manager. 
+---
+= Descarga e instalación de MySQL Connector/J
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe descargar e instalar los controladores MySQL Connector/J en una ubicación específica. Puede utilizar estos controladores para crear un origen de datos que conecte el informe a Unified Manager.
+
+
+
+== Acerca de esta tarea
+
+Debe usar MySQL Connector/J versión 5.1 o posterior.
+
+
+
+== Pasos
+
+. Descargue los controladores MySQL Connector/J en `dev.mysql.com`.
+. Instale el `.jar` archivar y anotar su ubicación para futura referencia.
++
+Por ejemplo, instale `.jar` archivo en `C:\Program Files\MySQL\MySQL Connector J\mysql-connector-java-5.1.32-bin.jar`.
+
+

@@ -1,0 +1,61 @@
+---
+permalink: health-checker/task-determining-if-a-volume-is-offline-and-its-svm-is-stopped-because-a-cluster-node-is-down.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Es posible usar la interfaz de usuario web de Unified Manager para confirmar o eliminar la posibilidad de que un volumen esté sin conexión debido a que su máquina virtual de almacenamiento host \(SVM\) se ha detenido debido a que el nodo que aloja el volumen raíz de esa SVM está inactivo.' 
+---
+= Determinar si un volumen está sin conexión y su SVM se ha detenido debido a que el nodo está inactivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la interfaz de usuario web de Unified Manager para confirmar o eliminar la posibilidad de que un volumen esté sin conexión debido a que su máquina virtual de almacenamiento (SVM) de host se detiene debido a que el nodo que aloja el volumen raíz de esa SVM está inactivo.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Para determinar si la condición del volumen sin conexión fue causada por que la SVM de host se detuvo porque el nodo donde se aloja el volumen raíz de esa SVM está inactivo, debe realizar las siguientes acciones:
+
+
+
+== Pasos
+
+. Busque y haga clic en el enlace de hipertexto que aparece bajo SVM en el panel *dispositivos relacionados* de la página de detalles *Estado/volumen* del volumen sin conexión.
+. Busque y haga clic en el enlace de hipertexto que aparece bajo la SVM en el panel *dispositivos relacionados* de la página de detalles *Estado/volumen* del volumen sin conexión.
++
+La página de detalles de la máquina virtual de almacenamiento/salud muestra el estado «'running'» o «slo coronado» del SVM anfitrión. Si el estado de la SVM está en ejecución, la condición del volumen sin conexión no es causada por el nodo que aloja el volumen raíz de esa SVM que está inactivo.
+
+. Si el estado de la SVM es detenido, haga clic en *Ver SVM* para identificar aún más la causa de la SVM host que se detiene.
+. En el encabezado de la columna *Health/Storage Virtual Machines* Inventory pagSVM, haga clic en el símbolo de filtro image:../media/filtericon-um60.png["Icono para filtro de columna"] Y a continuación, escriba el nombre de la SVM detenida.
++
+La información para esa SVM se muestra en una tabla.
+
+. En la página del inventario**Health/Storage Virtual Machines**, haga clic en image:../media/gridviewicon.gif["Para la vista de cuadrícula"] Y, a continuación, seleccione la opción *volumen raíz*.
++
+La columna Root Volume se añade al inventario de SVM y muestra el nombre del volumen raíz de la SVM detenida.
+
+. En la columna volumen raíz, haga clic en el nombre del volumen raíz para mostrar la página de detalles *Health/Storage Virtual Machine* correspondiente a ese volumen.
++
+Si el estado del volumen raíz de SVM es (en línea), la condición del volumen original sin conexión no se debe porque el nodo que aloja el volumen raíz de esa SVM está inactivo.
+
+. Si el estado del volumen raíz de la SVM es (sin conexión), busque y haga clic en el enlace de hipertexto que aparece bajo agregado en el panel *dispositivos relacionados* de la página de detalles *Estado/volumen* del volumen raíz de la SVM.
+. Busque y haga clic en el enlace de hipertexto que aparece bajo nodo en el panel *dispositivos relacionados* de la página de detalles *Estado/agregado* del agregado.
++
+En la pestaña Nodes de la página de detalles Health/Cluster, se muestra el estado de la pareja de nodos a la que pertenece el nodo de alojamiento del volumen raíz de SVM. El estado del nodo se indica en la pantalla.
+
+
+
+
+
+== Después de terminar
+
+Una vez que confirma que la condición de sin conexión del volumen está provocada por la condición de SVM del host de ese volumen, que sí está provocada por el nodo que aloja el volumen raíz de esa SVM que está inactivo, póngase en contacto con el administrador o operador apropiado para reiniciar manualmente el nodo inactivo.

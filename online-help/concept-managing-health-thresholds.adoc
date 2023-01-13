@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-managing-health-thresholds.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar valores de umbral de estado global para todos los agregados, volúmenes y qtrees a fin de realizar un seguimiento de cualquier incumplimiento de umbral de estado. 
+---
+= Gestión de umbrales de salud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar valores de umbral de estado global para todos los agregados, volúmenes y qtrees a fin de realizar un seguimiento de cualquier incumplimiento de umbral de estado.

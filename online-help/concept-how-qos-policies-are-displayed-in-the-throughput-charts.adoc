@@ -1,0 +1,64 @@
+---
+permalink: online-help/concept-how-qos-policies-are-displayed-in-the-throughput-charts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede ver la configuración de la política de calidad de servicio \(QoS\) definida por ONTAP que se ha aplicado a un volumen o LUN en los gráficos IOPS de Performance Explorer, IOPS/TB y Mbps. La información que se muestra en los gráficos es diferente según el tipo de política de calidad de servicio que se haya aplicado a la carga de trabajo.' 
+---
+= Cómo se muestran los diferentes tipos de políticas de calidad de servicio en Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver las opciones de configuración de políticas de calidad de servicio (QoS) definidas por ONTAP que se aplican a un volumen o LUN en los gráficos IOPS de Performance Explorer, IOPS/TB y Mbps. La información que se muestra en los gráficos es diferente según el tipo de política de calidad de servicio que se haya aplicado a la carga de trabajo.
+
+Un ajuste «'techo» de rendimiento define el rendimiento máximo que puede consumir la carga de trabajo, lo que limita el impacto sobre las cargas de trabajo de la competencia en recursos del sistema. Un ajuste de rendimiento «físico» define el rendimiento mínimo que debe estar disponible para la carga de trabajo de forma que una carga de trabajo crítica satisfaga los objetivos de rendimiento mínimos con independencia de la demanda de otras cargas de trabajo de la competencia.
+
+Las políticas de calidad de servicio compartidas y no compartidas para IOPS y Mbps utilizan los términos «minum» y «m ximum» para definir el piso y el techo. Las políticas de calidad de servicio adaptativas para IOPS/TB, que se introdujeron en ONTAP 9.3, utilizan los términos «'previsto'» y «'pico» para definir el suelo y el techo.
+
+Aunque ONTAP permite crear estos dos tipos de políticas de calidad de servicio, en función de cómo se apliquen a las cargas de trabajo, hay tres maneras en que la política de calidad de servicio se mostrará en los gráficos de rendimiento.
+
+|===
+| Tipo de política | Funcionalidad | Indicador en la interfaz de Unified Manager 
+
+
+ a| 
+La política de calidad de servicio compartida se asigna a una sola carga de trabajo, o la política de calidad de servicio no compartida se asigna a una sola carga de trabajo o a varias cargas de trabajo
+ a| 
+Cada carga de trabajo puede consumir la configuración de rendimiento especificada
+ a| 
+Muestra «»(QoS)».
+
+
+
+ a| 
+La política de calidad de servicio compartida se asigna a varias cargas de trabajo
+ a| 
+Todas las cargas de trabajo comparten el valor de rendimiento especificado
+ a| 
+Muestra «»(QoS compartido)».
+
+
+
+ a| 
+La política de calidad de servicio adaptativa asignada a una sola carga de trabajo o a varias cargas de trabajo
+ a| 
+Cada carga de trabajo puede consumir la configuración de rendimiento especificada
+ a| 
+Muestra «»(QoS adaptativo)».
+
+|===
+En la siguiente figura, se muestra un ejemplo de cómo se muestran las tres opciones en los gráficos de contadores.
+
+image::../media/three-qos-policy-charts.gif[tres gráficos de políticas de calidad de servicio]
+
+Cuando se muestra una política de calidad de servicio normal definida en IOPS en el gráfico IOPS/TB para una carga de trabajo, ONTAP convierte el valor de IOPS en un valor de IOPS/TB y Unified Manager muestra esa política en el gráfico IOPS/TB junto con el texto «"QoS, definida en IOPS».
+
+Cuando se muestra una política de calidad de servicio adaptativa que se ha definido en IOPS/TB en el gráfico de IOPS de una carga de trabajo, ONTAP convierte el valor de IOPS/TB en un valor de IOPS y Unified Manager muestra la política en el gráfico de IOPS junto con el texto "'Adaptive QoS, Se define en IOPS/TB usados'" o «"calidad de servicio adaptativa, definida en IOPS/TB asignados» en función de cómo se configure el valor de asignación pico de IOPS. Cuando el valor de asignación se establece en "'espacio asignado'", el pico de IOPS se calcula en función del tamaño del volumen. Cuando el ajuste de asignación se establece en «'espacio utilizado», el IOPS máximo se calcula en función de la cantidad de datos almacenados en el volumen, teniendo en cuenta las eficiencias del almacenamiento.
+
+[NOTE]
+====
+El gráfico IOPS/TB muestra datos de rendimiento solo cuando la capacidad lógica utilizada por el volumen es mayor o igual que 1 TB. Los vacíos se muestran en el gráfico cuando la capacidad utilizada desciende por debajo de 1 TB durante el periodo de tiempo seleccionado.
+
+====

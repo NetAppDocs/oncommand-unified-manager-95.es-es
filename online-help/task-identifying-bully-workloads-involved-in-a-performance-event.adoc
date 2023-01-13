@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-identifying-bully-workloads-involved-in-a-performance-event.html 
+sidebar: sidebar 
+keywords:  
+summary: 'En Unified Manager, es posible identificar qué cargas de trabajo tienen la mayor desviación en uso para un componente de clúster en disputa. Al identificar estas cargas de trabajo, puede comprender por qué algunos volúmenes del clúster tienen tiempos de respuesta lentos \(latencia\).' 
+---
+= Identificar las cargas de trabajo abusivas involucradas en un evento de rendimiento dinámico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En Unified Manager, es posible identificar qué cargas de trabajo tienen la mayor desviación en uso para un componente de clúster en disputa. Al identificar estas cargas de trabajo, entiende por qué algunos volúmenes del clúster tienen tiempos de respuesta lentos (latencia).
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento dinámicos nuevos, reconocidos o obsoletos.
+
+
+
+
+== Acerca de esta tarea
+
+La página de detalles Event muestra una lista de las cargas de trabajo definidas por el usuario y definidas por el sistema con la clasificación del uso más alto del componente o más afectado por el evento. Los valores se basan en los picos identificados por Unified Manager cuando detectó y analizó por última vez el evento.
+
+
+
+== Pasos
+
+. Abra la página *Detalles del evento* para ver información sobre el evento.
+. En los gráficos de latencia de carga de trabajo y actividad de carga de trabajo, seleccione *carga de trabajo bully* .
+. Pase el cursor por los gráficos para ver las principales cargas de trabajo problemáticas definidas por el usuario que afectan al componente.
+

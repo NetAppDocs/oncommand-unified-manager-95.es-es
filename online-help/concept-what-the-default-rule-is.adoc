@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-what-the-default-rule-is.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La regla predeterminada es la regla presente en la política de datos de una máquina virtual de almacenamiento \(SVM\) con Infinite Volume. Se utiliza para determinar la ubicación de los datos escritos en Infinite Volume cuando ninguna de las condiciones de las reglas existentes coincide con los datos que se escriben.' 
+---
+= Qué es la regla predeterminada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La regla predeterminada es la regla presente en la política de datos de una máquina virtual de almacenamiento (SVM) con Infinite Volume. Se utiliza para determinar la ubicación de los datos escritos en Infinite Volume cuando ninguna de las condiciones de las reglas existentes coincide con los datos que se escriben.
+
+La regla predeterminada es siempre la última regla de una política de datos y no se puede reordenar. Por ejemplo, piense en una política de datos con tres reglas. La regla 1 coloca todos los archivos .pdf en la clase __high_performance__Storage. La regla 2 coloca todos los archivos propiedad del administrador y los nombres de archivo que terminan con *.xls en la clase de almacenamiento _archive_Constituyente_. La tercera regla es la regla predeterminada con la clase de almacenamiento _low_performance_.
+
+Cuando se escribe un conjunto de archivos *.jpg que no son propiedad del administrador en Infinite Volume, la regla predeterminada se utiliza para colocar estos archivos .jpg en la clase de almacenamiento _low_performance_. La regla 1 y la regla 2 no se utilizan porque los datos escritos no coinciden con estas reglas.

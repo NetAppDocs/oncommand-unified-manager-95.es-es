@@ -1,0 +1,465 @@
+---
+permalink: online-help/reference-storage-vm-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de SVM le proporcionan información sobre el estado de las SVM para que pueda supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de SVM le proporcionan información sobre el estado de las SVM para que pueda supervisar posibles problemas. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Disponibilidad
+
+Un asterisco (*) identifica los eventos de EMS que se han convertido a eventos de Unified Manager.
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Service Down de SVM (ocumEvtVserverCifsServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Servicio CIFS SVM no configurado (no aplicable)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Información
+
+
+
+ a| 
+Intentos de conexión de recursos compartidos CIFS no existentes *
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Conflicto de nombres NetBIOS de CIFS *
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Error en la operación de copia de volúmenes redundantes de CIFS *
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Muchas conexiones CIFS *
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Se superó la conexión CIFS máxima *
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Se ha excedido el número máximo de conexiones CIFS por usuario *
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Servicio FC/FCoE de SVM inactivo (ocumEvtVserverFcServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Servicio iSCSI de SVM inactivo (ocumEvtVserverIscsiServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Servicio NFS de SVM inactivo (ocumEvtVserverNfsServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Servicio SVM FC/FCoE no configurado (no aplicable)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Información
+
+
+
+ a| 
+Servicio iSCSI de SVM no configurado (no aplicable)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Información
+
+
+
+ a| 
+Servicio SVM NFS no configurado (no aplicable)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Información
+
+
+
+ a| 
+SVM detenido (ocumEvtVserverDown)
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Advertencia
+
+
+
+ a| 
+El servidor AV está demasiado ocupado para aceptar una nueva solicitud de análisis *
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+No hay conexión con el servidor AV para virus Scan *
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+No hay ningún servidor AV registrado *
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Conexión del servidor AV * sin respuesta
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Información
+
+
+
+ a| 
+Intento de usuario no autorizado a AV Server *
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+Virus detectado por el servidor antivirus *
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+SVM con Infinite Volume Storage no disponible (ocumEvtVserverStorageNotAvailable)
+ a| 
+Incidente
+ a| 
+SVM con Infinite Volume
+ a| 
+Crítico
+
+
+
+ a| 
+SVM con Infinite Volume Storage parcialmente disponible (ocumEvtVserverStoragePartiallyAvailable)
+ a| 
+Riesgo
+ a| 
+SVM con Infinite Volume
+ a| 
+Error
+
+
+
+ a| 
+SVM con componentes de mirroring de espacio de nombres de Infinite Volume con problemas de disponibilidad (ocumEvtVserverNMirrorsHavAvailabilityIssues)
+ a| 
+Riesgo
+ a| 
+SVM con Infinite Volume
+ a| 
+Advertencia
+
+|===
+
+
+== Área de impacto: Capacidad
+
+Los siguientes eventos de capacidad solo se aplican a las SVM con Infinite Volume.
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+SVM con Infinite Volume Space Full (ocumEvtVserverFull)
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+SVM con espacio en Infinite Volume casi completo (ocumEvtVserverNearlyFull)
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Advertencia
+
+
+
+ a| 
+Se ha superado el límite de uso de SVM con Infinite Volume (ocumEvtVserverSnapshotUsageExceeded)
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Advertencia
+
+
+
+ a| 
+SVM con espacio de nombres de Infinite Volume completo (ocumEvtVserverNamespaceFull)
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Error
+
+
+
+ a| 
+SVM con espacio de nombres de Infinite Volume casi completo (ocumEvtVserverNamespaceNearlyFull)
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Advertencia
+
+|===
+
+
+== Área de impacto: Configuración
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+SVM detectada (no aplicable)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Información
+
+
+
+ a| 
+SVM eliminada (no aplicable)
+ a| 
+Evento
+ a| 
+Clúster
+ a| 
+Información
+
+
+
+ a| 
+SVM cuyo nombre ha cambiado (no corresponde)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Información
+
+|===
+
+
+== Área de impacto: Rendimiento
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Se superó el umbral crítico de IOPS de SVM (ocumSvmIopsIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Se superó el umbral de advertencia de IOPS de SVM (ocumSvmIopsWarning)
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Advertencia
+
+
+
+ a| 
+Se superó el umbral crítico de SVM Mbps (ocumSvmMbpsIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Se superó el umbral de advertencia de SVM Mbps (ocumSvmMbpsWarning)
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Advertencia
+
+
+
+ a| 
+Se superó el umbral crucial de latencia de SVM (ocumSvmLatencyIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Se superó el umbral de advertencia de latencia de SVM (ocumSvmLatencyWarning)
+ a| 
+Riesgo
+ a| 
+SVM
+ a| 
+Advertencia
+
+|===

@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept-analyzing-events-from-user-defined-performance-thresholds.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos generados a partir de umbrales definidos por el usuario indican que un contador de rendimiento de un determinado objeto de almacenamiento, por ejemplo, un agregado o un volumen, ha superado el umbral definido en la política. Esto indica que el objeto del clúster está experimentando un problema de rendimiento. 
+---
+= Análisis de eventos de umbrales de rendimiento definidos por el usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos generados a partir de umbrales definidos por el usuario indican que un contador de rendimiento de un determinado objeto de almacenamiento, por ejemplo, un agregado o un volumen, ha superado el umbral definido en la política. Esto indica que el objeto del clúster está experimentando un problema de rendimiento.
+
+La página de detalles Event se utiliza para analizar el evento de rendimiento y realizar las acciones correctivas necesarias para devolver el rendimiento a la normalidad.

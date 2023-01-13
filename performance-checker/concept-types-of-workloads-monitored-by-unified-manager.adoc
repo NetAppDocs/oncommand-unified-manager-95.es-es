@@ -1,0 +1,54 @@
+---
+permalink: performance-checker/concept-types-of-workloads-monitored-by-unified-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Es posible utilizar Unified Manager para supervisar el rendimiento de dos tipos de cargas de trabajo: Definidas por el usuario y definidas por el sistema.' 
+---
+= Tipos de cargas de trabajo supervisadas por Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible utilizar Unified Manager para supervisar el rendimiento de dos tipos de cargas de trabajo: Definidas por el usuario y definidas por el sistema.
+
+* *_cargas de trabajo definidas por el usuario_*
++
+El rendimiento de I/o de las aplicaciones al clúster. Estos son procesos implicados en solicitudes de lectura y escritura. Un volumen FlexVol o FlexGroup es una carga de trabajo definida por el usuario.
+
++
+[NOTE]
+====
+Unified Manager solo supervisa la actividad de las cargas de trabajo en el clúster. No supervisa las aplicaciones, los clientes ni las rutas entre las aplicaciones y el clúster.
+
+====
++
+Si se cumple uno o varios de los siguientes aspectos con relación a una carga de trabajo, Unified Manager no se podrá supervisar:
+
++
+** Se trata de una copia de protección de datos (DP) en modo de solo lectura. (Tenga en cuenta que al usar ONTAP 8.3 y versiones posteriores, los volúmenes de DP se supervisan para ver el tráfico generado por el usuario).
+** Es un Infinite Volume.
+** Se trata de un clon de datos sin conexión.
+** Es un volumen reflejado en una configuración MetroCluster.
+
+
+* *_cargas de trabajo definidas por el sistema_*
++
+Los procesos internos implicados en la eficiencia del almacenamiento, la replicación de datos y el estado del sistema, incluidos:
+
++
+** Eficiencia del almacenamiento, como la deduplicación
+** Estado del disco, que incluye la reconstrucción de RAID, el filtrado de discos, etc.
+** La replicación de datos, como las copias SnapMirror
+** Actividades de gestión
+** Estado del sistema de archivos, que incluye diversas actividades de WAFL
+** Escáneres del sistema de archivos, como WAFL scan
+** Descarga de copias, como las operaciones de eficiencia del almacenamiento descargados de hosts VMware
+** Estado del sistema, como movimientos de volúmenes, compresión de datos, etc.
+** Volúmenes sin supervisar
+
+
+
+
+Los datos de rendimiento de las cargas de trabajo definidas por el sistema se muestran en la interfaz gráfica de usuario solo cuando el componente del clúster utilizado por estas cargas de trabajo es objeto de disputa. Por ejemplo, no se puede buscar el nombre de una carga de trabajo definida por el sistema para ver sus datos de rendimiento en la interfaz gráfica de usuario. Si se muestran varias cargas de trabajo definidas por el sistema del mismo tipo, se adjunta una letra al nombre de la carga de trabajo. La letra es para uso del personal de soporte.

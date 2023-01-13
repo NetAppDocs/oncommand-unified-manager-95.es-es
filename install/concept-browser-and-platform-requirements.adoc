@@ -1,0 +1,34 @@
+---
+permalink: install/concept-browser-and-platform-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: Para acceder a la interfaz de usuario de Unified Manager, debe utilizar un explorador compatible. 
+---
+= Exploradores compatibles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para acceder a la interfaz de usuario de Unified Manager, debe utilizar un explorador compatible.
+
+Unified Manager se ha probado con los siguientes exploradores: Es posible que otros exploradores funcionen, pero no se ha cualificado. Consulte la matriz de interoperabilidad para ver la lista completa de versiones de exploradores compatibles.
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+* Mozilla Firefox ESR 60
+* Google Chrome versiones 68 y 69
+* Microsoft Internet Explorer 11
+
+
+Para todos los navegadores, la desactivación de los bloqueadores de ventanas emergentes ayuda a garantizar que las funciones de software se muestran correctamente.
+
+En Internet Explorer, debe asegurarse de que la vista de compatibilidad está desactivada y que el modo de documento está establecido en el valor predeterminado. Consulte la documentación de Microsoft IE para obtener información sobre esta configuración.
+
+[NOTE]
+====
+Los navegadores Firefox y Chrome son los preferidos, ya que en algunos casos hay casos en los que las páginas de interfaz de usuario complejas se cargan con más lentitud al usar Internet Explorer.
+
+====
+Si tiene pensado configurar Unified Manager para la autenticación SAML de modo que un proveedor de identidades (IDP) autentique usuarios, compruebe también la lista de exploradores compatibles con IDP.

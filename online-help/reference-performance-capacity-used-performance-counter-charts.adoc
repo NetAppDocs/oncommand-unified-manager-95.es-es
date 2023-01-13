@@ -1,0 +1,79 @@
+---
+permalink: online-help/reference-performance-capacity-used-performance-counter-charts.html 
+sidebar: sidebar 
+keywords:  
+summary: Los gráficos de contadores Performance ExplorerPerformance Capacity usado muestran el porcentaje de la capacidad de rendimiento que consume el nodo o el agregado. 
+---
+= Gráficos de contadores de capacidad de rendimiento utilizada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los gráficos de contadores Performance ExplorerPerformance Capacity usado muestran el porcentaje de la capacidad de rendimiento que consume el nodo o el agregado.
+
+[NOTE]
+====
+Los datos de capacidad de rendimiento solo están disponibles cuando los nodos de un clúster se han instalado con el software ONTAP 9.0 o una versión posterior.
+
+====
+Estos gráficos sólo se aplican cuando el objeto seleccionado es un nodo o un agregado.
+
+La ventana emergente que se muestra cuando el cursor se encuentra en el área del gráfico muestra los valores específicos del contador en momentos específicos.
+
+La parte inferior de la página de gráfico muestra información sobre la capacidad de rendimiento mínima, máxima, media y percentil 95o utilizada para el intervalo de tiempo seleccionado.
+
+Hay dos tipos de gráficos de capacidad de rendimiento utilizados disponibles:
+
+
+
+== Capacidad de rendimiento utilizada - Gráfico de contadores total
+
+Muestra el porcentaje de capacidad de rendimiento que consume el nodo o el agregado.
+
+* Zona verde
++
+El valor de capacidad está en el umbral de advertencia configurado en Unified Manager.
+
+* Zona amarilla
++
+El valor de capacidad está cerca del umbral de advertencia configurado en Unified Manager.
+
+* Zona roja
++
+El valor de capacidad está por encima del umbral de advertencia y cerca del umbral máximo establecido en Unified Manager.
+
+
+
+
+
+== Capacidad de rendimiento utilizada: Gráfico de contadores de desglose
+
+Muestra el mismo porcentaje de capacidad de rendimiento separada en protocolos de usuario, procesos en segundo plano del sistema y la cantidad de capacidad de rendimiento libre.
+
+
+
+== *Botón Zoom View*
+
+Muestra una vista ampliada de los datos del gráfico de contadores.
+
+* Eventos
++
+La aparición de eventos críticos, de advertencia e informativos se indica en las líneas de tiempo sobre los gráficos.
+
+* Umbrales
++
+La línea horizontal discontinua indica el valor del umbral de advertencia de capacidad establecido en Unified Manager.
+
++
+La línea roja sólida indica el valor del umbral crítico de capacidad configurado en Unified Manager.
+
++
+La línea en negro sólido al 100 % es el valor de capacidad de rendimiento máxima recomendado.
+
+* Contadores
++
+Los contadores del panel izquierdo muestran los valores de contador que se están mostrando. Anular la selección o selección de image:../media/eye-icon.gif[""] que está asociado con un contador puede restringir la comparación.
+
+

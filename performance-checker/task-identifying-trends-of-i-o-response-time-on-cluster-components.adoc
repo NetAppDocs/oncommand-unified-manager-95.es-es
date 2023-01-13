@@ -1,0 +1,68 @@
+---
+permalink: performance-checker/task-identifying-trends-of-i-o-response-time-on-cluster-components.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible usar Unified Manager para ver las tendencias de rendimiento de todos los componentes del clúster supervisados de una carga de trabajo de volumen. Puede ver, con el tiempo, qué componentes tienen un uso más elevado, si el uso más alto es de solicitudes de lectura o escritura, y cómo el uso ha afectado al tiempo de respuesta de la carga de trabajo. 
+---
+= Identificar las tendencias del tiempo de respuesta de I/o en los componentes del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible usar Unified Manager para ver las tendencias de rendimiento de todos los componentes del clúster supervisados de una carga de trabajo de volumen. Puede ver, con el tiempo, qué componentes tienen un uso más elevado, si el uso más alto es de solicitudes de lectura o escritura, y cómo el uso ha afectado al tiempo de respuesta de la carga de trabajo.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber identificado el nombre del volumen o el LUN asociado que desea analizar.
+* Para mostrar 30 días de estadísticas de rendimiento, Unified Manager debe haber recopilado y analizado un mínimo de 30 días de estadísticas de rendimiento del clúster.
+
+
+
+
+== Acerca de esta tarea
+
+Al identificar las tendencias de rendimiento de los componentes del clúster, el administrador puede decidir si se está utilizando un clúster en exceso o si se está infrautilizado.
+
+Si desea ver la página de detalles Event, puede hacer clic en el nombre de un volumen para ir directamente a la página Performance/Volume Details.
+
+
+
+== Pasos
+
+. En la barra *Buscar*, escriba el nombre del volumen.
++
+El nombre del volumen se muestra en los resultados de búsqueda.
+
+. Haga clic en el nombre del volumen.
++
+El volumen se muestra en la página Performance/Volume Details.
+
+. En el gráfico de datos históricos, haga clic en *30d* para mostrar los últimos 30 días de datos históricos.
+. Haga clic en *romper datos por*.
+. En *latencia*, seleccione ***componentes de clúster*** y ***latencia de lectura/escritura***.
+. Haga clic en *Enviar*.
++
+Ambos gráficos se muestran debajo del gráfico latencia.
+
+. Revise el gráfico *componentes del clúster*.
++
+El gráfico divide el tiempo de respuesta total por componente del clúster. El tiempo de respuesta en el agregado es el más alto.
+
+. Compare el gráfico *Cluster Components* con el gráfico *latencia*.
++
+En el gráfico latencia, se muestran los picos del tiempo de respuesta total que están alineados con los picos en el tiempo de respuesta del agregado. Hay unos pocos al final del lapso de 30 días en los que se superó el umbral de rendimiento.
+
+. Revise el gráfico *latencia de lecturas/escrituras*.
++
+En el gráfico se muestra un tiempo de respuesta más alto para las solicitudes de escritura que las solicitudes de lectura, lo que indica que las aplicaciones cliente esperan más de lo habitual para satisfacer sus solicitudes de escritura.
+
+. Compare el gráfico *latencia de lecturas/escrituras* con el gráfico *latencia*.
++
+Los picos en el tiempo de respuesta total que se alinean con el agregado del gráfico Cluster Components también se alinean con las escrituras en el gráfico de latencia de lectura/escritura. El administrador debe decidir si deben abordarse las aplicaciones cliente que utilizan la carga de trabajo o si se está utilizando en exceso el agregado.
+
+

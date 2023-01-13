@@ -1,0 +1,45 @@
+---
+permalink: health-checker/task-resolving-a-flashcard-offline-condition.html 
+sidebar: sidebar 
+keywords:  
+summary: Este flujo de trabajo proporciona un ejemplo de cómo puede resolver una condición de tarjeta flash sin conexión. En esta situación, es un administrador o operador que supervisa el panel para comprobar si hay problemas con la disponibilidad. Verá una tarjeta flash sin conexión y desea determinar la posible causa y resolución del problema. 
+---
+= Resolución de una condición de tarjeta flash sin conexión
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este flujo de trabajo proporciona un ejemplo de cómo puede resolver una condición de tarjeta flash sin conexión. En esta situación, es un administrador o operador que supervisa el panel para comprobar si hay problemas con la disponibilidad. Verá una tarjeta flash sin conexión y desea determinar la posible causa y resolución del problema.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+La información de eventos y los enlaces que se muestran en el área disponibilidad de la página Unified Manager Dashboards/Overview supervisan la disponibilidad general de los recursos de almacenamiento de datos en los clústeres supervisados le permiten diagnosticar eventos específicos que pueden afectar a esa disponibilidad.
+
+En este escenario, la página Paneles/Descripción general muestra el evento Tarjetas Flash sin conexión en su sección incidentes de disponibilidad. Si una tarjeta flash está sin conexión, la disponibilidad de los datos almacenados se ve afectada porque el rendimiento del nodo del clúster en el que se instala se ve afectado. Puede realizar los siguientes pasos para localizar e identificar el problema potencial:
+
+
+
+== Pasos
+
+. En el panel *disponibilidad* de la sección *incidentes y riesgos no resueltos*, haga clic en el enlace de hipertexto que aparece para tarjetas Flash sin conexión.
++
+Se muestra la página de detalles Event para la incidencia de disponibilidad.
+
+. En la página de detalles *evento*, puede revisar la información que se muestra en el campo causa y realizar una o más de las siguientes tareas:
++
+** Asigne el evento a un administrador. xref:task-assigning-events-to-specific-users.adoc[Asignar eventos]
+** Haga clic en el origen del evento y, en este caso, en el nodo del clúster en el que se encuentra la tarjeta flash sin conexión, para obtener más información sobre ese nodo. xref:task-performing-corrective-action-for-a-flashcard-offline.adoc[Realizar acciones correctivas para una tarjeta flash sin conexión]
+** Reconozca el evento. xref:task-acknowledging-and-resolving-events.adoc[Reconocer y resolver eventos]
+
+
+

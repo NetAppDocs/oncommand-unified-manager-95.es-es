@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-managing-groups-of-storage-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible gestionar objetos de almacenamiento en el entorno mediante la creación de grupos de objetos de almacenamiento. Estos objetos de almacenamiento deben cumplir las reglas de grupo asociadas con el grupo. 
+---
+= Gestionar grupos de objetos de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible gestionar objetos de almacenamiento en el entorno mediante la creación de grupos de objetos de almacenamiento. Estos objetos de almacenamiento deben cumplir las reglas de grupo asociadas con el grupo.

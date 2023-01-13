@@ -1,0 +1,50 @@
+---
+permalink: online-help/reference-share-report-dialog-box-um-6-2.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede compartir un informe con uno o más usuarios por correo electrónico. Después de personalizar un informe, debe guardar los cambios antes de compartir el informe para garantizar que se muestren los cambios. 
+---
+= Cuadro de diálogo Share Report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede compartir un informe con uno o más usuarios por correo electrónico. Después de personalizar un informe, debe guardar los cambios antes de compartir el informe para garantizar que se muestren los cambios.
+
+
+
+== Propiedades
+
+Puede compartir un informe especificando propiedades como la dirección de correo electrónico del usuario, el asunto del correo electrónico y el formato del informe.
+
+* *Dirección de correo electrónico del destinatario*
++
+Especifica la dirección de correo electrónico del usuario con el que desea compartir el informe. Puede especificar una o más entradas separadas por comas. Este campo es obligatorio.
+
+* *Asunto*
++
+Especifica el asunto del correo electrónico. De forma predeterminada, se muestra el nombre del informe.
+
+* *Formato de informe*
++
+Especifica el formato en el que desea compartir el informe. La opción _PDF_ está seleccionada de forma predeterminada. Si se selecciona el formato XHTML, abra el informe que se envía por correo electrónico mediante un explorador web compatible.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Compartir*
++
+Comparte el informe con la configuración guardada y cierra el cuadro de diálogo Compartir informe.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Compartir informe al mostrar un mensaje para guardar la configuración del informe.
+
+

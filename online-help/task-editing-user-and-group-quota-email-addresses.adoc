@@ -1,0 +1,61 @@
+---
+permalink: online-help/task-editing-user-and-group-quota-email-addresses.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Es posible modificar las direcciones de correo electrónico según la cuota de usuario asociada con los clústeres, las máquinas virtuales de almacenamiento \(SVM\), los volúmenes, qtrees, los usuarios o los grupos de usuarios. Puede modificar la dirección de correo electrónico cuando desee reemplazar la dirección de correo electrónico generada por las reglas especificadas en el cuadro de diálogo Reglas para generar Dirección de correo electrónico de usuario y cuota de grupo.' 
+---
+= Edición de direcciones de correo electrónico de cuotas de usuarios y grupos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las direcciones de correo electrónico se pueden modificar según la cuota de usuario asociada con los clústeres, las máquinas virtuales de almacenamiento (SVM), los volúmenes, los qtrees, los usuarios o los grupos de usuarios. Puede modificar la dirección de correo electrónico cuando desee reemplazar la dirección de correo electrónico generada por las reglas especificadas en el cuadro de diálogo Reglas para generar Dirección de correo electrónico de usuario y cuota de grupo.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber revisado el xref:reference-rules-to-generate-user-and-group-quota-email-address-dialog-box.adoc[directrices para la creación de reglas].
+
+
+
+
+== Acerca de esta tarea
+
+Si edita una dirección de correo electrónico, las reglas para generar las direcciones de correo electrónico de usuario y cuota de grupo ya no serán aplicables a la cuota. Para que las notificaciones se envíen a la dirección de correo electrónico generada por las reglas especificadas, deberá eliminar la dirección de correo electrónico y guardar el cambio.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione una SVM y, a continuación, haga clic en la pestaña *User and Group Quotas*.
+. Haga clic en *Editar dirección de correo electrónico* debajo de la fila de fichas.
+. En el cuadro de diálogo *Editar dirección de correo electrónico*, realice la acción adecuada:
++
+|===
+| Si... | Realice lo siguiente... 
+
+
+ a| 
+Desea enviar las notificaciones a la dirección de correo electrónico que generan las reglas especificadas
+ a| 
+.. Elimine la dirección de correo electrónico en el campo *Dirección de correo electrónico*.
+.. Haga clic en *Guardar*.
+.. Actualice el explorador presionando F5 para volver a cargar el cuadro de diálogo Editar dirección de correo electrónico. La dirección de correo electrónico generada por la regla especificada se muestra en el campo *Dirección de correo electrónico*.
+
+
+
+
+ a| 
+Desea enviar las notificaciones a una dirección de correo electrónico especificada
+ a| 
+.. Modifique la dirección de correo electrónico en el campo *Dirección de correo electrónico*.
+.. Haga clic en *Guardar*. Las reglas para generar las direcciones de correo electrónico de usuario y cuota de grupo ya no se aplican a la cuota.
+
+
+|===
+

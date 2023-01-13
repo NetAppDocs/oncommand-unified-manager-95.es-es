@@ -1,0 +1,25 @@
+---
+permalink: online-help/concept-managing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager de OnCommand permite crear y gestionar informes para que pueda ver información personalizada sobre la capacidad, el uso y el rendimiento de objetos de almacenamiento y eventos relacionados con objetos de almacenamiento. 
+---
+= Gestión de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager de OnCommand permite crear y gestionar informes para que pueda ver información personalizada sobre la capacidad, el uso y el rendimiento de objetos de almacenamiento y eventos relacionados con objetos de almacenamiento.
+
+[NOTE]
+====
+La implementación de la programación y la generación de informes desde la opción Informes del panel de navegación izquierdo quedará obsoleta en un lanzamiento futuro. Puede extraer los datos de estado y rendimiento de Unified Manager mediante los siguientes métodos adicionales:
+
+* Extrayendo datos directamente de las páginas de cuadrícula de la GUI
+* Uso de Open Database para acceder a todos los objetos disponibles
+* Ejecutar las API DE REST de Unified Manager para obtener la información que desea revisar
+
+
+====

@@ -1,0 +1,38 @@
+---
+permalink: health-checker/task-configuring-lag-threshold-settings-for-unmanaged-protection-relationships.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar la configuración global predeterminada de umbral de advertencia de desfase y de estado de error para relaciones de protección no administradas, de modo que los eventos se generen a intervalos apropiados para sus necesidades. 
+---
+= Edición de la configuración del umbral de mantenimiento de posposición para relaciones de protección no administradas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar la configuración global predeterminada de umbral de advertencia de desfase y de estado de error para relaciones de protección no administradas, de modo que los eventos se generen a intervalos apropiados para sus necesidades.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+El tiempo de desfase no debe superar el intervalo de programación de transferencia definido. Por ejemplo, si la programación de transferencia es por hora, el intervalo de demora no debe ser superior a una hora. El umbral de desfase especifica un porcentaje que no debe superar el tiempo de desfase. Con el ejemplo de una hora, si el umbral de desfase se define como 150%, recibirá un evento cuando el tiempo de retraso sea superior a 1.5 horas.
+
+La configuración descrita en esta tarea se aplica globalmente a todas las relaciones de protección no administradas. La configuración no se puede especificar y aplicar exclusivamente a una relación de protección no administrada.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Configuración* > *umbrales de estado*.
+. En la página *Configuración/umbrales de estado*, haga clic en *Relaciones*.
+. Aumente o disminuya el porcentaje de tiempo de demora de error o advertencia global predeterminado según sea necesario.
+. Haga clic en *Guardar*.
+

@@ -1,0 +1,45 @@
+---
+permalink: online-help/task-viewing-storage-pool-details.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible ver los detalles del pool de almacenamiento para supervisar el estado del pool de almacenamiento, la caché total y disponible, y las asignaciones usadas y disponibles. 
+---
+= Ver los detalles del pool de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ver los detalles del pool de almacenamiento para supervisar el estado del pool de almacenamiento, la caché total y disponible, y las asignaciones usadas y disponibles.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Estado* > *agregados*.
+. Haga clic en el nombre de un agregado.
++
+Se muestran los detalles del agregado seleccionado.
+
+. Haga clic en la ficha *Información de disco*.
++
+Aparece información detallada sobre el disco.
+
++
+[NOTE]
+====
+La tabla de caché solo se muestra cuando el agregado seleccionado utiliza un pool de almacenamiento.
+
+====
+. En la tabla caché, mueva el puntero sobre el nombre del pool de almacenamiento requerido.
++
+Se muestran los detalles del pool de almacenamiento.
+
+

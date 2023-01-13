@@ -1,0 +1,28 @@
+---
+permalink: online-help/task-displaying-the-counter-charts-zoom-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La vista de zoom de Counter Charts proporciona un nivel más preciso de detalle para el gráfico de contadores seleccionado y su línea de tiempo asociada. Esto amplía los datos del gráfico de contadores, lo que le permite tener una visión más nítida de los eventos de rendimiento y sus causas subyacentes. 
+---
+= Visualización de la vista Zoom de las cartas del contador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La vista de zoom de Counter Charts proporciona un nivel más preciso de detalle para el gráfico de contadores seleccionado y su línea de tiempo asociada. Esto amplía los datos del gráfico de contadores, lo que le permite tener una visión más nítida de los eventos de rendimiento y sus causas subyacentes.
+
+
+
+== Acerca de esta tarea
+
+Puede visualizar la vista de zoom de las cartas de contador para cualquier gráfico de contadores.
+
+
+
+== Pasos
+
+. Haga clic en *Zoom View* para abrir la carta seleccionada una nueva ventana del explorador.
+. Si está viendo un gráfico de desglose y, a continuación, hace clic en *Zoom View*, el gráfico de desglose se muestra en Zoom View. Puede seleccionar *total* mientras está en Zoom View si desea cambiar la opción de vista.
+

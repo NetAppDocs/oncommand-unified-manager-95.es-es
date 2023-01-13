@@ -1,0 +1,87 @@
+---
+permalink: online-help/reference-email-notification-format-page.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La página Formato de notificación por correo electrónico muestra las reglas del correo electrónico que se envía a un usuario o grupo de usuarios cuando hay un problema relacionado con la cuota \(límite de software incumplido o límite duro alcanzado\).' 
+---
+= Formato de notificación por correo electrónico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Formato de notificación por correo electrónico muestra las reglas del correo electrónico que se envía a un usuario o a un grupo de usuarios cuando hay un problema relacionado con la cuota (límite de software incumplido o límite rígido alcanzado).
+
+La notificación por correo electrónico se envía sólo cuando se generan los siguientes eventos de cuota de usuario o de grupo de usuarios: Límite de software de espacio de disco de cuota de usuario o de grupo incumplido, límite de software de recuento de archivos de cuota de usuario o de grupo superado, se ha alcanzado el límite duro de recuento de archivos de cuota de usuario o de grupo o se ha alcanzado el límite duro de recuento de archivos de cuota de usuario o de grupo.
+
+* *Desde*
++
+Muestra la dirección de correo electrónico desde la que se envía el correo electrónico, que se puede modificar. De forma predeterminada, ésta es la dirección de correo electrónico especificada en la página Configuración/Notificaciones.
+
+* *Asunto*
++
+Muestra el asunto del correo electrónico de notificación.
+
+* *Detalles del correo electrónico*
++
+Muestra el texto del correo electrónico de notificación. Puede modificar el texto según sus requisitos. Por ejemplo, puede proporcionar información relacionada con los atributos de cuota y reducir el número de palabras clave. Sin embargo, no debe modificar las palabras clave.
+
++
+Las palabras clave válidas son las siguientes:
+
++
+** $EVENT_NAME
++
+Especifica el nombre del evento que provocó la notificación por correo electrónico.
+
+** $QUOTA_TARGET
++
+Especifica el qtree o el volumen en el que se puede aplicar la cuota.
+
+** $QUOTA_USED_PERCENT
++
+Especifica el porcentaje de límite de disco duro, límite de software de disco, límite duro de archivos o límite de software de archivos que utiliza el usuario o grupo de usuarios.
+
+** $QUOTA_LIMIT
++
+Especifica el límite de disco duro o el límite de disco duro de archivos que el usuario o el grupo de usuarios alcanzan y se genera uno de los siguientes eventos:
+
++
+*** Se ha alcanzado el límite duro de espacio en disco de cuota de usuario o de grupo
+*** Se ha alcanzado el límite de espacio de disco de cuota de usuario o de grupo
+*** Se ha alcanzado el límite duro de recuento de archivos de cuota de usuario o de grupo
+*** Se ha alcanzado el límite suave de recuento de archivos de cuota de usuario o de grupo
+
+
+** $QUOTA_USED
++
+Especifica el espacio en disco utilizado o el número de archivos creados por el usuario o el grupo de usuarios.
+
+** $QUOTA_USER
++
+Especifica el nombre del usuario o del grupo de usuarios.
+
+
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando permiten obtener una vista previa, guardar o cancelar los cambios realizados en el formato de notificación por correo electrónico:
+
+* *Vista previa*
++
+Muestra una vista previa del correo electrónico de notificación.
+
+* *Restaurar valores predeterminados de fábrica*
++
+Permite restaurar el formato de notificación a los valores predeterminados de fábrica.
+
+* *Guardar*
++
+Guarda los cambios realizados en el formato de notificación.
+
+

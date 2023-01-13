@@ -1,0 +1,29 @@
+---
+permalink: performance-checker/reference-performance-cluster-landing-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Performance Cluster Landing muestra el estado de rendimiento de alto nivel de un clúster seleccionado. La página le permite acceder a detalles completos de cada contador de rendimiento para los objetos de almacenamiento en el clúster seleccionado. 
+---
+= Página de destino de Cluster de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Performance Cluster Landing muestra el estado de rendimiento de alto nivel de un clúster seleccionado. La página le permite acceder a detalles completos de cada contador de rendimiento para los objetos de almacenamiento en el clúster seleccionado.
+
+Puede hacer clic en el botón *Favoritos* (image:../media/favorites-inactive.png[""]) para agregar este objeto a la lista de objetos de almacenamiento favoritos. Un botón azul (image:../media/favorites-active.png[""]) indica que este objeto ya es un favorito.
+
+La página de destino de clúster de rendimiento incluye cuatro pestañas para separar los detalles del clúster en cuatro áreas de información:
+
+* Resumen
++
+** Panel Cluster Events
+** Panel Managed Objects
+
+
+* Página Top Performers
+* Explorador
+* Página de información
+

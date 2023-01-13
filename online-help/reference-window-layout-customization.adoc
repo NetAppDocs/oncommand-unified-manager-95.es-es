@@ -1,0 +1,44 @@
+---
+permalink: online-help/reference-window-layout-customization.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager de OnCommand permite personalizar el diseño de la información en las páginas de objetos de almacenamiento. Al personalizar las ventanas, puede controlar qué datos se ven y cómo se muestran. 
+---
+= Personalización del diseño de ventanas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager de OnCommand permite personalizar el diseño de la información en las páginas de objetos de almacenamiento. Al personalizar las ventanas, puede controlar qué datos se ven y cómo se muestran.
+
+* *Clasificación*
++
+Puede hacer clic en el encabezado de la columna para cambiar el orden de clasificación de las entradas de la columna. Al hacer clic en el encabezado de la columna, las flechas de ordenación (image:../media/sort-asc-um60.gif["Icono para ordenar columnas: Ascendente"] y.. image:../media/sort-desc-um60.gif["Icono para ordenar columnas: Descendente"]) aparece para esa columna.
+
+* *Filtrado*
++
+Puede aplicar filtros para personalizar la visualización de información en las páginas del objeto de almacenamiento de modo que sólo se muestren las entradas que coincidan con las condiciones proporcionadas. Puede aplicar filtros desde el panel Filtros o en las columnas.
+
++
+El panel Filtros permite filtrar algunas de las columnas en función de las opciones seleccionadas. Por ejemplo, en la página del inventario Health/Volumes, puede usar el panel Filters para filtrar solo las columnas Status y State. Para ver todos los volúmenes que están sin conexión, puede seleccionar la opción de filtro adecuada en Estado.
+
++
+Como alternativa, puede establecer filtros en columnas utilizando el icono de filtro (image:../media/filtericon-um60.png["Icono para filtro de columna"]). A continuación, puede utilizar el filtro de caracteres comodín (?) o filtro de cadena comodín (*) para restringir la búsqueda. Por ejemplo, en la página del inventario Health/Volumes, puede buscar un volumen, vol234, usando el filtro de cadena en la columna Volume. Puede escribir `*vol`, y se enumeran todos los volúmenes con nombres que contengan "'vol'". Puede escribir `vol?` ver la lista de todos los volúmenes con el nombre que contiene "'vol'" seguido de otro carácter --por ejemplo, vol1 o vol2. Puede escribir `vol` ver la lista de todos los volúmenes con nombres que empiezan por «'vol'».
+
++
+Las columnas relacionadas con la capacidad de cualquier lista siempre muestran datos de capacidad en unidades adecuadas redondeadas a dos puntos decimales. Esto también se aplica al filtrar columnas de capacidad. Por ejemplo, si utiliza el filtro en la columna total Data Capacity de la página del inventario Estado/agregados para filtrar datos por más de 20.45 GB, la capacidad real de 20.454 GB se muestra como 20.45 GB. Del mismo modo, si filtra datos de menos de 20.45 GB, la capacidad real de 20.449 GB se muestra como 20.45 GB.
+
++
+Si utiliza el filtro de la columna Available Data % en la página de inventario Health/Aggregates para filtrar datos superiores al 20.45 %, la capacidad real del 20.454 % se muestra como 20.45 %. De la misma manera, si filtra datos menos del 20.45%, la capacidad real del 20.449% se muestra como 20.45%. Para las columnas que muestran datos de capacidad en porcentaje, puede ver valores hasta cuatro puntos decimales moviendo el puntero del ratón sobre el valor que se muestra en la columna.
+
+* *Ocultar o volver a mostrar las columnas*
++
+Puede hacer clic en el icono de visualización de columna (image:../media/advanced-options.gif[""]) para seleccionar las columnas que desea mostrar.
+
+* *Exportación de datos*
++
+Puede hacer clic en el icono de exportación (image:../media/export-icon.gif["Icono para exportar datos separados por comas para su uso en los informes."]) para exportar datos a valores separados por comas (`.csv`) y utilice los datos exportados para generar informes.
+
+

@@ -1,0 +1,44 @@
+---
+permalink: online-help/concept-what-report-importing-is.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede importar un informe con la opción Import Report desde Unified Manager y guardar el informe importado con un nombre y una breve descripción. Al importar informes, puede añadir informes personalizados a su entorno además de los informes estándar proporcionados en Unified Manager. 
+---
+= Qué es la importación de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede importar un informe utilizando la opción *Importar informe* de Unified Manager y guardar el informe importado con un nombre y una breve descripción. Al importar informes, puede añadir informes personalizados a su entorno además de los informes estándar proporcionados en Unified Manager.
+
+Puede importar un `.rptdesign` archivo ya creado. Puede ejecutar, compartir, programar y eliminar un informe importado.
+
+Unified Manager almacena los archivos de registro de informes de importación en los archivos jboss.log, ocum-report.log y ocumServer-debug.log.
+
+[NOTE]
+====
+El servicio de atención al cliente no le ayudará a diseñar informes, pero le ayudarán con los problemas que se han enfrentado durante una operación de importación de informes.
+
+====
+La función de informe de importación incluye la siguiente compatibilidad:
+
+* Informes con varios encabezados, en los que la extensión de columna se establece en 1 (`colspan=1`)
+* Sólo informes con gráficos
+* Sólo informes con listas y cuadrícula
+* Las contraseñas utilizadas en los informes deben codificarse mediante el formato "'base64'". Los informes que utilicen otra codificación, por ejemplo, el formato "'jce'", provocarán un error durante el proceso de importación.
+* Los informes que contienen la agregación de datos deben incluir el elemento de columna agregada en los datos de la tabla del informe.
+
+
+Los informes en formato de texto, CSV y Excel se admiten en los siguientes escenarios:
+
+* Elemento TABLE sólo en `.rptdesign` archivo
+* Una tabla con sólo una fila de encabezado
+
+
+[NOTE]
+====
+No se pueden importar informes que tengan una extensión de columna superior a 1. Si un informe en formato de texto, CSV o Excel tiene más de una fila de encabezado, sólo se tendrá en cuenta la primera fila de encabezado y el resto se ignorará.
+
+====

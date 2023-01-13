@@ -1,0 +1,106 @@
+---
+permalink: install/task-upgrading-to-unified-manager-on-microsoft-windows.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede actualizar Unified Manager 7.3 o 9.4 a Unified Manager 9.5 mediante la descarga y la ejecución del archivo de instalación en la plataforma Windows. 
+---
+= Actualizar Unified Manager en Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede actualizar Unified Manager 7.3 o 9.4 a Unified Manager 9.5 mediante la descarga y la ejecución del archivo de instalación en la plataforma Windows.
+
+
+
+== Antes de empezar
+
+* El sistema donde se actualiza Unified Manager debe cumplir con los requisitos del sistema y del software.
++
+xref:concept-virtual-infrastructure-or-hardware-system-requirements.adoc[Requisitos del sistema de hardware]
+
++
+xref:reference-windows-software-and-installation-requirements.adoc[Requisitos de instalación y software de Windows]
+
++
+[NOTE]
+====
+A partir de Unified Manager 9.5, OpenJDK se proporciona en el paquete de instalación de Unified Manager y se instala automáticamente. Oracle Java no es compatible a partir de Unified Manager 9.5.
+
+====
++
+[NOTE]
+====
+A partir de Unified Manager 9.4, se requiere Microsoft .NET 4.5.2 o superior. Asegúrese de tener instalada la versión correcta de .NET antes de iniciar la actualización.
+
+====
+* Debe tener privilegios de administrador de Windows.
+* Debe tener credenciales válidas para iniciar sesión en el sitio de soporte de NetApp.
+* Para evitar la pérdida de datos, debe haber creado un backup de la máquina de Unified Manager en caso de que haya un problema durante la actualización.
+* Debe tener suficiente espacio en disco disponible para realizar la actualización.
++
+El espacio disponible en la unidad de instalación debe ser 2.5 GB mayor que el tamaño del directorio de datos. La actualización se detendrá y mostrará un mensaje de error que indica la cantidad de espacio que se va a agregar si no hay suficiente espacio libre.
+
+
+
+
+
+== Acerca de esta tarea
+
+Durante el proceso de actualización, Unified Manager no está disponible. Debe completar todas las operaciones en ejecución antes de actualizar Unified Manager.
+
+Si Unified Manager se empareja con una instancia de OnCommand Workflow Automation y hay nuevas versiones del software disponibles para ambos productos, debe desconectar los productos y, a continuación, configurar una nueva conexión de Workflow Automation tras las actualizaciones. Si solo actualiza uno de los productos, deberá iniciar sesión en Workflow Automation tras la actualización y comprobar que aún se recopilen datos de Unified Manager.
+
+
+
+== Pasos
+
+. Inicie sesión en el sitio de soporte de NetApp y busque la página de descarga para instalar Unified Manager en la plataforma Windows.
++
+http://mysupport.netapp.com/NOW/cgi-bin/software["Descargas de NetApp: Software"]
+
+. Descargue el archivo de instalación de Unified Manager Windows en un directorio de destino en el sistema Windows.
+. Si Unified Manager se configura para una alta disponibilidad, detenga todos los servicios de Unified Manager en el primer nodo mediante Microsoft Cluster Server e inicie el servicio MySQL desde `services.msc`.
+. Haga clic con el botón derecho en y ejecute el ejecutable del instalador de Unified Manager `(.exe)` fichero como administrador.
++
+Unified Manager le solicita el siguiente mensaje:
+
++
+[listing]
+----
+This setup will perform an upgrade of ‘OnCommand Unified Manager’. Do you want to continue?
+----
+. Haga clic en *Sí* y, a continuación, haga clic en *Siguiente*.
+. Introduzca la contraseña raíz de MySQL que se estableció durante la instalación y haga clic en *Siguiente*.
+. Después de que la actualización se haya realizado correctamente, si el sistema está configurado para alta disponibilidad, inicie todos los servicios de Unified Manager desde Failover Cluster Manager y siga el resto de tareas.
+. Desde el símbolo del sistema, ejecute la `ha_setup.pl` secuencia de comandos para configurar los nuevos servicios del clúster de conmutación por error y los archivos presentes en la ubicación compartida.
++
+`C:\Program Files\NetApp\ocum\bin> perl .\ha_setup.pl --upgrade --first -t mscs -g kjaggrp -i "New IP Address1" -n scs8003.englab.company.com -k "Cluster Disk 2" -f E:\ -u user -p userpass`
+
+. Detenga todos los servicios de Unified Manager (ocie, ocieau y MySQL) del primer nodo utilizando Microsoft Cluster Server.
+. Inicie el servicio MySQL en el segundo nodo desde `services.msc`.
+. Cambie el grupo de servicio al segundo nodo de la configuración de alta disponibilidad.
+. Actualice Unified Manager en el segundo nodo.
+. En el símbolo del sistema, introduzca `Y` para continuar, o introduzca cualquier otro carácter que desee anular.
++
+Los procesos de actualización y reinicio de los servicios de Unified Manager pueden tardar varios minutos en completarse.
+
+. Inicie todos los servicios de Unified Manager en los dos nodos mediante Microsoft Cluster Server.
+. Desde el símbolo del sistema, ejecute la `ha_setup.pl` guión con `--upgrade` opción.
++
+`perl ha_setup.pl --upgrade --join -t mscs -f E:\`
+
+. Inicie sesión en la interfaz de usuario web de Unified Manager y compruebe el número de versión.
+
+
+
+
+== Después de terminar
+
+[NOTE]
+====
+Para realizar una actualización silenciosa de Unified Manager, ejecute el siguiente comando: `OnCommandUnifiedManager-9.5.exe /s /v"MYSQL_PASSWORD=netapp21! /qn /l*v C:\install.log`
+
+====

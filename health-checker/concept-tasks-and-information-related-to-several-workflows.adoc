@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept-tasks-and-information-related-to-several-workflows.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Algunas tareas y textos de referencia que pueden ayudarle a comprender y completar un flujo de trabajo son comunes a muchos de los flujos de trabajo de Unified Manager, como añadir y revisar notas sobre un evento, asignar un evento, reconocer y resolver eventos, así como detalles sobre volúmenes, máquinas virtuales de almacenamiento \(SVM\), agregados, y así sucesivamente.' 
+---
+= Tareas e información relacionada con varios flujos de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Algunas tareas y textos de referencia que pueden ayudarle a comprender y completar un flujo de trabajo son comunes a muchos de los flujos de trabajo de Unified Manager, como añadir y revisar notas sobre un evento, asignar un evento, reconocer y resolver eventos, así como detalles sobre volúmenes, máquinas virtuales de almacenamiento (SVM), agregados, y así sucesivamente.

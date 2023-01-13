@@ -1,0 +1,16 @@
+---
+permalink: config/concept-configuring-unified-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Después de instalar Unified Manager, debe completar la configuración inicial \(también llamada el primer asistente Experience\) para acceder a la interfaz de usuario web de. Después, puede realizar otras tareas de configuración, como añadir clústeres, configurar la autenticación remota, añadir usuarios y añadir alertas.' 
+---
+= Configuración de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de instalar Unified Manager, debe completar la configuración inicial (también llamada el asistente First Experience) para acceder a la interfaz de usuario web. Después, puede realizar otras tareas de configuración, como añadir clústeres, configurar la autenticación remota, añadir usuarios y añadir alertas.
+
+Algunos de los procedimientos descritos en este manual son necesarios para completar la configuración inicial de su instancia de Unified Manager. Otros procedimientos son los ajustes de configuración recomendados que son útiles para configurar en la nueva instancia, o que son buenos saber acerca de antes de iniciar la supervisión regular de los sistemas ONTAP.

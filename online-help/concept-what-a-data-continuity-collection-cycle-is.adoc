@@ -1,0 +1,54 @@
+---
+permalink: online-help/concept-what-a-data-continuity-collection-cycle-is.html 
+sidebar: sidebar 
+keywords:  
+summary: Un ciclo de recopilación de continuidad de datos recupera datos de rendimiento fuera del ciclo de recopilación de rendimiento del clúster en tiempo real que se ejecuta, de forma predeterminada, cada cinco minutos. Las recopilaciones de continuidad de datos permiten a Unified Manager llenar los vacíos de datos estadísticos que se producen cuando no pudo recopilar datos en tiempo real. 
+---
+= Qué es un ciclo de recopilación de continuidad de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un ciclo de recopilación de continuidad de datos recupera datos de rendimiento fuera del ciclo de recopilación de rendimiento del clúster en tiempo real que se ejecuta, de forma predeterminada, cada cinco minutos. Las recopilaciones de continuidad de datos permiten a Unified Manager llenar los vacíos de datos estadísticos que se producen cuando no pudo recopilar datos en tiempo real.
+
+La recogida de continuidad de datos solo se admite en los clústeres instalados con el software ONTAP versión 8.3.1 o posterior.
+
+Unified Manager realiza encuestas de recogida de continuidad de datos de datos históricos de rendimiento cuando se producen los siguientes eventos:
+
+* Inicialmente, un clúster se añade a Unified Manager.
++
+Unified Manager recopila datos de rendimiento históricos de los 15 días anteriores. Esto le permite ver dos semanas de información histórica sobre el rendimiento de un clúster unas horas después de agregar.
+
++
+Además, si existe alguno, se notifican los eventos de umbral definidos por el sistema durante el período anterior.
+
++
+[NOTE]
+====
+actualmente, no se recogen 15 días de estadísticas del volumen histórico.
+
+====
+* El ciclo de recogida de datos de rendimiento actual no termina a tiempo.
++
+Si el sondeo de rendimiento en tiempo real supera el período de recopilación de cinco minutos, se inicia un ciclo de recopilación de continuidad de datos para recopilar esa información que falta. Sin la recopilación de continuidad de datos, se omite el siguiente período de recopilación.
+
+* Unified Manager no se ha podido acceder durante un periodo de tiempo y vuelve a estar en línea, como en las siguientes situaciones:
++
+** Se ha reiniciado.
+** Se cerró durante una actualización de software o al crear un archivo de copia de seguridad.
+** Se repara una interrupción de la red.
+
+
+* Un clúster ha sido inaccesible durante un periodo de tiempo y después vuelve a estar en línea, como en las siguientes situaciones:
++
+** Se repara una interrupción de la red.
+** Una conexión de red de área amplia lenta retrasó la recopilación normal de datos de rendimiento.
+
+
+
+
+Un ciclo de recogida de continuidad de datos puede recopilar un máximo de 24 horas de datos históricos. Si Unified Manager se reduce durante más de 24 horas, se muestra una brecha en los datos de rendimiento en las páginas de interfaz de usuario.
+
+Un ciclo de recopilación de continuidad de datos y un ciclo de recopilación de datos en tiempo real no se pueden ejecutar al mismo tiempo. El ciclo de recopilación de continuidad de datos debe finalizar antes de que se inicie la recopilación de datos de rendimiento en tiempo real. Cuando se necesita la recogida de continuidad de datos para recopilar más de una hora de datos históricos, aparece un mensaje de banner para ese clúster en la parte superior de la consola de rendimiento.

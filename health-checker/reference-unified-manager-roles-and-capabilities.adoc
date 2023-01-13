@@ -1,0 +1,227 @@
+---
+permalink: health-checker/reference-unified-manager-roles-and-capabilities.html 
+sidebar: sidebar 
+keywords:  
+summary: Según el rol de usuario asignado, puede determinar qué operaciones puede realizar en Unified Manager. 
+---
+= Roles y funcionalidades de usuario de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Según el rol de usuario asignado, puede determinar qué operaciones puede realizar en Unified Manager.
+
+En la siguiente tabla, se muestran las funciones que puede realizar cada rol de usuario:
+
+|===
+| Función | Operador | Administrador de almacenamiento | Administrador de OnCommand | Esquema de integración | Esquema de informes 
+
+
+ a| 
+Ver la información del sistema de almacenamiento
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Ver otros datos, como historiales y tendencias de capacidad
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Ver, asignar y resolver eventos
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Ver los objetos de servicio de almacenamiento, como las asociaciones de SVM y los pools de recursos
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Ver políticas de umbral
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestionar objetos de servicio de almacenamiento, como asociaciones de SVM y pools de recursos
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Defina las alertas
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestione las opciones de gestión del almacenamiento
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestione las políticas de gestión del almacenamiento
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestionar usuarios
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Administrar opciones administrativas
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Defina las políticas de umbral
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestionar el acceso a las bases de datos
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestione la integración con WFA y proporcione acceso a las vistas de la base de datos
+ a| 
+ a| 
+ a| 
+ a| 
+•
+ a| 
+
+
+
+ a| 
+Proporcione acceso de sólo lectura a los informes y a otras vistas de base de datos
+ a| 
+ a| 
+ a| 
+ a| 
+ a| 
+•
+
+
+
+ a| 
+Programar y guardar informes
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Importar y eliminar informes importados
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+|===

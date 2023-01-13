@@ -1,0 +1,34 @@
+---
+permalink: online-help/task-deleting-groups.html 
+sidebar: sidebar 
+keywords:  
+summary: Un grupo se puede eliminar de Unified Manager cuando ya no se necesita el grupo. 
+---
+= Eliminación de grupos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un grupo se puede eliminar de Unified Manager cuando ya no se necesita el grupo.
+
+
+
+== Antes de empezar
+
+* Ninguno de los objetos de almacenamiento (clústeres, SVM o volúmenes) debe estar asociado con cualquier regla de grupo asociada con el grupo que desea eliminar.
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *grupos*.
+. En la ficha *grupos*, seleccione el grupo que desea eliminar y, a continuación, haga clic en *Eliminar*.
+. En el cuadro de diálogo *Advertencia* , confirme la eliminación haciendo clic en *Sí*.
++
+Al eliminar un grupo no se eliminan las acciones de grupo asociadas al grupo. Sin embargo, estas acciones de grupo se desasignarán una vez eliminado el grupo.
+
+

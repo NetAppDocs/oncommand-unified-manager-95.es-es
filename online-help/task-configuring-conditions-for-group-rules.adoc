@@ -1,0 +1,49 @@
+---
+permalink: online-help/task-configuring-conditions-for-group-rules.html 
+sidebar: sidebar 
+keywords: Unified Manager 
+summary: Puede configurar una o más condiciones para crear reglas de grupo en Unified Manager que se aplican en los objetos de almacenamiento. Los objetos de almacenamiento que cumplen la regla de grupo se combinan en un grupo. 
+---
+= Configurar condiciones para reglas de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar una o más condiciones para crear reglas de grupo en Unified Manager que se aplican en los objetos de almacenamiento. Los objetos de almacenamiento que cumplen la regla de grupo se combinan en un grupo.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *grupos*.
+. Haga clic en *Agregar*.
+. En el cuadro de diálogo *Agregar regla de grupo*, seleccione un operando de la lista de operandos.
+. Seleccione un operador para la condición.
+. Introduzca un valor requerido o seleccione uno de la lista disponible.
+. Haga clic en *Agregar*.
+
+
+
+
+== Ejemplo de configuración de una condición para una regla de grupo
+
+Considere una condición para el tipo de objeto SVM, donde el nombre del objeto contiene «mvm_data».
+
+Realice los siguientes pasos en el cuadro de diálogo Agregar regla de grupo para configurar la condición:
+
+. Escriba un nombre para la regla de grupo.
+. Seleccione el tipo de objeto como SVM.
+. Seleccione un grupo de la lista de grupos.
+. En el campo *Condiciones*, seleccione *Nombre de objeto* como operando.
+. Seleccione *contiene* como operador.
+. Introduzca el valor como `svm_data`.
+. Haga clic en *Agregar*.
+

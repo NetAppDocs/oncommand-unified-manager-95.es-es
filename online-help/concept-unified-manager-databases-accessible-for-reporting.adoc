@@ -1,0 +1,74 @@
+---
+permalink: online-help/concept-unified-manager-databases-accessible-for-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager utiliza una base de datos de MySQL para almacenar datos de los clústeres que se están supervisando. Los datos se mantienen en varios esquemas en la base de datos de MySQL. 
+---
+= Bases de datos de Unified Manager accesibles para la generación de informes personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager utiliza una base de datos de MySQL para almacenar datos de los clústeres que se están supervisando. Los datos se mantienen en varios esquemas en la base de datos de MySQL.
+
+A partir de Unified Manager 7.3, se exponen esquemas adicionales que ofrecen acceso a los datos de tabla adicionales.
+
+Todos los datos de las tablas de las siguientes bases de datos están disponibles:
+
+|===
+| Base de datos | Descripción 
+
+
+ a| 
+vista_modelo_netapp
+ a| 
+Datos acerca de los objetos en controladoras ONTAP.
+
+
+
+ a| 
+rendimiento_netapp
+ a| 
+Contadores de rendimiento específicos del clúster.
+
+
+
+ a| 
+ocum
+ a| 
+Datos e información de aplicaciones de Unified Manager para admitir el filtrado, la ordenación y el cálculo de algunos campos derivados de la interfaz de usuario.
+
+
+
+ a| 
+ocum_report
+ a| 
+Datos para obtener información relacionada con la capacidad y la configuración de inventario.
+
+
+
+ a| 
+ocum_report_birt
+ a| 
+Igual que lo anterior, pero esta base de datos se consume mediante informes BIRT integrados.
+
+
+
+ a| 
+opm
+ a| 
+Información del umbral y de la configuración del rendimiento.
+
+
+
+ a| 
+escalemador
+ a| 
+Datos sobre los problemas de estado y rendimiento de las aplicaciones de Unified Manager.
+
+|===
+Un usuario de informes -- un usuario de base de datos con el rol de esquema de informes -- puede tener acceso a los datos de estas tablas. Este usuario tiene acceso de solo lectura a las vistas de informes y otras bases de datos directamente desde la base de datos de Unified Manager. Tenga en cuenta que este usuario no tiene permiso para acceder a ninguna tabla que contenga datos de usuario o información de credenciales de clúster.
+
+Consulte http://www.netapp.com/us/media/tr-4565.pdf["Informe técnico para la elaboración de informes de Unified Manager"] (TR-4565) para obtener más información.

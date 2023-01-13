@@ -1,0 +1,24 @@
+---
+permalink: online-help/concept-what-storage-efficiency-is.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La eficiencia del almacenamiento le permite almacenar la cantidad máxima de datos al menor coste y alberga un rápido crecimiento de datos mientras consume menos espacio. La estrategia de NetApp de eficiencia del almacenamiento se basa en la virtualización del almacenamiento y el almacenamiento unificado que proporciona su sistema operativo principal ONTAP y el sistema de archivos Write Anywhere File Layout \(WAFL\).' 
+---
+= Qué es la eficiencia del almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La eficiencia del almacenamiento le permite almacenar la cantidad máxima de datos al menor coste y alberga un rápido crecimiento de datos mientras consume menos espacio. La estrategia de eficiencia del almacenamiento de NetApp se basa en la virtualización del almacenamiento y el almacenamiento unificado que proporciona su sistema operativo ONTAP principal y el sistema de archivos WAFL (Write Anywhere File Layout).
+
+La eficiencia del almacenamiento incluye tecnologías como thin provisioning, copia Snapshot, deduplicación, compresión de datos, FlexClone, Thin replication con SnapVault y SnapMirror de volúmenes, RAID-DP, Flash Cache, agregados de Flash Pool y agregados habilitados para FabricPool que ayudan a aumentar la utilización del almacenamiento y a reducir los costes de almacenamiento.
+
+La arquitectura de almacenamiento unificado le permite consolidar de forma eficaz una red de área de almacenamiento (SAN), un almacenamiento conectado a la red (NAS) y un almacenamiento secundario en una única plataforma.
+
+Las unidades de disco de alta densidad, como las unidades de conexión de tecnología avanzada en serie (SATA) configuradas en el agregado de Flash Pool o con la tecnología Flash Cache y RAID-DP, aumentan la eficiencia sin que ello afecte al rendimiento ni a la flexibilidad.
+
+Un agregado habilitado para FabricPool incluye un agregado de SSD como nivel de rendimiento y un almacén de objetos especificado como nivel de cloud. La configuración de FabricPool le ayuda a gestionar qué nivel de almacenamiento (el nivel de rendimiento local o el nivel cloud) se deben almacenar en función de si se accede frecuentemente a los datos.
+
+Las tecnologías como thin provisioning, copia Snapshot, deduplicación, compresión de datos, thin replication con SnapVault y SnapMirror para volúmenes y FlexClone ofrecen un mejor ahorro. Puede usar estas tecnologías por separado o juntas para lograr la máxima eficiencia del almacenamiento.

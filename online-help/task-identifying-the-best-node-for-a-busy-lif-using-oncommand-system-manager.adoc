@@ -1,0 +1,26 @@
+---
+permalink: online-help/task-identifying-the-best-node-for-a-busy-lif-using-oncommand-system-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede ver información sobre todos los puertos de un clúster. Puede ver información como la función de puerto de red \(clúster, datos o administración de nodo\), el estado de enlace, la unidad de transmisión máxima \(MTU\), la configuración de velocidad y el estado operativo y el grupo de interfaces del puerto, si procede.' 
+---
+= Identificar el mejor nodo para una LIF ocupada mediante System Manager de OnCommand
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver información sobre todos los puertos de un clúster. Puede ver información, como el rol de puerto de red (clúster, datos o gestión de nodos), el estado del enlace, la unidad de transmisión máxima (MTU), la configuración de velocidad y el estado operativo, y el grupo de interfaces del puerto, si corresponde.
+
+
+
+== Pasos
+
+. Abra el Administrador del sistema de OnCommand.
+. En la ficha *Inicio*, haga doble clic en el sistema de almacenamiento.
+. En el panel de navegación, expanda la jerarquía *Nodes*.
+. Para encontrar las conexiones activas en un nodo, en el panel de navegación, seleccione el icono de un nodo.
+. Haga clic en el enlace de nombre de un nodo y, a continuación, haga clic en *Configuración* > *puertos/adaptadores*.
+. Anote el número de clientes más alto por nodo.
+

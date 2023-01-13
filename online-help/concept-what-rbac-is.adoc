@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-what-rbac-is.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El control de acceso basado en roles \(control de acceso basado en roles\) permite controlar quién tiene acceso a diversas funciones y recursos en el servidor de Unified Manager de OnCommand.' 
+---
+= Qué es RBAC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El control de acceso basado en roles (RBAC) ofrece la capacidad de controlar quién tiene acceso a diversas funciones y recursos en el servidor de Unified Manager de OnCommand.

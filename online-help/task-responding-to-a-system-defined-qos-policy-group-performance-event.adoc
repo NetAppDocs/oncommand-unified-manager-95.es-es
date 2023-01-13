@@ -1,0 +1,63 @@
+---
+permalink: online-help/task-responding-to-a-system-defined-qos-policy-group-performance-event.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Unified Manager genera eventos de advertencia sobre las políticas de calidad de servicio cuando el rendimiento de la carga de trabajo \(IOPS, IOPS/TB o Mbps\) superó la configuración de la política de calidad de servicio de ONTAP definida y la latencia de la carga de trabajo se ve cada vez más afectada. Estos eventos definidos por el sistema proporcionan la oportunidad para corregir posibles problemas de rendimiento antes de que muchas cargas de trabajo se vean afectadas por la latencia.' 
+---
+= Responder a los eventos de rendimiento del grupo de políticas de calidad de servicio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager genera eventos de advertencia sobre las políticas de calidad de servicio cuando el rendimiento de las cargas de trabajo (IOPS, IOPS/TB o Mbps) superó la configuración de la política de calidad de servicio de ONTAP definida y la latencia de las cargas de trabajo se ve cada vez más afectada. Estos eventos definidos por el sistema proporcionan la oportunidad para corregir posibles problemas de rendimiento antes de que muchas cargas de trabajo se vean afectadas por la latencia.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento nuevos, reconocidos o obsoletos.
+
+
+
+
+== Acerca de esta tarea
+
+Unified Manager genera eventos de advertencia para incumplimiento de políticas de calidad de servicio cuando el rendimiento de la carga de trabajo superó la configuración de la política de calidad de servicio definida durante cada periodo de recogida de rendimiento de la hora anterior. El rendimiento de la carga de trabajo puede superar el umbral de calidad de servicio durante un breve periodo de tiempo durante cada periodo de recogida, pero Unified Manager muestra únicamente el rendimiento «medio» durante el periodo de recogida del gráfico. Por este motivo, puede recibir eventos de calidad de servicio mientras que el rendimiento de una carga de trabajo puede no haber superado el umbral de política que se muestra en el gráfico.
+
+Puede usar System Manager o los comandos de la ONTAP para gestionar los grupos de políticas, incluidas las siguientes tareas:
+
+* Crear un grupo de políticas nuevo para la carga de trabajo
+* Agregar o eliminar cargas de trabajo en un grupo de políticas
+* Mover una carga de trabajo entre grupos de políticas
+* Cambiar el límite de rendimiento de un grupo de políticas
+* Mover una carga de trabajo a un agregado o nodo diferente
+
+
+
+
+== Pasos
+
+. Abra la página de detalles *Event* para ver información sobre el evento.
+. Revise la *Descripción*, que describe la brecha de umbral que provocó el evento.
++
+Por ejemplo, el mensaje "'IOPS value of 1,352 IOPS on vol1_NFS1 ha activado un evento DE ADVERTENCIA para identificar problemas potenciales de rendimiento para la carga de trabajo'" indica que se ha producido un evento QoS Max IOPS en el volumen vol1_NFS1.
+
+. Consulte la sección *Información de evento* para obtener más información sobre cuándo se produjo el evento y cuánto tiempo ha estado activo.
++
+Además, para los volúmenes o LUN que comparten el rendimiento de una política de calidad de servicio, puede ver los nombres de las tres cargas de trabajo principales que consumen más IOPS o Mbps.
+
+. En la sección *Diagnóstico del sistema*, revise los dos gráficos: Uno para el promedio total de IOPS o Mbps (dependiendo del evento) y uno para latencia. Cuando se organiza de esta forma, se pueden ver los componentes del clúster que afectan en mayor medida a la latencia cuando la carga de trabajo se acercó al límite máximo de calidad de servicio.
++
+Para un evento de política de calidad de servicio compartida, las tres cargas de trabajo principales se muestran en el gráfico de rendimiento. Si más de tres cargas de trabajo comparten la política de calidad de servicio, se añaden cargas de trabajo adicionales en una categoría «¿otras cargas de trabajo». Además, el gráfico latencia muestra la latencia media de todas las cargas de trabajo que forman parte de la política de calidad de servicio.
+
++
+Tenga en cuenta que, para los eventos de política de calidad de servicio adaptativos, los gráficos IOPS y Mbps muestran los valores de IOPS o Mbps que ONTAP ha convertido de la política de umbral de IOPS/TB asignada en función del tamaño del volumen.
+
+. En la sección *acciones sugeridas*, revise las sugerencias y determine qué acciones debe realizar para evitar un aumento en la latencia de la carga de trabajo.
++
+Si es necesario, haga clic en el botón *Ayuda* para ver más detalles sobre las acciones sugeridas que puede realizar para intentar resolver el evento de rendimiento.
+
+

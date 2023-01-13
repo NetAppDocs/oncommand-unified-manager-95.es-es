@@ -1,0 +1,38 @@
+---
+permalink: health-checker/reference-definitions-of-user-types.html 
+sidebar: sidebar 
+keywords:  
+summary: Un tipo de usuario especifica el tipo de cuenta que contiene el usuario e incluye usuarios remotos, grupos remotos, usuarios locales, usuarios de base de datos y usuarios de mantenimiento. Cada uno de estos tipos tiene su propia función, que asigna un usuario con la función de Administrador de OnCommand. 
+---
+= Definiciones de tipos de usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un tipo de usuario especifica el tipo de cuenta que contiene el usuario e incluye usuarios remotos, grupos remotos, usuarios locales, usuarios de base de datos y usuarios de mantenimiento. Cada uno de estos tipos tiene su propia función, que asigna un usuario con la función de Administrador de OnCommand.
+
+Los tipos de usuario de Unified Manager son los siguientes:
+
+* *Usuario de mantenimiento*
++
+Se crea durante la configuración inicial de Unified Manager. A continuación, el usuario de mantenimiento crea usuarios adicionales y asigna funciones. El usuario de mantenimiento es también el único usuario con acceso a la consola de mantenimiento. Cuando Unified Manager se instala en un sistema Red Hat Enterprise Linux o CentOS, al usuario de mantenimiento se le asigna el nombre de usuario «'umadmin».
+
+* *Usuario local*
++
+Accede a la interfaz de usuario de Unified Manager y realiza funciones según el rol dado por el usuario de mantenimiento o un usuario con el rol de administrador de OnCommand.
+
+* *Grupo remoto*
++
+Un grupo de usuarios que acceden a la interfaz de usuario de Unified Manager con las credenciales almacenadas en el servidor de autenticación. El nombre de esta cuenta debe coincidir con el nombre de un grupo almacenado en el servidor de autenticación. Todos los usuarios del grupo remoto reciben acceso a la interfaz de usuario de Unified Manager usando sus credenciales de usuario individuales. Los grupos remotos pueden realizar funciones según sus roles asignados.
+
+* *Usuario remoto*
++
+Accede a la interfaz de usuario de Unified Manager con las credenciales almacenadas en el servidor de autenticación. Un usuario remoto realiza funciones basadas en la función proporcionada por el usuario de mantenimiento o un usuario con la función Administrador de OnCommand.
+
+* *Usuario de base de datos*
++
+Tiene acceso de solo lectura a los datos en la base de datos de Unified Manager, no tiene acceso a la interfaz web de Unified Manager ni a la consola de mantenimiento, y no puede ejecutar llamadas de API.
+
+

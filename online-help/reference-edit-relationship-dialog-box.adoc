@@ -1,0 +1,71 @@
+---
+permalink: online-help/reference-edit-relationship-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible editar una relación de protección existente para cambiar la tasa de transferencia máxima, la política de protección o la programación de protección. 
+---
+= Cuadro de diálogo Edit Relationship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible editar una relación de protección existente para cambiar la tasa de transferencia máxima, la política de protección o la programación de protección.
+
+
+
+== Información de destino
+
+* *Cluster de destino*
++
+El nombre del clúster de destino seleccionado.
+
+* *SVM de destino*
++
+El nombre de la SVM seleccionada
+
+* *Ajustes de relación*
++
+Permite especificar la tasa de transferencia máxima, la política de SnapMirror y la programación que utiliza la relación de protección:
+
++
+** Velocidad máxima de transferencia
++
+Especifica la tasa máxima a la que se transfieren los datos de base entre los clústeres a través de la red. Cuando se selecciona, el ancho de banda de red está limitado al valor especificado. Puede introducir un valor numérico y, a continuación, seleccionar kilobytes por segundo (kbps), megabytes por segundo (Mbps), gigabytes por segundo (Gbps) o terabytes por segundo (Tbps). La velocidad de transferencia máxima que especifique debe ser superior a 1 kbps e inferior a 4 Tbps. Si decide no utilizar una tasa de transferencia máxima, la transferencia de línea de base entre relaciones es ilimitada. Si el clúster principal y el secundario son iguales, esta configuración se deshabilita.
+
+** Política de SnapMirror
++
+Especifica la política de SnapMirror de ONTAP para la relación. El valor predeterminado es DPDefault.
+
+** Crear política
++
+Inicia el cuadro de diálogo Create SnapMirror Policy, que permite crear y utilizar una nueva política de SnapMirror.
+
+** Programación de SnapMirror
++
+Especifica la política de SnapMirror de ONTAP para la relación. Las programaciones disponibles incluyen ninguna, 5min, 8horas, diaria, por hora, y semanal. El valor predeterminado es None, lo que indica que no hay ningún programa asociado a la relación. Las relaciones sin programaciones no tienen valores de estado de desfase, a menos que pertenezcan a un servicio de almacenamiento.
+
+** Crear programación
++
+Abre el cuadro de diálogo Create Schedule, que permite crear una nueva programación de SnapMirror.
+
+
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Cancelar*
++
+Descarta las selecciones y cierra el cuadro de diálogo Configurar protección.
+
+* *Enviar*
++
+Aplica las selecciones y cierra el cuadro de diálogo Editar relación.
+
+

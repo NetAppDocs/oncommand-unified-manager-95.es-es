@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task-viewing-events-that-occurred-during-a-maintenance-window.html 
+sidebar: sidebar 
+keywords:  
+summary: Si es necesario, puede ver los eventos generados para todos los objetos de almacenamiento durante una ventana de mantenimiento de Unified Manager. La mayoría de los eventos aparecerán en el estado Obsoleto una vez que se haya completado la ventana de mantenimiento y todos los recursos del sistema estén de respaldo y en ejecución. 
+---
+= Ver los eventos que se produjeron durante una ventana de mantenimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si es necesario, puede ver los eventos generados para todos los objetos de almacenamiento durante una ventana de mantenimiento de Unified Manager. La mayoría de los eventos aparecerán en el estado Obsoleto una vez que se haya completado la ventana de mantenimiento y todos los recursos del sistema estén de respaldo y en ejecución.
+
+
+
+== Antes de empezar
+
+Debe haber al menos una ventana de mantenimiento completada antes de que haya algún evento disponible.
+
+
+
+== Acerca de esta tarea
+
+Los eventos que se produjeron durante una ventana de mantenimiento no aparecen de forma predeterminada en la página del inventario Events.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Eventos*.
++
+De forma predeterminada, todos los eventos activos (nuevos y reconocidos) se muestran en la página de inventario Eventos.
+
+. En el panel *Ver*, seleccione la opción *todos los eventos generados durante el mantenimiento*.
++
+Se muestra la lista de eventos desencadenados durante los últimos 7 días de todas las sesiones de la ventana de mantenimiento y de todos los clusters.
+
+. Si ha habido varias ventanas de mantenimiento para un único clúster, puede hacer clic en el icono de calendario *tiempo activado* y seleccionar el período de tiempo para los eventos de la ventana de mantenimiento que le interesa ver.
+

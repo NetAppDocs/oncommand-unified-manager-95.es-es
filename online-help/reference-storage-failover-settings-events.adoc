@@ -1,0 +1,99 @@
+---
+permalink: online-help/reference-storage-failover-settings-events.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Los eventos de configuración de conmutación por error del almacenamiento \(SFO\) le proporcionan información acerca de si su recuperación tras fallos del almacenamiento está deshabilitada o no configurada para que pueda supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.' 
+---
+= Eventos de configuración de conmutación por error de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de configuración de conmutación por error del almacenamiento (SFO) le proporcionan información acerca de si su recuperación tras fallos del almacenamiento está deshabilitada o no configurada para que pueda supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Interconexión de recuperación tras fallos de almacenamiento uno o varios enlaces hacia abajo (ocumEvtSfoInterconnectOneOrMoreLinksDown)
+ a| 
+Riesgo
+ a| 
+Nodo
+ a| 
+Advertencia
+
+
+
+ a| 
+Conmutación por error de almacenamiento desactivada (ocumEvtSfoSettingsDisabled).
+ a| 
+Riesgo
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Conmutación por error de almacenamiento no configurada(ocumEvtSfoSettingsNotConfigred)
+ a| 
+Riesgo
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Estado de conmutación por error del almacenamiento: Toma de control (ocumEvtSfoStateTakeover)
+ a| 
+Riesgo
+ a| 
+Nodo
+ a| 
+Advertencia
+
+
+
+ a| 
+Estado de conmutación por error de almacenamiento - devolución parcial (ocumEvtSfoStatePartialGiveback)
+ a| 
+Riesgo
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+Estado inactivo del nodo de conmutación por error del almacenamiento (ocumEvtSfoNodeStatusDown)
+ a| 
+Riesgo
+ a| 
+Nodo
+ a| 
+Error
+
+
+
+ a| 
+No es posible la toma de control de conmutación por error del almacenamiento (ocumEvtSfoOverTakeoNotPossible)
+ a| 
+Riesgo
+ a| 
+Nodo
+ a| 
+Error
+
+|===

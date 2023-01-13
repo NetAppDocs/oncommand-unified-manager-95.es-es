@@ -1,0 +1,49 @@
+---
+permalink: online-help/task-viewing-volume-protection-relationships.html 
+sidebar: sidebar 
+keywords:  
+summary: En la página Protection/Volume Relationships, puede ver el estado de las relaciones de SnapMirror y SnapVault para volúmenes existentes. También puede examinar detalles sobre las relaciones de protección, como el estado de transferencia y desfase, los detalles de origen y destino, la información sobre la programación y las políticas, etc. 
+---
+= Visualización de las relaciones de protección de volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página Protection/Volume Relationships, puede ver el estado de las relaciones de SnapMirror y SnapVault para volúmenes existentes. También puede examinar detalles sobre las relaciones de protección, como el estado de transferencia y desfase, los detalles de origen y destino, la información sobre la programación y las políticas, etc.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+También puede iniciar los comandos de relaciones desde esta página.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Protección* > *Relaciones de volumen*.
++
+Se muestra la página Protection/Volume Relationships.
+
+. Seleccione una de las siguientes maneras de ver los detalles de protección de volumen:
++
+** Para ver la información actual acerca de todas las relaciones de volumen, permanezca en la página predeterminada *todas las relaciones de volumen*.
+** Para ver información detallada acerca de las tendencias de transferencia de volumen durante un período de tiempo, en el menú Ver, seleccione *Estado de transferencia de volumen (Histórico)*.
+** Para ver información detallada sobre la actividad de transferencia de volumen día a día, en el menú Ver, seleccione *velocidad de transferencia de volumen (histórica)*.
+
+
++
+[NOTE]
+====
+Las vistas de transferencia de volúmenes muestran información solo sobre los volúmenes en relaciones asíncronas: No se muestran los volúmenes de las relaciones síncronas.
+
+====
+

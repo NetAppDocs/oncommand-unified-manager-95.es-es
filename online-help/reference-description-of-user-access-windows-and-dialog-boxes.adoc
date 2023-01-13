@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-user-access-windows-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Según la configuración de RBAC, puede añadir usuarios desde la página Management/Users y asignar roles adecuados a esos usuarios para acceder a los clústeres y supervisarlos. 
+---
+= Descripción de las ventanas de acceso del usuario y cuadros de diálogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Según la configuración de RBAC, puede añadir usuarios desde la página Management/Users y asignar roles adecuados a esos usuarios para acceder a los clústeres y supervisarlos.

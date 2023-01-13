@@ -1,0 +1,63 @@
+---
+permalink: online-help/reference-qtree-thresholds-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Configuration/Health Thresholds de Qtrees permite configurar valores de umbral de estado global para qtrees supervisados. Los eventos se generan para un qtree solo cuando se ha establecido una cuota de Qtree o una cuota predeterminada en él. Los eventos no se generan si el espacio definido en una cuota de usuario o cuota de grupo ha superado el umbral. 
+---
+= Página Configuration/Health Thresholds de Qtrees
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Configuration/Health Thresholds de Qtrees permite configurar valores de umbral de estado global para qtrees supervisados. Los eventos se generan para un qtree solo cuando se ha establecido una cuota de Qtree o una cuota predeterminada en él. Los eventos no se generan si el espacio definido en una cuota de usuario o cuota de grupo ha superado el umbral.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+Los eventos se generan cuando se incumple un umbral. Puede tomar acciones correctivas para tales eventos.
+
+
+
+== Área Capacity
+
+El área de capacidad permite establecer las siguientes condiciones de umbral de capacidad para qtrees.
+
+* * Espacio casi lleno*
++
+Especifica el porcentaje en el que se considera que un qtree está casi lleno:
+
++
+** Valor predeterminado: 80 %
++
+El valor de este umbral debe ser menor que el valor del umbral completo de Qtree.
+
+** Evento generado: Qtree casi completo
+** Gravedad del evento: Advertencia
+
+
+* * Espacio lleno*
++
+Especifica el porcentaje en el que un qtree se considera completo:
+
++
+** Valor predeterminado: 90 %
+** Evento generado: Qtree Full
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Botones de comando
+
+* *Restaurar valores predeterminados de fábrica*
++
+Le permite restaurar los ajustes de configuración a los valores predeterminados de fábrica.
+
+* *Guardar*
++
+Guarda los ajustes de configuración de la opción seleccionada.
+
+

@@ -1,0 +1,24 @@
+---
+permalink: online-help/reference-how-enabling-flash-cache-on-a-node-can-improve-workload-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede mejorar el rendimiento de la carga de trabajo activando la caché inteligente de datos Flash Cache™ en cada nodo del clúster. 
+---
+= Cómo habilitar Flash Cache en un nodo puede mejorar el rendimiento de la carga de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede mejorar el rendimiento de la carga de trabajo activando la caché inteligente de datos Flash Cache™ en cada nodo del clúster.
+
+Un módulo Flash Cache o un módulo de memoria basado en PCIe Performance Acceleration Module optimizan el rendimiento de cargas de trabajo de lectura aleatoria intensiva al funcionar como una caché de lectura externa inteligente. Este hardware funciona conjuntamente con el componente de software de caché externa WAFL de ONTAP.
+
+En Unified Manager, en la página de detalles Event, el icono del componente del clúster que representa el agregado en disputa se resalta en rojo. Debajo del icono, entre paréntesis, se encuentra el nombre del agregado, que identifica el agregado. Puede habilitar Flash Cache en el nodo en el que reside el agregado.
+
+Puede usar System Manager de OnCommand o los comandos de ONTAP para ver si Flash Cache está instalado o habilitado y para habilitarla si todavía no está habilitado. El siguiente comando indica si Flash Cache está habilitado en un nodo específico: `cluster::> run local options flexscale.enable`
+
+Para obtener más información sobre Flash Cache y los requisitos para su uso, consulte el siguiente informe técnico:
+
+http://www.netapp.com/us/media/tr-3832.pdf["Informe técnico 3832: Guía de prácticas recomendadas de Flash Cache"]

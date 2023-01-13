@@ -1,0 +1,177 @@
+---
+permalink: install/task-installing-unified-manager-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede instalar Unified Manager en una plataforma física o virtual Red Hat Enterprise Linux o CentOS. 
+---
+= Instalación de Unified Manager en Red Hat Enterprise Linux o CentOS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede instalar Unified Manager en una plataforma física o virtual Red Hat Enterprise Linux o CentOS.
+
+
+
+== Antes de empezar
+
+* El sistema en el que desea instalar Unified Manager debe cumplir con los requisitos del sistema y del software.
++
+xref:concept-virtual-infrastructure-or-hardware-system-requirements.adoc[Requisitos del sistema de hardware]
+
++
+xref:reference-red-hat-and-centos-software-and-installation-requirements.adoc[Requisitos de instalación y software de Red Hat y CentOS]
+
+* Debe haber descargado el Unified Manager``.zip`` Archivo del sitio de soporte de NetApp al sistema de destino.
+* Debe tener un navegador web compatible.
+* El software de emulación de terminal debe tener activado sscrrollback.
+
+
+
+
+== Acerca de esta tarea
+
+El sistema Red Hat Enterprise Linux o CentOS puede tener instaladas todas las versiones necesarias del software compatible necesario (Java, MySQL, utilidades adicionales), o puede tener sólo parte del software necesario instalado, o puede ser un sistema recién instalado sin el software necesario instalado.
+
+
+
+== Pasos
+
+. Inicie sesión en el servidor en el que está instalando Unified Manager.
+. Escriba los comandos apropiados para evaluar qué software puede requerir la instalación o actualización en el sistema de destino para admitir la instalación:
++
+|===
+| Versión mínima y del software necesarios | Comando para verificar el software y la versión 
+
+
+ a| 
+OpenJDK versión 11
+ a| 
+`java -version`
+
+
+
+ a| 
+Edición comunitaria de MySQL 5.7.23
+ a| 
+`rpm -qa | grep -i mysql`
+
+
+
+ a| 
+p7zip 9.20.1
+ a| 
+`rpm -qa | grep p7zip`
+
+|===
+. Si alguna versión del software de la lista es anterior a la versión necesaria, introduzca el comando correspondiente para desinstalar ese módulo:
++
+|===
+| Software para desinstalar | Comando para desinstalar el software 
+
+
+ a| 
+MySQL
+
+[NOTE]
+====
+Desinstale cualquier versión que no sea MySQL 5.7.23 Community Edition o posterior.
+
+==== a| 
+`rpm -e` <``mysql_package_name``>
+
+[NOTE]
+====
+Si recibe errores de dependencia, debe agregar `--nodeps` opción para desinstalar el componente.
+
+====
+
+
+ a| 
+Todos los demás módulos
+ a| 
+`yum remove` `module_name`
+
+|===
+. Desplácese hasta el directorio en el que ha descargado la instalación `.zip` Archive y expanda el paquete de Unified Manager: `unzip OnCommandUnifiedManager-rhel7-9.5.zip`
++
+El requerido `.rpm` Los módulos de Unified Manager se descomprimen en el directorio de destino.
+
+. Compruebe que los siguientes módulos están disponibles en el directorio: `ls *.rpm`
++
+** `ocie-au-<version>.x86_64.rpm`
+** `ocie-server-<version>.x86_64.rpm`
+** `ocie-serverbase-<version>.x86_64.rpm`
+** `netapp-application-server-<version>.x86_64.rpm`
+** `netapp-platform-base-<version>.x86_64.rpm`
+** `netapp-ocum-<version>.x86_64.rpm`
+
+
+. Ejecute el script de instalación previa para garantizar que no haya ninguna configuración del sistema o ningún software instalado que entre en conflicto con la instalación de Unified Manager: `pre_install_check.sh`
++
+La secuencia de comandos de preinstalación comprueba que el sistema tiene una suscripción válida a Red Hat y que tiene acceso a los repositorios de software necesarios. Si el script identifica cualquier problema, debe corregir los problemas antes de instalar Unified Manager.
+
++
+[NOTE]
+====
+Debe realizar el paso 7 _only_ si es necesario descargar manualmente los paquetes necesarios para su instalación. Si su sistema tiene acceso a Internet y todos los paquetes necesarios están disponibles, vaya al paso 8.
+
+====
+. Para los sistemas que no están conectados a Internet o que no utilizan los repositorios de Red Hat Enterprise Linux, realice los siguientes pasos para determinar si falta algún paquete necesario y, a continuación, descargue dichos paquetes:
++
+.. En el sistema en el que está instalando Unified Manager, consulte la lista de paquetes disponibles y no disponibles: `yum install *.rpm --assumeno`
++
+Los elementos de la sección «'instalación:'» son los paquetes que están disponibles en el directorio actual, y los elementos de la sección «'instalación de dependencias:'» son los paquetes que faltan en su sistema.
+
+.. En un sistema que tenga acceso a Internet, descargue los paquetes que faltan: `yum install <package_name\> --downloadonly --downloaddir=.`
++
+[NOTE]
+====
+Puesto que el complemento "'yum-plugin-downloadonly'" no siempre está activado en los sistemas Red Hat Enterprise Linux, es posible que tenga que habilitar la funcionalidad para descargar un paquete sin instalarlo: `yum install yum-plugin-downloadonly`
+
+====
+.. Copie los paquetes que faltan del sistema conectado a Internet en el sistema de instalación.
+
+
+. Instale el software: `yum install *.rpm`
++
+Este comando instala el `.rpm` Paquetes, todo el resto de software compatible necesario y el software Unified Manager.
+
++
+[NOTE]
+====
+No intente la instalación utilizando comandos alternativos (como `+rpm -ivh ...+`). La instalación correcta de Unified Manager en un sistema Red Hat Enterprise Linux o CentOS requiere que todos los archivos de Unified Manager y los archivos relacionados se instalen en un orden específico en una estructura de directorio específica que el aplique automáticamente `yum install *.rpm` comando.
+
+====
+. Ignore la notificación de correo electrónico que se muestra inmediatamente después de los mensajes de instalación.
++
+El correo electrónico notifica al usuario raíz de un error inicial en la tarea de cron, que no tiene ningún efecto adverso en la instalación.
+
+. Una vez hayan completado los mensajes de instalación, desplácese hacia atrás por los mensajes hasta ver el mensaje en el que el sistema muestra una dirección IP o una URL para la interfaz de usuario web de Unified Manager, el nombre de usuario de mantenimiento (umadmin) y una contraseña predeterminada.
++
+El mensaje es similar al siguiente:
+
++
+[listing]
+----
+OnCommand Unified Manager installed successfully.
+Use a web browser and one of the following URL(s) to configure and access the Unified Manager GUI.
+https://default_ip_address/    (if using IPv4)
+https://[default_ip_address]/  (if using IPv6)
+https://fully_qualified_domain_name/
+
+Log in to Unified Manager in a web browser by using following details:
+  username: umadmin
+  password: admin
+----
+. Registre la dirección IP o URL, el nombre de usuario asignado (umadmin) y la contraseña actual.
+. Si ha creado una cuenta de usuario umadmin con un directorio inicial personalizado antes de instalar Unified Manager, debe especificar el shell de inicio de sesión de usuario umadmin:``usermod -s /bin/maintenance-user-shell.sh umadmin``
+
+
+
+
+== Después de terminar
+
+Puede acceder a la interfaz de usuario web de para realizar la configuración inicial de Unified Manager, como se describe en _OnCommand Unified Manager System Configuration Guide_.

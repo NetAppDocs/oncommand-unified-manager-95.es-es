@@ -1,0 +1,34 @@
+---
+permalink: online-help/task-customizing-the-volume-transfer-rate-report-to-view-volume-transfers-based-on-transfer-size.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se puede personalizar el informe tasa de transferencia de volumen \(Historical\) para ver los detalles de transferencia de volumen según el tamaño total de transferencia del volumen.' 
+---
+= Personalización del informe de velocidad de transferencia de volumen (Historical) para ver las transferencias de volumen en función del tamaño de la transferencia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se puede personalizar el informe tasa de transferencia de volumen (Historical) para ver los detalles de transferencia de volumen según el tamaño total de transferencia del volumen.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Quitar agrupación por clúster:
++
+.. Seleccione la columna que desea desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para ordenar las transferencias de volumen según el tamaño de transferencia de volumen, haga clic en la columna *Tamaño total de transferencia (GB)*.
+

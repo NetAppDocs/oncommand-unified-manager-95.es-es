@@ -1,0 +1,57 @@
+---
+permalink: performance-checker/task-responding-to-user-defined-performance-threshold-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar Unified Manager para investigar los eventos de rendimiento causados por un contador de rendimiento que cruza un umbral crítico o de advertencia definido por el usuario. También puede usar Unified Manager para comprobar el estado del componente del clúster a fin de ver si los eventos de estado recientes detectados en el componente contribuyeron al evento de rendimiento. 
+---
+= Respuesta a eventos de umbral de rendimiento definidos por el usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar Unified Manager para investigar los eventos de rendimiento causados por un contador de rendimiento que cruza un umbral crítico o de advertencia definido por el usuario. También puede usar Unified Manager para comprobar el estado del componente del clúster a fin de ver si los eventos de estado recientes detectados en el componente contribuyeron al evento de rendimiento.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento nuevos o obsoletos.
+
+
+
+
+== Pasos
+
+. Abra la página de detalles *Event* para ver información sobre el evento.
+. Revise la *Descripción*, que describe la brecha de umbral que provocó el evento.
++
+Por ejemplo, el mensaje "'valor de latencia de 456 ms/op ha activado un evento DE ADVERTENCIA basado en el valor de umbral de 400 ms/op'" indica que se ha producido un evento de advertencia de latencia para el objeto.
+
+. Pase el cursor sobre el nombre de la política para mostrar detalles sobre la política de umbral que activó el evento.
++
+Esto incluye el nombre de la política, el contador de rendimiento que se está evaluando, el valor del contador que debe incumplir para considerarse un evento crítico o de advertencia y la duración mediante la cual el contador debe superar el valor.
+
+. Tome nota del *tiempo de activación del evento* para que pueda investigar si se han producido otros eventos al mismo tiempo que podrían haber contribuido a este evento.
+. Siga una de las siguientes opciones para investigar más a fondo el evento y determinar si necesita realizar alguna acción para resolver el problema de rendimiento:
++
+|===
+| Opción | Posibles acciones de investigación 
+
+
+ a| 
+Haga clic en el nombre del objeto Source para mostrar la página Explorer de ese objeto.
+ a| 
+Esta página permite ver los detalles del objeto y comparar este objeto con otros objetos de almacenamiento similares para ver si otros objetos de almacenamiento tienen un problema de rendimiento al mismo tiempo. Por ejemplo, para ver si otros volúmenes del mismo agregado están teniendo también un problema de rendimiento.
+
+
+
+ a| 
+Haga clic en el nombre del clúster para mostrar la página Cluster Summary.
+ a| 
+Esta página le permite ver los detalles del clúster en el que reside el objeto para ver si existen otros problemas de rendimiento a la vez.
+
+|===
+

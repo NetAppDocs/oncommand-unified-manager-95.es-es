@@ -1,0 +1,50 @@
+---
+permalink: online-help/task-creating-snapmirror-and-snapvault-schedules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede crear programaciones básicas o avanzadas de SnapMirror y SnapVault para habilitar las transferencias automáticas de protección de datos en un volumen primario o de origen, de modo que las transferencias se realicen con mayor frecuencia o menos frecuencia, según la frecuencia de los cambios de datos en los volúmenes. 
+---
+= Crear programaciones de SnapMirror y SnapVault
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear programaciones básicas o avanzadas de SnapMirror y SnapVault para habilitar las transferencias automáticas de protección de datos en un volumen primario o de origen, de modo que las transferencias se realicen con mayor frecuencia o menos frecuencia, según la frecuencia de los cambios de datos en los volúmenes.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Ya debe completar el área Destination Information en el cuadro de diálogo Configure Protection.
+* Debe haber configurado Workflow Automation para que lleve a cabo esta tarea.
+
+
+
+
+== Pasos
+
+. En la ficha *SnapMirror* o en la ficha *SnapVault* del cuadro de diálogo *Configurar protección*, haga clic en el vínculo *Crear programación* del área *Configuración de relación*.
++
+Se mostrará el cuadro de diálogo Crear programación.
+
+. En el campo *Nombre de horario*, escriba el nombre que desea asignar a la programación.
+. Seleccione una de las siguientes opciones:
++
+** *Básico*
++
+Seleccione si desea crear una programación básica de tipo intervalo.
+
+** *Avanzado*
++
+Seleccione si desea crear una programación de tareas con Cron.
+
+
+
+. Haga clic en *Crear*.
++
+La nueva programación se muestra en la lista desplegable SnapMirror Schedule o SnapVault Schedule.
+
+

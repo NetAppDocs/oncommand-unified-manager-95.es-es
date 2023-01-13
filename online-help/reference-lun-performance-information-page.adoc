@@ -1,0 +1,68 @@
+---
+permalink: online-help/reference-lun-performance-information-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilice la página Performance/LUN Information para ver una lista de los atributos físicos y lógicos de la LUN. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento. 
+---
+= Página Performance/LUN Information
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice la página Performance/LUN Information para ver una lista de los atributos físicos y lógicos de la LUN. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento.
+
+
+
+== Atributos de la LUN
+
+* *WWN*
++
+El WWN de la LUN;
+
+* *Ruta*
++
+La ruta completa del LUN, por ejemplo, `/vol/vol1/lun1`.
+
+* *Alineación*
++
+Indica el estado de alineación de la LUN. Los posibles valores son los siguientes:
+
++
+** No asignado
+** Alineado
+** Mal alineado
+** Posiblemente mal alineado
+** Indeterminado
+
+
+* *Capacidad (libre/total)*
++
+El almacenamiento total disponible en el LUN, en gigabytes y la cantidad de almacenamiento disponible actualmente.
+
+* *Volumen*
++
+El nombre del volumen al que pertenece la LUN. Puede hacer clic en el nombre para mostrar detalles del volumen en la página Performance/Volume Explorer.
+
+* *Máquina virtual de almacenamiento*
++
+El nombre de la SVM a la que pertenece la LUN. Puede hacer clic en el nombre para mostrar los detalles de la SVM en la página Performance/SVM Explorer.
+
+* *Nodo*
++
+El nombre del nodo en el que reside la LUN. Puede hacer clic en el nombre para mostrar los detalles del nodo en la página Performance/Node Explorer.
+
+* *Cluster*
++
+El nombre del clúster al que pertenece la LUN. Puede hacer clic en el nombre para mostrar los detalles del clúster en la página Performance/Cluster Explorer.
+
+* *Estado*
++
+El estado de la LUN. los estados válidos pueden ser online, offline, nvfail, space-error y exexterna-lun-error.
+
+* *Asignado*
++
+Si la LUN se ha asignado a un iGroup (true) o no (false).
+
+

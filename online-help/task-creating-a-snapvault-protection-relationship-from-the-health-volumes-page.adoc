@@ -1,0 +1,68 @@
+---
+permalink: online-help/task-creating-a-snapvault-protection-relationship-from-the-health-volumes-page.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede usar la página del inventario Health/Volumes para crear relaciones SnapVault para uno o varios volúmenes en la misma máquina virtual de almacenamiento \(SVM\) para habilitar backups de datos con fines de protección.' 
+---
+= Crear una relación de protección SnapVault desde la página del inventario Health/Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la página del inventario Health/Volumes para crear relaciones SnapVault para uno o más volúmenes en la misma máquina virtual de almacenamiento (SVM) para habilitar backups de datos para fines de protección.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+El menú *Protect* no aparece en los siguientes casos:
+
+* Si la configuración de RBAC no permite esta acción: Por ejemplo, si solo tiene privilegios de operador
+* Cuando se desconoce el ID de volumen: Por ejemplo, cuando se mantiene una relación de interconexión de clústeres y el clúster de destino aún no se detectó
+
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Estado* > *volúmenes*.
+. En la página de inventario *Health/Volumes*, haga clic con el botón derecho del ratón en el volumen que desee proteger y seleccione *Protect*.
++
+Como alternativa, para crear varias relaciones de protección en la misma máquina virtual de almacenamiento (SVM), seleccione uno o más volúmenes en la página de inventario Health/Volumes y haga clic en *Protect* en la barra de herramientas.
+
+. Seleccione *SnapVault* en el menú.
++
+Se abre el cuadro de diálogo Configure Protection.
+
+. Haga clic en *SnapVault* para ver la ficha *SnapVault* y configurar la información del volumen secundario.
+. Haga clic en *Avanzado* para establecer la deduplicación, compresión, crecimiento automático y garantía de espacio según sea necesario y, a continuación, haga clic en *aplicar*.
+. Complete el área *Información de destino* y el área *Configuración de relación* de la ficha *SnapVault*.
+. Haga clic en *aplicar*.
++
+El usuario regresa a la página del inventario Health/Volumes.
+
+. Haga clic en el enlace del trabajo de configuración de protección situado en la parte superior de la página de inventario *Health/Volumes*.
++
+Si solo se crea una relación de protección, se muestra la página de detalles Protection/Job; sin embargo, si se crea más de una relación de protección, se muestra una lista filtrada de todos los trabajos asociados con la operación de protección.
+
+. Debe realizar una de las siguientes acciones:
++
+** Si sólo tiene un trabajo, haga clic en *Actualizar* para actualizar la lista de tareas y los detalles de tareas asociados con el trabajo de configuración de protección y para determinar cuándo se ha completado el trabajo.
+** Si tiene más de un trabajo:
++
+... Haga clic en un trabajo de la lista trabajos.
+... Haga clic en *Actualizar* para actualizar la lista de tareas y los detalles de tareas asociados con el trabajo de configuración de protección y para determinar cuándo se ha completado el trabajo.
+... Utilice el botón *Atrás* para volver a la lista filtrada y ver otro trabajo.
+
+
+
+
+

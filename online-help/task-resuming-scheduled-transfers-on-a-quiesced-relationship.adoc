@@ -1,0 +1,51 @@
+---
+permalink: online-help/task-resuming-scheduled-transfers-on-a-quiesced-relationship.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de poner en modo inactivo una relación para detener las transferencias programadas, es posible usar Reanudar para volver a habilitar las transferencias programadas con el fin de proteger los datos en el volumen de origen o en el volumen primario. Las transferencias se reanudan desde un punto de comprobación, si existe alguno, en el siguiente intervalo de transferencia programada. 
+---
+= Reanude las transferencias programadas en una relación en modo inactivo en la página Protection/Volume Relationships
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de poner en modo inactivo una relación para detener las transferencias programadas, puede usar *Reanudar* para volver a habilitar las transferencias programadas de modo que se protejan los datos del volumen de origen o primario. Las transferencias se reanudan desde un punto de comprobación, si existe alguno, en el siguiente intervalo de transferencia programada.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber configurado Workflow Automation.
+
+
+
+
+== Acerca de esta tarea
+
+Puede seleccionar no más de 10 relaciones en modo inactivo en las que reanudar las transferencias.
+
+
+
+== Pasos
+
+. En la página *Protección/Relaciones de volumen*, seleccione uno o más volúmenes con relaciones en modo inactivo y, en la barra de herramientas, haga clic en *Reanudar*.
+. En el cuadro de diálogo *Reanudar*, haga clic en *continuar*.
++
+Volverá a la página Protection/Volume Relationships.
+
+. Para ver las tareas de trabajo relacionadas y realizar un seguimiento de su progreso, haga clic en el vínculo de trabajo que aparece en la parte superior de la página *Relaciones de volumen/protección*.
+. Debe realizar una de las siguientes acciones:
++
+** Si sólo se muestra un trabajo, en la página de detalles Protection/Job, haga clic en *Refresh* para actualizar la lista de tareas y los detalles de tareas asociados con el trabajo de configuración de protección y para determinar cuándo se ha completado el trabajo.
+** Si se muestra más de un trabajo,
++
+... En la página Protection/Jobs, haga clic en el trabajo para el que desea ver los detalles.
+... En la página de detalles Protection/Job, haga clic en *Refresh* para actualizar la lista de tareas y los detalles de tareas asociados con el trabajo de configuración de protección y determinar cuándo se ha completado el trabajo. Cuando los trabajos finalizan, las transferencias de datos se reanudan en el siguiente intervalo de transferencia programado.
+
+
+
+
+

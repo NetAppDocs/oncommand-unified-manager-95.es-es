@@ -1,0 +1,44 @@
+---
+permalink: online-help/task-customizing-the-volume-capacity-and-utilization-report-to-display-volumes-with-noncompliant-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe Volume Capacity and Utilization para mostrar los volúmenes que no cumplen las políticas de la empresa. Por ejemplo, si debe tener habilitada la deduplicación en todos los volúmenes, puede crear un informe con todos los volúmenes donde esté deshabilitada la deduplicación. 
+---
+= Personalización del informe Volume Capacity and Utilization para mostrar los volúmenes con una configuración que no cumple los requisitos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe Volume Capacity and Utilization para mostrar los volúmenes que no cumplen las políticas de la empresa. Por ejemplo, si debe tener habilitada la deduplicación en todos los volúmenes, puede crear un informe con todos los volúmenes donde esté deshabilitada la deduplicación.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por SVM, el clúster o el volumen, realice los siguientes pasos:
++
+.. Haga clic en la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Ocultar todas las columnas excepto las columnas Cluster, Storage Virtual Machine, Volume, Deduplication y Deduplication Space Savings (GB):
++
+.. Haga clic en en la columna y haga clic en el image:../media/click-to-see-menu.gif[""] .
+.. En el menú, seleccione *columna* > *Ocultar columna*.
+
+
+. Para filtrar los volúmenes que la deduplicación está desactivada, haga clic en la columna *deduplicación* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *Desactivado*.
+. Haga clic en *Aceptar*.
+. Para ordenar los volúmenes según el ahorro de espacio de la deduplicación, haga clic en la columna *Ahorro de espacio de deduplicación (GB)* y haga clic en la image:../media/sort-desc.gif[""] .
+

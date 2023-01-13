@@ -1,0 +1,54 @@
+---
+permalink: health-checker/concept-unified-manager-health-monitoring-features.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager se basa en una infraestructura de servidor que ofrece escalabilidad y compatibilidad, así como funciones mejoradas de supervisión y notificación. Unified Manager admite la supervisión de sistemas que ejecutan el software ONTAP. 
+---
+= Funciones de supervisión del estado de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager se basa en una infraestructura de servidor que ofrece escalabilidad y compatibilidad, así como funciones mejoradas de supervisión y notificación. Unified Manager admite la supervisión de sistemas que ejecutan el software ONTAP.
+
+Unified Manager incluye las siguientes funciones:
+
+* Detección, supervisión y notificaciones de los sistemas instalados con el software ONTAP:
++
+** Objetos físicos: Nodos, discos, bandejas de discos, parejas SFO, puertos, Y Flash Cache
+** Objetos lógicos: Clústeres, máquinas virtuales de almacenamiento (SVM), agregados, volúmenes, LUN, espacios de nombres, Qtrees, LIF, copias Snapshot, rutas de unión, exportaciones NFS, Recursos compartidos de CIFS, cuotas de usuarios y grupos, e iGroups
+** Protocolos: CIFS, NFS, FC, iSCSI, NVMe, Y FCoE
+** Eficiencia del almacenamiento: Agregados de SSD, agregados de Flash Pool, agregados de FabricPool, deduplicación y compresión
+** Protección: Relaciones de SnapMirror (síncronas y asíncronas) y relaciones de SnapVault
+
+
+* Ver el estado de la detección y supervisión del clúster
+* Configuración de MetroCluster: Ver y supervisar la configuración, los switches y los puentes de MetroCluster, los problemas y el estado de conectividad de los componentes del clúster
+* Alertas mejoradas, eventos e infraestructura de umbral
+* LDAP, LDAPS, autenticación SAML y compatibilidad de usuario local
+* RBAC (para un conjunto de roles predefinido)
+* AutoSupport y el paquete de soporte
+* Panel mejorado para mostrar el estado de la capacidad, la disponibilidad, la protección y el rendimiento del entorno
+* Interoperabilidad con movimiento de volúmenes, historial de movimientos de volúmenes e historial de cambios de ruta de unión
+* Alcance del área de impacto que muestra gráficamente los recursos que se ven afectados por eventos como algunos discos con errores, mirroring de agregado de MetroCluster degradado y discos de repuesto de MetroCluster abandonados
+* Área posible EFFECT que muestra el efecto de los eventos de MetroCluster
+* Área Suggested Corrective Actions que muestra las acciones que se pueden realizar para abordar eventos como algunos discos con errores, MetroCluster aggregate Mirroring degradado y MetroCluster Spare Disks Left Behind
+* Los recursos que podrían verse afectados muestran los recursos que podrían verse afectados por eventos como el evento Volume offline, el evento Volume restricted y el evento Thin-Provisioning Volume at Risk
+* Soporte para SVM con:
++
+** Volúmenes de FlexVol
+** Volúmenes de FlexGroup
+** Infinite Volume
+
+
+* Compatibilidad con la supervisión de volúmenes raíz de nodos
+* Supervisión de copias snapshot mejorada, incluido el espacio informático reclamable y la eliminación de copias snapshot
+* Anotaciones para objetos de almacenamiento
+* Creación de informes y gestión de información de objetos de almacenamiento como capacidad física y lógica, utilización, ahorro de espacio y eventos relacionados
+* Integración con OnCommand Workflow Automation para ejecutar flujos de trabajo
++
+El almacén de automatización del almacenamiento contiene paquetes de flujos de trabajo de almacenamiento automatizados y certificados de NetApp, desarrollados para su uso con OnCommand Workflow Automation (WFA). Puede descargar los paquetes e importarlos a WFA para ejecutarlos. Los flujos de trabajo automatizados están disponibles en link:https://automationstore.netapp.com["Almacén de automatización del almacenamiento"]
+
+

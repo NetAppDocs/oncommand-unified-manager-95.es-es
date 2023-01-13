@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-what-data-constituents-are.html 
+sidebar: sidebar 
+keywords:  
+summary: En un Infinite Volume, los datos se almacenan en varios componentes de datos separados. Los componentes de datos almacenan sólo los datos de un archivo, no el nombre del archivo. 
+---
+= Qué componentes de datos existen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En un Infinite Volume, los datos se almacenan en varios componentes de datos separados. Los componentes de datos almacenan solo los datos de un archivo, no el nombre del archivo.
+
+Los clientes no conocen los componentes de datos. Cuando un cliente solicita un archivo desde un Infinite Volume, el nodo recupera los datos del archivo de un componente de datos y devuelve el archivo al cliente.
+
+Cada Infinite Volume normalmente tiene docenas de componentes de datos. Por ejemplo, un Infinite Volume de 6 PB que contiene mil millones de archivos puede tener 60 componentes de datos ubicados en agregados de 6 nodos.

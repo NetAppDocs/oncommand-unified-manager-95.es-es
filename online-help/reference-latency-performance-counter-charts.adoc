@@ -1,0 +1,65 @@
+---
+permalink: online-help/reference-latency-performance-counter-charts.html 
+sidebar: sidebar 
+keywords:  
+summary: Los gráficos de contadores Performance Explorer latencia muestran el número de milisegundos necesarios para que el objeto de almacenamiento seleccionado responda a las solicitudes de la aplicación. 
+---
+= Gráficos de contadores de rendimiento de latencia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los gráficos de contadores Performance Explorer latencia muestran el número de milisegundos necesarios para que el objeto de almacenamiento seleccionado responda a las solicitudes de la aplicación.
+
+La ventana emergente que se muestra cuando el cursor se encuentra en el área del gráfico muestra los valores específicos del contador en momentos específicos.
+
+La parte inferior de la página de gráfico muestra información sobre la latencia de percentil mínimo, máximo, promedio y 95º para el intervalo de tiempo seleccionado.
+
+Hay tres tipos de gráficos de latencia disponibles:
+
+
+
+== Gráfico de contadores latency: Total counter
+
+Muestra el número de milisegundos necesarios para responder a las solicitudes de la aplicación. Los valores promedio de latencia son ponderados por I/O.
+
+
+
+== Gráfico de contadores latency: Breakdown
+
+Muestra los mismos datos de latencia separados en latencia de lectura, escritura y otra.
+
+Esta opción de gráfico se aplica cuando el objeto seleccionado es una SVM, un nodo, un agregado, un volumen o una LUN.
+
+
+
+== Latencia: Gráfico de contadores de componentes del clúster
+
+Muestra los datos de latencia por componente del clúster. Esto le permite identificar el componente del clúster responsable de la latencia. Al pasar el cursor por encima del gráfico, puede ver la contribución exacta de latencia de cada componente.
+
+Esta opción de gráfico se aplica cuando el objeto seleccionado es una SVM, un nodo, un agregado, un volumen o una LUN.
+
+
+
+== *Botón Zoom View*
+
+Muestra una vista ampliada de los datos del gráfico de contadores.
+
+* Eventos
++
+La aparición de eventos críticos, de advertencia e informativos se indica en las líneas de tiempo sobre los gráficos.
+
+* Umbrales
++
+La línea horizontal discontinua indica el valor del umbral de advertencia de uso establecido en Unified Manager.
+
++
+La línea de color rojo fijo indica el valor del umbral crítico de utilización configurado en Unified Manager.
+
+* Contadores
++
+Los contadores del panel izquierdo muestran los valores de contador que se están mostrando. Anular la selección o selección de image:../media/eye-icon.gif[""] que está asociado con un contador se oculta y muestra esa información del contador del gráfico y puede ayudar al comparar la latencia del objeto.
+
+

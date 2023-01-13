@@ -1,0 +1,71 @@
+---
+permalink: online-help/reference-edit-qtree-thresholds-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar alertas para que envíen notificaciones cuando se genere un evento relacionado con la capacidad de un qtree y puede tomar medidas correctivas para el evento. Por ejemplo, para el umbral qtree Full, puede configurar una alerta para que envíe una notificación cuando la condición persiste en un período especificado. 
+---
+= Cuadro de diálogo Edit Qtree Thresholds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar alertas para que envíen notificaciones cuando se genere un evento relacionado con la capacidad de un qtree y se pueden tomar acciones correctivas para el evento. Por ejemplo, para el umbral qtree Full, puede configurar una alerta para que envíe una notificación cuando la condición persiste en un período especificado.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+El cuadro de diálogo Edit Qtree permite configurar umbrales a nivel de qtree que se aplican a los qtrees seleccionados. Cuando se configuran umbrales en el nivel qtree, tienen prioridad sobre los umbrales de grupo o los valores de umbral de nivel global.
+
+Se puede configurar la configuración del umbral para la capacidad en el nivel de qtree. Cuando se configura una acción de grupo del tipo de umbral de qtree, los valores de umbral de acción de grupo se utilizan para configuraciones que no se han configurado en el nivel de qtree. Cuando no se configura ninguna acción de grupo del tipo de umbral de qtree, las áreas del cuadro de diálogo Editar umbrales de Qtree que no se han configurado, utilice valores de umbral globales.
+
+
+
+== Área Capacity
+
+El área de capacidad permite establecer las siguientes condiciones de umbral de capacidad para qtrees:
+
+* * Espacio casi lleno*
++
+Especifica el porcentaje en el que se considera que un qtree está casi lleno. También muestra el tamaño del qtree que corresponde al valor de umbral especificado.
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+* * Espacio lleno*
++
+Especifica el porcentaje en el que un qtree se considera completo. También muestra el tamaño del qtree que corresponde al valor de umbral especificado.
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas para un qtree seleccionado:
+
+* *Restaurar valores predeterminados*
++
+Permite restaurar los valores de umbral en uno de los siguientes valores:
+
++
+** Valores de grupo, si el qtree pertenece a un grupo y ese grupo tiene un tipo de acción de umbral de qtree.
+** Valores globales, si el qtree no pertenece a ningún grupo o si pertenece a un grupo que no tiene un tipo de acción de umbral qtree.
+
+
+* *Guardar*
++
+Guarda todos los ajustes de umbral.
+
+* *Guardar y cerrar*
++
+Guarda todos los ajustes de umbral y, a continuación, cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Ignora los cambios (si los hay) en la configuración del umbral y cierra el cuadro de diálogo.
+
+

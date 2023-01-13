@@ -1,0 +1,49 @@
+---
+permalink: online-help/task-customizing-the-storage-summary-report-to-view-capacity-by-cluster-models.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe Storage Summary para analizar la capacidad de almacenamiento y la utilización de los clústeres, y para ver los agregados incluidos en la capacidad bruta total. 
+---
+= Personalización del informe Storage Summary para ver la capacidad por modelos de clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe Storage Summary para analizar la capacidad de almacenamiento y la utilización de los clústeres, y para ver los agregados incluidos en la capacidad bruta total.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster, realice los siguientes pasos:
++
+.. Haga clic en la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para agrupar el informe por el nombre del modelo, realice los siguientes pasos:
++
+.. Haga clic en la columna *Modelo* y haga clic en image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Agregar grupo*.
+
+
+. Para añadir agregados a la capacidad bruta total, realice los siguientes pasos:
++
+.. Haga clic en la columna *capacidad bruta total* y haga clic en image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Agregación*.
+.. En el cuadro de diálogo *Agregación*, desactive la casilla de verificación *nivel de tabla* y active la casilla de verificación *nivel de grupo*.
+.. Introduzca un nombre de etiqueta en el campo *introducir etiqueta*, si es necesario.
+
+
+. Haga clic en *Aceptar*.
+. Para agregar agregados a las otras columnas del informe, repita los pasos 3 y 4.
+

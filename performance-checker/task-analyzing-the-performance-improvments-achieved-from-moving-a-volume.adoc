@@ -1,0 +1,63 @@
+---
+permalink: performance-checker/task-analyzing-the-performance-improvments-achieved-from-moving-a-volume.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede utilizar Unified Manager para investigar el impacto de una operación de movimiento de volúmenes en la latencia \(tiempo de respuesta\) de otros volúmenes del clúster. Mover un volumen de alto rendimiento a un agregado menos ocupado o a un agregado con almacenamiento flash habilitado permite que el volumen tenga un rendimiento más eficiente.' 
+---
+= Analizar las mejoras de rendimiento obtenidas para mover un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar Unified Manager para investigar el impacto de una operación de movimiento de volúmenes en la latencia (tiempo de respuesta) de otros volúmenes en el clúster. Mover un volumen de alto rendimiento a un agregado menos ocupado o a un agregado con almacenamiento flash habilitado permite que el volumen tenga un rendimiento más eficiente.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber identificado el nombre del volumen, o el LUN asociado, que desea analizar.
+* Unified Manager debe haber recopilado y analizado siete días de datos.
+
+
+
+
+== Acerca de esta tarea
+
+Unified Manager identifica el momento en el que un volumen se mueve entre agregados. Es posible detectar cuando se produce un movimiento de volumen, se completa o con errores. En la página Performance/Volume Details, se muestra un icono de evento de cambio para cada estado del movimiento de volúmenes, lo cual ayuda a realizar un seguimiento cuando se produjo una operación de movimiento y le ayuda a determinar si podría haber contribuido a un evento de rendimiento.
+
+Si desea ver la página de detalles Event, puede hacer clic en el nombre de un volumen para ir directamente a la página Performance/Volume Details.
+
+
+
+== Pasos
+
+. En la barra *Buscar*, escriba el nombre del volumen.
+. Haga clic en el nombre del volumen.
++
+El volumen se muestra en la página Performance/Volume Details.
+
+. En el gráfico *datos históricos*, ajuste los controles deslizantes para mostrar la actividad de la semana laboral anterior.
+. Analice el gráfico *latencia* y el gráfico *IOPS* para ver cómo se ha realizado el volumen en los últimos días.
++
+Supongamos que se observa un patrón coherente de tiempos de respuesta medios muy altos de más de 42 milisegundos por operación (ms/op), con eventos de rendimiento, cada día de la semana y decide mover el volumen a un agregado de menor actividad para mejorar el rendimiento. Mediante System Manager de OnCommand, puede mover el volumen a un agregado con Flash Pool habilitado para aumentar el rendimiento. Aproximadamente una hora después de completar el movimiento de volumen, puede volver a Unified Manager para confirmar que la operación de movimiento se ha completado correctamente y que la latencia ha mejorado.
+
+. Si no se muestra la página *Detalles de rendimiento/volumen*, busque el volumen que desea ver.
+. En el gráfico *datos históricos*, haga clic en *1d* para ver la actividad desde el último día, unas horas desde que se completó el movimiento de volumen.
++
+En la parte inferior de la página, en la línea tiempo Eventos, un icono de evento de cambio (image:../media/opm-change-icon.gif["Icono de cambio de evento"]) se muestra para indicar la hora en que se completó la operación de movimiento de volúmenes. También se muestra una línea vertical negra desde el icono de evento de cambio hasta el gráfico latencia.
+
+. Sitúe el cursor en el icono de cambio de evento para ver los detalles del evento en la *Lista de eventos*.
++
+Debido a que el volumen se trasladó a un agregado con Flash Pool habilitado, puede ver el cambio en las operaciones de I/o de lectura y escritura en la caché.
+
+. En el menú *Break down data by*, en *Mbps*, seleccione *Cache Hit ratio*.
++
+El gráfico de proporción de aciertos en caché muestra estadísticas acerca de las lecturas y escrituras en la caché.
+
++
+El volumen se trasladó correctamente a un agregado menos ocupado y el evento de cambio se resalta en la lista de eventos de la derecha. La latencia media se redujo de forma significativa de más de 42 ms/op a alrededor de 24 ms/op. La latencia actual es de aproximadamente 1.5 ms/op. En el gráfico ratio de aciertos en caché, la cantidad de aciertos en lectura y escritura en caché se encuentra ahora en un 100 % debido a que el volumen ahora se encuentra en un agregado con Flash Pool habilitado.
+
+

@@ -1,0 +1,30 @@
+---
+permalink: online-help/task-viewing-svm-associations.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible usar la página Protection/Storage Virtual Machine Associations para ver las asociaciones de SVM existentes y sus propiedades, y para determinar si se requieren asociaciones de SVM adicionales. 
+---
+= Ver asociaciones de SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible usar la página Protection/Storage Virtual Machine Associations para ver las asociaciones de SVM existentes y sus propiedades, y para determinar si se requieren asociaciones de SVM adicionales.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Protección* > *Asociaciones de SVM*.
++
+Se muestra la lista de asociaciones de SVM y sus propiedades.
+
+

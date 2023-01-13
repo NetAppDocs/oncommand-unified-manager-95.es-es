@@ -1,0 +1,104 @@
+---
+permalink: online-help/reference-workload-performance-measurement-values.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager mide el rendimiento de las cargas de trabajo en un clúster en función de los valores estadísticos históricos y esperados, lo que forma el rango esperado de valores de las cargas de trabajo. Compara los valores estadísticos de la carga de trabajo real con el rango esperado para determinar cuándo el rendimiento de la carga de trabajo es demasiado alto o demasiado bajo. Una carga de trabajo que no se ejecuta según lo esperado activa un informe de eventos de rendimiento para notificarle. 
+---
+= Valores de medición del rendimiento de la carga de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager mide el rendimiento de las cargas de trabajo en un clúster en función de los valores estadísticos históricos y esperados, lo que forma el rango esperado de valores de las cargas de trabajo. Compara los valores estadísticos de la carga de trabajo real con el rango esperado para determinar cuándo el rendimiento de la carga de trabajo es demasiado alto o demasiado bajo. Una carga de trabajo que no se ejecuta según lo esperado activa un informe de eventos de rendimiento para notificarle.
+
+En la siguiente ilustración, el valor real, en rojo, representa las estadísticas de rendimiento reales en el plazo. El valor real ha superado el umbral de rendimiento, que es el límite superior del rango esperado. El pico es el valor real más alto del lapso. La desviación mide el cambio entre los valores esperados y los valores reales, mientras que la desviación máxima indica el mayor cambio entre los valores esperados y los valores reales.
+
+image::../media/opm-wrkld-perf-measurement-png.gif[Mediciones de rendimiento de cargas de trabajo de Performance Manager]
+
+En la siguiente tabla, se enumeran los valores de medición del rendimiento de la carga de trabajo.
+
+|===
+| Medida | Descripción 
+
+
+ a| 
+Actividad
+ a| 
+El porcentaje del límite de calidad de servicio que utilizan las cargas de trabajo del grupo de políticas.
+
+[NOTE]
+====
+Si Unified Manager detecta un cambio en un grupo de políticas, como añadir o quitar un volumen o cambiar el límite de calidad de servicio, los valores reales y esperados pueden superar el 100 % del límite establecido. Si un valor supera el 100% del límite establecido, se muestra como >100%. Si un valor es inferior al 1% del límite establecido, se muestra como <1%.
+
+====
+
+
+ a| 
+Real
+ a| 
+El valor de rendimiento medido en un momento específico para una carga de trabajo determinada.
+
+
+
+ a| 
+Desviación
+ a| 
+El cambio entre los valores esperados y los valores reales. Es la relación entre el valor real menos el valor esperado y el valor superior del rango esperado menos el valor esperado.
+
+[NOTE]
+====
+Un valor de desviación negativo indica que el rendimiento de la carga de trabajo es menor de lo esperado, mientras que un valor positivo indica que el rendimiento de la carga de trabajo es mayor de lo esperado. Si los valores esperados y el valor real son muy bajos, por ejemplo de una centésima o milésima de un porcentaje, la desviación se mostrará como N/A.
+
+====
+
+
+ a| 
+Esperado
+ a| 
+Los valores esperados se basan en el análisis de los datos de rendimiento históricos de una carga de trabajo determinada. Unified Manager analiza estos valores estadísticos para determinar el rango esperado de valores.
+
+
+
+ a| 
+Rango esperado
+ a| 
+El rango esperado de valores es una predicción de los valores de rendimiento superior e inferior esperados en un momento determinado. Para la latencia de la carga de trabajo, los valores superiores forman el umbral de rendimiento. Cuando el valor real supera el umbral de rendimiento, Unified Manager activa una alerta de evento de rendimiento.
+
+
+
+ a| 
+Pico
+ a| 
+Valor máximo medido a lo largo de un período de tiempo.
+
+
+
+ a| 
+Desviación máxima
+ a| 
+El valor máximo de desviación medido a lo largo de un período de tiempo.
+
+
+
+ a| 
+Profundidad de cola
+ a| 
+El número de solicitudes de I/o pendientes que están esperando en el componente de interconexión.
+
+
+
+ a| 
+Utilización
+ a| 
+Para los componentes de procesamiento de red, procesamiento de datos y agregado, el porcentaje de tiempo ocupado para completar las operaciones de carga de trabajo durante un período de tiempo. Por ejemplo, el porcentaje de tiempo durante el procesamiento de la red o los componentes de procesamiento de datos para procesar una solicitud de I/o o o para que un agregado cumpla una solicitud de lectura o escritura.
+
+
+
+ a| 
+Rendimiento de escritura
+ a| 
+La cantidad de rendimiento de escritura, en megabytes por segundo (Mbps), desde cargas de trabajo en un clúster local hasta el clúster asociado en una configuración MetroCluster.
+
+|===

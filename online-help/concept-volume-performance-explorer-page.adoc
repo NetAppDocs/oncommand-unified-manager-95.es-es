@@ -1,0 +1,60 @@
+---
+permalink: online-help/concept-volume-performance-explorer-page.html 
+sidebar: sidebar 
+keywords:  
+summary: En esta página, se proporciona información detallada del rendimiento de un volumen de un clúster. El título de esta página depende de si va a ver un volumen de FlexVol o de FlexGroup. 
+---
+= La página Performance/Volume o Performance/FlexGroup Explorer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En esta página, se proporciona información detallada del rendimiento de un volumen de un clúster. El título de esta página depende de si va a ver un volumen de FlexVol o de FlexGroup.
+
+La página Volume o FlexGroup Explorer le permite realizar un seguimiento y comparar el rendimiento del volumen durante un periodo de tiempo específico, lo que le ayuda a resolver problemas y a ajustar el rendimiento del volumen.
+
+[NOTE]
+====
+Los volúmenes raíz no se muestran en esta página.
+
+====
+Uso de la funcionalidad Ver y Comparar:
+
+* Para volúmenes de FlexVol, es posible comparar el rendimiento de este volumen con:
++
+** otros volúmenes en el mismo agregado
+** el agregado en el que reside este volumen
+** La SVM donde reside este volumen
+** Las LUN que están en este volumen
+
+
+* En el caso de volúmenes FlexGroup, es posible comparar el rendimiento de este FlexGroup con:
++
+** Los agregados en los que reside la FlexGroup
+** La SVM en la que reside el FlexGroup
+** Los volúmenes constituyentes del FlexGroup
+
+
+
+
+Las estadísticas de los gráficos se actualizan después de cada período de recopilación, que por defecto es cada 5 minutos. El selector Ver estadísticas ofrece una opción para mostrar estadísticas promediadas en la hora anterior. Esta funcionalidad le permite ver el gráfico de latencia al servicio del programa «'Garantía de rendimiento» de NetApp.
+
+La página Performance/Volume Explorer o Performance/FlexGroup le permite:
+
+* Ver los problemas relacionados con los umbrales y sus detalles
+* Realice un seguimiento y compare los datos de rendimiento de los volúmenes
+* Investigar y solucionar problemas relacionados con los umbrales
+* Investigue y solucione problemas de rendimiento
+* Inicie System Manager para realizar un cambio de configuración en el volumen
++
+El botón *Configurar volumen* está disponible si ha iniciado sesión en Unified Manager con la función Administrador de OnCommand o Administrador de almacenamiento y si utiliza ONTAP 9.5 o superior.
+
+
+
+[NOTE]
+====
+Para los volúmenes de protección de datos (DP), solo se muestran los valores de contador del tráfico generado por el usuario. Cuando el clúster se instala con una versión de ONTAP anterior a la 8.3, no se muestran valores de contador.
+
+====

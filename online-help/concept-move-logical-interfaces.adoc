@@ -1,0 +1,43 @@
+---
+permalink: online-help/concept-move-logical-interfaces.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Mover las interfaces lógicas \(LIF\) a un puerto menos ocupado puede ayudar a mejorar el equilibrio de carga, ayudar con las operaciones de mantenimiento y el ajuste del rendimiento, así como a reducir el acceso indirecto.' 
+---
+= Mover interfaces lógicas (LIF)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mover las interfaces lógicas (LIF) a un puerto menos ocupado puede ayudar a mejorar el equilibrio de carga, ayudar con las operaciones de mantenimiento y el ajuste del rendimiento, y reducir el acceso indirecto.
+
+El acceso indirecto puede reducir la eficiencia del sistema. Se produce cuando una carga de trabajo de un volumen utiliza diferentes nodos para el procesamiento de red y el procesamiento de datos. Para reducir el acceso indirecto, puede reorganizar las LIF, lo que implica mover las LIF para utilizar el mismo nodo para el procesamiento de la red y el procesamiento de datos. Puede configurar el equilibrio de carga para que ONTAP mueva automáticamente los LIF ocupados a un puerto diferente o puede mover una LIF manualmente.
+
+|===
+| *Beneficios* 
+
+
+ a| 
+* Mejore el equilibrio de carga.
+* Reduzca el acceso indirecto.
+
+
+
+
+ a| 
+*Consideraciones*
+
+
+
+ a| 
+[NOTE]
+====
+Al mover una LIF conectada a recursos compartidos CIFS, los clientes que acceden a los recursos compartidos CIFS están desconectados. Cualquier solicitud de lectura o escritura a los recursos compartidos CIFS se interrumpe.
+
+====
+|===
+Es posible utilizar los comandos de la ONTAP para configurar el equilibrio de carga. Para obtener más información, consulte la documentación de redes de ONTAP.
+
+Utilice System Manager de OnCommand y los comandos de la CLI de ONTAP para mover las LIF manualmente.

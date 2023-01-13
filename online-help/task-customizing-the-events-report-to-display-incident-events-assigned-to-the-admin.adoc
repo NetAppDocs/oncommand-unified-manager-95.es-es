@@ -1,0 +1,34 @@
+---
+permalink: online-help/task-customizing-the-events-report-to-display-incident-events-assigned-to-the-admin.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe Events para mostrar los eventos de incidentes asignados al administrador, filtrados por el nivel de impacto y el nombre de administrador. 
+---
+= Personalización del informe Eventos para mostrar los eventos de incidencias asignados al administrador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe Events para mostrar los eventos de incidentes asignados al administrador, filtrados por el nivel de impacto y el nombre de administrador.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para filtrar eventos de incidentes, haga clic en la columna *nivel de impacto* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *incidente*.
+. Haga clic en *Aceptar*.
+. Para asignar estas incidencias al administrador, haga clic en la columna *asignado a* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista desplegable *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *Nombre de administrador*.
+. Haga clic en *Aceptar*.
+

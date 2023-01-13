@@ -1,0 +1,16 @@
+---
+permalink: online-help/concept-understanding-the-user-interface.html 
+sidebar: sidebar 
+keywords:  
+summary: La interfaz de usuario de Unified Manager se compone principalmente de un panel que ofrece una vista general de los objetos supervisados. La interfaz de usuario también proporciona acceso a la visualización de todos los objetos del clúster. 
+---
+= La interfaz de usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La interfaz de usuario de Unified Manager se compone principalmente de un panel que ofrece una vista general de los objetos supervisados. La interfaz de usuario también proporciona acceso a la visualización de todos los objetos del clúster.
+
+Puede seleccionar una vista preferida y utilizar los botones de acción según sea necesario. La configuración de pantallas se guarda en un espacio de trabajo, de modo que todas las funcionalidades necesarias se encuentren disponibles al iniciar Unified Manager. Sin embargo, es posible que cuando se navega desde una vista a otra y se navega hacia atrás, la vista no sea la misma.

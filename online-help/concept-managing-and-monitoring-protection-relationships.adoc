@@ -1,0 +1,28 @@
+---
+permalink: online-help/concept-managing-and-monitoring-protection-relationships.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Unified Manager permite crear relaciones de protección, supervisar y solucionar problemas de relaciones de SnapMirror y SnapVault en clústeres gestionados, así como restaurar datos cuando se sobrescriben o se pierden. 
+---
+= Gestión y supervisión de relaciones de protección
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Unified Manager permite crear relaciones de protección, supervisar y solucionar problemas de relaciones de SnapMirror y SnapVault en clústeres gestionados, así como restaurar datos cuando se sobrescriben o se pierden.
+
+Para las operaciones de SnapMirror, existen dos tipos de replicación:
+
+* Asíncrona
++
+La replicación del volumen primario al secundario se determina mediante una programación.
+
+* Síncrona
++
+La replicación se realiza de forma simultánea en el volumen primario y secundario.
+
+
+
+Se pueden ejecutar hasta 10 tareas de protección simultáneamente sin que el rendimiento se vea afectado. Es posible que experimente algún impacto en el rendimiento cuando se ejecutan entre 11 y 30 trabajos al mismo tiempo. No se recomienda ejecutar más de 30 trabajos simultáneamente.

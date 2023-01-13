@@ -1,0 +1,50 @@
+---
+permalink: online-help/task-creating-custom-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: En función de los requisitos de su centro de datos, puede crear reglas personalizadas y añadirlas a una política de datos para determinar la ubicación de los datos que se escriben en la SVM con Infinite Volume. Puede crear reglas personalizadas desde el cuadro de diálogo Crear regla sin utilizar ninguna plantilla existente. 
+---
+= Crear reglas personalizadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En función de los requisitos de su centro de datos, puede crear reglas personalizadas y añadirlas a una política de datos para determinar la ubicación de los datos que se escriben en la SVM con Infinite Volume. Puede crear reglas personalizadas desde el cuadro de diálogo Crear regla sin utilizar ninguna plantilla existente.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* El clúster que contiene la SVM con Infinite Volume con clases de almacenamiento debe añadirse a la base de datos de Unified Manager.
+
+
+
+
+== Acerca de esta tarea
+
+La pestaña Data Policy solo puede verse para una SVM con Infinite Volume.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione la SVM adecuada.
+. Haga clic en *Política de datos*.
+. Haga clic en *Crear*.
+. En el cuadro de diálogo *Crear regla*, seleccione *Regla personalizada* en la lista *plantilla*.
+. En el área *criterios coincidentes*, agregue las condiciones necesarias.
++
+Las condiciones permiten crear una regla basada en tipos de archivo, rutas de acceso a directorios o propietarios. Una combinación de estas condiciones son los conjuntos de condiciones. Por ejemplo, puede tener una regla: «Colocar todos los .mp3 propiedad de John en la clase de almacenamiento bronce».
+
+. Seleccione una clase de almacenamiento adecuada en la lista desplegable *Coloque el contenido coincidente en Storage Class*.
+. Haga clic en *Crear*.
++
+La regla recién creada se muestra en la pestaña Política de datos.
+
+. Obtenga una vista previa de los demás cambios realizados en la directiva de datos.
+. Haga clic en *Activar* para activar los cambios en las propiedades de la regla en la SVM.
+

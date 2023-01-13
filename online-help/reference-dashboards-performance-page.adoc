@@ -1,0 +1,121 @@
+---
+permalink: online-help/reference-dashboards-performance-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible usar la consola de rendimiento de Unified Manager para ver el estado de rendimiento de alto nivel de todos los clústeres que se están supervisando. La página Dashboards/Performance también muestra un mensaje de banner cuando Unified Manager no puede comunicarse con un clúster que está supervisando. 
+---
+= Página Dashboards/Performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible usar la consola de rendimiento de Unified Manager para ver el estado de rendimiento de alto nivel de todos los clústeres que se están supervisando. La página Dashboards/Performance también muestra un mensaje de banner cuando Unified Manager no puede comunicarse con un clúster que está supervisando.
+
+
+
+== Descripción general
+
+Los clústeres se ordenan en función de la gravedad según los criterios siguientes:
+
+. Si no se puede acceder a un clúster.
+. Si un clúster tiene uno o más eventos de rendimiento críticos activos (icono de objeto rojo).
+. Si un clúster tiene uno o más eventos de rendimiento de advertencia activos (icono de objeto amarillo).
+. Si los clústeres no tienen eventos de rendimiento activos (icono de objeto verde): Los clústeres se ordenan por IOPS más altas.
+
+
+Los eventos críticos se generan cuando se supera un límite crítico de una política de umbral de rendimiento definida por el usuario. Los eventos de advertencia se envían cuando se supera un límite de advertencia de una política de umbral de rendimiento definida por el usuario o cuando se supera una política de umbral o un umbral dinámico definidos por el sistema.
+
+[NOTE]
+====
+El orden de clasificación está determinado por el número total de eventos activos (nuevos o reconocidos), no por el número de objetos que tienen eventos. Por ejemplo, si el clúster A tiene siete eventos de latencia de volumen críticos, Además, el clúster B tiene dos eventos de latencia de volúmenes críticos y dos eventos de IOPS de nodos críticos (para un total de cuatro eventos críticos), el clúster A (con un icono de objeto rojo) aparecerá más arriba en la lista, aunque el clúster B tenga dos iconos de objetos rojos.
+
+====
+Se muestran los siguientes tipos de eventos supervisados más comunes para cada clúster:
+
+* Eventos de latencia para máquinas virtuales de almacenamiento (SVM), volúmenes y LUN
+* Eventos de IOPS para nodos y SVM
+* Eventos de Mbps para nodos y SVM
+* Eventos de capacidad de rendimiento utilizados para nodos y agregados
+* Eventos de uso para nodos y agregados
+
+
+Unified Manager puede recibir eventos de rendimiento para otros objetos de almacenamiento y contadores; por ejemplo, eventos de MB/s para agregados y eventos de IOPS para volúmenes. Si un clúster tiene estos tipos de eventos, el icono junto al nombre del clúster indica un evento de advertencia (amarillo) o crítico (rojo). Este icono puede indicar que hay eventos cuando ninguno de los cinco iconos del panel de contadores es amarillo o rojo porque estos tipos de eventos no se ajustan a las categorías existentes del panel de contadores.
+
+Puede hacer clic en el icono del objeto para mostrar la página Performance Inventory de ese objeto, donde puede ver todos los objetos de ese tipo en este clúster. Por ejemplo, al hacer clic en un icono de volumen se muestra la página Performance/Volume Inventory, se muestra una lista de todos los volúmenes del clúster seleccionado, clasificados del peor al mejor rendimiento.
+
+
+
+== Contadores de rendimiento
+
+Hay cinco contadores de rendimiento, cada uno de ellos en un panel independiente, para cada clúster. Esta información se actualiza automáticamente después de cada período de recopilación de cinco minutos:
+
+|===
+| Contador | Descripción 
+
+
+ a| 
+Latencia
+ a| 
+Muestra la rapidez con la que el clúster responde a las solicitudes de aplicaciones cliente, en milisegundos por operación (ms/op).the Icon Area indica si alguna SVM, volumen o LUN tiene eventos activos según el valor de latencia que pasa por una configuración de umbral.
+
+
+
+ a| 
+IOPS
+ a| 
+Muestra la velocidad operativa del sistema de almacenamiento, en número de operaciones de entrada/salida por segundo (IOPS).
+
+* El área de iconos indica si alguno de los nodos o SVM tiene eventos activos según el número de IOPS que cruzan un umbral configurado.
+* El área inferior muestra la cantidad total de IOPS del clúster para el último período de recogida de cinco minutos.
+
+
+
+
+ a| 
+Mbps
+ a| 
+Muestra la cantidad de datos que se transfieren al clúster y desde él, en megabytes por segundo (Mbps).
+
+* El área de iconos indica si alguno de los nodos o SVM tiene eventos activos según el valor de Mbps que cruza un umbral configurado.
+* El área inferior muestra el rendimiento total del clúster para el último período de recogida de cinco minutos.
+
+
+
+
+ a| 
+Capacidad de rendimiento utilizada
+ a| 
+Muestra si algún nodo o agregado está aprovechando al máximo su capacidad de rendimiento disponible.
+
+* El área con el icono indica si alguno de los nodos o agregados tienen eventos activos según la capacidad de rendimiento utilizada que cruza un valor de umbral.
+* La zona inferior muestra el valor de capacidad de rendimiento más alto utilizado del nodo más activo y del agregado más activo.
+
+
+[NOTE]
+====
+Los datos de capacidad de rendimiento solo están disponibles cuando los nodos de un clúster se han instalado con el software ONTAP 9.0 o una versión posterior.
+
+====
+
+
+ a| 
+Utilización
+ a| 
+Muestra si se están utilizando en exceso los recursos de cualquier nodo o agregado.
+
+* El área de iconos indica si alguno de los nodos o agregados tiene eventos activos en función del valor de utilización que cruza un valor de umbral.
+* El área inferior muestra el valor de utilización más alto del nodo más activo y el agregado más activo.
+
+
+|===
+Puntos suspensivos (...) en el área de encabezado indica que los datos de rendimiento se están recopilando actualmente.
+
+Puede hacer clic en *Ver detalles del clúster* para ver un clúster que tiene eventos de rendimiento para mostrar la página de destino del clúster de rendimiento, donde puede ver información detallada del rendimiento sobre el clúster y otros objetos de almacenamiento.
+
+
+
+== Mensajes de estado del clúster
+
+Si un clúster gestionado por Unified Manager deja de estar disponible, se muestra un banner con un mensaje de estado encima de los contadores de rendimiento. Si no se puede acceder al clúster, se muestra un botón *Detalles* a la derecha del banner del mensaje de estado. Al hacer clic en el botón *Detalles* del mensaje de estado, puede ir a la página orígenes de datos del clúster, que muestra información completa sobre el problema. En la página Cluster Data Sources, puede encontrar los datos necesarios para solucionar el problema que ha hecho que el clúster no esté disponible.

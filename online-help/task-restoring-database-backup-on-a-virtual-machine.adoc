@@ -1,0 +1,63 @@
+---
+permalink: online-help/task-restoring-database-backup-on-a-virtual-machine.html 
+sidebar: sidebar 
+keywords:  
+summary: En caso de pérdida de datos o corrupción de datos, es posible usar la función de restauración para restaurar Unified Manager al estado estable anterior con una pérdida mínima. Puede restaurar la base de datos de Unified Manager en una máquina virtual mediante la consola de mantenimiento de Unified Manager. 
+---
+= Restaurar un backup de base de datos en una máquina virtual
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En caso de pérdida de datos o corrupción de datos, es posible usar la función de restauración para restaurar Unified Manager al estado estable anterior con una pérdida mínima. Puede restaurar la base de datos de Unified Manager en una máquina virtual mediante la consola de mantenimiento de Unified Manager.
+
+
+
+== Antes de empezar
+
+* Debe tener las credenciales de usuario de mantenimiento.
+* Los archivos de backup de Unified Manager deben estar en el sistema local.
+* Los archivos de copia de seguridad deben ser de `.7z` tipo.
+
+
+
+
+== Acerca de esta tarea
+
+La compatibilidad de la copia de seguridad depende de la plataforma y de la versión. Puede restaurar un backup desde un dispositivo virtual a otro dispositivo virtual, o desde un dispositivo virtual a un sistema Red Hat Enterprise Linux o CentOS.
+
+[NOTE]
+====
+Al realizar una operación de restauración en un dispositivo virtual diferente al sistema desde el que se creó el archivo de copia de seguridad original, el nombre de usuario y la contraseña de mantenimiento en el nuevo vApp deben ser iguales a las credenciales de vApp original.
+
+====
+
+
+== Pasos
+
+. En el cliente vSphere, busque la máquina virtual de Unified Manager y, a continuación, seleccione la pestaña *Console*.
+. Haga clic en en la ventana de la consola y, a continuación, inicie sesión en la consola de mantenimiento con su nombre de usuario y contraseña.
+. En *Menú principal*, introduzca el número de la opción *Configuración del sistema*.
+. En *Menú de configuración del sistema*, introduzca el número de la opción *Restaurar desde una copia de seguridad de OCUM*.
+. Cuando se le solicite, introduzca la ruta absoluta del archivo de copia de seguridad.
++
+[listing]
+----
+Bundle to restore from: opt/netapp/data/ocum-backup/UM_9.4.N151112.0947_backup_unix_02-25-2018-11-41.7z
+----
++
+Una vez finalizada la operación de restauración, puede iniciar sesión en Unified Manager.
+
+
+
+
+
+== Después de terminar
+
+Después de restaurar el backup, si el servidor OnCommand Workflow Automation no funciona, realice los siguientes pasos:
+
+. En el servidor de Workflow Automation, cambie la dirección IP del servidor de Unified Manager para que apunte a la máquina más reciente.
+. En el servidor de Unified Manager, restablezca la contraseña de la base de datos si se produce un error en la adquisición en el paso 1.
+

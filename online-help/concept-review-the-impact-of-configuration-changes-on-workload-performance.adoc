@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-review-the-impact-of-configuration-changes-on-workload-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Los cambios de configuración en el clúster, como un disco con fallos, conmutación de alta disponibilidad o un volumen movido, pueden afectar de forma negativa al rendimiento del volumen y provocar un aumento de la latencia. 
+---
+= Revise el impacto de los cambios de configuración en el rendimiento de la carga de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los cambios de configuración en el clúster, como un disco con fallos, conmutación de alta disponibilidad o un volumen movido, pueden afectar de forma negativa al rendimiento del volumen y provocar un aumento de la latencia.
+
+En Unified Manager, se puede revisar la página Performance/Volume Details para ver cuándo se produjo un cambio de configuración reciente y compararlo con las operaciones y la latencia (tiempo de respuesta) para ver si hubo un cambio en la actividad de la carga de trabajo de volumen seleccionada.
+
+Las páginas de rendimiento de Unified Manager solo pueden detectar un número limitado de eventos de cambio. Las páginas de estado proporcionan alertas de otros eventos provocados por cambios de configuración. Se puede buscar el volumen en Unified Manager para ver el historial de eventos.

@@ -1,0 +1,36 @@
+---
+permalink: online-help/task-customizing-the-volume-transfer-status-report-to-view-volumes-grouped-by-time-of-occurrence.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede personalizar el informe de estado de transferencia de volumen \(Historical\) para mostrar la lista de volúmenes agrupados por hora de ocurrencia entre dos fechas.' 
+---
+= Personalización del informe Volume Transfer Status (Historical) para ver los volúmenes agrupados por hora de ocurrencia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar el informe Volume Transfer Status (Historical) para mostrar la lista de volúmenes agrupados por hora de ocurrencia entre dos fechas.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Quitar agrupación por clúster:
++
+.. En la columna que debe desagruparse, haga clic en image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. En la columna *Hora de inicio*, abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista desplegable *condición*, seleccione *entre*.
+. Haga clic en *Seleccionar valores* y elija los valores *Fecha desde* y *Fecha hasta*.
+. Haga clic en *Aceptar*.
+

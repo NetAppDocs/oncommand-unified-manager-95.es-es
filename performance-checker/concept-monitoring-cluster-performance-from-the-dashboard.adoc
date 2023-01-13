@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept-monitoring-cluster-performance-from-the-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: La consola de rendimiento de System Manager de OnCommand muestra el estado de alto rendimiento de todos los clústeres que supervisa esta instancia de Unified Manager. Le permite evaluar el rendimiento general de los clústeres gestionados y anotar, localizar o asignar rápidamente para solucionar cualquier evento específico identificado. 
+---
+= Supervisar el rendimiento del clúster desde la consola de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La consola de rendimiento de System Manager de OnCommand muestra el estado de alto rendimiento de todos los clústeres que supervisa esta instancia de Unified Manager. Le permite evaluar el rendimiento general de los clústeres gestionados y anotar, localizar o asignar rápidamente para solucionar cualquier evento específico identificado.

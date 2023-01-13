@@ -1,0 +1,37 @@
+---
+permalink: online-help/concept-understanding-the-cluster-view-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La consola de descripción general de Unified Manager Cluster View proporciona información de alto nivel sobre el estado de los clústeres que se gestionan. El panel de vista de clúster consta de dos secciones principales: Managed Clusters \(on the left\) y Cluster Details \(on the right\).' 
+---
+= Consola de vista de clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La consola de descripción general de Unified Manager Cluster View proporciona información de alto nivel sobre el estado de los clústeres que se gestionan. La consola Cluster View consta de dos secciones principales: Managed Clusters (a la izquierda) y Cluster Details (a la derecha).
+
+En la siguiente imagen, se muestra un ejemplo de una consola de Unified Manager Cluster View que está supervisando ocho clústeres:
+
+image::../media/dashboard-clusterview-um.gif[panel clusterview um]
+
+El icono de estado junto a cada nombre de clúster puede tener los siguientes estados:
+
+* Crítico (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]): Se notificaron uno o más eventos críticos activos para el clúster.
+* Error (image:../media/sev-error-um60.png["Icono para la gravedad del evento: Error"]): Se han notificado uno o más eventos de error activos para el clúster.
+* Advertencia (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]): Se notificaron uno o más eventos de advertencia activos para el clúster.
+* Normal (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]): No se notificó ningún evento activo para el clúster.
+
+
+[NOTE]
+====
+El color indica si existen eventos activos (nuevos o reconocidos) para el objeto. Los eventos que ya no están activos, denominados eventos obsoletos, no afectan al color del icono.
+
+====
+Para ver información adicional sobre un clúster, puede realizar una de las siguientes acciones:
+
+* Puede hacer clic en el nombre de un clúster para mostrar información general sobre el estado de supervisión, el estado de la capacidad y el estado de rendimiento del clúster.
+* Puede hacer clic en *Administrar clústeres* para mostrar la página orígenes de datos de configuración/clúster, donde puede ver información detallada del estado de todos los clústeres que gestiona esta instancia de Unified Manager.
+

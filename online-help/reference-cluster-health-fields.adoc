@@ -1,0 +1,84 @@
+---
+permalink: online-help/reference-cluster-health-fields.html 
+sidebar: sidebar 
+keywords:  
+summary: El informe de inventario de clúster proporciona información sobre los recursos disponibles para los componentes del clúster con el fin de comprender los posibles riesgos provocados por los recursos insuficientes. 
+---
+= Informe Cluster Inventory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El informe de inventario de clúster proporciona información sobre los recursos disponibles para los componentes del clúster con el fin de comprender los posibles riesgos provocados por los recursos insuficientes.
+
+
+
+== Vista tabular del informe Cluster Inventory
+
+* *Cluster*
++
+Muestra el nombre del clúster.
+
+* *Par de alta disponibilidad*
++
+Muestra el valor de par de alta disponibilidad obtenido mediante la formación de dos nodos.
+
+* *Nodo*
++
+Muestra el nombre de los nodos.
+
+* *Modelo*
++
+Muestra el nombre del modelo.
+
+* *Versión del SO*
++
+Muestra la versión de ONTAP utilizada.
+
+* *Optimizado para All Flash*
++
+Muestra si el nodo está configurado para admitir solo unidades de estado sólido (SSD).
+
+* *Número de serie*
++
+Muestra el número de serie del nodo.
+
+* *Versión del firmware*
++
+Muestra la versión de firmware del nodo.
+
+* * Cuenta de SVM*
++
+Muestra el número de SVM que contiene el clúster.
+
+* *Número de puertos FC*
++
+Muestra el número de puertos FC que contiene el nodo.
+
+* *Número de puertos FCoE*
++
+Muestra el número de puertos FCoE que contiene el nodo.
+
+* *Número de puertos Ethernet*
++
+Muestra el número de puertos ethernet que contiene el nodo.
+
+* *Número de tarjetas Flash*
++
+Muestra el número de tarjetas flash instaladas en los nodos del centro de datos para que pueda supervisar los posibles problemas.
+
+* *Tamaño de la tarjeta Flash (GB)*
++
+Muestra el tamaño de las tarjetas flash instaladas en los nodos.
+
+* *Número de bandejas de discos*
++
+Muestra la cantidad de bandejas de discos que contiene el nodo.
+
+* *Número de discos*
++
+Muestra el número de discos de un nodo.
+
+

@@ -1,0 +1,35 @@
+---
+permalink: online-help/task-using-the-unified-manager-help.html 
+sidebar: sidebar 
+keywords:  
+summary: La ayuda incluye información sobre todas las funciones incluidas en Unified Manager de OnCommand. Puede utilizar la tabla de contenido, el índice o la herramienta de búsqueda para buscar información acerca de las funciones y cómo utilizarlas. 
+---
+= Uso de la ayuda de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ayuda incluye información sobre todas las funciones incluidas en Unified Manager de OnCommand. Puede utilizar la tabla de contenido, el índice o la herramienta de búsqueda para buscar información acerca de las funciones y cómo utilizarlas.
+
+
+
+== Acerca de esta tarea
+
+La ayuda se encuentra disponible en cada pestaña y en la barra de menú de la interfaz de usuario de Unified Manager.
+
+La herramienta de búsqueda de la Ayuda no funciona para palabras parciales.
+
+
+
+== Opciones
+
+* Para obtener información acerca de campos o parámetros específicos, haga clic en image:../media/helpicon-um60.gif["Icono para la ayuda contextual"].
+* Para ver todo el contenido de la Ayuda, haga clic en *image:../media/helpicon-um60.gif["Icono para la ayuda contextual"]* > *Ayuda/Documentación* en la barra de menús.
++
+Puede encontrar información más detallada ampliando cualquier parte del índice en el panel de navegación.
+
+* Para buscar en el contenido de la Ayuda, haga clic en la ficha *Buscar* del panel de navegación, escriba la palabra o serie de palabras que desea encontrar y haga clic en *Ir*
+* Para imprimir temas de Ayuda, haga clic en el icono de impresora.
+

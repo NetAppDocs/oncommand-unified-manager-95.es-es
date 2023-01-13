@@ -1,0 +1,31 @@
+---
+permalink: online-help/task-customizing-the-volume-relationships-inventory-report-to-view-volumes-grouped-by-issue.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible personalizar el informe Volume Relationships Inventory para ver los volúmenes que se agrupan según el estado de la relación de volumen. 
+---
+= Personalización del informe Volume Relationships Inventory para ver los volúmenes agrupados por problema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar el informe Volume Relationships Inventory para ver los volúmenes que se agrupan según el estado de la relación de volumen.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para filtrar volúmenes según el estado de estado de la relación de volumen, seleccione la columna *Estado de relación* y haga clic en image:../media/click-to-filter.gif[""] .
+. En el cuadro de diálogo *filtro*, haga clic en *Seleccionar valores* y, a continuación, seleccione el valor requerido en la lista desplegable.
++
+Se muestran los detalles de volumen para el valor seleccionado.
+
+

@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task-restoring-data-from-snapshot-copies.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando se pierden datos debido a un desastre o porque los directorios o archivos se eliminan accidentalmente, puede usar Unified Manager para localizar y restaurar los datos de una copia Snapshot. 
+---
+= Restaurar datos desde copias de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando se pierden datos debido a un desastre o porque los directorios o archivos se eliminan accidentalmente, puede usar Unified Manager para localizar y restaurar los datos de una copia Snapshot.
+
+
+
+== Acerca de esta tarea
+
+Puede restaurar datos desde dos ubicaciones en la interfaz de usuario web de Unified Manager.
+
+
+
+== Pasos
+
+. Restaure datos mediante una de las siguientes tareas:
++
+** xref:task-restoring-data-using-the-health-volume-details-page.adoc[Restaure datos desde la página de detalles Health/Volume].
+** xref:task-restoring-data-using-the-health-volumes-page.adoc[Restaure datos desde la página Health/Volumes].
+
+
+

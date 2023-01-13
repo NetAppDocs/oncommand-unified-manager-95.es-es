@@ -1,0 +1,22 @@
+---
+permalink: online-help/concept-using-a-threshold-policy-with-the-node-failover-planning-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede crear una política de umbral de nodo para que se le notifique en la página Performance/Node Failover Planning cuando una posible recuperación tras fallos degradara el rendimiento del nodo de respaldo a un nivel inaceptable. 
+---
+= Uso de una directiva de umbral con la página Planificación de conmutación por error de nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear una política de umbral de nodo para que se le notifique en la página Performance/Node Failover Planning cuando una posible recuperación tras fallos degradara el rendimiento del nodo de respaldo a un nivel inaceptable.
+
+La política de umbral de rendimiento definida por el sistema denominada "'par ha de nodos sobreutilizado'" genera un evento de advertencia si se supera el umbral durante seis periodos de recopilación consecutivos (30 minutos). El umbral se considera superado si la capacidad de rendimiento combinada utilizada de los nodos en un par de alta disponibilidad supera el 200 %.
+
+El evento de la política de umbral definida por el sistema le avisa de que una conmutación al nodo de respaldo provocará que la latencia del nodo de toma de control aumente a un nivel inaceptable. Cuando ve un evento generado por esta política para un nodo en particular, puede desplazarse a la página Performance/Node Failover Planning de ese nodo para ver el valor de latencia previsto debido a una conmutación por error.
+
+Además de utilizar esta política de umbral definida por el sistema, puede crear políticas de umbral utilizando el contador «'capacidad de rendimiento utilizada - adquisición'» y, a continuación, aplicar la política a los nodos seleccionados. Especificar un umbral inferior al 200 % le permite recibir un evento antes de superar el umbral de la política definida por el sistema. También puede especificar el período mínimo de tiempo durante el cual se supera el umbral a menos de 30 minutos si desea recibir una notificación antes de generar el evento de política definido por el sistema.
+
+Por ejemplo, puede definir una política de umbral para generar un evento de advertencia si la capacidad de rendimiento combinado utilizada de los nodos de un par de alta disponibilidad supera el 175 % durante más de 10 minutos. Puede aplicar esta política a Node1 y Node2, que forman un par de alta disponibilidad. Después de recibir una notificación de evento de advertencia para Node1 o Node2, puede ver la página Performance/Node Failover Planning para ese nodo a fin de evaluar el impacto estimado en el rendimiento en el nodo de toma de control. Puede tomar acciones correctivas para evitar sobrecargar el nodo de toma de control si se produce una conmutación al respaldo. Si realiza alguna acción cuando la capacidad de rendimiento combinado que se utiliza de los nodos es inferior al 200 %, la latencia del nodo que toma el control no alcanza un nivel inaceptable incluso si se produce una conmutación por error durante este tiempo.

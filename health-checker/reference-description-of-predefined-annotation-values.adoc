@@ -1,0 +1,28 @@
+---
+permalink: health-checker/reference-description-of-predefined-annotation-values.html 
+sidebar: sidebar 
+keywords:  
+summary: Prioridad de datos es una anotación predefinida que tiene los valores Misión crítica, Alta y Baja. Estos valores permiten anotar los objetos de almacenamiento en función de la prioridad de los datos que contienen. No se pueden editar ni eliminar los valores de anotación predefinidos. 
+---
+= Descripción de los valores de anotación predefinidos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+*Prioridad de datos* es una anotación predefinida que tiene los valores Misión crítica, Alta y Baja. Estos valores permiten anotar los objetos de almacenamiento en función de la prioridad de los datos que contienen. No se pueden editar ni eliminar los valores de anotación predefinidos.
+
+* *Prioridad de datos:Misión crítica*
++
+Esta anotación se aplica a objetos de almacenamiento que contienen datos críticos. Por ejemplo, los objetos que contienen aplicaciones de producción pueden considerarse críticos para el negocio.
+
+* *Prioridad de datos:Alta*
++
+Esta anotación se aplica a objetos de almacenamiento que contienen datos de alta prioridad. Por ejemplo, los objetos que alojan aplicaciones de negocio pueden considerarse de alta prioridad.
+
+* *Prioridad de datos:Baja*
++
+Esta anotación se aplica a objetos de almacenamiento que contienen datos de baja prioridad. Por ejemplo, los objetos que están en almacenamiento secundario, como los destinos de backup y reflejo, pueden ser de baja prioridad.
+
+

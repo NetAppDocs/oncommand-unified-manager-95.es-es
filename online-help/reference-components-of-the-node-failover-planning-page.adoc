@@ -1,0 +1,78 @@
+---
+permalink: online-help/reference-components-of-the-node-failover-planning-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Los componentes de la página Performance/Node Failover Planning se muestran en una cuadrícula y en el panel comparativo. Estas secciones le permiten evaluar el impacto de la conmutación por error de un nodo en el rendimiento del nodo de respaldo. 
+---
+= Componentes de la página Node Failover Planning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los componentes de la página Performance/Node Failover Planning se muestran en una cuadrícula y en el panel comparativo. Estas secciones le permiten evaluar el impacto de la conmutación por error de un nodo en el rendimiento del nodo de respaldo.
+
+
+
+== Cuadrícula de estadísticas de rendimiento
+
+La página Performance/Node Failover Planning muestra un grid que contiene estadísticas de latencia, IOPS, utilización y capacidad de rendimiento utilizadas.
+
+[NOTE]
+====
+Los valores de IOPS que se muestran en esta página y es posible que la página Performance/Node Performance Explorer no sea la misma.
+
+====
+En el grid, se asigna a cada nodo uno de los siguientes roles:
+
+* Primario
++
+El nodo que toma el relevo al partner de alta disponibilidad cuando el partner falla. El objeto raíz siempre es el nodo primario.
+
+* Como partner
++
+El nodo que falla en el escenario de conmutación por error.
+
+* Toma de control estimada
++
+Igual que el nodo primario. Las estadísticas de rendimiento que se muestran para este nodo muestran el rendimiento del nodo de toma de control después de que este asuma el control del partner que ha fallado.
+
+
+
+[NOTE]
+====
+Aunque la carga de trabajo del nodo de respaldo es equivalente a las cargas de trabajo combinadas de ambos nodos después de una conmutación al respaldo, las estadísticas del nodo de respaldo estimado no son la suma de las estadísticas del nodo primario y del nodo Partner. Por ejemplo, si la latencia del nodo primario es de 2 ms/op y la latencia del nodo Partner es de 3 ms/op, el nodo de toma de control estimado podría tener una latencia de 4 ms/op. Este valor es un cálculo que Unified Manager realiza.
+
+====
+Puede hacer clic en el nombre del nodo Partner si desea que se convierta en el objeto raíz. Después de que se muestre la página Performance Explorer, puede hacer clic en la ficha *Planificación de conmutación por error* para ver cómo cambia el rendimiento en este escenario de fallo de nodo. Por ejemplo, si Node1 es el nodo primario y Node2 es el nodo asociado, puede hacer clic en Node2 para convertirse en el nodo primario. De esta forma, puede ver cómo cambia el rendimiento estimado en función de qué nodo falle.
+
+
+
+== Panel de comparación
+
+La siguiente lista describe los componentes que se muestran en el panel comparar de forma predeterminada:
+
+* *Gráficos de eventos*
++
+Se muestran con el mismo formato que los de la página Performance Explorer. Sólo pertenecen al nodo principal.
+
+* * Contrafolios*
++
+Muestran estadísticas históricas del contador de rendimiento que se muestra en la cuadrícula. En cada gráfico, el gráfico del nodo de toma de control estimado muestra el rendimiento estimado si se había producido una conmutación por error en un momento dado.
+
++
+Por ejemplo, supongamos que el gráfico de utilización muestra un 73% para el nodo de toma de control estimado a las 11:00 El 8 de febrero. Si se hubiera producido una conmutación por error en ese momento, la utilización del nodo de respaldo habría sido del 73%.
+
++
+Las estadísticas históricas ayudan a encontrar el tiempo óptimo para iniciar una conmutación al respaldo, lo que minimiza la posibilidad de sobrecargar el nodo de respaldo. Solo puede programar una conmutación por error en momentos en los que se acepte el rendimiento previsto del nodo que toma el control.
+
+
+
+De forma predeterminada, las estadísticas del objeto raíz y del nodo asociado se muestran en el panel de comparación. A diferencia de la página Performance/Node Performance Explorer, esta página no muestra el botón *Add* para que agregue objetos para la comparación de estadísticas.
+
+Puede personalizar el panel de comparación de la misma manera que lo hace en la página Performance/Node Performance Explorer. La siguiente lista muestra ejemplos de personalización de los gráficos:
+
+* Haga clic en un nombre de nodo para mostrar u ocultar las estadísticas del nodo en los gráficos Contador.
+* Haga clic en *Zoom View* para mostrar un gráfico detallado de un contador en particular en una ventana nueva.
+

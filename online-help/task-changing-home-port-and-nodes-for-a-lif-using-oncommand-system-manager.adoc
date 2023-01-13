@@ -1,0 +1,44 @@
+---
+permalink: online-help/task-changing-home-port-and-nodes-for-a-lif-using-oncommand-system-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede cambiar la ubicación preferida de una LIF modificando su puerto de inicio y nodo principal. Esta configuración es más duradera que migrar un LIF, que se suele utilizar para reubicar temporalmente un LIF en un nodo diferente durante el mantenimiento programado. 
+---
+= Cambiar el puerto de inicio y los nodos de una LIF mediante System Manager de OnCommand
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede cambiar la ubicación preferida de una LIF modificando su puerto de inicio y nodo principal. Esta configuración es más duradera que migrar un LIF, que se suele utilizar para reubicar temporalmente un LIF en un nodo diferente durante el mantenimiento programado.
+
+
+
+== Acerca de esta tarea
+
+En la siguiente imagen se muestran el puerto de inicio y el nodo de LIF originales, así como el puerto de inicio y el nodo después del cambio. El puerto de inicio original de LIF1 se cambió de e1a a e3a y LIF2 se cambió de e4a a e2a.
+
+image::../media/diagram-cluster-lifs-move-jpg.gif[Cambio de nodo y puerto de inicio de LIF]
+
+
+
+== Pasos
+
+. Abra el Administrador del sistema de OnCommand.
+. En la ficha *Inicio*, haga doble clic en el sistema de almacenamiento.
+. En el panel de navegación, expanda la jerarquía *SVM*.
+. En el panel de navegación, seleccione las SVM y haga clic en *Configuración* > *interfaces de red*.
+. Seleccione la LIF y haga clic en *Editar*.
+. En el cuadro de diálogo**Edit Interface**, introduzca el puerto principal y la dirección de red del puerto de destino.
++
+image::../media/systemmgr-lif-edit-jpg.gif[Cuadro de diálogo Edit Interface]
+
++
+[NOTE]
+====
+En ONTAP 8.2.1, el campo Puerto de inicio está desactivado.
+
+====
+. Haga clic en *Guardar y cerrar*.
+

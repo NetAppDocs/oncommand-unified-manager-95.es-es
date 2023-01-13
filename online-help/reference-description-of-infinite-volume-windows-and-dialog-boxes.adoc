@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-infinite-volume-windows-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede supervisar las SVM con Infinite Volume desde la página de detalles Health/Storage Virtual Machine respectiva. Puede administrar reglas y políticas de datos desde el cuadro de diálogo Crear regla. También puede modificar los umbrales de clase de almacenamiento en el cuadro de diálogo Editar umbrales de clase de almacenamiento. 
+---
+= Descripción de las ventanas y cuadros de diálogo de Infinite Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede supervisar las SVM con Infinite Volume desde la página de detalles Health/Storage Virtual Machine respectiva. Puede administrar reglas y políticas de datos desde el cuadro de diálogo Crear regla. También puede modificar los umbrales de clase de almacenamiento en el cuadro de diálogo Editar umbrales de clase de almacenamiento.

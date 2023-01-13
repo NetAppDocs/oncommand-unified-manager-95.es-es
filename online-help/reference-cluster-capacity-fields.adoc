@@ -1,0 +1,100 @@
+---
+permalink: online-help/reference-cluster-capacity-fields.html 
+sidebar: sidebar 
+keywords:  
+summary: El informe Storage Summary le permite ver información resumida sobre la capacidad del almacenamiento en las parejas de alta disponibilidad. Esta información le ayuda a comprender los posibles riesgos de la capacidad y a realizar las acciones adecuadas para reequilibrar la carga de trabajo. La información del clúster de un solo nodo no se puede ver en el informe. 
+---
+= Informe Storage Summary
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El informe Storage Summary le permite ver información resumida sobre la capacidad del almacenamiento en las parejas de alta disponibilidad. Esta información le ayuda a comprender los posibles riesgos de la capacidad y a realizar las acciones adecuadas para reequilibrar la carga de trabajo. La información del clúster de un solo nodo no se puede ver en el informe.
+
+
+
+== Vista del gráfico del informe Storage Summary
+
+El informe Storage Summary se muestra en dos formatos:
+
+* Vista del gráfico del informe Storage Summary
+* Vista tabular del informe Storage Summary
+
+
+El gráfico muestra la tendencia de capacidad de la capacidad de datos utilizada y no utilizada de los agregados en un período de tiempo. La capacidad total de datos se muestra en el eje vertical (y) y el nombre del clúster en el eje horizontal (x). Por lo tanto, cada barra del gráfico representa un clúster. Puede ver los detalles de puntos específicos del gráfico situando el cursor sobre un punto determinado.
+
+* *Nombre de clúster*
++
+Muestra el nombre del clúster.
+
+* *Par de alta disponibilidad*
++
+Muestra el valor de par de alta disponibilidad obtenido mediante la formación de dos nodos.
+
+* *Modelo*
++
+Muestra el nombre del modelo.
+
+* *Versión del SO*
++
+Muestra la versión de ONTAP utilizada.
+
+* *Capacidad bruta total*
++
+Muestra la capacidad física total de todos los discos de la matriz.
+
+* *Capacidad bruta no configurada*
++
+Muestra la capacidad sin configurar de discos cuyo tipo de contenedor es distinto de agregado, roto, repuesto o compartido. Esta capacidad siempre es mayor que la capacidad física del disco en ONTAP. Por ejemplo, piense en un disco de 2 TB. La capacidad física del disco es de 1.6 TB en ONTAP, mientras que la capacidad bruta sin configurar en Unified Manager es de 1.8 TB.
+
+* *Capacidad total agregada*
++
+Muestra el tamaño total de los agregados disponibles para el usuario. Esto incluye la reserva para copias Snapshot.
+
+* *Capacidad utilizada agregada*
++
+Muestra la capacidad que ya está en uso en los agregados. Esto incluye la capacidad que consumen los volúmenes, las LUN y otras sobrecargas en la tecnología de eficiencia del almacenamiento.
+
+* *Capacidad agregada sin usar*
++
+Muestra la capacidad que puede estar disponible para almacenar datos adicionales en el agregado. Esto incluye la reserva para copias Snapshot.
+
+* *Capacidad asignada de LUN*
++
+Muestra la capacidad de las LUN asignadas.
+
+* *Capacidad de LUN sin asignar*
++
+Muestra la capacidad de todas las LUN que no están asignadas al host.
+
+* *Capacidad total de volumen*
++
+Muestra la capacidad total de los volúmenes (utilizados más no utilizados).
+
+* *Capacidad de volumen utilizada*
++
+Muestra la capacidad utilizada de los volúmenes.
+
+* *Capacidad de volumen no utilizada*
++
+Muestra la capacidad sin utilizar de los volúmenes.
+
+* *Capacidad de protección de volumen*
++
+Muestra la capacidad de los volúmenes que tienen habilitado SnapMirror y SnapVault.
+
+* *Nivel de Cloud con licencia de clúster total*
++
+Muestra la capacidad total con licencia en el nivel de cloud. Este campo se muestra para los proveedores de almacenamiento que requieren una licencia de FabricPool, por ejemplo, Amazon S3, IBM Cloud Object Storage, Microsoft Azure Cloud o Alibaba Cloud Object Storage.
+
+* *Se utiliza el nivel de la nube con licencia de clúster*
++
+Muestra el espacio utilizado por los datos en el nivel de cloud para los proveedores de almacenamiento que requieren una licencia de FabricPool.
+
+* *Capacidad de Cluster StorageGRID utilizada*
++
+Muestra el espacio utilizado por los datos en el nivel de cloud para los proveedores de almacenamiento que no requieren una licencia de FabricPool, por ejemplo, StorageGRID.
+
+

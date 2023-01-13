@@ -1,0 +1,67 @@
+---
+permalink: health-checker/task-performing-corrective-action-for-a-flashcard-offline.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de revisar la descripción en el campo causa de la página de detalles evento sin conexión de la tarjeta Flash, puede buscar información adicional útil para resolver la condición. 
+---
+= Realizar acciones correctivas para una tarjeta flash sin conexión
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de revisar la descripción en el campo causa de la página de detalles evento sin conexión de la tarjeta Flash, puede buscar información adicional útil para resolver la condición.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+En este ejemplo, el resumen de eventos que se proporciona en la página de detalles Event contiene la siguiente información acerca de la condición de la tarjeta flash sin conexión:
+
+[listing]
+----
+Severity: Critical
+State: New
+Impact Level: Incident
+Impact Area: Availability
+Source: alpha-node
+Source Type: Node
+Acknowledged By:
+Resolved By:
+Assigned To:
+Cause: Flash cards at slot numbers 3 are offline.
+Alert Settings:
+----
+La información del evento indica que la tarjeta flash instalada en la ranura 3 del nodo del clúster denominado «'nodo alfa'» está desconectada.
+
+La información coloca la condición de la tarjeta flash sin conexión en una ranura específica de un nodo de clúster específico, pero no sugiere un motivo para que la tarjeta flash esté sin conexión.
+
+
+
+== Pasos
+
+. Para obtener más información que pueda ayudarle a diagnosticar el estado sin conexión de la tarjeta flash, puede hacer clic en el nombre del origen del evento.
++
+En este ejemplo, el origen del evento es el nodo de clúster "'alpha-node'". Al hacer clic en ese nombre de nodo se muestra la información de alta disponibilidad en la pestaña nodos de la página de detalles Health/Cluster del clúster afectado. La información de alta disponibilidad mostrada muestra información sobre la pareja de alta disponibilidad a la que pertenece ese nodo.
+
++
+En este ejemplo, la información relevante se encuentra en la tabla de resumen Events de la página ha Details. La tabla especifica el evento de la tarjeta flash sin conexión, la hora en que se generó el evento y, otra vez, el nodo del clúster a partir del cual se originó este evento.
+
+. Mediante la interfaz de línea de comandos de ONTAP o OnCommand System Manager, acceda a los registros de Event Manager (EMS) del clúster afectado.
++
+En este ejemplo, se utilizan el nombre del evento, la hora del evento y el origen del evento para encontrar el informe de EMS sobre este evento. El informe EMS del evento contiene una descripción detallada del evento y, a menudo, consejos para remediar la condición indicada por el evento.
+
+
+
+
+
+== Después de terminar
+
+Después de diagnosticar el problema, póngase en contacto con el administrador o operador apropiado para completar los pasos manuales necesarios para volver a conectar la tarjeta flash.

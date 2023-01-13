@@ -1,0 +1,40 @@
+---
+permalink: online-help/task-editing-user-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar la configuración de usuario, como la dirección de correo electrónico y el rol, que se especifican a cada usuario. Por ejemplo, se recomienda cambiar el rol de un usuario que es un operador de almacenamiento y asignar privilegios de administrador de almacenamiento al usuario. 
+---
+= Edición de la configuración de usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar la configuración de usuario, como la dirección de correo electrónico y el rol, que se especifican a cada usuario. Por ejemplo, se recomienda cambiar el rol de un usuario que es un operador de almacenamiento y asignar privilegios de administrador de almacenamiento al usuario.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+
+
+== Acerca de esta tarea
+
+Cuando se modifica el rol asignado a un usuario, los cambios se aplican cuando se produce cualquiera de las siguientes acciones:
+
+* El usuario cierra la sesión y vuelve a iniciar sesión en Unified Manager.
+* Se alcanza un tiempo de espera de sesión de 24 horas.
+
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *usuarios* en el menú Administración de la izquierda.
+. En la página *Administración/usuarios*, seleccione el usuario para el que desea editar la configuración y haga clic en *Editar*.
+. En el cuadro de diálogo *Editar usuario*, edite la configuración adecuada que se ha especificado para el usuario.
+. Haga clic en *Guardar*.
+

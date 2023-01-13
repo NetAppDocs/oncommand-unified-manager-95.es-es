@@ -1,0 +1,39 @@
+---
+permalink: online-help/task-accessing-system-manager-from-the-um-interface.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando la solución de problemas requiere que realice cambios de configuración en un clúster, puede utilizar la interfaz gráfica de System Manager en lugar de la interfaz de línea de comandos de ONTAP. System Manager se incluye con ONTAP como servicio web, está habilitado de forma predeterminada y es accesible mediante un navegador. 
+---
+= Acceder a OnCommand System Manager desde la interfaz de Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando la solución de problemas requiere que realice cambios de configuración en un clúster, puede utilizar la interfaz gráfica de System Manager en lugar de la interfaz de línea de comandos de ONTAP. System Manager se incluye con ONTAP como servicio web, está habilitado de forma predeterminada y es accesible mediante un navegador.
+
+
+
+== Antes de empezar
+
+Debe tener una cuenta de usuario del clúster configurada con el `admin` función y la `http`, `ontapi`, y. `console` tipos de aplicación.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Paneles* > *Vista de clúster*.
+. En la página *Paneles/Vista de clúster*, seleccione el clúster que desea administrar.
++
+Se muestra una descripción general del estado de supervisión, la capacidad y el rendimiento de ese clúster.
+
+. Haga clic en el icono *System Manager*.
++
+Si el clúster utiliza un certificado digital autofirmado, es posible que el explorador muestre una advertencia que indica que el certificado no es de confianza. Puede reconocer el riesgo de continuar con el acceso o instalar un certificado digital firmado de entidad de certificación (CA) en el clúster para la autenticación del servidor.
+
+. Inicie sesión en System Manager con las credenciales de administrador del clúster.
++
+Si el inicio de sesión en la interfaz de usuario de System Manager está protegido mediante la autenticación SAML, deberá introducir sus credenciales en la página de inicio de sesión del proveedor de identidades (IDP) en lugar de la página de inicio de sesión de System Manager.
+
+

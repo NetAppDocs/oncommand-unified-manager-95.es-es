@@ -1,0 +1,166 @@
+---
+permalink: online-help/reference-aggregate-capacity-fields.html 
+sidebar: sidebar 
+keywords:  
+summary: El informe de capacidad y utilización de agregados le permite ver información sobre la capacidad y la utilización de los agregados en un clúster. Esta información le permite comprender los posibles riesgos de la capacidad y también ver la capacidad configurada, utilizada y no utilizada de los agregados. 
+---
+= Informe Aggregate Capacity and Utilization
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El informe de capacidad y utilización de agregados le permite ver información sobre la capacidad y la utilización de los agregados en un clúster. Esta información le permite comprender los posibles riesgos de la capacidad y también ver la capacidad configurada, utilizada y no utilizada de los agregados.
+
+
+
+== Vista de tabla de informes de capacidad y utilización de agregados
+
+* *Cluster*
++
+Muestra el nombre del clúster.
+
+* *Par de alta disponibilidad*
++
+Muestra el valor de par de alta disponibilidad obtenido mediante la formación de dos nodos.
+
+* *Agregado*
++
+Muestra el nombre del agregado.
+
+* *Capacidad total de datos (GB)*
++
+Muestra la capacidad total de datos (utilizada más disponible).
+
+* *Capacidad de datos usada (GB)*
++
+Muestra la capacidad de datos utilizada.
+
+* *Datos usados %*
++
+Muestra la capacidad de datos utilizada como porcentaje.
+
+* *Capacidad de datos disponible (GB)*
++
+Muestra la capacidad de datos disponible.
+
+* *Datos disponibles %*
++
+Muestra la capacidad de datos disponible como porcentaje.
+
+* *Tasa de crecimiento diario %*
++
+Muestra la tasa de crecimiento que se produce cada 24 horas en el volumen.
+
+* *Días hasta lleno*
++
+Muestra la cantidad estimada de días que quedan antes de que el agregado alcance la capacidad completa.
+
+* *Umbral de espacio completo*
++
+Muestra el porcentaje al que está lleno un agregado.
+
+* * Espacio casi el umbral completo*
++
+Muestra el porcentaje en el que un agregado está casi lleno.
+
+* *Umbral de tasa de crecimiento*
++
+Especifica que la tasa de crecimiento del agregado se considera normal antes de que el sistema genere un evento anormal de tasa de crecimiento agregado.
+
+* *Umbral de sensibilidad de la tasa de crecimiento*
++
+Especifica el factor que se aplica a la desviación estándar de la tasa de crecimiento de un volumen. Si la tasa de crecimiento supera la desviación estándar ponderada, se genera un evento anormal tasa de crecimiento de volumen.
+
+* *Días hasta el umbral completo*
++
+Especifica la cantidad de días que queda para que el agregado alcance la capacidad completa.
+
+* *Capacidad total de la reserva Snapshot (GB)*
++
+Muestra la capacidad total de reserva de la instantánea del agregado.
+
+* *Capacidad utilizada de la reserva de instantáneas (GB)*
++
+Muestra la cantidad de espacio utilizado por las copias snapshot desde la reserva de instantánea.
+
+* *Reserva Snapshot utilizada %*
++
+Muestra la cantidad de espacio utilizada por las copias Snapshot desde la reserva de Snapshot como porcentaje.
+
+* *Capacidad de reserva de instantánea (GB)*
++
+Muestra la cantidad de espacio disponible para las copias Snapshot.
+
+* *Reserva Snapshot disponible %*
++
+Muestra la cantidad de espacio disponible para las copias de Snapshot como un porcentaje.
+
+* *Copias Snapshot Reservar umbral completo*
++
+Especifica el porcentaje en el que un agregado ha consumido todo su espacio reservado para las copias de Snapshot.
+
+* *Capacidad excesiva %*
++
+Muestra el exceso de compromiso del agregado como porcentaje.
+
+* *Umbral sobrecomprometido %*
++
+Muestra el porcentaje en el que un agregado está sobrecargado.
+
+* *Umbral casi comprometido %*
++
+Muestra el porcentaje en el que un agregado está casi sobrecargado.
+
+* *Tipo*
++
+Muestra el tipo de agregado:
+
++
+** HDD
+** Híbrido
++
+Combina HDD y SSD, pero Flash Pool no se ha habilitado.
+
+** Híbrido (Flash Pool)
++
+Combina HDD y SSD y Flash Pool se ha habilitado.
+
+** SSD
+** SSD (FabricPool)
++
+Combina SSD y un nivel de cloud
+
+** VMDisk (SDS)
++
+Discos virtuales en una máquina virtual
+
+** VMDisk (FabricPool)
++
+Combina discos virtuales y un nivel de cloud
+
+** LUN (FlexArray) para discos estándar y discos SSD, esta columna está vacía cuando el sistema de almacenamiento supervisado ejecuta una versión de ONTAP anterior a 8.3.
+
+
+* *Tipo RAID*
++
+Muestra el tipo de configuración RAID.
+
+* *Estado agregado*
++
+Muestra el estado actual del agregado.
+
+* *Tipo de SnapLock*
++
+Indica si el agregado es un agregado de SnapLock o no de SnapLock.
+
+* *Espacio de Cloud Tier utilizado (GB)*
++
+Muestra la cantidad de capacidad de datos que se está usando actualmente en el nivel de cloud.
+
+* *Nivel de cloud*
++
+Muestra el nombre del nivel de cloud cuando lo creó ONTAP.
+
+

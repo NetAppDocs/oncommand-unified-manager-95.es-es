@@ -1,0 +1,59 @@
+---
+permalink: online-help/reference-port-performance-information-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilice la página Performance/Port Information para ver una lista de los atributos físicos y lógicos del puerto. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento. 
+---
+= Página Performance/Port Information (Información de rendimiento/puerto)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice la página Performance/Port Information para ver una lista de los atributos físicos y lógicos del puerto. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento.
+
+
+
+== Atributos de puerto
+
+* *WWN*
++
+El WWN del puerto.
+
+* *Nodo*
++
+El nombre del nodo en el que reside el puerto físico. Puede hacer clic en el nombre para mostrar los detalles del nodo en la página Performance/Node Explorer.
+
+* *Cluster*
++
+El nombre del clúster al que pertenece el puerto. Puede hacer clic en el nombre para mostrar los detalles del clúster la página Performance/Cluster Explorer.
+
+* *Velocidad de funcionamiento*
++
+La velocidad real a la que se configura el puerto para que funcione.
+
++
+Los puertos FCP son de detección automática y se muestran como "'Auto'".
+
+* *Rol*
++
+La función del puerto de red es Data o Cluster.
+
++
+Los puertos FCP no pueden tener un rol, y este campo no se muestra.
+
+* *Tipo*
++
+El tipo de puerto: Network o FCP (protocolo Fibre Channel).
+
+* *Estado*
++
+El estado del enlace del puerto.
+
++
+** En el caso de los puertos de red, un puerto activo se enumera como «'Up'» y un puerto inactivo aparece como «Dewn».
+** En el caso de los puertos FCP, un puerto activo aparece como «'Online'» y un puerto inactivo aparece como «'Link not Connected'».
+
+
+

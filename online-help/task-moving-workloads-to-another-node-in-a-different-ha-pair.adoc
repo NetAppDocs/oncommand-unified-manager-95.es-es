@@ -1,0 +1,107 @@
+---
+permalink: online-help/task-moving-workloads-to-another-node-in-a-different-ha-pair.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar Unified Manager para ayudar a identificar un agregado en un nodo en un par de alta disponibilidad diferente que está menos ocupado que el par de alta disponibilidad en el que se están ejecutando las cargas de trabajo en ese momento. A continuación, puede mover los volúmenes seleccionados a agregados en la nueva pareja de ha. Mover cargas de trabajo de alto rendimiento a un agregado en un nodo menos ocupado permite que las cargas de trabajo de ambos nodos funcionen de forma más eficiente. 
+---
+= Mover cargas de trabajo a otro nodo en un par de alta disponibilidad diferente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar Unified Manager para ayudar a identificar un agregado en un nodo en un par de alta disponibilidad diferente que está menos ocupado que el par de alta disponibilidad en el que se están ejecutando las cargas de trabajo en ese momento. A continuación, puede mover los volúmenes seleccionados a agregados en la nueva pareja de ha. Mover cargas de trabajo de alto rendimiento a un agregado en un nodo menos ocupado permite que las cargas de trabajo de ambos nodos funcionen de forma más eficiente.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Su clúster debe constar de un mínimo de dos parejas de alta disponibilidad. No puede utilizar este proceso de corrección si solo tiene un par de alta disponibilidad en su clúster.
+* Debe haber registrado los nombres de los dos nodos de la pareja de ha que están teniendo el problema de rendimiento.
+* Debe haber registrado la fecha y la hora en que los nodos recibieron el evento de rendimiento.
+* Debe haber registrado el ID del evento, por ejemplo, «'p-sdt-clus1-nod-6982».
+* Unified Manager debe haber recopilado y analizado un mes o más de datos de rendimiento.
+
+
+
+
+== Acerca de esta tarea
+
+Estos pasos le ayudan a identificar los siguientes recursos para poder mover cargas de trabajo de alto rendimiento a un nodo más bajo utilizado en un par de alta disponibilidad diferente:
+
+* Los nodos de una pareja de alta disponibilidad diferente en el mismo clúster que se usan menos
+* Los agregados de los nuevos nodos que menos se utilizan
+* Los volúmenes de mayor rendimiento en los nodos actuales
+
+
+
+
+== Pasos
+
+. Identifique los nodos que forman parte de una pareja de alta disponibilidad diferente en el mismo clúster:
++
+.. En el panel de navegación izquierdo, haga clic en *rendimiento* > *clústeres*.
++
+Se muestra la página Performance/Clusters.
+
+.. Haga clic en el número del campo *recuento de nodos* del clúster actual.
++
+Se muestra la página rendimiento/nodos.
+
+.. Escriba los nombres de los nodos que están en parejas de ha diferentes de la pareja de ha que tiene actualmente el problema de rendimiento.
+
+
+. Identifique un nodo del nuevo par de alta disponibilidad que sea lo menos utilizado:
++
+.. Haga clic en la columna *utilización* para ordenar los nodos por menos utilizados.
++
+También puede identificar aquellos nodos que tengan la capacidad libre * más grande. Proporciona una lista de nodos potenciales a los que se podría mover cargas de trabajo.
+
+.. Escriba el nombre del nodo al que desea mover las cargas de trabajo.
+
+
+. Identifique un agregado en el nuevo nodo que sea lo menos utilizado:
++
+.. En el panel de navegación izquierdo, haga clic en *rendimiento* > *agregados*.
++
+Aparecerá la página Performance/Aggregates.
+
+.. Haga clic en *filtrado*, seleccione *nodo* en el menú desplegable de la izquierda, escriba el nombre del nodo en el campo de texto y, a continuación, haga clic en *aplicar filtro*.
++
+La página Performance/Aggregates vuelve a aparecer con la lista de agregados disponibles en este nodo.
+
+.. Haga clic en la columna *utilización* para ordenar los agregados por menos utilizados.
++
+También puede identificar aquellos agregados que tengan la capacidad libre * más grande. De este modo, se proporciona una lista de agregados potenciales a los que se pueden mover cargas de trabajo.
+
+.. Escriba el nombre del agregado al que desea mover las cargas de trabajo.
+
+
+. Identifique las cargas de trabajo de alto rendimiento desde los nodos que recibieron el evento:
++
+.. Vuelva a la página de detalles *evento* del evento.
+.. En el campo *volúmenes afectados*, haga clic en el enlace del número de volúmenes del primer nodo.
++
+La página Performance/Volumes se muestra con una lista filtrada de los volúmenes de ese nodo.
+
+.. Haga clic en la columna *capacidad total* para ordenar los volúmenes por el espacio asignado más grande.
++
+Proporciona una lista de los volúmenes potenciales que se pueden mover.
+
+.. Escriba los nombres de los volúmenes que desea mover y los nombres de los agregados actuales en los que residen.
+.. Realice los pasos 4c y 4d para el segundo nodo que formaba parte de este evento para identificar los volúmenes posibles que desea mover también desde ese nodo.
+
+
+. Mueva los volúmenes a los agregados que ha identificado como si tuviera una utilización baja en el nodo nuevo.
++
+Puede llevar a cabo la operación de transferencia con System Manager de OnCommand, OnCommand Workflow Automation, comandos de ONTAP o una combinación de estas herramientas.
+
+
+
+
+
+== Después de terminar
+
+Tras unos días, compruebe si está recibiendo el mismo tipo de eventos de este nodo o agregado.

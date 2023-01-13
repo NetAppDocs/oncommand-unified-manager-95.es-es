@@ -1,0 +1,20 @@
+---
+permalink: online-help/concept-understanding-cluster-monitoring.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede añadir clústeres a la base de datos de Unified Manager para supervisar los clústeres en busca de disponibilidad, capacidad y otros detalles, como el uso de CPU, las estadísticas de la interfaz, el espacio en disco libre, el uso de qtrees y el entorno del chasis. 
+---
+= Supervisión del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir clústeres a la base de datos de Unified Manager para supervisar los clústeres en busca de disponibilidad, capacidad y otros detalles, como el uso de CPU, las estadísticas de la interfaz, el espacio en disco libre, el uso de qtrees y el entorno del chasis.
+
+Los eventos se generan si el estado es anormal o cuando se incumple un umbral predefinido. Si se configura para hacerlo, Unified Manager envía una notificación a un destinatario especificado cuando un evento activa una alerta.
+
+El siguiente diagrama de flujo muestra el proceso de supervisión de Unified Manager:
+
+image::../media/cluster-monitoring2.gif[monitor de cluster 2]

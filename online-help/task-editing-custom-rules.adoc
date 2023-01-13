@@ -1,0 +1,63 @@
+---
+permalink: online-help/task-editing-custom-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar una regla para incluir nuevas condiciones o conjuntos de condiciones en la regla. Por ejemplo, si desea incluir nuevas rutas de acceso de directorio junto con los nombres de propietario, puede hacerlo desde el cuadro de diálogo Editar regla. 
+---
+= Edición de reglas personalizadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar una regla para incluir nuevas condiciones o conjuntos de condiciones en la regla. Por ejemplo, si desea incluir nuevas rutas de acceso de directorio junto con los nombres de propietario, puede hacerlo desde el cuadro de diálogo Editar regla.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+La pestaña Data Policy solo puede verse para una SVM con Infinite Volume.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione una SVM adecuada.
+. Haga clic en *Política de datos*.
++
+Se muestra la lista de reglas de la política de datos para la SVM seleccionada con Infinite Volume.
+
+. Seleccione la regla para la que desea incluir nuevas condiciones o conjuntos de condiciones.
+. Haga clic en *Editar*.
+. En el cuadro de diálogo *Editar regla*, agregue nuevas condiciones o conjuntos de condiciones:
++
+|===
+| Si desea añadir... | Haga clic en... 
+
+
+ a| 
+Una nueva condición
+ a| 
+La image:../media/customrulecreate.gif[""] .
+
+
+
+ a| 
+Un nuevo conjunto de condiciones
+ a| 
+*Agregar conjunto de condiciones*.
+
+|===
+. Haga clic en *Actualizar*.
+. Compruebe que las modificaciones se aplican a la regla ampliando la regla en la pestaña *Política de datos*.
+. Obtenga una vista previa de los demás cambios realizados en la directiva de datos.
+. Haga clic en *Activar* para activar los cambios en las propiedades de la regla en la SVM.
+

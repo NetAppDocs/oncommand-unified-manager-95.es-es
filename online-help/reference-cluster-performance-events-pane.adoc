@@ -1,0 +1,68 @@
+---
+permalink: online-help/reference-cluster-performance-events-pane.html 
+sidebar: sidebar 
+keywords:  
+summary: El panel Cluster Performance Events muestra estadísticas de rendimiento y todos los eventos activos para el clúster. Esto resulta más útil cuando se supervisan los clústeres y todos los eventos y el rendimiento relacionados con el clúster. 
+---
+= Panel de eventos de rendimiento del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El panel Cluster Performance Events muestra estadísticas de rendimiento y todos los eventos activos para el clúster. Esto resulta más útil cuando se supervisan los clústeres y todos los eventos y el rendimiento relacionados con el clúster.
+
+
+
+== Todos los eventos en este panel Cluster
+
+En el panel todos los eventos de este clúster se muestran todos los eventos de rendimiento de clúster activos durante las 72 horas anteriores. El total de eventos activos se muestra en el extremo izquierdo; este número representa el total de todos los eventos nuevos y reconocidos para todos los objetos de almacenamiento de este clúster. Puede hacer clic en el enlace total Active Events para ir a la página Events Inventory, que se ha filtrado para mostrar estos eventos.
+
+El gráfico de barras total Active Events del clúster muestra el número total de eventos críticos y de advertencia activos:
+
+* Latencia (total para nodos, agregados, SVM, volúmenes, LUN, y espacios de nombres)
+* IOPS (total para clústeres, nodos, agregados, SVM, volúmenes LUN y espacios de nombres)
+* Mbps (total para clústeres, nodos, agregados, SVM, volúmenes LUN, espacios de nombres, puertos y LIF)
+* Capacidad de rendimiento utilizada (total para nodos y agregados)
+* Utilización (total para nodos, agregados y puertos)
+* Otros (ratio de pérdidas de caché en volúmenes)
+
+
+La lista contiene eventos de rendimiento activos activados a partir de políticas de umbral definidas por el usuario, políticas de umbral definidas por el sistema y umbrales dinámicos.
+
+Los datos del gráfico (barras de contador verticales) se muestran en rojo (image:../media/treemapred-png.gif["Icono para TreeMap: Color rojo"]) para eventos críticos, y amarillo (image:../media/treemapstatus-warning-png.gif["Icono para TreeMap: Estado de advertencia"]) para eventos de advertencia. Coloque el cursor sobre cada barra vertical de contadores para ver el tipo y el número reales de eventos. Puede hacer clic en *Actualizar* para actualizar los datos del panel de contadores.
+
+Puede mostrar u ocultar eventos críticos y de advertencia en el gráfico de rendimiento total de eventos activos haciendo clic en los iconos *críticos* y *Advertencia* de la leyenda. Si oculta ciertos tipos de eventos, los iconos de leyenda se muestran en gris.
+
+
+
+== Paneles de contadores
+
+Los paneles de contadores muestran eventos de actividad y rendimiento del clúster de las 72 horas anteriores e incluyen los siguientes contadores:
+
+* * Panel de contadores IOPS*
++
+IOPS indica la velocidad operativa del clúster en el número de operaciones de entrada/salida por segundo. Este panel de contadores proporciona una descripción general de alto nivel del estado de IOPS del clúster durante el período de 72 horas anterior. Puede colocar el cursor sobre la línea de tendencias del gráfico para ver el valor de IOPS de un tiempo específico.
+
+* * Panel de contador Mbps*
++
+Mbps indica la cantidad de datos que se han transferido al clúster y desde él en megabytes por segundo. Este panel de contadores proporciona una descripción general de alto nivel del estado de Mbps del clúster durante el periodo anterior de 72 horas. Puede colocar el cursor sobre la línea de tendencias del gráfico para ver el valor de Mbps durante un tiempo específico.
+
+
+
+El número situado en la parte superior derecha del gráfico en la barra gris es el valor medio del último período de 72 horas. Los números que se muestran en la parte inferior y superior del gráfico de líneas de tendencia son los valores mínimo y máximo del último período de 72 horas. La barra gris debajo del gráfico contiene el recuento de eventos activos (nuevos y reconocidos) y eventos obsoletos del último período de 72 horas.
+
+Los paneles de contadores contienen dos tipos de eventos:
+
+* *Activo*
++
+Indica que el evento de rendimiento está activo (nuevo o reconocido). El problema que causa el evento no se ha corregido solo o no se ha resuelto. El contador de rendimiento del objeto de almacenamiento sigue por encima del umbral de rendimiento.
+
+* *Obsoleto*
++
+Indica que el evento no está activo. El problema que causa el evento se ha corregido solo o se ha resuelto. El contador de rendimiento del objeto de almacenamiento ya no está por encima del umbral de rendimiento.
+
+
+
+En *Eventos activos*, si hay un evento, puede colocar el cursor sobre el icono del evento y hacer clic en el número del evento para enlazar a la página Detalles del evento correspondiente. Si hay más de un evento, puede hacer clic en *Ver todos los eventos* para mostrar la página Inventario de eventos, que se filtra para mostrar todos los eventos del tipo de contador de objeto seleccionado.

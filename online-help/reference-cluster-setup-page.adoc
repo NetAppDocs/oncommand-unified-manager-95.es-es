@@ -1,0 +1,130 @@
+---
+permalink: online-help/reference-cluster-setup-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Configuration/Cluster Data Sources muestra información sobre los clústeres que Unified Manager está supervisando actualmente. Esta página permite añadir clústeres adicionales, editar la configuración de los clústeres y quitar clústeres. 
+---
+= Página Configuration/Cluster Data Sources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Configuration/Cluster Data Sources muestra información sobre los clústeres que Unified Manager está supervisando actualmente. Esta página permite añadir clústeres adicionales, editar la configuración de los clústeres y quitar clústeres.
+
+Un mensaje en la parte inferior de la página indica la frecuencia con la que Unified Manager recopila datos de rendimiento de los clústeres. El intervalo de recogida predeterminado es de cinco minutos, pero puede modificar este intervalo a través de la consola de mantenimiento si descubre que las colecciones de los clústeres grandes no se están completando a tiempo.
+
+
+
+== Botones de comando
+
+* *Agregar*
++
+Se abre el cuadro de diálogo Add Cluster, que le permite añadir clústeres.
+
+* *Edición*
++
+Abre el cuadro de diálogo Edit Cluster, que le permite editar la configuración del clúster seleccionado.
+
+* *Eliminar*
++
+Quita el clúster seleccionado y todos los eventos y objetos de almacenamiento asociados. Después de eliminar el clúster, este ya no se supervisa.
+
++
+[NOTE]
+====
+El clúster, sus objetos de almacenamiento y todos los eventos asociados se eliminan, y Unified Manager ya no supervisa el clúster. La instancia de Unified Manager registrada en el clúster eliminado también se cancela el registro del clúster.
+
+====
+* *Rediscover*
++
+Fuerza una operación de detección del clúster para actualizar la recogida de datos de estado y rendimiento.
+
+
+
+
+
+== Lista Clusters
+
+En la lista Clusters, se muestran las propiedades de todos los clústeres detectados. Puede hacer clic en un encabezado de columna para ordenar los clústeres por esa columna.
+
+* *Estado*
++
+Muestra el estado de detección actual del origen de datos. El estado puede ser error (image:../media/sev-error-um60.png["Icono para la gravedad del evento: Error"]), completado (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]), o en curso (image:../media/in-progress.gif[""]).
+
+* *Nombre*
++
+Muestra el nombre del clúster.
+
++
+Tenga en cuenta que el nombre puede tardar quince minutos o más en aparecer después de añadir el clúster por primera vez.
+
+* *Modo de mantenimiento*
++
+Le permite especificar el plazo, o «ventana de mantenimiento», cuando un clúster estará inactivo para realizar tareas de mantenimiento, de modo que no reciba una tormenta de alertas del clúster mientras se mantiene.
+
++
+Cuando el modo de mantenimiento está programado para el futuro, este campo muestra "programado" y puede colocar el cursor sobre el campo para mostrar la hora programada. Cuando el clúster se encuentra en la ventana de mantenimiento, este campo muestra «'Active'».
+
+* *Nombre de host o Dirección IP*
++
+Muestra el nombre de host, el nombre de dominio completo (FQDN), el nombre corto o la dirección IP de la LIF de administración de clúster que se utiliza para conectarse con el clúster.
+
+* *Protocolo*
++
+Muestra el tipo de protocolo que se puede configurar en el clúster: HTTP o HTTPS (para una conexión segura).
+
++
+Si se establece una conexión con el clúster mediante ambos protocolos, se elige HTTPS a través de HTTP. El valor predeterminado es HTTPS.
+
+* *Puerto*
++
+Muestra el número de puerto del clúster.
+
++
+Si no se especifica el puerto, se utiliza el puerto predeterminado para el protocolo seleccionado (80 para HTTP o 443 para HTTPS).
+
+* *Nombre de usuario*
++
+Muestra el nombre de usuario que se puede utilizar para iniciar sesión en el clúster.
+
+* *Funcionamiento*
++
+Muestra la operación actual que admite el origen de datos del clúster.
+
++
+El origen de datos admite las siguientes operaciones:
+
++
+** Detección
++
+Especifica la operación cuando se detecta el origen de datos.
+
+** Encuesta de salud
++
+Especifica la operación en la que el origen de datos se detecta correctamente y ha iniciado los datos de muestreo.
+
+** Eliminación
++
+Especifica la operación cuando el origen de datos (clúster) se elimina de la lista de objetos de almacenamiento correspondientes.
+
+
+
+* *Estado de funcionamiento*
++
+Muestra el estado de la operación actual. El estado puede ser Failed, completed o In Progress.
+
+* *Tiempo de inicio de la operación*
++
+La fecha y la hora en que se inició la operación.
+
+* *Tiempo de finalización de la operación*
++
+La fecha y la hora en que finalizó la operación.
+
+* *Descripción*
++
+Cualquier mensaje relacionado con la operación.
+
+

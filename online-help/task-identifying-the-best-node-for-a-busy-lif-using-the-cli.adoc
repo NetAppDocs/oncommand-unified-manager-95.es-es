@@ -1,0 +1,43 @@
+---
+permalink: online-help/task-identifying-the-best-node-for-a-busy-lif-using-the-cli.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede ver información sobre todos los puertos de un clúster. Puede ver información como la función de puerto de red \(clúster, datos o administración de nodo\), el estado de enlace, la unidad de transmisión máxima \(MTU\), la configuración de velocidad y el estado operativo y el grupo de interfaces del puerto, si procede.' 
+---
+= Identificar el mejor nodo para una LIF ocupada mediante la CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver información sobre todos los puertos de un clúster. Puede ver información, como el rol de puerto de red (clúster, datos o gestión de nodos), el estado del enlace, la unidad de transmisión máxima (MTU), la configuración de velocidad y el estado operativo, y el grupo de interfaces del puerto, si corresponde.
+
+
+
+== Pasos
+
+. Para mostrar la información del puerto, escriba el siguiente comando: `network port show`
++
+El siguiente ejemplo muestra información sobre los puertos de red que tienen un rol de datos y están activos en el clúster:
+
++
+[listing]
+----
+cluster1::> network port show  -role data -link up
+                                   Auto-Negot Duplex      Speed (Mbps)
+Node Port Role         Link  MTU   Admin/Oper Admin/Oper  Admin/Oper
+---- ---- -----        ----  ----  ---------- ----------  ----------
+node1
+     e0M  data         up    1500  true/true  full/full   auto/100
+     e0b  data         up    1500  true/true  full/full   auto/1000
+
+node2
+     e0b  data         up    1500  true/true  full/full   auto/1000
+----
+. Compruebe los puertos de destino que están en la misma red que el puerto de inicio y el nodo raíz de origen.
++
+Por ejemplo, el puerto de inicio y el nodo de inicio de destino deben estar en la misma VLAN cuando corresponda.
+
+. Para identificar el puerto con menor actividad, elija un puerto de datos que tenga el menor número de conexiones.
+

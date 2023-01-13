@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-managing-alerts.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible configurar alertas para que envíen notificaciones automáticamente cuando se produzcan eventos o eventos específicos de determinados tipos de gravedad. También puede asociar una alerta a un script que se ejecuta cuando se activa una alerta. 
+---
+= Gestión de alertas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar alertas para que envíen notificaciones automáticamente cuando se produzcan eventos o eventos específicos de determinados tipos de gravedad. También puede asociar una alerta a un script que se ejecuta cuando se activa una alerta.

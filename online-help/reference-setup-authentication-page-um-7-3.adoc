@@ -1,0 +1,18 @@
+---
+permalink: online-help/reference-setup-authentication-page-um-7-3.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar la página Configuración/autenticación para configurar Unified Manager a fin de autenticar usuarios remotos que intentan iniciar sesión en la interfaz de usuario web de Unified Manager. 
+---
+= Página Configuración/autenticación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la página Configuración/autenticación para configurar Unified Manager a fin de autenticar usuarios remotos que intentan iniciar sesión en la interfaz de usuario web de Unified Manager.
+
+Mediante la página autenticación remota, puede configurar Unified Manager para que se comunique con el servidor de autenticación con el fin de autenticar usuarios remotos.
+
+Mediante la página autenticación SAML, es posible configurar Unified Manager para que se comunique con un proveedor de identidades (IDP) seguro con el fin de autenticar usuarios remotos.

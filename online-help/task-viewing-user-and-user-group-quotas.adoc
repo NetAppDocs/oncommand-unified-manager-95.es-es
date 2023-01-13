@@ -1,0 +1,28 @@
+---
+permalink: online-help/task-viewing-user-and-user-group-quotas.html 
+sidebar: sidebar 
+keywords:  
+summary: En la página del inventario Health/Storage Virtual Machines, se muestra información sobre las cuotas de usuarios y grupos de usuarios que se configuran en la SVM. Puede ver el nombre del usuario o grupo de usuarios, los límites establecidos en los discos y archivos, el espacio utilizado en disco y archivo y la dirección de correo electrónico para la notificación. 
+---
+= Visualización de cuotas de usuarios y grupos de usuarios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página del inventario Health/Storage Virtual Machines, se muestra información sobre las cuotas de usuarios y grupos de usuarios que se configuran en la SVM. Puede ver el nombre del usuario o grupo de usuarios, los límites establecidos en los discos y archivos, el espacio utilizado en disco y archivo y la dirección de correo electrónico para la notificación.
+
+
+
+== Antes de empezar
+
+Para realizar esta tarea, debe tener uno de los siguientes roles: Operador, administrador de OnCommand o administrador de almacenamiento.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Salud* > *SVM*.
+. En la página de inventario *Health/Storage Virtual Machines*, seleccione una SVM y, a continuación, haga clic en la pestaña *User and Group Quotas*.
+

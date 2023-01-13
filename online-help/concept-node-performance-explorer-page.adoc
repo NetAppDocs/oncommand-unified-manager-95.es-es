@@ -1,0 +1,31 @@
+---
+permalink: online-help/concept-node-performance-explorer-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Performance/Node Explorer proporciona una descripción general detallada del rendimiento de todos los nodos de un clúster. 
+---
+= Página Performance/Node Explorer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Performance/Node Explorer proporciona una descripción general detallada del rendimiento de todos los nodos de un clúster.
+
+La página Performance/Node Explorer le permite realizar un seguimiento y comparar el rendimiento de los nodos durante un período de tiempo específico, lo que le ayuda a resolver problemas y a ajustar el rendimiento de sus nodos.
+
+Con la funcionalidad Ver y comparar, puede comparar el rendimiento de este nodo con:
+
+* otros nodos en el mismo clúster
+* los agregados en el nodo
+* los puertos del nodo
+
+
+La página Performance/Node Explorer le permite:
+
+* Ver los problemas relacionados con los umbrales y sus detalles
+* Realice un seguimiento y compare los datos de rendimiento de los nodos
+* Investigar y solucionar problemas relacionados con los umbrales
+* Investigue y solucione problemas de rendimiento
+

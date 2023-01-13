@@ -1,0 +1,153 @@
+---
+permalink: online-help/reference-aggregate-thresholds-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Configuration/Health Thresholds de aggregates permite configurar valores de umbral de estado global para agregados supervisados. Al configurar las opciones globalmente, se modifican los valores predeterminados de todos los objetos. Sin embargo, si los valores predeterminados se han cambiado a nivel de objeto, los valores globales no se modifican. 
+---
+= Página Configuration/Health Thresholds de Aggregates
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Configuration/Health Thresholds de aggregates permite configurar valores de umbral de estado global para agregados supervisados. Al configurar las opciones globalmente, se modifican los valores predeterminados de todos los objetos. Sin embargo, si los valores predeterminados se han cambiado a nivel de objeto, los valores globales no se modifican.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+Los eventos se generan cuando se incumple un umbral. Puede tomar acciones correctivas para tales eventos.
+
+Los valores de umbral no son aplicables al agregado raíz del nodo.
+
+Puede establecer umbrales de estado del agregado para los siguientes fines: Capacidad, crecimiento del agregado y copias Snapshot agregadas.
+
+
+
+== Área Capacity
+
+El área de capacidad permite establecer las siguientes condiciones de umbral de capacidad del agregado. Tenga en cuenta que cuando se habilita la opción Autofila en los volúmenes que residen en el agregado, los umbrales de capacidad del agregado se consideran sin infracción en función del tamaño máximo del volumen establecido por el crecimiento automático, no según el tamaño del volumen original.
+
+* * Espacio casi lleno*
++
+Especifica el porcentaje en el que se considera que un agregado está casi lleno:
+
++
+** Valor predeterminado: 80 %
++
+El valor de este umbral debe ser inferior al valor del umbral completo agregado para que el servidor de gestión genere un evento.
+
+** Evento generado: Agregado casi completo
+** Gravedad del evento: Advertencia
+
+
+* * Espacio lleno*
++
+Especifica el porcentaje en el que se considera que un agregado está completo:
+
++
+** Valor predeterminado: 90 %
+** Evento generado: Agregado completo
+** Gravedad del evento: Error
+
+
+* * Casi sobrecomprometido*
++
+Especifica el porcentaje en el que se considera que un agregado está casi sobrecargado:
+
++
+** Valor predeterminado: 95 %
++
+El valor de este umbral debe ser inferior al valor para que el umbral de exceso de compromiso total del agregado para que el servidor de gestión genere un evento.
+
+** Evento generado: Agregado casi comprometido
+** Gravedad del evento: Advertencia
+
+
+* *Sobrecomprometidos*
++
+Especifica el porcentaje en el que se considera que un agregado está sobrecargado:
+
++
+** Valor predeterminado: 100 %
+** Evento generado: Sobrecompromiso de agregado
+** Gravedad del evento: Error
+
+
+* *Días hasta Full*
++
+Especifica la cantidad de días que queda para que el agregado alcance la capacidad completa:
+
++
+** Valor predeterminado: 7
+** Evento generado: Agregue los días restantes hasta que esté completo
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Área de crecimiento
+
+El área de crecimiento le permite establecer las siguientes condiciones de umbral para el crecimiento del agregado:
+
+* *Tasa de crecimiento*
++
+Especifica el porcentaje al que se considera normal la tasa de crecimiento de un agregado antes de que el sistema genere un evento anormal de la tasa de crecimiento agregada:
+
++
+** Valor predeterminado: 1 por ciento
+** Evento generado: Tasa de crecimiento agregado anormal
+** Gravedad del evento: Advertencia
+
+
+* *Sensibilidad de la tasa de crecimiento*
++
+Especifica el factor que se aplica a la desviación estándar de la tasa de crecimiento de un agregado. Si la tasa de crecimiento supera la desviación estándar ponderada, se genera un evento anormal de tasa de crecimiento agregado.
+
++
+Un valor más bajo para la sensibilidad a la tasa de crecimiento indica que el agregado es altamente sensible a los cambios en la tasa de crecimiento. El rango para la sensibilidad de la tasa de crecimiento es de 1 a 5.
+
++
+** Valor predeterminado: 2
+
+
++
+[NOTE]
+====
+Si modifica la sensibilidad de la tasa de crecimiento para los agregados en el nivel de umbral global, el cambio también se aplica a la sensibilidad de la tasa de crecimiento para los volúmenes en el nivel de umbral global.
+
+====
+
+
+
+
+== Área Snapshot copies
+
+El área Snapshot copies le permite establecer las siguientes condiciones de umbral de reserva de Snapshot:
+
+* *Reserva Snapshot completa*
++
+Especifica el porcentaje en el que un agregado ha consumido todo el espacio reservado para las copias Snapshot:
+
++
+** Valor predeterminado: 90 %
+** Evento generado: Reserva de Snapshot de agregado completa
+** Gravedad del evento: Advertencia
+
+
+
+
+
+
+== Botones de comando
+
+* *Restaurar valores predeterminados de fábrica*
++
+Le permite restaurar los ajustes de configuración a los valores predeterminados de fábrica.
+
+* *Guardar*
++
+Guarda los ajustes de configuración de la opción seleccionada.
+
+

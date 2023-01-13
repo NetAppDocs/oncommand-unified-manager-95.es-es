@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept-what-the-maintenance-user-does.html 
+sidebar: sidebar 
+keywords:  
+summary: El usuario de mantenimiento se crea durante la instalación de Unified Manager en un sistema Red Hat Enterprise Linux o CentOS. El nombre de usuario de mantenimiento es el usuario “umadmin”. El usuario de mantenimiento tiene el rol de administrador de OnCommand en la interfaz de usuario web, y ese usuario puede crear usuarios posteriores y asignarles roles. 
+---
+= Lo que hace el usuario de mantenimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El usuario de mantenimiento se crea durante la instalación de Unified Manager en un sistema Red Hat Enterprise Linux o CentOS. El nombre de usuario de mantenimiento es el usuario "'umadmin'". El usuario de mantenimiento tiene el rol de administrador de OnCommand en la interfaz de usuario web, y ese usuario puede crear usuarios posteriores y asignarles roles.
+
+El usuario de mantenimiento, o el usuario umadmin, también puede acceder a la consola de mantenimiento de Unified Manager.

@@ -1,0 +1,14 @@
+---
+permalink: online-help/concept-how-object-status-is-computed.html 
+sidebar: sidebar 
+keywords:  
+summary: El estado del objeto está determinado por el evento más grave que actualmente tiene un estado Nuevo o reconocido. Por ejemplo, si el estado de un objeto es error, uno de los eventos del objeto tiene un tipo de gravedad de error. Cuando se ha realizado la acción correctiva, el estado del evento pasa a resuelto. 
+---
+= Cómo se calcula el estado del objeto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El estado del objeto está determinado por el evento más grave que actualmente tiene un estado Nuevo o reconocido. Por ejemplo, si el estado de un objeto es error, uno de los eventos del objeto tiene un tipo de gravedad de error. Cuando se ha realizado la acción correctiva, el estado del evento pasa a resuelto.

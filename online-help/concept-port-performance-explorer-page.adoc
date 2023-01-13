@@ -1,0 +1,41 @@
+---
+permalink: online-help/concept-port-performance-explorer-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Performance/Port Explorer proporciona una descripción general detallada del rendimiento de todos los puertos de un clúster. 
+---
+= Explorador de rendimiento/puerto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Performance/Port Explorer proporciona una descripción general detallada del rendimiento de todos los puertos de un clúster.
+
+[NOTE]
+====
+Los valores de contador de rendimiento solo se muestran para los puertos físicos. Los valores de contador no se muestran para las VLAN ni los grupos de interfaces.
+
+====
+La página Performance/Port Explorer le permite realizar un seguimiento y comparar el rendimiento de los puertos durante un período de tiempo específico, lo que le ayuda a solucionar problemas y ajustar el rendimiento de su puerto.
+
+Con la funcionalidad Ver y comparar puede comparar el rendimiento de este puerto con:
+
+* otros puertos en el mismo nodo
+* el nodo en el que reside el puerto
+* LIF que están en el puerto
+
+
+[NOTE]
+====
+Cuando se realiza un filtrado con la opción «'LIF en este puerto», solo se muestran las LIF de clúster y datos. No se muestra ninguna LIF de interconexión de clústeres.
+
+====
+La página Performance/Port Explorer le permite:
+
+* Ver los problemas relacionados con los umbrales y sus detalles
+* Realice un seguimiento y compare los datos de rendimiento del puerto
+* Investigar y solucionar problemas relacionados con los umbrales
+* Investigue y solucione problemas de rendimiento
+

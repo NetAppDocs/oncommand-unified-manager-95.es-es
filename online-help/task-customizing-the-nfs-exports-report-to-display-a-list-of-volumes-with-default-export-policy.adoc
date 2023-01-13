@@ -1,0 +1,37 @@
+---
+permalink: online-help/task-customizing-the-nfs-exports-report-to-display-a-list-of-volumes-with-default-export-policy.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el informe de exportaciones de NFS para mostrar una lista de volúmenes con política de exportación predeterminada. 
+---
+= Personalización del informe de exportaciones de NFS para mostrar una lista de volúmenes con política de exportación predeterminada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el informe de exportaciones de NFS para mostrar una lista de volúmenes con política de exportación predeterminada.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster o volumen, realice los siguientes pasos:
++
+.. Haga clic en las columnas que deben desagruparse.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para filtrar volúmenes con la directiva de exportación predeterminada, haga clic en la columna *Política de exportación* y abra el cuadro de diálogo *filtro* haciendo clic en image:../media/click-to-filter.gif[""] .
+. En la lista *condición*, seleccione *igual a*.
+. Haga clic en *Seleccionar valores* y seleccione *predeterminado*.
+. Haga clic en *Aceptar*.
+

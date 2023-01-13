@@ -1,0 +1,58 @@
+---
+permalink: online-help/concept-cluster-components-and-why-they-can-be-in-contention.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede identificar los problemas de rendimiento del clúster cuando un componente del clúster entra en disputa. El rendimiento de las cargas de trabajo de volúmenes que utilizan el componente disminuye y aumenta su tiempo de respuesta \(latencia\) para las solicitudes del cliente, lo que activa un evento en Unified Manager.' 
+---
+= Los componentes del clúster y el motivo por los que pueden estar en contención
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede identificar los problemas de rendimiento del clúster cuando un componente del clúster entra en disputa. El rendimiento de las cargas de trabajo de volúmenes que utilizan el componente disminuye y aumenta su tiempo de respuesta (latencia) para las solicitudes de clientes, lo que activa un evento en Unified Manager.
+
+Un componente que está en disputa no puede ejecutarse en un nivel óptimo. Su rendimiento ha disminuido, y el rendimiento de otros componentes del clúster y las cargas de trabajo, llamado _Victimas_, puede haber aumentado la latencia. Para eliminar un componente de la contención, debe reducir su carga de trabajo o aumentar su capacidad para gestionar más trabajo, de modo que el rendimiento pueda volver a los niveles normales. Dado que Unified Manager recopila y analiza el rendimiento de la carga de trabajo en intervalos de cinco minutos, solo detecta cuando un componente de clúster se utiliza de forma coherente en exceso. No se detectan picos transitorios de sobreutilización que duran solo una corta duración dentro del intervalo de cinco minutos.
+
+Por ejemplo, un agregado de almacenamiento puede ser objeto de disputa porque una o más cargas de trabajo en él están compitiendo por sus solicitudes de I/O. Otras cargas de trabajo del agregado pueden verse afectadas, lo que provoca una disminución del rendimiento. Para reducir la cantidad de actividad del agregado, hay diferentes pasos que se pueden realizar, como mover una o más cargas de trabajo a un agregado menos ocupado, para reducir la demanda general de la carga de trabajo en el agregado actual. En el caso de un grupo de políticas de calidad de servicio, puede ajustar el límite de rendimiento o mover cargas de trabajo a otro grupo de políticas, de modo que las cargas de trabajo ya no se aceleren.
+
+Unified Manager supervisa los siguientes componentes del clúster para alertarle cuando los hay en disputa:
+
+* *Red*
++
+Representa el tiempo de espera de las solicitudes de I/o de los protocolos de iSCSI o los protocolos de Fibre Channel (FC) en el clúster. El tiempo de espera transcurrido para que las transacciones iSCSI Ready to Transfer (R2T) o FCP Transfer Ready (XFER_RDY) finalicen antes de que el clúster pueda responder a una solicitud de I/O. Si el componente de red es objeto de disputa, significa que un tiempo de espera elevado en la capa de protocolo de bloqueo está afectando a la latencia de una o más cargas de trabajo.
+
+* *Procesamiento de red*
++
+Representa el componente de software del clúster involucrado en el procesamiento de I/o entre la capa de protocolo y el clúster. Es posible que el nodo que gestiona el procesamiento de red haya cambiado desde que se detectó el evento. Si el componente de red es objeto de disputa, significa que un uso elevado en el nodo de procesamiento de red está afectando a la latencia de una o más cargas de trabajo.
+
+* *Política de QoS*
++
+Representa el grupo de políticas de calidad de servicio del almacenamiento al que pertenece la carga de trabajo. Si el componente del grupo de políticas es objeto de disputa, significa que el límite de rendimiento establecido está acelerando todas las cargas de trabajo del grupo de políticas, lo que afecta a la latencia de una o más cargas de trabajo.
+
+* *Interconexión en cluster*
++
+Representa los cables y los adaptadores que conectan de forma física los nodos en clúster. Si el componente de interconexión del clúster es objeto de disputa, significa que un tiempo de espera elevado para las solicitudes de I/o en la interconexión del clúster está afectando a la latencia de una o más cargas de trabajo.
+
+* *Procesamiento de datos*
++
+Representa el componente de software del clúster involucrado en el procesamiento de I/o entre el clúster y el agregado de almacenamiento que contiene la carga de trabajo. Es posible que el nodo que gestiona el procesamiento de datos haya cambiado desde que se detectó el evento. Si el componente de procesamiento de datos es objeto de disputa, significa que un uso elevado en el nodo de procesamiento de datos está afectando a la latencia de una o más cargas de trabajo.
+
+* *Recursos de MetroCluster*
++
+Representa los recursos de MetroCluster, incluidos NVRAM y los vínculos interswitch (ISL), que se usan para reflejar datos entre los clústeres de una configuración de MetroCluster. Si el componente MetroCluster es objeto de disputa, significa que el alto rendimiento de escritura de las cargas de trabajo del clúster local o un problema de estado del enlace afectan a la latencia de una o más cargas de trabajo del clúster local. Si el clúster no está en una configuración MetroCluster, este icono no se muestra.
+
+* *Operaciones globales o agregados de SSD*
++
+Representa el agregado de almacenamiento en el que se ejecutan las cargas de trabajo. Si el componente de agregado es objeto de disputa, significa que un uso elevado en el agregado está afectando a la latencia de una o más cargas de trabajo. Un agregado está formado por todos los HDD, o una combinación de HDD y SSD (un agregado de Flash Pool). Un «agregado SD» está compuesto por todos los SSD (un agregado all-flash) o una combinación de SSD y un nivel de cloud (un agregado de FabricPool).
+
+* *Latencia de cloud*
++
+Representa el componente de software del clúster involucrado en el procesamiento de I/o entre el clúster y el nivel de cloud en el que se almacenan los datos del usuario. Si el componente de latencia del cloud es objeto de disputa, significa que una gran cantidad de lecturas de volúmenes que están alojados en el nivel de cloud están afectando a la latencia de una o más cargas de trabajo.
+
+* *SnapMirror* sincronizado
++
+Representa el componente de software del clúster involucrado en la replicación de datos de usuario del volumen primario al secundario en una relación de SnapMirror Synchronous. Si el componente Sync SnapMirror es objeto de disputa, significa que la actividad de las operaciones de SnapMirror Synchronous está afectando a la latencia de una o más cargas de trabajo.
+
+

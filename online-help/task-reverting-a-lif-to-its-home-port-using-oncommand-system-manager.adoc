@@ -1,0 +1,38 @@
+---
+permalink: online-help/task-reverting-a-lif-to-its-home-port-using-oncommand-system-manager.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede revertir un LIF desde su puerto actual a su puerto raíz después de una recuperación tras fallos o una migración a otro puerto, ya sea de forma manual o automática. Para hacerlo, puede usar System Manager de OnCommand. 
+---
+= Revertir una LIF a su puerto inicial mediante System Manager de OnCommand
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede revertir un LIF desde su puerto actual a su puerto raíz después de una recuperación tras fallos o una migración a otro puerto, ya sea de forma manual o automática. Para hacerlo, puede usar System Manager de OnCommand.
+
+
+
+== Acerca de esta tarea
+
+Al crear una LIF, el administrador especifica un puerto de inicio y un nodo de inicio que se utilizarán como la ubicación preferida de la LIF. Si el nodo raíz no está disponible o el puerto raíz experimenta una interrupción del enlace físico, este se migra automáticamente a una nueva ubicación. La nueva ubicación se informa, en el Administrador del sistema de OnCommand, por ejemplo, como el puerto actual de la LIF. A menos que la opción de reversión automática esté habilitada, el LIF se mantendrá en esta nueva ubicación hasta que se revierta.
+
+
+
+== Pasos
+
+. Abra el Administrador del sistema de OnCommand.
+. En la ficha *Inicio*, haga doble clic en el sistema de almacenamiento.
+. En el panel de navegación, expanda la jerarquía *Storage Virtual Machines*.
+. En el panel de navegación, seleccione la SVM y haga clic en *Configuración* > *interfaces de red*.
+. Busque LIF de datos que muestren un icono de casa con una Marca de cruz roja, en la columna *Puerto actual*, como en la siguiente imagen.
++
+image::../media/systemmgr-lifs-networkinterfaces-jpg.gif[Vista Network interfaces]
+
+. Seleccione la LIF y haga clic en *Enviar a la página principal*.
++
+Esta opción sólo se habilita cuando la interfaz seleccionada se aloja en un puerto que no es de origen y cuando el puerto de inicio está disponible.
+
+

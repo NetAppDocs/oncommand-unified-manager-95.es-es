@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept-monitor-cluster-object-navigation.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager le permite supervisar el rendimiento de todos los objetos en cualquier clúster gestionado por Unified Manager. La supervisión de objetos de almacenamiento le proporciona una descripción general del rendimiento del clúster y los objetos, e incluye supervisión de eventos de rendimiento. Es posible ver los eventos y el rendimiento a un nivel alto o estudiar aún más detalles sobre los eventos de rendimiento y rendimiento de objetos. 
+---
+= Supervise la navegación de objetos del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager le permite supervisar el rendimiento de todos los objetos en cualquier clúster gestionado por Unified Manager. La supervisión de objetos de almacenamiento le proporciona una descripción general del rendimiento del clúster y los objetos, e incluye supervisión de eventos de rendimiento. Es posible ver los eventos y el rendimiento a un nivel alto o estudiar aún más detalles sobre los eventos de rendimiento y rendimiento de objetos.
+
+Este es un ejemplo de muchas posibles navegaciones de objetos de clúster:
+
+. En la página Dashboards/Performance, identifique un clúster que desea investigar y navegue hasta la página de destino del clúster seleccionado.
+. En la página Performance/Cluster Summary, identifique el objeto de clúster que desea investigar y desplácese hasta la página de inventario de ese objeto. En este ejemplo, se selecciona *Volumes* para mostrar la página de inventario Performance/Volumes.
+
+
+image::../media/monitor-cluster-object.gif[supervise el objeto de clúster]

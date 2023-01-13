@@ -1,0 +1,68 @@
+---
+permalink: online-help/reference-qtree-capacity-fields.html 
+sidebar: sidebar 
+keywords:  
+summary: El informe de capacidad y utilización de Qtree permite analizar la capacidad y utilización de los qtrees del sistema para comprender los posibles riesgos que podrían producirse debido a la reducción de la capacidad del clúster. 
+---
+= Informe Qtree Capacity and Utilization
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El informe Qtree Capacity and Utilization permite analizar la capacidad y el uso de los qtrees del sistema para comprender los posibles riesgos que pueden producirse debido a la reducción de la capacidad del clúster.
+
+
+
+== Vista de tabla de informes de capacidad y utilización de Qtree
+
+* *Cluster*
++
+Muestra el nombre del clúster que contiene el qtree.
+
+* *Máquina virtual de almacenamiento*
++
+Muestra el nombre de la máquina virtual de almacenamiento (SVM) que contiene el qtree.
+
+* *Volumen*
++
+Muestra el nombre del volumen que contiene el qtree.
+
+* *Qtree*
++
+Muestra el nombre del qtree.
+
+* *Tipo de cuota*
++
+Especifica si la cuota es para un usuario, un grupo de usuarios o un qtree.
+
+* *Usuario o Grupo*
++
+Muestra el nombre del usuario o del grupo de usuarios. Habrá varias filas para cada usuario y grupo de usuarios. Cuando el tipo de cuota es Qtree, se muestra _not applicable_. Si no se establece la cuota, la columna estará vacía.
+
+* *Disco utilizado %*
++
+Muestra el porcentaje de espacio en disco utilizado. Si se establece un límite de disco duro, este valor se basa en el límite de disco duro. Si la cuota se establece sin un límite duro de disco, el valor se basa en el espacio de datos de volumen. Si no se establece la cuota o si las cuotas están desactivadas en el volumen al que pertenece el qtree, se muestra _not applicable_.
+
+* *Límite de disco duro*
++
+Muestra el espacio máximo en disco asignado al qtree. Unified Manager genera un evento crítico cuando se alcanza este límite y no se permiten más escrituras de disco. El valor se muestra como _Unlimited_ si la cuota se establece sin un límite duro de disco, si no se establece la cuota o si las cuotas están desactivadas en el volumen al que pertenece el qtree.
+
+* *Límite de software de disco*
++
+Muestra el espacio en disco asignado al qtree antes de que se genere un evento de advertencia. El valor se muestra como _Unlimited_ si la cuota se establece sin un límite de software de disco, si no se establece la cuota o si las cuotas están desactivadas en el volumen al que pertenece el qtree.
+
+* *Archivos usados %*
++
+Muestra el porcentaje de archivos usados en el qtree. Si se establece el límite duro del archivo, este valor se basa en el límite duro del archivo. El valor se muestra como _not applicable_ si no se establece la cuota, o si la cuota se establece sin un límite rígido de archivos o si las cuotas están desactivadas en el volumen al que pertenece el qtree.
+
+* *Límite duro de archivos*
++
+Muestra el límite rígido para el número de archivos permitidos en los qtrees. El valor se muestra como _Unlimited_ si la cuota se establece sin un límite duro de archivo, si no se establece la cuota o si las cuotas están desactivadas en el volumen al que pertenece el qtree.
+
+* *Límite de software de archivo*
++
+Muestra el límite soft del número de archivos permitidos en los qtrees. El valor se muestra como _Unlimited_ si la cuota se establece sin un límite de software de archivo, si no se establece la cuota o si las cuotas están desactivadas en el volumen al que pertenece el qtree.
+
+

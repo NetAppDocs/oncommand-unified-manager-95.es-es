@@ -1,0 +1,26 @@
+---
+permalink: online-help/concept-use-qos-policy-settings-to-prioritize-the-work-on-this-node.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede establecer un límite en un grupo de políticas de calidad de servicio para controlar las operaciones de I/o por segundo \(IOPS\) o el límite de rendimiento de Mbps para las cargas de trabajo en las que contenga. Si las cargas de trabajo se encuentran en un grupo de políticas sin un límite establecido, como el grupo de políticas predeterminado, o el límite establecido no cumple con sus necesidades, puede aumentar el límite establecido o mover las cargas de trabajo a un grupo de políticas nuevo o existente que tenga el límite deseado.' 
+---
+= Utilice la configuración de la política de calidad de servicio para priorizar el trabajo de este nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible establecer un límite en un grupo de políticas de calidad de servicio para controlar las operaciones de I/o por segundo (IOPS) o el límite de rendimiento de Mbps para las cargas de trabajo en las que contenga. Si las cargas de trabajo se encuentran en un grupo de políticas sin un límite establecido, como el grupo de políticas predeterminado, o el límite establecido no cumple con sus necesidades, puede aumentar el límite establecido o mover las cargas de trabajo a un grupo de políticas nuevo o existente que tenga el límite deseado.
+
+Si un evento de rendimiento de un nodo se debe a que las cargas de trabajo utilizan excesivamente los recursos de nodo, la descripción del evento de la página de detalles Event muestra un enlace a la lista de volúmenes implicados. En la página Performance/Volumes, es posible ordenar los volúmenes afectados por IOPS y Mbps para ver qué cargas de trabajo tienen el uso más alto que podría haber contribuido al evento.
+
+Al asignar los volúmenes que están utilizando en exceso los recursos del nodo a una configuración de grupo de políticas más restrictiva, el grupo de políticas limita las cargas de trabajo a restringir su actividad, lo que puede reducir el uso de los recursos en ese nodo.
+
+Puede usar los comandos de OnCommand System Manager o ONTAP para gestionar los grupos de políticas, incluidas las siguientes tareas:
+
+* Crear un grupo de políticas
+* Agregar o eliminar cargas de trabajo en un grupo de políticas
+* Mover una carga de trabajo entre grupos de políticas
+* Cambiar el límite de rendimiento de un grupo de políticas
+

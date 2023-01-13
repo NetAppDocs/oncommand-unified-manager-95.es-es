@@ -1,0 +1,30 @@
+---
+permalink: online-help/task-customizing-the-events-report-to-display-top-most-discussed-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible personalizar el informe Events para mostrar los eventos que se más describen. 
+---
+= Personalización del informe Events para mostrar los eventos principales tratados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar el informe Events para mostrar los eventos que se más describen.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para ordenar los eventos que más se discuten, haga clic en la columna *Notas* y haga clic en image:../media/click-to-see-menu.gif[""] .
+. Seleccione *filtro* > *Arriba/abajo N*.
+. En el cuadro de diálogo *Arriba/abajo N*, seleccione *Arriba N* en el campo *filtro* e introduzca un valor en el campo de texto.
+. Haga clic en *Aceptar*.
+

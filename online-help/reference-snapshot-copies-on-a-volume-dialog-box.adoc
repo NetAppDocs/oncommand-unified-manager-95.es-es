@@ -1,0 +1,69 @@
+---
+permalink: online-help/reference-snapshot-copies-on-a-volume-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar el cuadro de diálogo Snapshot Copies on a Volume para ver la lista de copias Snapshot. Puede eliminar una copia Snapshot para conservar o liberar espacio en disco, o si ya no se necesita dicha copia. También puede calcular la cantidad de espacio en disco que se puede reclamar si se eliminan una o más copias Snapshot. 
+---
+= Cuadro de diálogo Snapshot Copies on a Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar el cuadro de diálogo Snapshot Copies on a Volume para ver la lista de copias Snapshot. Puede eliminar una copia Snapshot para conservar o liberar espacio en disco, o si ya no se necesita dicha copia. También puede calcular la cantidad de espacio en disco que se puede reclamar si se eliminan una o más copias Snapshot.
+
+
+
+== Vista de lista
+
+La vista de lista muestra, en una tabla de resultados, información sobre las copias Snapshot en el volumen. Puede utilizar los filtros de columnas para personalizar los datos que se muestran.
+
+* *Copia snapshot*
++
+Muestra el nombre de la copia Snapshot.
+
+* *Espacio utilizado %*
++
+Muestra, en porcentaje, el espacio total utilizado por la copia Snapshot en el volumen.
+
+* *Tamaño total*
++
+Muestra el tamaño total de la copia Snapshot.
+
+* *Tiempo de creación*
++
+Muestra la Marca de tiempo cuando se creó la copia Snapshot.
+
+* *Dependencia*
++
+Muestra las aplicaciones que dependen de la copia Snapshot. Los valores posibles son SnapMirror, SnapVault, SnapLock, volcado, LUN, Vclone, y está ocupado.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Calcular*
++
+Permite calcular el espacio que puede reclamarse eliminando una o varias copias de Snapshot.
+
+* *Borrar seleccionado*
++
+Elimina una o más copias Snapshot.
+
+* *Cerrar*
++
+Cierra el cuadro de diálogo copias Snapshot en un volumen.
+
+* *Recalcular*
++
+Permite calcular el espacio que se puede reclamar eliminando las copias de Snapshot seleccionadas.
+
++
+El botón *Recalcular* se activa al realizar cualquier cambio en la selección de las copias Snapshot.
+
+

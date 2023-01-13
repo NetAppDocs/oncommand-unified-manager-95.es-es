@@ -1,0 +1,82 @@
+---
+permalink: online-help/reference-performance-all-luns-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La página del inventario Performance/LUN muestra una descripción general de los eventos de rendimiento, los datos y la información de configuración de cada LUN que supervisa una instancia de Unified Manager. Esto le permite supervisar rápidamente el rendimiento de sus LUN y solucionar problemas de rendimiento y eventos de umbral. 
+---
+= Página del inventario Performance/LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página del inventario Performance/LUN muestra una descripción general de los eventos de rendimiento, los datos y la información de configuración de cada LUN que supervisa una instancia de Unified Manager. Esto le permite supervisar rápidamente el rendimiento de sus LUN y solucionar problemas de rendimiento y eventos de umbral.
+
+En función de cómo vaya a esta página, la parte superior de la página puede mostrar un título diferente para indicar si la lista se ha filtrado. Por ejemplo, cuando se muestran todas las LUN, el título es «'LUN'». Al mostrar un subconjunto de LUN que se devuelve en la página Threshold Policies, el título es "'LUN en las que se aplica la política: LUN_IOPS'".
+
+Los botones de la parte superior de la página permiten realizar búsquedas para localizar datos específicos, crear y aplicar filtros para restringir la lista de datos mostrados, exportar los datos de la página a un `.csv` y agregue o elimine columnas de la página.
+
+De forma predeterminada, los objetos de las páginas de inventario de objetos se ordenan en función de la importancia de evento de rendimiento del objeto. Los objetos con eventos críticos se enumeran primero y los objetos con eventos de advertencia aparecen en segundo lugar. Esto proporciona una indicación visual inmediata de los problemas que deben abordarse. Los valores de los contadores de rendimiento se basan en una media de las 72 horas de datos anteriores o más, como se indica en la página. Puede hacer clic en el botón Refresh para actualizar los datos de inventario de objetos.
+
+Puede asignar directivas de umbral de rendimiento a cualquier objeto de las páginas de inventario de objetos o borrar directivas de umbral mediante los botones *asignar directiva de umbral de rendimiento* y *Borrar directiva de umbral de rendimiento*.
+
+
+
+== Columnas de la página del inventario de LUN
+
+La página del inventario Performance/LUN contiene las siguientes columnas para cada LUN:
+
+* *Estado*
++
+Un objeto en buen estado sin eventos activos muestra un icono de Marca de verificación verde (image:../media/sev-normal-um60.png["Icono de gravedad del evento: Normal"]). Si el objeto tiene un evento activo, el icono del indicador de evento identifica la gravedad del evento: Los eventos críticos son rojos (image:../media/sev-critical-um60.png["Icono para la gravedad del evento: Crucial"]), los eventos de error son naranjas (image:../media/sev-error-um60.png["Icono para la gravedad del evento: Error"]), y los sucesos de advertencia son amarillos (image:../media/sev-warning-um60.png["Icono de gravedad del evento: Advertencia"]).
+
+* *LUN*
++
+Puede hacer clic en el nombre de la LUN para ir a la página de detalles de rendimiento de esa LUN.
+
+* *Latencia*
++
+El tiempo de respuesta medio para todas las solicitudes de I/o, expresado en milisegundos por operación.
+
+* *IOPS*
++
+Las operaciones de entrada/salida por segundo para la LUN.
+
+* *Mbps*
++
+El rendimiento en la LUN, medido en megabytes por segundo.
+
+* *Capacidad libre*
++
+La capacidad de almacenamiento sin utilizar del LUN, en gigabytes.
+
+* *Capacidad total*
++
+La capacidad de almacenamiento total del LUN, en gigabytes.
+
+* *Cluster*
++
+El clúster al que pertenece la LUN. Puede hacer clic en el nombre del clúster para ir a la página de detalles de ese clúster.
+
+* *Nodo*
++
+El nodo al que pertenece la LUN. Puede hacer clic en el nombre del nodo para ir a la página de detalles de ese nodo.
+
+* *SVM*
++
+La máquina virtual de almacenamiento (SVM) a la que pertenece el LUN. Puede hacer clic en el nombre de la SVM para desplazarse a la página de detalles de esa SVM.
+
+* *Agregado*
++
+El agregado al que pertenece la LUN. Puede hacer clic en el nombre del agregado para desplazarse a la página de detalles de ese agregado.
+
+* *Volumen*
++
+El volumen al que pertenece la LUN. Es posible hacer clic en el nombre del volumen para desplazarse a la página de detalles de ese volumen.
+
+* *Política de umbral*
++
+La política de umbral de rendimiento definida por el usuario, o políticas, que están activas en este objeto de almacenamiento. Puede colocar el cursor sobre los nombres de directivas que contienen puntos suspensivos (...). para ver el nombre completo de la directiva o la lista de nombres de directivas asignadas. Los botones *Assign Performance Threshold Policy* y *Clear Performance Threshold Policy* permanecen desactivados hasta que seleccione uno o más objetos haciendo clic en las casillas de verificación situadas en el extremo izquierdo.
+
+

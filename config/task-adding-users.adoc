@@ -1,0 +1,45 @@
+---
+permalink: config/task-adding-users.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede agregar usuarios locales o usuarios de bases de datos mediante la página Management/Users. También puede agregar usuarios o grupos remotos que pertenecen a un servidor de autenticación. Es posible asignar roles a esos usuarios y, según los privilegios de los roles, los usuarios pueden gestionar los objetos de almacenamiento y los datos con Unified Manager, o ver los datos en una base de datos. 
+---
+= Adición de usuarios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede agregar usuarios locales o usuarios de bases de datos mediante la página Management/Users. También puede agregar usuarios o grupos remotos que pertenecen a un servidor de autenticación. Es posible asignar roles a esos usuarios y, según los privilegios de los roles, los usuarios pueden gestionar los objetos de almacenamiento y los datos con Unified Manager, o ver los datos en una base de datos.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand.
+* Para agregar un usuario o grupo remoto, debe haber habilitado la autenticación remota y configurado el servidor de autenticación.
+* Si planea configurar la autenticación SAML de modo que un proveedor de identidades (IDP) autentique usuarios que acceden a la interfaz gráfica, asegúrese de que estos usuarios se definen como usuarios "relativamente".
++
+No se permite el acceso a la interfaz de usuario para usuarios de tipo "'local'" o "mantenimiento" cuando se activa la autenticación SAML.
+
+
+
+
+
+== Acerca de esta tarea
+
+Si agrega un grupo desde Windows Active Directory, todos los miembros directos y subgrupos anidados pueden autenticarse en Unified Manager, a menos que los subgrupos anidados estén deshabilitados. Si agrega un grupo desde OpenLDAP u otros servicios de autenticación, solo los miembros directos de ese grupo pueden autenticarse en Unified Manager.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *usuarios* en el menú Administración de la izquierda.
+. En la página *Administración/usuarios*, haga clic en *Agregar*.
+. En el cuadro de diálogo *Agregar usuario*, seleccione el tipo de usuario que desea agregar e introduzca la información necesaria.
++
+Al introducir la información de usuario requerida, debe especificar una dirección de correo electrónico que sea exclusiva para el usuario. Debe evitar especificar las direcciones de correo electrónico compartidas por varios usuarios.
+
+. Haga clic en *Agregar*.
+

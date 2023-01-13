@@ -1,0 +1,16 @@
+---
+permalink: online-help/concept-what-storage-capacity-health-thresholds-are.html 
+sidebar: sidebar 
+keywords:  
+summary: Un umbral de estado de la capacidad de almacenamiento es el punto en el que Unified Manager Server genera eventos para informar de cualquier problema de capacidad con los objetos de almacenamiento. Es posible configurar alertas para que envíen notificaciones cuando se produzcan dichos eventos. 
+---
+= Los umbrales del estado de la capacidad del almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un umbral de estado de la capacidad de almacenamiento es el punto en el que Unified Manager Server genera eventos para informar de cualquier problema de capacidad con los objetos de almacenamiento. Es posible configurar alertas para que envíen notificaciones cuando se produzcan dichos eventos.
+
+Los umbrales de estado de la capacidad de almacenamiento para todos los agregados, volúmenes y qtrees se establecen con los valores predeterminados. Puede cambiar la configuración según sea necesario para un objeto o un grupo de objetos.

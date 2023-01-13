@@ -1,0 +1,70 @@
+---
+permalink: online-help/reference-constituent-volume-performance-information-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilice la página Performance/Constituyente Volume Information para ver una lista de los atributos físicos y lógicos del volumen constituyente de FlexGroup. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento. 
+---
+= Página Performance/Constituyente Volume Information
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice la página Performance/Constituyente Volume Information para ver una lista de los atributos físicos y lógicos del volumen constituyente de FlexGroup. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento.
+
+
+
+== Atributos del volumen constituyente
+
+* *Tipo*
++
+Tipo de componente; bien de lectura y escritura (RW) o protección de datos (DP).
+
+* *Estilo*
++
+Estilo de volumen; este es un volumen que forma parte de un volumen FlexGroup.
+
+* *Cluster*
++
+El nombre del clúster al que pertenece este componente de FlexGroup. Puede hacer clic en el nombre para mostrar los detalles del clúster en la página Performance/Cluster Explorer.
+
+* *Agregado*
++
+Nombre del agregado en el que reside este componente de FlexGroup. Haga clic en el nombre para mostrar los detalles del agregado en la página Performance/Aggregate Explorer.
+
+* *FlexGroup*
++
+El nombre del volumen FlexGroup al que pertenece este componente. Puede hacer clic en el nombre para mostrar los detalles de los volúmenes de FlexGroup en la página Performance/FlexGroup Explorer.
+
+* *Máquina virtual de almacenamiento*
++
+Nombre de la SVM a la que pertenece este componente de FlexGroup. Puede hacer clic en el nombre para mostrar los detalles de la SVM en la página Performance/SVM Explorer.
+
+* *Política de organización en niveles*
++
+La política de organización en niveles establecida en el volumen. La política solo se ve afectada cuando se implementa el volumen en un agregado de FabricPool. Las directivas disponibles son:
+
++
+** Ninguno. Los datos para este volumen siempre permanecen en el nivel de rendimiento.
+** Solo Snapshot. Solo los datos de Snapshot se mueven automáticamente al nivel de cloud. El resto de datos permanecen en el nivel de rendimiento.
+** Backup. En los volúmenes de protección de datos, todos los datos de usuario transferidos inician en el nivel de cloud, pero las lecturas posteriores de los clientes pueden hacer que los datos activos se muevan al nivel de rendimiento.
+** Automático. Los datos de este volumen se mueven automáticamente entre el nivel de rendimiento y el nivel de cloud cuando ONTAP determina que los datos están «activos» o «inactivos».
+
+
+* *Tipo RAID*
++
+El tipo de redundancia que se utiliza en el agregado en el que reside este componente. Tipos posibles:
+
++
+** RAID0
+** RAID4
+** RAID-DP
+** RAID-TEC
+
+
+* *Capacidad (libre/total)*
++
+El almacenamiento total disponible en el componente, en gigabytes y la cantidad de almacenamiento disponible actualmente.
+
+

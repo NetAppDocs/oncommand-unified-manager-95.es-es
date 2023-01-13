@@ -1,0 +1,32 @@
+---
+permalink: online-help/concept-understanding-svm-associations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Las asociaciones de máquina virtual de almacenamiento \(SVM\) son asignaciones de una SVM de origen a una SVM de destino que utilizan las aplicaciones partner para la selección de recursos y el aprovisionamiento de volúmenes secundarios.' 
+---
+= Asociaciones de SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las asociaciones de máquinas virtuales de almacenamiento (SVM) son asignaciones de una SVM de origen a una SVM de destino que utilizan las aplicaciones del partner para la selección de recursos y el aprovisionamiento de volúmenes secundarios.
+
+Las asociaciones siempre se crean entre una SVM de origen y una SVM de destino, independientemente de si la SVM de destino es un destino secundario o un destino terciario. No se puede usar una SVM de destino secundario como origen para crear una asociación con una SVM de destino terciario.
+
+Puede asociar SVM de tres maneras:
+
+* Asocie cualquier SVM
++
+Puede crear una asociación entre cualquier SVM de origen primaria y una o varias SVM de destino. Esto significa que todas las SVM existentes que actualmente requieren protección, así como las SVM que se creen en el futuro, están asociadas con las SVM de destino especificadas. Por ejemplo, puede que desee que se realice el backup de aplicaciones de varios orígenes distintos en ubicaciones en una o varias SVM de destino en una misma ubicación.
+
+* Asociar una SVM determinada
++
+Puede crear una asociación entre una SVM de origen específica y una o varias SVM de destino específicas. Por ejemplo, si proporciona servicios de almacenamiento a muchos clientes cuyos datos deben estar separados entre sí, puede elegir esta opción para asociar una SVM de origen específica a una SVM de destino específica que esté asignada únicamente a ese cliente.
+
+* Asocie con una SVM externa
++
+Es posible crear una asociación entre una SVM de origen y un volumen flexible externo de una SVM de destino.
+
+

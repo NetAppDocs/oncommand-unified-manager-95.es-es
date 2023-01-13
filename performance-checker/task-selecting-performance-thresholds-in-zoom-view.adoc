@@ -1,0 +1,32 @@
+---
+permalink: performance-checker/task-selecting-performance-thresholds-in-zoom-view.html 
+sidebar: sidebar 
+keywords:  
+summary: La aplicación de umbrales en la vista Zoom de gráficos de contador proporciona una vista detallada de las ocurrencias de eventos de umbral de rendimiento. Esto le permite aplicar o eliminar umbrales y ver inmediatamente los resultados, lo cual puede ser útil a la vez que decide si la solución de problemas debe ser el siguiente paso. 
+---
+= Selección de umbrales de rendimiento en la vista Zoom de gráficos de contador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La aplicación de umbrales en la vista Zoom de gráficos de contador proporciona una vista detallada de las ocurrencias de eventos de umbral de rendimiento. Esto le permite aplicar o eliminar umbrales y ver inmediatamente los resultados, lo cual puede ser útil a la vez que decide si la solución de problemas debe ser el siguiente paso.
+
+
+
+== Acerca de esta tarea
+
+La selección de umbrales en la vista de zoom de gráficos de contador permite ver datos precisos acerca de los eventos de umbral de rendimiento. Puede aplicar cualquier umbral que aparezca en el área *políticas* de la vista de zoom de los gráficos de contador.
+
+Sólo se puede aplicar una directiva cada vez al objeto en la vista Zoom de los gráficos de contador.
+
+
+
+== Pasos
+
+. Seleccione o anule la selección de image:../media/eye-icon.gif[""] esto está asociado a una política.
++
+El umbral seleccionado se aplica a la vista de zoom de Counter Charts. Los umbrales críticos se muestran como una línea roja; los umbrales de advertencia se muestran como una línea amarilla.
+
+

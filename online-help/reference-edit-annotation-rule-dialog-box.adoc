@@ -1,0 +1,48 @@
+---
+permalink: online-help/reference-edit-annotation-rule-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar las reglas de anotación que ha creado para agregar o eliminar anotaciones en objetos de almacenamiento. 
+---
+= Cuadro de diálogo Editar regla de anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar las reglas de anotación que ha creado para agregar o eliminar anotaciones en objetos de almacenamiento.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Nombre*
++
+Muestra el nombre de la regla de anotación.
+
+* *Tipo de objeto de destino*
++
+Muestra el tipo de objeto de almacenamiento que desea anotar. No puede cambiar el tipo de objeto.
+
+* *Aplicar anotación*
++
+Muestra la anotación y el valor que puede utilizar para anotar objetos de almacenamiento cuando se cumplan todas las condiciones.
+
+* *Condiciones*
++
+Muestra la lista de condiciones para la regla de anotación. Puede editar las condiciones para agregar o eliminar la anotación en objetos de almacenamiento.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los cambios realizados y cierra el cuadro de diálogo Editar regla de anotación.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Editar regla de anotación sin guardar los cambios.
+
+

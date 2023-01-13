@@ -1,0 +1,14 @@
+---
+permalink: install/concept-setting-up-required-software-repositories-um.html 
+sidebar: sidebar 
+keywords:  
+summary: El sistema debe tener acceso a ciertos repositorios para que el programa de instalación pueda acceder e instalar todas las dependencias de software necesarias. 
+---
+= Configurar repositorios de software necesarios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El sistema debe tener acceso a ciertos repositorios para que el programa de instalación pueda acceder e instalar todas las dependencias de software necesarias.

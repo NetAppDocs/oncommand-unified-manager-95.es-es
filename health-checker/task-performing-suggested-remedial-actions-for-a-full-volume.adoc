@@ -1,0 +1,50 @@
+---
+permalink: health-checker/task-performing-suggested-remedial-actions-for-a-full-volume.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Después de recibir un evento de error “Volume Space Full” (espacio de volumen lleno), revise las acciones correctivas sugeridas en la página de detalles Event (Detalles del evento) y decida realizar una de las acciones sugeridas.' 
+---
+= Ejecución de acciones correctivas sugeridas para un volumen completo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de recibir un evento de error «'espacio de volumen completo'», revise las acciones correctivas sugeridas en la página de detalles del evento y decida realizar una de las acciones sugeridas.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+Un usuario con cualquier rol puede realizar todas las tareas en este flujo de trabajo que utiliza Unified Manager.
+
+
+
+== Acerca de esta tarea
+
+En este ejemplo, ha visto un evento de error de espacio de volumen completo en la página Unified Manager Dashboards/Overview y ha hecho clic en el nombre del evento.
+
+Entre las posibles acciones para solucionarlos que se pueden llevar a cabo en un volumen completo se encuentran las siguientes:
+
+* Habilitar el crecimiento automático, la deduplicación o la compresión en el volumen
+* Cambiar el tamaño o mover el volumen
+* Eliminar o mover datos del volumen
+
+
+Si bien todas estas acciones deben realizarse desde OnCommand System Manager o desde la interfaz de línea de comandos de ONTAP, puede usar Unified Manager para buscar información que pueda ser necesario determinar qué acciones deben realizarse.
+
+
+
+== Pasos
+
+. En la página de detalles *evento*, haga clic en el nombre del volumen en el campo origen para ver detalles sobre el volumen afectado.
+. En la página de detalles *Health/Volume*, haga clic en *Configuración* y compruebe que la deduplicación y la compresión ya están activadas en el volumen.
++
+Decide cambiar el tamaño del volumen.
+
+. En el panel *dispositivos relacionados*, haga clic en el nombre del agregado de alojamiento para ver si el agregado puede acomodar un volumen mayor.
+. En la página de detalles *Estado/agregado*, verá que el agregado que aloja el volumen completo tiene suficiente capacidad no disponible, por lo que utiliza System Manager de OnCommand para cambiar el tamaño del volumen, por lo que aumenta la capacidad.
+

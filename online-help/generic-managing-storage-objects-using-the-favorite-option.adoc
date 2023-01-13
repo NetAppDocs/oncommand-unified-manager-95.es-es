@@ -1,0 +1,41 @@
+---
+permalink: online-help/generic-managing-storage-objects-using-the-favorite-option.html 
+sidebar: sidebar 
+keywords:  
+summary: La opción Favoritos permite ver y gestionar los objetos de almacenamiento seleccionados en Unified Manager si los Marca como favoritos. Puede ver rápidamente el estado de sus objetos de almacenamiento favoritos y solucionar los problemas antes de que sean críticos. 
+---
+= Gestionar objetos de almacenamiento mediante la opción Favoritos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La opción Favoritos permite ver y gestionar los objetos de almacenamiento seleccionados en Unified Manager si los Marca como favoritos. Puede ver rápidamente el estado de sus objetos de almacenamiento favoritos y solucionar los problemas antes de que sean críticos.
+
+
+
+== Tareas que puede realizar desde el panel Favoritos
+
+* Consulte la lista de objetos de almacenamiento marcados como favoritos.
+* Añada objetos de almacenamiento a la lista Favoritos.
+* Quite los objetos de almacenamiento de la lista Favoritos.
+
+
+
+
+== Ver la lista Favoritos
+
+Se pueden ver los detalles de capacidad, rendimiento y protección de los objetos de almacenamiento seleccionados en la lista Favoritos. Los detalles de un máximo de 20 objetos de almacenamiento se muestran en la lista Favoritos.
+
+
+
+== Agregar objetos de almacenamiento a la lista Favoritos
+
+Puede añadir objetos de almacenamiento a la lista Favoritos y supervisar estos objetos para comprobar el estado, la capacidad y el rendimiento. Solo puede marcar clústeres, volúmenes y agregados como favoritos.
+
+
+
+== Quitar objetos de almacenamiento de la lista Favoritos
+
+Puede eliminar objetos de almacenamiento de la lista de favoritos cuando ya no sea necesario que se marquen como favoritos.

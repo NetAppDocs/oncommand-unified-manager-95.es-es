@@ -1,0 +1,186 @@
+---
+permalink: online-help/reference-management-groups-page.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La página Management/Groups le permite crear grupos en Unified Manager para gestionar fácilmente objetos de almacenamiento. Un grupo es una colección dinámica de objetos de almacenamiento \(clústeres, volúmenes y SVM\), que se define mediante las reglas de grupo que se crean para el grupo.' 
+---
+= Página Management/Groups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Management/Groups le permite crear grupos en Unified Manager para gestionar fácilmente objetos de almacenamiento. Un grupo es una colección dinámica de objetos de almacenamiento (clústeres, volúmenes y SVM), que se define mediante las reglas de grupo que se crean para el grupo.
+
+La página Management/Groups incluye fichas que permiten agregar, eliminar o editar un grupo, reglas de grupo y acciones de grupo. Cuando inicie sesión como operador, sólo tendrá acceso de lectura a la página. Puede acceder a los botones de añadir, editar o eliminar de cada pestaña cuando inicia sesión como administrador de almacenamiento o administrador de Unified Manager.
+
+
+
+== Grupos
+
+La ficha grupos muestra el nombre y la descripción de los grupos creados. Puede realizar tareas como agregar, editar o eliminar un grupo. En la pestaña también se muestra la cantidad de reglas de grupo y acciones de grupo asociadas con un grupo, la cantidad de clústeres, las SVM y los volúmenes en el grupo.
+
+
+
+== Botones de comando
+
+* *Agregar*
++
+Muestra el cuadro de diálogo Agregar grupo, que permite agregar un grupo y proporcionar un nombre y una descripción para el grupo.
+
++
+También puede aplicar reglas de grupo más adelante al grupo para incluir objetos de almacenamiento.
+
+* *Edición*
++
+Muestra el cuadro de diálogo Editar grupo, que permite editar el nombre y la descripción del grupo seleccionado.
+
+* *Eliminar*
++
+Elimina el grupo seleccionado.
+
+
+
+
+
+== Vista de lista
+
+La vista de lista muestra, en formato de tabla, los grupos creados en Unified Manager. Puede utilizar los filtros de columnas para personalizar los datos que se muestran. De forma predeterminada, la lista se ordena por nombre de grupo.
+
+* *Nombre*
++
+Muestra el nombre del grupo.
+
+* *Descripción*
++
+Muestra la descripción del grupo.
+
+* *Reglas asociadas*
++
+Muestra el número de reglas agregadas al grupo.
+
+* *Acciones asociadas*
++
+Muestra el número de acciones de grupo agregadas al grupo.
+
+* *Clústeres aplicables*
++
+Muestra el número de clústeres incluidos en el grupo.
+
+* *SVMs* aplicables
++
+Muestra el número de SVM incluidas en el grupo.
+
+* *Volúmenes aplicables*
++
+Muestra el número de volúmenes incluidos en el grupo.
+
+
+
+
+
+== Pestaña Reglas de grupo
+
+La ficha Reglas de grupo muestra las reglas de grupo creadas para que los grupos contengan objetos de almacenamiento. Puede realizar tareas como agregar, editar o eliminar una regla de grupo. La ficha también muestra el nombre del grupo para el que se crea la regla de grupo y el objeto de almacenamiento para el que se aplica la regla. También puede ver el número de objetos de almacenamiento que cumplen la regla de grupo.
+
+
+
+== Botones de comando
+
+* *Agregar*
++
+Muestra el cuadro de diálogo Agregar regla de grupo, que permite crear reglas de grupo para objetos de almacenamiento.
+
+* *Edición*
++
+Muestra el cuadro de diálogo Editar regla de grupo, que permite volver a configurar las reglas de grupo configuradas previamente.
+
+* *Eliminar*
++
+Elimina la regla de grupo seleccionada.
+
+
+
+
+
+== Vista de lista
+
+La vista de lista muestra, en una tabla de resultados, las reglas de grupo que se crearon para un objeto de almacenamiento específico (clústeres, volúmenes o SVM) y el número de objetos de almacenamiento que satisfacen la regla de grupo definida.
+
+* *Nombre*
++
+Muestra el nombre de la regla.
+
+* *Grupo asociado*
++
+Muestra el nombre del grupo para el que se ha definido la regla de grupo.
+
+* *Tipo de objeto de destino*
++
+Muestra el tipo de objeto de almacenamiento al que se aplica la regla de grupo.
+
+* *Objetos aplicables*
++
+Muestra el recuento de los objetos de almacenamiento incluidos en el grupo según la regla de grupo.
+
+
+
+
+
+== Pestaña Group Actions
+
+La ficha acciones de grupo muestra el nombre y el tipo de acciones de grupo definidas para los grupos. Puede realizar tareas como agregar, editar, eliminar o reordenar las acciones del grupo. La ficha también muestra el nombre del grupo en el que se aplica la acción de grupo.
+
+
+
+== Botones de comando
+
+* *Agregar*
++
+Muestra el cuadro de diálogo Agregar acción, que permite crear acciones de grupo para un grupo de objetos de almacenamiento. Por ejemplo, puede establecer los niveles de umbral de los objetos de almacenamiento de un grupo.
+
+* *Edición*
++
+Muestra el cuadro de diálogo Editar acción, que permite volver a configurar las acciones de grupo configuradas previamente.
+
+* *Eliminar*
++
+Elimina la acción de grupo seleccionada.
+
+* *Reordenar*
++
+Muestra el cuadro de diálogo Reordenar acciones de grupo para reorganizar el orden de las acciones de grupo.
+
+
+
+
+
+== Vista de lista
+
+La vista de lista muestra, en formato de tabla, las acciones de grupo creadas para los grupos en el servidor de Unified Manager. Puede utilizar los filtros de columnas para personalizar los datos que se muestran.
+
+* *Rango*
++
+Muestra el orden de las acciones de grupo que se aplicarán en los objetos de almacenamiento de un grupo.
+
+* *Nombre*
++
+Muestra el nombre de la acción de grupo.
+
+* *Grupo asociado*
++
+Muestra el nombre del grupo para el que se ha definido la acción de grupo.
+
+* *Tipo de acción*
++
+Muestra el tipo de acción de grupo que se puede realizar en los objetos de almacenamiento de un grupo.
+
++
+No se pueden crear varias acciones de grupo del mismo tipo de acción para un grupo. Por ejemplo, es posible crear una acción de grupo para configurar umbrales de volumen para un grupo. Sin embargo, no se puede crear otra acción de grupo para que el mismo grupo cambie los umbrales de volumen.
+
+* *Descripción*
++
+Muestra la descripción de la acción de grupo.
+
+

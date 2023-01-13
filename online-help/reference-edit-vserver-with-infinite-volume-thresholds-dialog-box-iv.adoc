@@ -1,0 +1,64 @@
+---
+permalink: online-help/reference-edit-vserver-with-infinite-volume-thresholds-dialog-box-iv.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Editar SVM con umbrales de Infinite Volume para modificar los valores de umbral predeterminados de cada SVM con Infinite Volume, en función de los requisitos de su organización. Los valores de umbral predeterminados indican el nivel de actividad que se debe alcanzar en la SVM para poder activar un evento. 
+---
+= Cuadro de diálogo Editar SVM con umbrales de Infinite Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Editar SVM con umbrales de Infinite Volume para modificar los valores de umbral predeterminados de cada SVM con Infinite Volume, en función de los requisitos de su organización. Los valores de umbral predeterminados indican el nivel de actividad que se debe alcanzar en la SVM para poder activar un evento.
+
+
+
+== Capacidad
+
+El área de capacidad permite establecer condiciones de umbral de capacidad para la SVM seleccionada con Infinite Volume:
+
+* * Espacio casi lleno*
++
+Especifica el porcentaje en el que se considera que la SVM con Infinite Volume está casi completa. También muestra el espacio correspondiente (en GB, MB o TB) en Infinite Volume. Por ejemplo, si tiene un Infinite Volume de 10 GB de tamaño y el umbral de espacio casi completo es 80%, se muestra la siguiente información: (8 GB de 10 GB).
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+* * Espacio lleno*
++
+Especifica el porcentaje en el que la SVM con Infinite Volume se considera completa. También muestra el espacio correspondiente (en GB, MB o TB) en Infinite Volume. Por ejemplo, si tiene un Infinite Volume de 10 GB de tamaño y el umbral de espacio completo es 90%, se muestra la siguiente información: (9 GB de 10 GB).
+
++
+También puede usar el control deslizante para configurar el valor del umbral.
+
+* *Límite de uso de instantánea*
++
+Especifica el límite, en porcentaje, de espacio reservado para las copias de Snapshot en Infinite Volume.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Restaurar valores predeterminados globales*
++
+Permite restaurar la configuración del umbral a los valores actuales establecidos en el nivel global.
+
+* *Guardar*
++
+Guarda todos los ajustes de umbral.
+
+* *Guardar y cerrar*
++
+Guarda toda la configuración del umbral y, a continuación, cierra el cuadro de diálogo Editar SVM con umbrales de Infinite Volume.
+
+* *Cancelar*
++
+Ignora los cambios en la configuración del umbral y cierra el cuadro de diálogo Edit SVM con Infinite Volume Thresholds.
+
+

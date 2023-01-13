@@ -1,0 +1,272 @@
+---
+permalink: health-checker/reference-supported-unified-manager-cli-commands.html 
+sidebar: sidebar 
+keywords: Unified Manager 
+summary: Como administrador de almacenamiento, puede usar los comandos de la CLI para realizar consultas en los objetos de almacenamiento; por ejemplo, en clústeres, agregados, volúmenes, Qtrees y LUN. Puede utilizar los comandos de la CLI para consultar la base de datos interna de Unified Manager y la base de datos de ONTAP. También puede utilizar los comandos de la CLI en scripts que se ejecutan al principio o al final de una operación, o bien se ejecutan cuando se activa una alerta. 
+---
+= Comandos de CLI de Unified Manager compatibles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como administrador de almacenamiento, puede usar los comandos de la CLI para realizar consultas en los objetos de almacenamiento; por ejemplo, en clústeres, agregados, volúmenes, Qtrees y LUN. Puede utilizar los comandos de la CLI para consultar la base de datos interna de Unified Manager y la base de datos de ONTAP. También puede utilizar los comandos de la CLI en scripts que se ejecutan al principio o al final de una operación, o bien se ejecutan cuando se activa una alerta.
+
+Todos los comandos deben ir precedidos por el comando `um cli login` y un nombre de usuario y una contraseña válidos para la autenticación.
+
+|===
+| Comando de la CLI | Descripción | Salida 
+
+
+ a| 
+`um run cmd [ -t <timeout> ] <cluster> <command>`
+ a| 
+La forma más sencilla de ejecutar un comando en uno o más hosts. Se utiliza principalmente para generar scripts de alertas para obtener o realizar una operación en ONTAP. El argumento de tiempo de espera opcional establece un límite de tiempo máximo (en segundos) para que el comando se complete en el cliente. El valor predeterminado es 0 (espere siempre).
+ a| 
+Según lo recibido de ONTAP.
+
+
+
+ a| 
+`um run query <sql command>`
+ a| 
+Ejecuta una consulta SQL. Sólo se permiten las consultas que se leen en la base de datos. No se admiten operaciones de actualización, inserción o eliminación.
+ a| 
+Los resultados se muestran en una forma tabular. Si se devuelve un conjunto vacío, o si hay algún error de sintaxis o solicitud incorrecta, muestra el mensaje de error correspondiente.
+
+
+
+ a| 
+`um datasource add -u <username> -P <password> [ -t <protocol> ] [ -p <port> ] <hostname-or-ip>`
+ a| 
+Agrega un origen de datos a la lista de sistemas de almacenamiento gestionados. Un origen de datos describe cómo se establecen las conexiones con los sistemas de almacenamiento. Las opciones -u (nombre de usuario) y -P (contraseña) se deben especificar al agregar un origen de datos. La opción -t (protocolo) especifica el protocolo que se utiliza para comunicarse con el clúster (http o https). Si no se especifica el protocolo, se intentará ambos protocolos la opción -p (puerto) especifica el puerto que se utiliza para comunicarse con el clúster. Si no se especifica el puerto, se intentará el valor predeterminado del protocolo adecuado. Este comando solo el administrador de almacenamiento puede ejecutarlo.
+ a| 
+Las solicitudes del usuario aceptan el certificado e imprimen el mensaje correspondiente.
+
+
+
+ a| 
+`um datasource list [ <datasource-id>]`
+ a| 
+Muestra los orígenes de datos para los sistemas de almacenamiento gestionados.
+ a| 
+Muestra los siguientes valores en formato tabular: `ID Address Port, Protocol Acquisition Status, Analysis Status, Communication status, Acquisition Message, and Analysis Message`.
+
+
+
+ a| 
+`um datasource modify [ -h <hostname-or-ip> ] [ -u <username> ] [ -P <password> ] [ -t <protocol> ] [ -p <port> ] <datasource-id>`
+ a| 
+Modifica una o varias opciones de origen de datos. Solo el administrador de almacenamiento puede ejecutarlo.
+ a| 
+Muestra el mensaje correspondiente.
+
+
+
+ a| 
+`um datasource remove <datasource-id>`
+ a| 
+Elimina el origen de datos de Unified Manager.
+ a| 
+Muestra el mensaje correspondiente.
+
+
+
+ a| 
+`um option list [ <option> .. ]`
+ a| 
+Enumera las opciones.
+ a| 
+Muestra los siguientes valores en formato tabular: `Name, Value, Default Value, and Requires Restart.`
+
+
+
+ a| 
+`+um option set <option-name>=<option-value> [ <option-name>=<option-value> ... ]+`
+ a| 
+Establece una o más opciones. Solo el administrador de almacenamiento puede ejecutar el comando.
+ a| 
+Muestra el mensaje correspondiente.
+
+
+
+ a| 
+`um version`
+ a| 
+Muestra la versión del software Unified Manager.
+ a| 
+`Version ("7.0")`
+
+
+
+ a| 
+`um lun list [-q] [ -ObjectType <object-id>]`
+ a| 
+Muestra las LUN después de filtrar en el objeto especificado. -q es aplicable para que todos los comandos no muestren ningún encabezado. El tipo de objeto puede ser lun, qtree, clúster, volumen, cuota, svm. Por ejemplo: `um lun list -cluster 1`
+
+En este ejemplo, "-cluster" es el objecttype y "1" es el objectId. El comando enumera todas las LUN del clúster con el ID 1.
+ a| 
+Muestra los siguientes valores en formato tabular: `ID and LUN path`.
+
+
+
+ a| 
+`um svm list [-q] [ -ObjectType <object-id>]`
+ a| 
+Enumera las SVM después de filtrar en el objeto especificado. El tipo de objeto puede ser lun, qtree, clúster, volumen, cuota, svm. Por ejemplo: `um svm list -cluster 1`
+
+En este ejemplo, "-cluster" es el objecttype y "1" es el objectId. El comando enumera todas las SVM del clúster con el ID 1.
+ a| 
+Muestra los siguientes valores en formato tabular: `Name and Cluster ID`.
+
+
+
+ a| 
+`um qtree list [-q] [ -ObjectType <object-id>]`
+ a| 
+Enumera los qtrees después de filtrar en el objeto especificado. -q es aplicable para que todos los comandos no muestren ningún encabezado. El tipo de objeto puede ser lun, qtree, clúster, volumen, cuota, svm. Por ejemplo: `um qtree list -cluster 1`
+
+En este ejemplo, "-cluster" es el objecttype y "1" es el objectId. El comando enumera todos los qtrees dentro del clúster con el ID 1.
+ a| 
+Muestra los siguientes valores en formato tabular: `Qtree ID and Qtree Name`.
+
+
+
+ a| 
+`um disk list [-q] [-ObjectType <object-id>]`
+ a| 
+Enumera los discos después de filtrar en el objeto especificado. El tipo de objeto puede ser disk, aggr, node, cluster. Por ejemplo: `um disk list -cluster 1`
+
+En este ejemplo, "-cluster" es el objecttype y "1" es el objectId. El comando enumera todos los discos del clúster con el ID 1.
+ a| 
+Muestra los siguientes valores en formato tabular `ObjectType and object-id.`
+
+
+
+ a| 
+`um cluster list [-q] [-ObjectType <object-id>]`
+ a| 
+Muestra los clústeres después de filtrar en el objeto especificado. El tipo de objeto puede ser disco, aggr, nodo, clúster, lun, qtree, volumen, cuota, svm. Por ejemplo:``um cluster list -aggr 1``
+
+En este ejemplo, "-aggr" es el objecttype y "1" es el objectId. El comando enumera el clúster al que pertenece el agregado con el ID 1.
+ a| 
+Muestra los siguientes valores en formato tabular: `Name, Full Name, Serial Number, Datasource Id, Last Refresh Time, and Resource Key.`
+
+
+
+ a| 
+`um cluster node list [-q] [-ObjectType <object-id>]`
+ a| 
+Muestra los nodos del clúster después de filtrar el objeto especificado. El tipo de objeto puede ser disk, aggr, node, cluster. Por ejemplo: `um cluster node list -cluster 1`
+
+En este ejemplo, "-cluster" es el objecttype y "1" es el objectId. El comando enumera todos los nodos del clúster con el ID 1.
+ a| 
+Muestra los siguientes valores en formato tabular `Name and Cluster ID.`
+
+
+
+ a| 
+`um volume list [-q] [-ObjectType <object-id>]`
+ a| 
+Enumera los volúmenes después de filtrar en el objeto especificado. El tipo de objeto puede ser lun, qtree, clúster, volumen, cuota, svm, agregado. Por ejemplo: `um volume list -cluster 1`
+
+En este ejemplo, "-cluster" es el objecttype y "1" es el objectId. El comando enumera todos los volúmenes del clúster con el ID 1.
+ a| 
+Muestra los siguientes valores en formato tabular `Volume ID and Volume Name.`
+
+
+
+ a| 
+`um quota user list [-q] [-ObjectType <object-id>]`
+ a| 
+Muestra los usuarios de la cuota después de filtrar en el objeto especificado. El tipo de objeto puede ser qtree, clúster, volumen, cuota, svm. Por ejemplo: `um quota user list -cluster 1`
+
+En este ejemplo, "-cluster" es el objecttype y "1" es el objectId. El comando enumera todos los usuarios de cuota del clúster con el ID 1.
+ a| 
+Muestra los siguientes valores en formato tabular `ID, Name, SID and Email.`
+
+
+
+ a| 
+`um aggr list [-q] [-ObjectType <object-id>]`
+ a| 
+Enumera los agregados después de filtrar en el objeto especificado. El tipo de objeto puede ser disco, aggr, nodo, clúster, volumen. Por ejemplo: `um aggr list -cluster 1`
+
+En este ejemplo, "-cluster" es el objecttype y "1" es el objectId. El comando enumera todos los agregados del clúster con el ID 1.
+ a| 
+Muestra los siguientes valores en formato tabular `Aggr ID, and Aggr Name.`
+
+
+
+ a| 
+`um event ack <event-ids>`
+ a| 
+Reconoce uno o más eventos.
+ a| 
+Muestra el mensaje correspondiente.
+
+
+
+ a| 
+`um event resolve <event-ids>`
+ a| 
+Resuelve uno o varios eventos.
+ a| 
+Muestra el mensaje correspondiente.
+
+
+
+ a| 
+`um event assign -u <username> <event-id>`
+ a| 
+Asigna un evento a un usuario.
+ a| 
+Muestra el mensaje correspondiente.
+
+
+
+ a| 
+`um event list [ -s <source> ] [ -S <event-state-filter-list>.. ] [ <event-id> .. ]`
+ a| 
+Muestra los eventos generados por el sistema o el usuario. Filtra eventos según el origen, el estado y los ID.
+ a| 
+Muestra los siguientes valores en formato tabular `Source, Source type, Name, Severity, State, User and Timestamp.`
+
+
+
+ a| 
+`um cli login -u <username> [-p <password>`
+ a| 
+Inicia sesión en la CLI. La sesión caduca a las tres horas del inicio de sesión, después de las cuales el usuario debe iniciar sesión de nuevo.
+ a| 
+Muestra el mensaje correspondiente.
+
+
+
+ a| 
+`um cli logout`
+ a| 
+Cierra sesión en la CLI.
+ a| 
+Muestra el mensaje correspondiente.
+
+
+
+ a| 
+`um backup restore -f <backup_file_path_and_name>`
+ a| 
+Restaura un backup de la base de datos con archivos .7z.
+ a| 
+Muestra el mensaje correspondiente.
+
+
+
+ a| 
+`um help`
+ a| 
+Muestra todos los subcomandos de primer nivel.
+ a| 
+Muestra todos los subcomandos de primer nivel.
+
+|===

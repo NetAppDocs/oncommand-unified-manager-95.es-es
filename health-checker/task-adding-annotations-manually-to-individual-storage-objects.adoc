@@ -1,0 +1,60 @@
+---
+permalink: health-checker/task-adding-annotations-manually-to-individual-storage-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede anotar manualmente volúmenes, clústeres y SVM seleccionados sin usar reglas de anotación. Puede anotar un único objeto de almacenamiento o varios objetos de almacenamiento y especificar la combinación de par nombre-valor necesaria para la anotación. 
+---
+= Añadir anotaciones manualmente a objetos de almacenamiento individuales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede anotar manualmente volúmenes, clústeres y SVM seleccionados sin usar reglas de anotación. Puede anotar un único objeto de almacenamiento o varios objetos de almacenamiento y especificar la combinación de par nombre-valor necesaria para la anotación.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. Desplácese hasta los objetos de almacenamiento que desea anotar:
++
+|===
+| Para agregar anotaciones a... | Realice lo siguiente... 
+
+
+ a| 
+De clúster
+ a| 
+.. Haga clic en *Salud* > *Clusters*.
+.. Seleccione uno o varios clústeres.
+
+
+
+
+ a| 
+Volúmenes
+ a| 
+.. Haga clic en *Salud* > *volúmenes*.
+.. Seleccione uno o varios volúmenes.
+
+
+
+
+ a| 
+SVM
+ a| 
+.. Haga clic en *Salud* > *SVMs*.
+.. Seleccione una o varias SVM.
+
+
+|===
+. Haga clic en *anotar* y seleccione un par nombre-valor.
+. Haga clic en *aplicar*.
+

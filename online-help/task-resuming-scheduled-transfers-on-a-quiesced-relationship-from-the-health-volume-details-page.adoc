@@ -1,0 +1,41 @@
+---
+permalink: online-help/task-resuming-scheduled-transfers-on-a-quiesced-relationship-from-the-health-volume-details-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de poner en modo inactivo una relación para detener las transferencias programadas, puede usar Reanudar en la página de detalles Estado/volumen para volver a habilitar las transferencias programadas a fin de que los datos en el volumen de origen o el volumen primario estén protegidos. Las transferencias se reanudan desde un punto de comprobación, si existe alguno, en el siguiente intervalo de transferencia programada. 
+---
+= Reanude las transferencias programadas en una relación en modo inactivo en la página de detalles Health/Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de poner en modo inactivo una relación para detener las transferencias programadas, puede usar *Reanudar* en la página de detalles Estado/volumen para volver a habilitar las transferencias programadas de modo que los datos en el volumen de origen o primario estén protegidos. Las transferencias se reanudan desde un punto de comprobación, si existe alguno, en el siguiente intervalo de transferencia programada.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber configurado Workflow Automation.
+
+
+
+
+== Pasos
+
+. En la pestaña *Protección* de la página de detalles *Estado/volumen*, haga clic con el botón derecho del ratón en la vista de topología en una relación en modo inactivo que desea reanudar.
++
+Como alternativa, seleccione *Reanudar* en el menú *acciones* > *relación*.
+
+. En el cuadro de diálogo *Reanudar*, haga clic en *continuar*.
++
+Volverá a la página de detalles Health/Volume.
+
+. Para ver las tareas de trabajo relacionadas y realizar un seguimiento de su progreso, haga clic en el enlace de trabajo que aparece en la parte superior de la página de detalles *Estado/volumen*.
+. En la página de detalles *Protection/Job*, haga clic en *Refresh* para actualizar la lista de tareas y los detalles de tareas asociados con el trabajo de configuración de protección y determinar cuándo se ha completado el trabajo.
++
+Una vez finalizados los trabajos, las transferencias de datos se reanudan en el siguiente intervalo de transferencia programada.
+
+

@@ -1,0 +1,35 @@
+---
+permalink: online-help/concept-how-storage-qos-can-control-workload-throughput.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede crear o editar un grupo de políticas de calidad de servicio \(QoS\) para controlar las operaciones de I/o por segundo \(IOPS\) o el límite de rendimiento \(Mbps\) para las cargas de trabajo que contiene. Si las cargas de trabajo se encuentran en un grupo de políticas sin un límite establecido, como el grupo de políticas predeterminado, o el límite establecido no cumple con sus necesidades, puede aumentar el límite o mover las cargas de trabajo a un grupo de políticas nuevo o existente que tenga el límite deseado.' 
+---
+= Cómo la calidad de servicio de almacenamiento puede controlar el rendimiento de la carga de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear o editar un grupo de políticas de calidad de servicio (QoS) para controlar el límite de I/o por segundo (IOPS) o rendimiento (Mbps) para las cargas de trabajo que contiene. Si las cargas de trabajo se encuentran en un grupo de políticas sin un límite establecido, como el grupo de políticas predeterminado, o el límite establecido no cumple con sus necesidades, puede aumentar el límite o mover las cargas de trabajo a un grupo de políticas nuevo o existente que tenga el límite deseado.
+
+Los grupos de políticas de calidad de servicio «estándar» se pueden asignar a cargas de trabajo individuales; por ejemplo, un volumen o una LUN únicos. En este caso, la carga de trabajo puede utilizar el límite de rendimiento completo. Los grupos de políticas de calidad de servicio también se pueden asignar a varias cargas de trabajo; en ese caso, el límite de rendimiento se comparte entre las cargas de trabajo. Por ejemplo, un límite de calidad de servicio de 9,000 IOPS asignadas a tres cargas de trabajo restringiría el número de IOPS combinadas de más de 9,000 IOPS.
+
+Los grupos de políticas de calidad de servicio «adaptativas» también pueden asignarse a cargas de trabajo individuales o a varias cargas de trabajo. Sin embargo, incluso cuando se asignan a varias cargas de trabajo, cada carga de trabajo obtiene el límite de rendimiento completo en lugar de compartir el valor de rendimiento con otras cargas de trabajo. Además, las políticas de calidad de servicio adaptativas ajustan automáticamente el valor de rendimiento en función del tamaño del volumen, por carga de trabajo, de modo que se mantenga la ratio de IOPS por terabytes a medida que cambie el tamaño del volumen. Por ejemplo, si el pico se establece en 5,000 IOPS/TB en la política de calidad de servicio adaptativa, un volumen de 10 TB tendrá un valor máximo de rendimiento de 50,000 IOPS. Si el tamaño del volumen cambia más adelante a 20 TB, la calidad de servicio adaptativa ajusta el techo a 100,000 IOPS.
+
+A partir de ONTAP 9.5, se puede incluir el tamaño de bloque al definir una política de calidad de servicio adaptativa. De este modo, la política pasa de un umbral de IOPS/TB a un umbral de Mbps para casos en los que las cargas de trabajo utilizan tamaños de bloque muy grandes y, en última instancia, utilizan un gran porcentaje de rendimiento.
+
+En el caso de las políticas de calidad de servicio de los grupos compartidos, cuando las IOPS o los Mbps de todas las cargas de trabajo de un grupo de políticas superan el límite establecido, el grupo de políticas limita las cargas de trabajo para limitar su actividad, lo que puede reducir el rendimiento de todas las cargas de trabajo del grupo de políticas. Si la limitación de grupo de políticas genera un evento de rendimiento dinámico, la descripción del evento muestra el nombre del grupo de políticas implicado.
+
+En la página de inventario Performance/Volumes, es posible ordenar los volúmenes afectados por IOPS y Mbps para ver qué cargas de trabajo tienen el uso más alto que podría haber contribuido al evento. En la página Performance/Volumes Explorer, puede seleccionar otros volúmenes o LUN para compararlos con las IOPS de carga de trabajo afectadas o con el uso de rendimiento de Mbps.
+
+Al asignar las cargas de trabajo que están utilizando en exceso los recursos del nodo a una configuración de grupo de políticas más restrictiva, el grupo de políticas limita las cargas de trabajo a restringir su actividad, lo que puede reducir el uso de los recursos en ese nodo. Sin embargo, si desea que la carga de trabajo pueda usar más recursos del nodo, puede aumentar el valor del grupo de políticas.
+
+Puede usar System Manager o los comandos de la ONTAP para gestionar los grupos de políticas, incluidas las siguientes tareas:
+
+* Crear un grupo de políticas
+* Agregar o eliminar cargas de trabajo en un grupo de políticas
+* Mover una carga de trabajo entre grupos de políticas
+* Cambiar el límite de rendimiento de un grupo de políticas
+* Mover una carga de trabajo a otro agregado o nodo
+

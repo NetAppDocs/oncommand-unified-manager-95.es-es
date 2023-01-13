@@ -1,0 +1,94 @@
+---
+permalink: health-checker/reference-network-configuration-menu.html 
+sidebar: sidebar 
+keywords:  
+summary: El menú Configuración de red le permite administrar los ajustes de red. Debe usar este menú cuando la interfaz de usuario de Unified Manager no esté disponible. 
+---
+= Menú Configuración de red
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El menú Configuración de red le permite administrar los ajustes de red. Debe usar este menú cuando la interfaz de usuario de Unified Manager no esté disponible.
+
+[NOTE]
+====
+Este menú no está disponible si Unified Manager está instalado en Red Hat Enterprise Linux, CentOS o Microsoft Windows.
+
+====
+Están disponibles las siguientes opciones de menú.
+
+* *Mostrar configuración de dirección IP*
++
+Muestra la configuración de red actual del dispositivo virtual, incluida la dirección IP, la red, la dirección de retransmisión, la máscara de red, la puerta de enlace, Y servidores DNS.
+
+* *Cambiar la configuración de la dirección IP*
++
+Permite cambiar cualquier configuración de red del dispositivo virtual, incluidos la dirección IP, la máscara de red, la puerta de enlace o los servidores DNS. Si cambia la configuración de red desde DHCP a la red estática mediante la consola de mantenimiento, no puede editar el nombre de host. Debe seleccionar *commit Changes* para que se realicen los cambios.
+
+* *Mostrar configuración de búsqueda de nombres de dominio*
++
+Muestra la lista de búsqueda de nombres de dominio utilizada para resolver nombres de host.
+
+* *Cambiar la configuración de búsqueda de nombres de dominio*
++
+Permite cambiar los nombres de dominio en los que se desea buscar al resolver nombres de host. Debe seleccionar *commit Changes* para que se realicen los cambios.
+
+* *Mostrar rutas estáticas*
++
+Muestra las rutas de red estáticas actuales.
+
+* *Cambiar rutas estáticas*
++
+Permite agregar o eliminar rutas de red estáticas. Debe seleccionar *commit Changes* para que se realicen los cambios.
+
++
+** *Añadir ruta*
++
+Permite agregar una ruta estática.
+
+** *Eliminar ruta*
++
+Permite eliminar una ruta estática.
+
+** *Atrás*
++
+Le lleva de vuelta al *Menú principal*.
+
+** *Salida*
++
+Sale de la consola de mantenimiento.
+
+
+
+* *Desactivar la interfaz de red*
++
+Deshabilita las interfaces de red disponibles. Si solo hay disponible una interfaz de red, no puede deshabilitarla. Debe seleccionar *commit Changes* para que se realicen los cambios.
+
+* *Activar interfaz de red*
++
+Habilita las interfaces de red disponibles. Debe seleccionar *commit Changes* para que se realicen los cambios.
+
+* *Commit Changes*
++
+Aplica los cambios realizados en la configuración de red del dispositivo virtual. Debe seleccionar esta opción para promulgar cualquier cambio realizado o no se producirán los cambios.
+
+* *Hacer ping a un Host*
++
+Hace ping en un host de destino para confirmar cambios en la dirección IP o la configuración DNS.
+
+* *Restaurar valores predeterminados*
++
+Restablece todos los ajustes a los valores predeterminados de fábrica. Debe seleccionar *commit Changes* para que se realicen los cambios.
+
+* *Atrás*
++
+Le lleva de vuelta al *Menú principal*.
+
+* *Salida*
++
+Sale de la consola de mantenimiento.
+
+

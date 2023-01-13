@@ -1,0 +1,54 @@
+---
+permalink: health-checker/task-changing-the-identity-provider-idp-used-for-saml-authentication-um.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede cambiar el proveedor de identidades \(IDP\) que Unified Manager utiliza para autenticar usuarios remotos.' 
+---
+= Cambiar el proveedor de identidades utilizado para la autenticación SAML
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible cambiar el proveedor de identidades (IDP) que Unified Manager utiliza para autenticar usuarios remotos.
+
+
+
+== Antes de empezar
+
+* Debe tener la URL y los metadatos de IDP.
+* Debe tener acceso al IDP.
+
+
+
+
+== Acerca de esta tarea
+
+El nuevo IDP se puede configurar antes o después de configurar Unified Manager.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *autenticación* en el menú Configuración de la izquierda.
+. En la página *Configuración/autenticación*, seleccione la ficha *autenticación SAML*.
+. Introduzca el URI nuevo de IDP y los metadatos de IDP necesarios para conectar el servidor de Unified Manager al IDP.
++
+Si se puede acceder al IDP directamente desde el servidor de Unified Manager, puede hacer clic en el botón *Fetch IDP Metadata* después de introducir la URL del IDP para rellenar el campo IDP Metadata automáticamente.
+
+. Copie el URI de metadatos de Unified Manager o guarde los metadatos en un archivo de texto XML.
+. Haga clic en *Guardar configuración*.
++
+Aparece un cuadro de mensaje para confirmar que desea cambiar la configuración.
+
+. Haga clic en *Aceptar*.
+
+
+
+
+== Después de terminar
+
+Acceda al nuevo IDP e introduzca el URI del servidor de Unified Manager y los metadatos para completar la configuración.
+
+La próxima vez que los usuarios remotos autorizados intenten acceder a la interfaz gráfica de Unified Manager, deberán introducir sus credenciales en la nueva página de inicio de sesión de IDP en lugar de en la página de inicio de sesión de IDP anterior.

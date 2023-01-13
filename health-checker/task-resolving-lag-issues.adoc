@@ -1,0 +1,66 @@
+---
+permalink: health-checker/task-resolving-lag-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Este flujo de trabajo proporciona un ejemplo de cómo puede resolver un problema de desfase. En esta situación, es un administrador o operador que accede a la página Paneles/Descripción general de Unified Manager para ver si hay algún problema con las relaciones de protección y, si existen, para buscar soluciones. 
+---
+= Resolución de problemas de desfase
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este flujo de trabajo proporciona un ejemplo de cómo puede resolver un problema de desfase. En esta situación, es un administrador o operador que accede a la página Unified Manager Dashboards/Overview para ver si hay algún problema con sus relaciones de protección y, si existen, para buscar soluciones.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+En la página Dashboards/Overview, observe el área Unresolved Incidents and Risks y vea un error de desfase de SnapMirror en el panel Protection, en Protection Risks.
+
+
+
+== Pasos
+
+. En el panel *Protection* de la página *Paneles/Descripción general*, busque el error de retraso de la relación de SnapMirror y haga clic en él.
++
+Se muestra la página de detalles Event para el evento de error de desfase.
+
+. En la página de detalles *evento* puede realizar una o más de las siguientes tareas:
++
+** Revise el mensaje de error en el campo causa del área Resumen para determinar si hay alguna acción correctiva sugerida.
+** Haga clic en el nombre del objeto, en este caso, un volumen, en el campo Source del área Summary para obtener detalles sobre el volumen.
+** Busque las notas que se podrían haber añadido acerca de este evento.
+** Agregar una nota al evento.
+** Asignar el evento a un usuario específico.
+** Reconozca o resuelva el evento.
+
+
+. En este escenario, haga clic en el nombre del objeto (en este caso, un volumen) en el campo origen del área *Resumen* para obtener detalles sobre el volumen.
++
+Se muestra la pestaña Protection de la página de detalles Health/Volume.
+
+. En la ficha *Protección*, verá el diagrama de topología.
++
+Ha observado que el volumen con el error de desfase es el último volumen en una cascada de SnapMirror de tres volúmenes. El volumen seleccionado se resume en gris oscuro y una línea naranja doble del volumen de origen indica un error de relación de SnapMirror.
+
++
+image::../media/topology-cascade-lag-error.gif[Topología en cascada de SnapMirror con retraso]
+
+. Haga clic en cada uno de los volúmenes en la cascada de SnapMirror.
++
+Al seleccionar cada volumen, la información de protección en Summary, Topology, History, Events, Related Devices, Y las áreas Alertas relacionadas cambian para mostrar detalles relevantes para el volumen seleccionado.
+
+. Verá el área *Resumen* y coloque el cursor sobre el icono de información en el campo *Actualizar programa* de cada volumen.
++
+En este caso, debe tener en cuenta que la política de SnapMirror es DPDefault, y la programación de SnapMirror se actualiza cada hora a los cinco minutos. Usted sabe que todos los volúmenes de la relación están intentando completar una transferencia de SnapMirror al mismo tiempo.
+
+. Para resolver el problema de desfase, se modifican los horarios de dos de los volúmenes en cascada de modo que cada destino inicie una transferencia de SnapMirror una vez que su origen haya completado una transferencia.
+

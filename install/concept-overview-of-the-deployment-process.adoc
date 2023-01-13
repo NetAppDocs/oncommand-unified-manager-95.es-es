@@ -1,0 +1,16 @@
+---
+permalink: install/concept-overview-of-the-deployment-process.html 
+sidebar: sidebar 
+keywords:  
+summary: En el flujo de trabajo de implementación, se describen las tareas que deben realizarse para poder usar Unified Manager. 
+---
+= Descripción general del proceso de puesta en marcha en VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En el flujo de trabajo de implementación, se describen las tareas que deben realizarse para poder usar Unified Manager.
+
+image::../media/deployment-sequence-oc-6-0.gif[secuencia de despliegue oc 6 0]

@@ -1,0 +1,28 @@
+---
+permalink: online-help/concept-introduction-to-unified-manager-performance-monitoring.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager de OnCommand proporciona funcionalidades de supervisión del rendimiento y análisis de eventos raíz para sistemas que ejecutan el software ONTAP de NetApp. 
+---
+= Introducción a la supervisión del rendimiento de Unified Manager de OnCommand
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager de OnCommand proporciona funcionalidades de supervisión del rendimiento y análisis de eventos raíz para sistemas que ejecutan el software ONTAP de NetApp.
+
+Unified Manager le ayuda a identificar cargas de trabajo que están utilizando de forma excesiva los componentes del clúster y a reducir el rendimiento de otras cargas de trabajo del clúster. Al definir las políticas de umbral de rendimiento, también se pueden especificar valores máximos de determinados contadores de rendimiento para que los eventos se generen cuando se supera el umbral. Unified Manager le alerta sobre estos eventos de rendimiento para poder realizar acciones correctivas y devolver el rendimiento a los niveles normales de funcionamiento. Los eventos se pueden ver y analizar en la interfaz de usuario de Unified Manager.
+
+Unified Manager supervisa el rendimiento de dos tipos de cargas de trabajo:
+
+* Cargas de trabajo definidas por el usuario
++
+Estas cargas de trabajo constan de volúmenes de FlexVol y volúmenes de FlexGroup creados en el clúster.
+
+* Cargas de trabajo definidas por el sistema
++
+Estas cargas de trabajo constan de una actividad interna del sistema.
+
+

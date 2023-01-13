@@ -1,0 +1,40 @@
+---
+permalink: health-checker/task-adding-space-to-the-data-disk-of-the-vmware-virtual-machine.html 
+sidebar: sidebar 
+keywords:  
+summary: Si necesita aumentar la cantidad de espacio en el disco de datos para la base de datos de Unified Manager, puede añadir capacidad después de la instalación aumentando el espacio en disco 3. 
+---
+= Adición de espacio al disco de datos de la máquina virtual de VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si necesita aumentar la cantidad de espacio en el disco de datos para la base de datos de Unified Manager, puede añadir capacidad después de la instalación aumentando el espacio en disco `disk 3`.
+
+
+
+== Antes de empezar
+
+* Debe tener acceso a vSphere Client.
+* La máquina virtual no debe tener instantáneas almacenadas localmente.
+* Debe tener las credenciales de usuario de mantenimiento.
+
+
+
+
+== Acerca de esta tarea
+
+Le recomendamos que haga una copia de seguridad de su máquina virtual antes de aumentar el tamaño de los discos virtuales.
+
+
+
+== Pasos
+
+. En el cliente de vSphere, seleccione la máquina virtual de Unified Manager y, a continuación, añada más capacidad de disco a los datos `disk 3`. Consulte la documentación de VMware para obtener más detalles.
+. En el cliente vSphere, seleccione la máquina virtual de Unified Manager y, a continuación, seleccione la pestaña *Console*.
+. Haga clic en en la ventana de la consola y, a continuación, inicie sesión en la consola de mantenimiento con su nombre de usuario y contraseña.
+. En *Menú principal*, introduzca el número de la opción *Configuración del sistema*.
+. En *Menú de configuración del sistema*, introduzca el número de la opción *aumentar tamaño del disco de datos*.
+

@@ -1,0 +1,46 @@
+---
+permalink: online-help/reference-storage-pool-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Storage Pool permite ver los detalles de la caché dedicada de SSD, también conocidos como pools de almacenamiento. Es posible supervisar los pools de almacenamiento y ver detalles como el estado del pool de almacenamiento, la caché total y disponible, y las asignaciones utilizadas y disponibles en el pool de almacenamiento. 
+---
+= Cuadro de diálogo Storage Pool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Storage Pool permite ver los detalles de la caché dedicada de los SSD, también conocida como _pools de almacenamiento_. Es posible supervisar los pools de almacenamiento y ver detalles como el estado del pool de almacenamiento, la caché total y disponible, y las asignaciones utilizadas y disponibles en el pool de almacenamiento.
+
+Puede ver los siguientes detalles del pool de almacenamiento:
+
+* *Estado*
++
+Muestra el estado del pool de almacenamiento, que puede ser en buen estado o incorrecto.
+
+* *Asignaciones totales*
++
+Muestra las unidades de asignación totales y el tamaño de la agrupación de almacenamiento.
+
+* *Tamaño de la unidad de asignación*
++
+Muestra la cantidad mínima de espacio del pool de almacenamiento que se puede asignar a un agregado.
+
+* *Discos*
++
+Muestra el número de discos utilizados para crear el pool de almacenamiento. Si el número de discos en la columna del pool de almacenamiento y el número de discos que se muestran en la pestaña Información de disco de ese pool de almacenamiento no coinciden, indica que uno o varios discos se encuentran dañados y el pool de almacenamiento es incorrecto.
+
+* *Asignaciones de caché*
++
+** Asignaciones utilizadas
++
+Muestra el número y el tamaño de las unidades de asignación utilizadas por los agregados. Puede hacer clic en el nombre del agregado para ver los detalles del agregado.
+
+** Asignaciones disponibles
++
+Muestra el número y el tamaño de las unidades de asignación disponibles para los nodos. Puede hacer clic en el nombre del nodo para ver los detalles del agregado.
+
+
+
+

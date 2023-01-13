@@ -1,0 +1,119 @@
+---
+permalink: online-help/reference-edit-alert-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar propiedades de alerta, como el recurso con el que está asociada la alerta, eventos, script y opciones de notificación. 
+---
+= Cuadro de diálogo Edit Alert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar propiedades de alerta, como el recurso con el que está asociada la alerta, eventos, script y opciones de notificación.
+
+
+
+== Nombre
+
+Esta área le permite editar el nombre y la descripción de la alerta.
+
+* *Nombre de alerta*
++
+Permite editar el nombre de alerta.
+
+* *Descripción de alerta*
++
+Permite especificar una descripción de la alerta.
+
+* *Estado de alerta*
++
+Permite habilitar o deshabilitar la alerta.
+
+
+
+
+
+== Recursos
+
+Esta área le permite seleccionar un recurso individual o agrupar los recursos en función de una regla dinámica para la que desea activar la alerta. Puede buscar recursos seleccionando un tipo de recurso de la lista desplegable o puede especificar el nombre exacto del recurso para mostrar un recurso específico.
+
+* *Incluir*
++
+Le permite incluir los recursos para los que desea activar alertas. Puede especificar una cadena de texto para agrupar recursos que coincidan con la cadena y seleccionar este grupo que se incluirá en la alerta. Por ejemplo, puede agrupar todos los volúmenes cuyo nombre contenga la cadena "'vol0'".
+
+* *Excluir*
++
+Permite excluir recursos para los que no desea activar alertas. Por ejemplo, puede excluir todos los volúmenes cuyo nombre contenga la cadena "'xyz'".
+
++
+[NOTE]
+====
+La ficha excluir sólo se muestra cuando se seleccionan todos los recursos de un tipo de recurso en particular, por ejemplo, <<All Volumes>> o. <<All Volumes whose name contains '_xyz_'>>.
+
+====
+
+
+
+
+== Eventos
+
+Este área le permite seleccionar los eventos para los que desea activar las alertas. Puede activar una alerta para eventos según una gravedad determinada o para un conjunto de eventos.
+
+* *Gravedad del suceso*
++
+Le permite seleccionar eventos según el tipo de gravedad, que puede ser crítico, error o advertencia.
+
+* *Nombre del evento contiene*
++
+Permite seleccionar eventos cuyo nombre contenga los caracteres especificados.
+
+
+
+
+
+== Acciones
+
+Esta área permite especificar el método de notificación y la frecuencia de las notificaciones.
+
+* *Avisar a estos usuarios*
++
+Permite editar la dirección de correo electrónico o el nombre de usuario, o bien especificar una nueva dirección de correo electrónico o nombre de usuario para recibir notificaciones.
+
+* *Frecuencia de notificación*
++
+Permite editar la frecuencia con la cual el servidor de gestión envía notificaciones hasta que el evento se confirma, se resuelve o se mueve al estado obsoleto.
+
++
+Se pueden elegir los siguientes métodos de notificación:
+
++
+** Notificar sólo una vez
+** Notificar a una frecuencia específica
+** Notificar a una frecuencia especificada dentro del intervalo de tiempo especificado
+
+
+* *Emitir SNMP Trap*
++
+Permite especificar si se deben enviar capturas SNMP al host SNMP configurado globalmente.
+
+* *Ejecutar script*
++
+Permite asociar un script con la alerta. Este script se ejecuta cuando se genera una alerta.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los cambios y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Descarta los cambios y cierra el cuadro de diálogo.
+
+

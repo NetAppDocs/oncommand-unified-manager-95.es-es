@@ -1,0 +1,54 @@
+---
+permalink: online-help/task-displaying-information-about-a-performance-event.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible usar la página del inventario Events para ver una lista de todos los eventos de rendimiento nuevos y obsoletos de los clústeres que se están supervisando mediante Unified Manager. Al ver esta información, puede determinar los eventos más críticos y, a continuación, profundizar en información detallada para determinar la causa del evento. 
+---
+= Mostrar información acerca de los eventos de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible usar la página del inventario Events para ver una lista de todos los eventos de rendimiento nuevos y obsoletos de los clústeres que se están supervisando mediante Unified Manager. Al ver esta información, puede determinar los eventos más críticos y, a continuación, profundizar en información detallada para determinar la causa del evento.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento nuevos o obsoletos.
+
+
+
+
+== Acerca de esta tarea
+
+La lista de eventos se ordena por hora detectada, con los eventos más recientes listados primero. Puede hacer clic en un encabezado de columna para ordenar los eventos según esa columna. Por ejemplo, puede ordenar por la columna Estado para ver los eventos por gravedad. Si está buscando un evento específico o un tipo de evento específico, puede utilizar el filtro y los mecanismos de búsqueda para afinar la lista de eventos que aparecen en la lista.
+
+Los eventos de todos los orígenes se muestran en esta página:
+
+* Política de umbral de rendimiento definida por el usuario
+* Política de umbral de rendimiento definida por el sistema
+* Umbral de rendimiento dinámico
+
+
+La columna Tipo de evento enumera el origen del evento. Puede seleccionar un evento para ver detalles sobre él en la página de detalles Event.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Eventos*.
+. Busque un evento que desee analizar y haga clic en el nombre del evento.
++
+Se muestra la página de detalles del evento.
+
++
+[NOTE]
+====
+También puede mostrar la página de detalles de un evento si se hace clic en el enlace del nombre del evento de la página Performance Explorer y también desde un correo electrónico de alerta.
+
+====
+

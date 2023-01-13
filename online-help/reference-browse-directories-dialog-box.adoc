@@ -1,0 +1,54 @@
+---
+permalink: online-help/reference-browse-directories-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Browse Directories si desea restaurar los datos en un directorio de un clúster y una SVM que sea diferente del origen original. El clúster y el volumen de origen originales se seleccionan de forma predeterminada. 
+---
+= Cuadro de diálogo Browse Directories
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Browse Directories si desea restaurar los datos en un directorio de un clúster y una SVM que sea diferente del origen original. El clúster y el volumen de origen originales se seleccionan de forma predeterminada.
+
+El cuadro de diálogo Browse Directories permite seleccionar el clúster, la SVM, el volumen y la ruta de directorio en la que se desean restaurar los datos.
+
+* *Cluster*
++
+Enumera los destinos de clúster disponibles en los que puede restaurar. De forma predeterminada, se selecciona el clúster del volumen de origen original.
+
+* *Lista desplegable de SVM*
++
+Muestra la SVM disponible para el clúster seleccionado. De forma predeterminada, se selecciona la SVM del volumen de origen original.
+
+* *Volumen*
++
+Enumera todos los volúmenes de lectura/escritura en una SVM seleccionada. Es posible filtrar los volúmenes por nombre y por espacio disponible. El volumen con mayor espacio se enumera primero, y así sucesivamente, en orden descendente. De forma predeterminada, se selecciona el volumen de origen original.
+
+* *Cuadro de texto Ruta de archivo*
++
+Permite escribir la ruta del archivo en el que desea restaurar los datos. La ruta introducida ya debe existir.
+
+* *Nombre*
++
+Muestra los nombres de las carpetas disponibles para el volumen seleccionado. Al hacer clic en una carpeta de la lista Nombre se muestran las subcarpetas, si existen. Los archivos contenidos en las carpetas no se muestran. Haga clic en image:../media/icon-upfolder.gif[""] después de seleccionar una carpeta, sube un nivel en la estructura de directorios.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Seleccione Directorio*
++
+Aplica las selecciones y cierra el cuadro de diálogo Browse Directories. Si no hay ningún directorio seleccionado, este botón está desactivado.
+
+* *Cancelar*
++
+Descarta las selecciones y cierra el cuadro de diálogo examinar directorios.
+
+

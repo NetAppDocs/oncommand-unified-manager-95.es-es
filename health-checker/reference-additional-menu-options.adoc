@@ -1,0 +1,54 @@
+---
+permalink: health-checker/reference-additional-menu-options.html 
+sidebar: sidebar 
+keywords:  
+summary: Las siguientes opciones de menú le permiten realizar varias tareas administrativas en el servidor de Unified Manager. 
+---
+= Opciones de menú adicionales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las siguientes opciones de menú le permiten realizar varias tareas administrativas en el servidor de Unified Manager.
+
+Están disponibles las siguientes opciones de menú:
+
+* *Restablecer certificado de servidor*
++
+Regenera el certificado del servidor HTTPS.
+
++
+Puede volver a generar el certificado de servidor en la interfaz gráfica de usuario de Unified Manager haciendo clic en *image:../media/clusterpage-settings-icon.gif[""]* > *Certificado HTTPS* > *regenerar certificado HTTPS*.
+
+* *Deshabilitar autenticación SAML*
++
+Deshabilita la autenticación SAML de modo que el proveedor de identidades (IDP) ya no proporcione autenticación de inicio de sesión para los usuarios que acceden a la interfaz gráfica de usuario de Unified Manager. Normalmente, esta opción de consola se usa cuando un problema con la configuración de servidor IDP o SAML impide que los usuarios accedan a la interfaz gráfica de usuario de Unified Manager.
+
+* *Proveedor de datos externos*
++
+Proporciona opciones para conectar Unified Manager a un proveedor de datos externo. Tras establecer la conexión, los datos de rendimiento se envían a un servidor externo para que los expertos en rendimiento del almacenamiento puedan representar las métricas de rendimiento mediante software de terceros. Se muestran las siguientes opciones:
+
++
+** *Configuración del servidor de visualización*--muestra los valores actuales de conexión y configuración para un proveedor de datos externo.
+** *Agregar / Modificar conexión del servidor*--le permite introducir nuevos ajustes de conexión para un proveedor de datos externo, o cambiar la configuración existente.
+** *Modificar la configuración del servidor*--le permite introducir nuevos valores de configuración para un proveedor de datos externo, o cambiar los valores existentes.
+** *Eliminar conexión del servidor*--elimina la conexión a un proveedor de datos externo.
++
+Una vez eliminada la conexión, Unified Manager pierde su conexión con el servidor externo.
+
+
+
+* *Configuración del intervalo de sondeo de rendimiento*
++
+Proporciona una opción para configurar la frecuencia con la que Unified Manager recopila datos estadísticos de rendimiento de clústeres. El intervalo de recopilación predeterminado es de cinco minutos.
+
++
+Puede cambiar este intervalo a diez o quince minutos si descubre que las colecciones de clústeres grandes no se están completando a tiempo.
+
+* *Salida*
++
+Sale del menú de la consola de mantenimiento.
+
+

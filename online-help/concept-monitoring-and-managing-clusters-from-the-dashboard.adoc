@@ -1,0 +1,21 @@
+---
+permalink: online-help/concept-monitoring-and-managing-clusters-from-the-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Los paneles proporcionan información acumulativa de un vistazo sobre el estado de su sistema. Los paneles le permiten evaluar la disponibilidad, la capacidad, el rendimiento y el estado de la protección generales de los clústeres gestionados, así como anotar, localizar, diagnosticar o asignar para su resolución rápidamente cualquier problema específico que pueda producirse. 
+---
+= Supervisar el estado y el rendimiento del clúster desde las consolas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los paneles proporcionan información acumulativa de un vistazo sobre el estado de su sistema. Los paneles le permiten evaluar la disponibilidad, la capacidad, el rendimiento y el estado de la protección generales de los clústeres gestionados, así como anotar, localizar, diagnosticar o asignar para su resolución rápidamente cualquier problema específico que pueda producirse.
+
+Tres paneles que proporcionan una vista única del estado y rendimiento de sus clusters:
+
+* La página Dashboards/Overview proporciona información sobre el estado y rendimiento de los objetos de almacenamiento.
+* La página Dashboards/Performance proporciona un estado de rendimiento de alto nivel de todos los clústeres que se están supervisando.
+* La página Dashboards/Cluster View proporciona información sobre cada clúster.
+

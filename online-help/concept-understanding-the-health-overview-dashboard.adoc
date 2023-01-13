@@ -1,0 +1,44 @@
+---
+permalink: online-help/concept-understanding-the-health-overview-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La consola de información general sobre el estado de Unified Manager proporciona información acumulativa de un vistazo acerca del estado de su almacenamiento y su entorno virtualizado. La página Dashboards/Overview proporciona información de estado sobre los objetos de almacenamiento separados en cuatro categorías de estado: Disponibilidad, capacidad, rendimiento y protección de los objetos de almacenamiento.' 
+---
+= La consola de información general de estado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La consola de información general sobre el estado de Unified Manager proporciona información acumulativa de un vistazo acerca del estado de su almacenamiento y su entorno virtualizado. La página Dashboards/Overview proporciona información de estado sobre los objetos de almacenamiento separados en cuatro categorías de estado: Disponibilidad, capacidad, rendimiento y protección de los objetos de almacenamiento.
+
+La siguiente imagen ilustra los paneles que se muestran en la página Paneles/Descripción general:
+
+image::../media/dashboard-um72.gif[tablero de a bordo u72]
+
+
+
+== Health Overview Area
+
+Muestra, como gráfico, información sobre el estado de los objetos de almacenamiento, como clústeres, agregados y máquinas virtuales de almacenamiento (SVM), así como el estado de las relaciones de protección. La página Paneles/Descripción general muestra los eventos generados para las siguientes categorías:
+
+Al hacer clic en el número situado encima de cualquiera de los gráficos de barras amarillo o rojo, se muestra la página de inventario Eventos, incluidos sólo los eventos. Al hacer clic en el número debajo de cualquiera de los gráficos se muestra la página de inventario de objetos, incluidos sólo esos objetos.
+
+* *Disponibilidad*
++
+Muestra información sobre la disponibilidad de los clústeres, las SVM y los agregados supervisados por Unified Manager. En función de los eventos relacionados con la disponibilidad que se generan, los objetos de almacenamiento se clasifican como sanos, en riesgo o tienen incidentes.
+
+* *Capacidad*
++
+Muestra información sobre la capacidad de las SVM y los agregados supervisados por Unified Manager. Según los eventos relacionados con la capacidad que se generan, los objetos de almacenamiento se categorizan como saludable, en riesgo o tienen incidentes.
+
+* *Rendimiento*
++
+Muestra información sobre el rendimiento de los clústeres, las SVM y los volúmenes supervisados por Unified Manager. En función de los incidentes relacionados con el rendimiento que se generan, los objetos de almacenamiento se clasifican como sanos, en riesgo o tienen incidentes.
+
+* *Protección*
++
+Muestra información sobre las relaciones de protección que supervisa Unified Manager. En función de los eventos relacionados con la protección que se generan, las relaciones de protección se clasifican como saludable, Advertencia o error.
+
+

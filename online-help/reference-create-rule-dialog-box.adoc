@@ -1,0 +1,62 @@
+---
+permalink: online-help/reference-create-rule-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Crear regla para crear nuevas reglas para la política de datos. Por ejemplo, si desea especificar la ubicación del contenido de un determinado tipo de archivo, puede utilizar el cuadro de diálogo Crear regla para crear la regla para la directiva de datos. 
+---
+= Cuadro de diálogo Create Rule
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Crear regla para crear nuevas reglas para la política de datos. Por ejemplo, si desea especificar la ubicación del contenido de un determinado tipo de archivo, puede utilizar el cuadro de diálogo Crear regla para crear la regla para la directiva de datos.
+
+
+
+== Nombre de regla
+
+Especifica el nombre de la nueva regla.
+
+
+
+== Área de plantillas
+
+Muestra la lista de plantillas de reglas. Puede seleccionar una plantilla de regla adecuada de la lista para crear una regla para la directiva de datos.
+
+
+
+== Criterios de coincidencia
+
+Muestra una lista de condiciones relacionadas con la plantilla de regla seleccionada. La lista de condiciones cambia según la plantilla de regla seleccionada. Por ejemplo, si selecciona "'colocar todos los archivos con los nombres de propietario especificados en una clase de almacenamiento adecuada'", *Lista de propietarios que...* se muestra en criterios coincidentes.
+
+* *Agregar*
++
+Permite agregar una nueva propiedad de regla basada en la plantilla de regla seleccionada. Por ejemplo, si ha seleccionado la plantilla de regla, "'colocar todos los archivos con los nombres de propietario especificados en una clase de almacenamiento adecuada'", el botón *Agregar* le permite agregar el nombre del propietario.
+
+* *Eliminar*
++
+Permite eliminar una propiedad de regla seleccionada.
+
+
+
+
+
+== Colocación del contenido
+
+Permite seleccionar una clase de almacenamiento adecuada para la regla de la lista.
+
+
+
+== Botones de comando
+
+* *Crear*
++
+Crea una nueva regla para la directiva de datos y cierra el cuadro de diálogo Crear regla.
+
+* *Cancelar*
++
+Cancela los cambios recientes realizados en la regla y cierra el cuadro de diálogo Crear regla.
+
+

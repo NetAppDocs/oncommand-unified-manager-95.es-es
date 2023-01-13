@@ -1,0 +1,204 @@
+---
+permalink: online-help/reference-volume-thresholds-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Configuration/Health Thresholds de Volumes permite configurar valores de umbrales de estado globales para los volúmenes supervisados. Es posible establecer umbrales para volúmenes individuales o para todos los volúmenes de forma global. Al configurar las opciones globalmente, se modifican los valores predeterminados de todos los objetos. Sin embargo, si los valores predeterminados se han cambiado a nivel de objeto, los valores globales no se modifican. 
+---
+= Página Configuration/Health Thresholds de los volúmenes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Configuration/Health Thresholds de Volumes permite configurar valores de umbrales de estado globales para los volúmenes supervisados. Es posible establecer umbrales para volúmenes individuales o para todos los volúmenes de forma global. Al configurar las opciones globalmente, se modifican los valores predeterminados de todos los objetos. Sin embargo, si los valores predeterminados se han cambiado a nivel de objeto, los valores globales no se modifican.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+Los eventos se generan cuando se incumple un umbral. Puede tomar acciones correctivas para tales eventos.
+
+Puede establecer umbrales para los siguientes: Capacidad, copias Snapshot de volúmenes, cuotas, crecimiento del volumen e inodos.
+
+
+
+== Área Capacity
+
+El área de capacidad permite establecer las siguientes condiciones de umbral de capacidad de volumen. Tenga en cuenta que cuando se habilita la opción Autofila en un volumen, se consideran límites de capacidad según el tamaño máximo de volumen establecido por crecimiento automático, no según el tamaño del volumen original.
+
+* * Espacio casi lleno*
++
+Especifica el porcentaje en el que se considera que un volumen está casi lleno:
+
++
+** Valor predeterminado: 80 %
++
+El valor de este umbral debe ser menor que el valor del umbral de volumen completo para que el servidor de gestión genere un evento.
+
+** Evento generado: Volumen casi completo
+** Gravedad del evento: Advertencia
+
+
+* * Espacio lleno*
++
+Especifica el porcentaje en el que un volumen se considera completo:
+
++
+** Valor predeterminado: 90 %
+** Evento generado: Volumen completo
+** Gravedad del evento: Error
+
+
+* *Días hasta Full*
++
+Especifica la cantidad de días que queda para que el volumen alcance la capacidad completa:
+
++
+** Valor predeterminado: 7
+** Evento generado: Volúmenes días hasta completo
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Área Snapshot copies
+
+El área Snapshot copies le permite establecer las siguientes condiciones de umbral para las copias Snapshot en el volumen:
+
+* *Reserva Snapshot completa*
++
+Especifica el porcentaje en el que el espacio reservado para las copias de Snapshot se considera completo:
+
++
+** Valor predeterminado: 90 %
+** Evento generado: Reserva de Snapshot de volumen completa
+** Gravedad del evento: Error
+
+
+* *Días hasta Full*
++
+Especifica la cantidad de días que queda antes de que el espacio reservado para las copias de Snapshot alcance la capacidad completa:
+
++
+** Valor predeterminado: 7
+** Evento generado: Reserva de Snapshot de volumen días hasta completa
+** Gravedad del evento: Error
+
+
+* * Contador*
++
+Especifica el número de copias Snapshot en un volumen que se considera demasiadas:
+
++
+** Valor predeterminado: 250
+** Evento generado: Demasiadas copias Snapshot
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Área Qtree Quota
+
+El área de cuota de qtree permite establecer las siguientes condiciones de umbral de cuota de volumen:
+
+* * Casi sobrecomprometido*
++
+Especifica el porcentaje al que se considera que un volumen está casi comprometido en exceso mediante las cuotas de qtree:
+
++
+** Valor predeterminado: 95 %
+** Evento generado: La cuota de qtree del volumen casi está comprometida
+** Gravedad del evento: Advertencia
+
+
+* *Sobrecomprometidos*
++
+Especifica el porcentaje al que se considera que un volumen está sobrecargado por las cuotas de qtree:
+
++
+** Valor predeterminado: 100 %
+** Evento generado: Se ha comprometido una cuota de qtree del volumen
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Área de crecimiento
+
+El área de crecimiento permite establecer las siguientes condiciones de umbral para el crecimiento del volumen:
+
+* *Tasa de crecimiento*
++
+Especifica el porcentaje al que la tasa de crecimiento de un volumen se considera normal antes de que el sistema genere un evento anormal de tasa de crecimiento de volumen:
+
++
+** Valor predeterminado: 1 por ciento
+** Evento generado: Tasa de crecimiento del volumen anormal
+** Gravedad del evento: Advertencia
+
+
+* *Sensibilidad de la tasa de crecimiento*
++
+Especifica el factor que se aplica a la desviación estándar de la tasa de crecimiento de un volumen. Si la tasa de crecimiento supera la desviación estándar ponderada, se genera un evento anormal tasa de crecimiento de volumen.
+
++
+Un valor más bajo para la sensibilidad a la tasa de crecimiento indica que el volumen es muy sensible a los cambios en la tasa de crecimiento. El rango para la sensibilidad de la tasa de crecimiento es de 1 a 5.
+
++
+** Valor predeterminado: 2
+
+
++
+[NOTE]
+====
+Si modifica la sensibilidad de la tasa de crecimiento para los volúmenes en el nivel de umbral global, el cambio también se aplica a la sensibilidad de la tasa de crecimiento para los agregados en el nivel de umbral global.
+
+====
+
+
+
+
+== Área Inodes
+
+El área Inodes permite establecer las siguientes condiciones de umbral para inodos:
+
+* * Casi lleno*
++
+Especifica el porcentaje en el que se considera que un volumen ha consumido la mayoría de sus inodos:
+
++
+** Valor predeterminado: 80 %
+** Evento generado: Inodos casi completos
+** Gravedad del evento: Advertencia
+
+
+* *Completo*
++
+Especifica el porcentaje en el que se considera que un volumen ha consumido todas sus inodos:
+
++
+** Valor predeterminado: 90 %
+** Evento generado: Inodos Full
+** Gravedad del evento: Error
+
+
+
+
+
+
+== Botones de comando
+
+* *Restaurar valores predeterminados de fábrica*
++
+Le permite restaurar los ajustes de configuración a los valores predeterminados de fábrica.
+
+* *Guardar*
++
+Guarda los ajustes de configuración de la opción seleccionada.
+
+

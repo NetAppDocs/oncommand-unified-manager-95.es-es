@@ -1,0 +1,50 @@
+---
+permalink: online-help/task-monitoring-metrocluster-replication.html 
+sidebar: sidebar 
+keywords: MetroCluster Replication,Mirroring 
+summary: Puede supervisar y diagnosticar la condición de estado general de las conexiones lógicas mientras hace mirroring de los datos. Es posible identificar los problemas o cualquier riesgo que interrumpa el mirroring de componentes del clúster, como agregados, nodos y máquinas virtuales de almacenamiento. 
+---
+= Supervisar la replicación de MetroCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede supervisar y diagnosticar la condición de estado general de las conexiones lógicas mientras hace mirroring de los datos. Es posible identificar los problemas o cualquier riesgo que interrumpa el mirroring de componentes del clúster, como agregados, nodos y máquinas virtuales de almacenamiento.
+
+
+
+== Antes de empezar
+
+Tanto el clúster local como el remoto de la configuración de MetroCluster se deben añadir a Unified Manager
+
+
+
+== Acerca de esta tarea
+
+Puede utilizar la información que se muestra en la página de detalles Health/Cluster para corregir cualquier problema de replicación.
+
+Si mueve el puntero sobre el icono, puede ver información detallada sobre el evento generado.
+
+Unified Manager utiliza alertas de estado del sistema para supervisar el estado de los componentes y la conectividad en la configuración de MetroCluster.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Estado* > *clústeres*.
++
+Se muestra una lista de los clústeres supervisados.
+
+. En la página de inventario *Health/Clusters*, haga clic en el nombre del clúster para el que desea ver los detalles de replicación de MetroCluster y, a continuación, haga clic en la ficha *replicación de MetroCluster*.
++
+La topología de la configuración de MetroCluster que se va a replicar se muestra en el sitio local en el área de objetos del clúster correspondiente con la información sobre el sitio remoto en el que se están reflejando los datos.
+
+
+
+
+
+== Después de terminar
+
+Si detecta problemas de mirroring en la configuración de MetroCluster, debe iniciar sesión en System Manager o acceder a la CLI de ONTAP para resolver los problemas.

@@ -1,0 +1,55 @@
+---
+permalink: online-help/task-resynchronizing-protection-relationships.html 
+sidebar: sidebar 
+keywords:  
+summary: En la página Protection/Volume Relationships, es posible volver a sincronizar una relación para recuperar el sistema de un evento que deshabilitó el volumen de origen o cuando desea cambiar el origen actual a otro volumen. 
+---
+= Resincronizando las relaciones de protección desde la página Protection/Volume Relationships
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página Protection/Volume Relationships, es posible volver a sincronizar una relación para recuperar el sistema de un evento que deshabilitó el volumen de origen o cuando desea cambiar el origen actual a otro volumen.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber configurado Workflow Automation.
+
+
+
+
+== Pasos
+
+. En la página *Protección/Relaciones de volumen*, seleccione uno o más volúmenes con relaciones en modo inactivo y, en la barra de herramientas, haga clic en *Resincronizar*.
++
+Aparecerá el cuadro de diálogo Resynchronize.
+
+. En la pestaña *Opciones de resincronización*, seleccione una prioridad de transferencia y la tasa de transferencia máxima.
+. Haga clic en *copias Snapshot de origen*; a continuación, en la columna *copia Snapshot*, haga clic en *predeterminado*.
++
+Se muestra el cuadro de diálogo Seleccionar copia Snapshot de origen.
+
+. Si desea especificar una copia Snapshot existente en lugar de transferir la copia Snapshot predeterminada, haga clic en *copia Snapshot existente* y seleccione una copia Snapshot de la lista.
+. Haga clic en *Enviar*.
++
+Volverá al cuadro de diálogo Resynchronize.
+
+. Si ha seleccionado más de un origen para volver a sincronizar, haga clic en *predeterminado* para el siguiente origen para el que desea especificar una copia Snapshot existente.
+. Haga clic en *Enviar* para iniciar el trabajo de resincronización.
++
+El trabajo de resincronización se inició, regresará a la página Protection/Volume Relationships y se mostrará un enlace de trabajos en la parte superior de la página.
+
+. Haga clic en *Ver trabajos* en la página *Protección/Relaciones de volumen* para realizar un seguimiento del estado de cada trabajo de resincronización.
++
+Se muestra una lista filtrada de trabajos.
+
+. Haga clic en la flecha *Atrás* de su explorador para volver a la página *Relaciones de volumen/Protección*.
++
+La operación de resincronización finaliza cuando todas las tareas de trabajo se finalizan correctamente.
+
+

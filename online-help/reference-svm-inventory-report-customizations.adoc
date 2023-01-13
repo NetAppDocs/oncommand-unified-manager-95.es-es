@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-svm-inventory-report-customizations.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear informes de inventario de SVM para analizar información del volumen y ver el estado general y la disponibilidad del almacenamiento. Por ejemplo, puede crear informes para mostrar las SVM que han alcanzado el número máximo de volúmenes y analizar las SVM detenidas. 
+---
+= Personalizaciones del informe Inventory de SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear informes de inventario de SVM para analizar información del volumen y ver el estado general y la disponibilidad del almacenamiento. Por ejemplo, puede crear informes para mostrar las SVM que han alcanzado el número máximo de volúmenes y analizar las SVM detenidas.

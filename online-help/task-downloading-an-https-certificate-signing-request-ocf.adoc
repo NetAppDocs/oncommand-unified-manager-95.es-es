@@ -1,0 +1,35 @@
+---
+permalink: online-help/task-downloading-an-https-certificate-signing-request-ocf.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede descargar una solicitud de certificación para el certificado de seguridad HTTPS actual para poder proporcionar el archivo a una entidad emisora de certificados para firmarlo. Un certificado firmado por CA ayuda a evitar ataques de tipo "man in the middle" y proporciona una mejor protección de seguridad que un certificado autofirmado.' 
+---
+= Descargar una solicitud de firma de certificación HTTPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede descargar una solicitud de certificación para el certificado de seguridad HTTPS actual para poder proporcionar el archivo a una entidad emisora de certificados para firmarlo. Un certificado firmado por CA ayuda a evitar ataques de tipo "man in the middle" y proporciona una mejor protección de seguridad que un certificado autofirmado.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Certificado HTTPS* en el menú *Configuración*.
+. Haga clic en *Descargar la solicitud de firma de certificado HTTPS*.
+. Guarde la `<hostname>.csr` archivo.
+
+
+
+
+== Después de terminar
+
+Puede proporcionar el archivo a una entidad de certificación para firmar e instalar el certificado firmado.

@@ -1,0 +1,68 @@
+---
+permalink: online-help/reference-management-users-page-um.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La página Management/Users (Administración/usuarios) muestra una lista de los usuarios y grupos y proporciona información como el nombre, el tipo de usuario y la dirección de correo electrónico. También puede utilizar esta página para realizar tareas como agregar, editar, eliminar y probar usuarios.' 
+---
+= Página Management/Users
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Management/Users (Administración/usuarios) muestra una lista de los usuarios y grupos y proporciona información como el nombre, el tipo de usuario y la dirección de correo electrónico. También puede utilizar esta página para realizar tareas como agregar, editar, eliminar y probar usuarios.
+
+
+
+== Botones de comando
+
+Los botones de comando permiten realizar las siguientes tareas para los usuarios seleccionados:
+
+* *Agregar*
++
+Muestra el cuadro de diálogo Agregar usuario, que permite agregar un usuario local, un usuario remoto, un grupo remoto o un usuario de base de datos.
+
++
+Sólo puede agregar usuarios o grupos remotos si el servidor de autenticación está habilitado y configurado.
+
+* *Edición*
++
+Muestra el cuadro de diálogo Editar usuario, que permite editar los ajustes del usuario seleccionado.
+
+* *Eliminar*
++
+Elimina los usuarios seleccionados de la base de datos del servidor de administración.
+
+* *Prueba*
++
+Permite validar si hay un usuario o grupo remoto en el servidor de autenticación.
+
++
+Puede realizar esta tarea solo si el servidor de autenticación está habilitado y configurado.
+
+
+
+
+
+== Vista de lista
+
+La vista Lista muestra, en formato tabular, información sobre los usuarios creados. Puede utilizar los filtros de columnas para personalizar los datos que se muestran.
+
+* *Nombre*
++
+Muestra el nombre del usuario o grupo.
+
+* *Tipo*
++
+Muestra el tipo de usuario: Usuario local, Usuario remoto, Grupo remoto, Usuario de base de datos o Usuario de mantenimiento.
+
+* *Correo electrónico*
++
+Muestra la dirección de correo electrónico del usuario.
+
+* *Rol*
++
+Muestra el tipo de rol asignado al usuario: Operador, Administrador de almacenamiento, Administrador de OnCommand, Esquema de integración o Esquema de informes.
+
+

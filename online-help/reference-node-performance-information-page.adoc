@@ -1,0 +1,117 @@
+---
+permalink: online-help/reference-node-performance-information-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilice la página Performance/Node Information para ver una lista de los atributos físicos y lógicos del nodo. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento. 
+---
+= Página Performance/Node Information
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice la página Performance/Node Information para ver una lista de los atributos físicos y lógicos del nodo. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento.
+
+
+
+== Atributos de nodo
+
+* *Dirección IP*
++
+La dirección IPv4 o IPv6 de la LIF de gestión de nodos.
+
+* *FQDN*
++
+El nombre de dominio completo (FQDN) de la LIF de gestión de nodos.
+
+* *Versión del SO*
++
+La versión del software ONTAP que se instala en el nodo.
+
+* *Modelo / Familia*
++
+El número de modelo de plataforma del nodo.
+
+* *Capacidad (libre/total)*
++
+El almacenamiento total disponible para el nodo, en gigabytes y la cantidad de almacenamiento disponible actualmente.
+
+* *Cluster*
++
+El nombre del clúster al que pertenece este nodo. Puede hacer clic en el nombre para mostrar los detalles del clúster la página Performance/Cluster Explorer.
+
+* *Socio de alta disponibilidad*
++
+El nombre del nodo del partner de alta disponibilidad, si corresponde. Puede hacer clic en el nombre para mostrar los detalles del nodo del partner en la página Performance/Node Explorer.
+
+* *Agregados*
++
+El número de agregados en este nodo. Puede hacer clic en el número para mostrar los agregados en la página Performance/Aggregates Inventory.
+
++
+[NOTE]
+====
+El número indicado aquí puede no coincidir con el número de la página Performance/Aggregates Inventory, porque la página del inventario no incluye agregados raíz.
+
+====
+* *Puertos*
++
+El número de puertos en este nodo. Puede hacer clic en el número para mostrar los puertos en la página Performance/Ports Inventory.
+
++
+[NOTE]
+====
+El número indicado aquí puede no coincidir con el número de la página Performance/Ports Inventory, porque la página del inventario no incluye los puertos de gestión de nodos.
+
+====
+* *Contacto / ubicación*
++
+Si está disponible, el nombre del administrador que se va a contactar con respecto a este nodo y la ubicación del nodo.
+
+* *# de núcleos / velocidad*
++
+Si hay disponibles, el número de núcleos de CPU en la controladora y la velocidad de los núcleos de CPU.
+
+* *RAM*
++
+Si está disponible, la memoria total disponible en la controladora.
+
+
+
+
+
+== Dispositivos flash
+
+[NOTE]
+====
+Los datos de Flash Cache solo se muestran para nodos, y solo cuando se instala un módulo Flash Cache en el nodo.
+
+====
+* *Número de ranura*
++
+El número de ranura en la que está instalado el módulo Flash Cache.
+
+* *Estado*
++
+El estado de funcionamiento del módulo. Valores válidos:
+
++
+** En línea
+** Offline_failed
+** Umbral_sin conexión
+
+
+* *Modelo / Familia*
++
+El número de modelo del módulo.
+
+* *Firmware Rev*
++
+La versión del firmware instalada en el módulo.
+
+* *Capacidad*
++
+El tamaño del módulo de Flash Cache instalado.
+
+

@@ -1,0 +1,48 @@
+---
+permalink: online-help/reference-edit-group-rule-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar las reglas de grupo creadas para incluir el número máximo de objetos de almacenamiento de un grupo. 
+---
+= Cuadro de diálogo Edit Group Rule
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar las reglas de grupo creadas para incluir el número máximo de objetos de almacenamiento de un grupo.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Nombre de regla*
++
+Muestra el nombre de la regla.
+
+* *Tipo de objeto de destino*
++
+Muestra el objeto de almacenamiento que se va a agregar a un grupo seleccionado. No puede cambiar el tipo de objeto.
+
+* *Grupo asociado*
++
+Muestra el grupo asociado. Puede seleccionar un grupo diferente para la regla de grupo.
+
+* *Condición*
++
+Muestra la lista de condiciones para un grupo seleccionado. Puede editar las condiciones. Los objetos de almacenamiento se quitan o se añaden a un grupo seleccionado en función de los cambios realizados.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los cambios realizados y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Editar regla de grupo sin guardar los cambios.
+
+

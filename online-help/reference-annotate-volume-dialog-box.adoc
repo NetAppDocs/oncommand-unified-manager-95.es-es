@@ -1,0 +1,30 @@
+---
+permalink: online-help/reference-annotate-volume-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Annotate Volume permite anotar manualmente los objetos de almacenamiento. Puede seleccionar un único volumen o varios volúmenes y anotar con una pareja de valores específica de la lista existente de anotaciones. 
+---
+= Cuadro de diálogo Annotate Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Annotate Volume permite anotar manualmente los objetos de almacenamiento. Puede seleccionar un único volumen o varios volúmenes y anotar con una pareja de valores específica de la lista existente de anotaciones.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Anotación=pares de valor*
++
+Permite seleccionar la anotación necesaria para el volumen seleccionado.
+
+* *Aplicar*
++
+Aplica la anotación seleccionada al volumen.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo volumen de anotación sin guardar los cambios.
+
+

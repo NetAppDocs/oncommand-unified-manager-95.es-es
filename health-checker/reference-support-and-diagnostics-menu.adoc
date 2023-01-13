@@ -1,0 +1,22 @@
+---
+permalink: health-checker/reference-support-and-diagnostics-menu.html 
+sidebar: sidebar 
+keywords:  
+summary: El menú Soporte y Diagnóstico permite generar un bundle de soporte. 
+---
+= Menú de soporte y diagnóstico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El menú Soporte y Diagnóstico permite generar un bundle de soporte.
+
+Está disponible la siguiente opción de menú:
+
+* *Generar paquete de soporte*
++
+Permite crear un archivo 7-Zip que contenga información completa de diagnóstico en el directorio principal del usuario de diagnóstico. El archivo incluye información generada por un mensaje de AutoSupport, el contenido de la base de datos de Unified Manager, los datos detallados sobre las redes internas del servidor de Unified Manager y los registros a nivel detallado que no se incluyen normalmente en los mensajes de AutoSupport.
+
+

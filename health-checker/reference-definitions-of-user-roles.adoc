@@ -1,0 +1,54 @@
+---
+permalink: health-checker/reference-definitions-of-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: El usuario de mantenimiento o el administrador de OnCommand asignan un rol a cada usuario. Cada rol contiene ciertos privilegios. El ámbito de las actividades que se pueden realizar en Unified Manager depende del rol que se tenga asignado y de los privilegios que contiene el rol. 
+---
+= Definiciones de roles de usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El usuario de mantenimiento o el administrador de OnCommand asignan un rol a cada usuario. Cada rol contiene ciertos privilegios. El ámbito de las actividades que se pueden realizar en Unified Manager depende del rol que se tenga asignado y de los privilegios que contiene el rol.
+
+Unified Manager incluye los siguientes roles de usuario predefinidos:
+
+* *Operador*
++
+Permite ver información sobre el sistema de almacenamiento y otros datos recopilados por Unified Manager, incluidos historiales y tendencias de capacidad. Este rol permite al operador de almacenamiento ver, asignar, reconocer, resolver y añadir notas para los eventos.
+
+* *Administrador de almacenamiento*
++
+Configura las operaciones de gestión del almacenamiento en Unified Manager. Este rol permite al administrador de almacenamiento configurar umbrales y crear alertas, así como otras opciones y políticas específicas de la gestión del almacenamiento.
+
+* *Administrador de OnCommand*
++
+Configura ajustes que no están relacionados con la administración del almacenamiento. Esta función permite la gestión de usuarios, certificados de seguridad, acceso a la base de datos y opciones administrativas, incluida la autenticación, SMTP, redes y AutoSupport.
+
++
+[NOTE]
+====
+Cuando Unified Manager se instala en sistemas Linux, el usuario inicial con la función de administrador de OnCommand se denomina automáticamente «'umadmin'».
+
+====
+* *Esquema de integración*
++
+Este rol permite el acceso de solo lectura a las vistas de la base de datos de Unified Manager con la integración de Unified Manager con OnCommand Workflow Automation (WFA).
+
+* *Esquema del informe*
++
+Este rol habilita el acceso de solo lectura a los informes y otras vistas de bases de datos directamente desde la base de datos de Unified Manager. Las bases de datos que se pueden ver incluyen:
+
++
+** vista_modelo_netapp
+** rendimiento_netapp
+** ocum
+** ocum_report
+** ocum_report_birt
+** opm
+** escalemador
+
+
+

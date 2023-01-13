@@ -1,0 +1,60 @@
+---
+permalink: online-help/task-investigating-perceived-slow-response-time-for-a-workload.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede utilizar Unified Manager para determinar si las operaciones en el clúster pueden haber contribuido al lento tiempo de respuesta \(latencia\) de una carga de trabajo de volumen.' 
+---
+= Investigando la percepción de un tiempo de respuesta lento para una carga de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar Unified Manager para determinar si las operaciones en el clúster pueden haber contribuido al lento tiempo de respuesta (latencia) de una carga de trabajo de volumen.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber identificado el nombre del volumen, o el LUN asociado, que desea analizar.
+* Unified Manager debe haber recopilado y analizado un mínimo de cinco días de estadísticas de rendimiento del clúster.
+
+
+
+
+== Acerca de esta tarea
+
+Si desea ver la página de detalles Event, puede hacer clic en el nombre de un volumen para ir directamente a la página Performance/Volume Details.
+
+
+
+== Pasos
+
+. En la barra *Buscar*, escriba el nombre del volumen.
++
+El nombre del volumen se muestra en los resultados de búsqueda.
+
+. Haga clic en el nombre del volumen.
++
+El volumen se muestra en la página Performance/Volume Details.
+
+. En el gráfico de datos históricos, haga clic en *5d* para mostrar los últimos cinco días de datos históricos.
+. Revise el gráfico *IOPS* para responder a las siguientes preguntas:
++
+** ¿Hay picos espectaculares en la actividad?
+** ¿Hay caídas dramáticas en la actividad?
+** ¿Hay cambios anormales en el patrón de operaciones? Si las operaciones no muestran picos o caídas espectaculares en la actividad y no se produjeron cambios en la configuración del clúster durante este tiempo, el administrador de almacenamiento puede confirmar que otras cargas de trabajo no afectan al rendimiento del volumen.
+
+
+. En el menú *Break down data by*, en *IOPS*, seleccione ***Lecturas/escrituras/otro***.
+. Haga clic en *Enviar*.
++
+El gráfico de lecturas/escrituras/otro se muestra debajo del gráfico IOPS.
+
+. Revise el gráfico *Lecturas/escrituras/otro* para identificar picos o caídas espectaculares en la cantidad de lecturas o escrituras para el volumen.
++
+Si no hay picos o caídas espectaculares en las lecturas o escrituras, el administrador de almacenamiento puede confirmar que las operaciones de I/o del clúster funcionan con normalidad. Cualquier problema de rendimiento puede estar en la red o en los clientes conectados.
+
+

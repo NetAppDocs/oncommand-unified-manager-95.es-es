@@ -1,0 +1,58 @@
+---
+permalink: health-checker/concept-configuring-the-destination-and-schedule-for-database-dump-backups.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar los ajustes de backup de la base de datos de Unified Manager para establecer la ruta de backup de la base de datos, el número de retención y las programaciones de backup. Se pueden habilitar backups programados diarios o semanales. De manera predeterminada, las copias de seguridad programadas están deshabilitadas. 
+---
+= Configurar los ajustes de backup de la base de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar los ajustes de backup de la base de datos de Unified Manager para establecer la ruta de backup de la base de datos, el número de retención y las programaciones de backup. Se pueden habilitar backups programados diarios o semanales. De manera predeterminada, las copias de seguridad programadas están deshabilitadas.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe tener un mínimo de 150 GB de espacio disponible en la ubicación que defina como ruta de backup.
++
+Se recomienda que utilice una ubicación remota externa al sistema host de Unified Manager.
+
+* Cuando Unified Manager esté instalado en un sistema Linux, compruebe que el usuario "'jboss'" tiene permisos de escritura en el directorio de copia de seguridad.
+* No se deben programar operaciones de backup para que se produzcan inmediatamente después de añadir un clúster nuevo mientras Unified Manager recoge 15 días de datos de rendimiento históricos.
+
+
+
+
+== Acerca de esta tarea
+
+Se requiere más tiempo la primera vez que se realiza un backup que para backups posteriores, ya que el primer backup es un backup completo. Un backup completo puede tener más de 1 GB y puede tardar entre tres y cuatro horas. Los backups posteriores son incrementales y requieren menos tiempo.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Administración* > *copia de seguridad de la base de datos*.
+. En la página *copia de seguridad de la base de datos/administración*, haga clic en *acciones* > *Configuración de copia de seguridad de la base de datos*.
+. Configure los valores adecuados para una ruta de copia de seguridad y el recuento de retenciones.
++
+El valor predeterminado para el número de retención es 10; se puede usar 0 para crear copias de seguridad ilimitadas.
+
+. En la sección *frecuencia de programación*, seleccione la casilla de verificación *Activar* y, a continuación, especifique una programación diaria o semanal.
++
+** *Diario*
++
+Si selecciona esta opción, debe introducir una hora en formato de 24 horas para crear el backup. Por ejemplo, si especifica 18:30, se creará una copia de seguridad diariamente a las 6:30.
+
+** *Semanal*
++
+Si selecciona esta opción, debe especificar la hora y el día para crear el backup. Por ejemplo, si especifica el día como lunes y hora como 16:30, se crea una copia de seguridad semanal todos los lunes a las 4:30.
+
+
+
+. Haga clic en *Guardar y cerrar*.
+

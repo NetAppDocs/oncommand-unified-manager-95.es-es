@@ -1,0 +1,33 @@
+---
+permalink: online-help/task-viewing-the-list-of-monitored-clusters.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar la página Configuration/Cluster Data Sources para ver el inventario de clústeres. Es posible ver detalles sobre los clústeres, como su nombre, dirección IP y estado de comunicación. 
+---
+= Se muestra la lista de clústeres supervisados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la página Configuration/Cluster Data Sources para ver el inventario de clústeres. Es posible ver detalles sobre los clústeres, como su nombre, dirección IP y estado de comunicación.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+La lista de clústeres se ordena según la columna Collection state Severity Level. Puede hacer clic en un encabezado de columna para ordenar los clústeres por columnas diferentes.
+
+
+
+== Pasos
+
+. En el panel de navegación de la izquierda, haga clic en *Configuración* > *fuentes de datos de clúster*.
+

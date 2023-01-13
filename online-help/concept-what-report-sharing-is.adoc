@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-what-report-sharing-is.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede compartir un informe con uno o más usuarios por correo electrónico mediante la opción Compartir. 
+---
+= ¿Qué es el intercambio de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede compartir un informe con uno o más usuarios por correo electrónico mediante la opción *Compartir*.
+
+Debe guardar el informe antes de compartirlo para asegurarse de que se muestran los cambios recientes realizados en el informe.
+
+Puede compartir el informe en el formato que desee. La opción *Compartir* le ayuda a compartir informes por correo electrónico de forma instantánea, incluso con personas que no tienen acceso a Unified Manager pero tienen una dirección de correo electrónico válida.

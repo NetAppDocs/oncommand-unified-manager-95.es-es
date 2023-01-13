@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task-accessing-the-maintenance-console-using-vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: Si la interfaz de usuario de Unified Manager no está en funcionamiento o si necesita realizar funciones que no están disponibles en la interfaz de usuario, puede acceder a la consola de mantenimiento para volver a configurar el dispositivo virtual. 
+---
+= Acceder a la consola de mantenimiento mediante la consola de la máquina virtual de vSphere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si la interfaz de usuario de Unified Manager no está en funcionamiento o si necesita realizar funciones que no están disponibles en la interfaz de usuario, puede acceder a la consola de mantenimiento para volver a configurar el dispositivo virtual.
+
+
+
+== Antes de empezar
+
+Debe ser el usuario de mantenimiento. El dispositivo virtual debe estar encendido para acceder a la consola de mantenimiento.
+
+
+
+== Acerca de esta tarea
+
+
+
+== Pasos
+
+. En vSphere Client, busque el dispositivo virtual Unified Manager.
+. Haga clic en la ficha *Consola*.
+. Haga clic dentro de la ventana de la consola para iniciar sesión.
+. Inicie sesión en la consola de mantenimiento con su nombre de usuario y contraseña.
++
+Tras 15 minutos de inactividad, la consola de mantenimiento cierra la sesión.
+
+

@@ -1,0 +1,48 @@
+---
+permalink: online-help/reference-edit-group-action-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar la acción de grupo creada para grupos mediante el cuadro de diálogo Editar acción de grupo. 
+---
+= Cuadro de diálogo Edit Group Action
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar la acción de grupo creada para grupos mediante el cuadro de diálogo Editar acción de grupo.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Nombre de la acción*
++
+Muestra el nombre de la acción de grupo.
+
+* *Descripción*
++
+Muestra la descripción de la acción de grupo.
+
+* *Grupo*
++
+Muestra el nombre del grupo seleccionado.
+
+* *Tipo de acción*
++
+Muestra el tipo de acción de grupo. No puede cambiar el tipo de acción. Sin embargo, puede modificar los parámetros que utilizó para configurar la acción de grupo.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los cambios realizados en la acción de grupo.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Editar acción de grupo sin guardar los cambios.
+
+

@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept-what-the-diagnostic-user-does.html 
+sidebar: sidebar 
+keywords:  
+summary: El objetivo del acceso de diagnóstico es habilitar el soporte técnico para ayudarle a solucionar problemas, y solo se debe utilizar cuando lo indique el soporte técnico. 
+---
+= Capacidades de diagnóstico del usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El objetivo del acceso de diagnóstico es habilitar el soporte técnico para ayudarle a solucionar problemas, y solo se debe utilizar cuando lo indique el soporte técnico.
+
+El usuario de diagnóstico puede ejecutar comandos de nivel de sistema operativo cuando así lo indique el soporte técnico, con fines de solución de problemas.

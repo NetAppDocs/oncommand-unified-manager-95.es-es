@@ -1,0 +1,38 @@
+---
+permalink: install/concept-requirements-and-limitations-for-unified-manager-in-mscs.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de instalar Unified Manager en un entorno de clustering de conmutación al nodo de respaldo, debe asegurarse de que los nodos del clúster estén configurados correctamente para admitir Unified Manager. 
+---
+= Requisitos de Unified Manager en un entorno de clustering de conmutación al nodo de respaldo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar Unified Manager en un entorno de clustering de conmutación al nodo de respaldo, debe asegurarse de que los nodos del clúster estén configurados correctamente para admitir Unified Manager.
+
+Debe asegurarse de que la configuración del clúster de conmutación por error cumpla los siguientes requisitos:
+
+* Ambos nodos del clúster deben ejecutar la misma versión de Microsoft Windows Server.
+* La misma versión de Unified Manager se debe instalar utilizando la misma ruta en ambos nodos del clúster.
+* El clustering de conmutación al nodo de respaldo debe estar instalado y habilitado en ambos nodos.
++
+Consulte la documentación de Microsoft para obtener instrucciones.
+
+* Para crear discos de datos compartidos, debe haber utilizado la estructura conmutada de Fibre Channel o el almacenamiento basado en iSCSI como back-end de almacenamiento
+* Opcional: Al utilizar SnapDrive para Windows, es necesario crear una ubicación compartida a la que puedan acceder los dos nodos de la configuración de alta disponibilidad.
++
+Consulte la _SnapDrive for Windows Installation Guide_ para obtener información acerca de la instalación y creación de una ubicación compartida.
+
++
+También puede gestionar las LUN con la interfaz de línea de comandos del sistema de almacenamiento. Consulte la matriz de compatibilidad de SnapDrive para Windows si desea obtener más información.
+
+* Debe tener instalado Perl con `XML::LibXML` y.. `File::chdir` módulos para que funcionen las secuencias de comandos.
+* Solo debe haber dos nodos en la configuración del clúster.
+* El tipo de quórum «'mayoría de nodo y disco'» debe utilizarse para la agrupación en clústeres de recuperación tras fallos.
+* Debe haber configurado una dirección IP compartida con un FQDN correspondiente para que se pueda usar como dirección IP global del clúster para acceder a Unified Manager.
+* La contraseña del usuario de mantenimiento de Unified Manager en ambos nodos debe ser la misma.
+* Solo debe haber utilizado la dirección IP de IPv4.
+

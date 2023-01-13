@@ -1,0 +1,57 @@
+---
+permalink: health-checker/task-disabling-saml-authentication-from-the-maintenance-console-um.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible que deba deshabilitar la autenticación SAML desde la consola de mantenimiento cuando no existe acceso a la interfaz gráfica de usuario de Unified Manager. Esto puede suceder en casos de configuración incorrecta o si no se puede acceder al IDP. 
+---
+= Deshabilitar la autenticación SAML de la consola de mantenimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que deba deshabilitar la autenticación SAML desde la consola de mantenimiento cuando no existe acceso a la interfaz gráfica de usuario de Unified Manager. Esto puede suceder en casos de configuración incorrecta o si no se puede acceder al IDP.
+
+
+
+== Antes de empezar
+
+Debe tener acceso a la consola de mantenimiento como usuario de mantenimiento.
+
+
+
+== Acerca de esta tarea
+
+Cuando se deshabilita la autenticación SAML, los proveedores de servicios de directorio configurados, como Active Directory o LDAP, realizan la autenticación de inicio de sesión. Los usuarios locales y los usuarios de mantenimiento podrán acceder a la interfaz gráfica de usuario además de los usuarios remotos configurados.
+
+También se puede deshabilitar la autenticación SAML desde la página Setup/Authentication en la interfaz de usuario.
+
+[NOTE]
+====
+Unified Manager se reinicia automáticamente después de deshabilitar la autenticación de SAML.
+
+====
+
+
+== Pasos
+
+. Inicie sesión en la consola de mantenimiento.
+. En el *Menú principal*, introduzca el número de la opción *Desactivar autenticación SAML*.
++
+Aparece un mensaje para confirmar que desea deshabilitar la autenticación SAML y reiniciar Unified Manager.
+
+. Escriba *y* y, a continuación, pulse Intro y se reiniciará Unified Manager.
+
+
+
+
+== Resultados
+
+La próxima vez que los usuarios remotos intenten acceder a la interfaz gráfica de Unified Manager, deberán introducir sus credenciales en la página de inicio de sesión de Unified Manager en lugar de en la página de inicio de sesión de IDP.
+
+
+
+== Después de terminar
+
+Si se requiere, acceda a IDP y elimine la URL del servidor de Unified Manager y los metadatos.

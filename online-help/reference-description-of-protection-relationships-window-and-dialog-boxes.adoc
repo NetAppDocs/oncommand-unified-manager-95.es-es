@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-description-of-protection-relationships-window-and-dialog-boxes.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible ver y gestionar detalles relacionados con la protección, como pools de recursos, asociaciones de SVM y trabajos de protección. Puede usar la página Configuration/Health Thresholds adecuada para configurar valores de umbral de estado global para agregados, volúmenes y relaciones. 
+---
+= Descripción de las ventanas y cuadros de diálogo de relaciones de protección
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible ver y gestionar detalles relacionados con la protección, como pools de recursos, asociaciones de SVM y trabajos de protección. Puede usar la página Configuration/Health Thresholds adecuada para configurar valores de umbral de estado global para agregados, volúmenes y relaciones.

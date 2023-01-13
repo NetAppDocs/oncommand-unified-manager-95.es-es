@@ -1,0 +1,264 @@
+---
+permalink: online-help/reference-configure-protection-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Configurar protección para crear relaciones de SnapMirror y SnapVault para todos los volúmenes de protección de datos de lectura, escritura y escritura en los clústeres a fin de garantizar que se repliquen los datos en un volumen de origen o un volumen primario. 
+---
+= Cuadro de diálogo Configure Protection
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Configurar protección para crear relaciones de SnapMirror y SnapVault para todos los volúmenes de protección de datos de lectura, escritura y escritura en los clústeres a fin de garantizar que se repliquen los datos en un volumen de origen o un volumen primario.
+
+
+
+== Pestaña Source
+
+* *Vista de topología*
++
+Muestra una representación visual de la relación que está creando. El origen de la topología se resalta de forma predeterminada.
+
+* *Información de la fuente*
++
+Muestra detalles sobre los volúmenes de origen seleccionados, incluida la siguiente información:
+
++
+** Nombre del clúster de origen
+** Nombre de la SVM de origen
+** Tamaño total del volumen acumulativo
++
+Muestra el tamaño total de todos los volúmenes de origen seleccionados.
+
+** Tamaño acumulativo del volumen utilizado
++
+Muestra el tamaño acumulativo del volumen utilizado para todos los volúmenes de origen seleccionados.
+
+** Volumen de origen
++
+Muestra la siguiente información en una tabla :
+
++
+*** Volumen de origen
++
+Muestra los nombres de los volúmenes de origen seleccionados.
+
+*** Tipo
++
+Muestra el tipo de volumen.
+
+*** Tipo de SnapLock
++
+Muestra el tipo de SnapLock del volumen. Las opciones son Compliance, Enterprise y Non-SnapLock.
+
+*** Copia snapshot
++
+Muestra la copia Snapshot que se usa para la transferencia básica. Si el volumen de origen es de lectura/escritura, el valor predeterminado en la columna copia Snapshot indica que se crea una nueva copia Snapshot de forma predeterminada, y se usa para la transferencia básica. Si el volumen de origen es un volumen de protección de datos, el valor predeterminado en la columna copia Snapshot indica que no se crea ninguna copia Snapshot nueva y todas las copias Snapshot existentes se transfieren al destino. Al hacer clic en el valor de la copia Snapshot se muestra una lista de copias Snapshot desde las que puede seleccionar una copia Snapshot existente para utilizarla en la transferencia básica. No se puede seleccionar una copia Snapshot predeterminada diferente si el tipo de origen es protección de datos.
+
+
+
+
+
+
+
+
+
+== Pestaña SnapMirror
+
+Permite especificar un clúster de destino, una máquina virtual de almacenamiento (SVM) y un agregado para una relación de protección, así como una convención de nomenclatura para los destinos a la vez que se crea una relación de SnapMirror. También puede especificar una política y una programación de SnapMirror.
+
+* *Vista de topología*
++
+Muestra una representación visual de la relación que está creando. El recurso de destino de SnapMirror en la topología se destaca de forma predeterminada.
+
+* *Información de destino*
++
+Permite seleccionar los recursos de destino para una relación de protección:
+
++
+** Vínculo avanzado
++
+Inicia el cuadro de diálogo Advanced Destination Settings cuando se crea una relación de SnapMirror.
+
+** Clúster
++
+Enumera los clústeres que están disponibles como hosts de destino de protección. El campo es obligatorio
+
+** Máquina virtual de almacenamiento (SVM)
++
+Enumera las SVM que están disponibles en el clúster seleccionado. Debe seleccionar un clúster antes de completar la lista de SVM. El campo es obligatorio
+
+** Agregado
++
+Enumera los agregados que están disponibles en la SVM seleccionada. Debe seleccionarse un clúster antes de rellenar la lista de agregados. El campo es obligatorio En la lista de agregados se muestra la siguiente información:
+
++
+*** Clasificación
++
+Cuando varios agregados satisfacen todos los requisitos de un destino, la clasificación indica la prioridad en la que se indica el agregado, según las siguientes condiciones:
+
++
+.... Se prefiere un agregado ubicado en un nodo diferente al nodo del volumen de origen para habilitar la separación de dominios de fallo.
+.... Se prefiere un agregado en un nodo con menos volúmenes para habilitar el equilibrio de carga entre nodos de un clúster.
+.... Se prefiere un agregado que tenga más espacio libre que otros agregados para habilitar el equilibrio de capacidad. Un rango de 1 significa que el agregado es el más preferido según los tres criterios.
+
+
+*** Nombre del agregado
++
+Nombre del agregado
+
+*** Capacidad disponible
+*** Cantidad de espacio disponible en el agregado para los datos
+*** Conjunto de recursos
++
+Nombre del pool de recursos al que pertenece el agregado
+
+
+
+** Convención de nomenclatura
++
+Especifica la convención de nomenclatura predeterminada que se aplica al volumen de destino. Puede aceptar la convención de nomenclatura proporcionada o crear una personalizada. La convención de nomenclatura puede tener los siguientes atributos: %C, %M, %V y %N, donde %C es el nombre del clúster, %M es el nombre de SVM, %V es el volumen de origen y %N es el nombre del nodo de destino de topología.
+
++
+El campo de convención de nomenclatura se resalta en rojo si la entrada no es válida. Al hacer clic en el vínculo «'Nombre de vista previa'», se muestra una vista previa de la convención de nomenclatura introducida y el texto de vista previa se actualiza dinámicamente a medida que se escribe una convención de nomenclatura en el campo de texto. Se agrega un sufijo entre 001 y 999 al nombre de destino cuando se crea la relación, reemplazando el `nnn` esto se muestra en el texto de vista previa, con 001 asignados primero, 002 segundos asignados, etc.
+
+
+
+* *Ajustes de relación*
++
+Permite especificar la tasa de transferencia máxima, la política de SnapMirror y la programación que utiliza la relación de protección:
+
++
+** Velocidad máxima de transferencia
++
+Especifica la tasa máxima a la que se transfieren los datos entre los clústeres a través de la red. Si decide no utilizar una tasa de transferencia máxima, la transferencia de línea de base entre relaciones es ilimitada. Sin embargo, si ejecuta ONTAP 8.2 y el clúster primario y el secundario son los mismos, se omite esta configuración.
+
+** Política de SnapMirror
++
+Especifica la política de SnapMirror de ONTAP para la relación. El valor predeterminado es DPDefault.
+
+** Crear política
++
+Inicia el cuadro de diálogo Create SnapMirror Policy, que permite crear y utilizar una nueva política de SnapMirror.
+
+** Programación de SnapMirror
++
+Especifica la política de SnapMirror de ONTAP para la relación. Las programaciones disponibles incluyen ninguna, 5min, 8horas, diaria, por hora, y semanal. El valor predeterminado es None, lo que indica que no hay ningún programa asociado a la relación. Las relaciones sin programaciones no tienen valores de estado de desfase, a menos que pertenezcan a un servicio de almacenamiento.
+
+** Crear programación
++
+Abre el cuadro de diálogo Create Schedule, que permite crear una nueva programación de SnapMirror.
+
+
+
+
+
+
+
+== Pestaña SnapVault
+
+Permite especificar un clúster secundario, una SVM y un agregado para una relación de protección, así como una convención de nomenclatura para los volúmenes secundarios al crear una relación de SnapVault. También puede especificar una política y una programación de SnapVault.
+
+* *Vista de topología*
++
+Muestra una representación visual de la relación que está creando. El recurso secundario SnapVault de la topología se destaca de forma predeterminada.
+
+* *Información secundaria*
++
+Permite seleccionar los recursos secundarios para una relación de protección:
+
++
+** Vínculo avanzado
++
+Inicia el cuadro de diálogo Configuración secundaria avanzada.
+
+** Clúster
++
+Enumera los clústeres que están disponibles como hosts de protección secundarios. El campo es obligatorio
+
+** Máquina virtual de almacenamiento (SVM)
++
+Enumera las SVM que están disponibles en el clúster seleccionado. Debe seleccionar un clúster antes de completar la lista de SVM. El campo es obligatorio
+
+** Agregado
++
+Enumera los agregados que están disponibles en la SVM seleccionada. Debe seleccionarse un clúster antes de rellenar la lista de agregados. El campo es obligatorio En la lista de agregados se muestra la siguiente información:
+
++
+*** Clasificación
++
+Cuando varios agregados satisfacen todos los requisitos de un destino, la clasificación indica la prioridad en la que se indica el agregado, según las siguientes condiciones:
+
++
+.... Se recomienda un agregado ubicado en un nodo diferente al nodo de volumen primario para habilitar la separación de dominios de fallo.
+.... Se prefiere un agregado en un nodo con menos volúmenes para habilitar el equilibrio de carga entre nodos de un clúster.
+.... Se prefiere un agregado que tenga más espacio libre que otros agregados para habilitar el equilibrio de capacidad. Un rango de 1 significa que el agregado es el más preferido según los tres criterios.
+
+
+*** Nombre del agregado
++
+Nombre del agregado
+
+*** Capacidad disponible
+*** Cantidad de espacio disponible en el agregado para los datos
+*** Conjunto de recursos
++
+Nombre del pool de recursos al que pertenece el agregado
+
+
+
+** Convención de nomenclatura
++
+Especifica la convención de nomenclatura predeterminada que se aplica al volumen secundario. Puede aceptar la convención de nomenclatura proporcionada o crear una personalizada. La convención de nomenclatura puede tener los siguientes atributos: %C, %M, %V y %N, donde %C es el nombre del clúster, %M es el nombre de SVM, %V es el volumen de origen y %N es el nombre del nodo secundario de topología.
+
++
+El campo de convención de nomenclatura se resalta en rojo si la entrada no es válida. Al hacer clic en el vínculo «'Nombre de vista previa'», se muestra una vista previa de la convención de nomenclatura introducida y el texto de vista previa se actualiza dinámicamente a medida que se escribe una convención de nomenclatura en el campo de texto. Si escribe un valor no válido, la información no válida se muestra como signos de interrogación rojos en el área de vista previa. Se agrega un sufijo entre 001 y 999 al nombre secundario cuando se crea la relación, reemplazando el `nnn` esto se muestra en el texto de vista previa, con 001 asignados primero, 002 segundos asignados, etc.
+
+
+
+* *Ajustes de relación*
++
+Permite especificar la tasa de transferencia máxima, la política SnapVault y la programación SnapVault que utiliza la relación de protección:
+
++
+** Velocidad máxima de transferencia
++
+Especifica la tasa máxima a la que se transfieren los datos entre los clústeres a través de la red. Si decide no utilizar una tasa de transferencia máxima, la transferencia de línea de base entre relaciones es ilimitada. Sin embargo, si ejecuta ONTAP 8.2 y el clúster primario y el secundario son los mismos, se omite esta configuración.
+
+** Política de SnapVault
++
+Especifica la política de ONTAP SnapVault para la relación. El valor predeterminado es XDPDefault.
+
+** Crear política
++
+Inicia el cuadro de diálogo Crear política de SnapVault, que permite crear y utilizar una nueva política de SnapVault.
+
+** Programación de SnapVault
++
+Especifica la programación de ONTAP SnapVault para la relación. Las programaciones disponibles incluyen ninguna, 5min, 8horas, diaria, por hora, y semanal. El valor predeterminado es None, lo que indica que no hay ningún programa asociado a la relación. Las relaciones sin programaciones no tienen valores de estado de desfase, a menos que pertenezcan a un servicio de almacenamiento.
+
+** Crear programación
++
+Abre el cuadro de diálogo Crear programación, que permite crear una programación SnapVault.
+
+
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas:
+
+* *Cancelar*
++
+Descarta las selecciones y cierra el cuadro de diálogo Configurar protección.
+
+* *Aplicar*
++
+Aplica las selecciones e inicia el proceso de protección.
+
+

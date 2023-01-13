@@ -1,0 +1,18 @@
+---
+permalink: online-help/concept-check-for-client-or-network-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando los clientes que están conectados a volúmenes en un clúster aumentan sus solicitudes de I/o, el clúster debe esforzarse más para satisfacer la demanda. La mayor demanda del clúster puede poner un componente en contención, aumentar la latencia de las cargas de trabajo que lo utilizan y activar un evento en Unified Manager. 
+---
+= Compruebe si existen problemas con los clientes o la red
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando los clientes que están conectados a volúmenes en un clúster aumentan sus solicitudes de I/o, el clúster debe esforzarse más para satisfacer la demanda. La mayor demanda del clúster puede poner un componente en contención, aumentar la latencia de las cargas de trabajo que lo utilizan y activar un evento en Unified Manager.
+
+En la página de detalles Event, la sección System Diagnosis muestra las cargas de trabajo de volumen principales que utilizan el componente en disputa. Si sabe qué cliente accede a un volumen determinado, puede ir al cliente para determinar si el hardware del cliente o una aplicación no están funcionando como se esperaba o si está realizando más trabajo de lo habitual. Es posible que deba ponerse en contacto con el administrador de clientes o con el proveedor de aplicaciones para obtener ayuda.
+
+Puede comprobar su infraestructura de red para determinar si hay problemas de hardware, cuellos de botella o cargas de trabajo en la competencia que puedan haber provocado que las solicitudes de I/o entre el clúster y los clientes conectados tengan un rendimiento más lento de lo esperado. Es posible que deba ponerse en contacto con el administrador de red para obtener ayuda.

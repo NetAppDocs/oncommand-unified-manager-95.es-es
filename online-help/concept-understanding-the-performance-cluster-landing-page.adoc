@@ -1,0 +1,26 @@
+---
+permalink: online-help/concept-understanding-the-performance-cluster-landing-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página de destino de Performance Cluster proporciona una descripción general del rendimiento de un clúster seleccionado, donde se hace hincapié en el estado del rendimiento de los 10 objetos más importantes del clúster. Los problemas de rendimiento se muestran en la parte superior de la página, en el panel All Events en este clúster. 
+---
+= Descripción de la página de destino del clúster de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página de destino de Performance Cluster proporciona una descripción general del rendimiento de un clúster seleccionado, donde se hace hincapié en el estado del rendimiento de los 10 objetos más importantes del clúster. Los problemas de rendimiento se muestran en la parte superior de la página, en el panel All Events en este clúster.
+
+La página de destino de clúster de rendimiento proporciona una descripción general de todos los clústeres que gestiona una instancia de Unified Manager. Esta página proporciona información sobre eventos y rendimiento, y permite supervisar y solucionar problemas de los clústeres. En la siguiente imagen, se muestra un ejemplo de la página de destino de Performance Cluster para el clúster denominado opm-motion:
+
+image::../media/opm-cluster-landing-page-draft.gif[borrador de página de destino de clústeres de opm]
+
+El recuento de eventos en la página Cluster Summary puede no coincidir con el recuento de eventos en la página Performance Event Inventory. Esto se debe a que la página Cluster Summary puede mostrar un evento cada una de las barras de latencia y uso cuando se han incumplido las políticas de umbral de combinación, mientras que la página Performance Event Inventory muestra solo un evento cuando se ha incumplido una política de combinación.
+
+[NOTE]
+====
+Si Unified Manager ha eliminado un clúster de su gestión, el estado *eliminado* se muestra a la derecha del nombre del clúster en la parte superior de la página.
+
+====

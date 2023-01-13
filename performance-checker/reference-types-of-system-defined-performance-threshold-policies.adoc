@@ -1,0 +1,128 @@
+---
+permalink: performance-checker/reference-types-of-system-defined-performance-threshold-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager proporciona algunas políticas de umbral estándar que supervisan el rendimiento de un clúster y generan eventos automáticamente. Estas políticas se habilitan de forma predeterminada, por lo que generan eventos de información o advertencia cuando se incumplen los umbrales de rendimiento supervisados. 
+---
+= Tipos de políticas de umbral de rendimiento definidas por el sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager proporciona algunas políticas de umbral estándar que supervisan el rendimiento de un clúster y generan eventos automáticamente. Estas políticas se habilitan de forma predeterminada, por lo que generan eventos de información o advertencia cuando se incumplen los umbrales de rendimiento supervisados.
+
+[NOTE]
+====
+Las políticas de umbral de rendimiento definidas por el sistema no se habilitan en sistemas Cloud Volumes ONTAP, ONTAP Edge o ONTAP Select.
+
+====
+Si recibe eventos innecesarios de cualquier política de umbral de rendimiento definida por el sistema, puede deshabilitar directivas individuales en la página Configuración/gestionar eventos.
+
+
+
+== Políticas de umbral de nodo
+
+Las políticas de umbral de rendimiento de nodo definidas por el sistema se asignan, de forma predeterminada, a cada nodo en los clústeres que supervisa Unified Manager:
+
+* *Recursos nodo sobreutilizados*
++
+Identifica situaciones en las que un solo nodo está funcionando por encima de los límites de su eficiencia operativa y, por lo tanto, afecta potencialmente a las latencias de la carga de trabajo. Este es un evento de advertencia.
+
++
+Para los nodos instalados con ONTAP 8.3.x y software anterior, busca nodos que usen más del 85 % de sus recursos de CPU y RAM (uso del nodo) durante más de 30 minutos.
+
++
+Para los nodos instalados con ONTAP 9.0 y software posterior, esto se logra buscando nodos que utilizan más del 100 % de su capacidad de rendimiento durante más de 30 minutos.
+
+* *Par de nodos de alta disponibilidad sobreutilizado*
++
+Identifica situaciones en las que los nodos de una pareja de ha están funcionando por encima de los límites de la eficiencia operativa de la pareja de ha. Este es un evento informativo.
+
++
+Para nodos instalados con ONTAP 8.3.x y software anterior, esto se logra observando el uso de la CPU y la RAM de los dos nodos del par de alta disponibilidad. Si el uso combinado de nodos de los dos nodos supera el 140 % durante más de una hora, la recuperación tras fallos de una controladora afectará a las latencias de las cargas de trabajo.
+
++
+Para los nodos instalados con ONTAP 9.0 y versiones posteriores, esto se logra analizando la capacidad de rendimiento utilizada para los dos nodos de la pareja de alta disponibilidad. Si la capacidad de rendimiento combinado utilizada de los dos nodos supera el 200% durante más de una hora, la conmutación por error de una controladora afectará a las latencias de carga de trabajo.
+
+* *Fragmentación de disco en nodo*
++
+Identifica situaciones en las que un disco o los discos de un agregado están fragmentados, lo cual ralentiza servicios del sistema clave y afecta potencialmente a las latencias de carga de trabajo de un nodo.
+
++
+Para ello, se fijan determinadas tasas de operaciones de lectura y escritura en todos los agregados de un nodo. Esta política también se puede activar durante la resincronización de SyncMirror o cuando se encuentran errores durante las operaciones de limpieza de discos. Este es un evento de advertencia.
+
++
+[NOTE]
+====
+La política de «fragmentación de disco de nodo» analiza agregados de solo HDD; los agregados de Flash Pool, SSD y FabricPool no se analizan.
+
+====
+
+
+
+
+== Políticas de umbral de agregado
+
+La política de umbral de rendimiento de agregado definida por el sistema se asigna de forma predeterminada a cada agregado de los clústeres que supervisa Unified Manager.
+
+* *Exceso de uso de discos agregados*
++
+Identifica situaciones en las que un agregado está funcionando por encima de los límites de su eficiencia operativa y, de este modo, afecta potencialmente a las latencias de la carga de trabajo. Identifica estas situaciones buscando agregados en los que los discos del agregado están más del 95% utilizados durante más de 30 minutos. A continuación, esta directiva de varias condiciones realiza el siguiente análisis para ayudar a determinar la causa del problema:
+
++
+** ¿Un disco del agregado está realizando actualmente una actividad de mantenimiento en segundo plano?
++
+Algunas de las actividades de mantenimiento en segundo plano en las que se podría realizar un disco son la reconstrucción de discos, la limpieza de discos, la resincronización de SyncMirror y la reparidad.
+
+** ¿Hay un cuello de botella de comunicaciones en la interconexión Fibre Channel de la bandeja de discos?
+** ¿Hay demasiado espacio libre en el agregado? Se emite un evento de advertencia para esta directiva sólo si una (o más) de las tres directivas subordinadas también se consideran inrelacionadas. Un evento de rendimiento no se desencadena si solo se utilizan los discos del agregado superior al 95%.
+
+
+
+
+[NOTE]
+====
+La política de «discos agregados agregados «sobreutilizados» analiza agregados de solo HDD y agregados de Flash Pool (híbridos); los agregados SSD y FabricPool no se analizan.
+
+====
+
+
+== Políticas de umbral de calidad de servicio
+
+Las políticas de umbral de rendimiento de calidad de servicio definidas por el sistema se asignan a cualquier carga de trabajo con una política de rendimiento máximo de calidad de servicio de ONTAP configurada (IOPS, IOPS/TB o Mbps). Unified Manager activa un evento cuando el valor de rendimiento de la carga de trabajo es un 15 % menor que el valor de calidad de servicio configurado.
+
+* *QoS máx IOPS o umbral de Mbps*
++
+Identifica volúmenes y LUN que han superado el límite máximo de rendimiento de IOPS o Mbps de calidad de servicio y que afectan a la latencia de las cargas de trabajo. Este es un evento de advertencia.
+
++
+Cuando se asigna una sola carga de trabajo a un grupo de políticas, para ello, se deben buscar cargas de trabajo que hayan superado el umbral de rendimiento máximo definido en el grupo de políticas de calidad de servicio asignado durante cada periodo de recogida en la hora anterior.
+
++
+Cuando varias cargas de trabajo comparten una única política de calidad de servicio, lo hace añadiendo las IOPS o los Mbps de todas las cargas de trabajo de la política y comprobando ese total respecto al umbral.
+
+* *QoS pico IOPS/TB o IOPS/TB con umbral de tamaño de bloque*
++
+Identifica volúmenes que han superado su límite de rendimiento máximo de IOPS/TB de la calidad de servicio adaptativa (o IOPS/TB con límite de tamaño de bloque) y que afectan a la latencia de las cargas de trabajo. Este es un evento de advertencia.
+
++
+Para ello, convierte el umbral máximo de IOPS/TB definido en la política de calidad de servicio adaptativa en un valor de IOPS máximo de calidad de servicio en función del tamaño de cada volumen y, a continuación, busca volúmenes que hayan superado el IOPS máximo de calidad de servicio durante cada periodo de recogida de rendimiento de la hora anterior.
+
++
+[NOTE]
+====
+Esta política se aplica a los volúmenes solo cuando el clúster se ha instalado con el software ONTAP 9.3 y versiones posteriores.
+
+====
++
+Cuando se ha definido el elemento «'tamaño de bloque'» en la política de calidad de servicio adaptativa, el umbral se convierte en un valor Mbps máximo de calidad de servicio en función del tamaño de cada volumen. Después, busca volúmenes que hayan superado el máximo de Mbps de calidad de servicio durante cada periodo de recogida del rendimiento de la hora anterior.
+
++
+[NOTE]
+====
+Esta política se aplica a los volúmenes solo cuando el clúster se ha instalado con el software ONTAP 9.5 y versiones posteriores.
+
+====
+

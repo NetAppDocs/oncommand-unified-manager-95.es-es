@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/reference-managed-objects-pane.html 
+sidebar: sidebar 
+keywords:  
+summary: El panel Managed Objects de la pestaña Performance Summary proporciona una información general de nivel superior sobre los tipos de objetos de almacenamiento y los números para el clúster. Este panel le permite realizar el seguimiento del estado de los objetos de cada clúster. 
+---
+= Panel Managed Objects
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El panel Managed Objects de la pestaña Performance Summary proporciona una información general de nivel superior sobre los tipos de objetos de almacenamiento y los números para el clúster. Este panel le permite realizar el seguimiento del estado de los objetos de cada clúster.
+
+El recuento de objetos gestionados son datos puntuales a partir del último período de recopilación. Los objetos nuevos se detectan a intervalos de 15 minutos.
+
+Al hacer clic en el número vinculado para cualquier tipo de objeto, se muestra la página de inventario de rendimiento de objetos para ese tipo de objeto. La página del inventario de objetos se filtra para mostrar únicamente los objetos de este clúster.
+
+Los objetos administrados son:
+
+* *Nodos*
++
+Un sistema físico en un clúster.
+
+* *Agregados*
++
+Conjunto de varios grupos de discos independientes (RAID) redundantes que se pueden gestionar como una sola unidad de protección y aprovisionamiento.
+
+* *Puertos*
++
+Punto de conexión física en nodos que se utiliza para conectarse a otros dispositivos de una red.
+
+* *SVMs*
++
+Máquina virtual que proporciona acceso de red a través de direcciones de red únicas. Una SVM puede servir datos a partir de un espacio de nombres distinto y se puede administrar por separado del resto del clúster.
+
+* *Volúmenes*
++
+Entidad lógica que mantiene datos de usuario accesibles a través de uno o varios de los protocolos de acceso admitidos. El recuento incluye tanto volúmenes FlexVol como volúmenes FlexGroup, no incluye componentes FlexGroup ni Infinite Volumes.
+
+* *LUN*
++
+El identificador de una unidad lógica Fibre Channel (FC) o una unidad lógica iSCSI. Una unidad lógica normalmente corresponde a un volumen de almacenamiento y se representa dentro de un sistema operativo de ordenador como dispositivo.
+
+* *LIF*
++
+Interfaz de red lógica que representa un punto de acceso de red a un nodo. El recuento incluye todos los tipos de LIF.
+
+

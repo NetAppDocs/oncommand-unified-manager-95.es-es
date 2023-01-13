@@ -1,0 +1,32 @@
+---
+permalink: online-help/task-creating-an-email-notification-format-for-user-and-user-group-quotas.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede crear un formato de notificación para los correos electrónicos que se envían a un usuario o a un grupo de usuarios cuando hay un problema relacionado con la cuota \(límite de software incumplido o límite duro alcanzado\).' 
+---
+= Creación de un formato de notificación por correo electrónico para cuotas de usuarios y grupos de usuarios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear un formato de notificación para los mensajes de correo electrónico que se envían a un usuario o a un grupo de usuarios cuando hay un problema relacionado con las cuotas (límite de software incumplido o límite rígido alcanzado).
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y, a continuación, haga clic en *Quota Email* en el menú de configuración de la izquierda.
+. En la página de opciones *Configuración*, haga clic en *Formato de notificación* y, a continuación, introduzca o modifique los detalles en los campos *de*, *asunto* y *Detalles de correo electrónico*.
+. Haga clic en *Vista previa* para obtener una vista previa de la notificación por correo electrónico.
+. Haga clic en *Cerrar* para cerrar la ventana de vista previa.
+. Modifique el contenido de la notificación por correo electrónico, si es necesario.
+. Haga clic en *Guardar y cerrar*.
+

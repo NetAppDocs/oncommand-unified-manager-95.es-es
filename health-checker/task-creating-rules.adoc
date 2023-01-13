@@ -1,0 +1,22 @@
+---
+permalink: health-checker/task-creating-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede añadir nuevas reglas a su política de datos para determinar la ubicación de los datos que se escriben en Infinite Volume. Puede crear reglas mediante plantillas de reglas definidas en Unified Manager o bien creando reglas personalizadas. 
+---
+= Creación de reglas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir nuevas reglas a su política de datos para determinar la ubicación de los datos que se escriben en Infinite Volume. Puede crear reglas mediante plantillas de reglas definidas en Unified Manager o bien creando reglas personalizadas.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* El clúster que contiene la SVM con Infinite Volume con clases de almacenamiento debe añadirse a la base de datos de Unified Manager.
+

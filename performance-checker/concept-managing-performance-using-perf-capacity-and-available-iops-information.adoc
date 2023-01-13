@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept-managing-performance-using-perf-capacity-and-available-iops-information.html 
+sidebar: sidebar 
+keywords:  
+summary: La capacidad de rendimiento indica cuánto rendimiento puede obtener de un recurso sin superar el rendimiento útil de ese recurso. Cuando se visualizan a través de los contadores de rendimiento existentes, la capacidad de rendimiento es el punto en el que se obtiene el uso máximo de un nodo o de un agregado antes de que la latencia empeore. 
+---
+= Gestión del rendimiento mediante la capacidad de rendimiento y la información de IOPS disponible
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+_Performance Capacity_ indica la cantidad de rendimiento que se puede obtener de un recurso sin sobrepasar el rendimiento útil de dicho recurso. Cuando se visualizan a través de los contadores de rendimiento existentes, la capacidad de rendimiento es el punto en el que se obtiene el uso máximo de un nodo o de un agregado antes de que la latencia empeore.
+
+Unified Manager recopila estadísticas de capacidad de rendimiento de nodos y agregados en cada clúster. _Performance Capacity used_ es el porcentaje de la capacidad de rendimiento que se está utilizando actualmente y _Performance Capacity Free_ es el porcentaje de la capacidad de rendimiento que sigue estando disponible.
+
+Aunque la capacidad de rendimiento libre proporciona un porcentaje del recurso que sigue disponible, _Available IOPS_ indica el número de IOPS que se pueden añadir al recurso antes de alcanzar la capacidad de rendimiento máxima. Al utilizar esta métrica, puede asegurarse de poder añadir cargas de trabajo de un número predeterminado de IOPS a un recurso.
+
+La supervisión de la información de capacidad del rendimiento tiene las siguientes ventajas:
+
+* Ayuda en el aprovisionamiento y equilibrio de flujos de trabajo.
+* Ayuda a evitar la sobrecarga de un nodo o la inserción de sus recursos más allá del punto óptimo, lo que reduce la necesidad de solucionar el problema.
+* Le ayuda a determinar con mayor precisión dónde puede ser necesario un equipo de almacenamiento adicional.
+

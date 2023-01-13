@@ -1,0 +1,35 @@
+---
+permalink: online-help/task-creating-resource-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Crear pool de recursos para agrupar agregados con fines de aprovisionamiento. 
+---
+= Creación de pools de recursos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Crear pool de recursos para agrupar agregados con fines de aprovisionamiento.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Los pools de recursos pueden contener agregados de clústeres de diferentes, pero el mismo agregado no puede pertenecer a pools de recursos diferentes.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Protección* > *agrupaciones de recursos*.
+. En la página *Protection/Resource Pools*, haga clic en *Create*.
+. Siga las instrucciones del cuadro de diálogo *Crear grupo de recursos* para proporcionar un nombre y una descripción y agregar agregados como miembros al pool de recursos que desea crear.
+

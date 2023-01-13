@@ -1,0 +1,16 @@
+---
+permalink: release-notes.html 
+sidebar: sidebar 
+keywords: release notes, oncommand unified manager 
+summary: Proporciona un resumen de las nuevas funciones, las limitaciones y los problemas conocidos de Unified Manager 9.5 de OnCommand. 
+---
+= Notas de la versión
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Proporciona un resumen de las nuevas funciones, las limitaciones y los problemas conocidos de Unified Manager 9.5 de OnCommand.
+
+Para obtener más información, consulte https://library.netapp.com/ecm/ecm_download_file/ECMLP2847421["Notas de la versión de OnCommand Unified Manager"^].

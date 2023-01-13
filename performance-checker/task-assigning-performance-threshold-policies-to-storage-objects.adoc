@@ -1,0 +1,94 @@
+---
+permalink: performance-checker/task-assigning-performance-threshold-policies-to-storage-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Se asigna una política de umbral de rendimiento definida por el usuario a un objeto de almacenamiento de modo que Unified Manager informe un evento si el valor del contador de rendimiento supera el valor de la política. 
+---
+= Asignación de políticas de umbral de rendimiento a objetos de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se asigna una política de umbral de rendimiento definida por el usuario a un objeto de almacenamiento de modo que Unified Manager informe un evento si el valor del contador de rendimiento supera el valor de la política.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand.
+
+Debe existir la política de umbral de rendimiento, o las políticas, que desea aplicar al objeto.
+
+
+
+== Acerca de esta tarea
+
+Solo se puede aplicar una política de rendimiento a la vez a un objeto o a un grupo de objetos.
+
+Es posible asignar un máximo de tres políticas de umbral a cada objeto de almacenamiento. Cuando se asignan políticas a varios objetos, si alguno de ellos ya tiene el número máximo de políticas asignadas, Unified Manager realiza las siguientes acciones:
+
+* Aplica la política a todos los objetos seleccionados que no han alcanzado su máximo
+* Ignora los objetos que han alcanzado el número máximo de políticas
+* Muestra un mensaje que indica que la directiva no se ha asignado a todos los objetos
+
+
+Además, si algunos objetos no admiten el contador al que se realiza el seguimiento en la política de umbral, la directiva no se aplica a ese objeto. Por ejemplo, si crea una política de umbral «'capacidad de rendimiento utilizada» y, a continuación, intenta asignarla a un nodo que no tiene instalado el software ONTAP 9.0 o posterior, la directiva no se aplica a ese nodo.
+
+
+
+== Pasos
+
+. En la página Performance Inventory de cualquier objeto de almacenamiento, seleccione el objeto o los objetos a los que desea asignar una política de umbral:
++
+|===
+| Para asignar umbrales a... | Haga clic en... 
+
+
+ a| 
+Un solo objeto
+ a| 
+La casilla de verificación situada a la izquierda de ese objeto.
+
+
+
+ a| 
+Varios objetos
+ a| 
+La casilla de verificación situada a la izquierda de cada objeto.
+
+
+
+ a| 
+Todos los objetos de la página
+ a| 
+La image:../media/select-dropdown-65-png.gif[""] Y seleccione *Seleccionar todos los objetos de esta página*.
+
+
+
+ a| 
+Todos los objetos del mismo tipo
+ a| 
+La image:../media/select-dropdown-65-png.gif[""] Y seleccione *Seleccionar todos los objetos*.
+
+|===
++
+Puede utilizar la funcionalidad de ordenación y filtrado para refinar la lista de objetos de la página de inventario para facilitar la aplicación de políticas de umbral a muchos objetos.
+
+. Realice su selección y, a continuación, haga clic en *asignar directiva de umbral de rendimiento*.
++
+Se muestra la página Assign Threshold Policy, en la que se muestra una lista de las políticas de umbral que existen para ese tipo específico de objeto de almacenamiento.
+
+. Haga clic en cada política para mostrar los detalles de la configuración de umbral de rendimiento a fin de verificar que ha seleccionado la política de umbral correcta.
+. Después de seleccionar la directiva de umbral adecuada, haga clic en *asignar directiva*.
++
+Un mensaje de éxito en la parte superior de la página confirma que la política de umbral se ha asignado al objeto u objetos y proporciona un enlace a la página Alertas para que pueda configurar las opciones de alerta para este objeto y esta política.
+
+
+
+
+
+== Después de terminar
+
+Si desea que las alertas se envíen por correo electrónico, o como captura SNMP, para notificarle que se ha generado un evento de rendimiento determinado, debe configurar los ajustes de alerta en la página Configuración/Alertas.

@@ -1,0 +1,75 @@
+---
+permalink: install/task-setting-up-unified-manager-server-with-vcs-using-configuration-scripts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede configurar Unified Manager con Veritas Cluster Server \(VCS\) utilizando secuencias de comandos de configuración.' 
+---
+= Configuración de Unified Manager con VCS mediante scripts de configuración
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar Unified Manager con Veritas Cluster Server (VCS) utilizando secuencias de comandos de configuración.
+
+
+
+== Antes de empezar
+
+* Unified Manager debe estar instalado en los dos nodos de la configuración de VCS.
+* El módulo XML:: Libxml debe ser empaquetado con Perl para que funcionen los scripts VCS.
+* Debe haber creado una LUN compartida con tamaño suficiente para acomodar los datos de Unified Manager de origen.
+* Debe haber especificado la ruta de montaje absoluta para que funcione el script.
++
+La secuencia de comandos no funcionará si crea una carpeta dentro de la ruta de montaje.
+
+* Debe haber descargado el `ha_setup.pl` guión en `/opt/netapp/ocum/scripts`.
+
+
+
+
+== Acerca de esta tarea
+
+En la configuración del VCS, el primer nodo para el que están activos la interfaz IP virtual y el punto de montaje es el nodo. El otro nodo es el segundo.
+
+
+
+== Pasos
+
+. Inicie sesión en el primer nodo del clúster.
++
+Debe haber detenido todos los servicios de Unified Manager en el segundo nodo de la configuración de alta disponibilidad.
+
+. Añada el directorio de instalación de VCS `/opt/VRTSvcs/bin` A LA variable ambiental PATH.
+. Si va a configurar una configuración existente de Unified Manager, cree un backup de Unified Manager y genere el bundle de soporte.
+. Ejecute el `ha_setup.pl` guión: `perl ha_setup.pl --first -t vcs -g group_name -e eth_name -i cluster_ip -m net_mask -n fully_qualified_cluster_name -f mount_path -v volume_group -d disk_group -l install_dir -u user_name -p password`
++
+`perl \ha_setup.pl --first -t vcs -g umgroup -e eth0 -i 10.11.12.13 -m 255.255.255.0 -n cluster.eng.company.com -f /mnt/ocumdb -v ocumdb_SdHv -d ocumdb_SdDg -l /opt/netapp/ -u admin -p wx17yz`
+
+. Utilice la consola web de Veritas Operations Manager o el Administrador de clústeres VCS para verificar que se crea un grupo de conmutación por error y que los servicios del servidor Unified Manager, el punto de montaje, la IP virtual, la tarjeta de interfaz de red (NIC) y el grupo de volúmenes se agregan al grupo de clústeres.
+. Mueva manualmente el grupo de servicios de Unified Manager al nodo secundario y compruebe que la conmutación al nodo de respaldo del clúster funciona.
+. Comprobar que VCS se ha cambiado al segundo nodo del clúster.
++
+Debe verificar que el montaje de los datos, la IP virtual, el grupo de volúmenes y la NIC están en línea en el segundo nodo del clúster.
+
+. Detenga Unified Manager usando Veritas Operations Manager.
+. Ejecute el `perl ha_setup.pl --join -t vcs -f``mount_path` Comando en el segundo nodo del clúster para que los datos del servidor de Unified Manager apunte a la LUN.
+. Compruebe que los servicios de servidor de Unified Manager se estén iniciando correctamente en el segundo nodo del clúster.
+. Vuelva a generar el certificado de Unified Manager después de ejecutar los scripts de configuración para obtener la dirección IP global.
++
+.. En la barra de herramientas, haga clic en *image:../media/clusterpage-settings-icon.gif[""]* Y a continuación, haga clic en *Certificado HTTPS* en el menú *Configuración*.
+.. Haga clic en *regenerar certificado HTTPS*.
+
+
++
+El certificado regenerado solo proporciona la dirección IP del clúster, no el nombre de dominio completo (FQDN). Debe utilizar la dirección IP global para configurar Unified Manager para la alta disponibilidad.
+
+. Acceda a la interfaz de usuario de Unified Manager mediante las siguientes acciones: `\https://<FQDN of Global IP>`
+
+
+
+
+== Después de terminar
+
+Es necesario crear una ubicación de backup compartido después de configurar la alta disponibilidad. La ubicación compartida es necesaria para contener las copias de seguridad que cree antes y después del failover. Los dos nodos de la configuración de alta disponibilidad deben poder acceder a la ubicación compartida.

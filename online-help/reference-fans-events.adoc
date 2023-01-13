@@ -1,0 +1,33 @@
+---
+permalink: online-help/reference-fans-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Los eventos de ventiladores le ofrecen información acerca de los ventiladores de estado de los nodos en su centro de datos para que pueda supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad. 
+---
+= Eventos de ventiladores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los eventos de ventiladores le ofrecen información acerca de los ventiladores de estado de los nodos en su centro de datos para que pueda supervisar si existen problemas potenciales. Los eventos se agrupan por área de impacto e incluyen el nombre del evento y de captura, el nivel de impacto, el tipo de origen y la gravedad.
+
+
+
+== Área de impacto: Disponibilidad
+
+|===
+| Nombre del evento(nombre de la captura) | Nivel de impacto | Tipo de origen | Gravedad 
+
+
+ a| 
+Uno o más ventiladores fallidos (ocumEvtFanssOneOrMoreFailed)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Crítico
+
+|===

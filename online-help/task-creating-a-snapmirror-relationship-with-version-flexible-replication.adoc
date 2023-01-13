@@ -1,0 +1,61 @@
+---
+permalink: online-help/task-creating-a-snapmirror-relationship-with-version-flexible-replication.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede crear una relación de SnapMirror con una replicación de versión flexible. La replicación con flexibilidad de versiones le permite implementar la protección de SnapMirror, incluso si los volúmenes de origen y destino se ejecutan en distintas versiones de ONTAP. 
+---
+= Crear una relación de SnapMirror con una replicación de versión flexible
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear una relación de SnapMirror con una replicación de versión flexible. La replicación con flexibilidad de versiones le permite implementar la protección de SnapMirror, incluso si los volúmenes de origen y destino se ejecutan en distintas versiones de ONTAP.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber configurado Workflow Automation.
+* Las SVM de origen y destino deben tener habilitada una licencia de SnapMirror.
+* Las SVM de origen y destino deben ejecutarse en una versión del software ONTAP que admita la replicación con flexibilidad de versión.
+
+
+
+
+== Acerca de esta tarea
+
+SnapMirror con la replicación flexible de versiones le permite implementar la protección de SnapMirror incluso en entornos de almacenamiento heterogéneos en los que no todo el almacenamiento se ejecute en una versión de ONTAP; sin embargo, las operaciones de mirroring realizadas en SnapMirror con la replicación flexible de versión no se ejecutan con la misma rapidez que con SnapMirror de replicación tradicional por bloques.
+
+
+
+== Pasos
+
+. Abra el cuadro de diálogo *Configurar protección* para el volumen que desea proteger.
++
+** Si está viendo la ficha Protección de la página de detalles Estado/volumen, haga clic con el botón derecho del ratón en la vista de topología que tiene el nombre de un volumen que desea proteger y seleccione *proteger* > *SnapMirror* en el menú.
+** Si está viendo la página de inventario Health/Volumes, localice un volumen que desea proteger y haga clic con el botón derecho del ratón en él; a continuación, seleccione *Protect* > *SnapMirror* en el menú. Se muestra el cuadro de diálogo Configurar protección.
+
+
+. Haga clic en *SnapMirror* para ver la ficha *SnapMirror*.
+. Complete el área *Información de destino* y el área *Configuración de relación* del cuadro de diálogo *Configurar protección*.
++
+Si se especifica una SVM de destino que se ejecuta en una versión anterior de ONTAP que el volumen de origen que se está protegiendo y, si esa versión anterior admite la replicación con flexibilidad de versión, esta tarea configura automáticamente SnapMirror con replicación de versión flexible.
+
+. Si especifica una SVM de destino que se ejecuta con la misma versión de ONTAP que la del volumen de origen, pero desea configurar SnapMirror con replicación de versión flexible, haga clic en *Avanzado* para activar la replicación de versión flexible y, a continuación, haga clic en *aplicar*.
+. Haga clic en *aplicar*.
++
+Volverá a la página de detalles Health/Volume.
+
+. Haga clic en el enlace del trabajo de configuración de protección situado en la parte superior de la página de detalles *Estado/volumen*.
++
+Las tareas y detalles de los trabajos se muestran en la página de detalles Protection/Job.
+
+. En la página de detalles *Protection/Job*, haga clic en *Refresh* para actualizar la lista de tareas y los detalles de tareas asociados con el trabajo de configuración de protección y determinar cuándo se ha completado el trabajo.
+. Una vez completadas las tareas de trabajo, haga clic en *Atrás* en el explorador para volver a la página de detalles *Estado/volumen*.
++
+La nueva relación se muestra en la vista de topología de la página de detalles Health/Volume.
+
+

@@ -1,0 +1,16 @@
+---
+permalink: config/concept-managing-saml-authentication-settings-um.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Después de configurar la configuración de autenticación remota, puede habilitar la autenticación de lenguaje de marcado de aserción de seguridad \(SAML\) de modo que los usuarios remotos estén autenticados por un proveedor de identidades seguro \(IDP\) antes de poder acceder a la interfaz de usuario web de Unified Manager.' 
+---
+= Gestión de la configuración de autenticación SAML
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de configurar la configuración de autenticación remota, puede habilitar la autenticación del lenguaje de marcado de aserción de seguridad (SAML) para que los usuarios remotos estén autenticados por un proveedor de identidades (IDP) seguro antes de que puedan acceder a la interfaz de usuario web de Unified Manager.
+
+Tenga en cuenta que solo los usuarios remotos tendrán acceso a la interfaz gráfica de usuario de Unified Manager después de habilitar la autenticación SAML. Los usuarios locales y los usuarios de mantenimiento no podrán acceder a la interfaz de usuario. Esta configuración no afecta a los usuarios que acceden a la consola de mantenimiento.

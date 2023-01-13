@@ -1,0 +1,44 @@
+---
+permalink: online-help/reference-volume-transfer-rate-historical-report.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El informe tasa de transferencia de volumen \(Historical\) permite analizar la cantidad de volumen de datos que se transfiere día a día. El informe también ofrece detalles sobre las transferencias diarias de volúmenes y el tiempo necesario para completar la operación de transferencia.' 
+---
+= Informe Volume Transfer Rate (Historical)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El informe Volume Transfer Rate (Historical) permite analizar la cantidad de volumen de datos que se transfiere día a día. El informe también ofrece detalles sobre las transferencias diarias de volúmenes y el tiempo necesario para completar la operación de transferencia.
+
+El informe Volume Transfer Rate (Historical) se muestra en dos formatos:
+
+* Gráfico de barras de velocidad de transferencia de volumen
+* Vista tabular sobre la tasa de transferencia de volumen
+
+
+
+
+== Gráfico de barras de velocidad de transferencia de volumen
+
+Muestra los detalles de la tasa de transferencia de volumen trazando el tamaño total de la transferencia con respecto al número de horas. También puede ver los detalles de la cantidad de datos que se transfieren diariamente.
+
+
+
+== Vista tabular sobre la tasa de transferencia de volumen
+
+* *Tamaño total de transferencia (GB)*
++
+Muestra el tamaño total de la transferencia de volumen en gigabytes.
+
+* *Día*
++
+Muestra el día en el que se inició la transferencia de volumen.
+
+* *Hora final*
++
+Muestra la hora de finalización de la transferencia de volumen con la fecha.
+
+

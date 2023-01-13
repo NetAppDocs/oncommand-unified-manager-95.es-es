@@ -1,0 +1,39 @@
+---
+permalink: performance-checker/task-responding-to-system-defined-performance-threshold-events.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible utilizar Unified Manager para investigar los eventos de rendimiento provocados por un contador de rendimiento que cruce un umbral de advertencia definido por el sistema. También puede usar Unified Manager para comprobar el estado del componente del clúster a fin de ver si los eventos recientes detectados en el componente contribuyeron al evento de rendimiento. 
+---
+= Respuesta a eventos de umbral de rendimiento definidos por el sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible utilizar Unified Manager para investigar los eventos de rendimiento provocados por un contador de rendimiento que cruce un umbral de advertencia definido por el sistema. También puede usar Unified Manager para comprobar el estado del componente del clúster a fin de ver si los eventos recientes detectados en el componente contribuyeron al evento de rendimiento.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* Debe haber eventos de rendimiento nuevos o obsoletos.
+
+
+
+
+== Pasos
+
+. Abra la página de detalles *Event* para ver información sobre el evento.
+. Revise la *Descripción*, que describe la brecha de umbral que provocó el evento.
++
+Por ejemplo, el mensaje "'valor de utilización de nodos del 90 % ha activado un evento DE ADVERTENCIA basado en el valor de umbral del 85 %'" indica que se ha producido un evento de advertencia de utilización de nodos para el objeto de clúster.
+
+. Tome nota del *tiempo de activación del evento* para que pueda investigar si se han producido otros eventos al mismo tiempo que podrían haber contribuido a este evento.
+. En *Diagnóstico del sistema*, revise la breve descripción del tipo de análisis que la directiva definida por el sistema está realizando en el objeto de clúster.
++
+En algunos casos se muestra un icono verde o rojo junto al diagnóstico para indicar si se ha encontrado un problema en ese diagnóstico en particular. Para otros tipos de gráficos de contadores de eventos definidos por el sistema, se muestra el rendimiento del objeto.
+
+. En *acciones sugeridas*, haga clic en el enlace *Ayúdame a hacer esto* para ver las acciones sugeridas que puede realizar para intentar resolver el evento de rendimiento por su cuenta.
+

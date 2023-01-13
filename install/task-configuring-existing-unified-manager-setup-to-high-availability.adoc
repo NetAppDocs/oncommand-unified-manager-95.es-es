@@ -1,0 +1,44 @@
+---
+permalink: install/task-configuring-existing-unified-manager-setup-to-high-availability.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede actualizar la instalación existente de Unified Manager y configurar su entorno de configuración para obtener alta disponibilidad. 
+---
+= Actualizar una configuración de Unified Manager existente para alta disponibilidad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede actualizar la instalación existente de Unified Manager y configurar su entorno de configuración para obtener alta disponibilidad.
+
+
+
+== Antes de empezar
+
+* Debe haber creado un backup y un bundle de soporte de los datos existentes.
+* Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+* Debe haber agregado un segundo nodo al clúster e instalado Veritas Cluster Server (VCS) en el segundo nodo.
++
+Consulte la _Veritas Cluster Server 6.2.1 Installation Guide_.
+
+* El nodo recién añadido debe configurarse para acceder a la misma ubicación compartida que el nodo existente en la configuración de alta disponibilidad.
+
+
+
+
+== Pasos
+
+. Inicie sesión en el nodo nuevo del clúster.
+. Instale Unified Manager en el nodo.
++
+xref:concept-installing-unified-manager-on-rhel-or-centos.adoc[Instalación de Unified Manager en Red Hat Enterprise Linux o CentOS]
+
+. Configure el servidor Unified Manager mediante los scripts de configuración del nodo existente con datos.
+. Inicie una conmutación al nodo de respaldo manual.
+. Ejecute el `perl ha_setup.pl --join -t vcs -f``mount_path` Comando en el segundo nodo del clúster para que los datos del servidor de Unified Manager apunte a la LUN compartida.
+. Si OnCommand Workflow Automation (WFA) está configurado para Unified Manager, deshabilite y vuelva a configurar la conexión WFA.
+. Si SnapProtect se configura con Unified Manager, vuelva a configurar SnapProtect con una dirección IP de clúster nueva y las políticas de almacenamiento existentes.
+. Vuelva a generar los informes personalizados y añada estos informes a Unified Manager con la nueva dirección IP del clúster.
+

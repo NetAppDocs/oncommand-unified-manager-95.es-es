@@ -1,0 +1,35 @@
+---
+permalink: online-help/task-viewing-the-list-of-snapshot-copies.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver la lista de copias Snapshot de un volumen seleccionado. Puede usar la lista de copias Snapshot para calcular la cantidad de espacio en disco que puede recuperarse si se eliminan una o más copias Snapshot y puede eliminar las copias Snapshot si fuera necesario. 
+---
+= Ver la lista de copias Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver la lista de copias Snapshot de un volumen seleccionado. Puede usar la lista de copias Snapshot para calcular la cantidad de espacio en disco que puede recuperarse si se eliminan una o más copias Snapshot y puede eliminar las copias Snapshot si fuera necesario.
+
+
+
+== Antes de empezar
+
+* Debe tener el rol de operador, administrador de OnCommand o administrador del almacenamiento.
+* El volumen que contiene las copias Snapshot debe estar en línea.
+
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Estado* > *volúmenes*.
+. En la página de inventario *Health/Volumes*, seleccione el volumen que contiene las copias Snapshot que desea ver.
+. En la página de detalles *Health/Volume*, haga clic en la ficha *Capacity*.
+. En el panel *Detalles* de la ficha *capacidad*, en la sección otros detalles, haga clic en el enlace que se encuentra junto a *copias Snapshot*.
++
+El número de copias de Snapshot es un enlace que muestra la lista de copias de Snapshot.
+
+

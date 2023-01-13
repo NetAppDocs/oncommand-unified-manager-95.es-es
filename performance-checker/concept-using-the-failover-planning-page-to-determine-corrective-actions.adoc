@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept-using-the-failover-planning-page-to-determine-corrective-actions.html 
+sidebar: sidebar 
+keywords:  
+summary: Basándose en la información que se muestra en la página Performance/Node Failover Planning, puede realizar acciones para garantizar que una conmutación por error no haga que el rendimiento de un par de alta disponibilidad caiga por debajo de un nivel aceptable. 
+---
+= Uso de la página Planificación de conmutación por error de nodos para determinar las acciones correctivas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Basándose en la información que se muestra en la página Performance/Node Failover Planning, puede realizar acciones para garantizar que una conmutación por error no haga que el rendimiento de un par de alta disponibilidad caiga por debajo de un nivel aceptable.
+
+Por ejemplo, para reducir el impacto en el rendimiento estimado de una conmutación al nodo de respaldo, puede mover algunos volúmenes o LUN de un nodo del par de alta disponibilidad a otros nodos del clúster. Al hacerlo se garantiza que el nodo primario pueda seguir ofreciendo un rendimiento aceptable tras un fallo.

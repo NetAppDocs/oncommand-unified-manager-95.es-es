@@ -1,0 +1,193 @@
+---
+permalink: online-help/reference-management-annotations-page.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Management/Anotaciones permite crear anotaciones en Unified Manager que pueden utilizarse para anotar objetos de almacenamiento, o bien editar o eliminar anotaciones. Puede anotar manualmente objetos de almacenamiento con un par de anotación=valor o configurar reglas de anotación. Los objetos de almacenamiento se anotan de forma dinámica en función de la anotación que aplique. 
+---
+= Página Administración/anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Management/Anotaciones permite crear anotaciones en Unified Manager que pueden utilizarse para anotar objetos de almacenamiento, o bien editar o eliminar anotaciones. Puede anotar manualmente objetos de almacenamiento con un par de anotación=valor o configurar reglas de anotación. Los objetos de almacenamiento se anotan de forma dinámica en función de la anotación que aplique.
+
+Cuando inicie sesión como operador, sólo tendrá acceso de lectura a la página. Puede acceder a los botones de añadir, editar o eliminar de cada pestaña cuando inicia sesión como administrador de almacenamiento o administrador de Unified Manager.
+
+
+
+== Pestaña Anotaciones
+
+La pestaña Anotaciones permite ver, crear, editar o eliminar anotaciones en Unified Manager.
+
+* *Lista de anotaciones*
++
+Muestra los nombres de las anotaciones predefinidas y personalizadas. También se muestra el recuento de los valores de anotación asociados con cada anotación. Puede hacer clic en el nombre de la anotación para ver los detalles de la anotación.
+
+
+
+
+
+== Área Summary
+
+Puede ver los siguientes detalles de la anotación seleccionada:
+
+* *Descripción*
++
+Muestra la descripción proporcionada para la anotación.
+
+* *Creado por*
++
+Muestra el nombre del usuario que creó la anotación.
+
+* *Fecha de creación*
++
+Muestra la fecha en que se creó la anotación.
+
+
+
+
+
+== Anotaciones=pares de valores
+
+Muestra la lista de pares de valores de anotación y los objetos de almacenamiento asociados que están disponibles para la anotación seleccionada.
+
+* *Valor*
++
+Muestra el nombre del par annotation=Value.
+
+* *Clústeres aplicables*
++
+Muestra el número de clústeres anotados con un par de anotación=valor específico. Puede hacer clic en el número para ver la página de clústeres, que muestra una lista filtrada de los clústeres asociados a un valor específico.
+
+* *Máquinas virtuales de almacenamiento (SVM)* aplicables
++
+Muestra el número de máquinas virtuales de almacenamiento (SVM) anotadas con un par de anotación=valor particular. Puede hacer clic en el número para ver la página de máquinas virtuales de almacenamiento (SVM), donde se muestra una lista filtrada de máquinas virtuales de almacenamiento (SVM) asociadas con un valor específico.
+
+* *Volúmenes aplicables*
++
+Muestra el número de volúmenes anotados con un par de anotación=valor específico. Puede hacer clic en el número para ver la página volúmenes, que muestra una lista filtrada de los volúmenes asociados con un valor específico.
+
+
+
+
+
+== Asociaciones de objetos mediante reglas
+
+Muestra la lista de reglas de anotación y los objetos de almacenamiento asociados para la anotación seleccionada.
+
+* *Rango*
++
+Muestra el orden de las reglas de anotación que se aplicarán en los objetos de almacenamiento.
+
+* *Reglas*
++
+Muestra el nombre de la regla de anotación.
+
+* *Tipo de objeto de destino*
++
+Muestra el tipo de objeto de almacenamiento al que se aplica la regla de anotación.
+
+* *Valor de anotación asociada*
++
+Muestra el par annotation=value aplicado al objeto de almacenamiento.
+
+* *Objetos aplicables*
++
+Muestra el recuento de los objetos de almacenamiento que se anotan según la regla de anotación.
+
+
+
+
+
+== Asociaciones de objetos manuales
+
+Muestra la lista de anotaciones que configuró y se asocian manualmente con objetos de almacenamiento.
+
+* *Anotación=par de valor*
++
+Muestra el nombre de la anotación manual y el valor.
+
+* *Clústeres aplicables*
++
+Muestra el número de clústeres anotados con un valor de anotación manual concreto. Puede hacer clic en el número para ver la página de clústeres, que muestra una lista filtrada de los clústeres asociados a un valor específico.
+
+* *Máquinas virtuales de almacenamiento (SVM)* aplicables
++
+Muestra la cantidad de máquinas virtuales de almacenamiento (SVM) que están anotadas con un valor de anotación manual particular. Puede hacer clic en el número para ver la página de máquinas virtuales de almacenamiento (SVM), donde se muestra una lista filtrada de máquinas virtuales de almacenamiento (SVM) asociadas con un valor específico.
+
+* *Volúmenes aplicables*
++
+Muestra el número de volúmenes anotados con un valor de anotación manual concreto. Puede hacer clic en el número para ver la página volúmenes, que muestra una lista filtrada de los volúmenes asociados con un valor específico.
+
+
+
+
+
+== Botones de comando
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento. En el caso de las anotaciones predefinidas, no es posible agregar o eliminar valores.
+
+* *Agregar anotación*
++
+Abre el cuadro de diálogo Agregar anotación, que permite crear nuevas anotaciones personalizadas y asignar valores a la anotación.
+
+* *Acciones*
++
+Permite editar o eliminar la descripción de la anotación seleccionada.
+
+* *Edición*
++
+Abre el cuadro de diálogo Editar anotación, que permite modificar el nombre y la descripción de la anotación.
+
+* *Eliminar*
++
+Permite eliminar el valor de la anotación. El valor sólo se puede eliminar si no está asociado a ninguna regla de anotación o reglas de grupo.
+
+
+
+
+
+== Pestaña Reglas de anotación
+
+La pestaña Reglas de anotación muestra las reglas de anotación creadas para anotar los objetos de almacenamiento. Puede realizar tareas como agregar, editar, eliminar o reordenar una regla de anotación. También puede ver el número de objetos de almacenamiento que cumplen la regla de anotación.
+
+
+
+== Botones de comando
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Agregar*
++
+Muestra el cuadro de diálogo Agregar regla de anotación, que permite crear reglas de anotación para objetos de almacenamiento.
+
+* *Edición*
++
+Muestra el cuadro de diálogo Editar regla de anotación, que permite reconfigurar reglas de anotación configuradas previamente.
+
+* *Eliminar*
++
+Elimina las reglas de anotación seleccionadas.
+
+* *Reordenar*
++
+Muestra el cuadro de diálogo reorganizar regla de anotación, que permite reorganizar el orden de las reglas de anotación.
+
+
+
+
+
+== Vista de lista
+
+La vista de lista muestra, en formato tabular, las reglas de anotación que se crearon en el servidor de Unified Manager. Puede utilizar los filtros de columnas para personalizar los datos que se muestran. La vista de lista de la ficha Reglas de anotación y la vista de lista de la sección Reglas asociadas de la pestaña anotación contienen las siguientes columnas:
+
+* Clasificación
+* Nombre
+* Tipo de objeto de destino
+* Valor de anotación asociada
+* Objetos aplicables
+
+
+Se muestra una columna adicional para la ficha Reglas de anotación, anotación asociada, que muestra el nombre de la anotación aplicada al objeto de almacenamiento.

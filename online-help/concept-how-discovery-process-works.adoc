@@ -1,0 +1,20 @@
+---
+permalink: online-help/concept-how-discovery-process-works.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de agregar el clúster a Unified Manager, el servidor detecta los objetos del clúster y los añade a su base de datos. Comprender cómo funciona el proceso de descubrimiento le ayuda a administrar los clústeres de su organización y sus objetos. 
+---
+= Cómo funciona el proceso de detección
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de agregar el clúster a Unified Manager, el servidor detecta los objetos del clúster y los añade a su base de datos. Comprender cómo funciona el proceso de detección le permite gestionar los clústeres de su organización y sus objetos.
+
+El intervalo de supervisión predeterminado es de 15 minutos: Si ha agregado un clúster al servidor de Unified Manager, se tardan 15 minutos en mostrar los detalles del clúster en la interfaz de usuario de Unified Manager.
+
+En la siguiente imagen se muestra el proceso de detección en OnCommand Unified Manager:
+
+image::../media/discovery-process-oc-6-0.gif[Cómo funciona el proceso de detección]

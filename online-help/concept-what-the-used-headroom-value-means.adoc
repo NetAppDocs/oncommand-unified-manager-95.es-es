@@ -1,0 +1,38 @@
+---
+permalink: online-help/concept-what-the-used-headroom-value-means.html 
+sidebar: sidebar 
+keywords:  
+summary: El valor de capacidad de rendimiento utilizada le ayuda a identificar los nodos y los agregados que se están utilizando en exceso o están desaprovechados. Esto permite redistribuir las cargas de trabajo para hacer que los recursos de almacenamiento sean más eficientes. 
+---
+= Qué significa el valor de capacidad de rendimiento utilizada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El valor de capacidad de rendimiento utilizada le ayuda a identificar los nodos y los agregados que se están utilizando en exceso o están desaprovechados. Esto permite redistribuir las cargas de trabajo para hacer que los recursos de almacenamiento sean más eficientes.
+
+En la siguiente figura, se muestra la curva de latencia frente a utilización de un recurso e se identifican, con puntos de color, tres áreas en las que se podría ubicar el punto operativo actual.
+
+image::../media/headroom-chart-over-under.gif[gráfico de margen adicional encima de]
+
+* Un porcentaje de capacidad de rendimiento utilizada igual a 100 se encuentra en el punto óptimo.
++
+En este momento se están utilizando los recursos de manera eficiente.
+
+* Un porcentaje de capacidad de rendimiento usado superior a 100 indica que el nodo o el agregado están desaprovechados y que las cargas de trabajo están recibiendo un rendimiento inferior al óptimo.
++
+No se deben agregar cargas de trabajo nuevas al recurso y es posible que sea necesario redistribuir las cargas de trabajo existentes.
+
+* Un porcentaje de capacidad de rendimiento usado inferior a 100 indica que el nodo o el agregado están desaprovechados y que los recursos no se están utilizando correctamente.
++
+Es posible añadir más cargas de trabajo al recurso.
+
+
+
+[NOTE]
+====
+A diferencia de la utilización, el porcentaje de capacidad de rendimiento utilizada puede ser superior al 100 %. No existe un porcentaje máximo, pero los recursos típicamente estarán en el rango del 110% al 140% cuando se están sobreutilizando. Los porcentajes superiores indicarían un recurso con problemas graves.
+
+====

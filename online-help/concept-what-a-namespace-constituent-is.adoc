@@ -1,0 +1,16 @@
+---
+permalink: online-help/concept-what-a-namespace-constituent-is.html 
+sidebar: sidebar 
+keywords:  
+summary: Cada Infinite Volume tiene un único componente de espacio de nombres que asigna la información de directorio y los nombres de archivo a la ubicación de datos físicos del archivo dentro del Infinite Volume. 
+---
+= Qué es un componente de espacio de nombres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada Infinite Volume tiene un único componente de espacio de nombres que asigna la información de directorio y los nombres de archivo a la ubicación de los datos físicos del archivo dentro del Infinite Volume.
+
+Los clientes no conocen el componente de espacio de nombres y no interactúan directamente con él. El componente de espacio de nombres es un componente interno de Infinite Volume.

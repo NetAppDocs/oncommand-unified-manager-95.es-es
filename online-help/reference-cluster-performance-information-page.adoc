@@ -1,0 +1,74 @@
+---
+permalink: online-help/reference-cluster-performance-information-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilice la página Performance/Cluster Information para ver una lista de los atributos físicos y lógicos del clúster. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento. 
+---
+= Página Performance/Cluster Information
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice la página Performance/Cluster Information para ver una lista de los atributos físicos y lógicos del clúster. Esta información puede ayudar a responder preguntas relacionadas con el rendimiento.
+
+
+
+== Atributos del clúster
+
+* *LIF de gestión*
++
+El nombre del LIF de gestión del clúster y si el LIF está actualmente disponible (activo) o no (inactivo).
+
+* *Dirección IP*
++
+La dirección IPv4 o IPv6 de la LIF de gestión de clústeres.
+
+* *FQDN*
++
+El nombre de dominio completo (FQDN) de la LIF de gestión de clústeres.
+
+* *Versión del SO*
++
+La versión del software ONTAP que se instala en el clúster.
+
++
+[NOTE]
+====
+Si se instalan diferentes versiones del software ONTAP en los nodos del clúster, la versión indicada es el número de versión más bajo. Consulte la página Performance/Node Information para ver la versión del software ONTAP instalado en cada nodo.
+
+====
+* *Número de serie*
++
+El número de identificación único del clúster.
+
+* *Modelo / Familia*
++
+El número de modelo de plataforma y la familia de modelos de todos los nodos del clúster.
+
+* *Capacidad (libre/total)*
++
+El almacenamiento total disponible para el cluster, en gigabytes y la cantidad de almacenamiento disponible actualmente.
+
+* *Protocolos permitidos*
++
+La lista de todos los protocolos que puede servir este clúster. Los protocolos disponibles son FC/FCoE, iSCSI, HTTP, NVMe, NDMP, NFS y CIFS.
+
+* *Nodos*
++
+El número de nodos en este clúster. Puede hacer clic en el número para mostrar los nodos en la página Performance/Node Inventory.
+
+* *Máquinas virtuales de almacenamiento*
++
+La cantidad de SVM en este clúster. Puede hacer clic en el número para mostrar las SVM en la página Performance/SVM Inventory.
+
+* *LIF*
++
+El número de LIF en este clúster. Puede hacer clic en el número para mostrar las LIF en la página Performance/LIF Inventory.
+
+* *Contacto / ubicación*
++
+Si está disponible, el nombre del administrador de almacenamiento que debe contactar con respecto a este clúster y la ubicación del clúster.
+
+

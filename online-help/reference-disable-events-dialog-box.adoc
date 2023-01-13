@@ -1,0 +1,59 @@
+---
+permalink: online-help/reference-disable-events-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Deshabilitar eventos muestra la lista de tipos de eventos para los que puede deshabilitar eventos. Puede deshabilitar eventos para un tipo de evento según una gravedad determinada o para un conjunto de eventos. 
+---
+= Cuadro de diálogo Disable Events
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Deshabilitar eventos muestra la lista de tipos de eventos para los que puede deshabilitar eventos. Puede deshabilitar eventos para un tipo de evento según una gravedad determinada o para un conjunto de eventos.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Área Event Properties
+
+El área Propiedades de evento especifica las siguientes propiedades de evento:
+
+* *Gravedad del suceso*
++
+Permite seleccionar eventos según el tipo de gravedad, que puede ser crítico, error, advertencia o Información.
+
+* *Nombre del evento contiene*
++
+Permite filtrar eventos cuyo nombre contenga los caracteres especificados.
+
+* *Eventos coincidentes*
++
+Muestra la lista de eventos que coinciden con el tipo de gravedad de evento y la cadena de texto que especifica.
+
+* *Desactivar eventos*
++
+Muestra la lista de eventos seleccionados para deshabilitar.
+
++
+La gravedad del evento también se muestra junto con el nombre del evento.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando le permiten realizar las siguientes tareas para los eventos seleccionados:
+
+* *Guardar y cerrar*
++
+Deshabilita el tipo de evento y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Descarta los cambios y cierra el cuadro de diálogo.
+
+

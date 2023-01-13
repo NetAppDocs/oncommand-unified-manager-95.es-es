@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept-analyzing-workload-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Unified Manager permite supervisar y analizar el rendimiento de I/o de cargas de trabajo de volúmenes en los clústeres. Puede determinar si un problema de rendimiento está en el clúster y si el almacenamiento es el problema. 
+---
+= Análisis del rendimiento de la carga de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager permite supervisar y analizar el rendimiento de I/o de cargas de trabajo de volúmenes en los clústeres. Puede determinar si un problema de rendimiento está en el clúster y si el almacenamiento es el problema.
+
+[NOTE]
+====
+En este capítulo se describe cómo analizar el rendimiento de la carga de trabajo mediante la página Performance/Volume Details y la página de detalles Event.
+
+====

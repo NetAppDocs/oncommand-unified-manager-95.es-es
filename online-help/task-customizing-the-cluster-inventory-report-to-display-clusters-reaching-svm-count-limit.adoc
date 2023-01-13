@@ -1,0 +1,43 @@
+---
+permalink: online-help/task-customizing-the-cluster-inventory-report-to-display-clusters-reaching-svm-count-limit.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible personalizar el informe Cluster Inventory para mostrar clústeres, ordenados por disminución del orden de su número de SVM. 
+---
+= Personalizar el informe Cluster Inventory para mostrar los clústeres que alcanzan el límite de número de SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible personalizar el informe Cluster Inventory para mostrar clústeres, ordenados por disminución del orden de su número de SVM.
+
+
+
+== Acerca de esta tarea
+
+También puede realizar esta tarea en la página Informes y haciendo clic en *Ejecutar informe* para el informe correspondiente.
+
+
+
+== Pasos
+
+. Para quitar la agrupación por clúster o nodo, realice los siguientes pasos:
++
+.. Haga clic en la columna que desee desagrupar.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno*.
+
+
+. Para ordenar los clústeres por número de SVM, realice los siguientes pasos:
++
+.. Haga clic en la columna *SVM Count*.
+.. Haga clic en la image:../media/click-to-see-menu.gif[""] .
+.. Seleccione *Grupo* > *Eliminar grupo interno opción*.
+
+
+. Seleccione *filtro* > *Arriba/abajo N*.
+. En el cuadro de diálogo *Arriba/abajo N*, seleccione *Arriba N* en el campo *filtro* e introduzca un valor en el campo de texto.
+. Haga clic en *Aceptar*.
+

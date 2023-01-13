@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-understanding-more-about-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar la opción para ejecutar, eliminar, exportar e importar informes. También puede crear informes personalizados y guardar el informe personalizado. Puede realizar operaciones adicionales como filtrado, ordenación, agrupación y formato. 
+---
+= Más información acerca de los informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la opción para ejecutar, eliminar, exportar e importar informes. También puede crear informes personalizados y guardar el informe personalizado. Puede realizar operaciones adicionales como filtrado, ordenación, agrupación y formato.

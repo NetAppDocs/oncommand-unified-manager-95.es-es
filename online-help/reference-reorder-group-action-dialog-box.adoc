@@ -1,0 +1,34 @@
+---
+permalink: online-help/reference-reorder-group-action-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar el cuadro de diálogo Reordenar acciones de grupo para cambiar las clasificaciones de una o más acciones de grupo. La posición de una acción de grupo en la cuadrícula determina la clasificación de la acción de grupo. 
+---
+= Cuadro de diálogo Reorder Group Actions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el cuadro de diálogo Reordenar acciones de grupo para cambiar las clasificaciones de una o más acciones de grupo. La posición de una acción de grupo en la cuadrícula determina la clasificación de la acción de grupo.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Rango*
++
+Especifica el orden de la acción de grupo que se aplicará a los objetos de almacenamiento de un grupo.
+
+* *Nombre*
++
+Especifica el nombre de la acción de grupo.
+
+* *Tipo de acción*
++
+Especifica el tipo de acción que se puede realizar en los objetos de almacenamiento de un grupo.
+
+* *Grupo asociado*
++
+Especifica el nombre del grupo para el que se definen las acciones de grupo.
+
+

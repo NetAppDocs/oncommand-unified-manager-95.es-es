@@ -1,0 +1,14 @@
+---
+permalink: online-help/reference-list-of-events-and-severity-types.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede usar la lista de eventos para familiarizarse con las categorías de eventos, los nombres de eventos y el tipo de gravedad de cada evento que puede ver en Unified Manager. Los eventos se muestran en orden alfabético por categoría de objeto. 
+---
+= Lista de eventos y tipos de gravedad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la lista de eventos para familiarizarse con las categorías de eventos, los nombres de eventos y el tipo de gravedad de cada evento que puede ver en Unified Manager. Los eventos se muestran en orden alfabético por categoría de objeto.

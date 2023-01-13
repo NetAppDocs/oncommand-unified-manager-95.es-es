@@ -1,0 +1,50 @@
+---
+permalink: online-help/task-excluding-disaster-recovery-destination-volumes-from-generating-alerts.html 
+sidebar: sidebar 
+keywords:  
+summary: Al configurar alertas de volumen, es posible especificar una cadena en el cuadro de diálogo Alert que identifica un volumen o un grupo de volúmenes. Si configuró la recuperación ante desastres para las SVM, sin embargo, los volúmenes de origen y destino tienen el mismo nombre, por lo que recibirá alertas para ambos volúmenes. 
+---
+= No se incluye el hecho de que los volúmenes de destino de recuperación ante desastres generen alertas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Al configurar alertas de volumen, es posible especificar una cadena en el cuadro de diálogo Alert que identifica un volumen o un grupo de volúmenes. Si configuró la recuperación ante desastres para las SVM, sin embargo, los volúmenes de origen y destino tienen el mismo nombre, por lo que recibirá alertas para ambos volúmenes.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Si desea deshabilitar alertas para los volúmenes de destino de recuperación ante desastres, se deben excluir los volúmenes que tienen el nombre de la SVM de destino. Esto es posible porque el identificador de los eventos del volumen contiene el nombre de la SVM y el nombre del volumen con el formato "'<svm_name>:/<volume_name>'".
+
+El siguiente ejemplo muestra cómo crear alertas para el volumen «'vol1'» en la SVM principal»''vs1'», pero excluye la alerta de la generación en un volumen con el mismo nombre en SVM»'vs1-dr».
+
+Realice los siguientes pasos en el cuadro de diálogo Agregar alerta:
+
+
+
+== Pasos
+
+. Haga clic en *Nombre* e introduzca un nombre y una descripción para la alerta.
+. Haga clic en *Recursos* y, a continuación, seleccione la ficha *incluir*.
++
+.. Seleccione *volumen* en la lista desplegable y, a continuación, introduzca `vol1` En el campo *Nombre contiene* para mostrar los volúmenes cuyo nombre contiene "'vol1'".
+.. Seleccione *<<All Volumes whose name contains 'vol1'>>* Desde el área *Recursos disponibles*, y muévalos al área *Recursos seleccionados*.
+
+
+. Seleccione la ficha *excluir*, seleccione *volumen*, introduzca `vs1-dr` En el campo *Nombre contiene* y, a continuación, haga clic en *Agregar*.
++
+De este modo, se excluye la alerta de que se genere para el volumen «'vol1'» en la SVM»'vs1-dr».
+
+. Haga clic en *Eventos* y seleccione el evento o eventos que desea aplicar al volumen o volúmenes.
+. Haga clic en *acciones* y, a continuación, seleccione el nombre del usuario que recibirá el correo electrónico de alerta en el campo *Alerta a estos usuarios*.
+. Configure cualquier otra opción de esta página para emitir capturas SNMP y ejecutar una secuencia de comandos y, a continuación, haga clic en *Guardar*.
+

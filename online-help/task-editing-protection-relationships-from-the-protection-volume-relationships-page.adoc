@@ -1,0 +1,41 @@
+---
+permalink: online-help/task-editing-protection-relationships-from-the-protection-volume-relationships-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Las relaciones de protección existentes se pueden editar para cambiar la tasa de transferencia máxima, la política de protección o la programación de protección. Se puede editar una relación para reducir el ancho de banda que se usa para las transferencias o aumentar la frecuencia de las transferencias programadas, ya que los datos cambian con frecuencia. 
+---
+= Editar las relaciones de protección en la página Protection/Volume Relationships
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las relaciones de protección existentes se pueden editar para cambiar la tasa de transferencia máxima, la política de protección o la programación de protección. Se puede editar una relación para reducir el ancho de banda que se usa para las transferencias o aumentar la frecuencia de las transferencias programadas, ya que los datos cambian con frecuencia.
+
+
+
+== Antes de empezar
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Los volúmenes seleccionados deben ser destinos de relaciones de protección. No puede editar las relaciones cuando se seleccionan los volúmenes de origen, los volúmenes compartidos de carga o los volúmenes que no son el destino de una relación de SnapMirror o SnapVault.
+
+
+
+== Pasos
+
+. En la página *Protection/Volume Relationships*, seleccione en la lista de volúmenes uno o más volúmenes en la misma SVM para la que desea editar la configuración de relaciones y, a continuación, seleccione *Edit* en la barra de herramientas.
++
+Se muestra el cuadro de diálogo Editar relación.
+
+. En el cuadro de diálogo *Editar relación*, edite la tasa de transferencia máxima, la política de protección o el programa de protección según sea necesario.
+. Haga clic en *aplicar*.
++
+Los cambios se aplican a las relaciones seleccionadas.
+
+

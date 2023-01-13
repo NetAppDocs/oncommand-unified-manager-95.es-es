@@ -1,0 +1,51 @@
+---
+permalink: online-help/reference-add-action-dialog-box.html 
+sidebar: sidebar 
+keywords:  
+summary: El cuadro de diálogo Agregar acción de grupo permite configurar acciones de grupo que se pueden aplicar a objetos de almacenamiento de un grupo seleccionado. 
+---
+= Cuadro de diálogo Agregar acción de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Agregar acción de grupo permite configurar acciones de grupo que se pueden aplicar a objetos de almacenamiento de un grupo seleccionado.
+
+Debe tener el rol de administrador de OnCommand o de administrador del almacenamiento.
+
+* *Nombre*
++
+Especifica el nombre de la acción.
+
+* *Descripción*
++
+Especifica la descripción de la acción.
+
+* *Grupo*
++
+Especifica el grupo para el que se ha configurado la acción.
+
+* *Tipo de acción*
++
+Especifica el tipo de acción configurada. Según el tipo de acción seleccionado, el cuadro de diálogo Agregar acción de grupo se expande, lo que permite configurar una acción de grupo proporcionando los valores necesarios.
+
++
+Unified Manager actualmente solo admite el tipo de acción de umbral de volumen.
+
+
+
+
+
+== Botones de comando
+
+* *Agregar*
++
+Agrega la nueva acción y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo Agregar acción de grupo sin guardar los cambios.
+
+
