@@ -3505,7 +3505,6 @@
   <block id="aa193eacf5a35a85044e44de3fa9c91a" category="sidebar">Vídeos de Unified Manager</block>
   <block id="197833bfff97d501603036a0febb7a95" category="sidebar">Blogs de Unified Manager</block>
   <block id="7c59cc884d6b9ef97e305e34cc436310" category="sidebar">Documentación para la versión más reciente de Unified Manager</block>
-  <block id="85f73dd16ea214346164b0deea26773b" category="sidebar">Unified Manager</block>
   <block id="32d8b1bb1bdc5067bfbde495253b3469" category="sidebar">Supervise y gestione el estado del clúster</block>
   <block id="0cdc2e43fd617d44b61e3c28d05ef9e7" category="sidebar">Gestionar los umbrales de estado (estado del clúster)</block>
   <block id="a4d86585f88de3caa783eefc33f81448" category="sidebar">Configurar las opciones del umbral de estado global (estado del clúster)</block>
@@ -12156,8 +12155,6 @@
   <block id="b5deed87358ccf99982416269d43252d" category="list-text">En la página *Configuración/Administrar eventos*, haga clic en el botón *Suscribirse a eventos EMS*.</block>
   <block id="77947816a25f4ae7aae79661ac85c5f0" category="list-text">En el cuadro de diálogo *Suscribirse a eventos EMS*, introduzca el nombre del evento EMS de ONTAP al que desea suscribirse.</block>
   <block id="93f88d6c3be8dc08239feb316ead84f9" category="paragraph">Para ver los nombres de los eventos de EMS a los que se puede suscribir, desde el shell del clúster de ONTAP, puede usar la<block ref="600519f6c6d0b7df8b905133fe79eb47" prefix=" " category="inline-code"></block> (Anterior a ONTAP 9) o el<block ref="83c19f62b32dae15ee31be017a321335" prefix=" " category="inline-code"></block> (ONTAP 9 o posterior). Consulte la respuesta 1072320 de la base de conocimientos para obtener instrucciones detalladas sobre la identificación de eventos de EMS individuales.</block>
-  <block id="b7ea02fe1dbdcd1a4d97e075ed656e5d" category="inline-link">KB 1072320: Cómo configurar las suscripciones de eventos de EMS de ONTAP en Unified Manager</block>
-  <block id="31217e322cc07a0593ddf09e0d4549b2" category="paragraph"><block ref="31217e322cc07a0593ddf09e0d4549b2" category="inline-link-rx"></block></block>
   <block id="81b7bf67b212322e40ae88cceb3a0355" category="paragraph">El evento EMS se agrega a la lista de eventos EMS suscritos, pero la columna aplicable al clúster muestra el estado como "'Desconocido'" para el evento EMS que ha agregado.</block>
   <block id="76b89d7a289a477aa652ea902912a105" category="list-text">Haga clic en *Guardar y cerrar* para registrar la suscripción al evento EMS con el clúster.</block>
   <block id="9d7dce31bb98d35e68b18512ffe7edf0" category="list-text">Haga clic en *Subscribe to EMS events* de nuevo.</block>
@@ -12216,4 +12213,6 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="1acf808d5167e8d3738f46ff5b4e301e" category="inline-link">Cómo configurar y recibir alertas de la suscripción a eventos EMS de ONTAP en Active IQ Unified Manager</block>
+  <block id="9df7d5af79770924171ad1bae7e6fd64" category="paragraph"><block ref="9df7d5af79770924171ad1bae7e6fd64" category="inline-link-rx"></block></block>
 </blocks>
