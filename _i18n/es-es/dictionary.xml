@@ -3425,7 +3425,6 @@
   <block id="e81c4e4f2b7b93b481e13a8553c2ae1b" category="paragraph">o.</block>
   <block id="c43f41ec86d74b2a7492f19c57799ae1" category="paragraph"><block ref="d8145a760ee2adba9024741a35b1cf3e" prefix="" category="inline-code"></block></block>
   <block id="88c677a5dac9fdc647a00448d2daa159" category="paragraph">Al finalizar la instalación, se muestra la información para conectarse a la interfaz de usuario web de Unified Manager. Si no puede conectarse a la interfaz de usuario web, es posible que tenga que incluir el puerto 443 en la lista blanca. Póngase en contacto con su equipo de soporte técnico para obtener más detalles.</block>
-  <block id="b1d05b1498f934fd9fdb5242af6b4ee6" category="summary">Documentación para OnCommand Unified Manager</block>
   <block id="a26233650deb6cb0bb9c28069615b351" category="doc">Documentación de OnCommand Unified Manager</block>
   <block id="1c07bf6b280604daed4f92a7903cb492" category="summary">Puede configurar Unified Manager para que envíe notificaciones que le alertan de los eventos de su entorno. Antes de que las notificaciones se puedan enviar, debe configurar varias otras opciones de Unified Manager.</block>
   <block id="4c12da350b614162109482c8603471cf" category="doc">Configuración de Unified Manager para enviar notificaciones de alerta</block>
@@ -12215,4 +12214,5 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="1acf808d5167e8d3738f46ff5b4e301e" category="inline-link">Cómo configurar y recibir alertas de la suscripción a eventos EMS de ONTAP en Active IQ Unified Manager</block>
   <block id="9df7d5af79770924171ad1bae7e6fd64" category="paragraph"><block ref="9df7d5af79770924171ad1bae7e6fd64" category="inline-link-rx"></block></block>
+  <block id="31787eb1cdcbc7b2acf891b9fa7f133e" category="sidebar">Unified Manager de OnCommand le permite supervisar y gestionar el estado y el rendimiento de los sistemas de almacenamiento de ONTAP desde una única interfaz. Esta biblioteca de documentación incluye información para la versión 9,5.</block>
 </blocks>
