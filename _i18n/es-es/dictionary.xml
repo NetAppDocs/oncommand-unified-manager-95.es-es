@@ -315,7 +315,6 @@
   <block id="11e8e4f244f4ff642a8c627e453e7ac8" category="paragraph">Puede usar System Manager de OnCommand o los comandos de ONTAP para ver si Flash Cache está instalado o habilitado y para habilitarla si todavía no está habilitado. El siguiente comando indica si Flash Cache está habilitado en un nodo específico:<block ref="48de88639c7fbb304293e385f1577ff8" prefix=" " category="inline-code"></block></block>
   <block id="4226c3da2a5d50e1c8abfdfbf9bd3780" category="paragraph">Para obtener más información sobre Flash Cache y los requisitos para su uso, consulte el siguiente informe técnico:</block>
   <block id="4d594fa378085e019a42ca73e740986c" category="inline-link">Informe técnico 3832: Guía de prácticas recomendadas de Flash Cache</block>
-  <block id="e9f146d71f531c29c1d0c53c51f7c325" category="paragraph"><block ref="e9f146d71f531c29c1d0c53c51f7c325" category="inline-link-rx"></block></block>
   <block id="f78c0aa4c3933129bfd05a017c2dd1c0" category="summary">La página Configuration/Performance Thresholds se utiliza para crear, editar, clonar, eliminar y ver políticas de umbral de rendimiento.</block>
   <block id="a8ef4ea002325500d0d4e8119399180b" category="doc">Descripciones de las páginas de políticas de umbral de rendimiento</block>
   <block id="436f33e5a8e00c0eaf90d6b84fe81890" category="paragraph">Los siguientes temas aparecen cuando hace clic en *Ayuda* en la página correspondiente.</block>
@@ -2708,7 +2707,6 @@
   <block id="713d9eb7bae81414a341cd2b9ad04f0e" category="paragraph">Unified Manager se puede instalar en sistemas con una pequeña cantidad de memoria, pero los 12 GB de RAM recomendados garantizan que haya suficiente memoria disponible para un rendimiento óptimo, por lo que el sistema puede acomodar clústeres y objetos de almacenamiento adicionales a medida que crezca su configuración. No debe establecer ningún límite de memoria en la máquina virtual donde esté implementado Unified Manager y no debe habilitar ninguna función (por ejemplo, una configuración en globo) que impida que el software utilice la memoria asignada en el sistema.</block>
   <block id="1ba321baad6e31e95cddb86bd159a0ab" category="paragraph">Asimismo, existe un límite en cuanto al número de nodos que puede supervisar una única instancia de Unified Manager antes de instalar una segunda instancia de Unified Manager. Consulte la _Guía de prácticas recomendadas_ para obtener más información.</block>
   <block id="9650789293045a87cc14a47729b5ebfc" category="inline-link">Informe técnico 4621: Guía de prácticas recomendadas de Unified Manager</block>
-  <block id="badef135127b32313f0e0eebe283472f" category="paragraph"><block ref="badef135127b32313f0e0eebe283472f" category="inline-link-rx"></block></block>
   <block id="ccd350b03208f21a01e8434aa29bf22c" category="paragraph">El intercambio de la memoria por página afecta negativamente al rendimiento del sistema y de la aplicación de gestión. Competir por recursos CPU que no están disponibles debido al uso general del host puede degradar el rendimiento.</block>
   <block id="4019b02afc32a61e39e48a05d352cdf9" category="section-title">Requisito de uso dedicado</block>
   <block id="f8a1acaf90775fd387de63d0c7d02a5a" category="paragraph">El sistema físico o virtual en el que se instala Unified Manager se debe utilizar exclusivamente para Unified Manager y no se debe compartir con otras aplicaciones. Otras aplicaciones pueden consumir recursos del sistema y reducir drásticamente el rendimiento de Unified Manager.</block>
@@ -7777,7 +7775,6 @@
   <block id="fdf3b7352c190d213c24db064ec3a78e" category="paragraph">Cuando recibe un evento de umbral definido por el sistema en la página de detalles Event, el texto de descripción del evento enumera el nombre del agregado que tiene el problema. Puede añadir discos y reconstruir datos en este agregado.</block>
   <block id="89659a2b1bec1bdff60ef462b7568184" category="paragraph">Los discos que agregue al agregado ya deben existir en el clúster. Si el clúster no tiene discos adicionales disponibles, puede que tenga que ponerse en contacto con su administrador o adquirir más discos. Puede usar System Manager o los comandos de la ONTAP de OnCommand para añadir discos a un agregado.</block>
   <block id="c993772a65e087ac68acfde3645c3287" category="inline-link">Informe técnico 3838: Guía de configuración del subsistema de almacenamiento</block>
-  <block id="0379ced083df169219dc62cc5068b75c" category="paragraph"><block ref="0379ced083df169219dc62cc5068b75c" category="inline-link-rx"></block></block>
   <block id="421c34d2d5282745871d98ac31a1d684" category="summary">El cuadro de diálogo Editar grupo permite cambiar el nombre y la descripción de un grupo.</block>
   <block id="246877a083336b138fab47a805ed8a36" category="doc">Cuadro de diálogo Edit Group</block>
   <block id="17513e8e84fb61b3cd8278196f901018" category="list-text">*Nombre del grupo*</block>
@@ -8092,7 +8089,6 @@
   <block id="4a62775f3719d6969e4b9d4bd0578ca6" category="paragraph">Guarda la configuración de eficiencia seleccionada y la aplica al hacer clic en *aplicar* en el cuadro de diálogo Configurar protección.</block>
   <block id="cfc05fb84db9c30b38a419540c16db12" category="paragraph">Descarta las selecciones y cierra el cuadro de diálogo Configuración avanzada de destino.</block>
   <block id="ae66a56126cf2726904ab28390ff838b" category="inline-link">Informe técnico de NetApp 3966: Guía para la puesta en marcha e implantación de la deduplicación y la compresión de datos de NetApp (Clustered Data ONTAP)</block>
-  <block id="df4f489fd8783506ee2d692048efa87d" category="paragraph"><block ref="df4f489fd8783506ee2d692048efa87d" category="inline-link-rx"></block></block>
   <block id="91af0801c5503f0cf47e3b375af01481" category="summary">La página Performance/Node Failover Planning calcula el impacto en el rendimiento de un nodo si falla el nodo asociado de alta disponibilidad \(ha\) del nodo. Unified Manager basa las estimaciones en el rendimiento histórico de los nodos en la pareja de alta disponibilidad.</block>
   <block id="b27fb1ad58bf038b172b0e7862af5c77" category="doc">Comprender y utilizar la página Node Failover Planning</block>
   <block id="b07d06df53a4395dec2448ff095707d1" category="paragraph">La página Performance/Node Failover Planning calcula el impacto en el rendimiento de un nodo si se produce un error en el nodo de partner de alta disponibilidad (ha) del nodo. Unified Manager basa las estimaciones en el rendimiento histórico de los nodos en la pareja de alta disponibilidad.</block>
@@ -11386,7 +11382,6 @@
   <block id="f804ed2945f8b8f58e9c8ebf45b6d70a" category="paragraph">Datos sobre los problemas de estado y rendimiento de las aplicaciones de Unified Manager.</block>
   <block id="030a4fbaf40ce64a3de26a58a2349f3b" category="paragraph">Un usuario de informes -- un usuario de base de datos con el rol de esquema de informes -- puede tener acceso a los datos de estas tablas. Este usuario tiene acceso de solo lectura a las vistas de informes y otras bases de datos directamente desde la base de datos de Unified Manager. Tenga en cuenta que este usuario no tiene permiso para acceder a ninguna tabla que contenga datos de usuario o información de credenciales de clúster.</block>
   <block id="43c57f8ab49b52141a07a60ab8386a94" category="inline-link">Informe técnico para la elaboración de informes de Unified Manager</block>
-  <block id="ef284f778ff870c90bd04052fa19e3d6" category="paragraph">Consulte<block ref="204d4ee1ca42e994250ea354be144e73" category="inline-link-rx"></block> (TR-4565) para obtener más información.</block>
   <block id="95a9c901510e268896242d3880cf6f45" category="summary">Puede utilizar el cuadro de diálogo Configurar protección para crear relaciones de SnapMirror y SnapVault para todos los volúmenes de protección de datos de lectura, escritura y escritura en los clústeres a fin de garantizar que se repliquen los datos en un volumen de origen o un volumen primario.</block>
   <block id="5c118899c3fd0be8a2f4eb30370e6615" category="doc">Cuadro de diálogo Configure Protection</block>
   <block id="7cc1f16460b17a1f96864d95730d5ef2" category="section-title">Pestaña Source</block>
@@ -12215,4 +12210,9 @@
   <block id="1acf808d5167e8d3738f46ff5b4e301e" category="inline-link">Cómo configurar y recibir alertas de la suscripción a eventos EMS de ONTAP en Active IQ Unified Manager</block>
   <block id="9df7d5af79770924171ad1bae7e6fd64" category="paragraph"><block ref="9df7d5af79770924171ad1bae7e6fd64" category="inline-link-rx"></block></block>
   <block id="31787eb1cdcbc7b2acf891b9fa7f133e" category="sidebar">Unified Manager de OnCommand le permite supervisar y gestionar el estado y el rendimiento de los sistemas de almacenamiento de ONTAP desde una única interfaz. Esta biblioteca de documentación incluye información para la versión 9,5.</block>
+  <block id="ee26087a8b7ec790988603a3298c45f3" category="paragraph"><block ref="ee26087a8b7ec790988603a3298c45f3" category="inline-link-rx"></block></block>
+  <block id="06c70b026e4d10bfcd7be2ebfa770d1c" category="paragraph"><block ref="06c70b026e4d10bfcd7be2ebfa770d1c" category="inline-link-rx"></block></block>
+  <block id="a87e9b78df20679676eb71ecb2dadaf4" category="paragraph">Consulte el<block ref="7a573ad874e1456bf6b4f96b852006f2" category="inline-link-rx"></block> (TR-4565) para obtener más detalles.</block>
+  <block id="ec41073735b02d172b0bc1ee60ea5ec9" category="paragraph"><block ref="ec41073735b02d172b0bc1ee60ea5ec9" category="inline-link-rx"></block></block>
+  <block id="796f4a9be8e525f7e4d64c24bac529c9" category="paragraph"><block ref="796f4a9be8e525f7e4d64c24bac529c9" category="inline-link-rx"></block></block>
 </blocks>

@@ -17,4 +17,4 @@ Cuando recibe un evento de umbral definido por el sistema en la página de detal
 
 Los discos que agregue al agregado ya deben existir en el clúster. Si el clúster no tiene discos adicionales disponibles, puede que tenga que ponerse en contacto con su administrador o adquirir más discos. Puede usar System Manager o los comandos de la ONTAP de OnCommand para añadir discos a un agregado.
 
-http://www.netapp.com/us/media/tr-3838.pdf["Informe técnico 3838: Guía de configuración del subsistema de almacenamiento"]
+https://www.netapp.com/pdf.html?item=/media/19675-tr-3838.pdf["Informe técnico 3838: Guía de configuración del subsistema de almacenamiento"^]

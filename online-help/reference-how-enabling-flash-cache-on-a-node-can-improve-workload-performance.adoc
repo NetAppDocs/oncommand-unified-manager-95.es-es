@@ -21,4 +21,4 @@ Puede usar System Manager de OnCommand o los comandos de ONTAP para ver si Flash
 
 Para obtener más información sobre Flash Cache y los requisitos para su uso, consulte el siguiente informe técnico:
 
-http://www.netapp.com/us/media/tr-3832.pdf["Informe técnico 3832: Guía de prácticas recomendadas de Flash Cache"]
+https://www.netapp.com/pdf.html?item=/media/19754-tr-3832.pdf["Informe técnico 3832: Guía de prácticas recomendadas de Flash Cache"^]

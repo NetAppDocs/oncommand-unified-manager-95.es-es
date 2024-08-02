@@ -88,4 +88,4 @@ Descarta las selecciones y cierra el cuadro de diálogo Configuración avanzada 
 
 *Información relacionada*
 
-http://www.netapp.com/us/media/tr-3966.pdf["Informe técnico de NetApp 3966: Guía para la puesta en marcha e implantación de la deduplicación y la compresión de datos de NetApp (Clustered Data ONTAP)"]
+https://www.netapp.com/pdf.html?item=/media/19753-tr-3966.pdf["Informe técnico de NetApp 3966: Guía para la puesta en marcha e implantación de la deduplicación y la compresión de datos de NetApp (Clustered Data ONTAP)"^]

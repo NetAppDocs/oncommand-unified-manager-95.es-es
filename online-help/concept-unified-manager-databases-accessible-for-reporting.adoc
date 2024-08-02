@@ -71,4 +71,4 @@ Datos sobre los problemas de estado y rendimiento de las aplicaciones de Unified
 |===
 Un usuario de informes -- un usuario de base de datos con el rol de esquema de informes -- puede tener acceso a los datos de estas tablas. Este usuario tiene acceso de solo lectura a las vistas de informes y otras bases de datos directamente desde la base de datos de Unified Manager. Tenga en cuenta que este usuario no tiene permiso para acceder a ninguna tabla que contenga datos de usuario o información de credenciales de clúster.
 
-Consulte http://www.netapp.com/us/media/tr-4565.pdf["Informe técnico para la elaboración de informes de Unified Manager"] (TR-4565) para obtener más información.
+Consulte el https://www.netapp.com/pdf.html?item=/media/16308-tr-4565pdf.pdf["Informe técnico para la elaboración de informes de Unified Manager"^] (TR-4565) para obtener más detalles.

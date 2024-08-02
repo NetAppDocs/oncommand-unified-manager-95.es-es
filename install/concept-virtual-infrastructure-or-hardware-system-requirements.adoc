@@ -74,7 +74,7 @@ Unified Manager se puede instalar en sistemas con una pequeña cantidad de memor
 
 Asimismo, existe un límite en cuanto al número de nodos que puede supervisar una única instancia de Unified Manager antes de instalar una segunda instancia de Unified Manager. Consulte la _Guía de prácticas recomendadas_ para obtener más información.
 
-http://www.netapp.com/us/media/tr-4621.pdf["Informe técnico 4621: Guía de prácticas recomendadas de Unified Manager"]
+https://www.netapp.com/pdf.html?item=/media/13504-tr4621pdf.pdf["Informe técnico 4621: Guía de prácticas recomendadas de Unified Manager"^]
 
 El intercambio de la memoria por página afecta negativamente al rendimiento del sistema y de la aplicación de gestión. Competir por recursos CPU que no están disponibles debido al uso general del host puede degradar el rendimiento.
 
